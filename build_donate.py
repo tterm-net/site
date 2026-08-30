@@ -115,9 +115,12 @@ def wallet(icon, network, note, only, address, qr, copy_label, depth):
 def build(key: str, version: str) -> str:
     d = T[key]
     depth = "../.." if key == "ru" else ".."
+    # Everything in these two lists points off-site.
     nav = "\n".join(
-        f'    <a class="pill pill-ghost" href="{u}">{n}</a>' for n, u in d["nav"])
-    foot = "\n".join(f'    <a href="{u}">{n}</a>' for n, u in d["foot"])
+        f'    <a class="pill pill-ghost" href="{u}" target="_blank"'
+        f' rel="noopener">{n}</a>' for n, u in d["nav"])
+    foot = "\n".join(f'    <a href="{u}" target="_blank" rel="noopener">{n}</a>'
+                     for n, u in d["foot"])
     self_href = "/ru/donate/" if key == "ru" else "/donate/"
     menu = (f'      <a href="/ru/donate/" hreflang="ru" lang="ru">Русский</a>\n'
             f'      <a href="/donate/" hreflang="en" lang="en">English</a>')
