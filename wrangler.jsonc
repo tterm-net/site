@@ -4,6 +4,10 @@
   // working; without this file `npx wrangler deploy` has nothing to go on.
   "name": "tterm",
   "compatibility_date": "2026-08-30",
+  // Keep the workers.dev address: handy for checking a deploy before the
+  // domain points at it. Preview URLs for branches we do not need.
+  "workers_dev": true,
+  "preview_urls": false,
   "assets": {
     "directory": ".",
     // Directory URLs resolve to index.html, so /ru/ and /ru/donate/ work.

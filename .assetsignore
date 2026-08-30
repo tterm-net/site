@@ -1,10 +1,21 @@
-# Build scripts and notes: they live in the repository, not on the site.
+# What must not end up on the site.
+#
+# Everything in the repository root is served unless it is listed here, so
+# this list has to be complete rather than approximate: the first deploy
+# published .gitignore and wrangler's own temporary directory.
+
+# Build scripts and project notes
 build_donate.py
 build_preview.py
 build_qr.py
 README.md
 VERSION
-wrangler.jsonc
-.assetsignore
 preview/
+
+# Tooling and version control
+.assetsignore
+.gitignore
+wrangler.jsonc
+.wrangler/
 .git/
+.github/
