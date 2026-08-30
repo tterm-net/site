@@ -1,0 +1,13 @@
+{
+  // Cloudflare deploys this as a Worker that serves static assets.
+  // Pages is being folded into Workers, so this is the path that keeps
+  // working; without this file `npx wrangler deploy` has nothing to go on.
+  "name": "tterm",
+  "compatibility_date": "2026-08-30",
+  "assets": {
+    "directory": ".",
+    // Directory URLs resolve to index.html, so /ru/ and /ru/donate/ work.
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

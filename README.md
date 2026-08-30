@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 0.9.2.** The number lives in `VERSION` and in a `<meta>` tag on
+**Version 0.9.3.** The number lives in `VERSION` and in a `<meta>` tag on
 each page, so you can tell what is deployed by viewing source.
 
 The landing page for [tTerm](https://github.com/tterm-net/tTerm) — Terminal in
@@ -29,9 +29,11 @@ two different things under one number.
 
 ## Deploy
 
-Pushing to `main` publishes the site. Cloudflare Pages is connected to this
-repository and needs no build command — the output directory is the repository
-root.
+Pushing to `main` publishes the site. Cloudflare builds it as a Worker that
+serves static assets; `wrangler.jsonc` says which directory to serve and
+`.assetsignore` keeps the build scripts and notes out of it.
+
+There is no build step — the site is plain HTML and CSS.
 
 ## Pages
 
