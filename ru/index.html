@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tTerm — терминал в Telegram с доступом для команды</title>
+<meta name="description" content="Выполняй команды на своих серверах прямо из чата Telegram. Короткие сертификаты, ключи не хранятся, доступ для других с журналом.">
+
+<meta property="og:title" content="tTerm — терминал в Telegram">
+<meta property="og:description" content="Выполняй команды на своих серверах прямо из чата Telegram.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tterm.net/ru/">
+<meta property="og:image" content="https://tterm.net/assets/og.png">
+
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="en" href="https://tterm.net/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<meta name="version" content="0.9.2">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div class="glow" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="brand" href="/ru/">
+    <img src="../assets/logo.svg" alt="" width="30" height="30">
+    <span>tTerm</span>
+    <span class="beta">βeta version</span>
+  </a>
+  <nav class="bar-links">
+    <a class="pill pill-ghost" href="https://github.com/tterm-net">Исходники</a>
+    <a class="pill pill-ghost" href="https://t.me/tTermBlog">Новости</a>
+    <a class="pill" href="/ru/donate/">Поддержать</a>
+    <details class="lang">
+      <summary aria-label="Язык"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>RU</span></summary>
+      <div class="lang-menu">
+        <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+        <a href="/" hreflang="en" lang="en">English</a>
+      </div>
+    </details>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <p class="eyebrow">Терминал в Telegram с доступом для команды</p>
+    <h1>Твои сервера и рабочие машины<br>всегда под рукой.</h1>
+    <p class="lede">
+      Пишешь команду — она выполняется на сервере.<br>
+      В ответе приходит: код возврата, каталог, ветка git, время выполнения.
+      Shell помнит, где ты остановился.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://t.me/tTermNetBot">Открыть в Telegram</a>
+      <a class="btn" href="https://github.com/tterm-net/tTerm">Посмотреть код</a>
+    </div>
+    <p class="perks"><span>Бесплатно</span> · открытый код · без регистрации</p>
+
+    <!-- Сам продукт: один обмен, ровно как его шлёт бот. -->
+    <div class="chat" role="img"
+         aria-label="Переписка с ботом: команда df -h и ответ с занятостью дисков.">
+      <div class="msg msg-out">df -h</div>
+      <div class="msg msg-in">
+        <div class="card-host">🌐 <b>web-01</b></div>
+        <div class="card-status"><span class="ok">●</span> <b>0</b> · 0.1s</div>
+<pre>Filesystem      Size  Used Avail Use%
+/dev/vda1        24G  1.9G   22G   8%
+/dev/vda16      881M   64M  756M   8%
+tmpfs           481M     0  481M   0%</pre>
+        <div class="card-prompt">deploy ~/app main* ❯</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <h2>3 шага для старта</h2>
+    <ol class="steps">
+      <li>
+        <h3>Открой бота</h3>
+        <p>Ни регистрации, ни аккаунта. Интерфейс — это чат.</p>
+      </li>
+      <li>
+        <h3>Выполни одну команду на сервере</h3>
+        <p>
+          Бот выдаст однострочник. Он заводит отдельного пользователя
+          и добавляет доверие к нашим сертификатам. Больше ничего не трогает.
+        </p>
+      </li>
+      <li>
+        <h3>Подтверди в чате</h3>
+        <p>Сервер появится в списке, и можно писать ему команды.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="band">
+    <h2>Безопасное подключение к серверам</h2>
+    <div class="facts">
+      <div class="fact">
+        <h3>Одноразовый сертификат</h3>
+        <p>
+          На каждое подключение выпускается свой сертификат на 15 минут.
+          Твои SSH-ключи никуда не уезжают, потому что мы их не просим.
+        </p>
+      </div>
+      <div class="fact">
+        <h3>Настройки SSH не меняются</h3>
+        <p>
+          Доверие добавляется в <code>authorized_keys</code> одного
+          пользователя. Мы не правим <code>sshd_config</code> и не
+          перезапускаем демон.
+        </p>
+      </div>
+      <div class="fact">
+        <h3>Быстрое удаление</h3>
+        <p>
+          Даёшь команду, удаляешь пользователя и правило sudo — не остаётся
+          ничего.
+        </p>
+      </div>
+      <div class="fact">
+        <h3>Исходный код полностью открыт</h3>
+        <p>
+          Бот и агент открыты. Установочный скрипт тоже — прочитай его перед
+          запуском, он короткий.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <h2>Открыть доступ одной командой</h2>
+    <p class="band-lede">
+      Открой доступ любому пользователю Telegram одной командой. Человек
+      работает в своём чате, а каждая его команда попадает в твой журнал
+      с его именем.
+    </p>
+<pre class="snippet"><span class="c">/share #12 @john 4h</span>   доступ на четыре часа
+<span class="c">/revoke #12 @john</span>     забрать, оборвав живую сессию</pre>
+  </section>
+
+  <section class="band" id="updates">
+    <h2>Обновления</h2>
+    <ul class="updates">
+      <li>
+        <time datetime="2026-08-28">28 авг 2026</time>
+        <p>
+          Бот переехал на свой сервер и больше не зависит от того, открыт ли
+          ноутбук. Исходники бота и агента открыты.
+        </p>
+      </li>
+      <li>
+        <time datetime="2026-08-26">26 авг 2026</time>
+        <p>
+          Список машин, меню и подтверждения переехали на кнопки внутри
+          сообщений. Машина не на связи теперь серая, а не ведёт в ошибку.
+        </p>
+      </li>
+      <li>
+        <time datetime="2026-08-25">25 авг 2026</time>
+        <p>
+          Доступ для других со сроком. Истёкший закрывается сам, и обоим
+          приходит уведомление. Всю историю команд можно выгрузить файлом.
+        </p>
+      </li>
+      <li>
+        <time datetime="2026-08-23">23 авг 2026</time>
+        <p>
+          Подключаются и компьютеры — через маленький агент, который сам
+          держит связь. Пока macOS и Linux.
+        </p>
+      </li>
+    </ul>
+    <p class="more">
+      Подпишись на <a href="https://t.me/tTermBlog">наш канал</a>, чтобы всегда
+      быть в курсе последних обновлений.
+    </p>
+  </section>
+
+  <section class="band" id="support">
+    <h2>tTerm бесплатный и останется таким</h2>
+    <p class="band-lede">
+      Пожертвования идут на хостинг и дальнейшее развитие сервиса.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://t.me/tTermNetBot">Открыть в Telegram</a>
+      <a class="btn" href="/ru/donate/">Поддержать</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-brand">
+    <img src="../assets/logo.svg" alt="" width="24" height="24">
+    <span>tTerm</span>
+  </div>
+  <nav class="foot-links">
+    <a href="https://t.me/tTermNetBot">Бот</a>
+    <a href="https://t.me/tTermBlog">Новости</a>
+    <a href="https://github.com/tterm-net">Исходники</a>
+    <a href="/ru/donate/">Поддержать</a>
+  </nav>
+  <p class="foot-note">Лицензия MIT · 2026 · v0.9.2</p>
+</footer>
+
+</body>
+</html>
