@@ -38,7 +38,7 @@ T = {
  "ru": dict(
    lang="ru", home="/ru/", other="/donate/", other_lang="en",
    other_label="English", self_label="Русский", label="RU",
-   title="Поддержать tTerm",
+   title="Поддержать",
    desc="Адреса для пожертвований. USDT в сетях TRON и Ethereum.",
    nav=[("Исходники", "https://github.com/tterm-net"),
         ("Новости", "https://t.me/tTermBlog")],
@@ -62,12 +62,12 @@ T = {
  "en": dict(
    lang="en", home="/", other="/ru/donate/", other_lang="ru",
    other_label="Русский", self_label="English", label="EN",
-   title="Support tTerm",
+   title="Donate",
    desc="Donation addresses. USDT on TRON and Ethereum.",
    nav=[("Source", "https://github.com/tterm-net"),
         ("News", "https://t.me/tTermBlog")],
-   support="Support it",
-   h1="Support the project",
+   support="Donate",
+   h1="Donate",
    lede=("tTerm is free and will stay that way. Donations go to hosting "
          "and further development of the service."),
    copy="Copy",
