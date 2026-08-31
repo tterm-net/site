@@ -71,6 +71,9 @@ code {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  /* A new link should wrap onto a second row rather than push the header
+     off the screen sideways. */
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -103,7 +106,8 @@ code {
 .bar-links {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  flex-wrap: wrap;
+  gap: .7rem;
   font-size: .95rem;
 }
 
@@ -496,9 +500,16 @@ footer {
 
 @media (max-width: 34rem) {
   body { font-size: 16px; }
+  .bar { padding: 1.1rem 1rem; gap: .6rem; }
+  .brand { font-size: 1.05rem; }
+  .beta { font-size: .48rem; padding: .14rem .34rem; }
   .hero { padding-top: 2.5rem; }
   .bar-links { gap: 1rem; font-size: .9rem; }
-  .bar-links a:not(.pill):not(.lang) { display: none; }
+  /* Only Donate and the language switch survive on a phone. The other two
+     links became pills at some point, and the old rule — "hide everything
+     that is not a pill" — quietly stopped matching them, so the header ran
+     off the side of the screen. Name what to hide, not what to keep. */
+  .bar-links .pill-ghost { display: none; }
   .updates li { grid-template-columns: 1fr; gap: .3rem; }
   .band { padding: 3rem 1.5rem; }
 }
