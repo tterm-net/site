@@ -12,6 +12,8 @@ README.md
 VERSION
 preview/
 first-post.md
+updates.md
+build_updates.py
 
 # Tooling and version control
 .assetsignore

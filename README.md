@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 1.2.1.** The number lives in `VERSION` and in a `<meta>` tag on
+**Version 1.3.0.** The number lives in `VERSION` and in a `<meta>` tag on
 each page, so you can tell what is deployed by viewing source.
 
 The landing page for [tTerm](https://github.com/tterm-net/tTerm) — Terminal in
@@ -56,6 +56,16 @@ in the header of each.
 
 ## Updates
 
-The list on the page is the user-facing changelog: two lines per entry about
-what changed for the reader, not for us. The same entries go to
-[@tTermBlog](https://t.me/tTermBlog).
+`updates.md` is the only place an update is written. `build_updates.py` puts
+it on both language pages — editing a page's list by hand is pointless, the
+next run overwrites it.
+
+An entry needs text in every language or the build stops. That is the whole
+point of the file: written twice by hand, the two lists drift apart within a
+month and nothing says which one is right.
+
+One entry per release worth telling about, not per version. Five versions can
+be one entry — a reader does not need three attempts at the same fix.
+
+Posting to [@tTermBlog](https://t.me/tTermBlog) stays manual. Deciding what is
+worth telling is a judgement call, and a script would post everything.
