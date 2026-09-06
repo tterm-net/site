@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 1.3.0.** The number lives in `VERSION` and in a `<meta>` tag on
+**Version 1.4.0.** The number lives in `VERSION` and in a `<meta>` tag on
 each page, so you can tell what is deployed by viewing source.
 
 The landing page for [tTerm](https://github.com/tterm-net/tTerm) — Terminal in
@@ -26,6 +26,23 @@ pages, never the preview.
 Bump `VERSION` and the `<meta name="version">` tag on both pages in the same
 commit. One version, one set of files — the same rule as the bot: never ship
 two different things under one number.
+
+## Search engines
+
+`build_seo.py` writes `robots.txt` and `sitemap.xml`. Run it after adding a
+page, or the page will not be in the sitemap and Google will not hear about it.
+
+`lastmod` comes from the newest date in `updates.md`, not from file times: the
+deploy rewrites every file, and a site claiming everything changed on every
+push gets discounted.
+
+`build_og.py` draws `assets/og.png`, the preview card shown when a link is
+shared. The page pointed at that file long before it existed, so every shared
+link came out with a blank space. Replace it with something drawn properly when
+there is one — nothing else needs to change.
+
+The donation pages carry `noindex` and are excluded in `robots.txt`: a page of
+wallet addresses is not what anyone should arrive at from a search.
 
 ## Deploy
 

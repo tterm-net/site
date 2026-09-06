@@ -1,0 +1,10 @@
+# tterm.net
+
+User-agent: *
+Allow: /
+
+# Wallet addresses are not a search result anyone wants to land on.
+Disallow: /donate/
+Disallow: /ru/donate/
+
+Sitemap: https://tterm.net/sitemap.xml

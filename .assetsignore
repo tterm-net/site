@@ -14,6 +14,8 @@ preview/
 first-post.md
 updates.md
 build_updates.py
+build_seo.py
+build_og.py
 
 # Tooling and version control
 .assetsignore
