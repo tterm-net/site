@@ -5,6 +5,20 @@
 #
 # Newest first. Dates in ISO form; the pages format them per language.
 
+## 2026-09-17
+
+@en
+The agent now runs your own shell, bash or zsh, so the environment and the
+paths are the ones you see in a normal terminal. Commands that leave nothing
+to fix ask for confirmation. The server's key is checked on every connection.
+Long output arrives with a summary instead of its last few lines.
+
+@ru
+Агент запускает ваш собственный шелл – bash или zsh, – так что окружение
+и пути те же, что в обычном терминале. Команды, после которых нечего чинить,
+спрашивают подтверждение. Ключ сервера сверяется при каждом подключении.
+Длинный вывод приходит со сводкой вместо хвоста.
+
 ## 2026-09-01
 
 @en
