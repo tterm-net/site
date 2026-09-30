@@ -5,6 +5,20 @@
 #
 # Newest first. Dates in ISO form; the pages format them per language.
 
+## 2026-09-30
+
+@en
+You can now answer a command while it runs: whatever you type goes to its
+input, the way it would in a terminal. Yes/no questions are recognised even
+with a spinner turning below them. A computer with the agent no longer drops
+out of the list after half an hour without commands.
+
+@ru
+Команде теперь можно ответить, пока она работает: всё, что вы пишете, уходит
+ей на ввод, как в обычном терминале. Вопросы «да или нет» распознаются, даже
+если под ними крутится индикатор. Компьютер с агентом больше не выпадает
+из списка после получаса без команд.
+
 ## 2026-09-17
 
 @en
