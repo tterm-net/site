@@ -5,6 +5,23 @@
 #
 # Newest first. Dates in ISO form; the pages format them per language.
 
+## 2026-10-07
+
+@en
+Terminal windows on a computer with the agent are now independent: each one
+has its own shell, as on a server, and cd in one no longer moves the others.
+To get this, update the agent by running the install again from
+/addhost → Computer. The window buttons now sit at the bottom of the list
+and stay put when you switch. A computer no longer shows as offline after
+the agent reconnects quickly.
+
+@ru
+Окна на компьютере с агентом теперь независимы: у каждого свой шелл, как
+на сервере, и cd в одном больше не двигает остальные. Для этого обновите
+агента, повторив установку через /addhost → Computer. Кнопки окна стоят
+внизу списка и не прыгают при переключении. Компьютер больше не
+показывается offline после быстрого переподключения агента.
+
 ## 2026-09-30
 
 @en
