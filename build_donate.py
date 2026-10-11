@@ -57,7 +57,7 @@ T = {
    foot=[("Бот", "https://t.me/tTermNetBot"),
          ("Новости", "https://t.me/tTermBlog"),
          ("Исходники", "https://github.com/tterm-net")],
-   license="Лицензия MIT · 2026 · v{v}",
+   license="Лицензия AGPL-3.0 · 2026 · v{v}",
  ),
  "en": dict(
    lang="en", home="/", other="/ru/donate/", other_lang="ru",
@@ -81,7 +81,7 @@ T = {
    foot=[("Bot", "https://t.me/tTermNetBot"),
          ("News", "https://t.me/tTermBlog"),
          ("Source", "https://github.com/tterm-net")],
-   license="MIT licensed · 2026 · v{v}",
+   license="AGPL-3.0 licensed · 2026 · v{v}",
  ),
 }
 
