@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 1.8.1.** The number lives in `VERSION` and in a `<meta>` tag on
+**Version 1.9.0.** The number lives in `VERSION` and in a `<meta>` tag on
 each page, so you can tell what is deployed by viewing source.
 
 The landing page for [tTerm](https://github.com/tterm-net/tTerm) — Terminal in
@@ -23,8 +23,9 @@ pages, never the preview.
 
 ## Releasing
 
-Bump `VERSION` and the `<meta name="version">` tag on both pages in the same
-commit. One version, one set of files — the same rule as the bot: never ship
+Bump `VERSION`, the `<meta name="version">` tag and the number in the footer
+on every page in the same commit; the donation pages take it from `VERSION`
+when `build_donate.py` runs. One version, one set of files — the same rule as the bot: never ship
 two different things under one number.
 
 ## Search engines
@@ -57,6 +58,11 @@ There is no build step — the site is plain HTML and CSS.
 `/` and `/ru/` are the landing page, `/donate/` and `/ru/donate/` hold the
 donation addresses.
 
+`/terms/` and `/privacy/` hold the Terms of Service and the Privacy Policy, in
+English only: one binding text, linked from the sign-up box of tTerm Web and
+from every footer. They are written by hand, laid out like Todoist's: a list
+of sections at the top, numbered clauses with a bold label, no tables.
+
 `build_donate.py` writes both donation pages from one template — the addresses
 live in that script and nowhere else, so the two languages cannot drift apart.
 
@@ -64,6 +70,15 @@ live in that script and nowhere else, so the two languages cannot drift apart.
 XML before writing it: an earlier version painted the modules by adding a
 second `fill` attribute beside the one the library emits, which browsers
 reject outright and show as a broken image.
+
+## Fonts
+
+Manrope and JetBrains Mono are served from `assets/fonts`, not from Google
+Fonts: the Privacy Policy says the pages load nothing from third parties, and
+a font request hands the visitor's address to whoever serves it. The files
+are the variable fontsource builds tterm-web uses, with their OFL licenses
+beside them. `build_preview.py` still links Google Fonts: its output is a
+local review file and never deployed.
 
 ## Languages
 

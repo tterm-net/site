@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service — tTerm</title>
+<meta name="description" content="The Terms of Service of tTerm: the tterm.net website, the app.tterm.net web app and the programs that come with them.">
+<link rel="canonical" href="https://tterm.net/terms/">
+<meta name="version" content="1.9.0">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="glow" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="brand" href="/">
+    <img src="/assets/logo.svg" alt="" width="30" height="30">
+    <span>tTerm</span>
+    <span class="beta">βeta version</span>
+  </a>
+  <nav class="bar-links">
+    <a class="pill pill-ghost" href="https://github.com/tterm-net" target="_blank" rel="noopener">Source</a>
+    <a class="pill pill-ghost" href="https://t.me/tTermBlog" target="_blank" rel="noopener">News</a>
+    <a class="pill" href="/donate/">Donate</a>
+  </nav>
+</header>
+
+<main class="doc">
+  <h1>Terms of Service</h1>
+  <p class="effective">Effective date: October 16, 2026</p>
+
+  <nav class="toc" aria-label="Sections">
+    <p>Sections</p>
+    <ul>
+      <li><a href="#definitions">Definitions</a></li>
+      <li><a href="#s1">1. Who can use the Service</a></li>
+      <li><a href="#s2">2. Account and sign-in</a></li>
+      <li><a href="#s3">3. How the Service works</a></li>
+      <li><a href="#s4">4. Your data</a></li>
+      <li><a href="#s5">5. Acceptable use</a></li>
+      <li><a href="#s6">6. Plans and payment</a></li>
+      <li><a href="#s7">7. Open source and tTerm's rights</a></li>
+      <li><a href="#s8">8. Your responsibility</a></li>
+      <li><a href="#s9">9. Disclaimer of warranties</a></li>
+      <li><a href="#s10">10. Limitation of liability</a></li>
+      <li><a href="#s11">11. Suspension and closing your Account</a></li>
+      <li><a href="#s12">12. Support and availability</a></li>
+      <li><a href="#s13">13. Changes to the Service and the Terms</a></li>
+      <li><a href="#s14">14. Governing law and disputes</a></li>
+      <li><a href="#s15">15. General</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <p>These Terms of Service (the <strong>Terms</strong>) are an agreement between you
+  and tTerm (<strong>tTerm</strong>, <strong>we</strong> or <strong>us</strong>).
+  They apply when you use the tterm.net website, the app.tterm.net web app and the
+  programs that come with them (the <strong>Service</strong>).</p>
+
+  <p><strong>You accept the Terms when you tick the box at sign-up. If you do not
+  agree with them, do not sign up or use the Service.</strong> How we handle
+  personal data is described in the <a href="/privacy/">Privacy Policy</a> (the
+  <strong>Policy</strong>).</p>
+
+  <h2 id="definitions">Definitions</h2>
+  <ul>
+    <li><strong>Account</strong>: your account in the Service, tied to your email address.</li>
+    <li><strong>Machine</strong>: a server or computer you have connected to the Service.</li>
+    <li><strong>Agent</strong>: the tterm-agent program you install on your computer to connect it to the Service.</li>
+    <li><strong>Terminal</strong>: a shell session on a Machine, opened through the Service.</li>
+    <li><strong>Project</strong>: a group of Machines in an Account. The first Project, Personal, is created when you sign up.</li>
+    <li><strong>Your data</strong>: what you enter into the Service and get from it: commands, their output, information about your Machines.</li>
+    <li><strong>Plan</strong>: a set of features and limits of the Service (how many Machines and Terminals, how long output is kept) and its price, if the Plan is paid.</li>
+    <li><strong>Subscription</strong>: payment for a paid Plan for a period, renewed automatically until you cancel it.</li>
+  </ul>
+
+  <h2 id="s1">1. Who can use the Service</h2>
+  <p>1.1 <strong>Age.</strong> You must be at least 18 years old and able to enter
+  into contracts.</p>
+  <p>1.2 <strong>On behalf of a company.</strong> If you accept the Terms on behalf
+  of a company, they bind the company too, and you confirm that you have the
+  authority to do so.</p>
+  <p>1.3 <strong>Sanctions.</strong> You may not use the Service if you are subject
+  to US sanctions or if US export control laws prohibit it.</p>
+
+  <h2 id="s2">2. Account and sign-in</h2>
+  <p>2.1 <strong>Sign-up.</strong> When you sign up, you give a working email
+  address and your real name. One Account is for one person.</p>
+  <p>2.2 <strong>Sign-in.</strong> You sign in with a one-time code sent by email.
+  On your own device you can set a 4-digit quick code: it works only in that
+  browser.</p>
+  <p>2.3 <strong>Security.</strong> Keep your email and devices safe, never share
+  codes, and sign out of the Service on computers that are not yours. You are
+  responsible for everything that happens in your Account.</p>
+  <p>2.4 <strong>Unauthorized access.</strong> If someone else has gained access to
+  your Account, click Sign out everywhere in Devices right away and write to
+  <a href="mailto:support@tterm.net">support@tterm.net</a>. We will check that the
+  Account is yours and help you regain access.</p>
+
+  <h2 id="s3">3. How the Service works</h2>
+  <p>3.1 <strong>Servers.</strong> To connect a server, you run a command from the
+  Service on it. The installer creates a <code>tterm</code> user with no password
+  and passwordless <code>sudo</code>, and adds the Service's certificate authority
+  (CA) to its <code>authorized_keys</code>. The Service signs in to the server over
+  SSH with a certificate that is valid for 2 minutes and contains your name; every
+  sign-in is visible in the server's log (<code>auth.log</code>). The installer
+  does not change the server's SSH settings.</p>
+  <p>3.2 <strong>Computers.</strong> To connect a computer, you install the Agent in
+  the <code>~/.tterm-web</code> folder. The Agent starts when you log in to the
+  computer and runs as your user, without root rights. It keeps the connection
+  to the Service itself and starts a shell when you open a Terminal.</p>
+  <p>3.3 <strong>Terminals.</strong> A Terminal runs on the Service's server, not in
+  your browser: closing the tab does not stop it. Each command is saved as a
+  block: its text, directory, time, exit code and output. What is kept and for
+  how long is described in the Policy.</p>
+  <p>3.4 <strong>Access to Machines.</strong> By connecting a Machine, you give the
+  Service the access described above. You can remove it yourself: with the Remove
+  machine button and the command the Service shows you for a server, or with
+  <code>~/.tterm-web/uninstall.sh</code> on a computer.</p>
+  <p>3.5 <strong>Plan.</strong> Features and limits depend on your Plan
+  (<a href="#s6">section 6</a>).</p>
+
+  <h2 id="s4">4. Your data</h2>
+  <p>4.1 <strong>Your data is yours.</strong> You allow us to store, process and
+  show it to you only to make the Service work, as described in the Policy.</p>
+  <p>4.2 <strong>What we don't do.</strong> We do not sell your data, use it for
+  advertising or train AI models on it.</p>
+  <p>4.3 <strong>Rights to data.</strong> You are responsible for what you enter
+  into and keep in the Service, and for having the right to do so.</p>
+  <p>4.4 <strong>Feedback.</strong> We may freely use the feedback and suggestions
+  you send us to improve tTerm, without paying for them.</p>
+
+  <h2 id="s5">5. Acceptable use</h2>
+  <p>5.1 <strong>Prohibited.</strong> When using the Service, you may not:</p>
+  <ul>
+    <li>break the law, including by storing or transmitting illegal material through the Service;</li>
+    <li>attack other systems: scan them, guess passwords, overload them, spread malware or send spam;</li>
+    <li>connect Machines you are not authorized to manage;</li>
+    <li>try to access other people's Accounts, Machines or data, or closed parts of the Service;</li>
+    <li>disrupt the Service or load it so heavily that it gets in others' way;</li>
+    <li>collect other users' data;</li>
+    <li>get around Plan limits and technical restrictions, including with several Accounts, or create Accounts automatically;</li>
+    <li>impersonate anyone, including tTerm;</li>
+    <li>resell access to the Service without our written consent.</li>
+  </ul>
+  <p>5.2 <strong>Vulnerabilities.</strong> Found a vulnerability? Write to
+  <a href="mailto:security@tterm.net">security@tterm.net</a>. We do not treat
+  good-faith research reported this way as a violation.</p>
+
+  <h2 id="s6">6. Plans and payment</h2>
+  <p>6.1 <strong>Free Plan.</strong> The Service currently has a free Plan: up to
+  50 Machines and up to 24 open Terminals, with command output kept for 30 days.
+  The limits are shown in the Service.</p>
+  <p>6.2 <strong>Paid Plans.</strong> Paid Plans will come later. Before you pay,
+  you see the price, the currency, what the Plan includes and its term.</p>
+  <p>6.3 <strong>Subscription.</strong> A paid Plan is paid for by a monthly or
+  yearly Subscription, as you choose. At the end of each period it renews
+  automatically on the same terms, and the payment is charged automatically. By
+  paying for a Subscription, you agree to these charges.</p>
+  <p>6.4 <strong>Cancellation.</strong> You can cancel a Subscription at any time
+  in the Service or by writing to
+  <a href="mailto:support@tterm.net">support@tterm.net</a>. The paid period runs
+  to its end; after that the paid features are switched off.</p>
+  <p>6.5 <strong>Payment and taxes.</strong> Payments are handled by a payment
+  provider that we will name before sales begin; its terms are on its website.
+  Taxes such as sales tax or VAT are added at checkout based on where you
+  are.</p>
+  <p>6.6 <strong>14 days to withdraw.</strong> If you are a consumer in the EU or
+  the UK, you can withdraw from a new Subscription within 14 days and get your
+  money back. If you asked us to start right away, you pay only for the days you
+  used.</p>
+  <p>6.7 <strong>Price changes.</strong> We will email you about a new price for an
+  existing Subscription 30 days in advance. If it does not suit you, cancel the
+  Subscription before it takes effect.</p>
+  <p>6.8 <strong>Free Plan limits.</strong> We may change them; we will warn you in
+  advance before reducing them.</p>
+  <p>6.9 <strong>Refunds.</strong> Except in the cases in sections 6.6, 12.4 and
+  13.3, payments for a period that has started are not refunded, including when
+  an Account is closed for breaking the Terms, unless the law requires
+  otherwise.</p>
+
+  <h2 id="s7">7. Open source and tTerm's rights</h2>
+  <p>7.1 <strong>Open source.</strong> tTerm's code is open source under the
+  <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener">GNU AGPL v3</a>.
+  The Terms do not limit your rights under that license: for example, you may run
+  tTerm on your own server under its terms.</p>
+  <p>7.2 <strong>Name and logo.</strong> The tTerm name, the logo, the tterm.net
+  website and its texts belong to us. You may use them only with our written
+  permission, except as the law allows.</p>
+
+  <h2 id="s8">8. Your responsibility</h2>
+  <p>8.1 <strong>Commands.</strong> You run the commands in Terminals, and you are
+  responsible for their consequences, including to the owners of the Machines.
+  This includes commands taken from the Service's suggestions. The confirmation
+  before a dangerous command in the input line helps but guarantees nothing: it
+  does not exist in classic mode or inside programs such as vim.</p>
+  <p>8.2 <strong>Backups.</strong> You make backups of the data on your Machines
+  yourself.</p>
+  <p>8.3 <strong>Indemnity.</strong> If claims are made against us because of your
+  actions in the Service or your breach of the Terms, for example an attack from
+  your Machine, you will compensate us for the resulting losses and costs,
+  including legal fees, to the extent the law allows.</p>
+
+  <h2 id="s9">9. Disclaimer of warranties</h2>
+  <p>9.1 <strong>The Service is provided "as is" and "as available". You use it at
+  your own risk.</strong></p>
+  <p>9.2 <strong>We give no warranties, express or implied: that the Service will
+  suit your purposes, that it will work without interruptions, errors or
+  failures, that it is secure, or that errors will be fixed within any
+  time.</strong> This does not affect warranties that the law does not allow us to
+  exclude.</p>
+  <p>9.3 <strong>Beta.</strong> We may offer new features to try early, marked beta.
+  They may work less well, change or disappear.</p>
+
+  <h2 id="s10">10. Limitation of liability</h2>
+  <p>10.1 <strong>We are not liable for:</strong></p>
+  <ul>
+    <li>the consequences of commands you have run;</li>
+    <li>your Machines, devices, programs and the data on them;</li>
+    <li>indirect losses, lost profits and lost data;</li>
+    <li>interruptions of the Service;</li>
+    <li>the actions and failures of providers: hosting, email, network, payment provider;</li>
+    <li>use of your email, devices or codes by others.</li>
+  </ul>
+  <p>10.2 <strong>If we are nevertheless found liable, our total liability to you
+  is limited to what you paid us for the Service in the 12 months before the
+  event that gave rise to the claim.</strong></p>
+  <p>10.3 <strong>What the law does not allow us to limit.</strong> The limitations
+  in this section apply to the extent permitted by applicable law. The law does
+  not allow liability to be excluded or limited for intent, gross negligence,
+  fraud, or death and personal injury, and consumers keep the rights their own
+  country's law gives them.</p>
+  <p>10.4 <strong>Force majeure.</strong> We are not liable for delays and failures
+  caused by circumstances beyond our reasonable control: natural disasters,
+  fires, wars, government actions, power and internet outages, large-scale
+  attacks.</p>
+
+  <h2 id="s11">11. Suspension and closing your Account</h2>
+  <p>11.1 <strong>Suspension.</strong> We may suspend or close an Account if you
+  have broken the Terms or the law, given false information, or if your actions
+  threaten the Service or other people. Where possible, we will first write to
+  you and explain why.</p>
+  <p>11.2 <strong>Your explanation.</strong> You can reply to
+  <a href="mailto:support@tterm.net">support@tterm.net</a> and explain. If after
+  review there are no grounds, we lift the suspension within 2 business
+  days.</p>
+  <p>11.3 <strong>Deleting your Account.</strong> You can stop using the Service and
+  delete your Account at any time: for now by writing to
+  <a href="mailto:support@tterm.net">support@tterm.net</a>, later with a button in
+  the Service. We delete the Account and its data within 30 days, except what the
+  law requires us to keep longer.</p>
+  <p>11.4 <strong>Access on your Machines.</strong> Before deleting your Account,
+  remove the Service's access from your Machines (section 3.4): it stays on a
+  Machine until you remove it.</p>
+  <p>11.5 <strong>What survives.</strong> Sections 7–10, 14 and 15 continue to apply
+  after your Account is closed.</p>
+
+  <h2 id="s12">12. Support and availability</h2>
+  <p>12.1 <strong>Support.</strong> We help at
+  <a href="mailto:support@tterm.net">support@tterm.net</a>. We decide the scope of
+  support and response times.</p>
+  <p>12.2 <strong>Providers.</strong> The Service runs on providers'
+  infrastructure: hosting, email, network (listed in the Policy). We work to keep
+  the Service running without interruptions but do not guarantee uptime or how
+  fast failures are fixed.</p>
+  <p>12.3 <strong>Interruptions.</strong> There may be planned maintenance (we warn
+  at least 1 day ahead) and short interruptions during updates: open Terminals
+  end, and Agents reconnect by themselves. A computer that is asleep, off or
+  offline is unavailable through no fault of ours.</p>
+  <p>12.4 <strong>Closing the Service.</strong> If we decide to shut down the
+  Service, we will give 60 days' notice and time to take your data and remove
+  access from your Machines, and refund the paid, unused period.</p>
+
+  <h2 id="s13">13. Changes to the Service and the Terms</h2>
+  <p>13.1 <strong>The Service changes.</strong> We develop the Service: features
+  appear, change and sometimes go away. We announce noticeable changes in
+  advance.</p>
+  <p>13.2 <strong>New Terms.</strong> We may change the Terms. We will email you
+  about material changes at least 30 days before they take effect. The new
+  version is published on the website with its date.</p>
+  <p>13.3 <strong>If you disagree.</strong> If the changes do not suit you, you can
+  delete your Account before they take effect, and we will refund the paid,
+  unused period. By continuing to use the Service after the new version takes
+  effect, you accept it.</p>
+
+  <h2 id="s14">14. Governing law and disputes</h2>
+  <p>14.1 <strong>Write to us first.</strong> If you have a claim, write to
+  <a href="mailto:support@tterm.net">support@tterm.net</a> first. We will reply
+  within 30 days and try to resolve it without going to court.</p>
+  <p>14.2 <strong>Law and courts.</strong> These Terms are governed by the laws of
+  the State of Delaware, USA, without regard to its conflict-of-laws rules.
+  Disputes are decided by the courts of the State of Delaware.</p>
+  <p>14.3 <strong>Consumers.</strong> If you are a consumer living in the EU, the
+  UK or another country whose law provides for it, you keep the rights your
+  country's laws give you and may bring a claim in the courts where you
+  live.</p>
+
+  <h2 id="s15">15. General</h2>
+  <p>15.1 <strong>Notices.</strong> We write to the email address of your Account,
+  and may announce things that concern everyone in the Service or on the
+  website. Keep your address current. Write to us at
+  <a href="mailto:support@tterm.net">support@tterm.net</a>.</p>
+  <p>15.2 <strong>Entire agreement.</strong> The Terms and the Policy are everything
+  we have agreed about the Service.</p>
+  <p>15.3 <strong>Severability.</strong> If any provision is held invalid, the rest
+  remain in effect.</p>
+  <p>15.4 <strong>No waiver.</strong> If we do not exercise a right under the Terms
+  right away, it does not mean we have waived it.</p>
+  <p>15.5 <strong>Assignment.</strong> You may not transfer your rights and
+  obligations under the Terms to anyone else without our consent. We may transfer
+  them to a company that takes over the Service, for example in a sale or
+  reorganization, and will let you know.</p>
+  <p>15.6 <strong>Current version.</strong> The current version of the Terms is
+  always at <a href="/terms/">tterm.net/terms</a>.</p>
+
+  <h2 id="contact">Contact</h2>
+  <ul>
+    <li>Questions, data and Account deletion: <a href="mailto:support@tterm.net">support@tterm.net</a></li>
+    <li>Vulnerabilities: <a href="mailto:security@tterm.net">security@tterm.net</a></li>
+    <li>Website: <a href="/">tterm.net</a></li>
+  </ul>
+</main>
+
+<footer>
+  <div class="foot-brand">
+    <img src="/assets/logo.svg" alt="" width="24" height="24">
+    <span>tTerm</span>
+  </div>
+  <nav class="foot-links">
+    <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot</a>
+    <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">News</a>
+    <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Source</a>
+    <a href="/donate/">Donate</a>
+    <a href="/terms/">Terms of Service</a>
+    <a href="/privacy/">Privacy Policy</a>
+  </nav>
+  <p class="foot-note">AGPL-3.0 licensed · 2026 · v1.9.0</p>
+</footer>
+
+</body>
+</html>

@@ -57,6 +57,8 @@ T = {
    foot=[("Бот", "https://t.me/tTermNetBot"),
          ("Новости", "https://t.me/tTermBlog"),
          ("Исходники", "https://github.com/tterm-net")],
+   legal=[("Условия использования", "/terms/"),
+          ("Политика конфиденциальности", "/privacy/")],
    license="Лицензия AGPL-3.0 · 2026 · v{v}",
  ),
  "en": dict(
@@ -81,6 +83,7 @@ T = {
    foot=[("Bot", "https://t.me/tTermNetBot"),
          ("News", "https://t.me/tTermBlog"),
          ("Source", "https://github.com/tterm-net")],
+   legal=[("Terms of Service", "/terms/"), ("Privacy Policy", "/privacy/")],
    license="AGPL-3.0 licensed · 2026 · v{v}",
  ),
 }
@@ -121,6 +124,8 @@ def build(key: str, version: str) -> str:
         f' rel="noopener">{n}</a>' for n, u in d["nav"])
     foot = "\n".join(f'    <a href="{u}" target="_blank" rel="noopener">{n}</a>'
                      for n, u in d["foot"])
+    # The documents are on this site, in English only, so no new tab.
+    legal = "\n".join(f'    <a href="{u}">{n}</a>' for n, u in d["legal"])
     self_href = "/ru/donate/" if key == "ru" else "/donate/"
     menu = (f'      <a href="/ru/donate/" hreflang="ru" lang="ru">Русский</a>\n'
             f'      <a href="/donate/" hreflang="en" lang="en">English</a>')
@@ -136,9 +141,6 @@ def build(key: str, version: str) -> str:
 <link rel="icon" href="{depth}/assets/logo.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="en" href="https://tterm.net/donate/">
 <link rel="alternate" hreflang="ru" href="https://tterm.net/ru/donate/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{depth}/style.css">
 </head>
 <body class="donate">
@@ -193,6 +195,7 @@ def build(key: str, version: str) -> str:
   </div>
   <nav class="foot-links">
 {foot}
+{legal}
   </nav>
   <p class="foot-note">{d['license'].format(v=version)}</p>
 </footer>

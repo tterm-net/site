@@ -16,4 +16,14 @@
     <lastmod>2026-10-07</lastmod>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://tterm.net/terms/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/privacy/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <priority>0.3</priority>
+  </url>
 </urlset>

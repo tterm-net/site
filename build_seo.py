@@ -17,13 +17,17 @@ import re
 ROOT = pathlib.Path(__file__).parent
 SITE = "https://tterm.net"
 
-#: Pages worth indexing, with how much of the site each one is.
+#: Pages worth indexing, with how much of the site each one is, whether the
+#: page has a version in the other language, and its own last change when
+#: that is not the newest update (None: take the update's date).
 #: The donation pages are deliberately absent: they carry a `noindex` tag,
 #: since a page of wallet addresses is not what anyone should arrive at from
-#: a search.
+#: a search. The Terms and the Policy are English only.
 PAGES = [
-    ("/", 1.0),
-    ("/ru/", 1.0),
+    ("/", 1.0, True, None),
+    ("/ru/", 1.0, True, None),
+    ("/terms/", 0.3, False, "2026-10-16"),
+    ("/privacy/", 0.3, False, "2026-10-16"),
 ]
 
 ROBOTS = f"""# tterm.net
@@ -50,17 +54,18 @@ def sitemap(lastmod: str) -> str:
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
            ' xmlns:xhtml="http://www.w3.org/1999/xhtml">']
-    for path, priority in PAGES:
+    for path, priority, bilingual, own in PAGES:
         out.append("  <url>")
         out.append(f"    <loc>{SITE}{path}</loc>")
         # Each page points at the other language. Without this Google treats
         # them as two competing pages instead of one page in two languages.
-        for lang, other in (("en", "/"), ("ru", "/ru/")):
-            out.append(f'    <xhtml:link rel="alternate" hreflang="{lang}"'
-                       f' href="{SITE}{other}"/>')
-        out.append(f'    <xhtml:link rel="alternate" hreflang="x-default"'
-                   f' href="{SITE}/"/>')
-        out.append(f"    <lastmod>{lastmod}</lastmod>")
+        if bilingual:
+            for lang, other in (("en", "/"), ("ru", "/ru/")):
+                out.append(f'    <xhtml:link rel="alternate" hreflang="{lang}"'
+                           f' href="{SITE}{other}"/>')
+            out.append(f'    <xhtml:link rel="alternate" hreflang="x-default"'
+                       f' href="{SITE}/"/>')
+        out.append(f"    <lastmod>{own or lastmod}</lastmod>")
         out.append(f"    <priority>{priority}</priority>")
         out.append("  </url>")
     out.append("</urlset>")

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — tTerm</title>
+<meta name="description" content="What personal data tTerm collects, why, how long it is kept, who receives it and how you can control it.">
+<link rel="canonical" href="https://tterm.net/privacy/">
+<meta name="version" content="1.9.0">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="glow" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="brand" href="/">
+    <img src="/assets/logo.svg" alt="" width="30" height="30">
+    <span>tTerm</span>
+    <span class="beta">βeta version</span>
+  </a>
+  <nav class="bar-links">
+    <a class="pill pill-ghost" href="https://github.com/tterm-net" target="_blank" rel="noopener">Source</a>
+    <a class="pill pill-ghost" href="https://t.me/tTermBlog" target="_blank" rel="noopener">News</a>
+    <a class="pill" href="/donate/">Donate</a>
+  </nav>
+</header>
+
+<main class="doc">
+  <h1>Privacy Policy</h1>
+  <p class="effective">Effective date: October 16, 2026</p>
+
+  <nav class="toc" aria-label="Sections">
+    <p>Sections</p>
+    <ul>
+      <li><a href="#s1">1. What data we collect</a></li>
+      <li><a href="#s2">2. The Service's access to your Machines and output</a></li>
+      <li><a href="#s3">3. Why we use data</a></li>
+      <li><a href="#s4">4. Who we share data with</a></li>
+      <li><a href="#s5">5. Where data is stored</a></li>
+      <li><a href="#s6">6. Cookies and browser storage</a></li>
+      <li><a href="#s7">7. How long we keep data</a></li>
+      <li><a href="#s8">8. How we protect data</a></li>
+      <li><a href="#s9">9. Your rights</a></li>
+      <li><a href="#s10">10. Changes to this Policy</a></li>
+      <li><a href="#s11">11. Contact us</a></li>
+    </ul>
+  </nav>
+
+  <p>This Policy explains what personal data we collect, why, how long we keep
+  it, who we share it with and how you can control it. It covers the tterm.net
+  website, the app.tterm.net web app and the programs that come with them (the
+  <strong>Service</strong>).</p>
+
+  <p><strong>We</strong>, <strong>us</strong> and <strong>tTerm</strong> mean the
+  operator of the Service. We are responsible for your data: under the GDPR we
+  are its controller. Capitalized words (Account, Machine, Terminal and others)
+  mean the same as in the <a href="/terms/">Terms of Service</a>. Ticking the box at
+  sign-up confirms that you have read this Policy.</p>
+
+  <p>We collect only what the Service cannot work or stay secure without. We do
+  not sell data, show ads, run visitor analytics or train AI models on your
+  data. We do not ask for special categories of data, such as health or
+  beliefs.</p>
+
+  <h2 id="s1">1. What data we collect</h2>
+  <ul>
+    <li><strong>Account</strong>: your email address, your name and when you accepted the Terms of Service. Your name is shown in the Service and written into the certificates used to sign in to your servers.</li>
+    <li><strong>Sign-in</strong>: codes from emails (hashes only), the address a code was requested for, and the IP address.</li>
+    <li><strong>Sessions and devices</strong>: a description of the browser (for example, “Chrome on macOS”), IP address, time, and hashes of keys and of the quick code.</li>
+    <li><strong>Machines</strong>: name, address and port, host keys, system details (OS, kernel, shells, package manager, memory, disk, whether sudo is available, user), Agent version and when the Machine was last online.</li>
+    <li><strong>Commands and output</strong>: the command text, directory, git branch, exit code, time and output (up to 1 MB per command: the beginning and the end).</li>
+    <li><strong>Open Terminals</strong>: their output in the server's memory, to show a Terminal again after the page reloads.</li>
+    <li><strong>Event log</strong>: sign-ins (IP address, device), Machines added and removed, Terminals opened and closed.</li>
+    <li><strong>Emails</strong>: your email address and the text of the emails we send: codes, warnings about sign-ins from new devices, messages about the Service.</li>
+    <li><strong>Support</strong>: your email address and our correspondence.</li>
+    <li><strong>Server logs</strong>: technical logs, without commands or output.</li>
+    <li><strong>Usage statistics</strong>: how many people, Machines, Terminals and emails, without any content.</li>
+    <li><strong>Payments</strong>, once paid Plans exist: Plan, amounts, invoices. Card details are handled by the payment provider; we never see them.</li>
+  </ul>
+
+  <h3 id="children">Children</h3>
+  <p>The Service is for adults: you must be 18 or older to use it. We do not
+  collect children's data; if we learn that a child has created an Account, we
+  will delete it.</p>
+
+  <h2 id="s2">2. The Service's access to your Machines and output</h2>
+  <p>The Service has technical access to connected Machines and to Terminal
+  output. We say so plainly:</p>
+  <ul>
+    <li><strong>Servers</strong>: the Service can sign in to a connected server as the <code>tterm</code> user with <code>sudo</code>, that is, with root rights. The keys of our certificate authority are held by a separate program: it issues only 2-minute certificates for the <code>tterm</code> user with your name inside, and records every signature in its own log. Every sign-in shows up in your server's <code>auth.log</code>.</li>
+    <li><strong>Computers</strong>: the Agent runs as your user and starts a shell when the Service asks it to.</li>
+    <li><strong>Output</strong>: Terminal output passes through our server and is stored there (<a href="#s7">section 7</a>), so whoever runs the Service can technically read it.</li>
+  </ul>
+  <p>We use this access only for what you do in tTerm. We do not open Terminals
+  on your Machines ourselves and do not read output, unless you ask us to look
+  into a problem.</p>
+  <p>tTerm's code is open source (GNU AGPL v3): you can check how everything works
+  or run tTerm yourself. You remove access from a Machine yourself: with the
+  Remove machine button and the command the Service shows you, or with
+  <code>~/.tterm-web/uninstall.sh</code> on a computer.</p>
+
+  <h2 id="s3">3. Why we use data</h2>
+  <p>Each purpose shows its legal basis under the GDPR in parentheses:</p>
+  <ul>
+    <li><strong>To run the Service</strong> (contract, that is, the Terms of Service): Account, sign-in, sessions and devices, Machines, Terminals, commands and output, emails with codes, support, payments.</li>
+    <li><strong>To protect you and the Service</strong> (our legitimate interest in security): limits on how often codes can be requested, the event log, emails about sign-ins from new devices, IP addresses at sign-in.</li>
+    <li><strong>To fix failures and plan capacity</strong> (our legitimate interest): server logs, usage statistics, backups.</li>
+    <li><strong>To comply with the law</strong> (legal obligation): invoices and tax records, responses to lawful requests from authorities.</li>
+  </ul>
+  <p>We process data automatically. No decisions that significantly affect you
+  are made by software alone: only Plan limits and sign-in protection trigger
+  automatically.</p>
+
+  <h2 id="s4">4. Who we share data with</h2>
+  <p>We share data only with those who help us provide the Service, and only what
+  they need for it:</p>
+  <ul>
+    <li><strong>DigitalOcean, LLC</strong> (USA): the server and its backups, in the EU. Receives all Service data.</li>
+    <li><strong>Brevo</strong> (Sendinblue SAS, France): sending emails, from the EU. Receives the email address and the text of the email.</li>
+    <li><strong>Cloudflare, Inc.</strong> (USA): serves the tterm.net website and handles DNS. Receives the IP address and request data of website visitors. Web app traffic does not go through Cloudflare.</li>
+    <li><strong>GitHub, Inc.</strong> (USA): hosts the code; the computer installer downloads the Agent from there. Receives the computer's IP address during the download.</li>
+    <li><strong>Payment provider</strong>: will come with paid Plans; we will name it here before sales begin.</li>
+  </ul>
+  <p>We disclose data to authorities only when the law requires it. If the Service
+  passes to another company, for example in a sale, the data will pass with it,
+  and we will let you know.</p>
+
+  <h2 id="s5">5. Where data is stored</h2>
+  <p>Service data is stored on our server in the EU. Some of our providers are in
+  the USA (<a href="#s4">section 4</a>). When data from the EU or the UK goes to
+  the USA, the transfer relies on the EU-U.S. Data Privacy Framework and its UK
+  Extension, or on the EU Standard Contractual Clauses.</p>
+
+  <h2 id="s6">6. Cookies and browser storage</h2>
+  <p>The Service sets only the cookies it needs for signing in, so it does not ask
+  for consent. The tterm.net website sets no cookies. There are no third-party
+  cookies, analytics or ads; even the fonts load from our own addresses.</p>
+  <ul>
+    <li><strong>tterm-session</strong>: your session. Kept for up to 30 days; the session itself ends after 8 hours without activity.</li>
+    <li><strong>tterm-device</strong>: the trusted device key, only if you set a quick code. Kept for 90 days.</li>
+    <li><strong>tterm-browser</strong>: links an emailed code to the browser that requested it. Kept for 1 day.</li>
+  </ul>
+  <p>In browser storage (localStorage) the page keeps your settings: theme, open
+  tabs, terminal mode, collapsed blocks. They are not sent to the server.</p>
+
+  <h2 id="s7">7. How long we keep data</h2>
+  <ul>
+    <li><strong>Account and Machines</strong>: as long as the Account exists. A deleted Machine stays as a record so that its key can never work again.</li>
+    <li><strong>Sign-in codes</strong>: 2 days.</li>
+    <li><strong>Sessions</strong>: up to 30 days after they end.</li>
+    <li><strong>Devices</strong>: until you forget them, but no longer than 90 days without a sign-in.</li>
+    <li><strong>Commands and output</strong>: 30 days; the Project owner can set less.</li>
+    <li><strong>Open Terminal output</strong>: while the Terminal is open, up to 4 MB per Terminal.</li>
+    <li><strong>Emails</strong>: not kept by us; the email provider keeps them under its own rules.</li>
+    <li><strong>Event log</strong>: 1 year.</li>
+    <li><strong>Support correspondence</strong>: as long as needed to answer, but no longer than 2 years.</li>
+    <li><strong>Server logs</strong>: 30 days.</li>
+    <li><strong>Usage statistics</strong>: 1 year.</li>
+    <li><strong>Database backups</strong>: 14 days.</li>
+    <li><strong>Invoices</strong>: as long as tax law requires.</li>
+  </ul>
+  <p>Data is deleted automatically when its period ends. If you ask us to delete
+  your Account or data, we will delete it within 30 days of your request, except
+  what the law requires us to keep longer. It disappears from backups 14 days
+  after that.</p>
+
+  <h2 id="s8">8. How we protect data</h2>
+  <p>We protect personal data against disclosure, loss and access by
+  outsiders:</p>
+  <ul>
+    <li><strong>Encryption</strong>: the website and the Service work only over encrypted connections (TLS). Pages load nothing from third-party sites.</li>
+    <li><strong>Hashes</strong>: emailed codes, quick codes, device keys and session keys are stored only as hashes, so they cannot be recovered from a copy of the database.</li>
+    <li><strong>Certificate authority keys</strong>: held by a separate program with no network access. The Service itself cannot read them, and they are not included in backups.</li>
+    <li><strong>Access</strong>: everyone sees only their own Machines, Terminals and output.</li>
+    <li><strong>Sign-in</strong>: protected against guessing. An emailed code is valid for 10 minutes and allows 5 attempts, the number of code emails is limited, and after 5 wrong quick codes the device is forgotten. A session ends after 8 hours without activity.</li>
+    <li><strong>Logs</strong>: the server's technical logs contain no commands or output.</li>
+    <li><strong>Backups</strong>: a database backup is made every night and kept for 14 days.</li>
+  </ul>
+  <p>If a personal data breach occurs, we will notify the data protection
+  supervisory authority within 72 hours of becoming aware of it if it may affect
+  your rights, and notify you without undue delay if it poses a high risk to
+  your rights.</p>
+
+  <h2 id="s9">9. Your rights</h2>
+  <p>Under the GDPR, people in the EU and the UK have rights over their data. We
+  honor these requests from all users:</p>
+  <ul>
+    <li><strong>Access.</strong> Find out what data we hold about you and get a copy.</li>
+    <li><strong>Correction.</strong> Correct inaccurate or incomplete data, such as your name or email address.</li>
+    <li><strong>Deletion.</strong> Delete your Account and data (<a href="#s7">section 7</a>).</li>
+    <li><strong>Restriction.</strong> Ask us to pause processing, for example while we check whether data is accurate.</li>
+    <li><strong>Objection.</strong> Object to processing based on our legitimate interest.</li>
+    <li><strong>Portability.</strong> Receive the data you gave us in a machine-readable format.</li>
+    <li><strong>Complaint.</strong> Complain to the data protection authority of the country where you live or work, or where you believe your rights were violated.</li>
+  </ul>
+  <p>Some of this you can do yourself in the Service: forget a device, sign out
+  everywhere, remove a Machine, close a Terminal. For the rest, write to
+  <a href="mailto:support@tterm.net">support@tterm.net</a> from your Account's
+  email address. We will reply within a month; if a request is complex, this may
+  extend by two more months, and we will tell you.</p>
+  <p>If you delete data the Service cannot work without, such as your email
+  address, you will no longer be able to use the Service.</p>
+
+  <h2 id="s10">10. Changes to this Policy</h2>
+  <p>We may change this Policy. We will email your Account's address about
+  material changes 30 days before they take effect. The current version, with
+  its date, is always at <a href="/privacy/">tterm.net/privacy</a>.</p>
+
+  <h2 id="s11">11. Contact us</h2>
+  <p>For any questions about your data, write to
+  <a href="mailto:support@tterm.net">support@tterm.net</a>. Write from your
+  Account's email address or include it in the message, so we know whose data it
+  is about. We reply within 10 days, and to requests about your rights from
+  <a href="#s9">section 9</a> within a month.</p>
+  <ul>
+    <li>Questions and data rights: <a href="mailto:support@tterm.net">support@tterm.net</a></li>
+    <li>Vulnerabilities: <a href="mailto:security@tterm.net">security@tterm.net</a></li>
+    <li>Website: <a href="/">tterm.net</a></li>
+  </ul>
+</main>
+
+<footer>
+  <div class="foot-brand">
+    <img src="/assets/logo.svg" alt="" width="24" height="24">
+    <span>tTerm</span>
+  </div>
+  <nav class="foot-links">
+    <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot</a>
+    <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">News</a>
+    <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Source</a>
+    <a href="/donate/">Donate</a>
+    <a href="/terms/">Terms of Service</a>
+    <a href="/privacy/">Privacy Policy</a>
+  </nav>
+  <p class="foot-note">AGPL-3.0 licensed · 2026 · v1.9.0</p>
+</footer>
+
+</body>
+</html>
