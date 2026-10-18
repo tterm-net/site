@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.1.1.** The number lives in `VERSION` and in a `<meta>` tag on
+**Version 2.1.2.** The number lives in `VERSION` and in a `<meta>` tag on
 each page, so you can tell what is deployed by viewing source.
 
 The site of [tTerm](https://github.com/tterm-net): tTerm Web, a terminal in
