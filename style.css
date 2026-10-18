@@ -305,18 +305,19 @@ h1, h2, h3, h4 { margin: 0; }
 }
 
 /* The language, as on the old site: the button names the language the page
-   is in and opens a menu with both. A details element, like the menu, so it
+   is in and opens a menu with both. Like the links next to it, it stands in
+   an oval only when hovered or open. A details element, like the menu, so it
    opens without any script; site.js closes it on Escape or a click elsewhere. */
 .lang { position: relative; }
 .lang > summary {
   display: flex;
   align-items: center;
   gap: 7px;
-  height: 36px;
-  padding: 0 13px 0 11px;
-  border: 1px solid var(--line-3);
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid transparent;
   border-radius: 999px;
-  color: var(--dim);
+  color: var(--lead);
   font: 600 12px/1 var(--mono);
   letter-spacing: .06em;
   list-style: none;
@@ -326,7 +327,7 @@ h1, h2, h3, h4 { margin: 0; }
 .lang > summary::-webkit-details-marker { display: none; }
 .lang > summary svg { width: 15px; height: 15px; }
 .lang > summary:hover,
-.lang[open] > summary { border-color: #3d424b; background: rgba(255, 255, 255, .04); color: var(--ink); }
+.lang[open] > summary { border-color: var(--line-3); background: rgba(255, 255, 255, .045); color: var(--ink); }
 
 .lang-menu {
   position: absolute;
@@ -1463,10 +1464,13 @@ figure { margin: 0; }
    one column under the title. */
 .post-plain .post-head { max-width: calc(720px + 2 * var(--gutter)); }
 .post-plain .prose { margin-top: 44px; }
-/* Where a post first appeared. */
-.prose .post-source { margin: 48px 0 0; padding-top: 22px; border-top: 1px solid var(--line-2); font-size: 15px; line-height: 1.6; color: var(--faint); }
-.post-source a { color: var(--dim); }
-.post-source a:hover { color: var(--ink); }
+/* Under a post from the channel: an invitation to follow the blog there, the
+   whole line a link, after Telegram's own logo (the mark from simple-icons,
+   CC0, drawn in our amber). */
+.prose .post-follow { margin: 48px 0 0; padding-top: 24px; border-top: 1px solid var(--line-2); font-size: 17px; line-height: 1.5; }
+.post-follow a { display: inline-flex; align-items: center; gap: 10px; color: var(--amber); font-weight: 600; text-decoration: none; }
+.post-follow a:hover { color: var(--amber-hi); }
+.post-follow svg { flex: none; width: 24px; height: 24px; fill: currentColor; }
 
 .stats {
   margin: 0 0 26px;
