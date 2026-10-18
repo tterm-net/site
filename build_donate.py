@@ -36,8 +36,7 @@ ETH = (
 
 T = {
  "ru": dict(
-   lang="ru", home="/ru/", blog="/ru/blog/", other="/donate/", other_lang="en",
-   other_label="EN", other_name="English",
+   lang="ru", home="/ru/", blog="/ru/blog/", lang_label="Язык", lang_name="русский",
    skip="Перейти к содержанию", beta="бета", home_label="tTerm, на главную",
    nav_label="Разделы", menu="Меню",
    nav=[("#how", "Как это работает"), ("#features", "Возможности"),
@@ -46,7 +45,7 @@ T = {
    title="Поддержать",
    desc="Адреса для пожертвований. USDT в сетях TRON и Ethereum.",
    h1="Поддержать проект",
-   lede=("tTerm бесплатный и останется таким. Пожертвования идут "
+   lede=("Всё, что уже есть в tTerm, бесплатно. Пожертвования идут "
          "на хостинг и дальнейшее развитие сервиса."),
    copy="Скопировать",
    only_tron="Только сеть TRON. Из другой сети не дойдёт.",
@@ -64,8 +63,7 @@ T = {
    license="Лицензия AGPL-3.0 · 2026 · v{v}",
  ),
  "en": dict(
-   lang="en", home="/", blog="/blog/", other="/ru/donate/", other_lang="ru",
-   other_label="RU", other_name="Русский",
+   lang="en", home="/", blog="/blog/", lang_label="Language", lang_name="English",
    skip="Skip to content", beta="beta", home_label="tTerm, home",
    nav_label="Sections", menu="Menu",
    nav=[("#how", "How it works"), ("#features", "Features"), ("#security", "Security"),
@@ -74,7 +72,7 @@ T = {
    title="Donate",
    desc="Donation addresses. USDT on TRON and Ethereum.",
    h1="Donate",
-   lede=("tTerm is free and will stay that way. Donations go to hosting "
+   lede=("Everything tTerm does today is free. Donations go to hosting "
          "and further development of the service."),
    copy="Copy",
    only_tron="TRON network only. Sent from another, it will not arrive.",
@@ -98,6 +96,22 @@ MENU_OPEN = ('<svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="cur
 MENU_CLOSE = ('<svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
               'stroke-width="2" stroke-linecap="round" aria-hidden="true">'
               '<path d="M6 6l12 12M18 6L6 18"/></svg>')
+GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" '
+         'aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>'
+         '<path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg>')
+CHECK = ('<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true">'
+         '<path d="M5 12.5l4.2 4.2L19 7"/></svg>')
+LANGS = (("ru", "/ru/donate/", "Русский"), ("en", "/donate/", "English"))
+
+
+def lang_links(lang: str, check: bool, indent: str) -> str:
+    """Both languages, the page's own marked, as in the header of every page."""
+    out = []
+    for code, href, name in LANGS:
+        here = ' aria-current="true"' if code == lang else ""
+        mark = CHECK if code == lang and check else ""
+        out.append(f'{indent}<a href="{href}" hreflang="{code}" lang="{code}"{here}>{name}{mark}</a>')
+    return "\n".join(out)
 
 
 def wallet(icon, network, note, only, address, qr, copy_label):
@@ -163,7 +177,12 @@ def build(key: str, version: str) -> str:
 {nav}
     </nav>
     <div class="top-actions">
-      <a class="lang-link" href="{d['other']}" hreflang="{d['other_lang']}" lang="{d['other_lang']}">{d['other_label']}</a>
+      <details class="lang">
+        <summary aria-label="{d['lang_label']}: {d['lang_name']}">{GLOBE}<span>{d['lang'].upper()}</span></summary>
+        <div class="lang-menu">
+{lang_links(d['lang'], True, "          ")}
+        </div>
+      </details>
       <a class="btn btn-ghost btn-sm" href="{app}">{d['signin']}</a>
       <a class="btn btn-primary btn-sm" href="{app}">{d['start']}</a>
       <details class="menu">
@@ -171,7 +190,9 @@ def build(key: str, version: str) -> str:
         <nav class="menu-panel" aria-label="{d['menu']}">
 {menu}
           <hr>
-          <a class="menu-lang" href="{d['other']}" hreflang="{d['other_lang']}" lang="{d['other_lang']}">{d['other_name']}</a>
+          <div class="menu-langs" role="group" aria-label="{d['lang_label']}">
+{lang_links(d['lang'], False, "            ")}
+          </div>
           <a class="btn btn-primary" href="{app}">{d['start']}</a>
         </nav>
       </details>

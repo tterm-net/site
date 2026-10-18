@@ -13,7 +13,7 @@
 <meta property="og:description" content="What we have shipped and what has changed in tTerm: the web app, the Telegram bot and the site.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tterm.net/blog/">
-<meta property="og:image" content="https://tterm.net/assets/og.png">
+<meta property="og:image" content="https://tterm.net/assets/og-web.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="tTerm">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.0.0">
+<meta name="version" content="2.1.0">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -45,7 +45,13 @@
       <a href="/blog/" aria-current="page">Blog</a>
     </nav>
     <div class="top-actions">
-      <a class="lang-link" href="/ru/blog/" hreflang="ru" lang="ru">RU</a>
+      <details class="lang">
+        <summary aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>EN</span></summary>
+        <div class="lang-menu">
+          <a href="/ru/blog/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/blog/" hreflang="en" lang="en" aria-current="true">English<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+        </div>
+      </details>
       <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Sign in</a>
       <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Start for free</a>
       <details class="menu">
@@ -58,7 +64,10 @@
           <a href="/#faq">FAQ</a>
           <a href="/blog/" aria-current="page">Blog</a>
           <hr>
-          <a class="menu-lang" href="/ru/blog/" hreflang="ru" lang="ru">Русский</a>
+          <div class="menu-langs" role="group" aria-label="Language">
+            <a href="/ru/blog/" hreflang="ru" lang="ru">Русский</a>
+            <a href="/blog/" hreflang="en" lang="en" aria-current="true">English</a>
+          </div>
           <a class="btn btn-primary" href="https://app.tterm.net">Start for free</a>
         </nav>
       </details>
@@ -116,8 +125,9 @@
         <div class="month-entries">
           <article class="entry" id="2026-10-07">
             <p class="entry-meta"><time datetime="2026-10-07">October 7</time><span class="tag tag-bot">Bot</span></p>
-            <h4 class="entry-title">Independent windows on a computer</h4>
-            <p class="entry-text">Terminal windows on a computer with the agent are now independent: each one has its own shell, as on a server, and cd in one no longer moves the others. To get this, update the agent by running the install again from /addhost → Computer. The window buttons now sit at the bottom of the list and stay put when you switch. A computer no longer shows as offline after the agent reconnects quickly.</p>
+            <h4 class="entry-title"><a href="/blog/independent-windows/">Windows on a computer are now independent</a></h4>
+            <p class="entry-text">On a server, every window has always been a terminal of its own. On a computer with the agent, all windows shared one shell: a cd in one moved the others too, and while a program ran in one window, the rest had to wait. Now each window gets its own shell, the same as on a server. You can keep a dev server running in one window and work in another.</p>
+            <p class="entry-more"><a href="/blog/independent-windows/">Read the post</a></p>
           </article>
         </div>
       </section>
@@ -126,28 +136,38 @@
         <div class="month-entries">
           <article class="entry" id="2026-09-30">
             <p class="entry-meta"><time datetime="2026-09-30">September 30</time><span class="tag tag-bot">Bot</span></p>
-            <h4 class="entry-title">Answer a command as it runs</h4>
-            <p class="entry-text">You can now answer a command while it runs: whatever you type goes to its input, the way it would in a terminal. Yes/no questions are recognised even with a spinner turning below them. A computer with the agent no longer drops out of the list after half an hour without commands.</p>
+            <h4 class="entry-title"><a href="/blog/answer-while-it-runs/">You can answer a command while it runs</a></h4>
+            <p class="entry-text">When a program asked Continue? (Y/n), there used to be no way to reply: your message would not send until the command was over. Now whatever you type while a command is running goes to its input, the way it would in a terminal. The bot marks such a message with 👌.</p>
+            <p class="entry-more"><a href="/blog/answer-while-it-runs/">Read the post</a></p>
           </article>
           <article class="entry" id="2026-09-17">
             <p class="entry-meta"><time datetime="2026-09-17">September 17</time><span class="tag tag-bot">Bot</span></p>
-            <h4 class="entry-title">Your own shell</h4>
-            <p class="entry-text">The agent now runs your own shell, bash or zsh, so the environment and the paths are the ones you see in a normal terminal. Commands that leave nothing to fix ask for confirmation. The server&#x27;s key is checked on every connection. Long output arrives with a summary instead of its last few lines.</p>
+            <h4 class="entry-title"><a href="/blog/your-shell/">The agent now runs your shell: bash or zsh</a></h4>
+            <p class="entry-text">It used to start bash no matter what. On macOS, where zsh has been the default since 2019, that meant somebody else&#x27;s environment: half of what you had installed could not be found.</p>
+            <p class="entry-more"><a href="/blog/your-shell/">Read the post</a></p>
+          </article>
+          <article class="entry" id="2026-09-03">
+            <p class="entry-meta"><time datetime="2026-09-03">September 3</time><span class="tag tag-site">Site</span></p>
+            <h4 class="entry-title"><a href="/blog/verified-on-github/">tTerm is now a verified organisation on GitHub</a></h4>
+            <p class="entry-text">github.com/tterm-net carries a Verified badge: GitHub confirmed that the organisation and tterm.net are the same people.</p>
+            <p class="entry-more"><a href="/blog/verified-on-github/">Read the post</a></p>
           </article>
           <article class="entry" id="2026-09-01">
             <p class="entry-meta"><time datetime="2026-09-01">September 1</time><span class="tag tag-bot">Bot</span></p>
-            <h4 class="entry-title">Several terminals on one machine</h4>
-            <p class="entry-text">A machine can now hold several terminals, the way you keep more than one window open on a server. Output appears as it arrives, with a Stop button, and a command waiting for an answer says so instead of hanging silently. The git branch sits above the prompt, and longer output stays in the chat instead of turning into a file.</p>
+            <h4 class="entry-title"><a href="/blog/several-terminals/">Several terminals per machine</a></h4>
+            <p class="entry-text">You can now keep more than one terminal open on the same server – one tailing a log, another doing the work. They show up as separate lines in /use, each with its own shell: a cd in one leaves the other where it was.</p>
+            <p class="entry-more"><a href="/blog/several-terminals/">Read the post</a></p>
           </article>
         </div>
       </section>
       <section class="month">
         <h3 class="month-name">August 2026</h3>
         <div class="month-entries">
-          <article class="entry" id="2026-08-30">
-            <p class="entry-meta"><time datetime="2026-08-30">August 30</time><span class="tag tag-site">Site</span></p>
-            <h4 class="entry-title">The site and the channel</h4>
-            <p class="entry-text">tterm.net is live, along with the channel where changes get announced. The bot and the agent are open source.</p>
+          <article class="entry" id="2026-08-31">
+            <p class="entry-meta"><time datetime="2026-08-31">August 31</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title"><a href="/blog/tterm-is-live/">tTerm is live</a></h4>
+            <p class="entry-text">A terminal for your servers, right here in Telegram. Type a command – it runs on your machine, and the reply comes back as a message with the exit code, the working directory and the git branch. The shell remembers where you left off.</p>
+            <p class="entry-more"><a href="/blog/tterm-is-live/">Read the post</a></p>
           </article>
           <article class="entry" id="2026-08-28">
             <p class="entry-meta"><time datetime="2026-08-28">August 28</time><span class="tag tag-bot">Bot</span></p>
@@ -194,7 +214,7 @@
         <img src="/assets/logo.svg" alt="" width="24" height="24">
         <span class="brand-name">tTerm</span>
       </a>
-      <p class="foot-note">AGPL-3.0 licensed · 2026 · v2.0.0</p>
+      <p class="foot-note">AGPL-3.0 licensed · 2026 · v2.1.0</p>
     </div>
     <nav class="foot-links" aria-label="Links">
       <a href="/blog/">Blog</a>

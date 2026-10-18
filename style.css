@@ -276,15 +276,26 @@ h1, h2, h3, h4 { margin: 0; }
   color: var(--dim);
 }
 
+/* The links stand in an oval when hovered, and the section you are in keeps
+   one: quiet, a shade lighter than the background. Buttons stay rectangles,
+   so the eye tells the two apart. */
 .nav {
   flex: 1 1 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 28px;
+  gap: 8px 2px;
   font: 500 14px/1.4 var(--sans);
 }
-.nav a { color: var(--lead); text-decoration: none; }
-.nav a:hover, .nav a[aria-current="page"] { color: var(--ink); }
+.nav a {
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--lead);
+  text-decoration: none;
+  transition: color .15s ease, background-color .15s ease, border-color .15s ease;
+}
+.nav a:hover { border-color: var(--line-3); background: rgba(255, 255, 255, .045); color: var(--ink); }
+.nav a[aria-current="page"] { border-color: var(--line-2); background: rgba(255, 255, 255, .03); color: var(--ink); }
 
 .top-actions {
   margin-left: auto;
@@ -293,16 +304,65 @@ h1, h2, h3, h4 { margin: 0; }
   gap: 10px;
 }
 
-.lang-link {
-  display: inline-flex;
+/* The language, as on the old site: the button names the language the page
+   is in and opens a menu with both. A details element, like the menu, so it
+   opens without any script; site.js closes it on Escape or a click elsewhere. */
+.lang { position: relative; }
+.lang > summary {
+  display: flex;
   align-items: center;
-  height: 44px;
-  padding: 0 10px;
+  gap: 7px;
+  height: 36px;
+  padding: 0 13px 0 11px;
+  border: 1px solid var(--line-3);
+  border-radius: 999px;
   color: var(--dim);
-  font: 600 13px var(--sans);
+  font: 600 12px/1 var(--mono);
+  letter-spacing: .06em;
+  list-style: none;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease, background-color .15s ease;
+}
+.lang > summary::-webkit-details-marker { display: none; }
+.lang > summary svg { width: 15px; height: 15px; }
+.lang > summary:hover,
+.lang[open] > summary { border-color: #3d424b; background: rgba(255, 255, 255, .04); color: var(--ink); }
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 30;
+  min-width: 172px;
+  padding: 6px;
+  border: 1px solid #262a31;
+  border-radius: 14px;
+  background: #121418;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .55);
+}
+.lang-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 9px;
+  color: var(--text);
+  font: 500 14px var(--sans);
   text-decoration: none;
 }
-.lang-link:hover { color: var(--ink); }
+.lang-menu a:hover { background: var(--raised-2); color: var(--ink); }
+.lang-menu a[aria-current] { color: var(--ink); }
+.lang-check {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: var(--amber);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
 /* The menu on narrow screens: a details element, so it opens without any
    script; site.js only closes it after a tap on a link or outside. */
@@ -349,9 +409,22 @@ h1, h2, h3, h4 { margin: 0; }
   text-decoration: none;
 }
 .menu-panel a:hover, .menu-panel a[aria-current="page"] { background: var(--raised-2); }
-.menu-panel .menu-lang { color: var(--lead); }
+/* Both languages side by side; only on phones, where the header has no room
+   for the language button. */
+.menu-langs { display: none; gap: 8px; padding: 2px 0; }
+.menu-panel .menu-langs a {
+  flex: 1 1 0;
+  justify-content: center;
+  min-height: 46px;
+  border: 1px solid var(--line);
+  color: var(--lead);
+  font-size: 15px;
+}
+.menu-panel .menu-langs a[aria-current] { border-color: #3d424b; background: var(--raised-2); color: var(--ink); }
 .menu-panel hr { width: calc(100% - 16px); height: 1px; margin: 6px 8px; border: 0; background: var(--line); }
 .menu-panel .btn { margin-top: 6px; height: 50px; border-radius: 12px; }
+/* .menu-panel a paints every link light; on amber the text stays dark. */
+.menu-panel .btn-primary { color: var(--amber-ink); }
 
 /* ------------------------------------------------------------------ hero */
 
@@ -1382,6 +1455,18 @@ figure { margin: 0; }
 .prose-list li { display: flex; gap: 16px; font-size: 18px; line-height: 1.7; color: var(--text); }
 .prose-list svg { flex: none; width: 24px; height: 24px; margin-top: 4px; fill: none; stroke: var(--amber); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .prose-list strong { font-weight: 700; color: var(--ink); }
+/* A plain list, as in the posts from the channel. */
+.prose-bullets { margin: 0 0 22px; padding: 0 0 0 22px; }
+.prose-bullets li { margin: 0 0 12px; padding-left: 4px; font-size: 18px; line-height: 1.7; color: var(--text); }
+.prose-bullets li::marker { color: var(--amber); }
+/* A post without a picture, as the ones from the channel: the text stands in
+   one column under the title. */
+.post-plain .post-head { max-width: calc(720px + 2 * var(--gutter)); }
+.post-plain .prose { margin-top: 44px; }
+/* Where a post first appeared. */
+.prose .post-source { margin: 48px 0 0; padding-top: 22px; border-top: 1px solid var(--line-2); font-size: 15px; line-height: 1.6; color: var(--faint); }
+.post-source a { color: var(--dim); }
+.post-source a:hover { color: var(--ink); }
 
 .stats {
   margin: 0 0 26px;
@@ -1494,7 +1579,7 @@ figure { margin: 0; }
 
 /* ------------------------------------------------------------ responsive */
 
-@media (max-width: 1120px) {
+@media (max-width: 1240px) {
   .nav { display: none; }
   .menu { display: block; }
 }
@@ -1541,7 +1626,8 @@ figure { margin: 0; }
   .top-in { padding: 14px var(--gutter); gap: 10px; }
   .brand img { width: 28px; height: 28px; }
   .brand-name { font-size: 18px; }
-  .top-actions > .lang-link, .top-actions > .btn-primary { display: none; }
+  .top-actions > .lang, .top-actions > .btn-primary { display: none; }
+  .menu-langs { display: flex; }
 
   .hero-text { min-height: 0; padding: 24px 0 28px; }
   .chip { height: 44px; padding: 0 15px; gap: 9px; font-size: 12.5px; }

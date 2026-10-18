@@ -244,7 +244,7 @@ def reading_time(entry: Entry) -> None:
         if not page.exists():
             fail(f"{entry.date}: {entry.path} has no page {page.relative_to(ROOT)}.")
         source = page.read_text(encoding="utf-8")
-        found = re.search(r'<article class="post">(.*?)</article>', source, re.S)
+        found = re.search(r'<article class="post(?: [^"]*)?">(.*?)</article>', source, re.S)
         if not found:
             fail(f"{page.relative_to(ROOT)}: no <article class=\"post\"> to count.")
         text = html.unescape(re.sub(r"<[^>]+>", " ", found.group(1)))
@@ -386,7 +386,7 @@ def render_ld(entry: Entry, lang: str) -> str:
         "datePublished": entry.date,
         "inLanguage": lang,
         "url": f"https://tterm.net{url(entry, lang)}",
-        "image": "https://tterm.net/assets/og.png",
+        "image": "https://tterm.net/assets/og-web.png",
         "author": {"@type": "Organization", "name": "tTerm", "url": "https://tterm.net"},
         "publisher": {"@type": "Organization", "name": "tTerm",
                       "logo": {"@type": "ImageObject",

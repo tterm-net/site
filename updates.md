@@ -29,75 +29,82 @@ a machine and what comes next.
 и никаких ключей на устройстве. Что уже умеет tTerm Web, как подключить
 машину и что будет дальше.
 
-## 2026-10-07 bot
+## 2026-10-07 bot /blog/independent-windows/
 
-@en Independent windows on a computer
-Terminal windows on a computer with the agent are now independent: each one
-has its own shell, as on a server, and cd in one no longer moves the others.
-To get this, update the agent by running the install again from
-/addhost → Computer. The window buttons now sit at the bottom of the list
-and stay put when you switch. A computer no longer shows as offline after
-the agent reconnects quickly.
+@en Windows on a computer are now independent
+On a server, every window has always been a terminal of its own. On a
+computer with the agent, all windows shared one shell: a cd in one moved the
+others too, and while a program ran in one window, the rest had to wait. Now
+each window gets its own shell, the same as on a server. You can keep a dev
+server running in one window and work in another.
 
-@ru Независимые окна на компьютере
-Окна на компьютере с агентом теперь независимы: у каждого свой шелл, как
-на сервере, и cd в одном больше не двигает остальные. Для этого обновите
-агента, повторив установку через /addhost → Computer. Кнопки окна стоят
-внизу списка и не прыгают при переключении. Компьютер больше не
-показывается offline после быстрого переподключения агента.
+@ru Окна на компьютере теперь независимы
+На сервере каждое окно всегда было отдельным терминалом. На компьютере с
+агентом все окна делили один шелл: cd в одном переносил и остальные, а пока
+в одном работала программа, другие ждали. Теперь у каждого окна свой шелл,
+как на сервере. Можно держать сервер разработки в одном окне и работать в
+другом.
 
-## 2026-09-30 bot
+## 2026-09-30 bot /blog/answer-while-it-runs/
 
-@en Answer a command as it runs
-You can now answer a command while it runs: whatever you type goes to its
-input, the way it would in a terminal. Yes/no questions are recognised even
-with a spinner turning below them. A computer with the agent no longer drops
-out of the list after half an hour without commands.
+@en You can answer a command while it runs
+When a program asked Continue? (Y/n), there used to be no way to reply: your
+message would not send until the command was over. Now whatever you type
+while a command is running goes to its input, the way it would in a
+terminal. The bot marks such a message with 👌.
 
-@ru Ответ команде на ходу
-Команде теперь можно ответить, пока она работает: всё, что вы пишете, уходит
-ей на ввод, как в обычном терминале. Вопросы «да или нет» распознаются, даже
-если под ними крутится индикатор. Компьютер с агентом больше не выпадает
-из списка после получаса без команд.
+@ru Команде можно ответить, пока она работает
+Раньше, если программа спрашивала Continue? (Y/n), ответить было нельзя:
+сообщение не отправлялось, пока команда не закончится. Теперь всё, что ты
+пишешь, пока команда работает, уходит ей на ввод, как в обычном терминале.
+Бот отмечает такое сообщение реакцией 👌.
 
-## 2026-09-17 bot
+## 2026-09-17 bot /blog/your-shell/
 
-@en Your own shell
-The agent now runs your own shell, bash or zsh, so the environment and the
-paths are the ones you see in a normal terminal. Commands that leave nothing
-to fix ask for confirmation. The server's key is checked on every connection.
-Long output arrives with a summary instead of its last few lines.
+@en The agent now runs your shell: bash or zsh
+It used to start bash no matter what. On macOS, where zsh has been the
+default since 2019, that meant somebody else's environment: half of what you
+had installed could not be found.
 
-@ru Ваш собственный шелл
-Агент запускает ваш собственный шелл – bash или zsh, – так что окружение
-и пути те же, что в обычном терминале. Команды, после которых нечего чинить,
-спрашивают подтверждение. Ключ сервера сверяется при каждом подключении.
-Длинный вывод приходит со сводкой вместо хвоста.
+@ru Агент запускает твой шелл: bash или zsh
+Раньше агент запускал bash, что бы ни было. На macOS, где zsh стоит по
+умолчанию с 2019 года, это означало чужое окружение: половина того, что у
+тебя установлено, не находилась.
 
-## 2026-09-01 bot
+## 2026-09-03 site /blog/verified-on-github/
 
-@en Several terminals on one machine
-A machine can now hold several terminals, the way you keep more than one
-window open on a server. Output appears as it arrives, with a Stop button,
-and a command waiting for an answer says so instead of hanging silently. The
-git branch sits above the prompt, and longer output stays in the chat
-instead of turning into a file.
+@en tTerm is now a verified organisation on GitHub
+github.com/tterm-net carries a Verified badge: GitHub confirmed that the
+organisation and tterm.net are the same people.
+
+@ru tTerm теперь проверенная организация на GitHub
+У github.com/tterm-net теперь есть галочка Verified: GitHub подтвердил, что
+за организацией и tterm.net стоят одни и те же люди.
+
+## 2026-09-01 bot /blog/several-terminals/
+
+@en Several terminals per machine
+You can now keep more than one terminal open on the same server – one
+tailing a log, another doing the work. They show up as separate lines in
+/use, each with its own shell: a cd in one leaves the other where it was.
 
 @ru Несколько терминалов на одной машине
-На одной машине теперь можно держать несколько терминалов, как несколько
-окон на сервере. Вывод появляется по мере готовности, с кнопкой Stop,
-а команда, которая ждёт ответа, говорит об этом, а не висит молча. Ветка git
-встала над приглашением, и длинный вывод остаётся в чате, а не уходит файлом.
+Теперь на одном сервере можно держать открытыми несколько терминалов: в
+одном идёт лог, в другом ты работаешь. В /use они видны отдельными строками,
+и у каждого свой шелл: cd в одном не сдвигает другой.
 
-## 2026-08-30 site
+## 2026-08-31 bot /blog/tterm-is-live/
 
-@en The site and the channel
-tterm.net is live, along with the channel where changes get announced. The
-bot and the agent are open source.
+@en tTerm is live
+A terminal for your servers, right here in Telegram. Type a command – it
+runs on your machine, and the reply comes back as a message with the exit
+code, the working directory and the git branch. The shell remembers where
+you left off.
 
-@ru Сайт и канал
-Заработал сайт tterm.net и канал, где мы рассказываем об изменениях.
-Исходники бота и агента открыты.
+@ru tTerm запущен
+Терминал для твоих серверов прямо в Telegram. Пишешь команду, она
+выполняется на машине, а ответ приходит сообщением: код возврата, рабочий
+каталог и ветка git. Шелл помнит, где ты остановился.
 
 ## 2026-08-28 bot
 

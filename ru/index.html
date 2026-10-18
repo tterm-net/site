@@ -13,7 +13,7 @@
 <meta property="og:description" content="Настоящий терминал в браузере. Каждая команда приходит блоком: код возврата, каталог, ветка и время. Ключи на устройстве не нужны, порты открывать не нужно.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tterm.net/ru/">
-<meta property="og:image" content="https://tterm.net/assets/og.png">
+<meta property="og:image" content="https://tterm.net/assets/og-web.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ru_RU">
@@ -40,7 +40,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.0.0">
+<meta name="version" content="2.1.0">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -64,7 +64,13 @@
       <a href="/ru/blog/">Блог</a>
     </nav>
     <div class="top-actions">
-      <a class="lang-link" href="/" hreflang="en" lang="en">EN</a>
+      <details class="lang">
+        <summary aria-label="Язык: русский"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>RU</span></summary>
+        <div class="lang-menu">
+          <a href="/ru/" hreflang="ru" lang="ru" aria-current="true">Русский<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/" hreflang="en" lang="en">English</a>
+        </div>
+      </details>
       <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Войти</a>
       <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Начать бесплатно</a>
       <details class="menu">
@@ -77,7 +83,10 @@
           <a href="/ru/#faq">Вопросы</a>
           <a href="/ru/blog/">Блог</a>
           <hr>
-          <a class="menu-lang" href="/" hreflang="en" lang="en">English</a>
+          <div class="menu-langs" role="group" aria-label="Язык">
+            <a href="/ru/" hreflang="ru" lang="ru" aria-current="true">Русский</a>
+            <a href="/" hreflang="en" lang="en">English</a>
+          </div>
           <a class="btn btn-primary" href="https://app.tterm.net">Начать бесплатно</a>
         </nav>
       </details>
@@ -364,20 +373,20 @@
       </div>
     </a>
   <div class="post-stack">
-      <a class="post-mini" href="/ru/blog/#2026-10-07">
+      <a class="post-mini" href="/ru/blog/independent-windows/">
         <span class="post-mini-meta"><time datetime="2026-10-07">7 окт</time> · Бот</span>
-        <span class="post-mini-title">Независимые окна на компьютере</span>
-        <span class="post-mini-text">Окна на компьютере с агентом теперь независимы: у каждого свой шелл, как на сервере, и cd в одном больше не двигает остальные.</span>
+        <span class="post-mini-title">Окна на компьютере теперь независимы</span>
+        <span class="post-mini-text">На сервере каждое окно всегда было отдельным терминалом.</span>
       </a>
-      <a class="post-mini" href="/ru/blog/#2026-09-30">
+      <a class="post-mini" href="/ru/blog/answer-while-it-runs/">
         <span class="post-mini-meta"><time datetime="2026-09-30">30 сен</time> · Бот</span>
-        <span class="post-mini-title">Ответ команде на ходу</span>
-        <span class="post-mini-text">Команде теперь можно ответить, пока она работает: всё, что вы пишете, уходит ей на ввод, как в обычном терминале.</span>
+        <span class="post-mini-title">Команде можно ответить, пока она работает</span>
+        <span class="post-mini-text">Раньше, если программа спрашивала Continue? (Y/n), ответить было нельзя: сообщение не отправлялось, пока команда не закончится.</span>
       </a>
-      <a class="post-mini" href="/ru/blog/#2026-09-17">
+      <a class="post-mini" href="/ru/blog/your-shell/">
         <span class="post-mini-meta"><time datetime="2026-09-17">17 сен</time> · Бот</span>
-        <span class="post-mini-title">Ваш собственный шелл</span>
-        <span class="post-mini-text">Агент запускает ваш собственный шелл – bash или zsh, – так что окружение и пути те же, что в обычном терминале.</span>
+        <span class="post-mini-title">Агент запускает твой шелл: bash или zsh</span>
+        <span class="post-mini-text">Раньше агент запускал bash, что бы ни было.</span>
       </a>
   </div>
 </div>
@@ -405,7 +414,7 @@
         <img src="/assets/logo.svg" alt="" width="24" height="24">
         <span class="brand-name">tTerm</span>
       </a>
-      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.0.0</p>
+      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.1.0</p>
     </div>
     <nav class="foot-links" aria-label="Ссылки">
       <a href="/ru/blog/">Блог</a>

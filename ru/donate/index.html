@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="en" href="https://tterm.net/donate/">
 <link rel="alternate" hreflang="ru" href="https://tterm.net/ru/donate/">
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.0.0">
+<meta name="version" content="2.1.0">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -33,7 +33,13 @@
       <a href="/ru/blog/">Блог</a>
     </nav>
     <div class="top-actions">
-      <a class="lang-link" href="/donate/" hreflang="en" lang="en">EN</a>
+      <details class="lang">
+        <summary aria-label="Язык: русский"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>RU</span></summary>
+        <div class="lang-menu">
+          <a href="/ru/donate/" hreflang="ru" lang="ru" aria-current="true">Русский<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/donate/" hreflang="en" lang="en">English</a>
+        </div>
+      </details>
       <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Войти</a>
       <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Начать бесплатно</a>
       <details class="menu">
@@ -46,7 +52,10 @@
           <a href="/ru/#faq">Вопросы</a>
           <a href="/ru/blog/">Блог</a>
           <hr>
-          <a class="menu-lang" href="/donate/" hreflang="en" lang="en">English</a>
+          <div class="menu-langs" role="group" aria-label="Язык">
+            <a href="/ru/donate/" hreflang="ru" lang="ru" aria-current="true">Русский</a>
+            <a href="/donate/" hreflang="en" lang="en">English</a>
+          </div>
           <a class="btn btn-primary" href="https://app.tterm.net">Начать бесплатно</a>
         </nav>
       </details>
@@ -57,7 +66,7 @@
 <main id="main">
   <section class="donate-head">
     <h1>Поддержать проект</h1>
-    <p>tTerm бесплатный и останется таким. Пожертвования идут на хостинг и дальнейшее развитие сервиса.</p>
+    <p>Всё, что уже есть в tTerm, бесплатно. Пожертвования идут на хостинг и дальнейшее развитие сервиса.</p>
   </section>
 
   <section class="donate-body">
@@ -113,7 +122,7 @@
         <img src="/assets/logo.svg" alt="" width="24" height="24">
         <span class="brand-name">tTerm</span>
       </a>
-      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.0.0</p>
+      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.1.0</p>
     </div>
     <nav class="foot-links" aria-label="Ссылки">
       <a href="/ru/blog/">Блог</a>

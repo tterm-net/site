@@ -13,7 +13,7 @@
 <meta property="og:description" content="Что мы выпустили и что изменилось в tTerm: веб-версия, бот в Telegram и сайт.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tterm.net/ru/blog/">
-<meta property="og:image" content="https://tterm.net/assets/og.png">
+<meta property="og:image" content="https://tterm.net/assets/og-web.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ru_RU">
@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="tTerm">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.0.0">
+<meta name="version" content="2.1.0">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -45,7 +45,13 @@
       <a href="/ru/blog/" aria-current="page">Блог</a>
     </nav>
     <div class="top-actions">
-      <a class="lang-link" href="/blog/" hreflang="en" lang="en">EN</a>
+      <details class="lang">
+        <summary aria-label="Язык: русский"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>RU</span></summary>
+        <div class="lang-menu">
+          <a href="/ru/blog/" hreflang="ru" lang="ru" aria-current="true">Русский<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/blog/" hreflang="en" lang="en">English</a>
+        </div>
+      </details>
       <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Войти</a>
       <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Начать бесплатно</a>
       <details class="menu">
@@ -58,7 +64,10 @@
           <a href="/ru/#faq">Вопросы</a>
           <a href="/ru/blog/" aria-current="page">Блог</a>
           <hr>
-          <a class="menu-lang" href="/blog/" hreflang="en" lang="en">English</a>
+          <div class="menu-langs" role="group" aria-label="Язык">
+            <a href="/ru/blog/" hreflang="ru" lang="ru" aria-current="true">Русский</a>
+            <a href="/blog/" hreflang="en" lang="en">English</a>
+          </div>
           <a class="btn btn-primary" href="https://app.tterm.net">Начать бесплатно</a>
         </nav>
       </details>
@@ -116,8 +125,9 @@
         <div class="month-entries">
           <article class="entry" id="2026-10-07">
             <p class="entry-meta"><time datetime="2026-10-07">7 октября</time><span class="tag tag-bot">Бот</span></p>
-            <h4 class="entry-title">Независимые окна на компьютере</h4>
-            <p class="entry-text">Окна на компьютере с агентом теперь независимы: у каждого свой шелл, как на сервере, и cd в одном больше не двигает остальные. Для этого обновите агента, повторив установку через /addhost → Computer. Кнопки окна стоят внизу списка и не прыгают при переключении. Компьютер больше не показывается offline после быстрого переподключения агента.</p>
+            <h4 class="entry-title"><a href="/ru/blog/independent-windows/">Окна на компьютере теперь независимы</a></h4>
+            <p class="entry-text">На сервере каждое окно всегда было отдельным терминалом. На компьютере с агентом все окна делили один шелл: cd в одном переносил и остальные, а пока в одном работала программа, другие ждали. Теперь у каждого окна свой шелл, как на сервере. Можно держать сервер разработки в одном окне и работать в другом.</p>
+            <p class="entry-more"><a href="/ru/blog/independent-windows/">Читать запись</a></p>
           </article>
         </div>
       </section>
@@ -126,28 +136,38 @@
         <div class="month-entries">
           <article class="entry" id="2026-09-30">
             <p class="entry-meta"><time datetime="2026-09-30">30 сентября</time><span class="tag tag-bot">Бот</span></p>
-            <h4 class="entry-title">Ответ команде на ходу</h4>
-            <p class="entry-text">Команде теперь можно ответить, пока она работает: всё, что вы пишете, уходит ей на ввод, как в обычном терминале. Вопросы «да или нет» распознаются, даже если под ними крутится индикатор. Компьютер с агентом больше не выпадает из списка после получаса без команд.</p>
+            <h4 class="entry-title"><a href="/ru/blog/answer-while-it-runs/">Команде можно ответить, пока она работает</a></h4>
+            <p class="entry-text">Раньше, если программа спрашивала Continue? (Y/n), ответить было нельзя: сообщение не отправлялось, пока команда не закончится. Теперь всё, что ты пишешь, пока команда работает, уходит ей на ввод, как в обычном терминале. Бот отмечает такое сообщение реакцией 👌.</p>
+            <p class="entry-more"><a href="/ru/blog/answer-while-it-runs/">Читать запись</a></p>
           </article>
           <article class="entry" id="2026-09-17">
             <p class="entry-meta"><time datetime="2026-09-17">17 сентября</time><span class="tag tag-bot">Бот</span></p>
-            <h4 class="entry-title">Ваш собственный шелл</h4>
-            <p class="entry-text">Агент запускает ваш собственный шелл – bash или zsh, – так что окружение и пути те же, что в обычном терминале. Команды, после которых нечего чинить, спрашивают подтверждение. Ключ сервера сверяется при каждом подключении. Длинный вывод приходит со сводкой вместо хвоста.</p>
+            <h4 class="entry-title"><a href="/ru/blog/your-shell/">Агент запускает твой шелл: bash или zsh</a></h4>
+            <p class="entry-text">Раньше агент запускал bash, что бы ни было. На macOS, где zsh стоит по умолчанию с 2019 года, это означало чужое окружение: половина того, что у тебя установлено, не находилась.</p>
+            <p class="entry-more"><a href="/ru/blog/your-shell/">Читать запись</a></p>
+          </article>
+          <article class="entry" id="2026-09-03">
+            <p class="entry-meta"><time datetime="2026-09-03">3 сентября</time><span class="tag tag-site">Сайт</span></p>
+            <h4 class="entry-title"><a href="/ru/blog/verified-on-github/">tTerm теперь проверенная организация на GitHub</a></h4>
+            <p class="entry-text">У github.com/tterm-net теперь есть галочка Verified: GitHub подтвердил, что за организацией и tterm.net стоят одни и те же люди.</p>
+            <p class="entry-more"><a href="/ru/blog/verified-on-github/">Читать запись</a></p>
           </article>
           <article class="entry" id="2026-09-01">
             <p class="entry-meta"><time datetime="2026-09-01">1 сентября</time><span class="tag tag-bot">Бот</span></p>
-            <h4 class="entry-title">Несколько терминалов на одной машине</h4>
-            <p class="entry-text">На одной машине теперь можно держать несколько терминалов, как несколько окон на сервере. Вывод появляется по мере готовности, с кнопкой Stop, а команда, которая ждёт ответа, говорит об этом, а не висит молча. Ветка git встала над приглашением, и длинный вывод остаётся в чате, а не уходит файлом.</p>
+            <h4 class="entry-title"><a href="/ru/blog/several-terminals/">Несколько терминалов на одной машине</a></h4>
+            <p class="entry-text">Теперь на одном сервере можно держать открытыми несколько терминалов: в одном идёт лог, в другом ты работаешь. В /use они видны отдельными строками, и у каждого свой шелл: cd в одном не сдвигает другой.</p>
+            <p class="entry-more"><a href="/ru/blog/several-terminals/">Читать запись</a></p>
           </article>
         </div>
       </section>
       <section class="month">
         <h3 class="month-name">Август 2026</h3>
         <div class="month-entries">
-          <article class="entry" id="2026-08-30">
-            <p class="entry-meta"><time datetime="2026-08-30">30 августа</time><span class="tag tag-site">Сайт</span></p>
-            <h4 class="entry-title">Сайт и канал</h4>
-            <p class="entry-text">Заработал сайт tterm.net и канал, где мы рассказываем об изменениях. Исходники бота и агента открыты.</p>
+          <article class="entry" id="2026-08-31">
+            <p class="entry-meta"><time datetime="2026-08-31">31 августа</time><span class="tag tag-bot">Бот</span></p>
+            <h4 class="entry-title"><a href="/ru/blog/tterm-is-live/">tTerm запущен</a></h4>
+            <p class="entry-text">Терминал для твоих серверов прямо в Telegram. Пишешь команду, она выполняется на машине, а ответ приходит сообщением: код возврата, рабочий каталог и ветка git. Шелл помнит, где ты остановился.</p>
+            <p class="entry-more"><a href="/ru/blog/tterm-is-live/">Читать запись</a></p>
           </article>
           <article class="entry" id="2026-08-28">
             <p class="entry-meta"><time datetime="2026-08-28">28 августа</time><span class="tag tag-bot">Бот</span></p>
@@ -194,7 +214,7 @@
         <img src="/assets/logo.svg" alt="" width="24" height="24">
         <span class="brand-name">tTerm</span>
       </a>
-      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.0.0</p>
+      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.1.0</p>
     </div>
     <nav class="foot-links" aria-label="Ссылки">
       <a href="/ru/blog/">Блог</a>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Несколько терминалов на одной машине · Блог tTerm</title>
+<meta name="description" content="Теперь на одном сервере можно держать открытыми несколько терминалов: в одном идёт лог, в другом ты работаешь. В /use они видны отдельными строками, и у каждого свой шелл: cd в одном не сдвигает другой.">
+<link rel="canonical" href="https://tterm.net/ru/blog/several-terminals/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/several-terminals/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/several-terminals/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/several-terminals/">
+<meta property="og:title" content="Несколько терминалов на одной машине · Блог tTerm">
+<meta property="og:description" content="Теперь на одном сервере можно держать открытыми несколько терминалов: в одном идёт лог, в другом ты работаешь. В /use они видны отдельными строками, и у каждого свой шелл: cd в одном не сдвигает другой.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/ru/blog/several-terminals/">
+<meta property="og:image" content="https://tterm.net/assets/og-web.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Несколько терминалов на одной машине",
+  "description": "Теперь на одном сервере можно держать открытыми несколько терминалов: в одном идёт лог, в другом ты работаешь. В /use они видны отдельными строками, и у каждого свой шелл: cd в одном не сдвигает другой.",
+  "datePublished": "2026-09-01",
+  "inLanguage": "ru",
+  "url": "https://tterm.net/ru/blog/several-terminals/",
+  "image": "https://tterm.net/assets/og-web.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.1.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/ru/" aria-label="tTerm, на главную">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">бета</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="/ru/#how">Как это работает</a>
+      <a href="/ru/#features">Возможности</a>
+      <a href="/ru/#security">Безопасность</a>
+      <a href="/ru/#pricing">Тарифы</a>
+      <a href="/ru/#faq">Вопросы</a>
+      <a href="/ru/blog/" aria-current="page">Блог</a>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="Язык: русский"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>RU</span></summary>
+        <div class="lang-menu">
+          <a href="/ru/blog/several-terminals/" hreflang="ru" lang="ru" aria-current="true">Русский<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/blog/several-terminals/" hreflang="en" lang="en">English</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Войти</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Начать бесплатно</a>
+      <details class="menu">
+        <summary aria-label="Меню"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Меню">
+          <a href="/ru/#how">Как это работает</a>
+          <a href="/ru/#features">Возможности</a>
+          <a href="/ru/#security">Безопасность</a>
+          <a href="/ru/#pricing">Тарифы</a>
+          <a href="/ru/#faq">Вопросы</a>
+          <a href="/ru/blog/" aria-current="page">Блог</a>
+          <hr>
+          <div class="menu-langs" role="group" aria-label="Язык">
+            <a href="/ru/blog/several-terminals/" hreflang="ru" lang="ru" aria-current="true">Русский</a>
+            <a href="/blog/several-terminals/" hreflang="en" lang="en">English</a>
+          </div>
+          <a class="btn btn-primary" href="https://app.tterm.net">Начать бесплатно</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post post-plain">
+    <header class="post-head">
+      <a class="crumb" href="/ru/blog/">Блог</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-bot">Бот</span><time datetime="2026-09-01">1 сентября 2026</time><span class="sep" aria-hidden="true">·</span><span>1 минута чтения</span></p>
+    <!-- /updates:meta -->
+      <h1>Несколько терминалов на одной машине</h1>
+      <p class="post-lead">Теперь на одном сервере можно держать открытыми несколько терминалов: в одном идёт лог, в другом ты работаешь. В <code>/use</code> они видны отдельными строками, и у каждого свой шелл: <code>cd</code> в одном не сдвигает другой.</p>
+    </header>
+
+    <div class="prose">
+      <h2>Что ещё изменилось</h2>
+      <ul class="prose-bullets">
+      <li>Вывод появляется по мере готовности, а не весь разом, когда команда закончится, и рядом кнопка Stop, чтобы прервать долгую</li>
+      <li>Команда, которая ждёт ответа, теперь говорит об этом и даёт кнопки для ответа, а не висит молча, пока ты не заметишь</li>
+      <li>Ветка git стоит над приглашением, там, где её читают</li>
+      <li>Длинный вывод остаётся в чате, а не превращается в файл</li>
+      </ul>
+      <p class="post-source">Пост из нашего канала в Telegram <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">@tTermBlog</a>.</p>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="Ещё в блоге">
+    <div class="split-row">
+      <h2>Ещё в блоге</h2>
+      <a class="btn btn-ghost btn-md" href="/ru/blog/">Все записи</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/ru/blog/tterm-web/">
+        <span class="post-mini-meta"><time datetime="2026-10-18">18 окт</time> · tTerm Web</span>
+        <span class="post-mini-title">tTerm теперь работает в браузере</span>
+        <span class="post-mini-text">Все серверы и компьютеры в одной вкладке, каждая команда отдельным блоком, и никаких ключей на устройстве.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/ru/blog/independent-windows/">
+        <span class="post-mini-meta"><time datetime="2026-10-07">7 окт</time> · Бот</span>
+        <span class="post-mini-title">Окна на компьютере теперь независимы</span>
+        <span class="post-mini-text">На сервере каждое окно всегда было отдельным терминалом.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/ru/blog/answer-while-it-runs/">
+        <span class="post-mini-meta"><time datetime="2026-09-30">30 сен</time> · Бот</span>
+        <span class="post-mini-title">Команде можно ответить, пока она работает</span>
+        <span class="post-mini-text">Раньше, если программа спрашивала Continue? (Y/n), ответить было нельзя: сообщение не отправлялось, пока команда не закончится.</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/ru/blog/">Все записи</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="/ru/" aria-label="tTerm, на главную">
+        <img src="/assets/logo.svg" alt="" width="24" height="24">
+        <span class="brand-name">tTerm</span>
+      </a>
+      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.1.0</p>
+    </div>
+    <nav class="foot-links" aria-label="Ссылки">
+      <a href="/ru/blog/">Блог</a>
+      <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Бот в Telegram</a>
+      <a href="/terms/">Условия использования</a>
+      <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Исходники</a>
+      <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Канал в Telegram</a>
+      <a href="/privacy/">Политика конфиденциальности</a>
+    </nav>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

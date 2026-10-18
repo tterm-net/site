@@ -58,4 +58,100 @@
     <lastmod>2026-10-18</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://tterm.net/blog/independent-windows/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/independent-windows/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/independent-windows/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/independent-windows/"/>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/ru/blog/independent-windows/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/independent-windows/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/independent-windows/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/independent-windows/"/>
+    <lastmod>2026-10-07</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/blog/answer-while-it-runs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/answer-while-it-runs/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/answer-while-it-runs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/answer-while-it-runs/"/>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/ru/blog/answer-while-it-runs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/answer-while-it-runs/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/answer-while-it-runs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/answer-while-it-runs/"/>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/blog/your-shell/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/your-shell/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/your-shell/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/your-shell/"/>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/ru/blog/your-shell/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/your-shell/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/your-shell/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/your-shell/"/>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/blog/verified-on-github/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/verified-on-github/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/verified-on-github/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/verified-on-github/"/>
+    <lastmod>2026-09-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/ru/blog/verified-on-github/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/verified-on-github/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/verified-on-github/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/verified-on-github/"/>
+    <lastmod>2026-09-03</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/blog/several-terminals/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/several-terminals/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/several-terminals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/several-terminals/"/>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/ru/blog/several-terminals/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/several-terminals/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/several-terminals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/several-terminals/"/>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/blog/tterm-is-live/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/tterm-is-live/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/tterm-is-live/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/tterm-is-live/"/>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/ru/blog/tterm-is-live/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/tterm-is-live/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/tterm-is-live/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/tterm-is-live/"/>
+    <lastmod>2026-08-31</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>

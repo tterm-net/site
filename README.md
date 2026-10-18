@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.0.0.** The number lives in `VERSION` and in a `<meta>` tag on
+**Version 2.1.0.** The number lives in `VERSION` and in a `<meta>` tag on
 each page, so you can tell what is deployed by viewing source.
 
 The site of [tTerm](https://github.com/tterm-net): tTerm Web, a terminal in
@@ -14,19 +14,21 @@ committed like any other page.
 ## Local preview
 
 ```bash
-python3 -m http.server 4000
+python3 -m http.server 4000 --bind 127.0.0.1
 ```
 
 Then open <http://localhost:4000>. The pages link with absolute paths
 (`/style.css`, `/ru/blog/`), so open them through the server, not as files.
+`--bind` keeps the server to this machine: without it the folder is open to
+the whole network, and macOS asks whether to let Python accept connections.
 
 ## Releasing
 
 Bump `VERSION`, the `<meta name="version">` tag and the number in the footer
 on every page in the same commit: the two main pages, the two blog pages, the
 posts, the Terms, the Policy and the 404 page. The donation pages take it
-from `VERSION` when `build_donate.py` runs. One version, one set of files —
-the same rule as the bot: never ship two different things under one number.
+from `VERSION` when `build_donate.py` runs. One version, one set of files:
+the same rule as the bot, never ship two different things under one number.
 
 ## Pages
 
@@ -43,7 +45,7 @@ of sections at the top, numbered clauses with a bold label, no tables.
 
 `/donate/` and `/ru/donate/` hold the donation addresses for the bot. Since
 2.0.0 the site does not link to them; they stay for links from the bot and
-from earlier posts. `build_donate.py` writes both from one template — the
+from earlier posts. `build_donate.py` writes both from one template. The
 addresses live in that script and nowhere else, so the two languages cannot
 drift apart.
 
@@ -54,8 +56,8 @@ reject outright and show as a broken image.
 
 Every page has the same header and footer, written out in each file: a page
 must work without any script. On a narrow screen the header's links fold into
-a `<details>` menu, which opens without a script; `site.js` only closes it
-after a tap.
+a `<details>` menu, and the language button is a `<details>` too: both open
+without a script, `site.js` only closes them after a tap.
 
 ## The demo
 
@@ -80,9 +82,11 @@ it. Posts are taken from `updates.md`, so a new post needs nothing there.
 every file, and a site claiming everything changed on every push gets
 discounted.
 
-`assets/og.png` is the preview card shown when a link is shared, drawn by a
-designer. Never regenerate or replace it by accident: an earlier archive
-overwrote it three times with a placeholder.
+`assets/og-web.png` is the preview card shown when a link is shared: the
+designer's `assets/og.png` with the line under the name changed from
+"Terminal in Telegram" to "Terminal in your browser". Keep `og.png` as it is,
+never regenerate or replace it by accident: an earlier archive overwrote it
+three times with a placeholder.
 
 The donation pages carry `noindex` and are excluded in `robots.txt`: a page of
 wallet addresses is not what anyone should arrive at from a search.
@@ -104,8 +108,10 @@ beside them.
 ## Languages
 
 `/` is English, `/ru/` is Russian, and so is every page under them. Both are
-hand-written, not translated strings — the copy differs where the language
-calls for it. A switch sits in the header of each page.
+hand-written, not translated strings: the copy differs where the language
+calls for it. The header of each page has a button with the page's language
+that opens both; on phones the two sit in the menu. The Terms and the Policy
+are in English only, so their Russian leads to the Russian main page.
 
 ## The blog
 
@@ -139,7 +145,7 @@ the whole point of the file: written twice by hand, the two lists drift apart
 within a month and nothing says which one is right.
 
 One entry per release worth telling about, not per version. Five versions can
-be one entry — a reader does not need three attempts at the same fix.
+be one entry: a reader does not need three attempts at the same fix.
 
 After changing `updates.md`:
 

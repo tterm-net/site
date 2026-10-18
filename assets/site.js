@@ -1,18 +1,26 @@
-/* tTerm site: the header menu on narrow screens, and the demo of tTerm Web
-   on the main page and in posts. No dependencies, nothing loaded from
-   anywhere else: the Privacy Policy promises the pages load nothing from
-   third parties. */
+/* tTerm site: the menus in the header (the one on narrow screens and the
+   language), and the demo of tTerm Web on the main page and in posts. No
+   dependencies, nothing loaded from anywhere else: the Privacy Policy
+   promises the pages load nothing from third parties. */
 (function () {
   'use strict';
 
-  /* ------------------------------------------------------------- menu */
+  /* ------------------------------------------------------------ menus */
 
-  // The menu is a <details>, so it opens with no script at all. Here it only
-  // closes: after a tap on one of its links, on Escape, on a tap elsewhere.
+  // Both menus are <details>, so they open with no script at all. Here they
+  // only close: after a tap on one of their links, on Escape, on a tap
+  // elsewhere, and when the other one opens.
+  var menus = [];
+
   function initMenu(menu) {
     var summary = menu.querySelector('summary');
+    menus.push(menu);
+    menu.addEventListener('toggle', function () {
+      if (!menu.open) return;
+      menus.forEach(function (other) { if (other !== menu) other.open = false; });
+    });
     menu.addEventListener('click', function (event) {
-      if (event.target.closest && event.target.closest('.menu-panel a')) menu.open = false;
+      if (event.target.closest && event.target.closest('.menu-panel a, .lang-menu a')) menu.open = false;
     });
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape' && menu.open) {
@@ -327,6 +335,6 @@
     }, { threshold: [0, 0.5] }).observe(root);
   }
 
-  Array.prototype.forEach.call(document.querySelectorAll('details.menu'), initMenu);
+  Array.prototype.forEach.call(document.querySelectorAll('details.menu, details.lang'), initMenu);
   Array.prototype.forEach.call(document.querySelectorAll('[data-demo]'), initDemo);
 })();
