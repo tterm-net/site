@@ -36,13 +36,15 @@ ETH = (
 
 T = {
  "ru": dict(
-   lang="ru", home="/ru/", other="/donate/", other_lang="en",
-   other_label="English", self_label="Русский", label="RU",
+   lang="ru", home="/ru/", blog="/ru/blog/", other="/donate/", other_lang="en",
+   other_label="EN", other_name="English",
+   skip="Перейти к содержанию", beta="бета", home_label="tTerm, на главную",
+   nav_label="Разделы", menu="Меню",
+   nav=[("#how", "Как это работает"), ("#features", "Возможности"),
+        ("#security", "Безопасность"), ("#pricing", "Тарифы"), ("#faq", "Вопросы")],
+   blog_label="Блог", signin="Войти", start="Начать бесплатно",
    title="Поддержать",
    desc="Адреса для пожертвований. USDT в сетях TRON и Ethereum.",
-   nav=[("Исходники", "https://github.com/tterm-net"),
-        ("Новости", "https://t.me/tTermBlog")],
-   support="Поддержать",
    h1="Поддержать проект",
    lede=("tTerm бесплатный и останется таким. Пожертвования идут "
          "на хостинг и дальнейшее развитие сервиса."),
@@ -51,24 +53,26 @@ T = {
    only_eth="Только сеть Ethereum. Из другой сети не дойдёт.",
    thanks_h="Спасибо",
    thanks=("Даже небольшой перевод покрывает день работы сервера. "
-           "А если переводить нечего — просто пользуйся, это тоже помогает: "
+           "А если переводить нечего, просто пользуйся, это тоже помогает: "
            "по замечаниям видно, что чинить дальше."),
-   back="← На главную",
-   foot=[("Бот", "https://t.me/tTermNetBot"),
-         ("Новости", "https://t.me/tTermBlog"),
-         ("Исходники", "https://github.com/tterm-net")],
-   legal=[("Условия использования", "/terms/"),
-          ("Политика конфиденциальности", "/privacy/")],
+   back="На главную",
+   foot_label="Ссылки",
+   foot=[("/ru/blog/", "Блог"), ("https://t.me/tTermNetBot", "Бот в Telegram"),
+         ("/terms/", "Условия использования"), ("https://github.com/tterm-net", "Исходники"),
+         ("https://t.me/tTermBlog", "Канал в Telegram"),
+         ("/privacy/", "Политика конфиденциальности")],
    license="Лицензия AGPL-3.0 · 2026 · v{v}",
  ),
  "en": dict(
-   lang="en", home="/", other="/ru/donate/", other_lang="ru",
-   other_label="Русский", self_label="English", label="EN",
+   lang="en", home="/", blog="/blog/", other="/ru/donate/", other_lang="ru",
+   other_label="RU", other_name="Русский",
+   skip="Skip to content", beta="beta", home_label="tTerm, home",
+   nav_label="Sections", menu="Menu",
+   nav=[("#how", "How it works"), ("#features", "Features"), ("#security", "Security"),
+        ("#pricing", "Pricing"), ("#faq", "FAQ")],
+   blog_label="Blog", signin="Sign in", start="Start for free",
    title="Donate",
    desc="Donation addresses. USDT on TRON and Ethereum.",
-   nav=[("Source", "https://github.com/tterm-net"),
-        ("News", "https://t.me/tTermBlog")],
-   support="Donate",
    h1="Donate",
    lede=("tTerm is free and will stay that way. Donations go to hosting "
          "and further development of the service."),
@@ -77,24 +81,26 @@ T = {
    only_eth="Ethereum network only. Sent from another, it will not arrive.",
    thanks_h="Thank you",
    thanks=("Even a small transfer covers a day of server time. And if there "
-           "is nothing to send, just use it — that helps too: what you run "
+           "is nothing to send, just use it, that helps too: what you run "
            "into tells us what to fix next."),
-   back="← Back home",
-   foot=[("Bot", "https://t.me/tTermNetBot"),
-         ("News", "https://t.me/tTermBlog"),
-         ("Source", "https://github.com/tterm-net")],
-   legal=[("Terms of Service", "/terms/"), ("Privacy Policy", "/privacy/")],
+   back="Home",
+   foot_label="Links",
+   foot=[("/blog/", "Blog"), ("https://t.me/tTermNetBot", "Telegram bot"),
+         ("/terms/", "Terms of Service"), ("https://github.com/tterm-net", "Source code"),
+         ("https://t.me/tTermBlog", "Telegram channel"), ("/privacy/", "Privacy Policy")],
    license="AGPL-3.0 licensed · 2026 · v{v}",
  ),
 }
 
-GLOBE = ('<svg viewBox="0 0 24 24" width="15" height="15" fill="none" '
-         'stroke="currentColor" stroke-width="1.7" aria-hidden="true">'
-         '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>'
-         '<path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg>')
+MENU_OPEN = ('<svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+             'stroke-width="2" stroke-linecap="round" aria-hidden="true">'
+             '<path d="M4 7h16M4 12h16M4 17h16"/></svg>')
+MENU_CLOSE = ('<svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+              'stroke-width="2" stroke-linecap="round" aria-hidden="true">'
+              '<path d="M6 6l12 12M18 6L6 18"/></svg>')
 
 
-def wallet(icon, network, note, only, address, qr, copy_label, depth):
+def wallet(icon, network, note, only, address, qr, copy_label):
     return f"""      <div class="wallet">
         <div class="wallet-head">
           {icon}
@@ -104,11 +110,11 @@ def wallet(icon, network, note, only, address, qr, copy_label, depth):
           </div>
         </div>
         <div class="wallet-body">
-          <img class="qr" src="{depth}/assets/{qr}" alt="" width="128" height="128">
+          <img class="qr" src="/assets/{qr}" alt="" width="128" height="128">
           <div class="wallet-addr">
             <code>{address}</code>
             <p class="only">{only}</p>
-            <button class="btn copy" type="button"
+            <button class="btn btn-ghost copy" type="button"
                     data-copy="{address}">{copy_label}</button>
           </div>
         </div>
@@ -116,89 +122,97 @@ def wallet(icon, network, note, only, address, qr, copy_label, depth):
 
 
 def build(key: str, version: str) -> str:
+    """The page, in the same header and footer as every other page."""
     d = T[key]
-    depth = "../.." if key == "ru" else ".."
-    # Everything in these two lists points off-site.
-    nav = "\n".join(
-        f'    <a class="pill pill-ghost" href="{u}" target="_blank"'
-        f' rel="noopener">{n}</a>' for n, u in d["nav"])
-    foot = "\n".join(f'    <a href="{u}" target="_blank" rel="noopener">{n}</a>'
-                     for n, u in d["foot"])
-    # The documents are on this site, in English only, so no new tab.
-    legal = "\n".join(f'    <a href="{u}">{n}</a>' for n, u in d["legal"])
-    self_href = "/ru/donate/" if key == "ru" else "/donate/"
-    menu = (f'      <a href="/ru/donate/" hreflang="ru" lang="ru">Русский</a>\n'
-            f'      <a href="/donate/" hreflang="en" lang="en">English</a>')
+    app = "https://app.tterm.net"
+    links = [f'<a href="{d["home"]}{a}">{t}</a>' for a, t in d["nav"]]
+    links.append(f'<a href="{d["blog"]}">{d["blog_label"]}</a>')
+    nav = "\n".join("      " + x for x in links)
+    menu = "\n".join("          " + x for x in links)
+    foot = "\n".join(
+        f'      <a href="{u}"'
+        + (' target="_blank" rel="noopener"' if u.startswith("http") else "")
+        + f">{n}</a>" for u, n in d["foot"])
     return f"""<!DOCTYPE html>
 <html lang="{d['lang']}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{d['title']} — tTerm</title>
+<title>{d['title']} · tTerm</title>
 <meta name="description" content="{d['desc']}">
-<meta name="version" content="{version}">
 <meta name="robots" content="noindex">
-<link rel="icon" href="{depth}/assets/logo.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="en" href="https://tterm.net/donate/">
 <link rel="alternate" hreflang="ru" href="https://tterm.net/ru/donate/">
-<link rel="stylesheet" href="{depth}/style.css">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="{version}">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
 </head>
-<body class="donate">
+<body>
+<a class="skip" href="#main">{d['skip']}</a>
+<div class="page">
 
-<div class="glow" aria-hidden="true"></div>
-
-<header class="bar">
-  <a class="brand" href="{d['home']}">
-    <img src="{depth}/assets/logo.svg" alt="" width="30" height="30">
-    <span>tTerm</span>
-    <span class="beta">\u03b2eta version</span>
-  </a>
-  <nav class="bar-links">
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="{d['home']}" aria-label="{d['home_label']}">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">{d['beta']}</span>
+    </a>
+    <nav class="nav" aria-label="{d['nav_label']}">
 {nav}
-    <a class="pill" href="{self_href}">{d['support']}</a>
-    <details class="lang">
-      <summary aria-label="Language">{GLOBE}<span>{d['label']}</span></summary>
-      <div class="lang-menu">
+    </nav>
+    <div class="top-actions">
+      <a class="lang-link" href="{d['other']}" hreflang="{d['other_lang']}" lang="{d['other_lang']}">{d['other_label']}</a>
+      <a class="btn btn-ghost btn-sm" href="{app}">{d['signin']}</a>
+      <a class="btn btn-primary btn-sm" href="{app}">{d['start']}</a>
+      <details class="menu">
+        <summary aria-label="{d['menu']}">{MENU_OPEN}{MENU_CLOSE}</summary>
+        <nav class="menu-panel" aria-label="{d['menu']}">
 {menu}
-      </div>
-    </details>
-  </nav>
+          <hr>
+          <a class="menu-lang" href="{d['other']}" hreflang="{d['other_lang']}" lang="{d['other_lang']}">{d['other_name']}</a>
+          <a class="btn btn-primary" href="{app}">{d['start']}</a>
+        </nav>
+      </details>
+    </div>
+  </div>
 </header>
 
-<main>
-  <section class="hero hero-narrow">
+<main id="main">
+  <section class="donate-head">
     <h1>{d['h1']}</h1>
-    <p class="lede">{d['lede']}</p>
+    <p>{d['lede']}</p>
   </section>
 
-  <section class="band">
+  <section class="donate-body">
     <div class="wallets">
-{wallet(TRON, "USDT · TRC-20", "TRON", d["only_tron"], TRC,
-               "qr-trc20.svg", d["copy"], depth)}
-{wallet(ETH, "USDT · ERC-20", "Ethereum", d["only_eth"], ERC,
-               "qr-erc20.svg", d["copy"], depth)}
+{wallet(TRON, "USDT · TRC-20", "TRON", d["only_tron"], TRC, "qr-trc20.svg", d["copy"])}
+{wallet(ETH, "USDT · ERC-20", "Ethereum", d["only_eth"], ERC, "qr-erc20.svg", d["copy"])}
     </div>
 
-  </section>
-
-  <section class="band">
     <h2>{d['thanks_h']}</h2>
-    <p class="band-lede">{d['thanks']}</p>
-    <p><a class="btn" href="{d['home']}">{d['back']}</a></p>
+    <p>{d['thanks']}</p>
+    <a class="btn btn-ghost" href="{d['home']}">{d['back']}</a>
   </section>
 </main>
 
-<footer>
-  <div class="foot-brand">
-    <img src="{depth}/assets/logo.svg" alt="" width="24" height="24">
-    <span>tTerm</span>
-  </div>
-  <nav class="foot-links">
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="{d['home']}" aria-label="{d['home_label']}">
+        <img src="/assets/logo.svg" alt="" width="24" height="24">
+        <span class="brand-name">tTerm</span>
+      </a>
+      <p class="foot-note">{d['license'].format(v=version)}</p>
+    </div>
+    <nav class="foot-links" aria-label="{d['foot_label']}">
 {foot}
-{legal}
-  </nav>
-  <p class="foot-note">{d['license'].format(v=version)}</p>
+    </nav>
+  </div>
 </footer>
+
+</div>
 
 <script>
 // Progressive enhancement: the address is always visible and selectable,
@@ -207,7 +221,7 @@ document.querySelectorAll('.copy').forEach(function (b) {{
   b.addEventListener('click', function () {{
     navigator.clipboard.writeText(b.dataset.copy).then(function () {{
       var was = b.textContent;
-      b.textContent = '\u2713';
+      b.textContent = '✓';
       setTimeout(function () {{ b.textContent = was; }}, 1400);
     }});
   }});

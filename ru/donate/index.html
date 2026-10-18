@@ -3,46 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Поддержать — tTerm</title>
+<title>Поддержать · tTerm</title>
 <meta name="description" content="Адреса для пожертвований. USDT в сетях TRON и Ethereum.">
-<meta name="version" content="1.9.0">
 <meta name="robots" content="noindex">
-<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="en" href="https://tterm.net/donate/">
 <link rel="alternate" hreflang="ru" href="https://tterm.net/ru/donate/">
-<link rel="stylesheet" href="../../style.css">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.0.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
 </head>
-<body class="donate">
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="page">
 
-<div class="glow" aria-hidden="true"></div>
-
-<header class="bar">
-  <a class="brand" href="/ru/">
-    <img src="../../assets/logo.svg" alt="" width="30" height="30">
-    <span>tTerm</span>
-    <span class="beta">βeta version</span>
-  </a>
-  <nav class="bar-links">
-    <a class="pill pill-ghost" href="https://github.com/tterm-net" target="_blank" rel="noopener">Исходники</a>
-    <a class="pill pill-ghost" href="https://t.me/tTermBlog" target="_blank" rel="noopener">Новости</a>
-    <a class="pill" href="/ru/donate/">Поддержать</a>
-    <details class="lang">
-      <summary aria-label="Language"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>RU</span></summary>
-      <div class="lang-menu">
-      <a href="/ru/donate/" hreflang="ru" lang="ru">Русский</a>
-      <a href="/donate/" hreflang="en" lang="en">English</a>
-      </div>
-    </details>
-  </nav>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/ru/" aria-label="tTerm, на главную">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">бета</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="/ru/#how">Как это работает</a>
+      <a href="/ru/#features">Возможности</a>
+      <a href="/ru/#security">Безопасность</a>
+      <a href="/ru/#pricing">Тарифы</a>
+      <a href="/ru/#faq">Вопросы</a>
+      <a href="/ru/blog/">Блог</a>
+    </nav>
+    <div class="top-actions">
+      <a class="lang-link" href="/donate/" hreflang="en" lang="en">EN</a>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Войти</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Начать бесплатно</a>
+      <details class="menu">
+        <summary aria-label="Меню"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Меню">
+          <a href="/ru/#how">Как это работает</a>
+          <a href="/ru/#features">Возможности</a>
+          <a href="/ru/#security">Безопасность</a>
+          <a href="/ru/#pricing">Тарифы</a>
+          <a href="/ru/#faq">Вопросы</a>
+          <a href="/ru/blog/">Блог</a>
+          <hr>
+          <a class="menu-lang" href="/donate/" hreflang="en" lang="en">English</a>
+          <a class="btn btn-primary" href="https://app.tterm.net">Начать бесплатно</a>
+        </nav>
+      </details>
+    </div>
+  </div>
 </header>
 
-<main>
-  <section class="hero hero-narrow">
+<main id="main">
+  <section class="donate-head">
     <h1>Поддержать проект</h1>
-    <p class="lede">tTerm бесплатный и останется таким. Пожертвования идут на хостинг и дальнейшее развитие сервиса.</p>
+    <p>tTerm бесплатный и останется таким. Пожертвования идут на хостинг и дальнейшее развитие сервиса.</p>
   </section>
 
-  <section class="band">
+  <section class="donate-body">
     <div class="wallets">
       <div class="wallet">
         <div class="wallet-head">
@@ -53,11 +71,11 @@
           </div>
         </div>
         <div class="wallet-body">
-          <img class="qr" src="../../assets/qr-trc20.svg" alt="" width="128" height="128">
+          <img class="qr" src="/assets/qr-trc20.svg" alt="" width="128" height="128">
           <div class="wallet-addr">
             <code>TPv5SQVhjczDR3fBPvGKBu9Ekn8gcziQTX</code>
             <p class="only">Только сеть TRON. Из другой сети не дойдёт.</p>
-            <button class="btn copy" type="button"
+            <button class="btn btn-ghost copy" type="button"
                     data-copy="TPv5SQVhjczDR3fBPvGKBu9Ekn8gcziQTX">Скопировать</button>
           </div>
         </div>
@@ -71,40 +89,44 @@
           </div>
         </div>
         <div class="wallet-body">
-          <img class="qr" src="../../assets/qr-erc20.svg" alt="" width="128" height="128">
+          <img class="qr" src="/assets/qr-erc20.svg" alt="" width="128" height="128">
           <div class="wallet-addr">
             <code>0xBc0B9cB860A6c789F7cB13DC59E6b5cf12Ab1fa0</code>
             <p class="only">Только сеть Ethereum. Из другой сети не дойдёт.</p>
-            <button class="btn copy" type="button"
+            <button class="btn btn-ghost copy" type="button"
                     data-copy="0xBc0B9cB860A6c789F7cB13DC59E6b5cf12Ab1fa0">Скопировать</button>
           </div>
         </div>
       </div>
     </div>
 
-  </section>
-
-  <section class="band">
     <h2>Спасибо</h2>
-    <p class="band-lede">Даже небольшой перевод покрывает день работы сервера. А если переводить нечего — просто пользуйся, это тоже помогает: по замечаниям видно, что чинить дальше.</p>
-    <p><a class="btn" href="/ru/">← На главную</a></p>
+    <p>Даже небольшой перевод покрывает день работы сервера. А если переводить нечего, просто пользуйся, это тоже помогает: по замечаниям видно, что чинить дальше.</p>
+    <a class="btn btn-ghost" href="/ru/">На главную</a>
   </section>
 </main>
 
-<footer>
-  <div class="foot-brand">
-    <img src="../../assets/logo.svg" alt="" width="24" height="24">
-    <span>tTerm</span>
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="/ru/" aria-label="tTerm, на главную">
+        <img src="/assets/logo.svg" alt="" width="24" height="24">
+        <span class="brand-name">tTerm</span>
+      </a>
+      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.0.0</p>
+    </div>
+    <nav class="foot-links" aria-label="Ссылки">
+      <a href="/ru/blog/">Блог</a>
+      <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Бот в Telegram</a>
+      <a href="/terms/">Условия использования</a>
+      <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Исходники</a>
+      <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Канал в Telegram</a>
+      <a href="/privacy/">Политика конфиденциальности</a>
+    </nav>
   </div>
-  <nav class="foot-links">
-    <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Бот</a>
-    <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Новости</a>
-    <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Исходники</a>
-    <a href="/terms/">Условия использования</a>
-    <a href="/privacy/">Политика конфиденциальности</a>
-  </nav>
-  <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v1.9.0</p>
 </footer>
+
+</div>
 
 <script>
 // Progressive enhancement: the address is always visible and selectable,

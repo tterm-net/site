@@ -3,46 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Donate — tTerm</title>
+<title>Donate · tTerm</title>
 <meta name="description" content="Donation addresses. USDT on TRON and Ethereum.">
-<meta name="version" content="1.9.0">
 <meta name="robots" content="noindex">
-<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="en" href="https://tterm.net/donate/">
 <link rel="alternate" hreflang="ru" href="https://tterm.net/ru/donate/">
-<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.0.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
 </head>
-<body class="donate">
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
 
-<div class="glow" aria-hidden="true"></div>
-
-<header class="bar">
-  <a class="brand" href="/">
-    <img src="../assets/logo.svg" alt="" width="30" height="30">
-    <span>tTerm</span>
-    <span class="beta">βeta version</span>
-  </a>
-  <nav class="bar-links">
-    <a class="pill pill-ghost" href="https://github.com/tterm-net" target="_blank" rel="noopener">Source</a>
-    <a class="pill pill-ghost" href="https://t.me/tTermBlog" target="_blank" rel="noopener">News</a>
-    <a class="pill" href="/donate/">Donate</a>
-    <details class="lang">
-      <summary aria-label="Language"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>EN</span></summary>
-      <div class="lang-menu">
-      <a href="/ru/donate/" hreflang="ru" lang="ru">Русский</a>
-      <a href="/donate/" hreflang="en" lang="en">English</a>
-      </div>
-    </details>
-  </nav>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/" aria-label="tTerm, home">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">beta</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="/#how">How it works</a>
+      <a href="/#features">Features</a>
+      <a href="/#security">Security</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+    <div class="top-actions">
+      <a class="lang-link" href="/ru/donate/" hreflang="ru" lang="ru">RU</a>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Sign in</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Start for free</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="/#how">How it works</a>
+          <a href="/#features">Features</a>
+          <a href="/#security">Security</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/blog/">Blog</a>
+          <hr>
+          <a class="menu-lang" href="/ru/donate/" hreflang="ru" lang="ru">Русский</a>
+          <a class="btn btn-primary" href="https://app.tterm.net">Start for free</a>
+        </nav>
+      </details>
+    </div>
+  </div>
 </header>
 
-<main>
-  <section class="hero hero-narrow">
+<main id="main">
+  <section class="donate-head">
     <h1>Donate</h1>
-    <p class="lede">tTerm is free and will stay that way. Donations go to hosting and further development of the service.</p>
+    <p>tTerm is free and will stay that way. Donations go to hosting and further development of the service.</p>
   </section>
 
-  <section class="band">
+  <section class="donate-body">
     <div class="wallets">
       <div class="wallet">
         <div class="wallet-head">
@@ -53,11 +71,11 @@
           </div>
         </div>
         <div class="wallet-body">
-          <img class="qr" src="../assets/qr-trc20.svg" alt="" width="128" height="128">
+          <img class="qr" src="/assets/qr-trc20.svg" alt="" width="128" height="128">
           <div class="wallet-addr">
             <code>TPv5SQVhjczDR3fBPvGKBu9Ekn8gcziQTX</code>
             <p class="only">TRON network only. Sent from another, it will not arrive.</p>
-            <button class="btn copy" type="button"
+            <button class="btn btn-ghost copy" type="button"
                     data-copy="TPv5SQVhjczDR3fBPvGKBu9Ekn8gcziQTX">Copy</button>
           </div>
         </div>
@@ -71,40 +89,44 @@
           </div>
         </div>
         <div class="wallet-body">
-          <img class="qr" src="../assets/qr-erc20.svg" alt="" width="128" height="128">
+          <img class="qr" src="/assets/qr-erc20.svg" alt="" width="128" height="128">
           <div class="wallet-addr">
             <code>0xBc0B9cB860A6c789F7cB13DC59E6b5cf12Ab1fa0</code>
             <p class="only">Ethereum network only. Sent from another, it will not arrive.</p>
-            <button class="btn copy" type="button"
+            <button class="btn btn-ghost copy" type="button"
                     data-copy="0xBc0B9cB860A6c789F7cB13DC59E6b5cf12Ab1fa0">Copy</button>
           </div>
         </div>
       </div>
     </div>
 
-  </section>
-
-  <section class="band">
     <h2>Thank you</h2>
-    <p class="band-lede">Even a small transfer covers a day of server time. And if there is nothing to send, just use it — that helps too: what you run into tells us what to fix next.</p>
-    <p><a class="btn" href="/">← Back home</a></p>
+    <p>Even a small transfer covers a day of server time. And if there is nothing to send, just use it, that helps too: what you run into tells us what to fix next.</p>
+    <a class="btn btn-ghost" href="/">Home</a>
   </section>
 </main>
 
-<footer>
-  <div class="foot-brand">
-    <img src="../assets/logo.svg" alt="" width="24" height="24">
-    <span>tTerm</span>
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="/" aria-label="tTerm, home">
+        <img src="/assets/logo.svg" alt="" width="24" height="24">
+        <span class="brand-name">tTerm</span>
+      </a>
+      <p class="foot-note">AGPL-3.0 licensed · 2026 · v2.0.0</p>
+    </div>
+    <nav class="foot-links" aria-label="Links">
+      <a href="/blog/">Blog</a>
+      <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Telegram bot</a>
+      <a href="/terms/">Terms of Service</a>
+      <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Source code</a>
+      <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram channel</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </nav>
   </div>
-  <nav class="foot-links">
-    <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot</a>
-    <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">News</a>
-    <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Source</a>
-    <a href="/terms/">Terms of Service</a>
-    <a href="/privacy/">Privacy Policy</a>
-  </nav>
-  <p class="foot-note">AGPL-3.0 licensed · 2026 · v1.9.0</p>
 </footer>
+
+</div>
 
 <script>
 // Progressive enhancement: the address is always visible and selectable,

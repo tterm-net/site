@@ -6,28 +6,53 @@
 <title>Privacy Policy — tTerm</title>
 <meta name="description" content="What personal data tTerm collects, why, how long it is kept, who receives it and how you can control it.">
 <link rel="canonical" href="https://tterm.net/privacy/">
-<meta name="version" content="1.9.0">
+<meta name="version" content="2.0.0">
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
 
-<div class="glow" aria-hidden="true"></div>
-
-<header class="bar">
-  <a class="brand" href="/">
-    <img src="/assets/logo.svg" alt="" width="30" height="30">
-    <span>tTerm</span>
-    <span class="beta">βeta version</span>
-  </a>
-  <nav class="bar-links">
-    <a class="pill pill-ghost" href="https://github.com/tterm-net" target="_blank" rel="noopener">Source</a>
-    <a class="pill pill-ghost" href="https://t.me/tTermBlog" target="_blank" rel="noopener">News</a>
-    <a class="pill" href="/donate/">Donate</a>
-  </nav>
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/" aria-label="tTerm, home">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">beta</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="/#how">How it works</a>
+      <a href="/#features">Features</a>
+      <a href="/#security">Security</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+    <div class="top-actions">
+      <a class="lang-link" href="/ru/" hreflang="ru" lang="ru">RU</a>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Sign in</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Start for free</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="/#how">How it works</a>
+          <a href="/#features">Features</a>
+          <a href="/#security">Security</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/blog/">Blog</a>
+          <hr>
+          <a class="menu-lang" href="/ru/" hreflang="ru" lang="ru">Русский</a>
+          <a class="btn btn-primary" href="https://app.tterm.net">Start for free</a>
+        </nav>
+      </details>
+    </div>
+  </div>
 </header>
 
-<main class="doc">
+<main id="main" class="doc">
   <h1>Privacy Policy</h1>
   <p class="effective">Effective date: October 16, 2026</p>
 
@@ -221,21 +246,26 @@
   </ul>
 </main>
 
-<footer>
-  <div class="foot-brand">
-    <img src="/assets/logo.svg" alt="" width="24" height="24">
-    <span>tTerm</span>
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="/" aria-label="tTerm, home">
+        <img src="/assets/logo.svg" alt="" width="24" height="24">
+        <span class="brand-name">tTerm</span>
+      </a>
+      <p class="foot-note">AGPL-3.0 licensed · 2026 · v2.0.0</p>
+    </div>
+    <nav class="foot-links" aria-label="Links">
+      <a href="/blog/">Blog</a>
+      <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Telegram bot</a>
+      <a href="/terms/">Terms of Service</a>
+      <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Source code</a>
+      <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram channel</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </nav>
   </div>
-  <nav class="foot-links">
-    <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot</a>
-    <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">News</a>
-    <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Source</a>
-    <a href="/donate/">Donate</a>
-    <a href="/terms/">Terms of Service</a>
-    <a href="/privacy/">Privacy Policy</a>
-  </nav>
-  <p class="foot-note">AGPL-3.0 licensed · 2026 · v1.9.0</p>
 </footer>
 
+</div>
 </body>
 </html>

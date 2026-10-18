@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tTerm blog: what's new</title>
+<meta name="description" content="What we have shipped and what has changed in tTerm: the web app, the Telegram bot and the site.">
+<link rel="canonical" href="https://tterm.net/blog/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/">
+<meta property="og:title" content="tTerm blog: what's new">
+<meta property="og:description" content="What we have shipped and what has changed in tTerm: the web app, the Telegram bot and the site.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tterm.net/blog/">
+<meta property="og:image" content="https://tterm.net/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.0.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/" aria-label="tTerm, home">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">beta</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="/#how">How it works</a>
+      <a href="/#features">Features</a>
+      <a href="/#security">Security</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+    </nav>
+    <div class="top-actions">
+      <a class="lang-link" href="/ru/blog/" hreflang="ru" lang="ru">RU</a>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Sign in</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Start for free</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="/#how">How it works</a>
+          <a href="/#features">Features</a>
+          <a href="/#security">Security</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/blog/" aria-current="page">Blog</a>
+          <hr>
+          <a class="menu-lang" href="/ru/blog/" hreflang="ru" lang="ru">Русский</a>
+          <a class="btn btn-primary" href="https://app.tterm.net">Start for free</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="wrap blog-head">
+    <div class="glow" aria-hidden="true"></div>
+    <p class="eyebrow">Blog</p>
+    <h1>What's new in tTerm</h1>
+    <p class="section-lead">What we have shipped and what has changed. Short notes on every release also go to our <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram channel</a>.</p>
+  </section>
+
+  <section class="wrap" aria-label="Featured post">
+    <!-- updates:featured -->
+    <a class="post-hero" href="/blog/tterm-web/">
+      <div class="post-hero-cover">
+      <div class="cover" aria-hidden="true">
+        <div class="cover-window">
+          <div class="cover-bar"><i></i><i></i><i></i><span>app.tterm.net</span></div>
+          <div class="cover-tabs"><span class="on"><b class="dot"></b><span><em>P/</em>web-01</span></span><span><b class="dot"></b><span><em>A/</em>api-prod</span></span></div>
+          <div class="cover-feed">
+            <p class="cover-meta"><b class="dot"></b>~/app<span>main</span><span class="cover-time">1.4 s</span></p>
+            <p class="cover-cmd"><em>&#x276F;</em> git pull</p>
+            <p>Updating 3f2c1a9..8d4e7b2</p>
+            <p>Fast-forward</p>
+            <p> src/server.ts | 12 <ins>+++++++</ins><del>-----</del></p>
+            <p class="cover-meta cover-gap"><b class="dot busy"></b>~/app<span>main</span><span class="cover-time">running</span></p>
+            <p class="cover-cmd"><em>&#x276F;</em> npm run build</p>
+            <p>vite v7.1.4 building for production...</p>
+            <p class="cover-ok">&#x2713; 412 modules transformed.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="post-hero-body">
+        <p class="post-meta"><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-18">October 18, 2026</time><span class="sep" aria-hidden="true">·</span><span>4 min read</span></p>
+        <h2 class="post-hero-title">tTerm now works in the browser</h2>
+        <p class="post-hero-lead">All your servers and computers in one tab, every command in a block of its own, and no keys on your device. What tTerm Web can do today, how to connect a machine and what comes next.</p>
+        <span class="btn btn-primary">Read the post</span>
+      </div>
+    </a>
+    <!-- /updates:featured -->
+  </section>
+
+  <section class="wrap" aria-label="All posts">
+    <!-- updates:list -->
+    <h2 class="list-title">Earlier</h2>
+    <div class="timeline">
+      <section class="month">
+        <h3 class="month-name">October 2026</h3>
+        <div class="month-entries">
+          <article class="entry" id="2026-10-07">
+            <p class="entry-meta"><time datetime="2026-10-07">October 7</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">Independent windows on a computer</h4>
+            <p class="entry-text">Terminal windows on a computer with the agent are now independent: each one has its own shell, as on a server, and cd in one no longer moves the others. To get this, update the agent by running the install again from /addhost → Computer. The window buttons now sit at the bottom of the list and stay put when you switch. A computer no longer shows as offline after the agent reconnects quickly.</p>
+          </article>
+        </div>
+      </section>
+      <section class="month">
+        <h3 class="month-name">September 2026</h3>
+        <div class="month-entries">
+          <article class="entry" id="2026-09-30">
+            <p class="entry-meta"><time datetime="2026-09-30">September 30</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">Answer a command as it runs</h4>
+            <p class="entry-text">You can now answer a command while it runs: whatever you type goes to its input, the way it would in a terminal. Yes/no questions are recognised even with a spinner turning below them. A computer with the agent no longer drops out of the list after half an hour without commands.</p>
+          </article>
+          <article class="entry" id="2026-09-17">
+            <p class="entry-meta"><time datetime="2026-09-17">September 17</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">Your own shell</h4>
+            <p class="entry-text">The agent now runs your own shell, bash or zsh, so the environment and the paths are the ones you see in a normal terminal. Commands that leave nothing to fix ask for confirmation. The server&#x27;s key is checked on every connection. Long output arrives with a summary instead of its last few lines.</p>
+          </article>
+          <article class="entry" id="2026-09-01">
+            <p class="entry-meta"><time datetime="2026-09-01">September 1</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">Several terminals on one machine</h4>
+            <p class="entry-text">A machine can now hold several terminals, the way you keep more than one window open on a server. Output appears as it arrives, with a Stop button, and a command waiting for an answer says so instead of hanging silently. The git branch sits above the prompt, and longer output stays in the chat instead of turning into a file.</p>
+          </article>
+        </div>
+      </section>
+      <section class="month">
+        <h3 class="month-name">August 2026</h3>
+        <div class="month-entries">
+          <article class="entry" id="2026-08-30">
+            <p class="entry-meta"><time datetime="2026-08-30">August 30</time><span class="tag tag-site">Site</span></p>
+            <h4 class="entry-title">The site and the channel</h4>
+            <p class="entry-text">tterm.net is live, along with the channel where changes get announced. The bot and the agent are open source.</p>
+          </article>
+          <article class="entry" id="2026-08-28">
+            <p class="entry-meta"><time datetime="2026-08-28">August 28</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">The bot on its own server</h4>
+            <p class="entry-text">The bot moved to its own server and no longer depends on a laptop being open. Source for the bot and the agent is public.</p>
+          </article>
+          <article class="entry" id="2026-08-26">
+            <p class="entry-meta"><time datetime="2026-08-26">August 26</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">Buttons in messages</h4>
+            <p class="entry-text">Machine list, menus and confirmations moved to buttons inside messages. A machine that cannot be reached is greyed out instead of leading to an error.</p>
+          </article>
+          <article class="entry" id="2026-08-25">
+            <p class="entry-meta"><time datetime="2026-08-25">August 25</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">Access with a time limit</h4>
+            <p class="entry-text">Shared access with time limits. Expired access closes itself and both sides are told. Owners can export the full command history as a file.</p>
+          </article>
+          <article class="entry" id="2026-08-23">
+            <p class="entry-meta"><time datetime="2026-08-23">August 23</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">Computers through an agent</h4>
+            <p class="entry-text">Computers can be connected too, through a small agent that dials out. macOS and Linux for now.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+    <!-- /updates:list -->
+  </section>
+
+  <section class="section near" aria-label="Telegram channel">
+    <div class="band-card">
+      <div>
+        <h2>New posts reach Telegram too</h2>
+        <p>Short notes on every release in the tTerm channel.</p>
+      </div>
+      <a class="btn btn-ghost btn-md" href="https://t.me/tTermBlog" target="_blank" rel="noopener">Open the channel</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="/" aria-label="tTerm, home">
+        <img src="/assets/logo.svg" alt="" width="24" height="24">
+        <span class="brand-name">tTerm</span>
+      </a>
+      <p class="foot-note">AGPL-3.0 licensed · 2026 · v2.0.0</p>
+    </div>
+    <nav class="foot-links" aria-label="Links">
+      <a href="/blog/">Blog</a>
+      <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Telegram bot</a>
+      <a href="/terms/">Terms of Service</a>
+      <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Source code</a>
+      <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram channel</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tTerm теперь работает в браузере · Блог tTerm</title>
+<meta name="description" content="Все серверы и компьютеры в одной вкладке, каждая команда отдельным блоком, и никаких ключей на устройстве. Что уже умеет tTerm Web, как подключить машину и что будет дальше.">
+<link rel="canonical" href="https://tterm.net/ru/blog/tterm-web/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/tterm-web/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/tterm-web/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/tterm-web/">
+<meta property="og:title" content="tTerm теперь работает в браузере · Блог tTerm">
+<meta property="og:description" content="Все серверы и компьютеры в одной вкладке, каждая команда отдельным блоком, и никаких ключей на устройстве. Что уже умеет tTerm Web, как подключить машину и что будет дальше.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/ru/blog/tterm-web/">
+<meta property="og:image" content="https://tterm.net/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "tTerm теперь работает в браузере",
+  "description": "Все серверы и компьютеры в одной вкладке, каждая команда отдельным блоком, и никаких ключей на устройстве. Что уже умеет tTerm Web, как подключить машину и что будет дальше.",
+  "datePublished": "2026-10-18",
+  "inLanguage": "ru",
+  "url": "https://tterm.net/ru/blog/tterm-web/",
+  "image": "https://tterm.net/assets/og.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.0.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/ru/" aria-label="tTerm, на главную">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">бета</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="/ru/#how">Как это работает</a>
+      <a href="/ru/#features">Возможности</a>
+      <a href="/ru/#security">Безопасность</a>
+      <a href="/ru/#pricing">Тарифы</a>
+      <a href="/ru/#faq">Вопросы</a>
+      <a href="/ru/blog/" aria-current="page">Блог</a>
+    </nav>
+    <div class="top-actions">
+      <a class="lang-link" href="/blog/tterm-web/" hreflang="en" lang="en">EN</a>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Войти</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Начать бесплатно</a>
+      <details class="menu">
+        <summary aria-label="Меню"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Меню">
+          <a href="/ru/#how">Как это работает</a>
+          <a href="/ru/#features">Возможности</a>
+          <a href="/ru/#security">Безопасность</a>
+          <a href="/ru/#pricing">Тарифы</a>
+          <a href="/ru/#faq">Вопросы</a>
+          <a href="/ru/blog/" aria-current="page">Блог</a>
+          <hr>
+          <a class="menu-lang" href="/blog/tterm-web/" hreflang="en" lang="en">English</a>
+          <a class="btn btn-primary" href="https://app.tterm.net">Начать бесплатно</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="/ru/blog/">Блог</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-18">18 октября 2026</time><span class="sep" aria-hidden="true">·</span><span>4 минуты чтения</span></p>
+    <!-- /updates:meta -->
+      <h1>tTerm теперь работает в браузере</h1>
+      <p class="post-lead">До сих пор tTerm жил в Telegram: команды на сервер прямо из чата. Сегодня открываем tTerm Web, настоящий терминал в браузере. Все твои серверы и компьютеры в одной вкладке, каждая команда приходит отдельным блоком, а ключи на устройстве не нужны.</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="demo-frame">
+        <div class="demo" data-demo role="img" aria-label="tTerm Web в работе: слева проекты, машины и их терминалы, сверху вкладки. На web-01 выполняются git pull, сборка и перезапуск сервиса, затем через Cmd+K открывается терминал на api-prod."></div>
+      </div>
+      <figcaption>Так выглядит tTerm Web: машины по проектам слева, вкладки сверху, каждая команда отдельным блоком.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>Зачем браузер, если есть бот</h2>
+      <p>Бот хорош, когда под рукой только телефон: перезапустить сервис, посмотреть место на диске, ответить на вопрос установщика. Но долгая работа просит большой экран: несколько вкладок рядом, vim и htop на всё окно, историю, в которой легко найти вчерашнюю команду.</p>
+      <p>Для этого мы сделали tTerm Web. Он открывается в любом браузере, на ноутбуке, планшете и телефоне, и ничего не требует ставить на устройство, с которого ты работаешь.</p>
+
+      <h2>Каждая команда отдельным блоком</h2>
+      <p>В обычном терминале всё сливается в одну ленту, и где кончилась одна команда и началась другая, приходится искать глазами. В tTerm каждая команда приходит отдельным блоком: сама команда, её вывод, код возврата, время, каталог и ветка git.</p>
+      <p>Блок можно скопировать вместе с выводом, свернуть или выполнить ещё раз. Пока команда работает, вывод идёт живьём, а когда она закончилась, блок застывает в обычный текст, который легко выделить и скопировать.</p>
+
+      <h2>Строка ввода как в редакторе</h2>
+      <p>Внизу своя строка ввода. Shift+Enter переносит строку, серым подсказывается команда из истории, Tab дополняет. История хранится у нас, поэтому она одна на всех твоих устройствах.</p>
+      <p>Над строкой видно, где ты: каталог и ветка. Нажми на них и выбери нужные из списка, а <code>cd</code> и <code>git switch</code> выполнятся обычным блоком. А опасную команду, после которой уже нечего чинить, tTerm переспросит.</p>
+
+      <h2>vim, htop и sudo</h2>
+      <p>Полноэкранные программы открываются на всю область терминала и работают как обычно, sudo тоже. А если блоки не нужны, есть классический режим: один сплошной терминал, как ты привык.</p>
+
+      <h2>Терминал не закрывается вместе с вкладкой</h2>
+      <p>Терминал живёт на нашем сервере, а не в браузере. Закрой ноутбук посреди сборки на сервере: она продолжится, а вывод сохранится. Открой tTerm с другого устройства, и терминал будет на месте.</p>
+      <p>Вкладки из разных проектов открываются рядом и подписаны кодом проекта: P/web-01, A/api-prod. А Cmd+K открывает палитру: перейти к любому терминалу, открыть новый на любой машине или выполнить действие.</p>
+
+      <h2>Как подключить машину</h2>
+      <p>Сервер на Linux подключается одной командой. tTerm Web покажет её, когда ты добавляешь машину, а выполнить её нужно на сервере:</p>
+      <pre><b>$</b> curl -sSL https://connect.tterm.net/s/… | sudo sh</pre>
+      <p>Установщик заводит на сервере пользователя tterm, добавляет одну строку в его <code>authorized_keys</code> и даёт ему sudo отдельным файлом в <code>/etc/sudoers.d</code>. <code>sshd_config</code> он не трогает, sshd не перезапускает и портов не открывает. Через несколько секунд сервер появится в списке.</p>
+      <p>Компьютер на macOS или Linux подключается через небольшого агента. Он работает от твоего пользователя и сам выходит на связь с нашим сервером, поэтому входящие порты не нужны, а компьютер может стоять за NAT. Удаляется агент одной командой.</p>
+
+      <h2>Безопасность</h2>
+      <p>Мы подключаемся к твоим машинам, поэтому устроили доступ так, чтобы его было легко дать и так же легко забрать.</p>
+      <ul class="prose-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><span><strong>Твои ключи нам не нужны.</strong> Для каждого подключения tTerm подписывает новый сертификат SSH с твоим именем внутри, и через две минуты он перестаёт действовать.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span><strong>Подпись отдельно.</strong> Ключи, которыми мы подписываем, живут в отдельном процессе без сети. Основная программа не может их прочитать, а только просит подпись, и каждая подпись записывается.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg><span><strong>Без посредников.</strong> Сервер tTerm стоит в ЕС. Страница и терминалы идут к нему напрямую: Cloudflare у нас отвечает только за DNS и команд не видит.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M5 7l1 13h12l1-13M9 7V4h6v3"/></svg><span><strong>Доступ легко забрать.</strong> Удалишь машину в tTerm, и он покажет команду, которая убирает его доступ с сервера. Как убрать всё остальное, что поставил установщик, написано в начале самого скрипта.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><strong>Открытый код.</strong> tTerm Web и агент открыты под лицензией AGPL-3.0. Установочный скрипт короткий, и его стоит прочитать перед запуском.</span></li>
+      </ul>
+
+      <h2>Сколько это стоит</h2>
+      <p>Пока tTerm Web в бете, он бесплатный для всех.</p>
+      <div class="stats">
+        <div><b>50</b><span>машин на человека</span></div>
+        <div><b>24</b><span>открытых терминала</span></div>
+        <div><b>30</b><span>дней хранится история с выводом</span></div>
+      </div>
+      <p>Платные тарифы появятся позже, и мы напишем о них заранее.</p>
+
+      <h2>А что с ботом</h2>
+      <p><a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a> остаётся и работает: команды на сервер прямо из чата, когда под рукой только телефон. Пока бот и веб живут отдельно, у каждого свой список машин. Потом мы их соединим.</p>
+
+      <h2>Что дальше</h2>
+      <p>Следующая большая часть – работа в команде: роли в проекте, общий журнал команд и наблюдение за терминалом коллеги, где тот, за кем смотрят, всегда видит, кто смотрит. Компьютеры на Windows пока не поддерживаются, до них дойдём позже.</p>
+
+      <div class="post-cta">
+        <h2>Попробуй tTerm Web</h2>
+        <p>Вход по почте: придёт код, а на своих устройствах потом хватит короткого кода. Первый сервер подключается за минуту.</p>
+        <a class="btn btn-primary" href="https://app.tterm.net">Начать бесплатно</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="Ещё в блоге">
+    <div class="split-row">
+      <h2>Ещё в блоге</h2>
+      <a class="btn btn-ghost btn-md" href="/ru/blog/">Все записи</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/ru/blog/#2026-10-07">
+        <span class="post-mini-meta"><time datetime="2026-10-07">7 окт</time> · Бот</span>
+        <span class="post-mini-title">Независимые окна на компьютере</span>
+        <span class="post-mini-text">Окна на компьютере с агентом теперь независимы: у каждого свой шелл, как на сервере, и cd в одном больше не двигает остальные.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/ru/blog/#2026-09-30">
+        <span class="post-mini-meta"><time datetime="2026-09-30">30 сен</time> · Бот</span>
+        <span class="post-mini-title">Ответ команде на ходу</span>
+        <span class="post-mini-text">Команде теперь можно ответить, пока она работает: всё, что вы пишете, уходит ей на ввод, как в обычном терминале.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/ru/blog/#2026-09-17">
+        <span class="post-mini-meta"><time datetime="2026-09-17">17 сен</time> · Бот</span>
+        <span class="post-mini-title">Ваш собственный шелл</span>
+        <span class="post-mini-text">Агент запускает ваш собственный шелл – bash или zsh, – так что окружение и пути те же, что в обычном терминале.</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/ru/blog/">Все записи</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="/ru/" aria-label="tTerm, на главную">
+        <img src="/assets/logo.svg" alt="" width="24" height="24">
+        <span class="brand-name">tTerm</span>
+      </a>
+      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.0.0</p>
+    </div>
+    <nav class="foot-links" aria-label="Ссылки">
+      <a href="/ru/blog/">Блог</a>
+      <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Бот в Telegram</a>
+      <a href="/terms/">Условия использования</a>
+      <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Исходники</a>
+      <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Канал в Telegram</a>
+      <a href="/privacy/">Политика конфиденциальности</a>
+    </nav>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

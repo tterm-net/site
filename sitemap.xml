@@ -5,7 +5,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/"/>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -13,8 +13,24 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/"/>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/"/>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/ru/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/"/>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tterm.net/terms/</loc>
@@ -25,5 +41,21 @@
     <loc>https://tterm.net/privacy/</loc>
     <lastmod>2026-10-16</lastmod>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/blog/tterm-web/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/tterm-web/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/tterm-web/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/tterm-web/"/>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tterm.net/ru/blog/tterm-web/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/tterm-web/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/tterm-web/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/tterm-web/"/>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
