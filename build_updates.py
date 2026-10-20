@@ -6,7 +6,8 @@ build_updates.py — builds the blog from `updates.md`.
 everywhere it shows, in both languages:
 
   - the blog block on the main page (`/`, `/ru/`): the newest post with a
-    page of its own, and the three newest short entries beside it;
+    page of its own, or the one pinned, and the three newest other entries
+    beside it;
   - the blog page (`/blog/`, `/ru/blog/`): that post on top, then every
     other entry, month by month;
   - on each post's page (`/blog/<post>/`): its date and reading time under
@@ -66,6 +67,7 @@ SHORT_MONTHS = {
 
 WORDS = {
     "read": {"en": "Read the post", "ru": "Читать запись"},
+    "pinned": {"en": "Pinned", "ru": "Закреплено"},
     "earlier": {"en": "Earlier", "ru": "Ранее"},
     "more": {"en": "More posts", "ru": "Ещё записи"},
 }
@@ -99,6 +101,7 @@ class Entry:
     date: str                   # ISO, as written in the file
     tag: str                    # a key of TAGS
     path: str | None            # "/blog/x/" when the entry has a page
+    pinned: bool = False        # leads the blog whatever came after it
     title: dict[str, str] = field(default_factory=dict)
     text: dict[str, str] = field(default_factory=dict)
     minutes: dict[str, int] = field(default_factory=dict)
@@ -113,7 +116,8 @@ def parse(source: str) -> list[Entry]:
 
     Deliberately hand-rolled: the format has to stay editable by someone who
     is adding a release note, not maintaining a parser. Comment lines start
-    with `#`, an entry with `## date tag [path]`, a language with `@en Title`.
+    with `#`, an entry with `## date tag [path [pinned]]`, a language with
+    `@en Title`.
     """
     entries: list[Entry] = []
     lang: str | None = None
@@ -132,17 +136,21 @@ def parse(source: str) -> list[Entry]:
             flush()
             lang = None
             parts = line[3:].split()
-            if len(parts) not in (2, 3):
-                fail(f"'{line}': expected '## date tag' or '## date tag /path/'.")
+            if len(parts) not in (2, 3, 4):
+                fail(f"'{line}': expected '## date tag', '## date tag /path/' "
+                     f"or '## date tag /path/ pinned'.")
             date, tag = parts[0], parts[1]
-            path = parts[2] if len(parts) == 3 else None
+            path = parts[2] if len(parts) >= 3 else None
+            if len(parts) == 4 and parts[3] != "pinned":
+                fail(f"'{line}': after the path only 'pinned' may follow.")
             if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
                 fail(f"'{line}': the date must be written as 2026-10-07.")
             if tag not in TAGS:
                 fail(f"{date}: tag '{tag}' is none of {', '.join(TAGS)}.")
             if path and not re.fullmatch(r"/blog/[a-z0-9-]+/", path):
                 fail(f"{date}: a page path looks like /blog/name/, not {path}.")
-            entries.append(Entry(date=date, tag=tag, path=path))
+            entries.append(Entry(date=date, tag=tag, path=path,
+                                 pinned=len(parts) == 4))
             continue
         if line.startswith("@"):
             flush()
@@ -171,6 +179,8 @@ def parse(source: str) -> list[Entry]:
                      f"the thing this file exists to prevent.")
     if [e.date for e in entries] != sorted((e.date for e in entries), reverse=True):
         fail("entries must go newest first.")
+    if sum(e.pinned for e in entries) > 1:
+        fail("only one entry may be pinned: the blog has one place on top.")
     return entries
 
 
@@ -256,11 +266,20 @@ def tag_html(entry: Entry, lang: str) -> str:
     return f'<span class="tag tag-{entry.tag}">{esc(TAGS[entry.tag][lang])}</span>'
 
 
-def meta_html(entry: Entry, lang: str) -> str:
+PIN = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6l-1 6 4 4H6l4-4-1-6z"/>'
+       '<path d="M12 14v6"/></svg>')
+
+
+def pin_html(entry: Entry, lang: str) -> str:
+    """On the post that leads the blog while newer ones follow it."""
+    return f'<span class="pin">{PIN}{WORDS["pinned"][lang]}</span>' if entry.pinned else ""
+
+
+def meta_html(entry: Entry, lang: str, pin: bool = False) -> str:
     parts = [f'<time datetime="{entry.date}">{long_date(entry.date, lang)}</time>']
     if entry.path:
         parts.append(f"<span>{minutes_label(entry.minutes[lang], lang)}</span>")
-    return (f'<p class="post-meta">{tag_html(entry, lang)}'
+    return (f'<p class="post-meta">{pin_html(entry, lang) if pin else ""}{tag_html(entry, lang)}'
             + '<span class="sep" aria-hidden="true">·</span>'.join(parts) + "</p>")
 
 
@@ -281,11 +300,13 @@ def mini_html(entry: Entry, lang: str, card: bool = False) -> str:
 
 
 def featured_of(entries: list[Entry]) -> Entry | None:
-    return next((e for e in entries if e.path), None)
+    """The post on top: the one pinned, or else the newest with a page."""
+    return (next((e for e in entries if e.pinned), None)
+            or next((e for e in entries if e.path), None))
 
 
 def render_main(entries: list[Entry], lang: str) -> str:
-    """The main page: the newest post with a page, three short entries."""
+    """The main page: the post on top, three other entries."""
     top = featured_of(entries)
     short = [e for e in entries if e is not top][:3]
     out = ['<div class="blog-grid">']
@@ -294,7 +315,7 @@ def render_main(entries: list[Entry], lang: str) -> str:
             f'  <a class="post-feature" href="{url(top, lang)}">\n'
             f'      {COVER}\n'
             f'      <div class="post-feature-body">\n'
-            f'        {meta_html(top, lang)}\n'
+            f'        {meta_html(top, lang, pin=True)}\n'
             f'        <h3 class="post-feature-title">{esc(top.title[lang])}</h3>\n'
             f'        <p class="post-feature-lead">{esc(top.text[lang])}</p>\n'
             f'      </div>\n'
@@ -307,7 +328,7 @@ def render_main(entries: list[Entry], lang: str) -> str:
 
 
 def render_featured(entries: list[Entry], lang: str) -> str:
-    """The blog page: the newest post with a page, large."""
+    """The blog page: the post on top, large."""
     top = featured_of(entries)
     if not top:
         return ""
@@ -317,7 +338,7 @@ def render_featured(entries: list[Entry], lang: str) -> str:
         f'      {COVER}\n'
         f'      </div>\n'
         f'      <div class="post-hero-body">\n'
-        f'        {meta_html(top, lang)}\n'
+        f'        {meta_html(top, lang, pin=True)}\n'
         f'        <h2 class="post-hero-title">{esc(top.title[lang])}</h2>\n'
         f'        <p class="post-hero-lead">{esc(top.text[lang])}</p>\n'
         f'        <span class="btn btn-primary">{WORDS["read"][lang]}</span>\n'

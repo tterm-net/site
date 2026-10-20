@@ -9,6 +9,9 @@
 #   ## 2026-10-18 web /blog/x/     a path after that: the entry has a page of
 #                                  its own, /blog/x/ and /ru/blog/x/, and the
 #                                  text below is its lead
+#   ## 2026-10-18 web /blog/x/ pinned
+#                                  that page leads the blog even when newer
+#                                  entries come after it: one at most
 #   @en Title in English           a language, then the entry's title
 #   Text in English.
 #   @ru Заголовок по-русски
@@ -17,7 +20,21 @@
 # Newest first. Dates in ISO form, one entry per date; the pages format them
 # per language. The text is shown as plain text: no markup, no code style.
 
-## 2026-10-18 web /blog/tterm-web/
+## 2026-10-20 web /blog/notes-and-projects/
+
+@en Notes, colored projects and terminal names
+Runbooks, checklists and notes on access now live next to the machines they
+are about. You can make projects of your own and give each a color, name
+your terminals, and move machines and notes from one project to another.
+Here is what tTerm Web learned in its first days.
+
+@ru Заметки, проекты в цвете и имена терминалов
+Ранбуки, чек-листы и заметки о доступах теперь живут рядом с машинами, к
+которым относятся. Проекты можно заводить свои и красить в свой цвет,
+терминалам давать имена, а машины и заметки переносить из проекта в проект.
+Вот что появилось в tTerm Web за первые дни после запуска.
+
+## 2026-10-18 web /blog/tterm-web/ pinned
 
 @en tTerm now works in the browser
 All your servers and computers in one tab, every command in a block of its

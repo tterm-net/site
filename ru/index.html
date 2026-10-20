@@ -40,7 +40,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.1.2">
+<meta name="version" content="2.2.0">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -106,7 +106,7 @@
       <a class="hero-note" href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>Открытый код</a>
     </div>
     <div class="demo-frame">
-      <div class="demo" data-demo role="img" aria-label="tTerm Web в работе: слева проекты, машины и их терминалы, сверху вкладки. На web-01 выполняются git pull, сборка и перезапуск сервиса, затем через Cmd+K открывается терминал на api-prod."></div>
+      <div class="demo" data-demo role="img" aria-label="tTerm Web в работе: слева проекты в своих цветах, в них машины, терминалы и заметки в папках, сверху вкладки. На web-01 выполняются git pull, сборка и перезапуск сервиса, а рядом в заметке отмечаются пункты чек-листа релиза. Затем через Cmd+K открывается терминал на api-prod."></div>
     </div>
   </section>
 
@@ -367,12 +367,17 @@
         </div>
       </div>
       <div class="post-feature-body">
-        <p class="post-meta"><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-18">18 октября 2026</time><span class="sep" aria-hidden="true">·</span><span>4 минуты чтения</span></p>
+        <p class="post-meta"><span class="pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6l-1 6 4 4H6l4-4-1-6z"/><path d="M12 14v6"/></svg>Закреплено</span><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-18">18 октября 2026</time><span class="sep" aria-hidden="true">·</span><span>4 минуты чтения</span></p>
         <h3 class="post-feature-title">tTerm теперь работает в браузере</h3>
         <p class="post-feature-lead">Все серверы и компьютеры в одной вкладке, каждая команда отдельным блоком, и никаких ключей на устройстве. Что уже умеет tTerm Web, как подключить машину и что будет дальше.</p>
       </div>
     </a>
   <div class="post-stack">
+      <a class="post-mini" href="/ru/blog/notes-and-projects/">
+        <span class="post-mini-meta"><time datetime="2026-10-20">20 окт</time> · tTerm Web</span>
+        <span class="post-mini-title">Заметки, проекты в цвете и имена терминалов</span>
+        <span class="post-mini-text">Ранбуки, чек-листы и заметки о доступах теперь живут рядом с машинами, к которым относятся.</span>
+      </a>
       <a class="post-mini" href="/ru/blog/independent-windows/">
         <span class="post-mini-meta"><time datetime="2026-10-07">7 окт</time> · Бот</span>
         <span class="post-mini-title">Окна на компьютере теперь независимы</span>
@@ -382,11 +387,6 @@
         <span class="post-mini-meta"><time datetime="2026-09-30">30 сен</time> · Бот</span>
         <span class="post-mini-title">Команде можно ответить, пока она работает</span>
         <span class="post-mini-text">Раньше, если программа спрашивала Continue? (Y/n), ответить было нельзя: сообщение не отправлялось, пока команда не закончится.</span>
-      </a>
-      <a class="post-mini" href="/ru/blog/your-shell/">
-        <span class="post-mini-meta"><time datetime="2026-09-17">17 сен</time> · Бот</span>
-        <span class="post-mini-title">Агент запускает твой шелл: bash или zsh</span>
-        <span class="post-mini-text">Раньше агент запускал bash, что бы ни было.</span>
       </a>
   </div>
 </div>
@@ -414,7 +414,7 @@
         <img src="/assets/logo.svg" alt="" width="24" height="24">
         <span class="brand-name">tTerm</span>
       </a>
-      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.1.2</p>
+      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.2.0</p>
     </div>
     <nav class="foot-links" aria-label="Ссылки">
       <a href="/ru/blog/">Блог</a>

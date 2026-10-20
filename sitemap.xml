@@ -5,7 +5,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/"/>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -13,7 +13,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/"/>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
@@ -21,7 +21,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/"/>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -29,7 +29,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/"/>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -43,19 +43,19 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://tterm.net/blog/tterm-web/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/tterm-web/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/tterm-web/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/tterm-web/"/>
-    <lastmod>2026-10-18</lastmod>
+    <loc>https://tterm.net/blog/notes-and-projects/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/notes-and-projects/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/notes-and-projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/notes-and-projects/"/>
+    <lastmod>2026-10-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tterm.net/ru/blog/tterm-web/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/tterm-web/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/tterm-web/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/tterm-web/"/>
-    <lastmod>2026-10-18</lastmod>
+    <loc>https://tterm.net/ru/blog/notes-and-projects/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tterm.net/blog/notes-and-projects/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/notes-and-projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/notes-and-projects/"/>
+    <lastmod>2026-10-20</lastmod>
     <priority>0.7</priority>
   </url>
   <url>

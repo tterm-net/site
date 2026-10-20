@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.1.2.** The number lives in `VERSION` and in a `<meta>` tag on
+**Version 2.2.0.** The number lives in `VERSION` and in a `<meta>` tag on
 each page, so you can tell what is deployed by viewing source.
 
 The site of [tTerm](https://github.com/tterm-net): tTerm Web, a terminal in
@@ -62,8 +62,9 @@ without a script, `site.js` only closes them after a tap.
 ## The demo
 
 `assets/site.js` draws tTerm Web at work into every `[data-demo]` element:
-the sidebar with projects, machines and their terminals, tabs, blocks of
-output, the input line, the Cmd+K palette. The interface is in English, as in
+the sidebar with projects in their colors, machines with their terminals and
+notes in folders, tabs, blocks of output, the input line, a note with a
+checklist being ticked off, the Cmd+K palette. The interface is in English, as in
 the product. It stands still until half of it is on screen, then plays, and
 pauses again once it leaves the screen or the tab is hidden. Visitors who
 asked their system for less motion get one still frame.
@@ -139,6 +140,12 @@ An entry with a page of its own adds the page's path after the tag
 the post itself is written by hand in `blog/<name>/index.html` and
 `ru/blog/<name>/index.html`. The newest such post leads the blog. The date
 lives in `updates.md` only: change it there and run the script.
+
+To keep a post on top while newer entries come out, write `pinned` after its
+path (`## 2026-10-18 web /blog/tterm-web/ pinned`). It then leads the blog
+page and the block on both main pages with a "Pinned" mark, and the newer
+entries follow it. One entry at most can be pinned; take the word off to let
+the newest post lead again.
 
 An entry needs a title and text in every language or the build stops. That is
 the whole point of the file: written twice by hand, the two lists drift apart
