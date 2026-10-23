@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.3.1.** The number lives in `VERSION` and in a `<meta>` tag on
+**Version 2.3.2.** The number lives in `VERSION` and in a `<meta>` tag on
 each page, so you can tell what is deployed by viewing source.
 
 The site of [tTerm](https://github.com/tterm-net): tTerm Web, a terminal in
@@ -108,6 +108,10 @@ with "Terminal in your browser" from 2.1.0 to 2.3.0, stays for previews that
 still point at it. A new card gets a new file name: Telegram, Slack and the
 rest keep a picture they have seen under its address. After a change, ask
 @WebpageBot in Telegram to refresh the links.
+
+The main pages' `og:title` carries no "tTerm:": a preview already shows the
+name above it, from `og:site_name`. The `<title>` keeps it, since a browser
+tab has nothing else to say whose page it is.
 
 The donation pages carry `noindex` and are excluded in `robots.txt`: a page of
 wallet addresses is not what anyone should arrive at from a search.
