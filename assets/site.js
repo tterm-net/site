@@ -1,7 +1,8 @@
 /* tTerm site: the menus in the header (the one on narrow screens and the
-   language), and the demo of tTerm Web on the main page and in posts. No
-   dependencies, nothing loaded from anywhere else: the Privacy Policy
-   promises the pages load nothing from third parties. */
+   language), the demo of tTerm Web on the main page and in posts, its
+   window standing up as the main page scrolls, and a soft light under the
+   pointer on cards. No dependencies, nothing loaded from anywhere else: the
+   Privacy Policy promises the pages load nothing from third parties. */
 (function () {
   'use strict';
 
@@ -102,11 +103,22 @@
 
   var WHERE = { deploy: { cwd: '~/app', branch: 'main' }, api: { cwd: '~/acme', branch: 'main' } };
 
-  // What is on screen at a given tick.
+  // What is on screen at a given tick. The terminal on web-01 already has a
+  // few commands behind it, so the window is full from the first frame: on
+  // the main page only its top is on the first screen.
   function frame(tick) {
     var t = tick % TOTAL;
     var feeds = {
       deploy: [
+        { cmd: 'uptime', meta: '0.0 s', run: false,
+          lines: [[' 10:01:58 up 41 days,  2:13,  1 user,  load average: 0.08, 0.12, 0.10', DIM]] },
+        { cmd: 'git log --oneline -3', meta: '0.0 s', run: false,
+          lines: [['3f2c1a9 Retry the webhook on 502', DIM],
+                  ['b81e0d4 Cache the pricing table', DIM],
+                  ['9c4a7f2 Bump vite to 7.1', DIM]] },
+        { cmd: 'df -h /', meta: '0.0 s', run: false,
+          lines: [['Filesystem      Size  Used Avail Use% Mounted on', DIM],
+                  ['/dev/vda1        78G   31G   47G  40% /', DIM]] },
         { cmd: 'ls', meta: '0.0 s', run: false,
           lines: [['README.md  docker-compose.yml  package.json  src', DIM]] },
         { cmd: 'git status -sb', meta: '0.1 s', run: false,
@@ -156,7 +168,7 @@
 
     // The terminal in front, or the one the note was opened beside.
     s.term = s.tab === 'api' ? 'api' : 'deploy';
-    s.feed = feeds[s.term].slice(-4);
+    s.feed = feeds[s.term].slice(-5);
     s.busy = { deploy: feeds.deploy.some(running), api: feeds.api.some(running) };
     // The terminal on api-prod exists once it is picked in the palette.
     s.apiOpen = s.tab === 'api' || s.picked;
@@ -414,6 +426,55 @@
     }, { threshold: [0, 0.5] }).observe(root);
   }
 
+  /* ------------------------------------------------------------ stage */
+
+  // On the main page the window of the demo leans back while its top is in
+  // the lower part of the screen, where it sits when the page opens, and is
+  // upright once its top has risen to the upper part. --e goes from 0 to 1
+  // along a smoothstep, so it starts and lands softly; style.css turns it
+  // into the tilt. With less motion asked for, it is upright from the start.
+  function initStage(stage) {
+    var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (calm) {
+      stage.style.setProperty('--e', '1');
+      return;
+    }
+    var queued = false;
+    function update() {
+      queued = false;
+      var top = stage.getBoundingClientRect().top;
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      var p = (vh * 0.70 - top) / (vh * 0.56);
+      p = p < 0 ? 0 : p > 1 ? 1 : p;
+      stage.style.setProperty('--e', (p * p * (3 - 2 * p)).toFixed(4));
+    }
+    function queue() {
+      if (!queued) {
+        queued = true;
+        window.requestAnimationFrame(update);
+      }
+    }
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', queue);
+    update();
+  }
+
+  // A soft warm light follows the pointer across feature cards and steps;
+  // style.css draws it at --mx, --my. Only where there is a pointer to
+  // follow, and not for those who asked for less motion.
+  function initGlow(card) {
+    card.addEventListener('pointermove', function (event) {
+      var r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (event.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (event.clientY - r.top) + 'px');
+    });
+  }
+
   Array.prototype.forEach.call(document.querySelectorAll('details.menu, details.lang'), initMenu);
   Array.prototype.forEach.call(document.querySelectorAll('[data-demo]'), initDemo);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-stage]'), initStage);
+  if (window.matchMedia && window.matchMedia('(hover: hover)').matches &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    Array.prototype.forEach.call(document.querySelectorAll('.feature, .step'), initGlow);
+  }
 })();

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>tTerm: every server and computer in one tab</title>
-<meta name="description" content="A real terminal in your browser. Every command comes as a block with its exit code, directory, branch and time. No keys on your device, no ports to open.">
+<title>tTerm: the cloud terminal for servers and computers</title>
+<meta name="description" content="A terminal that lives in the cloud: close your laptop mid-build and pick up from any device. Every command comes as a block. No keys on your device, no ports to open.">
 <link rel="canonical" href="https://tterm.net/">
 <link rel="alternate" hreflang="en" href="https://tterm.net/">
 <link rel="alternate" hreflang="ru" href="https://tterm.net/ru/">
 <link rel="alternate" hreflang="x-default" href="https://tterm.net/">
-<meta property="og:title" content="tTerm: every server and computer in one tab">
-<meta property="og:description" content="A real terminal in your browser. Every command comes as a block with its exit code, directory, branch and time. No keys on your device, no ports to open.">
+<meta property="og:title" content="tTerm: the cloud terminal for servers and computers">
+<meta property="og:description" content="A terminal that lives in the cloud: close your laptop mid-build and pick up from any device. Every command comes as a block. No keys on your device, no ports to open.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tterm.net/">
 <meta property="og:image" content="https://tterm.net/assets/og-web.png">
@@ -29,7 +29,7 @@
   "operatingSystem": "Any",
   "browserRequirements": "A modern web browser",
   "url": "https://tterm.net/",
-  "description": "A real terminal in your browser. Every command comes as a block with its exit code, directory, branch and time. No keys on your device, no ports to open.",
+  "description": "A terminal that lives in the cloud: close your laptop mid-build and pick up from any device. Every command comes as a block. No keys on your device, no ports to open.",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -40,7 +40,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.2.0">
+<meta name="version" content="2.3.0">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -97,16 +97,18 @@
 <main id="main">
 
   <section class="hero">
-    <div class="glow" aria-hidden="true"></div>
+    <div class="sky" aria-hidden="true"><i class="s-beam"></i><i class="s-teal"></i><i class="s-sky"></i><i class="s-violet"></i><i class="s-amber"></i></div>
     <div class="hero-text">
       <a class="chip" href="/blog/tterm-web/"><span class="chip-dot" aria-hidden="true"></span>New: tTerm in your browser<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Read</span></a>
-      <h1>Every server and computer <br>in one tab</h1>
-      <p class="hero-lead">A real terminal right in your browser. Every command comes back as a block, with no keys on your device and no ports to open.</p>
+      <h1><span class="accent">The cloud terminal</span> <br>for servers and computers</h1>
+      <p class="hero-lead">Your terminals live in the cloud, not on your laptop: close the lid mid-build, open tTerm on your phone, and everything is where you left it. No keys on your device, no ports to open.</p>
       <a class="btn btn-primary" href="https://app.tterm.net">Start for free</a>
       <a class="hero-note" href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>Open source</a>
     </div>
-    <div class="demo-frame">
-      <div class="demo" data-demo role="img" aria-label="tTerm Web at work: projects in their colors on the left, with machines, terminals and notes in folders, tabs on top. git pull, a build and a service restart run on web-01 while the release checklist is ticked off in a note beside it, then Cmd+K opens a terminal on api-prod."></div>
+    <div class="stage" data-stage>
+      <div class="demo-frame">
+        <div class="demo" data-demo role="img" aria-label="tTerm Web at work: projects in their colors on the left, with machines, terminals and notes in folders, tabs on top. git pull, a build and a service restart run on web-01 while the release checklist is ticked off in a note beside it, then Cmd+K opens a terminal on api-prod."></div>
+      </div>
     </div>
   </section>
 
@@ -219,6 +221,49 @@
           <p>Go to a terminal, open a new one on any machine or run an action. One shortcut instead of hunting through tabs.</p>
         </div>
       </div>
+      <div class="feature">
+        <div class="vignette" aria-hidden="true">
+          <div class="v-note">
+            <div class="v-crumb"><b>CX</b>Client X · Runbooks</div>
+            <div class="v-title">Release checklist</div>
+            <div class="v-todo done"><i></i><span>Freeze merges to main</span><small>You · 10:02</small></div>
+            <div class="v-todo done"><i></i><span>Pull and build on web-01</span><small>You · 10:04</small></div>
+            <div class="v-todo"><i></i><span>Restart the service</span></div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>Notes next to your machines</h3>
+          <p>Runbooks, checklists and notes on access live in the project and open in a tab next to the terminal.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-projects">
+            <div class="v-proj v-pc-sky"><b>CX</b><span>Client X</span><small>3 machines</small></div>
+            <div class="v-proj v-pc-teal"><b>A</b><span>Acme</span><small>2 machines</small></div>
+            <div class="v-proj v-pc-violet"><b>P</b><span>Personal</span><small>MacBook</small></div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>Projects in their colors</h3>
+          <p>A project for a client, an environment or a task, with its own machines and notes. The color tells you which project a tab is from.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-rename">
+            <div class="v-tabbar">
+              <span class="on"><b class="dot"></b><span><em>CX/</em>web-01 · <span class="v-field">logs<i></i></span></span></span>
+              <span><b class="dot"></b><span><em>CX/</em>web-01 · deploy</span></span>
+            </div>
+            <div class="v-hints"><span class="v-key">Enter</span>save<span class="v-key">Esc</span>cancel</div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>Names for terminals</h3>
+          <p>deploy, logs, migrations instead of terminal 2. Double-click a terminal, type a name and press Enter.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -271,7 +316,7 @@
         <h2 class="section-title">See who ran what</h2>
         <p class="section-lead">Invite colleagues to a project and give each one a role. No more handing out keys to your servers.</p>
         <ul class="teams-list">
-        <li><span><b>Project roles:</b> owner, admin, member and observer.</span></li>
+        <li><span><b>Project roles:</b> owner, admin, member and viewer.</span></li>
         <li><span><b>A shared log:</b> who ran what, where and when, and how it ended.</span></li>
         <li><span><b>Watching:</b> look into a colleague's terminal, and they always see who is watching.</span></li>
         </ul>
@@ -301,6 +346,7 @@
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Up to 50 machines</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Up to 24 open terminals</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Servers and computers</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Projects of your own and notes</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>30 days of command history with output</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Terminals outlive the tab</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Dark and light theme</li>
@@ -414,7 +460,7 @@
         <img src="/assets/logo.svg" alt="" width="24" height="24">
         <span class="brand-name">tTerm</span>
       </a>
-      <p class="foot-note">AGPL-3.0 licensed · 2026 · v2.2.0</p>
+      <p class="foot-note">AGPL-3.0 licensed · 2026 · v2.3.0</p>
     </div>
     <nav class="foot-links" aria-label="Links">
       <a href="/blog/">Blog</a>

@@ -198,7 +198,8 @@ h1, h2, h3, h4 { margin: 0; }
 
 .page { position: relative; overflow: hidden; }
 
-/* The one warm light source, behind the first screen. */
+/* A warm light behind a picture: the head of the blog, the demo in a post,
+   the 404. The first screen of the main page has its own sky, .sky. */
 .glow {
   position: absolute;
   left: 50%;
@@ -230,8 +231,18 @@ h1, h2, h3, h4 { margin: 0; }
   transition: background-color .15s ease, border-color .15s ease, color .15s ease;
 }
 
-.btn-primary { background: var(--amber); color: var(--amber-ink); }
-.btn-primary:hover { background: var(--amber-hi); color: var(--amber-ink); }
+.btn-primary {
+  background: var(--amber);
+  color: var(--amber-ink);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), 0 1px 2px rgba(0, 0, 0, .4),
+              0 10px 30px -10px rgba(233, 163, 63, .55);
+}
+.btn-primary:hover {
+  background: var(--amber-hi);
+  color: var(--amber-ink);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4), 0 1px 2px rgba(0, 0, 0, .4),
+              0 14px 36px -10px rgba(233, 163, 63, .7);
+}
 
 .btn-ghost {
   border-color: var(--edge);
@@ -429,8 +440,87 @@ h1, h2, h3, h4 { margin: 0; }
 
 /* ------------------------------------------------------------------ hero */
 
-.hero { position: relative; padding: 0 var(--gutter); }
-.hero .glow { top: 340px; }
+.hero { position: relative; isolation: isolate; padding: 0 var(--gutter); }
+
+/* The sky behind the first screen: the warm amber of the brand in the
+   middle, the colors of projects in tTerm around it (sky, violet, teal),
+   drifting slowly, and light from above on the headline. Grain on top
+   keeps the gradients from banding. */
+.sky {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -140px;
+  height: 1560px;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%);
+}
+.sky i {
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  will-change: transform;
+  animation: sky-drift 30s ease-in-out infinite alternate;
+}
+.sky .s-beam {
+  top: 0;
+  width: 1500px;
+  height: 900px;
+  margin-left: -750px;
+  border-radius: 0;
+  background: radial-gradient(ellipse 46% 56% at 50% 0%, rgba(255, 228, 186, .10), rgba(255, 228, 186, 0) 70%);
+  animation: none;
+}
+.sky .s-amber {
+  top: 430px;
+  width: 1240px;
+  height: 760px;
+  margin-left: -620px;
+  background: radial-gradient(closest-side, rgba(233, 163, 63, .34), rgba(233, 163, 63, .13) 48%, rgba(233, 163, 63, 0));
+  animation-duration: 34s;
+}
+.sky .s-sky {
+  top: 560px;
+  width: 820px;
+  height: 640px;
+  margin-left: -920px;
+  background: radial-gradient(closest-side, rgba(56, 189, 248, .26), rgba(56, 189, 248, 0));
+  animation-duration: 38s;
+  animation-delay: -9s;
+}
+.sky .s-violet {
+  top: 500px;
+  width: 820px;
+  height: 680px;
+  margin-left: 110px;
+  background: radial-gradient(closest-side, rgba(167, 139, 250, .27), rgba(167, 139, 250, 0));
+  animation-duration: 31s;
+  animation-delay: -15s;
+}
+.sky .s-teal {
+  top: 980px;
+  width: 980px;
+  height: 480px;
+  margin-left: -700px;
+  background: radial-gradient(closest-side, rgba(45, 212, 191, .12), rgba(45, 212, 191, 0));
+  animation-duration: 36s;
+  animation-delay: -4s;
+}
+@keyframes sky-drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(48px, -30px, 0) scale(1.07); }
+  100% { transform: translate3d(-36px, 22px, 0) scale(.96); }
+}
+.sky::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: .035;
+}
 
 /* The first screen ends a third of the way into the demo, on any window:
    the text block takes what is left after the header (84px) and 30% of the
@@ -456,7 +546,10 @@ h1, h2, h3, h4 { margin: 0; }
   padding: 8px 16px;
   border: 1px solid var(--line-3);
   border-radius: 999px;
-  background: #121418;
+  background: rgba(18, 20, 24, .55);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
   color: #c9cdd4;
   font: 600 13px/1.2 var(--sans);
   text-decoration: none;
@@ -466,11 +559,21 @@ h1, h2, h3, h4 { margin: 0; }
 .chip-bar { width: 1px; height: 14px; background: #2e323a; }
 .chip-go { color: var(--amber); }
 
+/* The headline catches the light from above; its first words are amber. */
 .hero h1 {
   margin-top: 24px;
   font: 800 68px/1.02 var(--sans);
   letter-spacing: -.04em;
   color: var(--head);
+  background: linear-gradient(180deg, #ffffff 0%, #f1f2f5 52%, #aeb4be 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero h1 .accent {
+  background: linear-gradient(100deg, #f7c97f 0%, #e9a33f 45%, #f2bd69 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .hero-lead {
@@ -501,6 +604,55 @@ h1, h2, h3, h4 { margin: 0; }
   margin: 0 auto;
   border-radius: 18px;
   box-shadow: 0 50px 140px rgba(0, 0, 0, .65), 0 0 0 1px rgba(233, 163, 63, .10);
+}
+
+/* On the main page the window leans back at first, its top edge away from
+   you, and stands up as the page scrolls: --e is 0 leaning and 1 upright,
+   set by site.js from the scroll position. Without the script the window
+   stays leaning, which still reads as a picture. */
+.stage {
+  --tilt: 20deg;
+  --e: 0;
+  position: relative;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  perspective: 1500px;
+  perspective-origin: 50% 0%;
+}
+.stage .demo-frame {
+  transform-origin: 50% 0%;
+  transform: rotateX(calc((1 - var(--e)) * var(--tilt))) scale(calc(1 + (1 - var(--e)) * .03));
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .05), 0 24px 48px -16px rgba(0, 0, 0, .7),
+              0 70px 140px -30px rgba(0, 0, 0, .8);
+}
+/* A rim of light along the top edge of the window, fading down its sides. */
+.stage .demo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .26), rgba(255, 255, 255, .07) 18%, rgba(255, 255, 255, 0) 50%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask-composite: exclude;
+  pointer-events: none;
+}
+/* The warm light the window stands in, brighter once it is upright. */
+.stage::before {
+  content: "";
+  position: absolute;
+  left: -6%;
+  right: -6%;
+  top: 46%;
+  bottom: -22%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(233, 163, 63, .34), rgba(233, 163, 63, .10) 55%, rgba(233, 163, 63, 0));
+  filter: blur(24px);
+  opacity: calc(.25 + .75 * var(--e));
+  pointer-events: none;
 }
 
 /* ------------------------------------------------------------------ demo */
@@ -1162,6 +1314,50 @@ h1, h2, h3, h4 { margin: 0; }
 .v-pal-list div { padding: 8px 10px; color: var(--dim); }
 .v-pal-list div.on { border-radius: 7px; background: rgba(233, 163, 63, .12); color: var(--ink); }
 .v-pal-list em { font-style: normal; color: var(--dim); }
+/* A note with its checklist, beside the machines of its project. */
+.v-note { display: flex; flex-direction: column; gap: 9px; font: 500 13px/1.3 var(--sans); }
+.v-crumb { display: flex; align-items: center; gap: 7px; font-size: 11.5px; color: var(--faint); }
+.v-crumb b { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 5px; background: #38bdf8; color: #06131c; font: 800 8px var(--sans); }
+.v-title { font: 800 17px/1.2 var(--sans); color: var(--ink); letter-spacing: -.01em; }
+.v-todo { display: flex; align-items: center; gap: 10px; color: var(--text); }
+.v-todo i { flex: none; width: 15px; height: 15px; border: 1.5px solid #3a3f48; border-radius: 4px; }
+.v-todo.done { color: var(--faint); }
+.v-todo.done span { text-decoration: line-through; text-decoration-color: #5c626c; }
+.v-todo.done i {
+  border: 0;
+  background: var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4L18 8' fill='none' stroke='%230b0c0f' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 13px no-repeat;
+}
+.v-todo small { margin-left: auto; font: 500 11px var(--sans); color: var(--faint); }
+/* Projects, each in its color, as in the sidebar of tTerm Web. */
+.v-projects { display: flex; flex-direction: column; gap: 8px; font: 700 13px var(--sans); }
+.v-proj { display: flex; align-items: center; gap: 10px; padding: 9px 11px; border-radius: 10px; background: rgba(var(--pc), .08); color: var(--pc-ink); }
+.v-proj b { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 7px; background: var(--pc-solid); color: #0b0c0f; font: 800 9px var(--sans); }
+.v-proj span { flex: 1 1 auto; }
+.v-proj small { font: 600 11px var(--sans); color: #a8aeb7; }
+.v-pc-sky { --pc: 56, 189, 248; --pc-solid: #38bdf8; --pc-ink: #7dd3fc; }
+.v-pc-teal { --pc: 45, 212, 191; --pc-solid: #2dd4bf; --pc-ink: #5eead4; }
+.v-pc-violet { --pc: 167, 139, 250; --pc-solid: #a78bfa; --pc-ink: #c4b5fd; }
+/* A terminal being named in its tab. */
+.v-rename { display: flex; flex-direction: column; gap: 12px; }
+.v-tabbar {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  height: 40px;
+  padding: 0 6px;
+  border: 1px solid var(--line-3);
+  border-radius: 11px;
+  background: #121419;
+  font: 600 12.5px var(--sans);
+  overflow: hidden;
+}
+.v-tabbar > span { display: flex; align-items: center; gap: 7px; padding: 0 10px; color: var(--dim); white-space: nowrap; }
+.v-tabbar > span.on { box-shadow: inset 0 -2px 0 var(--amber); color: var(--ink); }
+.v-tabbar em { font-style: normal; color: #7dd3fc; }
+.v-tabbar .dot { width: 6px; height: 6px; }
+.v-field { display: inline-flex; align-items: center; height: 24px; padding: 0 7px; border: 1px solid rgba(233, 163, 63, .6); border-radius: 6px; background: var(--well); color: var(--ink); }
+.v-field i { display: inline-block; width: 1.5px; height: 14px; margin-left: 1px; background: var(--amber); animation: tt-blink 1s step-end infinite; }
+.v-rename .v-hints { margin-top: 0; }
 
 /* Security: six facts in one panel. */
 .split-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; }
@@ -1700,6 +1896,71 @@ figure { margin: 0; }
 .lost-text { position: relative; max-width: 560px; margin: 20px auto 0; font-size: 19px; color: var(--dim); }
 .lost .final-cta { margin-top: 32px; }
 
+/* ----------------------------------------------------------------- depth */
+
+/* Cards on the main page: a hairline of light on the top edge and a long
+   soft shadow. Here, after the cards themselves, because their own
+   background shorthand would reset the sheen. */
+.step, .feature, .journal, .post-feature, .post-stack, .facts, .final, .plan {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .045), 0 2px 4px -2px rgba(0, 0, 0, .55),
+              0 30px 60px -34px rgba(0, 0, 0, .95);
+}
+.step, .feature, .journal, .post-feature, .post-stack {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, .028), rgba(255, 255, 255, 0) 40%);
+}
+.fact { background-image: linear-gradient(180deg, rgba(255, 255, 255, .02), rgba(255, 255, 255, 0) 60%); }
+
+.step, .feature, .post-feature {
+  position: relative;
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.step:hover, .feature:hover, .post-feature:hover {
+  transform: translateY(-4px);
+  border-color: #323741;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 4px 10px -4px rgba(0, 0, 0, .6),
+              0 40px 70px -32px rgba(0, 0, 0, 1);
+}
+/* Under the pointer a soft warm light follows it across a card; site.js
+   keeps --mx and --my where the pointer is. */
+.feature::after, .step::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 0%), rgba(233, 163, 63, .09), rgba(233, 163, 63, 0) 62%);
+  opacity: 0;
+  transition: opacity .3s ease;
+  pointer-events: none;
+}
+.feature:hover::after, .step:hover::after { opacity: 1; }
+
+/* The sky carries on down the main page, quieter: violet behind the
+   features, sky behind security, teal behind teams, amber behind the plan. */
+#features, #security, #teams, #pricing { position: relative; isolation: isolate; }
+#features::before, #security::before, #teams::before, #pricing::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+#features::before {
+  left: -320px; top: -140px; width: 1000px; height: 820px;
+  background: radial-gradient(closest-side, rgba(167, 139, 250, .09), rgba(167, 139, 250, 0));
+}
+#security::before {
+  right: -360px; top: -60px; width: 1000px; height: 820px;
+  background: radial-gradient(closest-side, rgba(56, 189, 248, .08), rgba(56, 189, 248, 0));
+}
+#teams::before {
+  left: -300px; top: 0; width: 900px; height: 700px;
+  background: radial-gradient(closest-side, rgba(45, 212, 191, .06), rgba(45, 212, 191, 0));
+}
+#pricing::before {
+  left: 50%; top: 40px; width: 1200px; height: 760px; margin-left: -600px;
+  background: radial-gradient(closest-side, rgba(233, 163, 63, .10), rgba(233, 163, 63, 0));
+}
+
 /* ------------------------------------------------------------ responsive */
 
 @media (max-width: 1240px) {
@@ -1721,6 +1982,7 @@ figure { margin: 0; }
   .month { grid-template-columns: 170px minmax(0, 1fr); gap: 0 32px; }
   .demo { --dm-h: 640px; }
   .hero h1 { font-size: 56px; }
+  .stage { --tilt: 16deg; }
 }
 
 @media (max-width: 860px) {
@@ -1762,9 +2024,16 @@ figure { margin: 0; }
   .hero-lead { margin-top: 16px; font-size: 17px; }
   .hero .btn { width: 100%; margin-top: 24px; }
   .hero-note { margin-top: 6px; min-height: 44px; font-size: 13px; }
-  .hero .glow { top: 330px; width: 640px; height: 560px; }
   .demo { --dm-h: 540px; }
   .demo-frame { box-shadow: 0 30px 80px rgba(0, 0, 0, .6); }
+  .stage { --tilt: 12deg; perspective: 1000px; }
+  .sky { top: -80px; height: 1100px; }
+  .sky .s-beam { width: 900px; height: 600px; margin-left: -450px; }
+  .sky .s-amber { top: 380px; width: 760px; height: 560px; margin-left: -380px; }
+  .sky .s-sky { top: 520px; width: 520px; height: 460px; margin-left: -520px; }
+  .sky .s-violet { top: 440px; width: 520px; height: 480px; margin-left: 20px; }
+  .sky .s-teal { top: 760px; width: 620px; height: 380px; margin-left: -380px; }
+  .step:hover, .feature:hover, .post-feature:hover { transform: none; }
 
   .section-title { font-size: 32px; line-height: 1.1; margin-top: 14px; }
   .section-title br { display: none; }
@@ -1884,5 +2153,14 @@ figure { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn { transition: none; }
-  .dm *, .cover *, .v-rows * { animation: none !important; }
+  .dm *, .cover *, .v-rows *, .v-field * { animation: none !important; }
+  .sky i { animation: none; }
+  .stage { --e: 1 !important; }
+  .step, .feature, .post-feature { transition: none; }
+  .step:hover, .feature:hover, .post-feature:hover { transform: none; }
+}
+
+/* High-contrast modes draw text in their own colors: no gradient fill. */
+@media (forced-colors: active) {
+  .hero h1, .hero h1 .accent { background: none; -webkit-text-fill-color: currentColor; }
 }

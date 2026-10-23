@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>tTerm: все серверы и компьютеры в одной вкладке</title>
-<meta name="description" content="Настоящий терминал в браузере. Каждая команда приходит блоком: код возврата, каталог, ветка и время. Ключи на устройстве не нужны, порты открывать не нужно.">
+<title>tTerm: облачный терминал для серверов и компьютеров</title>
+<meta name="description" content="Терминал, который живёт в облаке: закрыл ноутбук посреди сборки и продолжил с любого устройства. Каждая команда приходит блоком. Ключи на устройстве не нужны, порты открывать не нужно.">
 <link rel="canonical" href="https://tterm.net/ru/">
 <link rel="alternate" hreflang="en" href="https://tterm.net/">
 <link rel="alternate" hreflang="ru" href="https://tterm.net/ru/">
 <link rel="alternate" hreflang="x-default" href="https://tterm.net/">
-<meta property="og:title" content="tTerm: все серверы и компьютеры в одной вкладке">
-<meta property="og:description" content="Настоящий терминал в браузере. Каждая команда приходит блоком: код возврата, каталог, ветка и время. Ключи на устройстве не нужны, порты открывать не нужно.">
+<meta property="og:title" content="tTerm: облачный терминал для серверов и компьютеров">
+<meta property="og:description" content="Терминал, который живёт в облаке: закрыл ноутбук посреди сборки и продолжил с любого устройства. Каждая команда приходит блоком. Ключи на устройстве не нужны, порты открывать не нужно.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tterm.net/ru/">
 <meta property="og:image" content="https://tterm.net/assets/og-web.png">
@@ -29,7 +29,7 @@
   "operatingSystem": "Any",
   "browserRequirements": "A modern web browser",
   "url": "https://tterm.net/ru/",
-  "description": "Настоящий терминал в браузере. Каждая команда приходит блоком: код возврата, каталог, ветка и время. Ключи на устройстве не нужны, порты открывать не нужно.",
+  "description": "Терминал, который живёт в облаке: закрыл ноутбук посреди сборки и продолжил с любого устройства. Каждая команда приходит блоком. Ключи на устройстве не нужны, порты открывать не нужно.",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -40,7 +40,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.2.0">
+<meta name="version" content="2.3.0">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -97,16 +97,18 @@
 <main id="main">
 
   <section class="hero">
-    <div class="glow" aria-hidden="true"></div>
+    <div class="sky" aria-hidden="true"><i class="s-beam"></i><i class="s-teal"></i><i class="s-sky"></i><i class="s-violet"></i><i class="s-amber"></i></div>
     <div class="hero-text">
       <a class="chip" href="/ru/blog/tterm-web/"><span class="chip-dot" aria-hidden="true"></span>Новое: tTerm в браузере<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Читать</span></a>
-      <h1>Все серверы и компьютеры <br>в одной вкладке</h1>
-      <p class="hero-lead">Настоящий терминал прямо в браузере. Каждая команда приходит блоком, ключи на устройстве не нужны, порты открывать не нужно.</p>
+      <h1><span class="accent">Облачный терминал</span> <br>для серверов и компьютеров</h1>
+      <p class="hero-lead">Терминалы живут в облаке, а не на ноутбуке: закрыл крышку посреди сборки, открыл с телефона, и всё на месте. Ключи на устройстве не нужны, порты открывать не нужно.</p>
       <a class="btn btn-primary" href="https://app.tterm.net">Начать бесплатно</a>
       <a class="hero-note" href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>Открытый код</a>
     </div>
-    <div class="demo-frame">
-      <div class="demo" data-demo role="img" aria-label="tTerm Web в работе: слева проекты в своих цветах, в них машины, терминалы и заметки в папках, сверху вкладки. На web-01 выполняются git pull, сборка и перезапуск сервиса, а рядом в заметке отмечаются пункты чек-листа релиза. Затем через Cmd+K открывается терминал на api-prod."></div>
+    <div class="stage" data-stage>
+      <div class="demo-frame">
+        <div class="demo" data-demo role="img" aria-label="tTerm Web в работе: слева проекты в своих цветах, в них машины, терминалы и заметки в папках, сверху вкладки. На web-01 выполняются git pull, сборка и перезапуск сервиса, а рядом в заметке отмечаются пункты чек-листа релиза. Затем через Cmd+K открывается терминал на api-prod."></div>
+      </div>
     </div>
   </section>
 
@@ -219,6 +221,49 @@
           <p>Перейти к терминалу, открыть новый на любой машине или выполнить действие. Одно сочетание клавиш вместо поиска по вкладкам.</p>
         </div>
       </div>
+      <div class="feature">
+        <div class="vignette" aria-hidden="true">
+          <div class="v-note">
+            <div class="v-crumb"><b>CX</b>Client X · Runbooks</div>
+            <div class="v-title">Release checklist</div>
+            <div class="v-todo done"><i></i><span>Freeze merges to main</span><small>You · 10:02</small></div>
+            <div class="v-todo done"><i></i><span>Pull and build on web-01</span><small>You · 10:04</small></div>
+            <div class="v-todo"><i></i><span>Restart the service</span></div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>Заметки рядом с машинами</h3>
+          <p>Ранбуки, чек-листы и заметки о доступах лежат в проекте и открываются вкладкой рядом с терминалом.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-projects">
+            <div class="v-proj v-pc-sky"><b>CX</b><span>Client X</span><small>3 machines</small></div>
+            <div class="v-proj v-pc-teal"><b>A</b><span>Acme</span><small>2 machines</small></div>
+            <div class="v-proj v-pc-violet"><b>P</b><span>Personal</span><small>MacBook</small></div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>Свои проекты в цвете</h3>
+          <p>Проект под клиента, окружение или задачу, со своими машинами и заметками. По цвету видно, из какого проекта вкладка.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-rename">
+            <div class="v-tabbar">
+              <span class="on"><b class="dot"></b><span><em>CX/</em>web-01 · <span class="v-field">logs<i></i></span></span></span>
+              <span><b class="dot"></b><span><em>CX/</em>web-01 · deploy</span></span>
+            </div>
+            <div class="v-hints"><span class="v-key">Enter</span>сохранить<span class="v-key">Esc</span>отменить</div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>Имена терминалов</h3>
+          <p>deploy, logs, migrations вместо terminal 2. Дважды щёлкни по терминалу, набери имя и нажми Enter.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -301,6 +346,7 @@
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>До 50 машин</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>До 24 открытых терминалов</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Серверы и компьютеры</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Свои проекты и заметки</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>История команд с выводом 30 дней</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Терминалы живут без вкладки</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Тёмная и светлая тема</li>
@@ -414,7 +460,7 @@
         <img src="/assets/logo.svg" alt="" width="24" height="24">
         <span class="brand-name">tTerm</span>
       </a>
-      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.2.0</p>
+      <p class="foot-note">Лицензия AGPL-3.0 · 2026 · v2.3.0</p>
     </div>
     <nav class="foot-links" aria-label="Ссылки">
       <a href="/ru/blog/">Блог</a>

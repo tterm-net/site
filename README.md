@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.2.0.** The number lives in `VERSION` and in a `<meta>` tag on
+**Version 2.3.0.** The number lives in `VERSION` and in a `<meta>` tag on
 each page, so you can tell what is deployed by viewing source.
 
 The site of [tTerm](https://github.com/tterm-net): tTerm Web, a terminal in
@@ -65,13 +65,28 @@ without a script, `site.js` only closes them after a tap.
 the sidebar with projects in their colors, machines with their terminals and
 notes in folders, tabs, blocks of output, the input line, a note with a
 checklist being ticked off, the Cmd+K palette. The interface is in English, as in
-the product. It stands still until half of it is on screen, then plays, and
-pauses again once it leaves the screen or the tab is hidden. Visitors who
-asked their system for less motion get one still frame.
+the product. The terminal starts with a few commands behind it, so the window
+is full from the first frame. It stands still until half of it is on screen,
+then plays, and pauses again once it leaves the screen or the tab is hidden.
+Visitors who asked their system for less motion get one still frame.
 
 The first screen of the main page ends about a third of the way into the
 demo on any window: the text above it takes the height that is left, within
 limits (`.hero-text` in `style.css`).
+
+On the main page the demo stands on a stage, `[data-stage]`: it leans back,
+its top edge away from you, and stands up as the page scrolls. `site.js` sets
+`--e` from 0 to 1 by the scroll position and `style.css` turns it into the
+tilt, 20° on a computer, 16° on a tablet and 12° on a phone. With less motion
+asked for, the window is upright from the start; without the script it stays
+leaning, which still reads as a picture.
+
+Behind the first screen is the sky, `.sky`: the amber of the brand in the
+middle and the colors of projects in tTerm around it, drifting slowly, with
+grain on top so the gradients do not band. Further down the page the same
+colors glow quieter behind features, security, teams and pricing. Cards carry
+a hairline of light and a long soft shadow, and with a mouse a warm light
+follows the pointer across features and steps.
 
 ## Search engines
 
