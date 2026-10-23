@@ -407,7 +407,7 @@ def render_ld(entry: Entry, lang: str) -> str:
         "datePublished": entry.date,
         "inLanguage": lang,
         "url": f"https://tterm.net{url(entry, lang)}",
-        "image": "https://tterm.net/assets/og-web.png",
+        "image": "https://tterm.net/assets/og-cloud.png",
         "author": {"@type": "Organization", "name": "tTerm", "url": "https://tterm.net"},
         "publisher": {"@type": "Organization", "name": "tTerm",
                       "logo": {"@type": "ImageObject",

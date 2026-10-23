@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.3.0.** The number lives in `VERSION` and in a `<meta>` tag on
+**Version 2.3.1.** The number lives in `VERSION` and in a `<meta>` tag on
 each page, so you can tell what is deployed by viewing source.
 
 The site of [tTerm](https://github.com/tterm-net): tTerm Web, a terminal in
@@ -98,11 +98,16 @@ it. Posts are taken from `updates.md`, so a new post needs nothing there.
 every file, and a site claiming everything changed on every push gets
 discounted.
 
-`assets/og-web.png` is the preview card shown when a link is shared: the
+`assets/og-cloud.png` is the preview card shown when a link is shared: the
 designer's `assets/og.png` with the line under the name changed from
-"Terminal in Telegram" to "Terminal in your browser". Keep `og.png` as it is,
-never regenerate or replace it by accident: an earlier archive overwrote it
-three times with a placeholder.
+"Terminal in Telegram" to "The cloud terminal", in JetBrains Mono at the size
+and color of the original, the picture moved to keep it centered. Keep
+`og.png` as it is, never regenerate or replace it by accident: an earlier
+archive overwrote it three times with a placeholder. `og-web.png`, the card
+with "Terminal in your browser" from 2.1.0 to 2.3.0, stays for previews that
+still point at it. A new card gets a new file name: Telegram, Slack and the
+rest keep a picture they have seen under its address. After a change, ask
+@WebpageBot in Telegram to refresh the links.
 
 The donation pages carry `noindex` and are excluded in `robots.txt`: a page of
 wallet addresses is not what anyone should arrive at from a search.
