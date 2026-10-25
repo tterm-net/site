@@ -1739,6 +1739,11 @@ h1, h2, h3, h4 { margin: 0; }
 .post-figure { position: relative; max-width: calc(var(--wrap) + 2 * var(--gutter)); margin: 64px auto 0; padding: 0 var(--gutter); }
 .post-figure .glow { top: 120px; width: 1100px; height: 640px; background: radial-gradient(ellipse at center, rgba(233, 163, 63, .18) 0%, rgba(233, 163, 63, .05) 40%, rgba(233, 163, 63, 0) 68%); }
 .post-figure .demo { --dm-h: 660px; }
+/* tTerm Web standing still, as in the post on the license: the demo's own
+   markup written out in the page, without data-demo, so site.js leaves it as
+   it is. A line's leading spaces are in .dm-indent: on a narrow screen they
+   go, so the line fits whole. */
+.post-figure .demo-still { --dm-h: 520px; }
 .post-figure figcaption { position: relative; margin-top: 18px; text-align: center; font: 500 14px/1.5 var(--sans); color: var(--faint); }
 .post-figure { margin-left: auto; margin-right: auto; }
 figure { margin: 0; }
@@ -1771,6 +1776,8 @@ figure { margin: 0; }
 .prose-list li { display: flex; gap: 16px; font-size: 18px; line-height: 1.7; color: var(--text); }
 .prose-list svg { flex: none; width: 24px; height: 24px; margin-top: 4px; fill: none; stroke: var(--amber); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .prose-list strong { font-weight: 700; color: var(--ink); }
+/* A repository by its name on GitHub, as it is typed. */
+.prose-list .repo { font: 600 .92em var(--mono); }
 /* A plain list, as in the posts from the channel. */
 .prose-bullets { margin: 0 0 22px; padding: 0 0 0 22px; }
 .prose-bullets li { margin: 0 0 12px; padding-left: 4px; font-size: 18px; line-height: 1.7; color: var(--text); }
@@ -1993,6 +2000,7 @@ figure { margin: 0; }
   .post-stack { flex-direction: column; }
   .post-mini { border-right: 0; border-bottom: 1px solid var(--line-2); }
   .post-mini:last-child { border-bottom: 0; }
+  .dm-indent { display: none; }
 }
 
 /* The demo on a narrow screen: no sidebar, only the current tab. */
@@ -2116,6 +2124,7 @@ figure { margin: 0; }
   .post-lead { margin-top: 18px; font-size: 18px; }
   .post-figure { margin-top: 32px; }
   .post-figure .demo { --dm-h: 500px; }
+  .post-figure .demo-still .dm-out { font-size: 11.5px; }
   .post-figure .glow { top: 80px; width: 620px; height: 480px; }
   .post-figure figcaption { font-size: 13px; }
   .prose { margin-top: 48px; }

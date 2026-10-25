@@ -17,6 +17,9 @@ build_updates.py
 build_seo.py
 build_og.py
 
+# The license: the repository's, not a page of the site
+LICENSE
+
 # Tooling and version control
 .assetsignore
 .gitignore

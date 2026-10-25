@@ -20,6 +20,18 @@
 # Newest first. Dates in ISO form, one entry per date; the pages format them
 # per language. The text is shown as plain text: no markup, no code style.
 
+## 2026-10-25 web /blog/open-source/
+
+@en Why tTerm's code is open, even though paid plans are coming
+All of tTerm's code is now under AGPL v3 instead of MIT, and paid plans are
+coming soon. Here is why one does not get in the way of the other, and why we
+opened even the server.
+
+@ru Почему код tTerm открыт, хотя будут платные тарифы
+Весь код tTerm теперь под лицензией AGPL v3 вместо MIT, а скоро появятся
+платные тарифы. Рассказываем, почему одно другому не мешает и зачем мы
+открыли даже сервер.
+
 ## 2026-10-20 web /blog/notes-and-projects/
 
 @en Notes, colored projects and terminal names

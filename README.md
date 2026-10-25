@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.3.2.** The number lives in `VERSION` and in a `<meta>` tag on
+**Version 2.3.3.** The number lives in `VERSION` and in a `<meta>` tag on
 each page, so you can tell what is deployed by viewing source.
 
 The site of [tTerm](https://github.com/tterm-net): tTerm Web, a terminal in
@@ -81,6 +81,12 @@ tilt, 20° on a computer, 16° on a tablet and 12° on a phone. With less motion
 asked for, the window is upright from the start; without the script it stays
 leaning, which still reads as a picture.
 
+A post can show tTerm Web standing still, as the post on the license does:
+the demo's own markup written out in the page, in a `.demo-still` without
+`data-demo`, so `site.js` leaves it as it is. What its terminal prints is
+what the commands print, checked in a real clone. Leading spaces of a line
+sit in `.dm-indent`, which a narrow screen drops so the line fits whole.
+
 Behind the first screen is the sky, `.sky`: the amber of the brand in the
 middle and the colors of projects in tTerm around it, drifting slowly, with
 grain on top so the gradients do not band. Further down the page the same
@@ -109,9 +115,11 @@ still point at it. A new card gets a new file name: Telegram, Slack and the
 rest keep a picture they have seen under its address. After a change, ask
 @WebpageBot in Telegram to refresh the links.
 
-The main pages' `og:title` carries no "tTerm:": a preview already shows the
-name above it, from `og:site_name`. The `<title>` keeps it, since a browser
-tab has nothing else to say whose page it is.
+No page's `og:title` carries the name: a preview already shows it above,
+from `og:site_name`. The main pages' preview title is the headline, the
+blog's is "Blog: what's new", a post's is its title alone. The `<title>`
+keeps the name ("tTerm: …", "… · tTerm blog"), since a browser tab has
+nothing else to say whose page it is.
 
 The donation pages carry `noindex` and are excluded in `robots.txt`: a page of
 wallet addresses is not what anyone should arrive at from a search.
@@ -162,7 +170,8 @@ Terminal windows on a computer with the agent are now independent...
 An entry with a page of its own adds the page's path after the tag
 (`## 2026-10-18 web /blog/tterm-web/`); its text is then the post's lead, and
 the post itself is written by hand in `blog/<name>/index.html` and
-`ru/blog/<name>/index.html`. The newest such post leads the blog. The date
+`ru/blog/<name>/index.html`, its `<title>` ending in " · tTerm blog" and its
+`og:title` the title alone. The newest such post leads the blog. The date
 lives in `updates.md` only: change it there and run the script.
 
 To keep a post on top while newer entries come out, write `pinned` after its
@@ -186,3 +195,10 @@ python3 build_updates.py && python3 build_seo.py
 
 Posting to [@tTermBlog](https://t.me/tTermBlog) stays manual. Deciding what is
 worth telling is a judgement call, and a script would post everything.
+
+## License
+
+AGPL-3.0, like the rest of tTerm. The pages say so in their footer since
+1.8.1, and `LICENSE` holds the text since 2.3.3: the same file, byte for
+byte, as in the other repositories, the copyright holder on its first line.
+It stays in the repository: `.assetsignore` keeps it off the site.
