@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ora l'agente avvia la tua shell: bash o zsh · Blog di tTerm</title>
+<meta name="description" content="Prima l'agente avviava bash in ogni caso. Su macOS, dove zsh è la shell predefinita dal 2019, questo significava un ambiente che non era il tuo: metà di ciò che avevi installato risultava introvabile.">
+<link rel="canonical" href="https://tterm.net/it/blog/your-shell/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/your-shell/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/your-shell/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/your-shell/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/your-shell/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/your-shell/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/your-shell/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/your-shell/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/your-shell/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/your-shell/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/your-shell/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/your-shell/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/your-shell/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/your-shell/">
+<meta property="og:title" content="Ora l'agente avvia la tua shell: bash o zsh">
+<meta property="og:description" content="Prima l'agente avviava bash in ogni caso. Su macOS, dove zsh è la shell predefinita dal 2019, questo significava un ambiente che non era il tuo: metà di ciò che avevi installato risultava introvabile.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/it/blog/your-shell/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Ora l'agente avvia la tua shell: bash o zsh",
+  "description": "Prima l'agente avviava bash in ogni caso. Su macOS, dove zsh è la shell predefinita dal 2019, questo significava un ambiente che non era il tuo: metà di ciò che avevi installato risultava introvabile.",
+  "datePublished": "2026-09-17",
+  "inLanguage": "it",
+  "url": "https://tterm.net/it/blog/your-shell/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.5.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/it/" aria-label="tTerm, pagina iniziale">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">beta</span>
+    </a>
+    <nav class="nav" aria-label="Sezioni">
+      <a href="/it/#features">Funzionalità</a>
+      <a href="/it/#security">Sicurezza</a>
+      <a href="/it/#pricing">Prezzi</a>
+      <details class="res">
+        <summary>Risorse<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="/it/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>Blog</b><small>Le novità di tTerm</small></span></a>
+          <a href="/it/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>Domande frequenti</b><small>Le risposte ai dubbi più comuni</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Canale Telegram</b><small>Una breve nota su ogni nuova versione</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>Codice sorgente su GitHub</b><small>Tutto il codice di tTerm, AGPL v3</small></span></a>
+        </div>
+      </details>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>IT</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/your-shell/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/your-shell/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/your-shell/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/your-shell/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/your-shell/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/pl/blog/your-shell/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/your-shell/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/your-shell/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/your-shell/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/your-shell/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/your-shell/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/your-shell/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Accedi</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Inizia gratis</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="/it/#features">Funzionalità</a>
+          <a href="/it/#security">Sicurezza</a>
+          <a href="/it/#pricing">Prezzi</a>
+          <p class="menu-label">Risorse</p>
+          <a href="/it/blog/" aria-current="page">Blog</a>
+          <a href="/it/#faq">Domande frequenti</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canale Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Codice sorgente su GitHub</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>Italiano</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/your-shell/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/your-shell/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/your-shell/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/blog/your-shell/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/your-shell/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+              <a href="/pl/blog/your-shell/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/your-shell/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/your-shell/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/your-shell/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/your-shell/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/your-shell/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/your-shell/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">Inizia gratis</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post post-plain">
+    <header class="post-head">
+      <a class="crumb" href="/it/blog/">Blog</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-bot">Bot</span><time datetime="2026-09-17">17 settembre 2026</time><span class="sep" aria-hidden="true">·</span><span>1 minuto di lettura</span></p>
+    <!-- /updates:meta -->
+      <h1>Ora l'agente avvia la tua shell: bash o zsh</h1>
+      <p class="post-lead">Prima l'agente avviava bash in ogni caso. Su macOS, dove zsh è la shell predefinita dal 2019, questo significava un ambiente che non era il tuo: metà di ciò che avevi installato risultava introvabile.</p>
+    </header>
+
+    <div class="prose">
+      <p>Ora è la shell che usi tu, con i tuoi percorsi e le tue impostazioni, come quando apri Terminale.</p>
+      <h2>Cos'altro è cambiato</h2>
+      <ul class="prose-bullets">
+      <li>Un comando dopo il quale non c'è più niente da aggiustare chiede conferma prima di partire: <code>rm -rf</code>, <code>mkfs</code>, <code>DROP DATABASE</code>, l'arresto di <code>sshd</code></li>
+      <li>La chiave host del server viene registrata quando lo colleghi e poi verificata a ogni connessione, così nessun'altra macchina che risponda a quell'indirizzo può entrare</li>
+      <li>L'output lungo arriva con un riepilogo invece delle sue ultime sei righe: per <code>apt</code> ora vedi quanti pacchetti sono stati aggiornati, non solo <code>Processing triggers</code></li>
+      <li>I percorsi lunghi nel prompt vengono abbreviati: <code>/opt/…/tterm/core</code></li>
+      </ul>
+      <p class="post-follow"><a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>Iscriviti al nostro blog su Telegram</a></p>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="Altro dal blog">
+    <div class="split-row">
+      <h2>Altro dal blog</h2>
+      <a class="btn btn-ghost btn-md" href="/it/blog/">Tutti gli articoli</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/it/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">25 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">Perché il codice di tTerm è aperto, anche se arrivano i piani a pagamento</span>
+        <span class="post-mini-text">Tutto il codice di tTerm ora è sotto licenza AGPL v3 invece che MIT, e presto arriveranno i piani a pagamento.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/it/blog/notes-and-projects/">
+        <span class="post-mini-meta"><time datetime="2026-10-20">20 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">Note, progetti a colori e nomi dei terminali</span>
+        <span class="post-mini-text">Runbook, checklist e note sugli accessi ora stanno accanto alle macchine a cui si riferiscono.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/it/blog/tterm-web/">
+        <span class="post-mini-meta"><time datetime="2026-10-18">18 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">tTerm ora funziona nel browser</span>
+        <span class="post-mini-text">Tutti i tuoi server e computer in una scheda, ogni comando in un blocco a sé e nessuna chiave sul tuo dispositivo.</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/it/blog/">Tutti gli articoli</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/it/" aria-label="tTerm, pagina iniziale">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">beta</span>
+        </a>
+        <p class="foot-tag">Il terminale cloud per server e computer.</p>
+      </div>
+      <nav class="foot-cols" aria-label="Link">
+        <div class="foot-col">
+          <p class="foot-h">Prodotto</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot Telegram</a>
+          <a href="/it/#pricing">Prezzi</a>
+          <a href="/it/#security">Sicurezza</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Risorse</p>
+          <a href="/it/blog/">Blog</a>
+          <a href="/it/#faq">Domande frequenti</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canale Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Codice sorgente su GitHub</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Note legali</p>
+          <a href="/terms/">Termini di servizio</a>
+          <a href="/privacy/">Informativa sulla privacy</a>
+          <a href="/it/blog/open-source/">Licenza AGPL-3.0</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <details class="lang lang-up">
+        <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>IT</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/your-shell/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/your-shell/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/your-shell/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/your-shell/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/your-shell/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/pl/blog/your-shell/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/your-shell/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/your-shell/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/your-shell/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/your-shell/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/your-shell/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/your-shell/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{$lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{notfound.title}}</title>
+<meta name="description" content="{{notfound.description}}">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="{{$version}}">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">{{shell.skip}}</a>
+<div class="page">
+
+{{>header}}
+
+<main id="main">
+  <section class="lost">
+    <div class="glow" aria-hidden="true"></div>
+    <p class="eyebrow">404</p>
+    <h1>{{notfound.h1}}</h1>
+    <p class="lost-text">{{notfound.text}}</p>
+    <div class="final-cta">
+      <a class="btn btn-primary" href="{{$home}}">{{notfound.home}}</a>
+      <a class="btn btn-ghost" href="{{$base}}/blog/">{{shell.blog}}</a>
+    </div>
+  </section>
+</main>
+
+{{>footer}}
+
+</div>
+</body>
+</html>

@@ -1,0 +1,518 @@
+# Strings of the site in English: one a line, `key = text`.
+# Every language has the same keys; the build stops when one is missing.
+# `{{$base}}` in a link is the language's folder: "" in English, "/ru" in Russian.
+
+# ------------------------------------------------------------ shell: the header and footer of every page
+shell.skip = Vai al contenuto
+shell.home_label = tTerm, pagina iniziale
+shell.beta = beta
+shell.nav_label = Sezioni
+shell.features = Funzionalità
+shell.security = Sicurezza
+shell.pricing = Prezzi
+shell.resources = Risorse
+shell.blog = Blog
+shell.blog_note = Le novità di tTerm
+shell.faq = Domande frequenti
+shell.faq_note = Le risposte ai dubbi più comuni
+shell.channel = Canale Telegram
+shell.channel_note = Una breve nota su ogni nuova versione
+shell.source = Codice sorgente su GitHub
+shell.source_note = Tutto il codice di tTerm, AGPL v3
+shell.local = Terminale locale
+shell.lang_label = Lingua: italiano
+shell.signin = Accedi
+shell.start = Inizia gratis
+shell.menu = Menu
+shell.tagline = Il terminale cloud per server e computer.
+shell.links = Link
+shell.product = Prodotto
+shell.mac = tTerm per Mac
+shell.new = Novità
+shell.bot = Bot Telegram
+shell.legal = Note legali
+shell.terms = Termini di servizio
+shell.privacy = Informativa sulla privacy
+shell.license = Licenza AGPL-3.0
+
+# ------------------------------------------------------------ blog: words and dates (build_updates.py)
+# blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
+blog.tag.web = tTerm Web
+blog.tag.bot = Bot
+blog.tag.site = Sito
+blog.read = Leggi l'articolo
+blog.pinned = In evidenza
+blog.earlier = Articoli precedenti
+blog.more = Altri articoli
+blog.minutes = one: {n} minuto di lettura | other: {n} minuti di lettura
+blog.pace = 220
+date.months = gennaio | febbraio | marzo | aprile | maggio | giugno | luglio | agosto | settembre | ottobre | novembre | dicembre
+date.months_heading = Gennaio | Febbraio | Marzo | Aprile | Maggio | Giugno | Luglio | Agosto | Settembre | Ottobre | Novembre | Dicembre
+date.months_short = gen | feb | mar | apr | mag | giu | lug | ago | set | ott | nov | dic
+date.long = {d} {month} {y}
+date.long_noyear = {d} {month}
+date.short = {d} {month_short}
+date.heading = {month_heading} {y}
+# date.day_one is {d} on the first of a month: 1er in French, 1º in Italian and Portuguese.
+date.day_one = 1º
+# ------------------------------------------------------------ index
+# meta
+index.title = tTerm: il terminale cloud per server e computer
+index.description = Un terminale che vive nel cloud: chiudi il portatile durante una build e riprendi da qualsiasi dispositivo. Ogni comando arriva come un blocco. Nessuna chiave sul dispositivo, nessuna porta da aprire.
+index.og_title = Il terminale cloud per server e computer
+# main
+# hero
+index.hero.1 = Novità: tTerm nel browser<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Leggi</span>
+index.hero.2 = <span class="accent">Il terminale cloud</span> <br>per server e computer
+index.hero.3 = I tuoi terminali vivono nel cloud, non sul portatile: chiudilo durante una build, apri tTerm sul telefono e ritrovi tutto dove l'avevi lasciato. Nessuna chiave sul dispositivo, nessuna porta da aprire.
+index.hero.4 = Inizia gratis
+index.hero.5 = Open source
+index.hero.6 = tTerm Web in azione: a sinistra i progetti nei loro colori, con macchine, terminali e note in cartelle, in alto le schede. Su web-01 girano git pull, una build e il riavvio di un servizio, mentre nella nota accanto si spuntano le voci della checklist di release. Poi Cmd+K apre un terminale su api-prod.
+# strip
+index.strip.1 = Server Linux
+index.strip.2 = Via SSH standard, con un solo comando sul server
+index.strip.3 = Computer con macOS e Linux
+index.strip.4 = Anche dietro NAT, senza porte aperte
+index.strip.5 = Qualsiasi browser
+index.strip.6 = Su portatile, tablet o telefono
+# how
+index.how.1 = Come funziona
+index.how.2 = Tre passi per il primo comando
+index.how.3 = Aggiungi una macchina
+index.how.4 = Un comando sul server, ed eccolo nel tuo elenco. A un computer basta un piccolo agente che si collega dall'interno.
+index.how.5 = Apri un terminale
+index.how.6 = In qualsiasi browser. Schede di progetti diversi una accanto all'altra, e ogni macchina a un Cmd+K di distanza.
+index.how.7 = Lavora come sempre
+index.how.8 = La tua shell, i tuoi programmi, sudo. Chiudi la scheda e il terminale continua a girare.
+# features
+index.features.1 = Funzionalità
+index.features.2 = Un terminale che capisce i comandi
+index.features.3 = tTerm sa dove inizia e dove finisce ogni comando, con che esito è terminato e dove ti trovi. Così con l'output puoi lavorare, non solo leggerlo.
+index.features.4 = Ogni comando è un blocco
+index.features.5 = Codice di uscita, tempo, directory e branch. Copia un blocco intero, comprimilo o eseguilo di nuovo.
+index.features.6 = <span class="v-key">&#x2192;</span>suggerimento dalla cronologia<span class="v-key">Tab</span>completamento
+index.features.7 = Una riga di input come in un editor
+index.features.8 = Input su più righe, cronologia su tutti i tuoi dispositivi, suggerimenti e Tab. Prima di un comando pericoloso tTerm ti chiede conferma.
+index.features.9 = Directory e branch in un clic
+index.features.10 = Fai clic sulla directory o sul branch sopra la riga di input e scegli dall'elenco. cd e git switch vengono eseguiti come normali blocchi.
+index.features.11 = vim e htop a schermo intero
+index.features.12 = I programmi a schermo intero funzionano come in qualsiasi terminale. E se preferisci lavorare alla vecchia maniera, c'è una modalità classica.
+index.features.13 = in attesa
+index.features.14 = I terminali sopravvivono alla scheda
+index.features.15 = Hai chiuso il portatile nel mezzo di una build? La build continua e l'output viene conservato. Riprendi da qualsiasi dispositivo.
+index.features.16 = Tutto a un Cmd+K di distanza
+index.features.17 = Vai a un terminale, aprine uno nuovo su qualsiasi macchina o esegui un'azione. Una sola scorciatoia invece di cercare tra le schede.
+index.features.18 = Note accanto alle macchine
+index.features.19 = Runbook, checklist e note sugli accessi stanno nel progetto e si aprono in una scheda accanto al terminale.
+index.features.20 = Progetti a colori
+index.features.21 = Un progetto per un cliente, un ambiente o un'attività, con le sue macchine e le sue note. Dal colore capisci da quale progetto viene una scheda.
+index.features.22 = <span class="v-key">Enter</span>salva<span class="v-key">Esc</span>annulla
+index.features.23 = Nomi per i terminali
+index.features.24 = deploy, logs, migrations al posto di terminal 2. Fai doppio clic su un terminale, scrivi un nome e premi Enter.
+# security
+index.security.1 = Sicurezza
+index.security.2 = Non conserviamo chiavi. <br>Non apriamo porte.
+index.security.3 = L'accesso alle tue macchine è facile da concedere e altrettanto facile da revocare. Ecco come funziona.
+index.security.4 = Un certificato da due minuti
+index.security.5 = Ogni connessione riceve un proprio certificato SSH con il tuo nome, valido solo per quel server. Le tue chiavi non ci servono mai.
+index.security.6 = Firma isolata
+index.security.7 = Le chiavi della CA vivono in un processo separato, senza rete. Il core non può leggerle, può solo chiedere una firma, e ogni firma viene registrata.
+index.security.8 = sshd_config intatto
+index.security.9 = La fiducia si riduce a una riga nel file authorized_keys di un solo utente. Non si riavvia nulla.
+index.security.10 = Connessioni dall'interno
+index.security.11 = L'agente sul computer si collega da solo verso l'esterno, quindi non servono porte in ingresso. Si disinstalla con un solo comando.
+index.security.12 = Nessun intermediario
+index.security.13 = La pagina e i terminali comunicano direttamente con il nostro server nell'UE. Cloudflare ci fa solo da DNS e non vede mai i tuoi comandi.
+index.security.14 = tTerm Web e l'agente sono open source con licenza AGPL. Lo script di installazione è breve: leggilo prima di eseguirlo.
+# teams
+index.teams.1 = Per i team
+index.teams.2 = IN ARRIVO
+index.teams.3 = Vedi chi ha eseguito cosa
+index.teams.4 = Invita i colleghi in un progetto e assegna a ciascuno un ruolo. Niente più chiavi dei server da distribuire.
+index.teams.5 = <b>Ruoli nel progetto:</b> proprietario, amministratore, membro e osservatore.
+index.teams.6 = <b>Un registro condiviso:</b> chi ha eseguito cosa, dove e quando, e con quale esito.
+index.teams.7 = <b>Osservazione:</b> puoi guardare il terminale di un collega, e chi è osservato vede sempre chi sta guardando.
+index.teams.8 = Registro del progetto Acme<span class="watching"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Anna sta guardando</span>
+index.teams.9 = AN
+index.teams.10 = DG
+index.teams.11 = IK
+# pricing
+index.pricing.1 = Prezzi
+index.pricing.2 = Gratis mentre lo costruiamo
+index.pricing.3 = Tutto quello che tTerm fa oggi, senza costi. I piani a pagamento arriveranno più avanti, e te lo diremo con largo anticipo.
+index.pricing.4 = ORA
+index.pricing.5 = Gratis
+index.pricing.6 = Per tutti, finché tTerm è in beta. Niente carta di credito, niente periodo di prova.
+index.pricing.7 = Fino a 50 macchine
+index.pricing.8 = Fino a 24 terminali aperti
+index.pricing.9 = Server e computer
+index.pricing.10 = I tuoi progetti e le tue note
+index.pricing.11 = 30 giorni di cronologia dei comandi con output
+index.pricing.12 = I terminali sopravvivono alla scheda
+index.pricing.13 = Tema scuro e chiaro
+# faq
+index.faq.1 = Domande
+index.faq.2 = Devo installare qualcosa sul mio computer?
+index.faq.3 = No, basta un browser. Installi qualcosa solo sulle macchine a cui ti colleghi: un comando su un server, un piccolo agente su un computer.
+index.faq.4 = Cosa conservate?
+index.faq.5 = I comandi e il loro output per 30 giorni, per mostrarti la cronologia, e un registro degli accessi. Non conserviamo né chiavi né password. I dettagli sono nell'<a href="/privacy/">Informativa sulla privacy</a>.
+index.faq.6 = In cosa è meglio di un normale client SSH?
+index.faq.7 = Funziona da qualsiasi browser e non richiede chiavi sul tuo dispositivo. Il terminale non si interrompe quando chiudi il portatile. E ogni comando arriva come un blocco facile da copiare ed eseguire di nuovo.
+index.faq.8 = Come revoco l'accesso di tTerm alle mie macchine?
+index.faq.9 = Rimuovi il server in tTerm, e tTerm toglie da solo il proprio accesso dal server. Se il server non risponde, tTerm ti mostra il comando da eseguire lì. Come rimuovere tutto il resto che l'installer ha configurato lo trovi scritto in cima allo script stesso. L'agente si disinstalla da un computer con un solo comando.
+index.faq.10 = E il bot Telegram?
+index.faq.11 = Resta e continua a funzionare: un terminale direttamente in chat, <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>. Per ora l'app web e il bot sono separati.
+index.faq.12 = Come contatto l'assistenza?
+index.faq.13 = Scrivi a <a href="mailto:support@tterm.net">support@tterm.net</a>. Se hai trovato una vulnerabilità, scrivi a <a href="mailto:security@tterm.net">security@tterm.net</a>.
+# blog
+index.blog.1 = Blog
+index.blog.2 = Le novità di tTerm
+index.blog.3 = Tutti gli articoli
+# final
+index.final.1 = Il tuo primo terminale in un minuto
+index.final.2 = Accedi con la tua email, aggiungi un server con un solo comando e lavora da qualsiasi browser.
+index.final.3 = Guarda il codice
+
+# ------------------------------------------------------------ blog
+# meta
+blog.title = Blog di tTerm: le novità
+blog.description = Cosa abbiamo rilasciato e cosa è cambiato in tTerm: l'app web, il bot Telegram e il sito.
+blog.og_title = Blog: le novità
+# main
+# blog-head
+blog.blog-head.1 = Blog
+blog.blog-head.2 = Le novità di tTerm
+blog.blog-head.3 = Cosa abbiamo rilasciato e cosa è cambiato. Brevi note su ogni nuova versione arrivano anche sul nostro <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">canale Telegram</a>.
+# main
+blog.main.2 = Articolo in primo piano
+blog.main.3 = Tutti gli articoli
+# near
+blog.near.1 = Canale Telegram
+blog.near.2 = I nuovi articoli arrivano anche su Telegram
+blog.near.3 = Brevi note su ogni nuova versione nel canale di tTerm.
+blog.near.4 = Apri il canale
+# ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
+mac.download = Scarica per Mac
+mac.title = Un terminale locale <br>con dentro il cloud
+mac.lead = La nostra ultima novità, che si aggiunge alla versione cloud. tTerm per Mac apre le shell del tuo computer in una finestra tutta sua, a blocchi, e funziona anche senza account. Se accedi, nella stessa finestra compaiono i tuoi server dal cloud, e puoi spostare nel cloud i server e le chiavi che hai sul Mac.
+mac.note = Gratis · macOS 11 o successivo <br>Windows e Linux in arrivo
+mac.soon = IN ARRIVO
+mac.window_label = La finestra di tTerm per Mac: a sinistra i progetti, in Personal questo MacBook-Pro, contrassegnato come this Mac, con i suoi terminali, e sotto il server web-01 dal cloud. In alto, le schede di questo Mac e del cloud una accanto all'altra; nel feed, i comandi sul Mac a blocchi: git pull, npm test, docker compose. Nella barra dei menu del Mac è aperto il menu di tTerm: Open tTerm, MacBook-Pro: online in tTerm Web, Quit tTerm.
+mac.p1.title = I blocchi anche sul tuo Mac
+mac.p1.text = La shell di questo Mac, bash o zsh: ogni comando è un blocco con output, codice di uscita e tempo. La cronologia resta sul Mac per 30 giorni.
+mac.p2.title = Il cloud nella stessa finestra
+mac.p2.text = Dopo l'accesso, accanto ai terminali del Mac si aprono i tuoi server, le loro note e la ricerca su tutto con ⌘K.
+mac.p3.title = Passaggio al cloud
+mac.p3.text = L'app sposta nel cloud i server e le chiavi di questo Mac in un paio di clic, e da quel momento si aprono da qualsiasi browser.
+mac.p4.title = Il tuo Mac ovunque tu sia
+mac.p4.text = L'app apre questo Mac a tTerm Web: il suo terminale è raggiungibile dal browser e dal telefono. Sta nella barra dei menu.
+mac.strip.title = Browser e Mac
+mac.strip.text = In qualsiasi browser, o in una finestra tutta sua sul Mac
+mac.how.1 = Un comando sul server, ed eccolo nel tuo elenco. A un computer basta un piccolo agente, un Mac si collega con tTerm per Mac: in entrambi i casi dall'interno.
+mac.how.2 = In qualsiasi browser o in tTerm per Mac. Schede di progetti diversi una accanto all'altra, e ogni macchina a un Cmd+K di distanza.
+mac.security = L'agente sul computer e tTerm per Mac si collegano da soli verso l'esterno, quindi non servono porte in ingresso. L'agente si disinstalla con un solo comando.
+mac.faq.install = No, basta un browser. Installi qualcosa solo sulle macchine a cui ti colleghi: un comando su un server, un piccolo agente su un computer. Su un Mac, al posto dell'agente, puoi installare tTerm per Mac, che è anche il terminale del Mac stesso.
+mac.faq.app.q = C'è un'app per il mio computer?
+mac.faq.app.a = Sì, <a href="{{$base}}/download/">tTerm per Mac</a>. Ha i terminali del Mac stesso, a blocchi e senza account, e dopo l'accesso, nella stessa finestra, i tuoi server dal cloud. Windows e Linux in arrivo.
+# download page
+download.title = tTerm per Mac: il terminale locale
+download.description = Un terminale locale con dentro il cloud: le shell del tuo Mac a blocchi e, accanto, i tuoi server, le note e tutto il resto che hai in tTerm. Gratis, macOS 11 o successivo.
+download.lead = La nostra ultima novità: un terminale locale sul tuo Mac, che si aggiunge alla versione cloud. Lavora con il tuo computer come in qualsiasi terminale e, quando sei pronto, sposta i tuoi server e le tue chiavi nel cloud direttamente dall'app.
+download.meta = Gratis · macOS 11 o successivo · Apple silicon e Intel
+download.phone = <b>tTerm per Mac si installa su un Mac.</b> Apri questa pagina da un Mac e, dal telefono, lavora in tTerm Web direttamente nel browser.
+download.open_web = Apri tTerm Web
+download.whats_new = Novità
+download.all_versions = Tutte le versioni su GitHub
+download.source = Codice sorgente
+download.cloud.eyebrow = Come si integra con il cloud
+download.cloud.title = Inizia sul Mac, <br>passa al cloud
+download.cloud.lead = L'app non sostituisce tTerm nel cloud, lo completa: un solo account, gli stessi server e le stesse note. Inizia sul tuo Mac e, quando ti serve accedere ovunque tu sia, sposta tutto nel cloud.
+download.cloud.mac = Un terminale locale sul tuo Mac: le shell di questo computer a blocchi, con la cronologia e le note salvate lì. Funziona anche senza account.
+download.cloud.move_title = Passaggio al cloud
+download.cloud.move = Quando sei pronto, l'app trova sul Mac i tuoi server e le chiavi in <code>~/.ssh</code> e li sposta nel cloud in un paio di clic.
+download.cloud.web = Il terminale cloud: server, terminali e note vivono nel cloud e si aprono da qualsiasi browser e dal telefono, anche per il tuo team.
+download.features.eyebrow = Cosa fa
+download.features.title = Il tuo Mac e il cloud in un'unica finestra
+download.install.eyebrow = Come installarlo
+download.install.title = Tre passi per avere il tuo Mac in tTerm
+download.install.1.title = Apri il file
+download.install.1.text = Apri il file tTerm.dmg scaricato e trascina tTerm nella cartella Applicazioni.
+download.install.2.title = Avvia tTerm
+download.install.2.text = I terminali di questo Mac funzionano subito, senza account e senza configurazione.
+download.install.3.title = Accedi e passa al cloud
+download.install.3.text = Sign in apre il browser: conferma l'accesso, e nella finestra compaiono i tuoi server e le tue note. L'app ti propone di spostare nel cloud i server e le chiavi di questo Mac.
+download.others.eyebrow = Altri sistemi
+download.others.title = Non solo Mac
+download.others.windows = L'app per Windows è in lavorazione.
+download.others.linux = Nel frattempo, un computer Linux si collega a tTerm Web con un piccolo agente.
+download.others.browser = tTerm Web funziona su telefono, tablet e qualsiasi computer. <a href="https://app.tterm.net">Aprilo</a>
+download.faq.1.q = In cosa si differenzia da tTerm Web?
+download.faq.1.a = tTerm Web è un terminale cloud nel browser: i terminali dei tuoi server e computer vivono nel cloud e li apri ovunque tu sia. tTerm per Mac è un terminale locale sul Mac stesso, con tutto il cloud nella sua finestra. Un solo account, gli stessi server e le stesse note.
+download.faq.2.q = È gratis?
+download.faq.2.a = Sì. Finché tTerm è in beta è gratis per tutti, app compresa.
+download.faq.3.q = Mi serve un account?
+download.faq.3.a = No. Senza accedere, tTerm funziona con questo Mac: shell, cronologia e note restano sul Mac. L'account serve per il cloud: server, note su tutti i tuoi dispositivi e questo Mac da un browser.
+download.faq.4.q = Dove vengono conservati i miei comandi?
+download.faq.4.a = I comandi di questo Mac, con il loro output, restano sul Mac per 30 giorni, nella cartella dell'app, che solo tu puoi leggere. I comandi sui server sono conservati nel cloud, come in tTerm Web.
+download.faq.5.q = L'app è firmata?
+download.faq.5.a = Sì, con un Apple Developer ID, e Apple l'ha verificata (notarizzazione). Per questo macOS la apre senza avvisi.
+download.faq.6.q = Come si disinstalla?
+download.faq.6.a = Esci da tTerm nella barra dei menu e trascinalo da Applicazioni al Cestino. Se avevi effettuato l'accesso, puoi dimenticare questo Mac in Settings → Devices.
+download.faq.7.q = Il codice è aperto?
+download.faq.7.a = Sì, con licenza AGPL v3, come tutto tTerm: <a href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">github.com/tterm-net/tterm-app</a>.
+download.final.title = Il tuo primo comando sul Mac in un minuto
+download.final.text = Scarica tTerm, trascinalo in Applicazioni e avvialo. Non serve un account.
+
+# ------------------------------------------------------------ 404
+notfound.title = Pagina non trovata · tTerm
+notfound.description = La pagina che hai richiesto non esiste.
+notfound.h1 = Qui non c'è niente
+notfound.text = La pagina che hai richiesto non esiste. Forse è stata spostata, o il link è più vecchio del sito.
+notfound.home = Torna alla home
+
+# ------------------------------------------------------------ post: /blog/answer-while-it-runs/
+# meta
+post.answer-while-it-runs.title = Puoi rispondere a un comando mentre è in esecuzione · Blog di tTerm
+post.answer-while-it-runs.description = Quando un programma chiedeva Continue? (Y/n), non c'era modo di rispondere: il tuo messaggio non partiva finché il comando non era finito. Ora tutto quello che scrivi mentre un comando è in esecuzione gli arriva in input, come succederebbe in un terminale. Il bot segna questi messaggi con 👌.
+post.answer-while-it-runs.og_title = Puoi rispondere a un comando mentre è in esecuzione
+# main
+post.answer-while-it-runs.main.2 = Blog
+post.answer-while-it-runs.main.3 = Quando un programma chiedeva <code>Continue? (Y/n)</code>, non c'era modo di rispondere: il tuo messaggio non partiva finché il comando non era finito. Ora tutto quello che scrivi mentre un comando è in esecuzione gli arriva in input, come succederebbe in un terminale. Il bot segna questi messaggi con 👌.
+# prose
+post.answer-while-it-runs.prose.1 = Cos'altro è cambiato
+post.answer-while-it-runs.prose.2 = Le domande <code>(Y/n)</code> vengono riconosciute anche quando sotto gira uno spinner, come succede con wrangler o npm. Compaiono i pulsanti <code>y</code> e <code>n</code>
+post.answer-while-it-runs.prose.3 = Il pulsante Stop ora si trova subito sotto l'output del comando e lo interrompe con Ctrl+C
+post.answer-while-it-runs.prose.4 = Un computer con l'agente non sparisce più dall'elenco dopo mezz'ora senza comandi
+post.answer-while-it-runs.prose.5 = Iscriviti al nostro blog su Telegram
+# more-section
+post.answer-while-it-runs.more-section.1 = Altro dal blog
+post.answer-while-it-runs.more-section.2 = Tutti gli articoli
+
+# ------------------------------------------------------------ post: /blog/independent-windows/
+# meta
+post.independent-windows.title = Le finestre su un computer ora sono indipendenti · Blog di tTerm
+post.independent-windows.description = Su un server ogni finestra è sempre stata un terminale a sé. Su un computer con l'agente, invece, tutte le finestre condividevano un'unica shell: un cd in una spostava anche le altre, e mentre in una finestra girava un programma, le altre dovevano aspettare. Ora ogni finestra ha la sua shell, proprio come su un server. Puoi lasciare un server di sviluppo in esecuzione in una finestra e lavorare in un'altra.
+post.independent-windows.og_title = Le finestre su un computer ora sono indipendenti
+# main
+post.independent-windows.main.2 = Blog
+post.independent-windows.main.3 = Su un server ogni finestra è sempre stata un terminale a sé. Su un computer con l'agente, invece, tutte le finestre condividevano un'unica shell: un <code>cd</code> in una spostava anche le altre, e mentre in una finestra girava un programma, le altre dovevano aspettare. Ora ogni finestra ha la sua shell, proprio come su un server. Puoi lasciare un server di sviluppo in esecuzione in una finestra e lavorare in un'altra.
+# prose
+post.independent-windows.prose.1 = Per avere questa novità, aggiorna l'agente: <code>/addhost</code> → Computer, poi esegui sullo stesso computer il comando che ti viene mostrato. La macchina resta nel tuo elenco così com'è. Se il tuo agente è vecchio, il bot te lo segnalerà quando apri una seconda finestra.
+post.independent-windows.prose.2 = Cos'altro è cambiato
+post.independent-windows.prose.3 = I pulsanti delle finestre stanno in fondo all'elenco e agiscono sulla riga selezionata, così non saltano più quando cambi finestra
+post.independent-windows.prose.4 = Se passi a una finestra in cui è in esecuzione un comando, il bot te lo dice subito invece di aspettare che finisca
+post.independent-windows.prose.5 = Un computer non risulta più offline dopo una rapida riconnessione dell'agente
+post.independent-windows.prose.6 = Iscriviti al nostro blog su Telegram
+# more-section
+post.independent-windows.more-section.1 = Altro dal blog
+post.independent-windows.more-section.2 = Tutti gli articoli
+
+# ------------------------------------------------------------ post: /blog/notes-and-projects/
+# meta
+post.notes-and-projects.title = Note, progetti a colori e nomi dei terminali · Blog di tTerm
+post.notes-and-projects.description = Runbook, checklist e note sugli accessi ora stanno accanto alle macchine a cui si riferiscono. Puoi creare i tuoi progetti e assegnare a ognuno un colore, dare un nome ai terminali e spostare macchine e note da un progetto all'altro. Ecco cosa ha imparato tTerm Web nei suoi primi giorni.
+post.notes-and-projects.og_title = Note, progetti a colori e nomi dei terminali
+# main
+post.notes-and-projects.main.2 = Blog
+# demo-frame
+post.notes-and-projects.demo-frame.1 = tTerm Web in azione: a sinistra i progetti nei loro colori, con macchine, terminali e note in cartelle, in alto le schede. Su web-01, in Client X, è in corso un deploy, mentre nella nota accanto si spuntano le voci della sua checklist di release. Poi Cmd+K apre un terminale su api-prod, in Acme.
+# main
+post.notes-and-projects.main.3 = Note in cartelle accanto alle macchine, ogni progetto con il suo colore.
+# prose
+post.notes-and-projects.prose.1 = Note accanto alle macchine
+post.notes-and-projects.prose.2 = Le note stanno nelle cartelle di un progetto, come i terminali stanno sulle sue macchine: il runbook del deploy, la checklist della release, dove sono custodite le chiavi d'accesso. Una nota si apre in una scheda accanto ai terminali, così hai il runbook sotto gli occhi mentre lo segui.
+post.notes-and-projects.prose.3 = Markdown mentre scrivi
+post.notes-and-projects.prose.4 = Un <code>#</code> all'inizio di una riga crea un titolo, <code>- [ ]</code> una voce di checklist, tre backtick un blocco di codice, e <code>/</code> apre un menu con tutto questo. Il codice ha un pulsante Copy. Una checklist mostra chi ha spuntato una voce e quando, e l'intera nota si copia come Markdown.
+post.notes-and-projects.prose.5 = Da due dispositivi insieme
+post.notes-and-projects.prose.6 = Una nota si salva mentre scrivi. Se la modifichi da due dispositivi contemporaneamente, tiene le modifiche di entrambi, e tTerm ti chiede qualcosa solo se lo stesso punto è stato cambiato da tutte e due le parti. Se cade la connessione, quello che hai scritto resta in attesa nel browser e ricompare quando riapri la nota.
+post.notes-and-projects.prose.7 = I tuoi progetti
+post.notes-and-projects.prose.8 = Oltre a Personal ora puoi creare i tuoi progetti: uno per cliente, per ambiente o per attività. Ognuno ha le sue macchine, i suoi terminali e le sue note. Puoi rinominare qualsiasi progetto, anche Personal, e cambiarne il codice, quello che etichetta le schede, come in CX/web-01. Un progetto senza macchine si può eliminare, insieme alle sue note.
+post.notes-and-projects.prose.9 = Una macchina passa a un altro progetto con i terminali ancora in esecuzione, e sulla macchina stessa non cambia nulla. Anche una nota si può spostare in un altro progetto, in una qualsiasi delle sue cartelle.
+post.notes-and-projects.prose.10 = Progetti a colori
+post.notes-and-projects.prose.11 = Ogni progetto ha uno di otto colori, che ritrovi sul suo codice nella barra laterale e nelle schede: così capisci a colpo d'occhio da quale progetto viene una scheda. Nella pagina dell'account scegli se colorare solo il codice o l'intero blocco del progetto nella barra laterale.
+post.notes-and-projects.prose.12 = Nomi dei terminali
+post.notes-and-projects.prose.13 = Un terminale non deve più chiamarsi per forza terminal 2: chiamalo deploy, logs o migrations. Fai doppio clic sul terminale nella sua scheda, nella barra laterale o nella pagina del progetto, scrivi il nome e premi Enter. Il nome compare ovunque compaia il terminale.
+post.notes-and-projects.prose.14 = Una nuova barra laterale e una pagina per ogni progetto
+post.notes-and-projects.prose.15 = Nella barra laterale ogni progetto mostra le sue macchine con i loro terminali e le sue note in cartelle. Un clic su una macchina o su una cartella si limita a comprimerla, il pulsante + accanto apre un terminale o crea una nota, e il nome del progetto apre la sua pagina: tutte le macchine con i terminali aperti e tutte le note.
+post.notes-and-projects.prose.16 = Cosa viene dopo
+post.notes-and-projects.prose.17 = Il prossimo grande passo è il lavoro in team: persone in un progetto, ruoli, un registro condiviso dei comandi e l'osservazione del terminale di un collega, in cui chi è osservato vede sempre chi sta guardando. A quel punto le note saranno condivise da tutti nel progetto.
+post.notes-and-projects.prose.18 = In parallelo stiamo costruendo tTerm per il tuo computer: la stessa interfaccia in una finestra tutta sua, per le shell del tuo computer.
+post.notes-and-projects.prose.19 = Prova tTerm Web
+post.notes-and-projects.prose.20 = Accedi con la tua email: ricevi un codice, e da lì in poi sui tuoi dispositivi basta un codice breve. Il primo server si collega in un minuto.
+post.notes-and-projects.prose.21 = Inizia gratis
+# more-section
+post.notes-and-projects.more-section.1 = Altro dal blog
+post.notes-and-projects.more-section.2 = Tutti gli articoli
+
+# ------------------------------------------------------------ post: /blog/open-source/
+# meta
+post.open-source.title = Perché il codice di tTerm è aperto, anche se arrivano i piani a pagamento · Blog di tTerm
+post.open-source.description = Tutto il codice di tTerm ora è sotto licenza AGPL v3 invece che MIT, e presto arriveranno i piani a pagamento. Ecco perché una cosa non ostacola l'altra, e perché abbiamo aperto anche il server.
+post.open-source.og_title = Perché il codice di tTerm è aperto, anche se arrivano i piani a pagamento
+# main
+post.open-source.main.2 = Blog
+# demo-frame
+post.open-source.demo-frame.1 = tTerm Web con un terminale su un MacBook, in una copia del repository tterm-web: git remote mostra che proviene da github.com/tterm-net/tterm-web, git log mostra che la licenza è arrivata con la versione 0.0.1, e il file della licenza riporta la GNU Affero General Public License, versione 3.
+# main
+post.open-source.main.3 = La licenza di tTerm Web, verificata in tTerm Web stesso: AGPL v3 dalla prima versione.
+# prose
+post.open-source.prose.1 = Cosa è cambiato
+post.open-source.prose.2 = Dall'11 ottobre tutto il codice di tTerm esce con licenza AGPL v3: tTerm Web per intero, sia la pagina sia il server, l'agente per i computer, il bot Telegram e questo sito. tTerm per il tuo computer, che stiamo costruendo ora, è sotto AGPL fin dalla prima versione. Prima il bot, l'agente e il sito uscivano con licenza MIT. Le versioni già pubblicate con MIT la mantengono: una licenza non si può revocare a posteriori. L'AGPL vale per tutto ciò che è nuovo.
+post.open-source.prose.3 = Perché è aperto anche il server
+post.open-source.prose.4 = tTerm si collega alle tue macchine. Su un server entra come utente tterm con sudo, cioè ottiene i permessi di root. A un servizio con un accesso del genere non si dovrebbe credere sulla parola, perciò è aperto tutto ciò che lo riguarda: il core, il programma separato che firma i certificati, l'installer e l'agente.
+post.open-source.prose.5 = Ogni promessa della nostra home page si può verificare nel codice. Un certificato vive due minuti e vale per un solo server. Le chiavi della CA stanno in un processo separato, senza rete. L'installer aggiunge una riga al file <code>authorized_keys</code> e non tocca <code>sshd_config</code>. Il server su app.tterm.net si aggiorna direttamente dal repository pubblico, quindi quello che c'è su GitHub è esattamente il codice in esecuzione.
+post.open-source.prose.6 = Spesso è aperta solo l'app, mentre il server resta chiuso. Per un terminale con root sulle macchine di altre persone, a noi sembra sbagliato.
+post.open-source.prose.7 = Perché AGPL e non MIT
+post.open-source.prose.8 = La licenza MIT permette quasi tutto, anche prendere il codice, migliorarlo e farlo girare come servizio chiuso. Chi collega i propri server a un servizio del genere non ha poi modo di sapere a chi ha dato root, e come.
+post.open-source.prose.9 = L'AGPL non lo permette: chi fa girare una copia modificata di tTerm come servizio per altri deve aprirne il codice ai propri utenti. Qualsiasi servizio costruito sul nostro codice resta trasparente quanto il nostro.
+post.open-source.prose.10 = Niente di tutto questo ti vincola. Collega le tue macchine, lavora, installa tTerm su un tuo server: la licenza entra in gioco solo se distribuisci tTerm ad altre persone o fai girare per loro una versione modificata come servizio.
+post.open-source.prose.11 = E allora perché pagare
+post.open-source.prose.12 = Pagherai il servizio, non l'accesso al codice. Per far funzionare tTerm ogni giorno servono server nell'UE e copie del database, l'email, l'assistenza e qualcuno che tenga d'occhio gli aggiornamenti. È lì che andranno i soldi dei piani a pagamento, e dei piani ti parleremo in anticipo. Finché tTerm è in beta, è gratis per tutti.
+post.open-source.prose.13 = Puoi far girare una tua copia di tTerm: l'AGPL lo consente. Ma alla maggior parte delle persone serve un terminale, non un altro servizio di cui curare da sé hosting, aggiornamenti e backup.
+post.open-source.prose.14 = Anche altri progetti aperti vivono così. Nel 2020 Plausible ha sostituito la licenza MIT con l'AGPL, perché le aziende non costruissero sul suo codice servizi concorrenti senza dare nulla in cambio. Nel 2021 Grafana ha lasciato Apache 2.0 per l'AGPL. Entrambi i progetti vendono una versione cloud del proprio codice aperto.
+post.open-source.prose.15 = Dove si trova il codice
+post.open-source.prose.16 = Tutto il codice di tTerm sta in un'unica organizzazione su GitHub: <a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a>. Ecco i suoi repository e a cosa serve ciascuno:
+post.open-source.prose.17 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-web" target="_blank" rel="noopener">tterm-web</a></strong><br>tTerm Web, la pagina e il server: il core che tiene attivi i tuoi terminali, il programma separato che firma i certificati e gli installer per server e computer.
+post.open-source.prose.18 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">tterm-app</a></strong><br>tTerm per il tuo computer: la stessa pagina in una finestra tutta sua, con le shell di quel computer. Il motore è scritto in Rust, e si parte da macOS.
+post.open-source.prose.19 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-agent" target="_blank" rel="noopener">tterm-agent</a></strong><br>L'agente per i computer: collega un Mac o una macchina Linux a tTerm Web e al bot. Si connette da solo verso l'esterno e non apre porte.
+post.open-source.prose.20 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-telegram" target="_blank" rel="noopener">tterm-telegram</a></strong><br>Il bot Telegram da cui è nato tTerm.
+post.open-source.prose.21 = <strong><a class="repo" href="https://github.com/tterm-net/site" target="_blank" rel="noopener">site</a></strong><br>Questo sito.
+post.open-source.prose.22 = <strong><a class="repo" href="https://github.com/tterm-net/.github" target="_blank" rel="noopener">.github</a></strong><br>La pagina dell'organizzazione su GitHub.
+post.open-source.prose.23 = Gli installer sono brevi: leggili prima di eseguirli.
+post.open-source.prose.24 = Prova tTerm Web
+post.open-source.prose.25 = Accedi con la tua email: ricevi un codice, e da lì in poi sui tuoi dispositivi basta un codice breve. Il primo server si collega in un minuto.
+post.open-source.prose.26 = Inizia gratis
+# more-section
+post.open-source.more-section.1 = Altro dal blog
+post.open-source.more-section.2 = Tutti gli articoli
+
+# ------------------------------------------------------------ post: /blog/several-terminals/
+# meta
+post.several-terminals.title = Più terminali per macchina · Blog di tTerm
+post.several-terminals.description = Ora puoi tenere aperti più terminali sullo stesso server: in uno scorre un log, nell'altro lavori. In /use compaiono come righe separate, ognuno con la sua shell: un cd in uno lascia l'altro dov'era.
+post.several-terminals.og_title = Più terminali per macchina
+# main
+post.several-terminals.main.2 = Blog
+post.several-terminals.main.3 = Ora puoi tenere aperti più terminali sullo stesso server: in uno scorre un log, nell'altro lavori. In <code>/use</code> compaiono come righe separate, ognuno con la sua shell: un <code>cd</code> in uno lascia l'altro dov'era.
+# prose
+post.several-terminals.prose.1 = Cos'altro è cambiato
+post.several-terminals.prose.2 = L'output compare man mano che arriva, invece che tutto insieme alla fine del comando, con un pulsante Stop per interrompere un comando che va per le lunghe
+post.several-terminals.prose.3 = Un comando che aspetta una risposta ora lo dice e mostra i pulsanti per rispondere, invece di restare fermo in silenzio finché non te ne accorgi
+post.several-terminals.prose.4 = Il branch git sta sopra il prompt, dove lo si legge davvero
+post.several-terminals.prose.5 = L'output più lungo resta in chat invece di diventare un file
+post.several-terminals.prose.6 = Iscriviti al nostro blog su Telegram
+# more-section
+post.several-terminals.more-section.1 = Altro dal blog
+post.several-terminals.more-section.2 = Tutti gli articoli
+
+# ------------------------------------------------------------ post: /blog/tterm-is-live/
+# meta
+post.tterm-is-live.title = tTerm è online · Blog di tTerm
+post.tterm-is-live.description = Un terminale per i tuoi server, proprio qui su Telegram. Scrivi un comando: viene eseguito sulla tua macchina e la risposta torna come messaggio, con il codice di uscita, la directory di lavoro e il branch git. La shell ricorda dove eri rimasto.
+post.tterm-is-live.og_title = tTerm è online
+# main
+post.tterm-is-live.main.2 = Blog
+# prose
+post.tterm-is-live.prose.1 = Cosa funziona oggi
+post.tterm-is-live.prose.2 = Server Linux via SSH: un comando per collegarli, nessuna modifica a <code>sshd_config</code>
+post.tterm-is-live.prose.3 = Computer con macOS e Linux tramite un piccolo agente che non apre porte
+post.tterm-is-live.prose.4 = Dai accesso a qualsiasi utente Telegram, per un periodo stabilito o finché non lo revochi
+post.tterm-is-live.prose.5 = Ogni comando che esegue finisce nel tuo registro, con il suo nome
+post.tterm-is-live.prose.6 = Gratis, open source, senza registrazione.
+post.tterm-is-live.prose.7 = È una beta. Funziona e continuerà a cambiare, e i cambiamenti li annunciamo in questo canale.
+post.tterm-is-live.prose.8 = Iscriviti al nostro blog su Telegram
+# more-section
+post.tterm-is-live.more-section.1 = Altro dal blog
+post.tterm-is-live.more-section.2 = Tutti gli articoli
+
+# ------------------------------------------------------------ post: /blog/tterm-web/
+# meta
+post.tterm-web.title = tTerm ora funziona nel browser · Blog di tTerm
+post.tterm-web.description = Tutti i tuoi server e computer in una scheda, ogni comando in un blocco a sé e nessuna chiave sul tuo dispositivo. Cosa sa fare oggi tTerm Web, come collegare una macchina e cosa viene dopo.
+post.tterm-web.og_title = tTerm ora funziona nel browser
+# main
+post.tterm-web.main.2 = Blog
+post.tterm-web.main.3 = Finora tTerm viveva su Telegram: comandi ai tuoi server direttamente da una chat. Oggi apriamo tTerm Web, un vero terminale nel browser. Tutti i tuoi server e computer in una scheda, ogni comando in un blocco a sé e nessuna chiave sul tuo dispositivo.
+# demo-frame
+post.tterm-web.demo-frame.1 = tTerm Web in azione: a sinistra progetti, macchine e i loro terminali, in alto le schede. Su web-01 girano git pull, una build e il riavvio di un servizio, poi Cmd+K apre un terminale su api-prod.
+# main
+post.tterm-web.main.4 = Ecco tTerm Web: a sinistra le macchine divise per progetto, in alto le schede, ogni comando in un blocco a sé.
+# prose
+post.tterm-web.prose.1 = Perché un browser, se c'è già il bot
+post.tterm-web.prose.2 = Il bot è l'ideale quando hai solo il telefono: riavviare un servizio, controllare lo spazio su disco, rispondere alla domanda di un installer. Ma il lavoro più lungo chiede uno schermo grande: più schede affiancate, vim e htop a schermo intero, una cronologia in cui ritrovare facilmente il comando di ieri.
+post.tterm-web.prose.3 = Per questo c'è tTerm Web. Si apre in qualsiasi browser, su portatile, tablet o telefono, e non richiede di installare nulla sul dispositivo da cui lavori.
+post.tterm-web.prose.4 = Ogni comando in un blocco a sé
+post.tterm-web.prose.5 = In un terminale normale tutto si mescola in un unico flusso, e devi cercare a occhio dove è finito un comando e dove è cominciato il successivo. In tTerm ogni comando arriva in un blocco a sé: il comando, il suo output, il codice di uscita, il tempo, la directory e il branch git.
+post.tterm-web.prose.6 = Puoi copiare un blocco insieme al suo output, comprimerlo o eseguirlo di nuovo. Mentre il comando è in esecuzione, l'output scorre in diretta, e quando finisce, il blocco diventa semplice testo, facile da selezionare e copiare.
+post.tterm-web.prose.7 = Una riga di input come in un editor
+post.tterm-web.prose.8 = In basso c'è una riga di input tutta sua. Shift+Enter va a capo, un comando della cronologia viene suggerito in grigio, Tab completa. La cronologia è salvata da noi, quindi è la stessa su tutti i tuoi dispositivi.
+post.tterm-web.prose.9 = Sopra la riga vedi dove ti trovi: la directory e il branch. Fai clic su uno dei due e scegli un'altra voce dall'elenco, e <code>cd</code> o <code>git switch</code> viene eseguito come un normale blocco. E prima di un comando pericoloso, di quelli dopo cui non c'è più niente da aggiustare, tTerm ti chiede conferma.
+post.tterm-web.prose.10 = vim, htop e sudo
+post.tterm-web.prose.11 = I programmi a schermo intero occupano tutta l'area del terminale e funzionano come sempre, e lo stesso vale per sudo. Se i blocchi non ti servono, c'è una modalità classica: un unico terminale continuo, come quello a cui sei abituato.
+post.tterm-web.prose.12 = Il terminale non si chiude con la scheda
+post.tterm-web.prose.13 = Il terminale vive sul nostro server, non nel tuo browser. Chiudi il portatile nel mezzo di una build su un server: la build va avanti e l'output viene conservato. Apri tTerm su un altro dispositivo e ritrovi il terminale lì dov'era.
+post.tterm-web.prose.14 = Le schede di progetti diversi si aprono una accanto all'altra e riportano il codice del progetto: P/web-01, A/api-prod. Cmd+K apre la palette dei comandi: vai a qualsiasi terminale, aprine uno nuovo su qualsiasi macchina o esegui un'azione.
+post.tterm-web.prose.15 = Come collegare una macchina
+post.tterm-web.prose.16 = Un server Linux si collega con un solo comando. tTerm Web te lo mostra quando aggiungi una macchina, e tu lo esegui sul server:
+post.tterm-web.prose.17 = L'installer crea sul server un utente chiamato tterm, aggiunge una riga al suo file <code>authorized_keys</code> e gli dà sudo con un file dedicato in <code>/etc/sudoers.d</code>. Non tocca <code>sshd_config</code>, non riavvia sshd e non apre porte. Pochi secondi dopo il server compare nel tuo elenco.
+post.tterm-web.prose.18 = Un computer con macOS o Linux si connette tramite un piccolo agente. Gira con il tuo utente e contatta da solo il nostro server, quindi non servono porte in ingresso e il computer può stare dietro NAT. L'agente si disinstalla con un solo comando.
+post.tterm-web.prose.19 = Sicurezza
+post.tterm-web.prose.20 = Ci colleghiamo alle tue macchine, quindi abbiamo progettato l'accesso in modo che sia facile da concedere e altrettanto facile da revocare.
+post.tterm-web.prose.21 = <strong>Le tue chiavi non servono.</strong> Per ogni connessione tTerm firma un nuovo certificato SSH con il tuo nome. Vale solo per quel server e smette di funzionare dopo due minuti.
+post.tterm-web.prose.22 = <strong>Firma isolata.</strong> Le chiavi con cui firmiamo vivono in un processo separato, senza rete. Il programma principale non può leggerle, può solo chiedere una firma, e ogni firma viene registrata.
+post.tterm-web.prose.23 = <strong>Nessun intermediario.</strong> Il server di tTerm si trova nell'UE. La pagina e i terminali si collegano direttamente lì: Cloudflare gestisce solo il nostro DNS e non vede mai i tuoi comandi.
+post.tterm-web.prose.24 = <strong>Facile da revocare.</strong> Rimuovi un server in tTerm e tTerm toglie da solo il proprio accesso dal server; se il server non risponde, tTerm ti mostra il comando da eseguire lì. Come rimuovere tutto il resto che l'installer ha configurato lo trovi scritto in cima allo script stesso.
+post.tterm-web.prose.25 = <strong>Open source.</strong> tTerm Web e l'agente sono open source con licenza AGPL-3.0. Lo script di installazione è breve e vale la pena leggerlo prima di eseguirlo.
+post.tterm-web.prose.26 = Quanto costa
+post.tterm-web.prose.27 = Finché tTerm Web è in beta, è gratis per tutti.
+post.tterm-web.prose.28 = macchine per persona
+post.tterm-web.prose.29 = terminali aperti
+post.tterm-web.prose.30 = giorni di cronologia con output
+post.tterm-web.prose.31 = I piani a pagamento arriveranno più avanti, e te lo diremo con largo anticipo.
+post.tterm-web.prose.32 = Cosa succede al bot
+post.tterm-web.prose.33 = <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a> resta e continua a funzionare: comandi ai tuoi server direttamente dalla chat, quando hai solo il telefono. Per ora il bot e l'app web sono separati, ognuno con il proprio elenco di macchine. Più avanti li uniremo.
+post.tterm-web.prose.34 = Cosa viene dopo
+post.tterm-web.prose.35 = Il prossimo grande passo è il lavoro in team: ruoli in un progetto, un registro condiviso dei comandi e l'osservazione del terminale di un collega, in cui chi è osservato vede sempre chi sta guardando. I computer Windows non sono ancora supportati; ci arriveremo più avanti.
+post.tterm-web.prose.36 = Prova tTerm Web
+post.tterm-web.prose.37 = Accedi con la tua email: ricevi un codice, e da lì in poi sui tuoi dispositivi basta un codice breve. Il primo server si collega in un minuto.
+post.tterm-web.prose.38 = Inizia gratis
+# more-section
+post.tterm-web.more-section.1 = Altro dal blog
+post.tterm-web.more-section.2 = Tutti gli articoli
+
+# ------------------------------------------------------------ post: /blog/verified-on-github/
+# meta
+post.verified-on-github.title = tTerm ora è un'organizzazione verificata su GitHub · Blog di tTerm
+post.verified-on-github.description = github.com/tterm-net ha il badge Verified: GitHub ha confermato che dietro l'organizzazione e dietro tterm.net ci sono le stesse persone.
+post.verified-on-github.og_title = tTerm ora è un'organizzazione verificata su GitHub
+# main
+post.verified-on-github.main.2 = Blog
+post.verified-on-github.main.3 = <a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a> ha il badge Verified: GitHub ha confermato che dietro l'organizzazione e dietro <a href="{{$base}}/">tterm.net</a> ci sono le stesse persone.
+# prose
+post.verified-on-github.prose.1 = Per noi conta più che altrove. Il codice è aperto, quindi chiunque può farne un fork, cambiare il comando di installazione e pubblicarlo con un nome simile al nostro. Di un dominio, invece, non si può fare un fork. Il badge unisce le due cose, così c'è un posto che è nostro, e lo si può dimostrare:
+post.verified-on-github.prose.2 = <a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a>: tutti e tre i repository, verificati
+post.verified-on-github.prose.3 = <a href="{{$base}}/">tterm.net</a>: il sito
+post.verified-on-github.prose.4 = <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>: il bot vero e proprio
+post.verified-on-github.prose.5 = Iscriviti al nostro blog su Telegram
+# more-section
+post.verified-on-github.more-section.1 = Altro dal blog
+post.verified-on-github.more-section.2 = Tutti gli articoli
+
+# ------------------------------------------------------------ post: /blog/your-shell/
+# meta
+post.your-shell.title = Ora l'agente avvia la tua shell: bash o zsh · Blog di tTerm
+post.your-shell.description = Prima l'agente avviava bash in ogni caso. Su macOS, dove zsh è la shell predefinita dal 2019, questo significava un ambiente che non era il tuo: metà di ciò che avevi installato risultava introvabile.
+post.your-shell.og_title = Ora l'agente avvia la tua shell: bash o zsh
+# main
+post.your-shell.main.2 = Blog
+# prose
+post.your-shell.prose.1 = Ora è la shell che usi tu, con i tuoi percorsi e le tue impostazioni, come quando apri Terminale.
+post.your-shell.prose.2 = Cos'altro è cambiato
+post.your-shell.prose.3 = Un comando dopo il quale non c'è più niente da aggiustare chiede conferma prima di partire: <code>rm -rf</code>, <code>mkfs</code>, <code>DROP DATABASE</code>, l'arresto di <code>sshd</code>
+post.your-shell.prose.4 = La chiave host del server viene registrata quando lo colleghi e poi verificata a ogni connessione, così nessun'altra macchina che risponda a quell'indirizzo può entrare
+post.your-shell.prose.5 = L'output lungo arriva con un riepilogo invece delle sue ultime sei righe: per <code>apt</code> ora vedi quanti pacchetti sono stati aggiornati, non solo <code>Processing triggers</code>
+post.your-shell.prose.6 = I percorsi lunghi nel prompt vengono abbreviati: <code>/opt/…/tterm/core</code>
+post.your-shell.prose.7 = Iscriviti al nostro blog su Telegram
+# more-section
+post.your-shell.more-section.1 = Altro dal blog
+post.your-shell.more-section.2 = Tutti gli articoli

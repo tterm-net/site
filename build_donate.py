@@ -1,9 +1,15 @@
 """Builds the donation page in both languages from one template.
 
 The addresses live here and nowhere else, so the two languages
-cannot drift apart.
+cannot drift apart. The header and the footer are those of every page,
+from sitelib. The page stays in English and Russian: the bot links to
+it, the site does not.
 """
-import pathlib
+import sys
+
+sys.dont_write_bytecode = True
+
+import sitelib as S  # noqa: E402
 
 TRC = "TPv5SQVhjczDR3fBPvGKBu9Ekn8gcziQTX"
 ERC = "0xBc0B9cB860A6c789F7cB13DC59E6b5cf12Ab1fa0"
@@ -36,12 +42,7 @@ ETH = (
 
 T = {
  "ru": dict(
-   lang="ru", home="/ru/", blog="/ru/blog/", lang_label="Язык", lang_name="русский",
-   skip="Перейти к содержанию", beta="бета", home_label="tTerm, на главную",
-   nav_label="Разделы", menu="Меню",
-   nav=[("#how", "Как это работает"), ("#features", "Возможности"),
-        ("#security", "Безопасность"), ("#pricing", "Тарифы"), ("#faq", "Вопросы")],
-   blog_label="Блог", signin="Войти", start="Начать бесплатно",
+   lang="ru", home="/ru/",
    title="Поддержать",
    desc="Адреса для пожертвований. USDT в сетях TRON и Ethereum.",
    h1="Поддержать проект",
@@ -55,20 +56,9 @@ T = {
            "А если переводить нечего, просто пользуйся, это тоже помогает: "
            "по замечаниям видно, что чинить дальше."),
    back="На главную",
-   foot_label="Ссылки",
-   foot=[("/ru/blog/", "Блог"), ("https://t.me/tTermNetBot", "Бот в Telegram"),
-         ("/terms/", "Условия использования"), ("https://github.com/tterm-net", "Исходники"),
-         ("https://t.me/tTermBlog", "Канал в Telegram"),
-         ("/privacy/", "Политика конфиденциальности")],
-   license="Лицензия AGPL-3.0 · 2026 · v{v}",
  ),
  "en": dict(
-   lang="en", home="/", blog="/blog/", lang_label="Language", lang_name="English",
-   skip="Skip to content", beta="beta", home_label="tTerm, home",
-   nav_label="Sections", menu="Menu",
-   nav=[("#how", "How it works"), ("#features", "Features"), ("#security", "Security"),
-        ("#pricing", "Pricing"), ("#faq", "FAQ")],
-   blog_label="Blog", signin="Sign in", start="Start for free",
+   lang="en", home="/",
    title="Donate",
    desc="Donation addresses. USDT on TRON and Ethereum.",
    h1="Donate",
@@ -82,37 +72,8 @@ T = {
            "is nothing to send, just use it, that helps too: what you run "
            "into tells us what to fix next."),
    back="Home",
-   foot_label="Links",
-   foot=[("/blog/", "Blog"), ("https://t.me/tTermNetBot", "Telegram bot"),
-         ("/terms/", "Terms of Service"), ("https://github.com/tterm-net", "Source code"),
-         ("https://t.me/tTermBlog", "Telegram channel"), ("/privacy/", "Privacy Policy")],
-   license="AGPL-3.0 licensed · 2026 · v{v}",
  ),
 }
-
-MENU_OPEN = ('<svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
-             'stroke-width="2" stroke-linecap="round" aria-hidden="true">'
-             '<path d="M4 7h16M4 12h16M4 17h16"/></svg>')
-MENU_CLOSE = ('<svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
-              'stroke-width="2" stroke-linecap="round" aria-hidden="true">'
-              '<path d="M6 6l12 12M18 6L6 18"/></svg>')
-GLOBE = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" '
-         'aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>'
-         '<path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg>')
-CHECK = ('<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true">'
-         '<path d="M5 12.5l4.2 4.2L19 7"/></svg>')
-LANGS = (("ru", "/ru/donate/", "Русский"), ("en", "/donate/", "English"))
-
-
-def lang_links(lang: str, check: bool, indent: str) -> str:
-    """Both languages, the page's own marked, as in the header of every page."""
-    out = []
-    for code, href, name in LANGS:
-        here = ' aria-current="true"' if code == lang else ""
-        mark = CHECK if code == lang and check else ""
-        out.append(f'{indent}<a href="{href}" hreflang="{code}" lang="{code}"{here}>{name}{mark}</a>')
-    return "\n".join(out)
-
 
 def wallet(icon, network, note, only, address, qr, copy_label):
     return f"""      <div class="wallet">
@@ -138,15 +99,11 @@ def wallet(icon, network, note, only, address, qr, copy_label):
 def build(key: str, version: str) -> str:
     """The page, in the same header and footer as every other page."""
     d = T[key]
-    app = "https://app.tterm.net"
-    links = [f'<a href="{d["home"]}{a}">{t}</a>' for a, t in d["nav"]]
-    links.append(f'<a href="{d["blog"]}">{d["blog_label"]}</a>')
-    nav = "\n".join("      " + x for x in links)
-    menu = "\n".join("          " + x for x in links)
-    foot = "\n".join(
-        f'      <a href="{u}"'
-        + (' target="_blank" rel="noopener"' if u.startswith("http") else "")
-        + f">{n}</a>" for u, n in d["foot"])
+    lang = S.language(key)
+    ctx = S.context(lang, "/donate/", langs=[S.language("en"), S.language("ru")])
+    header = S.render("{{>header}}", lang, ctx)
+    footer = S.render("{{>footer}}", lang, ctx)
+    skip = S.render("{{shell.skip}}", lang, ctx)
     return f"""<!DOCTYPE html>
 <html lang="{d['lang']}">
 <head>
@@ -163,42 +120,10 @@ def build(key: str, version: str) -> str:
 <script src="/assets/site.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#main">{d['skip']}</a>
+<a class="skip" href="#main">{skip}</a>
 <div class="page">
 
-<header class="top">
-  <div class="top-in">
-    <a class="brand" href="{d['home']}" aria-label="{d['home_label']}">
-      <img src="/assets/logo.svg" alt="" width="30" height="30">
-      <span class="brand-name">tTerm</span>
-      <span class="beta">{d['beta']}</span>
-    </a>
-    <nav class="nav" aria-label="{d['nav_label']}">
-{nav}
-    </nav>
-    <div class="top-actions">
-      <details class="lang">
-        <summary aria-label="{d['lang_label']}: {d['lang_name']}">{GLOBE}<span>{d['lang'].upper()}</span></summary>
-        <div class="lang-menu">
-{lang_links(d['lang'], True, "          ")}
-        </div>
-      </details>
-      <a class="btn btn-ghost btn-sm" href="{app}">{d['signin']}</a>
-      <a class="btn btn-primary btn-sm" href="{app}">{d['start']}</a>
-      <details class="menu">
-        <summary aria-label="{d['menu']}">{MENU_OPEN}{MENU_CLOSE}</summary>
-        <nav class="menu-panel" aria-label="{d['menu']}">
-{menu}
-          <hr>
-          <div class="menu-langs" role="group" aria-label="{d['lang_label']}">
-{lang_links(d['lang'], False, "            ")}
-          </div>
-          <a class="btn btn-primary" href="{app}">{d['start']}</a>
-        </nav>
-      </details>
-    </div>
-  </div>
-</header>
+{header}
 
 <main id="main">
   <section class="donate-head">
@@ -218,20 +143,7 @@ def build(key: str, version: str) -> str:
   </section>
 </main>
 
-<footer class="foot">
-  <div class="foot-in">
-    <div class="foot-brand">
-      <a class="brand" href="{d['home']}" aria-label="{d['home_label']}">
-        <img src="/assets/logo.svg" alt="" width="24" height="24">
-        <span class="brand-name">tTerm</span>
-      </a>
-      <p class="foot-note">{d['license'].format(v=version)}</p>
-    </div>
-    <nav class="foot-links" aria-label="{d['foot_label']}">
-{foot}
-    </nav>
-  </div>
-</footer>
+{footer}
 
 </div>
 
@@ -254,8 +166,8 @@ document.querySelectorAll('.copy').forEach(function (b) {{
 
 
 if __name__ == "__main__":
-    version = pathlib.Path("VERSION").read_text().strip()
-    pathlib.Path("donate/index.html").write_text(build("en", version))
-    pathlib.Path("ru/donate/index.html").write_text(build("ru", version))
+    version = S.version()
+    (S.ROOT / "donate/index.html").write_text(build("en", version), encoding="utf-8")
+    (S.ROOT / "ru/donate/index.html").write_text(build("ru", version), encoding="utf-8")
     print("  donate/index.html")
     print("  ru/donate/index.html")

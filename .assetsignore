@@ -4,7 +4,13 @@
 # this list has to be complete rather than approximate: the first deploy
 # published .gitignore and wrangler's own temporary directory.
 
-# Build scripts and project notes
+# Build scripts, their templates and strings, and project notes
+build_site.py
+sitelib.py
+templates/
+i18n/
+tools/
+__pycache__/
 build_donate.py
 build_preview.py
 build_qr.py

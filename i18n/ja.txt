@@ -1,0 +1,518 @@
+# Strings of the site in English: one a line, `key = text`.
+# Every language has the same keys; the build stops when one is missing.
+# `{{$base}}` in a link is the language's folder: "" in English, "/ru" in Russian.
+
+# ------------------------------------------------------------ shell: the header and footer of every page
+shell.skip = 本文へスキップ
+shell.home_label = tTerm、トップページへ
+shell.beta = ベータ
+shell.nav_label = セクション
+shell.features = 機能
+shell.security = セキュリティ
+shell.pricing = 料金
+shell.resources = リソース
+shell.blog = ブログ
+shell.blog_note = tTerm の最新情報
+shell.faq = FAQ
+shell.faq_note = よくある質問への回答
+shell.channel = Telegram チャンネル
+shell.channel_note = リリースごとの短いお知らせ
+shell.source = GitHub のソースコード
+shell.source_note = tTerm の全コード（AGPL v3）
+shell.local = ローカルターミナル
+shell.lang_label = 言語：日本語
+shell.signin = サインイン
+shell.start = 無料で始める
+shell.menu = メニュー
+shell.tagline = サーバーとコンピューターのためのクラウドターミナル。
+shell.links = リンク
+shell.product = 製品
+shell.mac = Mac 版 tTerm
+shell.new = 新登場
+shell.bot = Telegram ボット
+shell.legal = 法的情報
+shell.terms = 利用規約
+shell.privacy = プライバシーポリシー
+shell.license = AGPL-3.0 ライセンス
+
+# ------------------------------------------------------------ blog: words and dates (build_updates.py)
+# blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
+blog.tag.web = tTerm Web
+blog.tag.bot = ボット
+blog.tag.site = サイト
+blog.read = 記事を読む
+blog.pinned = ピン留め
+blog.earlier = 過去の記事
+blog.more = 記事をもっと見る
+blog.minutes = other: {n} 分で読めます
+blog.pace = 520 characters
+date.months = 1月 | 2月 | 3月 | 4月 | 5月 | 6月 | 7月 | 8月 | 9月 | 10月 | 11月 | 12月
+date.months_heading = 1月 | 2月 | 3月 | 4月 | 5月 | 6月 | 7月 | 8月 | 9月 | 10月 | 11月 | 12月
+date.months_short = 1月 | 2月 | 3月 | 4月 | 5月 | 6月 | 7月 | 8月 | 9月 | 10月 | 11月 | 12月
+date.long = {y}年{month}{d}日
+date.long_noyear = {month}{d}日
+date.short = {month_short}{d}日
+date.heading = {y}年{month_heading}
+# date.day_one is {d} on the first of a month: 1er in French, 1º in Italian and Portuguese.
+date.day_one = 1
+# ------------------------------------------------------------ index
+# meta
+index.title = tTerm：サーバーとコンピューターのためのクラウドターミナル
+index.description = クラウドで動き続けるターミナル。ビルドの途中でノートパソコンを閉じても、どのデバイスからでも続きから再開できます。コマンドはすべてブロックとして表示されます。デバイスに鍵を置く必要も、ポートを開ける必要もありません。
+index.og_title = サーバーとコンピューターのためのクラウドターミナル
+# main
+# hero
+index.hero.1 = 新着：ブラウザーで使える tTerm<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">読む</span>
+index.hero.2 = サーバーとコンピューターの<br><span class="accent">クラウドターミナル</span>
+index.hero.3 = ターミナルはノートパソコンではなく、クラウドで動いています。ビルドの途中でふたを閉じても、スマートフォンで tTerm を開けば、すべてが離れたときのままです。デバイスに鍵を置く必要も、ポートを開ける必要もありません。
+index.hero.4 = 無料で始める
+index.hero.5 = オープンソース
+index.hero.6 = tTerm Web の作業画面：左側に色分けされたプロジェクトがあり、その中にマシン、ターミナル、フォルダーに分けたノートが並び、上部にはタブがあります。web-01 で git pull、ビルド、サービスの再起動が実行され、その隣のノートではリリースのチェックリストに順にチェックが入っていきます。続いて Cmd+K で api-prod のターミナルが開きます。
+# strip
+index.strip.1 = Linux サーバー
+index.strip.2 = 通常の SSH で接続。サーバー側はコマンド 1 つ
+index.strip.3 = macOS と Linux のコンピューター
+index.strip.4 = NAT の内側でも、ポートを開けずに
+index.strip.5 = どのブラウザーでも
+index.strip.6 = ノートパソコン、タブレット、スマートフォンで
+# how
+index.how.1 = 使い方
+index.how.2 = 最初のコマンドまで 3 ステップ
+index.how.3 = マシンを追加
+index.how.4 = サーバーなら、コマンドを 1 つ実行するだけで一覧に加わります。コンピューターには、内側から接続する小さなエージェントを入れます。
+index.how.5 = ターミナルを開く
+index.how.6 = どのブラウザーでも使えます。別々のプロジェクトのタブを横に並べられ、どのマシンにも Cmd+K ですぐ移動できます。
+index.how.7 = いつもどおりに作業
+index.how.8 = いつものシェル、いつものプログラム、そして sudo。タブを閉じても、ターミナルは動き続けます。
+# features
+index.features.1 = 機能
+index.features.2 = コマンドを理解するターミナル
+index.features.3 = tTerm は、各コマンドがどこで始まりどこで終わったか、どう終了したか、いまどこにいるかを把握しています。だから出力は、ただ読むだけでなく、そのまま作業に使えるものになります。
+index.features.4 = コマンドはすべてブロックに
+index.features.5 = 終了コード、時間、ディレクトリ、ブランチ。ブロックは丸ごとコピーでき、折りたたみも再実行もできます。
+index.features.6 = <span class="v-key">&#x2192;</span>履歴から候補<span class="v-key">Tab</span>補完
+index.features.7 = エディターのような入力行
+index.features.8 = 複数行の入力、全デバイスで共通の履歴、候補表示と Tab 補完。危険なコマンドの前には、tTerm がもう一度確認します。
+index.features.9 = ディレクトリもブランチもワンクリックで
+index.features.10 = 入力行の上のディレクトリやブランチをクリックして、別のものを選ぶだけです。cd や git switch は通常のブロックとして実行されます。
+index.features.11 = vim も htop も全画面で
+index.features.12 = 全画面のプログラムも、ほかのターミナルと同じように動きます。従来のやり方がよければ、クラシックモードもあります。
+index.features.13 = 入力待ち
+index.features.14 = タブを閉じても続くターミナル
+index.features.15 = ビルドの途中でノートパソコンを閉じても、ビルドは続き、出力も残ります。どのデバイスからでも戻ってこられます。
+index.features.16 = Cmd+K ですべてにアクセス
+index.features.17 = ターミナルに移動する、任意のマシンで新しいターミナルを開く、アクションを実行する。タブを探し回る代わりに、ショートカット 1 つで済みます。
+index.features.18 = マシンのすぐそばにノート
+index.features.19 = 手順書、チェックリスト、アクセス情報などのノートはプロジェクトの中にあり、ターミナルの隣のタブで開きます。
+index.features.20 = プロジェクトを色分け
+index.features.21 = クライアント、環境、タスクごとにプロジェクトを作り、それぞれに専用のマシンとノートを置けます。色を見れば、タブがどのプロジェクトのものかがわかります。
+index.features.22 = <span class="v-key">Enter</span>保存<span class="v-key">Esc</span>キャンセル
+index.features.23 = ターミナルに名前を
+index.features.24 = terminal 2 ではなく、deploy、logs、migrations と名付けられます。ターミナルをダブルクリックし、名前を入力して Enter を押します。
+# security
+index.security.1 = セキュリティ
+index.security.2 = 鍵は預かりません。<br>ポートも開けません。
+index.security.3 = マシンへのアクセス権は簡単に付与でき、同じくらい簡単に取り消せます。そのしくみを紹介します。
+index.security.4 = 有効期間 2 分の証明書
+index.security.5 = 接続のたびに、あなたの名前が入った専用の SSH 証明書を発行します。使えるのはそのサーバー 1 台だけです。お使いの鍵は一切必要ありません。
+index.security.6 = 署名を分離
+index.security.7 = CA の鍵は、ネットワークにつながっていない別のプロセスにあります。コアはこの鍵を読めず、署名を依頼できるだけです。署名はすべて記録されます。
+index.security.8 = sshd_config はそのまま
+index.security.9 = 信頼の設定は、1 人のユーザーの authorized_keys に書く 1 行だけです。何も再起動しません。
+index.security.10 = 接続は内側から
+index.security.11 = コンピューターのエージェントは自分から外へ接続するので、受信ポートは必要ありません。アンインストールもコマンド 1 つです。
+index.security.12 = 第三者を介さない
+index.security.13 = ページもターミナルも、EU にある tTerm のサーバーに直接つながります。Cloudflare は DNS として使っているだけで、コマンドを目にすることはありません。
+index.security.14 = tTerm Web とエージェントは AGPL のオープンソースです。インストールスクリプトは短いので、実行する前にぜひ読んでください。
+# teams
+index.teams.1 = チーム向け
+index.teams.2 = 近日公開
+index.teams.3 = 誰が何を実行したかがわかる
+index.teams.4 = 同僚をプロジェクトに招待し、それぞれに役割を割り当てられます。サーバーの鍵を配って回る必要はもうありません。
+index.teams.5 = <b>プロジェクトの役割：</b>オーナー、管理者、メンバー、閲覧者。
+index.teams.6 = <b>共有ログ：</b>誰が、何を、どこで、いつ実行し、どう終わったか。
+index.teams.7 = <b>ライブ閲覧：</b>同僚のターミナルをその場で見られます。見られている側には、誰が見ているかが常に表示されます。
+index.teams.8 = Acme プロジェクトのログ<span class="watching"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Anna が閲覧中</span>
+index.teams.9 = AN
+index.teams.10 = DG
+index.teams.11 = IK
+# pricing
+index.pricing.1 = 料金
+index.pricing.2 = 開発期間中は無料
+index.pricing.3 = いまの tTerm の機能はすべて無料で使えます。有料プランは今後導入する予定で、その際は十分前もってお知らせします。
+index.pricing.4 = 提供中
+index.pricing.5 = 無料
+index.pricing.6 = tTerm がベータ版のあいだは、どなたでも使えます。カード登録も試用期間もありません。
+index.pricing.7 = マシンは 50 台まで
+index.pricing.8 = 同時に開けるターミナルは 24 個まで
+index.pricing.9 = サーバーとコンピューター
+index.pricing.10 = 自分で作れるプロジェクトとノート
+index.pricing.11 = 出力付きのコマンド履歴を 30 日間保存
+index.pricing.12 = タブを閉じても続くターミナル
+index.pricing.13 = ダークテーマとライトテーマ
+# faq
+index.faq.1 = よくある質問
+index.faq.2 = 自分のコンピューターに何かをインストールする必要はありますか？
+index.faq.3 = いいえ、ブラウザーがあれば十分です。インストールが必要なのは接続先のマシンだけで、サーバーにはコマンドを 1 つ実行し、コンピューターには小さなエージェントを入れます。
+index.faq.4 = どんなデータを保存していますか？
+index.faq.5 = 履歴の表示に使うコマンドとその出力（30 日間）、それにサインインの記録です。鍵やパスワードは保存しません。詳しくは<a href="/privacy/">プライバシーポリシー</a>をご覧ください。
+index.faq.6 = 一般的な SSH クライアントと比べて、何が良いのですか？
+index.faq.7 = どのブラウザーからでも使え、デバイスに鍵を置く必要がありません。ノートパソコンを閉じてもターミナルは切れません。さらに、コマンドはすべてブロックとして表示されるので、コピーも再実行も簡単です。
+index.faq.8 = tTerm のアクセス権を取り消すにはどうすればよいですか？
+index.faq.9 = tTerm でサーバーを削除すると、tTerm は自身のアクセス権をそのサーバーから取り除きます。サーバーが応答しない場合は、サーバー上で同じことを行うためのコマンドを tTerm が表示します。インストーラーが設定したそれ以外のものを削除する方法は、スクリプトの冒頭に書かれています。エージェントは、コマンド 1 つでコンピューターから削除できます。
+index.faq.10 = Telegram ボットはどうなりますか？
+index.faq.11 = 今後も残り、引き続き使えます。チャットの中でそのまま使えるターミナル、<a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a> です。今のところ、Web アプリとボットは別々に動いています。
+index.faq.12 = サポートにはどう連絡すればよいですか？
+index.faq.13 = <a href="mailto:support@tterm.net">support@tterm.net</a> までメールでご連絡ください。脆弱性を見つけた場合は、<a href="mailto:security@tterm.net">security@tterm.net</a> 宛てにお送りください。
+# blog
+index.blog.1 = ブログ
+index.blog.2 = tTerm の最新情報
+index.blog.3 = すべての記事
+# final
+index.final.1 = 最初のターミナルまで 1 分
+index.final.2 = メールアドレスでサインインし、コマンド 1 つでサーバーを追加すれば、どのブラウザーからでも作業できます。
+index.final.3 = ソースコードを見る
+
+# ------------------------------------------------------------ blog
+# meta
+blog.title = tTerm ブログ：最新情報
+blog.description = tTerm の Web アプリ、Telegram ボット、サイトについて、リリースしたものと変わったことをお伝えします。
+blog.og_title = ブログ：最新情報
+# main
+# blog-head
+blog.blog-head.1 = ブログ
+blog.blog-head.2 = tTerm の最新情報
+blog.blog-head.3 = リリースしたものと変わったことをお伝えします。リリースごとの短いお知らせは、<a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram チャンネル</a>にも投稿しています。
+# main
+blog.main.2 = 注目の記事
+blog.main.3 = すべての記事
+# near
+blog.near.1 = Telegram チャンネル
+blog.near.2 = 新しい記事は Telegram にも届きます
+blog.near.3 = tTerm のチャンネルでは、リリースごとに短いお知らせを配信しています。
+blog.near.4 = チャンネルを開く
+# ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
+mac.download = Mac 版をダウンロード
+mac.title = クラウドを内蔵した<br>ローカルターミナル
+mac.lead = クラウド版と並ぶ、tTerm の新しい製品です。Mac 版 tTerm は、お使いの Mac のシェルを専用のウィンドウで開いてブロックで表示し、アカウントがなくても使えます。サインインすると、同じウィンドウにクラウドのサーバーが表示され、Mac にあるサーバーと鍵をクラウドへ移すこともできます。
+mac.note = 無料 · macOS 11 以降<br>Windows と Linux にも近日対応
+mac.soon = 近日公開
+mac.window_label = Mac 版 tTerm のウィンドウ：左側にプロジェクトがあり、Personal の中に this Mac の印が付いたこの MacBook-Pro とそのターミナル、その下にクラウドの web-01 サーバーがあります。上部にはこの Mac のタブとクラウドのタブが並び、フィードには Mac で実行したコマンドがブロックで表示されています：git pull、npm test、docker compose。Mac のメニューバーでは tTerm のアイコンのメニューが開いていて、Open tTerm、MacBook-Pro: online in tTerm Web、Quit tTerm の項目が並んでいます。
+mac.p1.title = 自分の Mac でもブロック
+mac.p1.text = この Mac の bash や zsh で、コマンドがそれぞれ出力、終了コード、時間とともにブロックになります。履歴は 30 日間、Mac に保存されます。
+mac.p2.title = 同じウィンドウにクラウドも
+mac.p2.text = サインインすると、Mac のターミナルの隣に、サーバーとそのノート、⌘K による全体検索が開きます。
+mac.p3.title = クラウドへの移行
+mac.p3.text = この Mac にあるサーバーと鍵を、アプリが数クリックでクラウドへ移します。移したあとは、どのブラウザーからでも開けます。
+mac.p4.title = どこからでも自分の Mac に
+mac.p4.text = アプリがこの Mac を tTerm Web につなぎ、ブラウザーやスマートフォンからこの Mac のターミナルを使えるようにします。アプリはメニューバーに常駐します。
+mac.strip.title = ブラウザーと Mac
+mac.strip.text = どのブラウザーでも、Mac なら専用ウィンドウでも
+mac.how.1 = サーバーなら、コマンドを 1 つ実行するだけで一覧に加わります。コンピューターには小さなエージェントを入れ、Mac は Mac 版 tTerm で接続します。どちらも内側から接続します。
+mac.how.2 = どのブラウザーでも、Mac 版 tTerm でも使えます。別々のプロジェクトのタブを横に並べられ、どのマシンにも Cmd+K ですぐ移動できます。
+mac.security = コンピューターのエージェントも Mac 版 tTerm も自分から外へ接続するので、受信ポートは必要ありません。エージェントはコマンド 1 つでアンインストールできます。
+mac.faq.install = いいえ、ブラウザーがあれば十分です。インストールが必要なのは接続先のマシンだけで、サーバーにはコマンドを 1 つ実行し、コンピューターには小さなエージェントを入れます。Mac なら、エージェントの代わりに Mac 版 tTerm をインストールでき、Mac 自体のターミナルとしても使えます。
+mac.faq.app.q = コンピューター用のアプリはありますか？
+mac.faq.app.a = はい、<a href="{{$base}}/download/">Mac 版 tTerm</a> があります。Mac 自体のターミナルをブロックで、アカウントなしで使え、サインインすれば同じウィンドウにクラウドのサーバーも表示されます。Windows 版と Linux 版も近日公開予定です。
+# download page
+download.title = Mac 版 tTerm：ローカルターミナル
+download.description = クラウドを内蔵したローカルターミナル：Mac のシェルをブロックで表示し、その隣にサーバーやノートなど、tTerm にあるすべてを並べます。無料、macOS 11 以降に対応。
+download.lead = クラウド版と並ぶ tTerm の新しい製品、Mac で動くローカルターミナルです。普段のターミナルと同じように Mac で作業し、準備ができたら、アプリから直接サーバーと鍵をクラウドへ移せます。
+download.meta = 無料 · macOS 11 以降 · Apple シリコンと Intel
+download.phone = <b>Mac 版 tTerm は Mac にインストールするアプリです。</b>このページを Mac で開いてください。スマートフォンからは、ブラウザーでそのまま tTerm Web を使えます。
+download.open_web = tTerm Web を開く
+download.whats_new = 最新情報
+download.all_versions = GitHub の全バージョン
+download.source = ソースコード
+download.cloud.eyebrow = クラウドとの関係
+download.cloud.title = Mac で始めて、<br>クラウドへ移行
+download.cloud.lead = アプリはクラウドの tTerm に代わるものではなく、それを補うものです。アカウントは 1 つで、サーバーもノートも共通です。まずは自分の Mac で始め、どこからでもアクセスしたくなったら、すべてをクラウドへ移せます。
+download.cloud.mac = Mac で動くローカルターミナル：このコンピューターのシェルをブロックで表示し、履歴とノートもこの Mac に保存します。アカウントがなくても使えます。
+download.cloud.move_title = クラウドへの移行
+download.cloud.move = 準備ができたら、アプリが Mac の <code>~/.ssh</code> からサーバーと鍵を見つけ、数クリックでクラウドへ移します。
+download.cloud.web = クラウドターミナル：サーバー、ターミナル、ノートはクラウドにあり、どのブラウザーからでも、スマートフォンからでも開け、チームでも使えます。
+download.features.eyebrow = できること
+download.features.title = Mac とクラウドを 1 つのウィンドウに
+download.install.eyebrow = インストール方法
+download.install.title = 3 ステップで Mac を tTerm に
+download.install.1.title = ファイルを開く
+download.install.1.text = ダウンロードした tTerm.dmg を開き、tTerm を「アプリケーション」フォルダーにドラッグします。
+download.install.2.title = tTerm を起動
+download.install.2.text = この Mac のターミナルがすぐに使えます。アカウントも設定も必要ありません。
+download.install.3.title = サインインして移行
+download.install.3.text = Sign in を押すとブラウザーが開きます。そこで確認すると、ウィンドウにサーバーとノートが表示されます。この Mac にあるサーバーと鍵をクラウドへ移すことも、アプリが提案します。
+download.others.eyebrow = ほかの OS
+download.others.title = Mac だけではありません
+download.others.windows = Windows 版アプリは開発中です。
+download.others.linux = それまでは、Linux のコンピューターなら小さなエージェントで tTerm Web に接続できます。
+download.others.browser = tTerm Web は、スマートフォンでも、タブレットでも、どのコンピューターでも使えます。<a href="https://app.tterm.net">開く</a>
+download.faq.1.q = tTerm Web とは何が違いますか？
+download.faq.1.a = tTerm Web は、ブラウザーで使うクラウドターミナルです。サーバーやコンピューターのターミナルはクラウドにあり、どこからでも開けます。Mac 版 tTerm は Mac そのもので動くローカルターミナルで、そのウィンドウの中でクラウドのすべてを使えます。アカウントは 1 つで、サーバーもノートも共通です。
+download.faq.2.q = 無料ですか？
+download.faq.2.a = はい。tTerm がベータ版のあいだは、アプリも含めてどなたでも無料です。
+download.faq.3.q = アカウントは必要ですか？
+download.faq.3.a = いいえ。サインインしなくても、tTerm はこの Mac で使えます。シェル、履歴、ノートはこの Mac に残ります。アカウントはクラウドを使うためのもので、サーバー、すべてのデバイスで使えるノート、ブラウザーからのこの Mac へのアクセスに必要です。
+download.faq.4.q = コマンドはどこに保存されますか？
+download.faq.4.a = この Mac で実行したコマンドと出力は、あなただけが読めるアプリのフォルダーに 30 日間保存されます。サーバー上のコマンドは、tTerm Web と同じくクラウドに保存されます。
+download.faq.5.q = アプリは署名されていますか？
+download.faq.5.a = はい。Apple Developer ID で署名され、Apple による確認（公証）も済んでいます。そのため macOS は警告なしでアプリを開きます。
+download.faq.6.q = 削除するにはどうすればよいですか？
+download.faq.6.a = メニューバーから tTerm を終了し、「アプリケーション」フォルダーからゴミ箱へドラッグします。サインインしていた場合は、Settings → Devices でこの Mac の登録を解除できます。
+download.faq.7.q = コードは公開されていますか？
+download.faq.7.a = はい。tTerm 全体と同じく、AGPL v3 で公開しています：<a href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">github.com/tterm-net/tterm-app</a>。
+download.final.title = Mac での最初のコマンドまで 1 分
+download.final.text = tTerm をダウンロードし、「アプリケーション」フォルダーにドラッグして起動するだけです。アカウントは必要ありません。
+
+# ------------------------------------------------------------ 404
+notfound.title = ページが見つかりません · tTerm
+notfound.description = お探しのページは存在しません。
+notfound.h1 = ここには何もありません
+notfound.text = お探しのページは存在しません。移動したか、リンクが現在のサイトより古いのかもしれません。
+notfound.home = トップページへ
+
+# ------------------------------------------------------------ post: /blog/answer-while-it-runs/
+# meta
+post.answer-while-it-runs.title = 実行中のコマンドに応答できるようになりました · tTerm ブログ
+post.answer-while-it-runs.description = これまでは、プログラムに Continue? (Y/n) と聞かれても、答える方法がありませんでした。コマンドが終わるまでメッセージが送信されなかったためです。今後は、コマンドの実行中に入力した内容が、普通のターミナルと同じようにそのコマンドへの入力として渡されます。ボットはそうしたメッセージに 👌 のリアクションを付けます。
+post.answer-while-it-runs.og_title = 実行中のコマンドに応答できるようになりました
+# main
+post.answer-while-it-runs.main.2 = ブログ
+post.answer-while-it-runs.main.3 = これまでは、プログラムに <code>Continue? (Y/n)</code> と聞かれても、答える方法がありませんでした。コマンドが終わるまでメッセージが送信されなかったためです。今後は、コマンドの実行中に入力した内容が、普通のターミナルと同じようにそのコマンドへの入力として渡されます。ボットはそうしたメッセージに 👌 のリアクションを付けます。
+# prose
+post.answer-while-it-runs.prose.1 = そのほかの変更点
+post.answer-while-it-runs.prose.2 = wrangler や npm のように、下でスピナーが回っている <code>(Y/n)</code> 形式の質問も認識するようになりました。<code>y</code> と <code>n</code> のボタンが表示されます
+post.answer-while-it-runs.prose.3 = Stop ボタンがコマンドの出力のすぐ下に移り、Ctrl+C で中断するようになりました
+post.answer-while-it-runs.prose.4 = エージェントを入れたコンピューターが、コマンドのない状態が 30 分続いても一覧から消えなくなりました
+post.answer-while-it-runs.prose.5 = Telegram でブログを購読
+# more-section
+post.answer-while-it-runs.more-section.1 = ブログのほかの記事
+post.answer-while-it-runs.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/independent-windows/
+# meta
+post.independent-windows.title = コンピューターのウィンドウが互いに独立しました · tTerm ブログ
+post.independent-windows.description = サーバーでは以前から、ウィンドウはそれぞれ独立したターミナルでした。一方、エージェントを入れたコンピューターでは、すべてのウィンドウが 1 つのシェルを共有していました。1 つのウィンドウで cd するとほかのウィンドウのディレクトリも変わり、どこかでプログラムが動いているあいだ、ほかのウィンドウは待たされていました。今後は、サーバーと同じく、ウィンドウごとに専用のシェルが割り当てられます。あるウィンドウで開発サーバーを動かしたまま、別のウィンドウで作業できます。
+post.independent-windows.og_title = コンピューターのウィンドウが互いに独立しました
+# main
+post.independent-windows.main.2 = ブログ
+post.independent-windows.main.3 = サーバーでは以前から、ウィンドウはそれぞれ独立したターミナルでした。一方、エージェントを入れたコンピューターでは、すべてのウィンドウが 1 つのシェルを共有していました。1 つのウィンドウで <code>cd</code> するとほかのウィンドウのディレクトリも変わり、どこかでプログラムが動いているあいだ、ほかのウィンドウは待たされていました。今後は、サーバーと同じく、ウィンドウごとに専用のシェルが割り当てられます。あるウィンドウで開発サーバーを動かしたまま、別のウィンドウで作業できます。
+# prose
+post.independent-windows.prose.1 = この機能を使うには、エージェントを更新してください：<code>/addhost</code> → Computer を選び、表示されたコマンドを同じコンピューターで実行します。マシンは一覧にそのまま残ります。エージェントが古い場合は、2 つ目のウィンドウを開いたときにボットが知らせます。
+post.independent-windows.prose.2 = そのほかの変更点
+post.independent-windows.prose.3 = ウィンドウのボタンは一覧の下にまとまり、選択中の行に対して働くので、切り替えても位置が動かなくなりました
+post.independent-windows.prose.4 = コマンドが実行中のウィンドウに切り替えると、終了を待たずに、ボットがすぐにその旨を伝えます
+post.independent-windows.prose.5 = エージェントがすぐに再接続した場合に、コンピューターが offline と表示されなくなりました
+post.independent-windows.prose.6 = Telegram でブログを購読
+# more-section
+post.independent-windows.more-section.1 = ブログのほかの記事
+post.independent-windows.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/notes-and-projects/
+# meta
+post.notes-and-projects.title = ノート、色分けされたプロジェクト、ターミナルの名前 · tTerm ブログ
+post.notes-and-projects.description = 手順書、チェックリスト、アクセス情報などのノートを、対象のマシンのすぐそばに置けるようになりました。プロジェクトを自分で作って色を付けたり、ターミナルに名前を付けたり、マシンやノートを別のプロジェクトへ移したりもできます。公開から最初の数日で tTerm Web に加わった機能を紹介します。
+post.notes-and-projects.og_title = ノート、色分けされたプロジェクト、ターミナルの名前
+# main
+post.notes-and-projects.main.2 = ブログ
+# demo-frame
+post.notes-and-projects.demo-frame.1 = tTerm Web の作業画面：左側に色分けされたプロジェクトがあり、その中にマシン、ターミナル、フォルダーに分けたノートが並び、上部にはタブがあります。Client X の web-01 でデプロイが進むあいだ、その隣のノートではリリースのチェックリストに順にチェックが入っていきます。続いて Cmd+K で Acme の api-prod のターミナルが開きます。
+# main
+post.notes-and-projects.main.3 = ノートはマシンのそばのフォルダーに。プロジェクトはそれぞれ専用の色で。
+# prose
+post.notes-and-projects.prose.1 = マシンのすぐそばにノート
+post.notes-and-projects.prose.2 = ターミナルがプロジェクトのマシン上にあるのと同じように、ノートはプロジェクトのフォルダーにあります。デプロイの手順書、リリースのチェックリスト、アクセス用の鍵の保管場所といったものです。ノートはターミナルの隣にタブとして開くので、手順書を見ながら作業を進められます。
+post.notes-and-projects.prose.3 = 入力と同時に Markdown を反映
+post.notes-and-projects.prose.4 = 行頭の <code>#</code> で見出し、<code>- [ ]</code> でチェックリストの項目、バッククォート 3 つでコードブロックになり、<code>/</code> でこれらをまとめたメニューが開きます。コードには Copy ボタンが付きます。チェックリストでは誰がいつ項目にチェックを入れたかがわかり、ノート全体を Markdown としてコピーできます。
+post.notes-and-projects.prose.5 = 2 台のデバイスから同時に編集
+post.notes-and-projects.prose.6 = ノートは入力するそばから保存されます。2 台のデバイスで同時に編集しても両方の変更が残り、tTerm が確認するのは、両側で同じ箇所が変更されたときだけです。接続が切れても、入力した内容はブラウザーに残り、次にノートを開いたときに戻ってきます。
+post.notes-and-projects.prose.7 = プロジェクトを自由に作成
+post.notes-and-projects.prose.8 = Personal のほかに、プロジェクトを自分で作れるようになりました。クライアントごと、環境ごと、仕事ごとに作れ、それぞれが専用のマシン、ターミナル、ノートを持ちます。どのプロジェクトも名前を変更でき（Personal も含みます）、タブに付くコード（CX/web-01 の CX など）も変えられます。マシンのないプロジェクトは、ノートごと削除できます。
+post.notes-and-projects.prose.9 = マシンは、ターミナルを動かしたまま別のプロジェクトへ移せます。マシン自体には何も変更が加わりません。ノートも、別のプロジェクトの好きなフォルダーへ移せます。
+post.notes-and-projects.prose.10 = プロジェクトを色分け
+post.notes-and-projects.prose.11 = 各プロジェクトには 8 色のうち 1 色が割り当てられます。サイドバーとタブのプロジェクトコードがその色で塗られるので、どのプロジェクトのタブかがひと目でわかります。アカウントページでは、色をコードだけに付けるか、サイドバーのプロジェクトのブロック全体に付けるかを選べます。
+post.notes-and-projects.prose.12 = ターミナルの名前
+post.notes-and-projects.prose.13 = ターミナルを terminal 2 のままにしておく必要はもうありません。deploy、logs、migrations のように名前を付けられます。タブ、サイドバー、プロジェクトのページのいずれかでターミナルをダブルクリックし、名前を入力して Enter を押します。名前は、そのターミナルが表示されるすべての場所に表示されます。
+post.notes-and-projects.prose.14 = 新しいサイドバーとプロジェクトごとのページ
+post.notes-and-projects.prose.15 = サイドバーには、プロジェクトごとにマシンとそのターミナル、フォルダーに分けたノートが並びます。マシンやフォルダーをクリックすると折りたたまれるだけで、横の＋ボタンでターミナルを開いたりノートを作成したりします。プロジェクト名をクリックするとそのページが開き、すべてのマシンと開いているターミナル、すべてのノートが表示されます。
+post.notes-and-projects.prose.16 = 今後の予定
+post.notes-and-projects.prose.17 = 次に取り組む大きなテーマは、チームでの作業です。プロジェクトへのメンバーの参加、役割、コマンドの共有ログ、同僚のターミナルのライブ閲覧を予定しています。閲覧されている側には、誰が見ているかが常に表示されます。そのときには、ノートもプロジェクトの全員で共有されるようになります。
+post.notes-and-projects.prose.18 = 並行して、コンピューター用の tTerm も開発しています。同じインターフェースを専用のウィンドウで使い、お使いのコンピューターのシェルを操作できるものです。
+post.notes-and-projects.prose.19 = tTerm Web を試す
+post.notes-and-projects.prose.20 = メールアドレスでサインインします。コードが届き、それ以降は自分のデバイスなら短いコードだけで済みます。最初のサーバーは 1 分で接続できます。
+post.notes-and-projects.prose.21 = 無料で始める
+# more-section
+post.notes-and-projects.more-section.1 = ブログのほかの記事
+post.notes-and-projects.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/open-source/
+# meta
+post.open-source.title = 有料プランを予定していても tTerm のコードを公開する理由 · tTerm ブログ
+post.open-source.description = tTerm のコードはすべて、MIT に代わって AGPL v3 で公開されるようになりました。有料プランもまもなく始まります。この 2 つが両立する理由と、サーバーまで公開した理由を説明します。
+post.open-source.og_title = 有料プランを予定していても tTerm のコードを公開する理由
+# main
+post.open-source.main.2 = ブログ
+# demo-frame
+post.open-source.demo-frame.1 = tTerm Web で MacBook のターミナルを開き、tterm-web リポジトリのコピーで作業している画面：git remote でコピー元が github.com/tterm-net/tterm-web であること、git log でライセンスがバージョン 0.0.1 から含まれていること、ライセンスファイルに GNU Affero General Public License のバージョン 3 と書かれていることがわかります。
+# main
+post.open-source.main.3 = tTerm Web のライセンスを、tTerm Web 自身で確認：最初のバージョンから AGPL v3 です。
+# prose
+post.open-source.prose.1 = 変わったこと
+post.open-source.prose.2 = 10月11日から、tTerm のコードはすべて AGPL v3 で公開しています。対象は tTerm Web の全体（ページとサーバーの両方）、コンピューター用のエージェント、Telegram ボット、そしてこのサイトです。現在開発中のコンピューター用 tTerm は、最初のバージョンから AGPL v3 です。それ以前は、ボット、エージェント、サイトを MIT で公開していました。すでに MIT でリリースしたバージョンは MIT のままです。ライセンスを後からさかのぼって取り消すことはできないためです。新しいものにはすべて AGPL が適用されます。
+post.open-source.prose.3 = サーバーまで公開する理由
+post.open-source.prose.4 = tTerm はお使いのマシンに接続します。サーバーには sudo 権限を持つユーザー tterm としてログインするので、事実上 root を得ることになります。それほどのアクセス権を持つサービスを、言葉だけで信用すべきではありません。だからこそ、コア、証明書に署名する独立したプログラム、インストーラー、エージェントと、アクセスに関わるものはすべて公開しています。
+post.open-source.prose.5 = トップページに書いた約束は、どれもコードで確かめられます。証明書の有効期間は 2 分で、使えるのは 1 台のサーバーだけです。CA の鍵は、ネットワークにつながっていない別のプロセスに保管されています。インストーラーは <code>authorized_keys</code> に 1 行を追加するだけで、<code>sshd_config</code> には触れません。app.tterm.net のサーバーは公開リポジトリから直接更新されるので、GitHub にあるコードがそのまま実際に動いているコードです。
+post.open-source.prose.6 = アプリだけを公開し、サーバーは非公開にしておくことはよくあります。しかし、他人のマシンで root を持つターミナルにとって、それは正しくないと私たちは考えています。
+post.open-source.prose.7 = MIT ではなく AGPL にした理由
+post.open-source.prose.8 = MIT ではほぼ何でも許されます。コードを持ち出して改良し、非公開のサービスとして運営することもできます。そうなると、そのサービスに自分のサーバーをつないだ人たちには、誰に、どのように root を渡したのかを知るすべがありません。
+post.open-source.prose.9 = AGPL ではそれが許されません。tTerm を改変したコピーを他人向けのサービスとして運営する人は、そのコードを利用者に公開しなければなりません。私たちのコードをもとにしたサービスは、どれも私たちと同じように透明であり続けます。
+post.open-source.prose.10 = これによって利用者が何かに縛られることはありません。マシンを接続して作業するのも、自分のサーバーに tTerm を立てるのも自由です。ライセンスが関わってくるのは、tTerm をほかの人に配布する場合や、改変したバージョンをほかの人向けのサービスとして運営する場合だけです。
+post.open-source.prose.11 = では、なぜ料金を払うのか
+post.open-source.prose.12 = 料金は、コードへのアクセスではなくサービスに対して払うものです。tTerm を毎日動かし続けるには、EU のサーバーとデータベースのバックアップ、メール、サポート、そして更新に目を配る人が必要です。有料プランの収益はそこに使います。プランについては前もってお知らせします。tTerm がベータ版のあいだは、どなたでも無料です。
+post.open-source.prose.13 = tTerm を自分で動かすこともできます。AGPL はそれを認めています。ただ、たいていの人に必要なのはターミナルであって、自分でホストし、更新し、バックアップするサービスがもう 1 つ増えることではありません。
+post.open-source.prose.14 = ほかのオープンなプロジェクトも、同じやり方を取っています。2020年、Plausible は、企業が何も還元しないままそのコードで競合サービスを作ることのないよう、MIT から AGPL に移行しました。2021年には Grafana が Apache 2.0 から AGPL に移行しています。どちらも、オープンなコードのクラウド版を販売しています。
+post.open-source.prose.15 = コードの場所
+post.open-source.prose.16 = tTerm のコードはすべて、GitHub 上の 1 つの組織にあります：<a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a>。各リポジトリとその役割は次のとおりです。
+post.open-source.prose.17 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-web" target="_blank" rel="noopener">tterm-web</a></strong><br>tTerm Web のページとサーバー：ターミナルを動かし続けるコア、証明書に署名する独立したプログラム、サーバー用とコンピューター用のインストーラー。
+post.open-source.prose.18 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">tterm-app</a></strong><br>コンピューター用の tTerm：同じページを専用のウィンドウで開き、そのコンピューターのシェルを扱います。エンジンは Rust で書かれていて、まず macOS から対応します。
+post.open-source.prose.19 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-agent" target="_blank" rel="noopener">tterm-agent</a></strong><br>コンピューター用のエージェント：Mac や Linux マシンを tTerm Web とボットに接続します。自分から外へ接続し、ポートは開けません。
+post.open-source.prose.20 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-telegram" target="_blank" rel="noopener">tterm-telegram</a></strong><br>tTerm の出発点となった Telegram ボット。
+post.open-source.prose.21 = <strong><a class="repo" href="https://github.com/tterm-net/site" target="_blank" rel="noopener">site</a></strong><br>このサイト。
+post.open-source.prose.22 = <strong><a class="repo" href="https://github.com/tterm-net/.github" target="_blank" rel="noopener">.github</a></strong><br>GitHub 上の組織ページ。
+post.open-source.prose.23 = インストーラーは短いので、実行する前にぜひ読んでください。
+post.open-source.prose.24 = tTerm Web を試す
+post.open-source.prose.25 = メールアドレスでサインインします。コードが届き、それ以降は自分のデバイスなら短いコードだけで済みます。最初のサーバーは 1 分で接続できます。
+post.open-source.prose.26 = 無料で始める
+# more-section
+post.open-source.more-section.1 = ブログのほかの記事
+post.open-source.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/several-terminals/
+# meta
+post.several-terminals.title = 1 台のマシンで複数のターミナル · tTerm ブログ
+post.several-terminals.description = 同じサーバーで、複数のターミナルを開いておけるようになりました。1 つでログを追い、もう 1 つで作業する、といった使い方ができます。/use では別々の行として表示され、それぞれが専用のシェルを持ちます。片方で cd しても、もう片方のディレクトリは変わりません。
+post.several-terminals.og_title = 1 台のマシンで複数のターミナル
+# main
+post.several-terminals.main.2 = ブログ
+post.several-terminals.main.3 = 同じサーバーで、複数のターミナルを開いておけるようになりました。1 つでログを追い、もう 1 つで作業する、といった使い方ができます。<code>/use</code> では別々の行として表示され、それぞれが専用のシェルを持ちます。片方で <code>cd</code> しても、もう片方のディレクトリは変わりません。
+# prose
+post.several-terminals.prose.1 = そのほかの変更点
+post.several-terminals.prose.2 = 出力は、コマンドの終了時にまとめて届くのではなく、届いたそばから表示されるようになりました。長いコマンドを途中で止める Stop ボタンもあります
+post.several-terminals.prose.3 = 応答を待っているコマンドは、気づくまで黙って止まっているのではなく、その旨を知らせて返答用のボタンを表示するようになりました
+post.several-terminals.prose.4 = git のブランチが、プロンプトの上の目に入る位置に表示されるようになりました
+post.several-terminals.prose.5 = 長めの出力も、ファイルにならずにチャットにそのまま残ります
+post.several-terminals.prose.6 = Telegram でブログを購読
+# more-section
+post.several-terminals.more-section.1 = ブログのほかの記事
+post.several-terminals.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/tterm-is-live/
+# meta
+post.tterm-is-live.title = tTerm を公開しました · tTerm ブログ
+post.tterm-is-live.description = サーバーのためのターミナルを、ここ Telegram で。コマンドを入力するとマシン上で実行され、終了コード、作業ディレクトリ、git のブランチを添えたメッセージで結果が返ってきます。シェルは、前回作業を終えたところを覚えています。
+post.tterm-is-live.og_title = tTerm を公開しました
+# main
+post.tterm-is-live.main.2 = ブログ
+# prose
+post.tterm-is-live.prose.1 = 現在できること
+post.tterm-is-live.prose.2 = SSH 経由の Linux サーバー：コマンド 1 つで接続でき、<code>sshd_config</code> の編集は不要
+post.tterm-is-live.prose.3 = ポートを開けない小さなエージェントを介した、macOS と Linux のコンピューター
+post.tterm-is-live.prose.4 = Telegram の任意のユーザーにアクセス権を付与：期限付きでも、取り消すまででも
+post.tterm-is-live.prose.5 = 相手が実行したコマンドは、すべて相手の名前付きで自分のログに記録されます
+post.tterm-is-live.prose.6 = 無料、オープンソース、登録不要。
+post.tterm-is-live.prose.7 = ベータ版です。問題なく動きますが、これからも変わっていきます。変更はこのチャンネルでお知らせします。
+post.tterm-is-live.prose.8 = Telegram でブログを購読
+# more-section
+post.tterm-is-live.more-section.1 = ブログのほかの記事
+post.tterm-is-live.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/tterm-web/
+# meta
+post.tterm-web.title = tTerm がブラウザーで使えるようになりました · tTerm ブログ
+post.tterm-web.description = すべてのサーバーとコンピューターを 1 つのタブで。コマンドはそれぞれ独立したブロックになり、デバイスに鍵を置く必要もありません。tTerm Web で今できること、マシンの接続方法、今後の予定を紹介します。
+post.tterm-web.og_title = tTerm がブラウザーで使えるようになりました
+# main
+post.tterm-web.main.2 = ブログ
+post.tterm-web.main.3 = これまで tTerm は Telegram の中にあり、チャットから直接サーバーにコマンドを送るものでした。今日、ブラウザーで動く本物のターミナル、tTerm Web を公開します。すべてのサーバーとコンピューターを 1 つのタブで扱え、コマンドはそれぞれ独立したブロックになり、デバイスに鍵を置く必要もありません。
+# demo-frame
+post.tterm-web.demo-frame.1 = tTerm Web の作業画面：左側にプロジェクト、マシン、それぞれのターミナル、上部にタブがあります。web-01 で git pull、ビルド、サービスの再起動が実行され、続いて Cmd+K で api-prod のターミナルが開きます。
+# main
+post.tterm-web.main.4 = これが tTerm Web です。左側にプロジェクトごとのマシン、上部にタブが並び、コマンドはそれぞれ独立したブロックになります。
+# prose
+post.tterm-web.prose.1 = ボットがあるのに、なぜブラウザーなのか
+post.tterm-web.prose.2 = 手元にスマートフォンしかないときは、ボットが便利です。サービスの再起動、ディスクの確認、インストーラーの質問への回答などです。ただ、腰を据えた作業には大きな画面が欲しくなります。タブを何枚も並べ、vim や htop を全画面で使い、昨日のコマンドを履歴からすぐに見つけたいものです。
+post.tterm-web.prose.3 = そのために作ったのが tTerm Web です。ノートパソコン、タブレット、スマートフォンのどのブラウザーでも開け、作業に使うデバイスには何もインストールする必要がありません。
+post.tterm-web.prose.4 = コマンドごとに独立したブロック
+post.tterm-web.prose.5 = 普通のターミナルでは、すべてが 1 本の流れにつながってしまい、どこで 1 つのコマンドが終わり、次のコマンドが始まったのかを目で探す必要があります。tTerm では、コマンドごとに独立したブロックになります。コマンド本体、出力、終了コード、時間、ディレクトリ、git のブランチがひとまとまりです。
+post.tterm-web.prose.6 = ブロックは出力ごとコピーでき、折りたたんだり再実行したりもできます。コマンドの実行中は出力がリアルタイムで流れ、終了するとブロックは、選択やコピーのしやすいプレーンテキストに落ち着きます。
+post.tterm-web.prose.7 = エディターのような入力行
+post.tterm-web.prose.8 = 画面の下には専用の入力行があります。Shift+Enter で改行でき、履歴にあるコマンドがグレーで候補表示され、Tab で補完できます。履歴は tTerm 側で保存しているので、どのデバイスでも同じ履歴を使えます。
+post.tterm-web.prose.9 = 入力行の上には、いまいる場所が表示されます：ディレクトリとブランチです。クリックして一覧から別のものを選ぶと、<code>cd</code> や <code>git switch</code> が通常のブロックとして実行されます。また、取り返しのつかない危険なコマンドの前には、tTerm がもう一度確認します。
+post.tterm-web.prose.10 = vim、htop、sudo
+post.tterm-web.prose.11 = 全画面のプログラムはターミナル領域全体に開き、いつもどおりに動きます。sudo も同様です。ブロックが不要なら、クラシックモードもあります：見慣れた、ひと続きのターミナルです。
+post.tterm-web.prose.12 = タブを閉じてもターミナルは閉じない
+post.tterm-web.prose.13 = ターミナルはブラウザーではなく、tTerm のサーバー上で動いています。サーバーでのビルド中にノートパソコンを閉じても、ビルドは続き、出力も残ります。別のデバイスで tTerm を開けば、ターミナルはそのままそこにあります。
+post.tterm-web.prose.14 = 別々のプロジェクトのタブを並べて開け、各タブには P/web-01、A/api-prod のようにプロジェクトのコードが付きます。Cmd+K でコマンドパレットが開き、任意のターミナルへの移動、任意のマシンでの新しいターミナルの起動、アクションの実行ができます。
+post.tterm-web.prose.15 = マシンの接続方法
+post.tterm-web.prose.16 = Linux サーバーはコマンド 1 つで接続できます。マシンを追加するときに tTerm Web がそのコマンドを表示するので、サーバーで実行します：
+post.tterm-web.prose.17 = インストーラーはサーバーに tterm というユーザーを作成し、そのユーザーの <code>authorized_keys</code> に 1 行を追加し、<code>/etc/sudoers.d</code> 内の専用ファイルで sudo 権限を与えます。<code>sshd_config</code> には触れず、sshd の再起動もせず、ポートも開けません。数秒後には、サーバーが一覧に表示されます。
+post.tterm-web.prose.18 = macOS や Linux のコンピューターは、小さなエージェントを介して接続します。エージェントはログイン中のユーザーの権限で動き、自分から tTerm のサーバーへ接続するので、受信ポートは不要で、コンピューターが NAT の内側にあっても構いません。エージェントはコマンド 1 つでアンインストールできます。
+post.tterm-web.prose.19 = セキュリティ
+post.tterm-web.prose.20 = tTerm はお使いのマシンに接続します。だからこそ、アクセス権を簡単に付与でき、同じくらい簡単に取り消せるように設計しました。
+post.tterm-web.prose.21 = <strong>お使いの鍵は不要。</strong>tTerm は接続のたびに、あなたの名前が入った新しい SSH 証明書に署名します。証明書はそのサーバー 1 台でしか使えず、2 分後には無効になります。
+post.tterm-web.prose.22 = <strong>署名を分離。</strong>署名に使う鍵は、ネットワークにつながっていない別のプロセスにあります。メインのプログラムはこの鍵を読めず、署名を依頼できるだけです。署名はすべて記録されます。
+post.tterm-web.prose.23 = <strong>第三者を介さない。</strong>tTerm のサーバーは EU にあります。ページもターミナルもそこへ直接つながり、Cloudflare は DNS を担当しているだけで、コマンドを目にすることはありません。
+post.tterm-web.prose.24 = <strong>簡単に取り消せる。</strong>tTerm でサーバーを削除すると、tTerm は自身のアクセス権をそのサーバーから取り除きます。サーバーが応答しない場合は、サーバー上で同じことを行うためのコマンドを tTerm が表示します。インストーラーが設定したそれ以外のものを削除する方法は、スクリプトの冒頭に書かれています。
+post.tterm-web.prose.25 = <strong>オープンソース。</strong>tTerm Web とエージェントは、AGPL-3.0 ライセンスのオープンソースです。インストールスクリプトは短いので、実行前に一読する価値があります。
+post.tterm-web.prose.26 = 料金
+post.tterm-web.prose.27 = tTerm Web がベータ版のあいだは、どなたでも無料です。
+post.tterm-web.prose.28 = 1 人あたりのマシン数
+post.tterm-web.prose.29 = 同時に開けるターミナル数
+post.tterm-web.prose.30 = 出力付き履歴の保存日数
+post.tterm-web.prose.31 = 有料プランは今後導入する予定で、その際は十分前もってお知らせします。
+post.tterm-web.prose.32 = ボットはどうなるのか
+post.tterm-web.prose.33 = <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a> は今後も残り、引き続き使えます。手元にスマートフォンしかないときに、チャットから直接サーバーへコマンドを送れます。今のところ、ボットと Web アプリは別々に動いていて、マシンの一覧もそれぞれ別です。いずれ 1 つにまとめる予定です。
+post.tterm-web.prose.34 = 今後の予定
+post.tterm-web.prose.35 = 次に取り組む大きなテーマは、チームでの作業です。プロジェクト内の役割、コマンドの共有ログ、同僚のターミナルのライブ閲覧を予定しています。閲覧されている側には、誰が見ているかが常に表示されます。Windows のコンピューターにはまだ対応していませんが、いずれ対応する予定です。
+post.tterm-web.prose.36 = tTerm Web を試す
+post.tterm-web.prose.37 = メールアドレスでサインインします。コードが届き、それ以降は自分のデバイスなら短いコードだけで済みます。最初のサーバーは 1 分で接続できます。
+post.tterm-web.prose.38 = 無料で始める
+# more-section
+post.tterm-web.more-section.1 = ブログのほかの記事
+post.tterm-web.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/verified-on-github/
+# meta
+post.verified-on-github.title = tTerm が GitHub の検証済み組織になりました · tTerm ブログ
+post.verified-on-github.description = github.com/tterm-net に Verified バッジが付きました。この組織と tterm.net の運営者が同じであることを、GitHub が確認しました。
+post.verified-on-github.og_title = tTerm が GitHub の検証済み組織になりました
+# main
+post.verified-on-github.main.2 = ブログ
+post.verified-on-github.main.3 = <a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a> に Verified バッジが付きました。この組織と <a href="{{$base}}/">tterm.net</a> の運営者が同じであることを、GitHub が確認しました。
+# prose
+post.verified-on-github.prose.1 = tTerm にとって、これはほかのプロジェクト以上に重要です。コードが公開されているので、誰でもフォークしてインストールコマンドを書き換え、tTerm に似た名前で公開できてしまいます。しかし、ドメインはフォークできません。バッジがこの 2 つを結びつけるので、確かに私たちだと証明できる場所が 1 つに定まります：
+post.verified-on-github.prose.2 = <a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a>：3 つのリポジトリすべて、検証済み
+post.verified-on-github.prose.3 = <a href="{{$base}}/">tterm.net</a>：サイト
+post.verified-on-github.prose.4 = <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>：ボット本体
+post.verified-on-github.prose.5 = Telegram でブログを購読
+# more-section
+post.verified-on-github.more-section.1 = ブログのほかの記事
+post.verified-on-github.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/your-shell/
+# meta
+post.your-shell.title = エージェントがいつものシェルを起動するようになりました：bash でも zsh でも · tTerm ブログ
+post.your-shell.description = これまでエージェントは、ユーザーのシェルにかかわらず常に bash を起動していました。2019年から zsh が標準になっている macOS では、それは他人の環境で作業するのと同じことで、インストールしたもののうち半分は見つかりませんでした。
+post.your-shell.og_title = エージェントがいつものシェルを起動するようになりました：bash でも zsh でも
+# main
+post.your-shell.main.2 = ブログ
+# prose
+post.your-shell.prose.1 = 今後は、普段使っているシェルが、いつものパスと設定のまま起動します。「ターミナル」を開いたときと同じです。
+post.your-shell.prose.2 = そのほかの変更点
+post.your-shell.prose.3 = 取り返しのつかないコマンドは、実行前に確認するようになりました：<code>rm -rf</code>、<code>mkfs</code>、<code>DROP DATABASE</code>、<code>sshd</code> の停止など
+post.your-shell.prose.4 = サーバーのホスト鍵を接続時に記録し、以降は毎回照合するので、同じアドレスで応答する別の何かが入り込むことはありません
+post.your-shell.prose.5 = 長い出力は、最後の 6 行ではなく要約付きで届くようになりました。<code>apt</code> なら、<code>Processing triggers</code> だけでなく、いくつのパッケージが更新されたかがわかります
+post.your-shell.prose.6 = プロンプト内の長いパスは短縮されます：<code>/opt/…/tterm/core</code>
+post.your-shell.prose.7 = Telegram でブログを購読
+# more-section
+post.your-shell.more-section.1 = ブログのほかの記事
+post.your-shell.more-section.2 = すべての記事

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{$lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{blog.title}}</title>
+<meta name="description" content="{{blog.description}}">
+{{$links}}
+<meta property="og:title" content="{{blog.og_title}}">
+<meta property="og:description" content="{{blog.description}}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{$canonical}}">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{{$locales}}
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="{{$version}}">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">{{shell.skip}}</a>
+<div class="page">
+
+{{>header}}
+
+<main id="main">
+
+  <section class="wrap blog-head">
+    <div class="glow" aria-hidden="true"></div>
+    <p class="eyebrow">{{blog.blog-head.1}}</p>
+    <h1>{{blog.blog-head.2}}</h1>
+    <p class="section-lead">{{blog.blog-head.3}}</p>
+  </section>
+
+  <section class="wrap" aria-label="{{blog.main.2}}">
+    <!-- updates:featured --><!-- /updates:featured -->
+  </section>
+
+  <section class="wrap" aria-label="{{blog.main.3}}">
+    <!-- updates:list --><!-- /updates:list -->
+  </section>
+
+  <section class="section near" aria-label="{{blog.near.1}}">
+    <div class="band-card">
+      <div>
+        <h2>{{blog.near.2}}</h2>
+        <p>{{blog.near.3}}</p>
+      </div>
+      <a class="btn btn-ghost btn-md" href="https://t.me/tTermBlog" target="_blank" rel="noopener">{{blog.near.4}}</a>
+    </div>
+  </section>
+
+</main>
+
+{{>footer}}
+
+</div>
+</body>
+</html>

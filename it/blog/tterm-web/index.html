@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tTerm ora funziona nel browser · Blog di tTerm</title>
+<meta name="description" content="Tutti i tuoi server e computer in una scheda, ogni comando in un blocco a sé e nessuna chiave sul tuo dispositivo. Cosa sa fare oggi tTerm Web, come collegare una macchina e cosa viene dopo.">
+<link rel="canonical" href="https://tterm.net/it/blog/tterm-web/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/tterm-web/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/tterm-web/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/tterm-web/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/tterm-web/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/tterm-web/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/tterm-web/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/tterm-web/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/tterm-web/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/tterm-web/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/tterm-web/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/tterm-web/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/tterm-web/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/tterm-web/">
+<meta property="og:title" content="tTerm ora funziona nel browser">
+<meta property="og:description" content="Tutti i tuoi server e computer in una scheda, ogni comando in un blocco a sé e nessuna chiave sul tuo dispositivo. Cosa sa fare oggi tTerm Web, come collegare una macchina e cosa viene dopo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/it/blog/tterm-web/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "tTerm ora funziona nel browser",
+  "description": "Tutti i tuoi server e computer in una scheda, ogni comando in un blocco a sé e nessuna chiave sul tuo dispositivo. Cosa sa fare oggi tTerm Web, come collegare una macchina e cosa viene dopo.",
+  "datePublished": "2026-10-18",
+  "inLanguage": "it",
+  "url": "https://tterm.net/it/blog/tterm-web/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.5.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/it/" aria-label="tTerm, pagina iniziale">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">beta</span>
+    </a>
+    <nav class="nav" aria-label="Sezioni">
+      <a href="/it/#features">Funzionalità</a>
+      <a href="/it/#security">Sicurezza</a>
+      <a href="/it/#pricing">Prezzi</a>
+      <details class="res">
+        <summary>Risorse<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="/it/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>Blog</b><small>Le novità di tTerm</small></span></a>
+          <a href="/it/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>Domande frequenti</b><small>Le risposte ai dubbi più comuni</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Canale Telegram</b><small>Una breve nota su ogni nuova versione</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>Codice sorgente su GitHub</b><small>Tutto il codice di tTerm, AGPL v3</small></span></a>
+        </div>
+      </details>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>IT</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/tterm-web/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/tterm-web/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/tterm-web/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/tterm-web/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/tterm-web/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/pl/blog/tterm-web/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/tterm-web/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/tterm-web/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/tterm-web/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/tterm-web/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/tterm-web/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/tterm-web/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Accedi</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Inizia gratis</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="/it/#features">Funzionalità</a>
+          <a href="/it/#security">Sicurezza</a>
+          <a href="/it/#pricing">Prezzi</a>
+          <p class="menu-label">Risorse</p>
+          <a href="/it/blog/" aria-current="page">Blog</a>
+          <a href="/it/#faq">Domande frequenti</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canale Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Codice sorgente su GitHub</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>Italiano</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/tterm-web/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/tterm-web/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/tterm-web/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/blog/tterm-web/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/tterm-web/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+              <a href="/pl/blog/tterm-web/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/tterm-web/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/tterm-web/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/tterm-web/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/tterm-web/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/tterm-web/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/tterm-web/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">Inizia gratis</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="/it/blog/">Blog</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-18">18 ottobre 2026</time><span class="sep" aria-hidden="true">·</span><span>4 minuti di lettura</span></p>
+    <!-- /updates:meta -->
+      <h1>tTerm ora funziona nel browser</h1>
+      <p class="post-lead">Finora tTerm viveva su Telegram: comandi ai tuoi server direttamente da una chat. Oggi apriamo tTerm Web, un vero terminale nel browser. Tutti i tuoi server e computer in una scheda, ogni comando in un blocco a sé e nessuna chiave sul tuo dispositivo.</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="demo-frame">
+        <div class="demo" data-demo role="img" aria-label="tTerm Web in azione: a sinistra progetti, macchine e i loro terminali, in alto le schede. Su web-01 girano git pull, una build e il riavvio di un servizio, poi Cmd+K apre un terminale su api-prod."></div>
+      </div>
+      <figcaption>Ecco tTerm Web: a sinistra le macchine divise per progetto, in alto le schede, ogni comando in un blocco a sé.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>Perché un browser, se c'è già il bot</h2>
+      <p>Il bot è l'ideale quando hai solo il telefono: riavviare un servizio, controllare lo spazio su disco, rispondere alla domanda di un installer. Ma il lavoro più lungo chiede uno schermo grande: più schede affiancate, vim e htop a schermo intero, una cronologia in cui ritrovare facilmente il comando di ieri.</p>
+      <p>Per questo c'è tTerm Web. Si apre in qualsiasi browser, su portatile, tablet o telefono, e non richiede di installare nulla sul dispositivo da cui lavori.</p>
+
+      <h2>Ogni comando in un blocco a sé</h2>
+      <p>In un terminale normale tutto si mescola in un unico flusso, e devi cercare a occhio dove è finito un comando e dove è cominciato il successivo. In tTerm ogni comando arriva in un blocco a sé: il comando, il suo output, il codice di uscita, il tempo, la directory e il branch git.</p>
+      <p>Puoi copiare un blocco insieme al suo output, comprimerlo o eseguirlo di nuovo. Mentre il comando è in esecuzione, l'output scorre in diretta, e quando finisce, il blocco diventa semplice testo, facile da selezionare e copiare.</p>
+
+      <h2>Una riga di input come in un editor</h2>
+      <p>In basso c'è una riga di input tutta sua. Shift+Enter va a capo, un comando della cronologia viene suggerito in grigio, Tab completa. La cronologia è salvata da noi, quindi è la stessa su tutti i tuoi dispositivi.</p>
+      <p>Sopra la riga vedi dove ti trovi: la directory e il branch. Fai clic su uno dei due e scegli un'altra voce dall'elenco, e <code>cd</code> o <code>git switch</code> viene eseguito come un normale blocco. E prima di un comando pericoloso, di quelli dopo cui non c'è più niente da aggiustare, tTerm ti chiede conferma.</p>
+
+      <h2>vim, htop e sudo</h2>
+      <p>I programmi a schermo intero occupano tutta l'area del terminale e funzionano come sempre, e lo stesso vale per sudo. Se i blocchi non ti servono, c'è una modalità classica: un unico terminale continuo, come quello a cui sei abituato.</p>
+
+      <h2>Il terminale non si chiude con la scheda</h2>
+      <p>Il terminale vive sul nostro server, non nel tuo browser. Chiudi il portatile nel mezzo di una build su un server: la build va avanti e l'output viene conservato. Apri tTerm su un altro dispositivo e ritrovi il terminale lì dov'era.</p>
+      <p>Le schede di progetti diversi si aprono una accanto all'altra e riportano il codice del progetto: P/web-01, A/api-prod. Cmd+K apre la palette dei comandi: vai a qualsiasi terminale, aprine uno nuovo su qualsiasi macchina o esegui un'azione.</p>
+
+      <h2>Come collegare una macchina</h2>
+      <p>Un server Linux si collega con un solo comando. tTerm Web te lo mostra quando aggiungi una macchina, e tu lo esegui sul server:</p>
+      <pre><b>$</b> curl -sSL https://connect.tterm.net/s/… | sudo sh</pre>
+      <p>L'installer crea sul server un utente chiamato tterm, aggiunge una riga al suo file <code>authorized_keys</code> e gli dà sudo con un file dedicato in <code>/etc/sudoers.d</code>. Non tocca <code>sshd_config</code>, non riavvia sshd e non apre porte. Pochi secondi dopo il server compare nel tuo elenco.</p>
+      <p>Un computer con macOS o Linux si connette tramite un piccolo agente. Gira con il tuo utente e contatta da solo il nostro server, quindi non servono porte in ingresso e il computer può stare dietro NAT. L'agente si disinstalla con un solo comando.</p>
+
+      <h2>Sicurezza</h2>
+      <p>Ci colleghiamo alle tue macchine, quindi abbiamo progettato l'accesso in modo che sia facile da concedere e altrettanto facile da revocare.</p>
+      <ul class="prose-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><span><strong>Le tue chiavi non servono.</strong> Per ogni connessione tTerm firma un nuovo certificato SSH con il tuo nome. Vale solo per quel server e smette di funzionare dopo due minuti.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span><strong>Firma isolata.</strong> Le chiavi con cui firmiamo vivono in un processo separato, senza rete. Il programma principale non può leggerle, può solo chiedere una firma, e ogni firma viene registrata.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg><span><strong>Nessun intermediario.</strong> Il server di tTerm si trova nell'UE. La pagina e i terminali si collegano direttamente lì: Cloudflare gestisce solo il nostro DNS e non vede mai i tuoi comandi.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M5 7l1 13h12l1-13M9 7V4h6v3"/></svg><span><strong>Facile da revocare.</strong> Rimuovi un server in tTerm e tTerm toglie da solo il proprio accesso dal server; se il server non risponde, tTerm ti mostra il comando da eseguire lì. Come rimuovere tutto il resto che l'installer ha configurato lo trovi scritto in cima allo script stesso.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><strong>Open source.</strong> tTerm Web e l'agente sono open source con licenza AGPL-3.0. Lo script di installazione è breve e vale la pena leggerlo prima di eseguirlo.</span></li>
+      </ul>
+
+      <h2>Quanto costa</h2>
+      <p>Finché tTerm Web è in beta, è gratis per tutti.</p>
+      <div class="stats">
+        <div><b>50</b><span>macchine per persona</span></div>
+        <div><b>24</b><span>terminali aperti</span></div>
+        <div><b>30</b><span>giorni di cronologia con output</span></div>
+      </div>
+      <p>I piani a pagamento arriveranno più avanti, e te lo diremo con largo anticipo.</p>
+
+      <h2>Cosa succede al bot</h2>
+      <p><a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a> resta e continua a funzionare: comandi ai tuoi server direttamente dalla chat, quando hai solo il telefono. Per ora il bot e l'app web sono separati, ognuno con il proprio elenco di macchine. Più avanti li uniremo.</p>
+
+      <h2>Cosa viene dopo</h2>
+      <p>Il prossimo grande passo è il lavoro in team: ruoli in un progetto, un registro condiviso dei comandi e l'osservazione del terminale di un collega, in cui chi è osservato vede sempre chi sta guardando. I computer Windows non sono ancora supportati; ci arriveremo più avanti.</p>
+
+      <div class="post-cta">
+        <h2>Prova tTerm Web</h2>
+        <p>Accedi con la tua email: ricevi un codice, e da lì in poi sui tuoi dispositivi basta un codice breve. Il primo server si collega in un minuto.</p>
+        <a class="btn btn-primary" href="https://app.tterm.net">Inizia gratis</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="Altro dal blog">
+    <div class="split-row">
+      <h2>Altro dal blog</h2>
+      <a class="btn btn-ghost btn-md" href="/it/blog/">Tutti gli articoli</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/it/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">25 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">Perché il codice di tTerm è aperto, anche se arrivano i piani a pagamento</span>
+        <span class="post-mini-text">Tutto il codice di tTerm ora è sotto licenza AGPL v3 invece che MIT, e presto arriveranno i piani a pagamento.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/it/blog/notes-and-projects/">
+        <span class="post-mini-meta"><time datetime="2026-10-20">20 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">Note, progetti a colori e nomi dei terminali</span>
+        <span class="post-mini-text">Runbook, checklist e note sugli accessi ora stanno accanto alle macchine a cui si riferiscono.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/it/blog/independent-windows/">
+        <span class="post-mini-meta"><time datetime="2026-10-07">7 ott</time> · Bot</span>
+        <span class="post-mini-title">Le finestre su un computer ora sono indipendenti</span>
+        <span class="post-mini-text">Su un server ogni finestra è sempre stata un terminale a sé.</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/it/blog/">Tutti gli articoli</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/it/" aria-label="tTerm, pagina iniziale">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">beta</span>
+        </a>
+        <p class="foot-tag">Il terminale cloud per server e computer.</p>
+      </div>
+      <nav class="foot-cols" aria-label="Link">
+        <div class="foot-col">
+          <p class="foot-h">Prodotto</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot Telegram</a>
+          <a href="/it/#pricing">Prezzi</a>
+          <a href="/it/#security">Sicurezza</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Risorse</p>
+          <a href="/it/blog/">Blog</a>
+          <a href="/it/#faq">Domande frequenti</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canale Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Codice sorgente su GitHub</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Note legali</p>
+          <a href="/terms/">Termini di servizio</a>
+          <a href="/privacy/">Informativa sulla privacy</a>
+          <a href="/it/blog/open-source/">Licenza AGPL-3.0</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <details class="lang lang-up">
+        <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>IT</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/tterm-web/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/tterm-web/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/tterm-web/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/tterm-web/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/tterm-web/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/pl/blog/tterm-web/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/tterm-web/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/tterm-web/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/tterm-web/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/tterm-web/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/tterm-web/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/tterm-web/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

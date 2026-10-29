@@ -1,0 +1,518 @@
+# Strings of the site in English: one a line, `key = text`.
+# Every language has the same keys; the build stops when one is missing.
+# `{{$base}}` in a link is the language's folder: "" in English, "/ru" in Russian.
+
+# ------------------------------------------------------------ shell: the header and footer of every page
+shell.skip = İçeriğe geç
+shell.home_label = tTerm, ana sayfa
+shell.beta = beta
+shell.nav_label = Bölümler
+shell.features = Özellikler
+shell.security = Güvenlik
+shell.pricing = Fiyatlandırma
+shell.resources = Kaynaklar
+shell.blog = Blog
+shell.blog_note = tTerm'deki yenilikler
+shell.faq = SSS
+shell.faq_note = Sık sorulan soruların yanıtları
+shell.channel = Telegram kanalı
+shell.channel_note = Her sürüm hakkında kısa bir not
+shell.source = GitHub'da kaynak kod
+shell.source_note = tTerm'in tüm kodu, AGPL v3
+shell.local = Yerel terminal
+shell.lang_label = Dil: Türkçe
+shell.signin = Giriş yap
+shell.start = Ücretsiz başla
+shell.menu = Menü
+shell.tagline = Sunucular ve bilgisayarlar için bulut terminali.
+shell.links = Bağlantılar
+shell.product = Ürün
+shell.mac = Mac için tTerm
+shell.new = Yeni
+shell.bot = Telegram botu
+shell.legal = Yasal
+shell.terms = Hizmet Şartları
+shell.privacy = Gizlilik Politikası
+shell.license = AGPL-3.0 lisansı
+
+# ------------------------------------------------------------ blog: words and dates (build_updates.py)
+# blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
+blog.tag.web = tTerm Web
+blog.tag.bot = Bot
+blog.tag.site = Site
+blog.read = Yazıyı oku
+blog.pinned = Sabitlenmiş
+blog.earlier = Önceki yazılar
+blog.more = Diğer yazılar
+blog.minutes = one: {n} dakikalık okuma | other: {n} dakikalık okuma
+blog.pace = 170
+date.months = Ocak | Şubat | Mart | Nisan | Mayıs | Haziran | Temmuz | Ağustos | Eylül | Ekim | Kasım | Aralık
+date.months_heading = Ocak | Şubat | Mart | Nisan | Mayıs | Haziran | Temmuz | Ağustos | Eylül | Ekim | Kasım | Aralık
+date.months_short = Oca | Şub | Mar | Nis | May | Haz | Tem | Ağu | Eyl | Eki | Kas | Ara
+date.long = {d} {month} {y}
+date.long_noyear = {d} {month}
+date.short = {d} {month_short}
+date.heading = {month_heading} {y}
+# date.day_one is {d} on the first of a month: 1er in French, 1º in Italian and Portuguese.
+date.day_one = 1
+# ------------------------------------------------------------ index
+# meta
+index.title = tTerm: sunucular ve bilgisayarlar için bulut terminali
+index.description = Bulutta çalışan bir terminal: derleme sürerken dizüstünü kapat, istediğin cihazdan kaldığın yerden devam et. Her komut bir blok halinde gelir. Cihazında anahtar yok, açılacak port yok.
+index.og_title = Sunucular ve bilgisayarlar için bulut terminali
+# main
+# hero
+index.hero.1 = Yeni: tTerm tarayıcında<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Oku</span>
+index.hero.2 = Sunucular ve bilgisayarlar için <br><span class="accent">bulut terminali</span>
+index.hero.3 = Terminallerin dizüstünde değil, bulutta çalışır: derleme sürerken kapağı kapat, tTerm'i telefonunda aç, her şey bıraktığın gibi duruyor. Cihazında anahtar yok, açılacak port yok.
+index.hero.4 = Ücretsiz başla
+index.hero.5 = Açık kaynak
+index.hero.6 = tTerm Web iş başında: solda kendi renklerindeki projeler, içlerinde makineler, terminaller ve klasörlerdeki notlar, üstte sekmeler. web-01'de git pull, derleme ve servisin yeniden başlatılması çalışırken yanındaki notta sürüm kontrol listesinin maddeleri işaretleniyor. Ardından Cmd+K ile api-prod'da bir terminal açılıyor.
+# strip
+index.strip.1 = Linux sunucular
+index.strip.2 = Standart SSH üzerinden, sunucuda tek komutla
+index.strip.3 = macOS ve Linux bilgisayarlar
+index.strip.4 = NAT arkasında bile, açık port olmadan
+index.strip.5 = Her tarayıcı
+index.strip.6 = Dizüstü bilgisayarda, tablette ya da telefonda
+# how
+index.how.1 = Nasıl çalışır
+index.how.2 = Üç adımda ilk komutun
+index.how.3 = Makine ekle
+index.how.4 = Sunucuda tek bir komut yeter, sunucu hemen listende görünür. Bilgisayar için içeriden bağlanan küçük bir ajan gerekir.
+index.how.5 = Terminal aç
+index.how.6 = Herhangi bir tarayıcıda. Farklı projelerin sekmeleri yan yana, her makine bir Cmd+K uzağında.
+index.how.7 = Alıştığın gibi çalış
+index.how.8 = Kendi kabuğun, kendi programların, sudo. Sekmeyi kapatsan da terminal çalışmaya devam eder.
+# features
+index.features.1 = Özellikler
+index.features.2 = Komutları anlayan bir terminal
+index.features.3 = tTerm her komutun nerede başlayıp nerede bittiğini, nasıl sonuçlandığını ve senin nerede olduğunu bilir. Böylece çıktıyı yalnızca okumazsın, onunla çalışırsın.
+index.features.4 = Her komut bir blok
+index.features.5 = Çıkış kodu, süre, dizin ve dal. Bloğu bütünüyle kopyala, daralt ya da yeniden çalıştır.
+index.features.6 = <span class="v-key">&#x2192;</span>geçmişten öneri<span class="v-key">Tab</span>tamamlama
+index.features.7 = Editör gibi bir giriş satırı
+index.features.8 = Çok satırlı giriş, tüm cihazlarında ortak geçmiş, öneriler ve Tab. Tehlikeli bir komuttan önce tTerm bir kez daha sorar.
+index.features.9 = Tek tıkla dizin ve dal
+index.features.10 = Giriş satırının üstündeki dizine ya da dala tıkla ve başka birini seç. cd ve git switch sıradan bloklar olarak çalışır.
+index.features.11 = Tam ekran vim ve htop
+index.features.12 = Tam ekran programlar her terminalde olduğu gibi çalışır. Eski usulü tercih ediyorsan klasik bir mod da var.
+index.features.13 = komut bekliyor
+index.features.14 = Sekme kapanır, terminal kalır
+index.features.15 = Derlemenin ortasında dizüstünü mü kapattın? Derleme devam eder, çıktısı saklanır. İstediğin cihazdan geri dön.
+index.features.16 = Her şey bir Cmd+K uzağında
+index.features.17 = Bir terminale geç, herhangi bir makinede yenisini aç ya da bir eylem çalıştır. Sekmeler arasında aranıp durmak yerine tek bir kısayol.
+index.features.18 = Notlar makinelerinin yanında
+index.features.19 = Runbook'lar, kontrol listeleri ve erişimle ilgili notlar projede saklanır ve terminalin yanında bir sekmede açılır.
+index.features.20 = Her proje kendi renginde
+index.features.21 = Müşteri, ortam ya da görev başına bir proje, kendi makineleri ve notlarıyla. Sekmenin hangi projeye ait olduğunu rengi gösterir.
+index.features.22 = <span class="v-key">Enter</span>kaydet<span class="v-key">Esc</span>iptal
+index.features.23 = Terminallere ad ver
+index.features.24 = terminal 2 yerine deploy, logs, migrations. Terminale çift tıkla, adını yaz ve Enter'a bas.
+# security
+index.security.1 = Güvenlik
+index.security.2 = Anahtar saklamayız. <br>Port açmayız.
+index.security.3 = Makinelerine erişim vermek kolay, geri almak da bir o kadar kolay. Bunu şöyle sağlıyoruz.
+index.security.4 = İki dakikalık sertifika
+index.security.5 = Her bağlantıya, üzerinde adının yazılı olduğu ve yalnızca o sunucuda geçerli ayrı bir SSH sertifikası verilir. Anahtarlarına hiçbir zaman ihtiyacımız olmaz.
+index.security.6 = İmzalama ayrı tutulur
+index.security.7 = CA anahtarları ağ erişimi olmayan ayrı bir süreçte tutulur. Çekirdek onları okuyamaz, yalnızca imza isteyebilir ve her imza kayıt altına alınır.
+index.security.8 = sshd_config'e dokunulmaz
+index.security.9 = Güven için tek bir kullanıcının authorized_keys dosyasına tek satır eklenir. Hiçbir şey yeniden başlatılmaz.
+index.security.10 = İçeriden bağlantı
+index.security.11 = Bilgisayardaki ajan dışarıya kendisi bağlanır, bu yüzden gelen bağlantılar için port açmana gerek kalmaz. Tek komutla kaldırılır.
+index.security.12 = Aracı yok
+index.security.13 = Sayfa ve terminaller doğrudan AB'deki sunucumuza bağlanır. Cloudflare yalnızca DNS hizmetimizi sağlar ve komutlarını hiçbir zaman görmez.
+index.security.14 = tTerm Web ve ajan, AGPL lisansıyla açık kaynaklıdır. Kurulum betiği kısa: çalıştırmadan önce oku.
+# teams
+index.teams.1 = Ekipler için
+index.teams.2 = YAKINDA
+index.teams.3 = Kimin neyi çalıştırdığını gör
+index.teams.4 = Ekip arkadaşlarını projeye davet et ve her birine bir rol ver. Sunucuların için anahtar dağıtmaya son.
+index.teams.5 = <b>Proje rolleri:</b> sahip, yönetici, üye ve izleyici.
+index.teams.6 = <b>Ortak günlük:</b> kim, neyi, nerede, ne zaman çalıştırdı ve nasıl sonuçlandı.
+index.teams.7 = <b>İzleme:</b> ekip arkadaşının terminaline göz atabilirsin, o da kimin izlediğini her zaman görür.
+index.teams.8 = Acme proje günlüğü<span class="watching"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Anna izliyor</span>
+index.teams.9 = AN
+index.teams.10 = DG
+index.teams.11 = IK
+# pricing
+index.pricing.1 = Fiyatlandırma
+index.pricing.2 = Biz geliştirirken ücretsiz
+index.pricing.3 = tTerm'in bugün yaptığı her şey ücretsiz. Ücretli planlar daha sonra gelecek, bunu da sana çok önceden haber vereceğiz.
+index.pricing.4 = ŞİMDİ
+index.pricing.5 = Ücretsiz
+index.pricing.6 = tTerm beta aşamasındayken herkes için. Kart yok, deneme süresi yok.
+index.pricing.7 = 50 makineye kadar
+index.pricing.8 = 24 açık terminale kadar
+index.pricing.9 = Sunucular ve bilgisayarlar
+index.pricing.10 = Kendi projelerin ve notların
+index.pricing.11 = Çıktılarıyla birlikte 30 günlük komut geçmişi
+index.pricing.12 = Sekme kapansa da terminaller çalışır
+index.pricing.13 = Koyu ve açık tema
+# faq
+index.faq.1 = Sorular
+index.faq.2 = Bilgisayarıma bir şey kurmam gerekiyor mu?
+index.faq.3 = Hayır, bir tarayıcı yeterli. Yalnızca bağlandığın makinelere bir şey kurarsın: sunucuda tek bir komut, bilgisayarda küçük bir ajan.
+index.faq.4 = Neleri saklıyorsunuz?
+index.faq.5 = Geçmişini gösterebilmek için komutları ve çıktılarını 30 gün boyunca saklıyoruz, ayrıca giriş kayıtlarını tutuyoruz. Anahtar ya da parola saklamıyoruz. Ayrıntılar <a href="/privacy/">Gizlilik Politikası</a> sayfasında.
+index.faq.6 = Sıradan bir SSH istemcisinden ne açıdan daha iyi?
+index.faq.7 = Her tarayıcıdan çalışır ve cihazında anahtar gerektirmez. Dizüstünü kapattığında terminal kopmaz. Ayrıca her komut, kolayca kopyalanıp yeniden çalıştırılabilen bir blok olarak gelir.
+index.faq.8 = tTerm'in erişimini nasıl geri alırım?
+index.faq.9 = Sunucuyu tTerm'den sildiğinde tTerm, sunucudaki kendi erişimini kendisi kaldırır. Sunucu yanıt vermezse tTerm bunu sunucuda yapacak komutu gösterir. Kurulum betiğinin kurduğu diğer her şeyin nasıl kaldırılacağı, betiğin en başında yazıyor. Ajan ise bilgisayardan tek komutla kaldırılır.
+index.faq.10 = Telegram botu ne olacak?
+index.faq.11 = Kalıyor ve çalışmaya devam ediyor: doğrudan sohbetin içinde bir terminal, <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>. Şimdilik web uygulaması ve bot ayrı ayrı çalışıyor.
+index.faq.12 = Destek ekibine nasıl ulaşırım?
+index.faq.13 = <a href="mailto:support@tterm.net">support@tterm.net</a> adresine yaz. Bir güvenlik açığı bulduysan <a href="mailto:security@tterm.net">security@tterm.net</a> adresine yaz.
+# blog
+index.blog.1 = Blog
+index.blog.2 = tTerm'deki yenilikler
+index.blog.3 = Tüm yazılar
+# final
+index.final.1 = Bir dakikada ilk terminalin
+index.final.2 = E-postanla giriş yap, tek komutla bir sunucu ekle ve istediğin tarayıcıdan çalış.
+index.final.3 = Kaynak koda göz at
+
+# ------------------------------------------------------------ blog
+# meta
+blog.title = tTerm blogu: yenilikler
+blog.description = tTerm'de neleri yayına aldığımız ve nelerin değiştiği: web uygulaması, Telegram botu ve site.
+blog.og_title = Blog: yenilikler
+# main
+# blog-head
+blog.blog-head.1 = Blog
+blog.blog-head.2 = tTerm'deki yenilikler
+blog.blog-head.3 = Neleri yayına aldığımız ve nelerin değiştiği. Her sürümle ilgili kısa notlar <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram kanalımızda</a> da paylaşılıyor.
+# main
+blog.main.2 = Öne çıkan yazı
+blog.main.3 = Tüm yazılar
+# near
+blog.near.1 = Telegram kanalı
+blog.near.2 = Yeni yazılar Telegram'a da ulaşır
+blog.near.3 = tTerm kanalında her sürümle ilgili kısa notlar.
+blog.near.4 = Kanalı aç
+# ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
+mac.download = Mac için indir
+mac.title = Bulutu içinde taşıyan <br>yerel bir terminal
+mac.lead = Bulut sürümünün yanına eklediğimiz en yeni ürün. Mac için tTerm, bilgisayarının kabuklarını kendi penceresinde, bloklar halinde açar ve hesap olmadan da çalışır. Giriş yaptığında buluttaki sunucuların aynı pencerede belirir, Mac'indeki sunucuları ve anahtarları da buluta taşıyabilirsin.
+mac.note = Ücretsiz · macOS 11 veya üstü <br>Windows ve Linux yakında
+mac.soon = YAKINDA
+mac.window_label = Mac için tTerm penceresi: solda projeler; Personal içinde this Mac etiketli bu MacBook-Pro ve terminalleri, altında da buluttan gelen web-01 sunucusu. Üstte bu Mac'in ve bulutun sekmeleri yan yana; akışta Mac'teki komutlar bloklar halinde: git pull, npm test, docker compose. Mac'in menü çubuğunda tTerm simgesi açık: Open tTerm, MacBook-Pro: online in tTerm Web, Quit tTerm.
+mac.p1.title = Kendi Mac'inde de bloklar
+mac.p1.text = Bu Mac'teki bash ya da zsh: her komut çıktısı, çıkış kodu ve süresiyle bir blok. Geçmiş 30 gün boyunca Mac'te kalır.
+mac.p2.title = Aynı pencerede bulut
+mac.p2.text = Giriş yaptığında sunucuların, onlarla ilgili notlar ve ⌘K ile her şeyde arama, Mac'in terminallerinin hemen yanında açılır.
+mac.p3.title = Buluta taşınma
+mac.p3.text = Uygulama bu Mac'teki sunucuları ve anahtarları birkaç tıkla buluta taşır, sonra hepsi her tarayıcıdan açılır.
+mac.p4.title = Mac'ine her yerden ulaş
+mac.p4.text = Uygulama bu Mac'i tTerm Web'e açar: terminaline tarayıcıdan da telefonundan da ulaşabilirsin. Menü çubuğunda yer alır.
+mac.strip.title = Tarayıcı ve Mac
+mac.strip.text = Her tarayıcıda ya da Mac'te kendi penceresinde
+mac.how.1 = Sunucuda tek bir komut yeter, sunucu hemen listende görünür. Bilgisayara küçük bir ajan gerekir, Mac'i ise Mac için tTerm bağlar. İkisi de içeriden bağlanır.
+mac.how.2 = Herhangi bir tarayıcıda ya da Mac için tTerm'de. Farklı projelerin sekmeleri yan yana, her makine bir Cmd+K uzağında.
+mac.security = Bilgisayardaki ajan ve Mac için tTerm dışarıya kendileri bağlanır, bu yüzden gelen bağlantılar için port açmana gerek kalmaz. Ajan tek komutla kaldırılır.
+mac.faq.install = Hayır, bir tarayıcı yeterli. Yalnızca bağlandığın makinelere bir şey kurarsın: sunucuda tek bir komut, bilgisayarda küçük bir ajan. Mac'te ajan yerine Mac için tTerm'i kurabilirsin, bu uygulama aynı zamanda Mac'in kendi terminali olur.
+mac.faq.app.q = Bilgisayarım için bir uygulama var mı?
+mac.faq.app.a = Evet, <a href="{{$base}}/download/">Mac için tTerm</a>. Mac'in kendi terminallerini bloklar halinde ve hesap olmadan sunar, giriş yaptığında da buluttaki sunucularını aynı pencerede gösterir. Windows ve Linux yakında.
+# download page
+download.title = Mac için tTerm: yerel terminal
+download.description = Bulutu içinde taşıyan yerel bir terminal: Mac'inin kabukları bloklar halinde, yanlarında da sunucuların, notların ve tTerm'deki diğer her şeyin. Ücretsiz, macOS 11 veya üstü.
+download.lead = Bulut sürümünün yanına eklediğimiz en yeni ürün: Mac'inde yerel bir terminal. Bilgisayarınla her terminalde olduğu gibi çalış, hazır olduğunda da sunucularını ve anahtarlarını doğrudan uygulamadan buluta taşı.
+download.meta = Ücretsiz · macOS 11 veya üstü · Apple silicon ve Intel
+download.phone = <b>Mac için tTerm, Mac'e kurulur.</b> Bu sayfayı bir Mac'te aç, telefonunda ise doğrudan tarayıcıda tTerm Web ile çalış.
+download.open_web = tTerm Web'i aç
+download.whats_new = Yenilikler
+download.all_versions = GitHub'da tüm sürümler
+download.source = Kaynak kod
+download.cloud.eyebrow = Bulutla nasıl birlikte çalışır
+download.cloud.title = Mac'inde başla, <br>buluta taşın
+download.cloud.lead = Uygulama buluttaki tTerm'in yerini almaz, onu tamamlar: tek hesap, aynı sunucular ve notlar. Kendi Mac'inde başla, her yerden erişime ihtiyaç duyduğunda her şeyi buluta taşı.
+download.cloud.mac = Mac'inde yerel bir terminal: bu bilgisayarın kabukları bloklar halinde, geçmişi ve notları da kendi üzerinde. Hesap olmadan da çalışır.
+download.cloud.move_title = Buluta taşınma
+download.cloud.move = Hazır olduğunda uygulama, Mac'teki <code>~/.ssh</code> içinden sunucularını ve anahtarlarını bulur ve birkaç tıkla buluta taşır.
+download.cloud.web = Bulut terminali: sunucular, terminaller ve notlar bulutta bulunur, her tarayıcıdan ve telefonundan açılır, ekibine de açılabilir.
+download.features.eyebrow = Neler yapar
+download.features.title = Mac'in ve bulut tek pencerede
+download.install.eyebrow = Nasıl kurulur
+download.install.title = Üç adımda Mac'in tTerm'de
+download.install.1.title = Dosyayı aç
+download.install.1.text = İndirdiğin tTerm.dmg dosyasını aç ve tTerm'i Uygulamalar klasörüne sürükle.
+download.install.2.title = tTerm'i başlat
+download.install.2.text = Bu Mac'in terminalleri hesap ve ayar gerektirmeden hemen çalışır.
+download.install.3.title = Giriş yap ve taşın
+download.install.3.text = Sign in düğmesi tarayıcını açar: girişi onayladığında sunucuların ve notların pencerede belirir. Uygulama, bu Mac'teki sunucuları ve anahtarları buluta taşımayı önerir.
+download.others.eyebrow = Diğer sistemler
+download.others.title = Yalnızca Mac değil
+download.others.windows = Windows uygulaması hazırlanıyor.
+download.others.linux = O zamana kadar Linux bilgisayarlar küçük bir ajanla tTerm Web'e bağlanır.
+download.others.browser = tTerm Web telefonda, tablette ve her bilgisayarda çalışır. <a href="https://app.tterm.net">Aç</a>
+download.faq.1.q = tTerm Web'den farkı ne?
+download.faq.1.a = tTerm Web tarayıcındaki bir bulut terminali: sunucularının ve bilgisayarlarının terminalleri bulutta çalışır, sen de onları her yerden açarsın. Mac için tTerm ise doğrudan Mac'in üzerinde çalışan yerel bir terminal ve penceresinde bulutun tamamı var. Tek hesap, aynı sunucular ve notlar.
+download.faq.2.q = Ücretsiz mi?
+download.faq.2.a = Evet. tTerm beta aşamasındayken herkes için ücretsiz, uygulama da.
+download.faq.3.q = Hesap gerekiyor mu?
+download.faq.3.a = Hayır. Giriş yapmadan da tTerm bu Mac'le çalışır: kabuklar, geçmiş ve notlar Mac'te kalır. Hesap bulut için gerekir: sunucular, tüm cihazlarında notlar ve bu Mac'e tarayıcıdan erişim.
+download.faq.4.q = Komutlarım nerede saklanıyor?
+download.faq.4.a = Bu Mac'teki komutlar çıktılarıyla birlikte 30 gün boyunca Mac'te, uygulamanın yalnızca senin okuyabildiğin klasöründe kalır. Sunuculardaki komutlar ise tTerm Web'de olduğu gibi bulutta saklanır.
+download.faq.5.q = Uygulama imzalı mı?
+download.faq.5.a = Evet, Apple Developer ID ile imzalı ve Apple tarafından denetlendi (noter onayı). Bu yüzden macOS uygulamayı uyarı göstermeden açar.
+download.faq.6.q = Nasıl kaldırırım?
+download.faq.6.a = Menü çubuğunda Quit tTerm'i seç ve uygulamayı Uygulamalar klasöründen Çöp Sepeti'ne sürükle. Giriş yaptıysan bu Mac'i Settings → Devices bölümünde unutabilirsin.
+download.faq.7.q = Kodu açık mı?
+download.faq.7.a = Evet, tTerm'in tamamı gibi AGPL v3 lisansıyla: <a href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">github.com/tterm-net/tterm-app</a>.
+download.final.title = Bir dakikada Mac'te ilk komutun
+download.final.text = tTerm'i indir, Uygulamalar klasörüne sürükle ve başlat. Hesap gerekmez.
+
+# ------------------------------------------------------------ 404
+notfound.title = Sayfa bulunamadı · tTerm
+notfound.description = Aradığın sayfa mevcut değil.
+notfound.h1 = Burada bir şey yok
+notfound.text = Aradığın sayfa mevcut değil. Taşınmış olabilir ya da bağlantı siteden daha eski olabilir.
+notfound.home = Ana sayfa
+
+# ------------------------------------------------------------ post: /blog/answer-while-it-runs/
+# meta
+post.answer-while-it-runs.title = Komut çalışırken ona yanıt verebilirsin · tTerm blogu
+post.answer-while-it-runs.description = Eskiden bir program Continue? (Y/n) diye sorduğunda yanıt vermenin yolu yoktu: komut bitene kadar mesajın gönderilmiyordu. Artık komut çalışırken yazdığın her şey, terminalde olduğu gibi komutun girişine gidiyor. Bot böyle bir mesajı 👌 ile işaretliyor.
+post.answer-while-it-runs.og_title = Komut çalışırken ona yanıt verebilirsin
+# main
+post.answer-while-it-runs.main.2 = Blog
+post.answer-while-it-runs.main.3 = Eskiden bir program <code>Continue? (Y/n)</code> diye sorduğunda yanıt vermenin yolu yoktu: komut bitene kadar mesajın gönderilmiyordu. Artık komut çalışırken yazdığın her şey, terminalde olduğu gibi komutun girişine gidiyor. Bot böyle bir mesajı 👌 ile işaretliyor.
+# prose
+post.answer-while-it-runs.prose.1 = Başka neler değişti
+post.answer-while-it-runs.prose.2 = <code>(Y/n)</code> soruları, wrangler ya da npm'deki gibi altlarında dönen bir gösterge varken de tanınıyor. <code>y</code> ve <code>n</code> düğmeleri beliriyor
+post.answer-while-it-runs.prose.3 = Stop düğmesi artık komut çıktısının hemen altında yer alıyor ve komutu Ctrl+C ile kesiyor
+post.answer-while-it-runs.prose.4 = Ajan kurulu bir bilgisayar, yarım saat komutsuz kaldığında artık listeden düşmüyor
+post.answer-while-it-runs.prose.5 = Telegram'da blogumuza abone ol
+# more-section
+post.answer-while-it-runs.more-section.1 = Blogdan diğer yazılar
+post.answer-while-it-runs.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/independent-windows/
+# meta
+post.independent-windows.title = Bilgisayardaki pencereler artık birbirinden bağımsız · tTerm blogu
+post.independent-windows.description = Sunucuda her pencere baştan beri ayrı bir terminaldi. Ajan kurulu bir bilgisayarda ise tüm pencereler tek bir kabuğu paylaşıyordu: birinde yaptığın cd ötekilerin de dizinini değiştiriyordu, bir pencerede program çalışırken diğerleri beklemek zorundaydı. Artık her pencerenin, sunucuda olduğu gibi, kendi kabuğu var. Bir pencerede geliştirme sunucusunu çalışır halde tutup diğerinde çalışabilirsin.
+post.independent-windows.og_title = Bilgisayardaki pencereler artık birbirinden bağımsız
+# main
+post.independent-windows.main.2 = Blog
+post.independent-windows.main.3 = Sunucuda her pencere baştan beri ayrı bir terminaldi. Ajan kurulu bir bilgisayarda ise tüm pencereler tek bir kabuğu paylaşıyordu: birinde yaptığın <code>cd</code> ötekilerin de dizinini değiştiriyordu, bir pencerede program çalışırken diğerleri beklemek zorundaydı. Artık her pencerenin, sunucuda olduğu gibi, kendi kabuğu var. Bir pencerede geliştirme sunucusunu çalışır halde tutup diğerinde çalışabilirsin.
+# prose
+post.independent-windows.prose.1 = Bundan yararlanmak için ajanı güncelle: <code>/addhost</code> → Computer, ardından sana verilen komutu aynı bilgisayarda çalıştır. Makine listende olduğu gibi kalır. Ajanın eskiyse, ikinci bir pencere açtığında bot bunu sana söyler.
+post.independent-windows.prose.2 = Başka neler değişti
+post.independent-windows.prose.3 = Pencere düğmeleri listenin altında yer alıyor ve seçili satıra uygulanıyor, bu yüzden geçiş yaptığında artık yerinden oynamıyor
+post.independent-windows.prose.4 = Komutun çalıştığı bir pencereye geçersen bot, komutun bitmesini beklemeden bunu hemen söylüyor
+post.independent-windows.prose.5 = Ajan hızla yeniden bağlandığında bilgisayar artık offline görünmüyor
+post.independent-windows.prose.6 = Telegram'da blogumuza abone ol
+# more-section
+post.independent-windows.more-section.1 = Blogdan diğer yazılar
+post.independent-windows.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/notes-and-projects/
+# meta
+post.notes-and-projects.title = Notlar, renkli projeler ve terminal adları · tTerm blogu
+post.notes-and-projects.description = Runbook'lar, kontrol listeleri ve erişim notları artık ait oldukları makinelerin yanında duruyor. Kendi projelerini oluşturup her birine bir renk verebilir, terminallerine ad koyabilir, makineleri ve notları bir projeden ötekine taşıyabilirsin. İşte tTerm Web'in ilk günlerinde öğrendikleri.
+post.notes-and-projects.og_title = Notlar, renkli projeler ve terminal adları
+# main
+post.notes-and-projects.main.2 = Blog
+# demo-frame
+post.notes-and-projects.demo-frame.1 = tTerm Web iş başında: solda kendi renklerindeki projeler, içlerinde makineler, terminaller ve klasörlerdeki notlar, üstte sekmeler. Client X'teki web-01'de bir dağıtım çalışırken yanındaki notta sürüm kontrol listesinin maddeleri işaretleniyor. Ardından Cmd+K ile Acme'deki api-prod'da bir terminal açılıyor.
+# main
+post.notes-and-projects.main.3 = Makinelerin yanında klasörlerde notlar, her proje kendi renginde.
+# prose
+post.notes-and-projects.prose.1 = Notlar makinelerinin yanında
+post.notes-and-projects.prose.2 = Terminaller projenin makinelerinde nasıl yer alıyorsa, notlar da projenin klasörlerinde öyle yer alır: dağıtım runbook'u, sürüm kontrol listesi, erişim anahtarlarının nerede saklandığı. Not, terminallerinin yanında bir sekme olarak açılır, böylece runbook'u uygularken adımlar gözünün önünde kalır.
+post.notes-and-projects.prose.3 = Yazarken Markdown
+post.notes-and-projects.prose.4 = Satır başındaki <code>#</code> başlık, <code>- [ ]</code> kontrol listesi maddesi, üç ters tırnak kod bloğu oluşturur, <code>/</code> ise bunların hepsini içeren bir menü açar. Kod bloklarında bir Copy düğmesi bulunur. Kontrol listesi bir maddeyi kimin ve ne zaman işaretlediğini gösterir, notun tamamı da Markdown olarak kopyalanır.
+post.notes-and-projects.prose.5 = İki cihazdan aynı anda
+post.notes-and-projects.prose.6 = Not, sen yazdıkça kaydedilir. İki cihazda aynı anda düzenlendiğinde iki taraftaki değişiklikler de korunur, tTerm yalnızca her iki tarafta da değiştirilen bir yer olduğunda sorar. Bağlantı koparsa yazdıkların tarayıcıda bekler ve notu yeniden açtığında geri gelir.
+post.notes-and-projects.prose.7 = Kendi projelerin
+post.notes-and-projects.prose.8 = Artık Personal dışında kendi projelerini de oluşturabilirsin: müşteri, ortam ya da iş başına bir tane. Her birinin kendi makineleri, terminalleri ve notları var. Personal dahil her projenin adını ve sekmelerdeki etiketi oluşturan kodunu (CX/web-01'deki gibi) değiştirebilirsin. İçinde makine olmayan bir proje silinebilir, notları da onunla birlikte silinir.
+post.notes-and-projects.prose.9 = Bir makine, terminalleri çalışmaya devam ederken başka bir projeye taşınır ve makinenin kendisinde hiçbir şey değişmez. Notlar da başka bir projeye, o projenin istediğin klasörüne taşınabilir.
+post.notes-and-projects.prose.10 = Renkli projeler
+post.notes-and-projects.prose.11 = Her projenin sekiz renkten biri var. Renk, kenar çubuğunda ve sekmelerde projenin kodunu doldurur, böylece bir sekmenin hangi projeden olduğunu bir bakışta anlarsın. Hesap sayfasında rengin yalnızca koda mı, yoksa kenar çubuğundaki proje bloğunun tamamına mı uygulanacağını seçersin.
+post.notes-and-projects.prose.12 = Terminal adları
+post.notes-and-projects.prose.13 = Bir terminalin adı artık terminal 2 olmak zorunda değil: adını deploy, logs ya da migrations koy. Sekmesinde, kenar çubuğunda ya da proje sayfasında terminale çift tıkla, adı yaz ve Enter'a bas. Ad, terminalin göründüğü her yerde görünür.
+post.notes-and-projects.prose.14 = Yeni kenar çubuğu ve her projeye bir sayfa
+post.notes-and-projects.prose.15 = Kenar çubuğunda her projenin altında terminalleriyle birlikte makineleri ve klasörlere ayrılmış notları yer alır. Bir makineye ya da klasöre tıklamak onu yalnızca daraltıp genişletir, yanındaki artı bir terminal açar ya da yeni bir not başlatır, projenin adı ise proje sayfasını açar: açık terminalleriyle tüm makineler ve tüm notlar.
+post.notes-and-projects.prose.16 = Sırada ne var
+post.notes-and-projects.prose.17 = Sıradaki büyük adım ekip çalışması: projede kişiler, roller, ortak bir komut günlüğü ve bir ekip arkadaşının terminalini izleme. İzlenen kişi, kimin izlediğini her zaman görür. Notlar da o zaman projedeki herkesle paylaşılacak.
+post.notes-and-projects.prose.18 = Buna paralel olarak bilgisayarın için de bir tTerm geliştiriyoruz: bilgisayarındaki kabuklar için kendi penceresinde aynı arayüz.
+post.notes-and-projects.prose.19 = tTerm Web'i dene
+post.notes-and-projects.prose.20 = E-postanla giriş yap: sana bir kod gelir, sonrasında kendi cihazlarında kısa bir kod yeterli olur. İlk sunucun bir dakikada bağlanır.
+post.notes-and-projects.prose.21 = Ücretsiz başla
+# more-section
+post.notes-and-projects.more-section.1 = Blogdan diğer yazılar
+post.notes-and-projects.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/open-source/
+# meta
+post.open-source.title = Ücretli planlar yolda olsa da tTerm'in kodu neden açık · tTerm blogu
+post.open-source.description = tTerm'in tüm kodu artık MIT yerine AGPL v3 lisansıyla yayımlanıyor ve yakında ücretli planlar geliyor. Bunların neden birbirine engel olmadığını ve neden sunucuyu bile açtığımızı anlatıyoruz.
+post.open-source.og_title = Ücretli planlar yolda olsa da tTerm'in kodu neden açık
+# main
+post.open-source.main.2 = Blog
+# demo-frame
+post.open-source.demo-frame.1 = tTerm Web'de bir MacBook'taki terminal, tterm-web deposunun bir kopyasında: git remote kopyanın github.com/tterm-net/tterm-web'den geldiğini, git log lisansın 0.0.1 sürümüyle eklendiğini gösteriyor, lisans dosyasında da GNU Affero General Public License, version 3 yazıyor.
+# main
+post.open-source.main.3 = tTerm Web'in lisansı, tTerm Web'in kendisinde kontrol ediliyor: ilk sürümden beri AGPL v3.
+# prose
+post.open-source.prose.1 = Ne değişti
+post.open-source.prose.2 = 11 Ekim'den bu yana tTerm'in tüm kodu AGPL v3 lisansıyla yayımlanıyor: hem sayfası hem sunucusuyla tTerm Web'in tamamı, bilgisayarlar için ajan, Telegram botu ve bu site. Şu anda bilgisayarın için geliştirdiğimiz tTerm ise ilk sürümünden beri bu lisansla geliyor. Bundan önce bot, ajan ve site MIT lisansıyla yayımlanıyordu. MIT ile çıkmış sürümler öyle kalır: bir lisans sonradan geri alınamaz. AGPL yeni olan her şey için geçerli.
+post.open-source.prose.3 = Neden sunucu bile açık
+post.open-source.prose.4 = tTerm makinelerine bağlanır. Sunucuda sudo yetkisine sahip tterm kullanıcısı olarak giriş yapar, yani root yetkisi alır. Böyle bir erişimi olan bir hizmetin yalnızca sözüne güvenilmemeli, bu yüzden bu erişimle ilgili her şey açık: çekirdek, sertifikaları imzalayan ayrı program, kurulum betiği ve ajan.
+post.open-source.prose.5 = Ana sayfamızdaki her vaadi kodla karşılaştırarak doğrulayabilirsin. Bir sertifikanın ömrü iki dakikadır ve yalnızca tek bir sunucuda geçerlidir. CA anahtarları ağ erişimi olmayan ayrı bir süreçte tutulur. Kurulum betiği <code>authorized_keys</code> dosyasına tek satır ekler ve <code>sshd_config</code> dosyasına dokunmaz. app.tterm.net'teki sunucu doğrudan açık depodan güncellenir, yani GitHub'da ne varsa çalışan kod tam olarak odur.
+post.open-source.prose.6 = Çoğu zaman yalnızca uygulama açık olur, sunucu kapalı tutulur. Başkalarının makinelerinde root yetkisiyle çalışan bir terminal için bu bize yanlış geliyor.
+post.open-source.prose.7 = Neden MIT değil de AGPL
+post.open-source.prose.8 = MIT, kodu alıp geliştirmek ve kapalı bir hizmet olarak çalıştırmak dahil neredeyse her şeye izin verir. Böyle bir hizmete sunucularını bağlayan insanların da root yetkisini kime ve nasıl verdiklerini bilmesinin hiçbir yolu yoktur.
+post.open-source.prose.9 = AGPL buna izin vermez: tTerm'in değiştirilmiş bir kopyasını başkalarına hizmet olarak sunan herkes, kodunu kullanıcılarına açmak zorundadır. Kodumuz üzerine kurulan her hizmet bizimki kadar şeffaf kalır.
+post.open-source.prose.10 = Bunların hiçbiri sana bir yükümlülük getirmez. Makinelerini bağla, çalış, tTerm'i kendi sunucuna kur: lisans ancak tTerm'i başkalarına dağıtırsan ya da değiştirilmiş bir sürümünü onlara hizmet olarak sunarsan devreye girer.
+post.open-source.prose.11 = Peki neden para ödemeli
+post.open-source.prose.12 = Koda erişim için değil, hizmet için ödeme yapacaksın. tTerm'in her gün çalışması için AB'de sunucular ve veritabanı kopyaları, e-posta, destek ve güncellemeleri takip eden biri gerekiyor. Ücretli planlardan gelen para bunlara gidecek, planları da sana önceden duyuracağız. tTerm beta aşamasındayken herkes için ücretsiz.
+post.open-source.prose.13 = Kendi tTerm kopyanı çalıştırabilirsin: AGPL buna izin verir. Ama çoğu insanın ihtiyacı bir terminal, kendi başına barındırıp güncelleyeceği ve yedekleyeceği bir hizmet daha değil.
+post.open-source.prose.14 = Başka açık kaynak projeler de bu modelle yaşıyor. Plausible, şirketler kodunun üzerine karşılığında hiçbir şey vermeden rakip hizmetler kurmasın diye 2020'de MIT'den AGPL'ye geçti. Grafana da 2021'de Apache 2.0'dan AGPL'ye geçti. İkisi de açık kodlarının bulut sürümünü satıyor.
+post.open-source.prose.15 = Kod nerede
+post.open-source.prose.16 = tTerm'in tüm kodu GitHub'daki tek bir organizasyonda: <a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a>. Depoları ve her birinin ne işe yaradığı şöyle:
+post.open-source.prose.17 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-web" target="_blank" rel="noopener">tterm-web</a></strong><br>tTerm Web, sayfa ve sunucu: terminallerini çalışır halde tutan çekirdek, sertifikaları imzalayan ayrı program ve sunucular ile bilgisayarlar için kurulum betikleri.
+post.open-source.prose.18 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">tterm-app</a></strong><br>Bilgisayarın için tTerm: aynı sayfa kendi penceresinde, o bilgisayarın kabuklarıyla. Motoru Rust ile yazıldı, ilk olarak macOS için geliyor.
+post.open-source.prose.19 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-agent" target="_blank" rel="noopener">tterm-agent</a></strong><br>Bilgisayarlar için ajan: bir Mac'i ya da Linux makineyi tTerm Web'e ve bota bağlar. Dışarıya kendisi bağlanır ve hiçbir port açmaz.
+post.open-source.prose.20 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-telegram" target="_blank" rel="noopener">tterm-telegram</a></strong><br>tTerm'in doğduğu Telegram botu.
+post.open-source.prose.21 = <strong><a class="repo" href="https://github.com/tterm-net/site" target="_blank" rel="noopener">site</a></strong><br>Bu site.
+post.open-source.prose.22 = <strong><a class="repo" href="https://github.com/tterm-net/.github" target="_blank" rel="noopener">.github</a></strong><br>Organizasyonun GitHub sayfası.
+post.open-source.prose.23 = Kurulum betikleri kısa: çalıştırmadan önce oku.
+post.open-source.prose.24 = tTerm Web'i dene
+post.open-source.prose.25 = E-postanla giriş yap: sana bir kod gelir, sonrasında kendi cihazlarında kısa bir kod yeterli olur. İlk sunucun bir dakikada bağlanır.
+post.open-source.prose.26 = Ücretsiz başla
+# more-section
+post.open-source.more-section.1 = Blogdan diğer yazılar
+post.open-source.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/several-terminals/
+# meta
+post.several-terminals.title = Bir makinede birden fazla terminal · tTerm blogu
+post.several-terminals.description = Artık aynı sunucuda birden fazla terminali açık tutabilirsin: birinde log akarken diğerinde işini yaparsın. Her biri /use komutunda ayrı bir satırda görünür ve kendi kabuğuna sahiptir: birinde yaptığın cd diğerini olduğu yerde bırakır.
+post.several-terminals.og_title = Bir makinede birden fazla terminal
+# main
+post.several-terminals.main.2 = Blog
+post.several-terminals.main.3 = Artık aynı sunucuda birden fazla terminali açık tutabilirsin: birinde log akarken diğerinde işini yaparsın. Her biri <code>/use</code> komutunda ayrı bir satırda görünür ve kendi kabuğuna sahiptir: birinde yaptığın <code>cd</code> diğerini olduğu yerde bırakır.
+# prose
+post.several-terminals.prose.1 = Başka neler değişti
+post.several-terminals.prose.2 = Çıktı, komut bittiğinde tek seferde gelmek yerine geldikçe görünüyor, uzun süren bir komutu yarıda kesmek için de bir Stop düğmesi var
+post.several-terminals.prose.3 = Yanıt bekleyen bir komut, sen fark edene kadar sessizce asılı kalmak yerine artık bunu söylüyor ve yanıt için düğmeler sunuyor
+post.several-terminals.prose.4 = Git dalı artık komut isteminin üstünde, gözün zaten baktığı yerde gösteriliyor
+post.several-terminals.prose.5 = Uzun çıktılar dosyaya dönüşmek yerine sohbette kalıyor
+post.several-terminals.prose.6 = Telegram'da blogumuza abone ol
+# more-section
+post.several-terminals.more-section.1 = Blogdan diğer yazılar
+post.several-terminals.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/tterm-is-live/
+# meta
+post.tterm-is-live.title = tTerm yayında · tTerm blogu
+post.tterm-is-live.description = Sunucuların için bir terminal, tam burada, Telegram'da. Bir komut yaz: makinende çalışır, yanıt da çıkış kodu, çalışma dizini ve git dalıyla birlikte mesaj olarak gelir. Kabuk kaldığın yeri hatırlar.
+post.tterm-is-live.og_title = tTerm yayında
+# main
+post.tterm-is-live.main.2 = Blog
+# prose
+post.tterm-is-live.prose.1 = Bugün neler çalışıyor
+post.tterm-is-live.prose.2 = SSH üzerinden Linux sunucular: bağlamak için tek komut, <code>sshd_config</code> düzenlemesi yok
+post.tterm-is-live.prose.3 = Hiç port açmayan küçük bir ajan aracılığıyla macOS ve Linux bilgisayarlar
+post.tterm-is-live.prose.4 = Herhangi bir Telegram kullanıcısına erişim ver: belirli bir süre için ya da sen geri alana kadar
+post.tterm-is-live.prose.5 = Çalıştırdıkları her komut, adlarıyla birlikte senin günlüğüne düşer
+post.tterm-is-live.prose.6 = Ücretsiz, açık kaynak, kayıt gerektirmez.
+post.tterm-is-live.prose.7 = Bu bir beta. Çalışıyor ve değişmeye devam edecek, değişiklikleri de bu kanalda duyuruyoruz.
+post.tterm-is-live.prose.8 = Telegram'da blogumuza abone ol
+# more-section
+post.tterm-is-live.more-section.1 = Blogdan diğer yazılar
+post.tterm-is-live.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/tterm-web/
+# meta
+post.tterm-web.title = tTerm artık tarayıcıda çalışıyor · tTerm blogu
+post.tterm-web.description = Tüm sunucuların ve bilgisayarların tek bir sekmede, her komut ayrı bir blokta, cihazında da hiç anahtar yok. İşte tTerm Web'in bugün neler yapabildiği, bir makinenin nasıl bağlanacağı ve sırada ne olduğu.
+post.tterm-web.og_title = tTerm artık tarayıcıda çalışıyor
+# main
+post.tterm-web.main.2 = Blog
+post.tterm-web.main.3 = Şimdiye kadar tTerm Telegram'daydı: sunucularına doğrudan bir sohbetten komut gönderiyordun. Bugün tarayıcında çalışan gerçek bir terminal olan tTerm Web'i kullanıma açıyoruz. Tüm sunucuların ve bilgisayarların tek bir sekmede, her komut ayrı bir blokta, cihazında da hiç anahtar yok.
+# demo-frame
+post.tterm-web.demo-frame.1 = tTerm Web iş başında: solda projeler, makineler ve terminalleri, üstte sekmeler. web-01'de git pull, derleme ve servisin yeniden başlatılması çalışıyor, ardından Cmd+K ile api-prod'da bir terminal açılıyor.
+# main
+post.tterm-web.main.4 = İşte tTerm Web: solda projelere göre makineler, üstte sekmeler, her komut ayrı bir blokta.
+# prose
+post.tterm-web.prose.1 = Bot varken neden tarayıcı
+post.tterm-web.prose.2 = Elinde yalnızca telefon olduğunda bot çok işe yarar: bir servisi yeniden başlat, diskteki boş alana bak, bir yükleyicinin sorusunu yanıtla. Ama uzun işler büyük ekran ister: yan yana birkaç sekme, tam ekran vim ve htop, dünkü komutu kolayca bulabileceğin bir geçmiş.
+post.tterm-web.prose.3 = tTerm Web tam da bunun için var. Dizüstü bilgisayarda, tablette ya da telefonda, her tarayıcıda açılır ve çalıştığın cihaza hiçbir şey kurmanı gerektirmez.
+post.tterm-web.prose.4 = Her komut ayrı bir blokta
+post.tterm-web.prose.5 = Sıradan bir terminalde her şey tek bir akışta birbirine karışır ve bir komutun nerede bitip ötekinin nerede başladığını gözle bulman gerekir. tTerm'de her komut ayrı bir blok olarak gelir: komutun kendisi, çıktısı, çıkış kodu, süresi, dizini ve git dalı.
+post.tterm-web.prose.6 = Bir bloğu çıktısıyla birlikte kopyalayabilir, daraltabilir ya da yeniden çalıştırabilirsin. Komut çalışırken çıktısı canlı akar, bittiğinde ise blok kolayca seçilip kopyalanabilen düz metne dönüşür.
+post.tterm-web.prose.7 = Editör gibi bir giriş satırı
+post.tterm-web.prose.8 = En altta ayrı bir giriş satırı var. Shift+Enter yeni satıra geçer, geçmişindeki bir komut gri renkte önerilir, Tab tamamlar. Geçmiş bizim tarafımızda saklanır, bu yüzden tüm cihazlarında aynıdır.
+post.tterm-web.prose.9 = Satırın üstünde nerede olduğunu görürsün: dizin ve dal. Bunlara tıklayıp listeden başkasını seçtiğinde <code>cd</code> ya da <code>git switch</code> sıradan bir blok olarak çalışır. Geri dönüşü olmayan türden tehlikeli bir komuttan önce ise tTerm bir kez daha sorar.
+post.tterm-web.prose.10 = vim, htop ve sudo
+post.tterm-web.prose.11 = Tam ekran programlar tüm terminal alanını kaplar ve her zamanki gibi çalışır, sudo da öyle. Blok istemiyorsan klasik bir mod var: alıştığın gibi kesintisiz tek bir terminal.
+post.tterm-web.prose.12 = Sekmeyi kapatınca terminal kapanmaz
+post.tterm-web.prose.13 = Terminal tarayıcında değil, bizim sunucumuzda çalışır. Bir sunucudaki derlemenin ortasında dizüstünü kapat: derleme devam eder, çıktısı saklanır. tTerm'i başka bir cihazda aç, terminal olduğu yerde seni bekler.
+post.tterm-web.prose.14 = Farklı projelerin sekmeleri yan yana açılır ve proje koduyla etiketlenir: P/web-01, A/api-prod. Cmd+K komut paletini açar: istediğin terminale geç, herhangi bir makinede yenisini aç ya da bir eylem çalıştır.
+post.tterm-web.prose.15 = Makine nasıl bağlanır
+post.tterm-web.prose.16 = Linux sunucu tek komutla bağlanır. Bir makine eklediğinde tTerm Web bu komutu gösterir, sen de onu sunucuda çalıştırırsın:
+post.tterm-web.prose.17 = Kurulum betiği sunucuda tterm adlı bir kullanıcı oluşturur, bu kullanıcının <code>authorized_keys</code> dosyasına tek satır ekler ve <code>/etc/sudoers.d</code> içindeki ayrı bir dosyayla ona sudo yetkisi verir. <code>sshd_config</code> dosyasına dokunmaz, sshd'yi yeniden başlatmaz ve hiçbir port açmaz. Birkaç saniye sonra sunucu listende görünür.
+post.tterm-web.prose.18 = macOS ya da Linux bilgisayar küçük bir ajan aracılığıyla bağlanır. Ajan senin kullanıcı hesabınla çalışır ve sunucumuza kendisi bağlanır, bu yüzden gelen bağlantılar için port gerekmez ve bilgisayar NAT arkasında olabilir. Ajan tek komutla kaldırılır.
+post.tterm-web.prose.19 = Güvenlik
+post.tterm-web.prose.20 = Makinelerine bağlanıyoruz, bu yüzden erişimi vermesi kolay, geri alması da bir o kadar kolay olacak şekilde tasarladık.
+post.tterm-web.prose.21 = <strong>Anahtarlarına gerek yok.</strong> tTerm her bağlantı için üzerinde adının yazılı olduğu yeni bir SSH sertifikası imzalar. Sertifika yalnızca o sunucuda geçerlidir ve iki dakika sonra geçersiz olur.
+post.tterm-web.prose.22 = <strong>İmzalama ayrı tutulur.</strong> İmzalamada kullandığımız anahtarlar ağ erişimi olmayan ayrı bir süreçte tutulur. Ana program onları okuyamaz, yalnızca imza isteyebilir ve her imza kayıt altına alınır.
+post.tterm-web.prose.23 = <strong>Aracı yok.</strong> tTerm sunucusu AB'de. Sayfa ve terminaller doğrudan ona bağlanır: Cloudflare yalnızca DNS hizmetimizi sağlar ve komutlarını hiçbir zaman görmez.
+post.tterm-web.prose.24 = <strong>Geri alması kolay.</strong> Bir sunucuyu tTerm'den sildiğinde tTerm sunucudaki kendi erişimini kendisi kaldırır; sunucu yanıt vermezse bunu sunucuda yapacak komutu gösterir. Kurulum betiğinin kurduğu diğer her şeyin nasıl kaldırılacağı, betiğin en başında yazıyor.
+post.tterm-web.prose.25 = <strong>Açık kaynak.</strong> tTerm Web ve ajan, AGPL-3.0 lisansıyla açık kaynaklıdır. Kurulum betiği kısa ve çalıştırmadan önce okumaya değer.
+post.tterm-web.prose.26 = Ücreti ne kadar
+post.tterm-web.prose.27 = tTerm Web beta aşamasındayken herkes için ücretsiz.
+post.tterm-web.prose.28 = makine, kişi başına
+post.tterm-web.prose.29 = açık terminal
+post.tterm-web.prose.30 = günlük geçmiş, çıktılarıyla birlikte
+post.tterm-web.prose.31 = Ücretli planlar daha sonra gelecek, bunu da sana çok önceden haber vereceğiz.
+post.tterm-web.prose.32 = Peki ya bot
+post.tterm-web.prose.33 = <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a> kalıyor ve çalışmaya devam ediyor: elinde yalnızca telefon olduğunda sunucularına doğrudan sohbetten komut gönderirsin. Şimdilik bot ve web uygulaması ayrı çalışıyor, her birinin kendi makine listesi var. İleride ikisini birleştireceğiz.
+post.tterm-web.prose.34 = Sırada ne var
+post.tterm-web.prose.35 = Sıradaki büyük adım ekip çalışması: projede roller, ortak bir komut günlüğü ve bir ekip arkadaşının terminalini izleme. İzlenen kişi, kimin izlediğini her zaman görür. Windows bilgisayarlar henüz desteklenmiyor; sıra onlara daha sonra gelecek.
+post.tterm-web.prose.36 = tTerm Web'i dene
+post.tterm-web.prose.37 = E-postanla giriş yap: sana bir kod gelir, sonrasında kendi cihazlarında kısa bir kod yeterli olur. İlk sunucun bir dakikada bağlanır.
+post.tterm-web.prose.38 = Ücretsiz başla
+# more-section
+post.tterm-web.more-section.1 = Blogdan diğer yazılar
+post.tterm-web.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/verified-on-github/
+# meta
+post.verified-on-github.title = tTerm artık GitHub'da doğrulanmış bir organizasyon · tTerm blogu
+post.verified-on-github.description = github.com/tterm-net artık Verified rozeti taşıyor: GitHub, organizasyonun ve tterm.net sitesinin arkasında aynı insanların olduğunu doğruladı.
+post.verified-on-github.og_title = tTerm artık GitHub'da doğrulanmış bir organizasyon
+# main
+post.verified-on-github.main.2 = Blog
+post.verified-on-github.main.3 = <a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a> artık Verified rozeti taşıyor: GitHub, organizasyonun ve <a href="{{$base}}/">tterm.net</a> sitesinin arkasında aynı insanların olduğunu doğruladı.
+# prose
+post.verified-on-github.prose.1 = Bu bizim için çoğu yerde olduğundan daha önemli. Kod açık, yani herkes onu fork edebilir, kurulum komutunu değiştirip bizimkine benzeyen bir adla yayımlayabilir. Bir alan adı ise fork edilemez. Rozet ikisini birbirine bağlar, böylece bizim olduğu kanıtlanabilen tek bir yer ortaya çıkar:
+post.verified-on-github.prose.2 = <a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a>: üç deponun hepsi doğrulanmış
+post.verified-on-github.prose.3 = <a href="{{$base}}/">tterm.net</a>: site
+post.verified-on-github.prose.4 = <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>: botun kendisi
+post.verified-on-github.prose.5 = Telegram'da blogumuza abone ol
+# more-section
+post.verified-on-github.more-section.1 = Blogdan diğer yazılar
+post.verified-on-github.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/your-shell/
+# meta
+post.your-shell.title = Ajan artık senin kabuğunu çalıştırıyor: bash ya da zsh · tTerm blogu
+post.your-shell.description = Eskiden ajan ne olursa olsun bash başlatıyordu. Varsayılan kabuğun 2019'dan beri zsh olduğu macOS'te bu, başka birinin ortamı demekti: kurduğun şeylerin yarısı bulunamıyordu.
+post.your-shell.og_title = Ajan artık senin kabuğunu çalıştırıyor: bash ya da zsh
+# main
+post.your-shell.main.2 = Blog
+# prose
+post.your-shell.prose.1 = Artık kendi kullandığın kabuk açılıyor, kendi yolların ve ayarlarınla, tıpkı Terminal'i açtığında olduğu gibi.
+post.your-shell.prose.2 = Başka neler değişti
+post.your-shell.prose.3 = Geri dönüşü olmayan bir komut önce onay istiyor: <code>rm -rf</code>, <code>mkfs</code>, <code>DROP DATABASE</code>, <code>sshd</code> servisini durdurmak
+post.your-shell.prose.4 = Sunucunun host anahtarı, sunucuyu bağladığında kaydediliyor ve sonraki her bağlantıda kontrol ediliyor, böylece o adreste yanıt veren başka hiçbir şey içeri giremiyor
+post.your-shell.prose.5 = Uzun çıktı, son altı satırı yerine bir özetle geliyor: <code>apt</code> için artık yalnızca <code>Processing triggers</code> değil, kaç paketin güncellendiğini görüyorsun
+post.your-shell.prose.6 = Komut istemindeki uzun yollar kısaltılıyor: <code>/opt/…/tterm/core</code>
+post.your-shell.prose.7 = Telegram'da blogumuza abone ol
+# more-section
+post.your-shell.more-section.1 = Blogdan diğer yazılar
+post.your-shell.more-section.2 = Tüm yazılar

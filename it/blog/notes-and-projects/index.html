@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Note, progetti a colori e nomi dei terminali · Blog di tTerm</title>
+<meta name="description" content="Runbook, checklist e note sugli accessi ora stanno accanto alle macchine a cui si riferiscono. Puoi creare i tuoi progetti e assegnare a ognuno un colore, dare un nome ai terminali e spostare macchine e note da un progetto all'altro. Ecco cosa ha imparato tTerm Web nei suoi primi giorni.">
+<link rel="canonical" href="https://tterm.net/it/blog/notes-and-projects/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/notes-and-projects/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/notes-and-projects/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/notes-and-projects/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/notes-and-projects/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/notes-and-projects/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/notes-and-projects/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/notes-and-projects/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/notes-and-projects/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/notes-and-projects/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/notes-and-projects/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/notes-and-projects/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/notes-and-projects/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/notes-and-projects/">
+<meta property="og:title" content="Note, progetti a colori e nomi dei terminali">
+<meta property="og:description" content="Runbook, checklist e note sugli accessi ora stanno accanto alle macchine a cui si riferiscono. Puoi creare i tuoi progetti e assegnare a ognuno un colore, dare un nome ai terminali e spostare macchine e note da un progetto all'altro. Ecco cosa ha imparato tTerm Web nei suoi primi giorni.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/it/blog/notes-and-projects/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Note, progetti a colori e nomi dei terminali",
+  "description": "Runbook, checklist e note sugli accessi ora stanno accanto alle macchine a cui si riferiscono. Puoi creare i tuoi progetti e assegnare a ognuno un colore, dare un nome ai terminali e spostare macchine e note da un progetto all'altro. Ecco cosa ha imparato tTerm Web nei suoi primi giorni.",
+  "datePublished": "2026-10-20",
+  "inLanguage": "it",
+  "url": "https://tterm.net/it/blog/notes-and-projects/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.5.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/it/" aria-label="tTerm, pagina iniziale">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">beta</span>
+    </a>
+    <nav class="nav" aria-label="Sezioni">
+      <a href="/it/#features">Funzionalità</a>
+      <a href="/it/#security">Sicurezza</a>
+      <a href="/it/#pricing">Prezzi</a>
+      <details class="res">
+        <summary>Risorse<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="/it/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>Blog</b><small>Le novità di tTerm</small></span></a>
+          <a href="/it/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>Domande frequenti</b><small>Le risposte ai dubbi più comuni</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Canale Telegram</b><small>Una breve nota su ogni nuova versione</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>Codice sorgente su GitHub</b><small>Tutto il codice di tTerm, AGPL v3</small></span></a>
+        </div>
+      </details>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>IT</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/notes-and-projects/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/notes-and-projects/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/notes-and-projects/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/notes-and-projects/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/notes-and-projects/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/pl/blog/notes-and-projects/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/notes-and-projects/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/notes-and-projects/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/notes-and-projects/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/notes-and-projects/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/notes-and-projects/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/notes-and-projects/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Accedi</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Inizia gratis</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="/it/#features">Funzionalità</a>
+          <a href="/it/#security">Sicurezza</a>
+          <a href="/it/#pricing">Prezzi</a>
+          <p class="menu-label">Risorse</p>
+          <a href="/it/blog/" aria-current="page">Blog</a>
+          <a href="/it/#faq">Domande frequenti</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canale Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Codice sorgente su GitHub</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>Italiano</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/notes-and-projects/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/notes-and-projects/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/notes-and-projects/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/blog/notes-and-projects/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/notes-and-projects/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+              <a href="/pl/blog/notes-and-projects/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/notes-and-projects/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/notes-and-projects/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/notes-and-projects/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/notes-and-projects/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/notes-and-projects/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/notes-and-projects/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">Inizia gratis</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="/it/blog/">Blog</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-20">20 ottobre 2026</time><span class="sep" aria-hidden="true">·</span><span>3 minuti di lettura</span></p>
+    <!-- /updates:meta -->
+      <h1>Note, progetti a colori e nomi dei terminali</h1>
+      <p class="post-lead">Runbook, checklist e note sugli accessi ora stanno accanto alle macchine a cui si riferiscono. Puoi creare i tuoi progetti e assegnare a ognuno un colore, dare un nome ai terminali e spostare macchine e note da un progetto all'altro. Ecco cosa ha imparato tTerm Web nei suoi primi giorni.</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="demo-frame">
+        <div class="demo" data-demo role="img" aria-label="tTerm Web in azione: a sinistra i progetti nei loro colori, con macchine, terminali e note in cartelle, in alto le schede. Su web-01, in Client X, è in corso un deploy, mentre nella nota accanto si spuntano le voci della sua checklist di release. Poi Cmd+K apre un terminale su api-prod, in Acme."></div>
+      </div>
+      <figcaption>Note in cartelle accanto alle macchine, ogni progetto con il suo colore.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>Note accanto alle macchine</h2>
+      <p>Le note stanno nelle cartelle di un progetto, come i terminali stanno sulle sue macchine: il runbook del deploy, la checklist della release, dove sono custodite le chiavi d'accesso. Una nota si apre in una scheda accanto ai terminali, così hai il runbook sotto gli occhi mentre lo segui.</p>
+
+      <h2>Markdown mentre scrivi</h2>
+      <p>Un <code>#</code> all'inizio di una riga crea un titolo, <code>- [ ]</code> una voce di checklist, tre backtick un blocco di codice, e <code>/</code> apre un menu con tutto questo. Il codice ha un pulsante Copy. Una checklist mostra chi ha spuntato una voce e quando, e l'intera nota si copia come Markdown.</p>
+
+      <h2>Da due dispositivi insieme</h2>
+      <p>Una nota si salva mentre scrivi. Se la modifichi da due dispositivi contemporaneamente, tiene le modifiche di entrambi, e tTerm ti chiede qualcosa solo se lo stesso punto è stato cambiato da tutte e due le parti. Se cade la connessione, quello che hai scritto resta in attesa nel browser e ricompare quando riapri la nota.</p>
+
+      <h2>I tuoi progetti</h2>
+      <p>Oltre a Personal ora puoi creare i tuoi progetti: uno per cliente, per ambiente o per attività. Ognuno ha le sue macchine, i suoi terminali e le sue note. Puoi rinominare qualsiasi progetto, anche Personal, e cambiarne il codice, quello che etichetta le schede, come in CX/web-01. Un progetto senza macchine si può eliminare, insieme alle sue note.</p>
+      <p>Una macchina passa a un altro progetto con i terminali ancora in esecuzione, e sulla macchina stessa non cambia nulla. Anche una nota si può spostare in un altro progetto, in una qualsiasi delle sue cartelle.</p>
+
+      <h2>Progetti a colori</h2>
+      <p>Ogni progetto ha uno di otto colori, che ritrovi sul suo codice nella barra laterale e nelle schede: così capisci a colpo d'occhio da quale progetto viene una scheda. Nella pagina dell'account scegli se colorare solo il codice o l'intero blocco del progetto nella barra laterale.</p>
+
+      <h2>Nomi dei terminali</h2>
+      <p>Un terminale non deve più chiamarsi per forza terminal 2: chiamalo deploy, logs o migrations. Fai doppio clic sul terminale nella sua scheda, nella barra laterale o nella pagina del progetto, scrivi il nome e premi Enter. Il nome compare ovunque compaia il terminale.</p>
+
+      <h2>Una nuova barra laterale e una pagina per ogni progetto</h2>
+      <p>Nella barra laterale ogni progetto mostra le sue macchine con i loro terminali e le sue note in cartelle. Un clic su una macchina o su una cartella si limita a comprimerla, il pulsante + accanto apre un terminale o crea una nota, e il nome del progetto apre la sua pagina: tutte le macchine con i terminali aperti e tutte le note.</p>
+
+      <h2>Cosa viene dopo</h2>
+      <p>Il prossimo grande passo è il lavoro in team: persone in un progetto, ruoli, un registro condiviso dei comandi e l'osservazione del terminale di un collega, in cui chi è osservato vede sempre chi sta guardando. A quel punto le note saranno condivise da tutti nel progetto.</p>
+      <p><em>In parallelo stiamo costruendo tTerm per il tuo computer: la stessa interfaccia in una finestra tutta sua, per le shell del tuo computer.</em></p>
+
+      <div class="post-cta">
+        <h2>Prova tTerm Web</h2>
+        <p>Accedi con la tua email: ricevi un codice, e da lì in poi sui tuoi dispositivi basta un codice breve. Il primo server si collega in un minuto.</p>
+        <a class="btn btn-primary" href="https://app.tterm.net">Inizia gratis</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="Altro dal blog">
+    <div class="split-row">
+      <h2>Altro dal blog</h2>
+      <a class="btn btn-ghost btn-md" href="/it/blog/">Tutti gli articoli</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/it/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">25 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">Perché il codice di tTerm è aperto, anche se arrivano i piani a pagamento</span>
+        <span class="post-mini-text">Tutto il codice di tTerm ora è sotto licenza AGPL v3 invece che MIT, e presto arriveranno i piani a pagamento.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/it/blog/tterm-web/">
+        <span class="post-mini-meta"><time datetime="2026-10-18">18 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">tTerm ora funziona nel browser</span>
+        <span class="post-mini-text">Tutti i tuoi server e computer in una scheda, ogni comando in un blocco a sé e nessuna chiave sul tuo dispositivo.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/it/blog/independent-windows/">
+        <span class="post-mini-meta"><time datetime="2026-10-07">7 ott</time> · Bot</span>
+        <span class="post-mini-title">Le finestre su un computer ora sono indipendenti</span>
+        <span class="post-mini-text">Su un server ogni finestra è sempre stata un terminale a sé.</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/it/blog/">Tutti gli articoli</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/it/" aria-label="tTerm, pagina iniziale">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">beta</span>
+        </a>
+        <p class="foot-tag">Il terminale cloud per server e computer.</p>
+      </div>
+      <nav class="foot-cols" aria-label="Link">
+        <div class="foot-col">
+          <p class="foot-h">Prodotto</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot Telegram</a>
+          <a href="/it/#pricing">Prezzi</a>
+          <a href="/it/#security">Sicurezza</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Risorse</p>
+          <a href="/it/blog/">Blog</a>
+          <a href="/it/#faq">Domande frequenti</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canale Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Codice sorgente su GitHub</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Note legali</p>
+          <a href="/terms/">Termini di servizio</a>
+          <a href="/privacy/">Informativa sulla privacy</a>
+          <a href="/it/blog/open-source/">Licenza AGPL-3.0</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <details class="lang lang-up">
+        <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>IT</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/notes-and-projects/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/notes-and-projects/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/notes-and-projects/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/notes-and-projects/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/notes-and-projects/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/pl/blog/notes-and-projects/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/notes-and-projects/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/notes-and-projects/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/notes-and-projects/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/notes-and-projects/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/notes-and-projects/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/notes-and-projects/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

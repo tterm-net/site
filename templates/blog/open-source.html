@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="{{$lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{post.open-source.title}}</title>
+<meta name="description" content="{{post.open-source.description}}">
+{{$links}}
+<meta property="og:title" content="{{post.open-source.og_title}}">
+<meta property="og:description" content="{{post.open-source.description}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{$canonical}}">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{{$locales}}
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld --><!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="{{$version}}">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">{{shell.skip}}</a>
+<div class="page">
+
+{{>header}}
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="{{$base}}/blog/">{{post.open-source.main.2}}</a>
+      <!-- updates:meta --><!-- /updates:meta -->
+      <h1>{{post.open-source.og_title}}</h1>
+      <p class="post-lead">{{post.open-source.description}}</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="demo-frame">
+        <div class="demo demo-still" role="img" aria-label="{{post.open-source.demo-frame.1}}">
+          <div class="dm" aria-hidden="true">
+            <div class="dm-chrome"><i></i><i></i><i></i><span class="dm-url"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>app.tterm.net</span></div>
+            <div class="dm-body">
+              <aside class="dm-side">
+                <div class="dm-side-head"><img src="/assets/logo.svg" alt="" width="18" height="18">tTerm</div>
+                <div class="dm-tree-wrap"><div class="dm-label">Projects</div><div class="dm-tree">
+                  <div class="dm-project pc-sky folded"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">CX</span><span class="dm-project-name">Client X</span><span class="dm-role">Owner</span></div></div>
+                  <div class="dm-project pc-teal folded"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">A</span><span class="dm-project-name">Acme</span><span class="dm-role">Owner</span></div></div>
+                  <div class="dm-project pc-violet"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">P</span><span class="dm-project-name">Personal</span><span class="dm-role">Owner</span></div><div class="dm-sub"><span>Machines</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div><div class="dm-group-in"><div class="dm-row"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg><span class="dm-row-name">MacBook</span></div><div class="dm-leaf on"><span class="dm-av">DG</span><span class="dm-leaf-name">terminal 1</span></div></div></div>
+                </div><div class="dm-newproj"><span class="dm-dash"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>New project</div></div>
+                <div class="dm-account"><span class="dm-avatar">DG</span><span class="dm-who"><b>Denis</b><small>Free plan</small></span></div>
+              </aside>
+              <div class="dm-main">
+                <div class="dm-bar"><div class="dm-tabs"><span class="dm-tab pc-violet on"><b class="dot"></b><span><em>P/</em>MacBook · terminal 1</span></span></div><span class="dm-plus"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="dm-jump"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Jump to<kbd>⌘K</kbd></span></div>
+                <div class="dm-term-view">
+                  <div class="dm-feed">
+                    <div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~</span><span class="dm-time">0.0 s</span></div><div class="dm-cmd"><em>&#x276F;</em> cd tterm-web</div></div>
+                    <div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/tterm-web</span><span class="dm-branch">main</span><span class="dm-time">0.0 s</span></div><div class="dm-cmd"><em>&#x276F;</em> git remote get-url origin</div><div class="dm-out">https://github.com/tterm-net/tterm-web.git</div></div>
+                    <div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/tterm-web</span><span class="dm-branch">main</span><span class="dm-time">0.0 s</span></div><div class="dm-cmd"><em>&#x276F;</em> git log --oneline -- LICENSE</div><div class="dm-out">00129b3 v0.0.1: AGPL-3.0 license, README</div></div>
+                    <div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/tterm-web</span><span class="dm-branch">main</span><span class="dm-time">0.0 s</span></div><div class="dm-cmd"><em>&#x276F;</em> sed -n 3,4p LICENSE</div><div class="dm-out ink"><span class="dm-indent">                    </span>GNU AFFERO GENERAL PUBLIC LICENSE</div><div class="dm-out ink"><span class="dm-indent">                       </span>Version 3, 19 November 2007</div></div>
+                  </div>
+                  <div class="dm-input"><div class="dm-chips"><span>~/tterm-web</span><span class="dm-branch-chip">main</span></div><div class="dm-line"><em>&#x276F;</em><span class="dm-typed"></span><span class="dm-caret"></span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figcaption>{{post.open-source.main.3}}</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>{{post.open-source.prose.1}}</h2>
+      <p>{{post.open-source.prose.2}}</p>
+
+      <h2>{{post.open-source.prose.3}}</h2>
+      <p>{{post.open-source.prose.4}}</p>
+      <p>{{post.open-source.prose.5}}</p>
+      <p>{{post.open-source.prose.6}}</p>
+
+      <h2>{{post.open-source.prose.7}}</h2>
+      <p>{{post.open-source.prose.8}}</p>
+      <p>{{post.open-source.prose.9}}</p>
+      <p>{{post.open-source.prose.10}}</p>
+
+      <h2>{{post.open-source.prose.11}}</h2>
+      <p>{{post.open-source.prose.12}}</p>
+      <p>{{post.open-source.prose.13}}</p>
+      <p>{{post.open-source.prose.14}}</p>
+
+      <h2>{{post.open-source.prose.15}}</h2>
+      <p>{{post.open-source.prose.16}}</p>
+      <ul class="prose-list repo-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M6.5 6.5h.01M9.5 6.5h.01"/></svg><span>{{post.open-source.prose.17}}</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg><span>{{post.open-source.prose.18}}</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg><span>{{post.open-source.prose.19}}</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span>{{post.open-source.prose.20}}</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>{{post.open-source.prose.21}}</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14.2A6.5 6.5 0 0 1 21.5 20"/></svg><span>{{post.open-source.prose.22}}</span></li>
+      </ul>
+      <p>{{post.open-source.prose.23}}</p>
+
+      <div class="post-cta">
+        <h2>{{post.open-source.prose.24}}</h2>
+        <p>{{post.open-source.prose.25}}</p>
+        <a class="btn btn-primary" href="https://app.tterm.net">{{post.open-source.prose.26}}</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="{{post.open-source.more-section.1}}">
+    <div class="split-row">
+      <h2>{{post.open-source.more-section.1}}</h2>
+      <a class="btn btn-ghost btn-md" href="{{$base}}/blog/">{{post.open-source.more-section.2}}</a>
+    </div>
+    <!-- updates:more --><!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="{{$base}}/blog/">{{post.open-source.more-section.2}}</a>
+  </section>
+
+</main>
+
+{{>footer}}
+
+</div>
+</body>
+</html>

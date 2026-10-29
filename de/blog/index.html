@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tTerm-Blog: Neuigkeiten</title>
+<meta name="description" content="Was wir veröffentlicht haben und was sich in tTerm geändert hat: die Web-App, der Telegram-Bot und die Website.">
+<link rel="canonical" href="https://tterm.net/de/blog/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/">
+<meta property="og:title" content="Blog: Neuigkeiten">
+<meta property="og:description" content="Was wir veröffentlicht haben und was sich in tTerm geändert hat: die Web-App, der Telegram-Bot und die Website.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tterm.net/de/blog/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.5.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/de/" aria-label="tTerm, Startseite">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">beta</span>
+    </a>
+    <nav class="nav" aria-label="Bereiche">
+      <a href="/de/#features">Funktionen</a>
+      <a href="/de/#security">Sicherheit</a>
+      <a href="/de/#pricing">Preise</a>
+      <details class="res">
+        <summary>Ressourcen<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="/de/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>Blog</b><small>Neues in tTerm</small></span></a>
+          <a href="/de/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>FAQ</b><small>Antworten auf häufige Fragen</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Telegram-Kanal</b><small>Eine kurze Notiz zu jedem Release</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>Quellcode auf GitHub</b><small>Der gesamte Code von tTerm, AGPL v3</small></span></a>
+        </div>
+      </details>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>DE</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/" hreflang="de" lang="de" aria-current="true">Deutsch<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/es/blog/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Anmelden</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Kostenlos starten</a>
+      <details class="menu">
+        <summary aria-label="Menü"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menü">
+          <a href="/de/#features">Funktionen</a>
+          <a href="/de/#security">Sicherheit</a>
+          <a href="/de/#pricing">Preise</a>
+          <p class="menu-label">Ressourcen</p>
+          <a href="/de/blog/" aria-current="page">Blog</a>
+          <a href="/de/#faq">FAQ</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram-Kanal</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Quellcode auf GitHub</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>Deutsch</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/" hreflang="de" lang="de" aria-current="true">Deutsch<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+              <a href="/es/blog/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/blog/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/" hreflang="it" lang="it">Italiano</a>
+              <a href="/pl/blog/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">Kostenlos starten</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="wrap blog-head">
+    <div class="glow" aria-hidden="true"></div>
+    <p class="eyebrow">Blog</p>
+    <h1>Neues in tTerm</h1>
+    <p class="section-lead">Was wir veröffentlicht haben und was sich geändert hat. Eine kurze Notiz zu jedem Release erscheint auch in unserem <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram-Kanal</a>.</p>
+  </section>
+
+  <section class="wrap" aria-label="Hervorgehobener Beitrag">
+    <!-- updates:featured -->
+    <a class="post-hero" href="/de/blog/tterm-web/">
+      <div class="post-hero-cover">
+      <div class="cover" aria-hidden="true">
+        <div class="cover-window">
+          <div class="cover-bar"><i></i><i></i><i></i><span>app.tterm.net</span></div>
+          <div class="cover-tabs"><span class="on"><b class="dot"></b><span><em>P/</em>web-01</span></span><span><b class="dot"></b><span><em>A/</em>api-prod</span></span></div>
+          <div class="cover-feed">
+            <p class="cover-meta"><b class="dot"></b>~/app<span>main</span><span class="cover-time">1.4 s</span></p>
+            <p class="cover-cmd"><em>&#x276F;</em> git pull</p>
+            <p>Updating 3f2c1a9..8d4e7b2</p>
+            <p>Fast-forward</p>
+            <p> src/server.ts | 12 <ins>+++++++</ins><del>-----</del></p>
+            <p class="cover-meta cover-gap"><b class="dot busy"></b>~/app<span>main</span><span class="cover-time">running</span></p>
+            <p class="cover-cmd"><em>&#x276F;</em> npm run build</p>
+            <p>vite v7.1.4 building for production...</p>
+            <p class="cover-ok">&#x2713; 412 modules transformed.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="post-hero-body">
+        <p class="post-meta"><span class="pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6l-1 6 4 4H6l4-4-1-6z"/><path d="M12 14v6"/></svg>Angeheftet</span><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-18">18. Oktober 2026</time><span class="sep" aria-hidden="true">·</span><span>4 Minuten Lesezeit</span></p>
+        <h2 class="post-hero-title">tTerm funktioniert jetzt im Browser</h2>
+        <p class="post-hero-lead">Alle deine Server und Computer in einem Tab, jeder Befehl in einem eigenen Block und keine Schlüssel auf deinem Gerät. Was tTerm Web heute kann, wie du eine Maschine verbindest und wie es weitergeht.</p>
+        <span class="btn btn-primary">Beitrag lesen</span>
+      </div>
+    </a>
+    <!-- /updates:featured -->
+  </section>
+
+  <section class="wrap" aria-label="Alle Beiträge">
+    <!-- updates:list -->
+    <h2 class="list-title">Weitere Beiträge</h2>
+    <div class="timeline">
+      <section class="month">
+        <h3 class="month-name">Oktober 2026</h3>
+        <div class="month-entries">
+          <article class="entry" id="2026-10-25">
+            <p class="entry-meta"><time datetime="2026-10-25">25. Oktober</time><span class="tag tag-web">tTerm Web</span></p>
+            <h4 class="entry-title"><a href="/de/blog/open-source/">Warum der Code von tTerm offen ist, obwohl kostenpflichtige Tarife kommen</a></h4>
+            <p class="entry-text">Der gesamte Code von tTerm steht jetzt unter AGPL v3 statt MIT, und bald kommen kostenpflichtige Tarife. Hier erklären wir, warum das eine dem anderen nicht im Weg steht und warum sogar der Server offen ist.</p>
+            <p class="entry-more"><a href="/de/blog/open-source/">Beitrag lesen</a></p>
+          </article>
+          <article class="entry" id="2026-10-20">
+            <p class="entry-meta"><time datetime="2026-10-20">20. Oktober</time><span class="tag tag-web">tTerm Web</span></p>
+            <h4 class="entry-title"><a href="/de/blog/notes-and-projects/">Notizen, farbige Projekte und Namen für Terminals</a></h4>
+            <p class="entry-text">Runbooks, Checklisten und Notizen zu Zugängen liegen jetzt direkt neben den Maschinen, um die es geht. Du kannst eigene Projekte anlegen und jedem eine Farbe geben, deine Terminals benennen und Maschinen und Notizen von einem Projekt in ein anderes verschieben. Das hat tTerm Web in seinen ersten Tagen gelernt.</p>
+            <p class="entry-more"><a href="/de/blog/notes-and-projects/">Beitrag lesen</a></p>
+          </article>
+          <article class="entry" id="2026-10-07">
+            <p class="entry-meta"><time datetime="2026-10-07">7. Oktober</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title"><a href="/de/blog/independent-windows/">Fenster auf einem Computer sind jetzt unabhängig</a></h4>
+            <p class="entry-text">Auf einem Server war jedes Fenster schon immer ein eigenes Terminal. Auf einem Computer mit dem Agenten teilten sich alle Fenster eine Shell: Ein cd in einem Fenster galt auch für die anderen, und während in einem Fenster ein Programm lief, mussten die übrigen warten. Jetzt bekommt jedes Fenster seine eigene Shell, genau wie auf einem Server. Du kannst in einem Fenster einen Dev-Server laufen lassen und in einem anderen arbeiten.</p>
+            <p class="entry-more"><a href="/de/blog/independent-windows/">Beitrag lesen</a></p>
+          </article>
+        </div>
+      </section>
+      <section class="month">
+        <h3 class="month-name">September 2026</h3>
+        <div class="month-entries">
+          <article class="entry" id="2026-09-30">
+            <p class="entry-meta"><time datetime="2026-09-30">30. September</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title"><a href="/de/blog/answer-while-it-runs/">Du kannst einem Befehl antworten, während er läuft</a></h4>
+            <p class="entry-text">Wenn ein Programm Continue? (Y/n) fragte, konntest du bisher nicht antworten: Deine Nachricht ging erst raus, wenn der Befehl fertig war. Jetzt geht alles, was du tippst, während ein Befehl läuft, direkt an dessen Eingabe, so wie in einem Terminal. Der Bot markiert so eine Nachricht mit 👌.</p>
+            <p class="entry-more"><a href="/de/blog/answer-while-it-runs/">Beitrag lesen</a></p>
+          </article>
+          <article class="entry" id="2026-09-17">
+            <p class="entry-meta"><time datetime="2026-09-17">17. September</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title"><a href="/de/blog/your-shell/">Der Agent startet jetzt deine Shell: bash oder zsh</a></h4>
+            <p class="entry-text">Bisher startete der Agent in jedem Fall bash. Auf macOS, wo zsh seit 2019 Standard ist, bedeutete das eine fremde Umgebung: Die Hälfte dessen, was du installiert hattest, wurde nicht gefunden.</p>
+            <p class="entry-more"><a href="/de/blog/your-shell/">Beitrag lesen</a></p>
+          </article>
+          <article class="entry" id="2026-09-03">
+            <p class="entry-meta"><time datetime="2026-09-03">3. September</time><span class="tag tag-site">Website</span></p>
+            <h4 class="entry-title"><a href="/de/blog/verified-on-github/">tTerm ist jetzt eine verifizierte Organisation auf GitHub</a></h4>
+            <p class="entry-text">github.com/tterm-net trägt jetzt das Verified-Badge: GitHub hat bestätigt, dass hinter der Organisation und tterm.net dieselben Leute stehen.</p>
+            <p class="entry-more"><a href="/de/blog/verified-on-github/">Beitrag lesen</a></p>
+          </article>
+          <article class="entry" id="2026-09-01">
+            <p class="entry-meta"><time datetime="2026-09-01">1. September</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title"><a href="/de/blog/several-terminals/">Mehrere Terminals pro Maschine</a></h4>
+            <p class="entry-text">Du kannst jetzt mehr als ein Terminal auf demselben Server offen halten: In einem läuft ein Log mit, im anderen arbeitest du. Sie erscheinen als eigene Zeilen in /use, jedes mit seiner eigenen Shell: Ein cd im einen lässt das andere, wo es war.</p>
+            <p class="entry-more"><a href="/de/blog/several-terminals/">Beitrag lesen</a></p>
+          </article>
+        </div>
+      </section>
+      <section class="month">
+        <h3 class="month-name">August 2026</h3>
+        <div class="month-entries">
+          <article class="entry" id="2026-08-31">
+            <p class="entry-meta"><time datetime="2026-08-31">31. August</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title"><a href="/de/blog/tterm-is-live/">tTerm ist gestartet</a></h4>
+            <p class="entry-text">Ein Terminal für deine Server, direkt hier in Telegram. Tipp einen Befehl: Er läuft auf deiner Maschine, und die Antwort kommt als Nachricht zurück, mit Exit-Code, Arbeitsverzeichnis und git-Branch. Die Shell merkt sich, wo du aufgehört hast.</p>
+            <p class="entry-more"><a href="/de/blog/tterm-is-live/">Beitrag lesen</a></p>
+          </article>
+          <article class="entry" id="2026-08-28">
+            <p class="entry-meta"><time datetime="2026-08-28">28. August</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">Der Bot auf eigenem Server</h4>
+            <p class="entry-text">Der Bot ist auf einen eigenen Server umgezogen und hängt nicht mehr davon ab, ob ein Laptop aufgeklappt ist. Der Quellcode von Bot und Agent ist öffentlich.</p>
+          </article>
+          <article class="entry" id="2026-08-26">
+            <p class="entry-meta"><time datetime="2026-08-26">26. August</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">Buttons in Nachrichten</h4>
+            <p class="entry-text">Maschinenliste, Menüs und Bestätigungen laufen jetzt über Buttons direkt in den Nachrichten. Eine Maschine, die nicht erreichbar ist, wird ausgegraut, statt zu einem Fehler zu führen.</p>
+          </article>
+          <article class="entry" id="2026-08-25">
+            <p class="entry-meta"><time datetime="2026-08-25">25. August</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">Befristeter Zugriff</h4>
+            <p class="entry-text">Geteilter Zugriff mit Zeitlimit. Nach Ablauf endet der Zugriff von selbst, und beide Seiten werden benachrichtigt. Als Eigentümer kannst du den gesamten Befehlsverlauf als Datei exportieren.</p>
+          </article>
+          <article class="entry" id="2026-08-23">
+            <p class="entry-meta"><time datetime="2026-08-23">23. August</time><span class="tag tag-bot">Bot</span></p>
+            <h4 class="entry-title">Computer über einen Agenten</h4>
+            <p class="entry-text">Auch Computer lassen sich jetzt verbinden, über einen kleinen Agenten, der die Verbindung selbst nach außen aufbaut. Vorerst macOS und Linux.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+    <!-- /updates:list -->
+  </section>
+
+  <section class="section near" aria-label="Telegram-Kanal">
+    <div class="band-card">
+      <div>
+        <h2>Neue Beiträge gibt es auch auf Telegram</h2>
+        <p>Eine kurze Notiz zu jedem Release im tTerm-Kanal.</p>
+      </div>
+      <a class="btn btn-ghost btn-md" href="https://t.me/tTermBlog" target="_blank" rel="noopener">Kanal öffnen</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/de/" aria-label="tTerm, Startseite">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">beta</span>
+        </a>
+        <p class="foot-tag">Das Cloud-Terminal für Server und Computer.</p>
+      </div>
+      <nav class="foot-cols" aria-label="Links">
+        <div class="foot-col">
+          <p class="foot-h">Produkt</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Telegram-Bot</a>
+          <a href="/de/#pricing">Preise</a>
+          <a href="/de/#security">Sicherheit</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Ressourcen</p>
+          <a href="/de/blog/">Blog</a>
+          <a href="/de/#faq">FAQ</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram-Kanal</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Quellcode auf GitHub</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Rechtliches</p>
+          <a href="/terms/">Nutzungsbedingungen</a>
+          <a href="/privacy/">Datenschutzerklärung</a>
+          <a href="/de/blog/open-source/">AGPL-3.0-Lizenz</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <details class="lang lang-up">
+        <summary aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>DE</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/" hreflang="de" lang="de" aria-current="true">Deutsch<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/es/blog/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

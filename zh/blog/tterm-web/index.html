@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tTerm 现在能在浏览器里用了 · tTerm 博客</title>
+<meta name="description" content="所有服务器和电脑都在一个标签页中，每条命令自成一个块，设备上无需任何密钥。tTerm Web 现在能做什么、如何连接机器，以及接下来的计划。">
+<link rel="canonical" href="https://tterm.net/zh/blog/tterm-web/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/tterm-web/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/tterm-web/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/tterm-web/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/tterm-web/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/tterm-web/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/tterm-web/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/tterm-web/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/tterm-web/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/tterm-web/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/tterm-web/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/tterm-web/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/tterm-web/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/tterm-web/">
+<meta property="og:title" content="tTerm 现在能在浏览器里用了">
+<meta property="og:description" content="所有服务器和电脑都在一个标签页中，每条命令自成一个块，设备上无需任何密钥。tTerm Web 现在能做什么、如何连接机器，以及接下来的计划。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/zh/blog/tterm-web/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "tTerm 现在能在浏览器里用了",
+  "description": "所有服务器和电脑都在一个标签页中，每条命令自成一个块，设备上无需任何密钥。tTerm Web 现在能做什么、如何连接机器，以及接下来的计划。",
+  "datePublished": "2026-10-18",
+  "inLanguage": "zh-CN",
+  "url": "https://tterm.net/zh/blog/tterm-web/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.5.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/zh/" aria-label="tTerm 首页">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">公测</span>
+    </a>
+    <nav class="nav" aria-label="栏目">
+      <a href="/zh/#features">功能</a>
+      <a href="/zh/#security">安全</a>
+      <a href="/zh/#pricing">价格</a>
+      <details class="res">
+        <summary>资源<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="/zh/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>博客</b><small>tTerm 的最新动态</small></span></a>
+          <a href="/zh/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>常见问题</b><small>解答常见疑问</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Telegram 频道</b><small>每次发布都有一条简短说明</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>GitHub 上的源代码</b><small>tTerm 的全部代码，AGPL v3</small></span></a>
+        </div>
+      </details>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ZH</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/tterm-web/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/tterm-web/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/tterm-web/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/tterm-web/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/tterm-web/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/tterm-web/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/tterm-web/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/tterm-web/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/tterm-web/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/tterm-web/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/tterm-web/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/tterm-web/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">登录</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">免费开始使用</a>
+      <details class="menu">
+        <summary aria-label="菜单"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="菜单">
+          <a href="/zh/#features">功能</a>
+          <a href="/zh/#security">安全</a>
+          <a href="/zh/#pricing">价格</a>
+          <p class="menu-label">资源</p>
+          <a href="/zh/blog/" aria-current="page">博客</a>
+          <a href="/zh/#faq">常见问题</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram 频道</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">GitHub 上的源代码</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>简体中文</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/tterm-web/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/tterm-web/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/tterm-web/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/blog/tterm-web/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/tterm-web/" hreflang="it" lang="it">Italiano</a>
+              <a href="/pl/blog/tterm-web/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/tterm-web/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/tterm-web/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/tterm-web/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/tterm-web/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/tterm-web/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/tterm-web/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">免费开始使用</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="/zh/blog/">博客</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-18">2026年10月18日</time><span class="sep" aria-hidden="true">·</span><span>阅读约 4 分钟</span></p>
+    <!-- /updates:meta -->
+      <h1>tTerm 现在能在浏览器里用了</h1>
+      <p class="post-lead">此前，tTerm 一直在 Telegram 里：直接在聊天中向服务器发送命令。今天我们推出 tTerm Web，一个真正的浏览器终端。你所有的服务器和电脑都在一个标签页中，每条命令自成一个块，设备上无需任何密钥。</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="demo-frame">
+        <div class="demo" data-demo role="img" aria-label="tTerm Web 工作中：左侧是项目、机器及其终端，顶部是标签页。web-01 上依次运行 git pull、构建和服务重启，随后按 Cmd+K 在 api-prod 上打开一个终端。"></div>
+      </div>
+      <figcaption>这就是 tTerm Web：左侧是按项目分组的机器，顶部是标签页，每条命令自成一个块。</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>已经有机器人了，为什么还要浏览器</h2>
+      <p>手边只有手机时，机器人很好用：重启服务、查看磁盘、回答安装程序的提问。但较长时间的工作需要大屏幕：多个标签页并排，全屏的 vim 和 htop，还有能轻松找到昨天那条命令的历史记录。</p>
+      <p>这正是 tTerm Web 的用途。它可以在任何浏览器中打开，笔记本、平板或手机都行，你用来工作的设备上什么都不用安装。</p>
+
+      <h2>每条命令自成一个块</h2>
+      <p>在普通终端里，所有内容都混在一个输出流中，你得用眼睛找出一条命令在哪里结束、下一条从哪里开始。在 tTerm 中，每条命令都自成一个块：命令本身、输出、退出码、耗时、目录和 git 分支。</p>
+      <p>块可以连同输出一起复制、折叠或重新运行。命令运行时，输出会实时显示；命令结束后，块会固定为普通文本，方便选中和复制。</p>
+
+      <h2>像编辑器一样的输入行</h2>
+      <p>底部有一个独立的输入行。Shift+Enter 换行，历史中的命令会以灰色提示，Tab 用于补全。历史记录保存在我们这边，所以在你所有设备上都是一样的。</p>
+      <p>输入行上方会显示你当前所在的位置：目录和分支。点击它们，从列表中选择另一个，<code>cd</code> 或 <code>git switch</code> 就会作为普通的块运行。遇到那种执行后就无可挽回的危险命令，tTerm 会再确认一次。</p>
+
+      <h2>vim、htop 和 sudo</h2>
+      <p>全屏程序会占满整个终端区域，照常工作，sudo 也一样。如果你不想要块，还有经典模式：一个连续的终端，和你习惯的一样。</p>
+
+      <h2>关掉标签页，终端不会关闭</h2>
+      <p>终端运行在我们的服务器上，而不是你的浏览器里。在服务器上构建到一半时合上笔记本：构建会继续，输出也会保留。在另一台设备上打开 tTerm，终端就在那里。</p>
+      <p>不同项目的标签页并排打开，并带有项目代号：P/web-01、A/api-prod。Cmd+K 打开命令面板：切换到任意终端、在任意机器上新开一个，或执行某个操作。</p>
+
+      <h2>如何连接机器</h2>
+      <p>Linux 服务器只需一条命令即可连接。添加机器时 tTerm Web 会显示这条命令，你在服务器上运行它：</p>
+      <pre><b>$</b> curl -sSL https://connect.tterm.net/s/… | sudo sh</pre>
+      <p>安装程序会在服务器上创建一个名为 tterm 的用户，在它的 <code>authorized_keys</code> 中添加一行，并在 <code>/etc/sudoers.d</code> 中用单独的文件给它 sudo 权限。它不会改动 <code>sshd_config</code>，不会重启 sshd，也不会开放任何端口。几秒钟后，服务器就会出现在你的列表中。</p>
+      <p>macOS 或 Linux 电脑通过一个小型代理连接。代理以你的用户身份运行，主动连接我们的服务器，因此不需要任何入站端口，电脑也可以位于 NAT 之后。卸载代理只需一条命令。</p>
+
+      <h2>安全</h2>
+      <p>我们会连接你的机器，所以我们把访问权限设计得既容易授予，也同样容易收回。</p>
+      <ul class="prose-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><span><strong>不需要你的密钥。</strong>每次连接时，tTerm 都会签发一张新的 SSH 证书，里面写着你的名字。它只对这一台服务器有效，两分钟后失效。</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span><strong>签名独立进行。</strong>我们用于签名的密钥存放在一个不联网的独立进程中。主程序无法读取它们，只能请求签名，每次签名都会记录在案。</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg><span><strong>没有中间人。</strong>tTerm 服务器位于欧盟。页面和终端直接连到它：Cloudflare 只负责我们的 DNS，看不到你的命令。</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M5 7l1 13h12l1-13M9 7V4h6v3"/></svg><span><strong>收回很容易。</strong>在 tTerm 中删除服务器，它会自行撤销在这台服务器上的访问权限；如果服务器没有响应，tTerm 会显示在服务器上完成这一步的命令。安装程序设置的其他内容如何清除，写在脚本本身的开头。</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><strong>开源。</strong>tTerm Web 和代理以 AGPL-3.0 许可证开源。安装脚本很短，运行之前值得读一读。</span></li>
+      </ul>
+
+      <h2>费用</h2>
+      <p>tTerm Web 公测期间对所有人免费。</p>
+      <div class="stats">
+        <div><b>50</b><span>每人可添加的机器</span></div>
+        <div><b>24</b><span>可同时打开的终端</span></div>
+        <div><b>30</b><span>含输出的历史记录保留天数</span></div>
+      </div>
+      <p>付费方案以后才会推出，我们会提前很久通知你。</p>
+
+      <h2>机器人怎么办</h2>
+      <p><a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a> 会保留并继续运行：手边只有手机时，可以直接在聊天中向服务器发送命令。目前机器人和网页版是分开的，各有自己的机器列表。以后我们会把它们合并。</p>
+
+      <h2>接下来</h2>
+      <p>下一个重点是团队协作：项目中的角色、共享的命令日志，以及旁观同事的终端，被旁观的人始终能看到谁在看。目前还不支持 Windows 电脑，我们以后会支持。</p>
+
+      <div class="post-cta">
+        <h2>试用 tTerm Web</h2>
+        <p>用邮箱登录：你会收到一个验证码，之后在你自己的设备上只需输入一个短码。第一台服务器一分钟就能连上。</p>
+        <a class="btn btn-primary" href="https://app.tterm.net">免费开始使用</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="博客中的更多文章">
+    <div class="split-row">
+      <h2>博客中的更多文章</h2>
+      <a class="btn btn-ghost btn-md" href="/zh/blog/">全部文章</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/zh/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">10月25日</time> · tTerm Web</span>
+        <span class="post-mini-title">付费方案即将推出，为何仍开源</span>
+        <span class="post-mini-text">tTerm 的全部代码现在采用 AGPL v3，而不再是 MIT，付费方案也即将推出。</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/zh/blog/notes-and-projects/">
+        <span class="post-mini-meta"><time datetime="2026-10-20">10月20日</time> · tTerm Web</span>
+        <span class="post-mini-title">笔记、彩色项目和终端名称</span>
+        <span class="post-mini-text">运维手册、检查清单和访问说明，现在就放在相关机器的旁边。</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/zh/blog/independent-windows/">
+        <span class="post-mini-meta"><time datetime="2026-10-07">10月7日</time> · 机器人</span>
+        <span class="post-mini-title">电脑上的窗口现在彼此独立</span>
+        <span class="post-mini-text">在服务器上，每个窗口一直都是独立的终端。</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/zh/blog/">全部文章</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/zh/" aria-label="tTerm 首页">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">公测</span>
+        </a>
+        <p class="foot-tag">面向服务器和电脑的云终端。</p>
+      </div>
+      <nav class="foot-cols" aria-label="链接">
+        <div class="foot-col">
+          <p class="foot-h">产品</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Telegram 机器人</a>
+          <a href="/zh/#pricing">价格</a>
+          <a href="/zh/#security">安全</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">资源</p>
+          <a href="/zh/blog/">博客</a>
+          <a href="/zh/#faq">常见问题</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram 频道</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">GitHub 上的源代码</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">法律信息</p>
+          <a href="/terms/">服务条款</a>
+          <a href="/privacy/">隐私政策</a>
+          <a href="/zh/blog/open-source/">AGPL-3.0 许可证</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <details class="lang lang-up">
+        <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ZH</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/tterm-web/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/tterm-web/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/tterm-web/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/tterm-web/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/tterm-web/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/tterm-web/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/tterm-web/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/tterm-web/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/tterm-web/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/tterm-web/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/tterm-web/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/tterm-web/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

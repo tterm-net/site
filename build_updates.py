@@ -3,7 +3,7 @@
 build_updates.py — builds the blog from `updates.md`.
 
 `updates.md` is the only place an entry is written. This script puts it
-everywhere it shows, in both languages:
+everywhere it shows, in every language of the site:
 
   - the blog block on the main page (`/`, `/ru/`): the newest post with a
     page of its own, or the one pinned, and the three newest other entries
@@ -23,6 +23,9 @@ An entry needs a title and text in every language or the build stops: written
 twice by hand, two lists drift apart within a month and nothing says which
 one is right.
 
+The words around the entries ("Read the post", the months, "4 min read")
+are strings of each language, in `i18n/` beside the rest of the site.
+
 The file is not served: it lives in the repository for its history, not for
 visitors.
 """
@@ -30,50 +33,30 @@ from __future__ import annotations
 
 import html
 import json
-import pathlib
 import re
+import sys
 from dataclasses import dataclass, field
 
-ROOT = pathlib.Path(__file__).parent
+sys.dont_write_bytecode = True
+
+import sitelib as S  # noqa: E402
+
+ROOT = S.ROOT
 SOURCE = ROOT / "updates.md"
-LANGS = ("en", "ru")
+LANGS = tuple(lang.code for lang in S.LANGUAGES)
 
-#: What an entry is about, as its tag reads on the page.
-TAGS = {
-    "web": {"en": "tTerm Web", "ru": "tTerm Web"},
-    "bot": {"en": "Bot", "ru": "Бот"},
-    "site": {"en": "Site", "ru": "Сайт"},
-}
+#: What an entry is about; each reads on the page as blog.tag.<name>.
+TAGS = ("web", "bot", "site")
 
-MONTHS = {
-    "en": ["January", "February", "March", "April", "May", "June", "July",
-           "August", "September", "October", "November", "December"],
-    # "7 октября": the month after a day takes the genitive.
-    "ru": ["января", "февраля", "марта", "апреля", "мая", "июня", "июля",
-           "августа", "сентября", "октября", "ноября", "декабря"],
-}
-#: A month on its own, as a heading over its entries: "Октябрь 2026".
-MONTH_NAMES = {
-    "en": MONTHS["en"],
-    "ru": ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль",
-           "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-}
-SHORT_MONTHS = {
-    "en": ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    "ru": ["янв", "фев", "мар", "апр", "мая", "июн",
-           "июл", "авг", "сен", "окт", "ноя", "дек"],
-}
 
-WORDS = {
-    "read": {"en": "Read the post", "ru": "Читать запись"},
-    "pinned": {"en": "Pinned", "ru": "Закреплено"},
-    "earlier": {"en": "Earlier", "ru": "Ранее"},
-    "more": {"en": "More posts", "ru": "Ещё записи"},
-}
+def word(lang: str, key: str) -> str:
+    """A string of the blog in a language: blog.read, date.long, ..."""
+    return S.strings(lang)[key]
 
-#: Words a minute, for "4 min read": Russian words run longer.
-PACE = {"en": 220, "ru": 180}
+
+def listed(lang: str, key: str) -> list[str]:
+    """A string that is a list, "January | February | ...", as a list."""
+    return word(lang, key).split(" | ")
 
 #: The picture on a post's card: the product itself, drawn in markup like
 #: the demo on the main page, so it stays sharp and weighs nothing.
@@ -111,6 +94,26 @@ def fail(message: str) -> None:
     raise SystemExit(f"  {message}")
 
 
+#: Chinese and Japanese, which put no spaces between words.
+CJK = "\u3000-\u303f\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff\uff00-\uffef"
+
+
+def joined(lines: list[str]) -> str:
+    """Lines of an entry as one paragraph. A line break is a space, except
+    between two characters of Chinese or Japanese; runs of spaces become one.
+    Only plain spaces and tabs count: the no-break space French puts before
+    : ; ? ! stays."""
+    out = ""
+    for line in lines:
+        line = re.sub(r"[ \t]+", " ", line).strip(" \t")
+        if not line:
+            continue
+        if out and not (re.match(f"[{CJK}]", out[-1]) and re.match(f"[{CJK}]", line[0])):
+            out += " "
+        out += line
+    return out
+
+
 def parse(source: str) -> list[Entry]:
     """Reads the update file.
 
@@ -125,7 +128,7 @@ def parse(source: str) -> list[Entry]:
 
     def flush() -> None:
         if entries and lang and buffer:
-            entries[-1].text[lang] = " ".join(" ".join(buffer).split())
+            entries[-1].text[lang] = joined(buffer)
         buffer.clear()
 
     for raw in source.splitlines():
@@ -160,7 +163,7 @@ def parse(source: str) -> list[Entry]:
                 fail(f"'{line}': no such language, expected one of {LANGS}.")
             if not entries:
                 fail(f"'{line}': a language before the first entry.")
-            entries[-1].title[lang] = " ".join(title.split())
+            entries[-1].title[lang] = joined([title])
             continue
         if lang:
             buffer.append(line)
@@ -191,16 +194,15 @@ def esc(text: str) -> str:
     return html.escape(text, quote=True)
 
 
-def page_file(path: str, lang: str) -> pathlib.Path:
-    prefix = "ru/" if lang == "ru" else ""
-    return ROOT / f"{prefix}{path.strip('/')}" / "index.html"
+def page_file(path: str, lang: str):
+    return S.page_file(S.language(lang), path)
 
 
 def url(entry: Entry, lang: str) -> str:
-    prefix = "/ru" if lang == "ru" else ""
+    language = S.language(lang)
     if entry.path:
-        return f"{prefix}{entry.path}"
-    return f"{prefix}/blog/#{entry.date}"
+        return S.page_url(language, entry.path)
+    return S.page_url(language, f"/blog/#{entry.date}")
 
 
 def ymd(iso: str) -> tuple[int, int, int]:
@@ -208,62 +210,87 @@ def ymd(iso: str) -> tuple[int, int, int]:
     return year, month, day
 
 
-def long_date(iso: str, lang: str, year: bool = True) -> str:
+def date_text(pattern: str, iso: str, lang: str) -> str:
+    """A date by a pattern of the language: "{d} {month} {y}" and the like.
+    `month` is the month after a day ("7 октября", the genitive), `month_heading`
+    a month on its own ("Октябрь 2026"), `month_short` the short one. The
+    first of a month is date.day_one: "1er" in French, "1º" in Portuguese."""
     y, m, d = ymd(iso)
-    if lang == "ru":
-        return f"{d} {MONTHS['ru'][m - 1]}" + (f" {y}" if year else "")
-    return f"{MONTHS['en'][m - 1]} {d}" + (f", {y}" if year else "")
+    values = {"{y}": str(y), "{d}": word(lang, "date.day_one") if d == 1 else str(d),
+              "{month}": listed(lang, "date.months")[m - 1],
+              "{month_short}": listed(lang, "date.months_short")[m - 1],
+              "{month_heading}": listed(lang, "date.months_heading")[m - 1]}
+    out = word(lang, pattern)
+    for mark, value in values.items():
+        out = out.replace(mark, value)
+    return out
+
+
+def long_date(iso: str, lang: str, year: bool = True) -> str:
+    return date_text("date.long" if year else "date.long_noyear", iso, lang)
 
 
 def short_date(iso: str, lang: str) -> str:
-    _, m, d = ymd(iso)
-    if lang == "ru":
-        return f"{d} {SHORT_MONTHS['ru'][m - 1]}"
-    return f"{SHORT_MONTHS['en'][m - 1]} {d}"
+    return date_text("date.short", iso, lang)
 
 
 def month_name(iso: str, lang: str) -> str:
-    y, m, _ = ymd(iso)
-    return f"{MONTH_NAMES[lang][m - 1]} {y}"
+    return date_text("date.heading", iso, lang)
 
 
 def minutes_label(n: int, lang: str) -> str:
-    if lang == "en":
-        return f"{n} min read"
-    if n % 10 == 1 and n % 100 != 11:
-        word = "минута"
-    elif n % 10 in (2, 3, 4) and n % 100 not in (12, 13, 14):
-        word = "минуты"
-    else:
-        word = "минут"
-    return f"{n} {word} чтения"
+    """"4 min read", in the plural form the language takes for n."""
+    return S.choose(word(lang, "blog.minutes"), S.plural(lang, n)).replace("{n}", str(n))
 
 
 def first_sentence(text: str) -> str:
     """The opening sentence, for a short card: up to the first full stop
-    that is followed by a capital letter."""
-    match = re.search(r"[.!?](?=\s+[A-ZА-ЯЁ])", text)
-    return text[: match.end()] if match else text
+    after a word of two letters or more (so "z. B." and "e.g." do not end
+    it) that is followed by a word that starts a sentence: with a letter
+    that is not lower case (a capital, or a letter of a script without
+    case, as Korean) or as tTerm does, perhaps after an opening quote or ¿;
+    or up to a full stop of Chinese or Japanese, which needs no space after
+    it. A question inside a sentence, as in "asked Continue? (Y/n), there
+    was", does not end it."""
+    for match in re.finditer(r"(\w{2,}|\))[.!?](?=\s+[«„“‘¿¡]*(\w)(\w?))|[。！？](?=.)", text):
+        nxt, then = match.group(2), match.group(3)
+        if nxt is None or (nxt.isalpha() and (not nxt.islower() or then.isupper())):
+            return text[: match.end()]
+    return text
 
 
-def reading_time(entry: Entry) -> None:
+def reading_time(entry: Entry, pages: dict | None = None) -> None:
     """Minutes to read a post, counted from its page: the words inside
-    <article class="post">, tags and the "more" block left out."""
+    <article class="post">, tags and what this script writes into it (the
+    date, the minutes) left out. `pages` holds pages not written yet, by
+    file: the build counts what it is about to write."""
     for lang in LANGS:
         page = page_file(entry.path, lang)
-        if not page.exists():
+        if pages is not None and page in pages:
+            source = pages[page]
+        elif page.exists():
+            source = page.read_text(encoding="utf-8")
+        else:
             fail(f"{entry.date}: {entry.path} has no page {page.relative_to(ROOT)}.")
-        source = page.read_text(encoding="utf-8")
+        source = re.sub(r"<!-- updates:([a-z]+) -->.*?<!-- /updates:\1 -->", "", source, flags=re.S)
         found = re.search(r'<article class="post(?: [^"]*)?">(.*?)</article>', source, re.S)
         if not found:
             fail(f"{page.relative_to(ROOT)}: no <article class=\"post\"> to count.")
         text = html.unescape(re.sub(r"<[^>]+>", " ", found.group(1)))
-        words = len(re.findall(r"\w+", text))
-        entry.minutes[lang] = max(1, round(words / PACE[lang]))
+        # Chinese and Japanese have no spaces: their pace is in characters,
+        # and a word in Latin letters among them (a name, a command) counts
+        # as one.
+        pace, unit = word(lang, "blog.pace").partition(" ")[::2]
+        if unit == "characters":
+            count = (len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff]", text))
+                     + len(re.findall(r"\w+", re.sub(f"[{CJK}]", " ", text))))
+        else:
+            count = len(re.findall(r"\w+", text))
+        entry.minutes[lang] = max(1, round(count / int(pace)))
 
 
 def tag_html(entry: Entry, lang: str) -> str:
-    return f'<span class="tag tag-{entry.tag}">{esc(TAGS[entry.tag][lang])}</span>'
+    return f'<span class="tag tag-{entry.tag}">{esc(word(lang, "blog.tag." + entry.tag))}</span>'
 
 
 PIN = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6l-1 6 4 4H6l4-4-1-6z"/>'
@@ -272,7 +299,7 @@ PIN = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6l-1 6 4 4H6l4
 
 def pin_html(entry: Entry, lang: str) -> str:
     """On the post that leads the blog while newer ones follow it."""
-    return f'<span class="pin">{PIN}{WORDS["pinned"][lang]}</span>' if entry.pinned else ""
+    return f'<span class="pin">{PIN}{word(lang, "blog.pinned")}</span>' if entry.pinned else ""
 
 
 def meta_html(entry: Entry, lang: str, pin: bool = False) -> str:
@@ -289,7 +316,7 @@ def mini_html(entry: Entry, lang: str, card: bool = False) -> str:
     return (
         f'<a class="{klass}" href="{url(entry, lang)}">\n'
         f'        <span class="post-mini-meta"><time datetime="{entry.date}">'
-        f'{short_date(entry.date, lang)}</time> · {esc(TAGS[entry.tag][lang])}</span>\n'
+        f'{short_date(entry.date, lang)}</time> · {esc(word(lang, "blog.tag." + entry.tag))}</span>\n'
         f'        <span class="post-mini-title">{esc(entry.title[lang])}</span>\n'
         f'        <span class="post-mini-text">{esc(first_sentence(entry.text[lang]))}</span>\n'
         f'      </a>'
@@ -341,7 +368,7 @@ def render_featured(entries: list[Entry], lang: str) -> str:
         f'        {meta_html(top, lang, pin=True)}\n'
         f'        <h2 class="post-hero-title">{esc(top.title[lang])}</h2>\n'
         f'        <p class="post-hero-lead">{esc(top.text[lang])}</p>\n'
-        f'        <span class="btn btn-primary">{WORDS["read"][lang]}</span>\n'
+        f'        <span class="btn btn-primary">{word(lang, "blog.read")}</span>\n'
         f'      </div>\n'
         f'    </a>'
     )
@@ -352,7 +379,7 @@ def render_list(entries: list[Entry], lang: str) -> str:
     top = featured_of(entries)
     rest = [e for e in entries if e is not top]
     older = top is None or all(e.date < top.date for e in rest)
-    out = [f'<h2 class="list-title">{WORDS["earlier" if older else "more"][lang]}</h2>',
+    out = [f'<h2 class="list-title">{word(lang, "blog.earlier" if older else "blog.more")}</h2>',
            '    <div class="timeline">']
     months: dict[str, list[Entry]] = {}
     for entry in rest:
@@ -372,7 +399,7 @@ def render_list(entries: list[Entry], lang: str) -> str:
             out.append(f'            <p class="entry-text">{esc(entry.text[lang])}</p>')
             if entry.path:
                 out.append(f'            <p class="entry-more"><a href="{url(entry, lang)}">'
-                           f'{WORDS["read"][lang]}</a></p>')
+                           f'{word(lang, "blog.read")}</a></p>')
             out.append("          </article>")
         out.append("        </div>")
         out.append("      </section>")
@@ -420,54 +447,83 @@ def render_ld(entry: Entry, lang: str) -> str:
 # ------------------------------------------------------------------- pages
 
 
-def language_of(page: pathlib.Path) -> str:
-    return "ru" if page.relative_to(ROOT).parts[0] == "ru" else "en"
+def language_of(page) -> str:
+    return S.language_of(page)[0].code
 
 
-def post_path_of(page: pathlib.Path) -> str:
-    parts = page.relative_to(ROOT).parts[:-1]
-    if parts and parts[0] == "ru":
-        parts = parts[1:]
-    return "/" + "/".join(parts) + "/"
+def post_path_of(page) -> str:
+    return S.language_of(page)[1]
 
 
-def main() -> None:
+def same_as_post(entry: Entry) -> None:
+    """A post's preview title and description (post.<name>.og_title and
+    .description in i18n/) are its entry's title and text, in every
+    language: change one, change the other."""
+    name = entry.path.strip("/").split("/")[-1]
+    for lang in LANGS:
+        own = S.strings(lang)
+        for part, key, what in ((entry.title, "og_title", "title"), (entry.text, "description", "text")):
+            value = own.get(f"post.{name}.{key}")
+            if value is None:
+                fail(f"{entry.date}: i18n/{lang}.txt has no post.{name}.{key}.")
+            if html.unescape(value) != part[lang]:
+                fail(f"{entry.date}: the {what} for {lang} in updates.md is not post.{name}.{key} "
+                     f"in i18n/{lang}.txt; the two must be the same.")
+
+
+def load(pages: dict | None = None) -> list[Entry]:
+    """The entries, checked, with the reading time of every post."""
     entries = parse(SOURCE.read_text(encoding="utf-8"))
     for entry in entries:
         if entry.path:
-            reading_time(entry)
+            same_as_post(entry)
+            reading_time(entry, pages)
+    return entries
+
+
+def fill(text: str, page, entries: list[Entry]) -> str:
+    """A page with its blog blocks written in."""
+    lang = language_of(page)
+
+    def block(match: re.Match[str]) -> str:
+        name = match.group(1)
+        if name == "main":
+            body = render_main(entries, lang)
+        elif name == "featured":
+            body = render_featured(entries, lang)
+        elif name == "list":
+            body = render_list(entries, lang)
+        elif name == "more":
+            body = render_more(entries, lang, post_path_of(page))
+        elif name == "meta":
+            body = meta_html(entry_at(entries, post_path_of(page)), lang)
+        elif name == "ld":
+            body = render_ld(entry_at(entries, post_path_of(page)), lang)
+        else:
+            fail(f"{page.relative_to(ROOT)}: unknown block '{name}'.")
+        return f"<!-- updates:{name} -->\n    {body}\n    <!-- /updates:{name} -->"
+
+    return re.sub(r"<!-- updates:([a-z]+) -->.*?<!-- /updates:\1 -->", block, text, flags=re.S)
+
+
+#: Folders of the repository that hold no pages of the site.
+NOT_PAGES = {".git", "node_modules", "templates", "i18n", "tools", "preview", ".wrangler"}
+
+
+def site_pages() -> list:
+    return sorted(p for p in ROOT.rglob("index.html")
+                  if p.relative_to(ROOT).parts[0] not in NOT_PAGES)
+
+
+def main() -> None:
+    entries = load()
     posts = sum(1 for e in entries if e.path)
     print(f"tterm.net — {len(entries)} blog entries, {posts} with a page")
-
-    pages = sorted(p for p in ROOT.rglob("index.html")
-                   if ".git" not in p.parts and "node_modules" not in p.parts)
-    for page in pages:
+    for page in site_pages():
         text = page.read_text(encoding="utf-8")
         if "<!-- updates:" not in text:
             continue
-        lang = language_of(page)
-
-        def fill(match: re.Match[str]) -> str:
-            name = match.group(1)
-            if name == "main":
-                body = render_main(entries, lang)
-            elif name == "featured":
-                body = render_featured(entries, lang)
-            elif name == "list":
-                body = render_list(entries, lang)
-            elif name == "more":
-                body = render_more(entries, lang, post_path_of(page))
-            elif name == "meta":
-                body = meta_html(entry_at(entries, post_path_of(page)), lang)
-            elif name == "ld":
-                body = render_ld(entry_at(entries, post_path_of(page)), lang)
-            else:
-                fail(f"{page.relative_to(ROOT)}: unknown block '{name}'.")
-            return f"<!-- updates:{name} -->\n    {body}\n    <!-- /updates:{name} -->"
-
-        new = re.sub(r"<!-- updates:([a-z]+) -->.*?<!-- /updates:\1 -->",
-                     fill, text, flags=re.S)
-        page.write_text(new, encoding="utf-8")
+        page.write_text(fill(text, page, entries), encoding="utf-8")
         print(f"  {page.relative_to(ROOT)}")
 
 

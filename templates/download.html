@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="{{$lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{download.title}}</title>
+<meta name="description" content="{{download.description}}">
+{{$links}}
+<meta property="og:title" content="{{shell.mac}}">
+<meta property="og:description" content="{{download.description}}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{$canonical}}">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{{$locales}}
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{json:shell.mac}}",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "macOS 11 or later",
+  "url": "{{$canonical}}",
+  "downloadUrl": "{{$mac_download}}",
+  "description": "{{json:download.description}}",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+  "isAccessibleForFree": true
+}
+</script>
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="{{$version}}">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">{{shell.skip}}</a>
+<div class="page">
+
+{{>header}}
+
+<main id="main">
+
+  <section class="dl-hero">
+    <div class="glow" aria-hidden="true"></div>
+    <img class="dl-icon" src="/assets/app-icon.svg" alt="" width="120" height="120">
+    <p class="eyebrow dl-eyebrow">{{shell.local}}</p>
+    <h1>{{shell.mac}}</h1>
+    <p class="hero-lead">{{download.lead}}</p>
+    <a class="btn btn-primary dl-btn dl-desktop" href="{{$mac_download}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>{{mac.download}}</a>
+    <p class="dl-meta dl-desktop">{{download.meta}}</p>
+    <div class="dl-phone">
+      <p>{{download.phone}}</p>
+      <a class="btn btn-primary" href="https://app.tterm.net">{{download.open_web}}</a>
+    </div>
+    <div class="dl-links"><a href="{{$base}}/blog/">{{download.whats_new}}</a><a href="https://github.com/tterm-net/tterm-app/releases" target="_blank" rel="noopener">{{download.all_versions}}</a><a href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">{{download.source}}</a></div>
+  </section>
+
+  <div class="dl-shot">
+{{>app_window}}
+  </div>
+
+  <section class="section" id="cloud">
+    <p class="eyebrow">{{download.cloud.eyebrow}}</p>
+    <h2 class="section-title">{{download.cloud.title}}</h2>
+    <p class="section-lead">{{download.cloud.lead}}</p>
+    <div class="journey">
+      <div class="jr-card"><div class="jr-top"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg><span class="jr-new">{{shell.new}}</span></div><h3>{{shell.mac}}</h3><p>{{download.cloud.mac}}</p></div>
+      <div class="jr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></div>
+      <div class="jr-card"><div class="jr-top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/><path d="M12 15V9M9.5 11.5L12 9l2.5 2.5"/></svg></div><h3>{{download.cloud.move_title}}</h3><p>{{download.cloud.move}}</p></div>
+      <div class="jr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 7l5 5-5 5"/></svg></div>
+      <div class="jr-card"><div class="jr-top"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg></div><h3>tTerm Web</h3><p>{{download.cloud.web}}</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">{{download.features.eyebrow}}</p>
+    <h2 class="section-title">{{download.features.title}}</h2>
+{{>mac_points}}
+  </section>
+
+  <section class="section" id="install">
+    <p class="eyebrow">{{download.install.eyebrow}}</p>
+    <h2 class="section-title">{{download.install.title}}</h2>
+    <div class="steps">
+      <div class="step"><span class="step-num">01</span><h3>{{download.install.1.title}}</h3><p>{{download.install.1.text}}</p></div>
+      <div class="step"><span class="step-num">02</span><h3>{{download.install.2.title}}</h3><p>{{download.install.2.text}}</p></div>
+      <div class="step"><span class="step-num">03</span><h3>{{download.install.3.title}}</h3><p>{{download.install.3.text}}</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow">{{download.others.eyebrow}}</p>
+    <h2 class="section-title">{{download.others.title}}</h2>
+    <div class="dl-others">
+      <div class="dl-other"><h3>Windows <span class="soon">{{mac.soon}}</span></h3><p>{{download.others.windows}}</p></div>
+      <div class="dl-other"><h3>Linux <span class="soon">{{mac.soon}}</span></h3><p>{{download.others.linux}}</p></div>
+      <div class="dl-other"><h3>{{index.strip.5}}</h3><p>{{download.others.browser}}</p></div>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <h2 class="section-title">{{index.faq.1}}</h2>
+    <div class="faq-list">
+      <details open>
+        <summary>{{download.faq.1.q}}</summary>
+        <p>{{download.faq.1.a}}</p>
+      </details>
+      <details>
+        <summary>{{download.faq.2.q}}</summary>
+        <p>{{download.faq.2.a}}</p>
+      </details>
+      <details>
+        <summary>{{download.faq.3.q}}</summary>
+        <p>{{download.faq.3.a}}</p>
+      </details>
+      <details>
+        <summary>{{download.faq.4.q}}</summary>
+        <p>{{download.faq.4.a}}</p>
+      </details>
+      <details>
+        <summary>{{download.faq.5.q}}</summary>
+        <p>{{download.faq.5.a}}</p>
+      </details>
+      <details>
+        <summary>{{download.faq.6.q}}</summary>
+        <p>{{download.faq.6.a}}</p>
+      </details>
+      <details>
+        <summary>{{download.faq.7.q}}</summary>
+        <p>{{download.faq.7.a}}</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="final">
+      <h2>{{download.final.title}}</h2>
+      <p>{{download.final.text}}</p>
+      <div class="final-cta">
+        <a class="btn btn-primary dl-desktop" href="{{$mac_download}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>{{mac.download}}</a>
+        <a class="btn btn-ghost" href="https://app.tterm.net">{{download.open_web}}</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{>footer}}
+
+</div>
+</body>
+</html>

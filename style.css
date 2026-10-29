@@ -308,6 +308,88 @@ h1, h2, h3, h4 { margin: 0; }
 .nav a:hover { border-color: var(--line-3); background: rgba(255, 255, 255, .045); color: var(--ink); }
 .nav a[aria-current="page"] { border-color: var(--line-2); background: rgba(255, 255, 255, .03); color: var(--ink); }
 
+/* Resources: the blog, the questions, the channel and the code under one
+   item. It opens like the language button, a details element, so it works
+   without a script; inside are links with a line about each, not pills. */
+.nav .res { position: relative; }
+.nav .res > summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--lead);
+  list-style: none;
+  cursor: pointer;
+  transition: color .15s ease, background-color .15s ease, border-color .15s ease;
+}
+.nav .res > summary::-webkit-details-marker { display: none; }
+.nav .res > summary:hover,
+.nav .res[open] > summary { border-color: var(--line-3); background: rgba(255, 255, 255, .045); color: var(--ink); }
+.res-chev {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform .15s ease;
+}
+.res[open] .res-chev { transform: rotate(180deg); }
+.res-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-start: 0;
+  z-index: 30;
+  width: 290px;
+  padding: 6px;
+  border: 1px solid #262a31;
+  border-radius: 14px;
+  background: #121418;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .55);
+}
+.nav .res-menu a {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 9px;
+  color: var(--text);
+  text-decoration: none;
+}
+.nav .res-menu a:hover,
+.nav .res-menu a[aria-current="page"] { background: var(--raised-2); color: var(--ink); }
+.res-menu svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  fill: none;
+  stroke: var(--amber);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.res-menu b { display: block; font: 600 14px/1.3 var(--sans); color: var(--ink); }
+.res-menu small { display: block; margin-top: 2px; font: 400 12.5px/1.35 var(--sans); color: var(--faint); }
+
+/* The local terminal is new: an amber dot over the end of the word, like a
+   badge, taking no room in a line that is full in some languages. */
+.nav a.nav-mac { position: relative; padding-inline-end: 18px; }
+.nav-new {
+  position: absolute;
+  top: 10px;
+  inset-inline-end: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 0 3px rgba(233, 163, 63, .18);
+}
+
 .top-actions {
   margin-left: auto;
   display: flex;
@@ -421,18 +503,50 @@ h1, h2, h3, h4 { margin: 0; }
   text-decoration: none;
 }
 .menu-panel a:hover, .menu-panel a[aria-current="page"] { background: var(--raised-2); }
-/* Both languages side by side; only on phones, where the header has no room
-   for the language button. */
-.menu-langs { display: none; gap: 8px; padding: 2px 0; }
-.menu-panel .menu-langs a {
-  flex: 1 1 0;
-  justify-content: center;
-  min-height: 46px;
-  border: 1px solid var(--line);
-  color: var(--lead);
-  font-size: 15px;
+.menu-label {
+  margin: 10px 14px 2px;
+  font: 700 11px/1 var(--sans);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--faint);
 }
-.menu-panel .menu-langs a[aria-current] { border-color: #3d424b; background: var(--raised-2); color: var(--ink); }
+/* The language on phones, where the header has no room for its button: the
+   same button as a row of the menu, opening in place. A list, so it takes
+   any number of languages. */
+.lang-row { display: none; }
+.menu-panel .lang-row > summary {
+  height: 48px;
+  gap: 10px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 10px;
+  color: var(--ink);
+  font: 600 16px var(--sans);
+  letter-spacing: 0;
+}
+.menu-panel .lang-row > summary > svg:first-child { width: 18px; height: 18px; color: var(--dim); }
+.menu-panel .lang-row > summary .res-chev { margin-inline-start: auto; color: var(--dim); }
+.menu-panel .lang-row[open] > summary .res-chev { transform: rotate(180deg); }
+.menu-panel .lang-row > summary:hover,
+.menu-panel .lang-row[open] > summary { background: var(--raised-2); }
+.menu-panel .lang-row .lang-menu {
+  position: static;
+  min-width: 0;
+  margin: 2px 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.menu-panel .lang-row .lang-menu a {
+  min-height: 44px;
+  justify-content: space-between;
+  padding-block: 0;
+  padding-inline: 42px 14px;
+  color: var(--lead);
+  font: 500 15px var(--sans);
+}
+.menu-panel .lang-row .lang-menu a[aria-current] { color: var(--ink); }
 .menu-panel hr { width: calc(100% - 16px); height: 1px; margin: 6px 8px; border: 0; background: var(--line); }
 .menu-panel .btn { margin-top: 6px; height: 50px; border-radius: 12px; }
 /* .menu-panel a paints every link light; on amber the text stays dark. */
@@ -1636,29 +1750,57 @@ h1, h2, h3, h4 { margin: 0; }
 
 /* ---------------------------------------------------------------- footer */
 
+/* In groups: the name and what tTerm is on one side, three columns of links
+   on the other, the year, the version and the language underneath. */
 .foot {
   max-width: calc(var(--wrap) + 2 * var(--gutter));
-  margin: 100px auto 0;
+  margin: 120px auto 0;
   padding: 0 var(--gutter);
 }
 .foot-in {
-  padding: 40px 0 48px;
+  padding-top: 56px;
   border-top: 1px solid var(--line-2);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 32px;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--faint);
 }
-.foot-brand { display: flex; flex-direction: column; gap: 12px; }
+.foot-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px 64px; }
+.foot-brand { flex: 1 1 280px; max-width: 360px; }
 .foot-brand .brand img { border-radius: 6px; }
-.foot-brand .brand-name { font-size: 17px; }
+.foot-brand .brand-name { font-size: 18px; }
+.foot-tag { margin: 18px 0 0; color: var(--dim); line-height: 1.6; }
+.foot-cols { flex: 2 1 560px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.foot-col { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.foot-h {
+  margin: 0 0 4px;
+  font: 700 12px/1 var(--sans);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.foot-col a { display: inline-flex; align-items: center; gap: 8px; color: var(--lead); text-decoration: none; }
+.foot-col a:hover { color: var(--ink); }
+.foot-new {
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: rgba(233, 163, 63, .14);
+  color: var(--amber);
+  font: 700 10.5px/1 var(--sans);
+  letter-spacing: .02em;
+}
+.foot-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin-top: 48px;
+  padding: 22px 0 32px;
+  border-top: 1px solid var(--line-2);
+  font-size: 13.5px;
+}
 .foot-note { margin: 0; }
-.foot-links { display: grid; grid-template-columns: repeat(3, auto); gap: 12px 48px; }
-.foot-links a { color: var(--lead); text-decoration: none; }
-.foot-links a:hover { color: var(--ink); }
+/* The language at the bottom of the page: the header's button, opening up. */
+.lang-up .lang-menu { top: auto; bottom: calc(100% + 8px); }
 
 /* ------------------------------------------------------------ blog pages */
 
@@ -1903,6 +2045,258 @@ figure { margin: 0; }
 .lost-text { position: relative; max-width: 560px; margin: 20px auto 0; font-size: 19px; color: var(--dim); }
 .lost .final-cta { margin-top: 32px; }
 
+/* --------------------------------------------------------- tTerm for Mac */
+
+/* Everything here shows only while the switch `mac` in sitelib.py is on: the
+   section and the buttons on the main page, the download page. */
+
+/* Two buttons on the first screen: the web app first, the Mac app beside it. */
+.hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+.hero .hero-cta .btn { margin-top: 0; }
+.btn svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* The section on the main page: what the app is, the app itself, four points. */
+.mac-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 28px 56px; }
+.mac-head .section-title { max-width: 640px; }
+.mac-side { flex: 0 1 470px; }
+.mac-side .section-lead { margin: 0; font-size: 17px; }
+.mac-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 24px; }
+.mac-note { font: 500 13.5px/1.5 var(--sans); color: var(--faint); }
+
+/* The app's window: tTerm Web's page in a window of its own, a Mac's title
+   bar instead of a browser's, this Mac marked as the app marks it. Above it
+   the Mac's menu bar with tTerm's menu open. */
+.app-shot { position: relative; margin-top: 40px; padding-top: 128px; }
+.app-shot::before {
+  content: "";
+  position: absolute;
+  inset-inline: -4%;
+  top: 45%;
+  bottom: -18%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(233, 163, 63, .26), rgba(233, 163, 63, .08) 55%, rgba(233, 163, 63, 0));
+  filter: blur(24px);
+  pointer-events: none;
+}
+.app-shot .demo-frame, .app-shot .dm { border-radius: 12px; }
+.app-shot .demo-frame { box-shadow: 0 0 0 1px rgba(255, 255, 255, .06), 0 24px 48px -16px rgba(0, 0, 0, .7), 0 70px 140px -30px rgba(0, 0, 0, .8); }
+.app-shot .demo { --dm-h: 640px; }
+.app-bar {
+  position: relative;
+  flex: none;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  background: #1b1d22;
+  border-bottom: 1px solid #0b0c0f;
+}
+.app-bar i { width: 12px; height: 12px; border-radius: 50%; }
+.app-bar .r { background: #ff5f57; }
+.app-bar .y { background: #febc2e; }
+.app-bar .g { background: #28c840; }
+.app-bar span { position: absolute; inset-inline: 0; text-align: center; font: 600 13px/38px var(--sans); color: #c9cdd4; pointer-events: none; }
+.here-mark {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--amber);
+  color: #0d0e11;
+}
+.dm .here-mark svg { width: 13px; height: 13px; color: inherit; }
+.here-pill {
+  flex: none;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 7px;
+  border-radius: 9px;
+  background: rgba(233, 163, 63, .14);
+  color: var(--amber);
+  font: 700 10.5px var(--sans);
+  white-space: nowrap;
+}
+.dm-row .here-pill { margin-inline-start: 2px; }
+.dm-row .state { width: 7px; height: 7px; margin-inline-start: auto; border-radius: 50%; background: var(--green); }
+
+/* The menu bar of the Mac with tTerm's icon open: the app lives there. */
+.bar-menu { position: absolute; top: 0; inset-inline-end: 36px; z-index: 2; width: 300px; filter: drop-shadow(0 18px 40px rgba(0, 0, 0, .55)); }
+.bar-strip {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  padding: 0 12px;
+  border-radius: 9px;
+  background: rgba(28, 30, 35, .94);
+  border: 1px solid rgba(255, 255, 255, .07);
+  font: 600 12.5px var(--sans);
+  color: #d6d9de;
+}
+.bar-icon { display: inline-flex; padding: 3px 7px; border-radius: 6px; background: rgba(255, 255, 255, .2); }
+.bar-icon svg { width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 54; stroke-linecap: round; stroke-linejoin: round; }
+.bar-drop {
+  margin-top: 6px;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 11px;
+  background: rgba(38, 40, 46, .97);
+  font: 500 13px/1.3 var(--sans);
+  color: #e8eaee;
+}
+.bar-drop p { margin: 0; padding: 5px 10px; border-radius: 6px; }
+.bar-drop p.on { background: #3b72d9; color: #fff; }
+.bar-drop p.muted { color: #8d929b; }
+.bar-drop hr { margin: 5px 6px; border: 0; border-top: 1px solid rgba(255, 255, 255, .1); }
+
+.mac-points { margin-top: 44px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+.mac-point svg { width: 26px; height: 26px; fill: none; stroke: var(--amber); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.mac-point h3 { margin-top: 14px; font: 700 18px/1.3 var(--sans); }
+.mac-point p { margin: 8px 0 0; font-size: 15px; color: var(--dim); }
+
+/* The download page. */
+.dl-hero {
+  position: relative;
+  isolation: isolate;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px var(--gutter) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.dl-hero .glow { top: 40px; width: 900px; height: 600px; }
+.dl-icon { width: 120px; height: 120px; filter: drop-shadow(0 22px 40px rgba(0, 0, 0, .65)); }
+.dl-eyebrow { margin: 26px 0 0; }
+.dl-hero h1 {
+  margin-top: 26px;
+  font: 800 64px/1.04 var(--sans);
+  letter-spacing: -.04em;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f2f5 52%, #aeb4be 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dl-hero .dl-eyebrow + h1 { margin-top: 12px; }
+.dl-hero .hero-lead { margin-top: 20px; }
+.dl-btn { margin-top: 32px; height: 60px; padding: 0 34px; font-size: 17px; }
+.dl-meta { margin: 14px 0 0; font: 500 14px/1.5 var(--sans); color: var(--faint); }
+.dl-links { margin-top: 12px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 20px; font: 600 14px var(--sans); }
+.dl-links a { color: var(--lead); text-decoration: none; }
+.dl-links a:hover { color: var(--ink); }
+.dl-phone {
+  display: none;
+  max-width: 460px;
+  margin-top: 30px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+  text-align: start;
+}
+.dl-phone p { margin: 0; color: var(--dim); }
+.dl-phone b { color: var(--ink); }
+.dl-phone .btn { margin-top: 18px; width: 100%; }
+.dl-shot { max-width: calc(var(--wrap) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); }
+.dl-others { margin-top: 48px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.dl-other { padding: 28px 30px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); }
+.dl-other h3 { display: flex; align-items: center; gap: 10px; font: 700 20px/1.25 var(--sans); }
+.dl-other p { margin: 10px 0 0; font-size: 15px; color: var(--dim); }
+.dl-other a { font-weight: 600; text-decoration: none; }
+
+/* How the app fits with the cloud: the Mac, the move, tTerm Web. */
+.journey {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr) 40px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 12px;
+}
+.jr-card { padding: 28px 28px 30px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); }
+.jr-card:first-child {
+  border-color: rgba(233, 163, 63, .35);
+  background: linear-gradient(180deg, rgba(233, 163, 63, .07), rgba(233, 163, 63, 0) 70%), var(--card);
+}
+.jr-top { display: flex; align-items: center; justify-content: space-between; }
+.jr-top svg { width: 28px; height: 28px; fill: none; stroke: var(--amber); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.jr-new {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(233, 163, 63, .14);
+  color: var(--amber);
+  font: 700 11px/1 var(--sans);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.jr-card h3 { margin-top: 18px; font: 700 21px/1.25 var(--sans); }
+.jr-card p { margin: 10px 0 0; font-size: 15px; color: var(--dim); }
+.jr-card code { font: 500 .9em var(--mono); color: #e3e6eb; }
+.jr-arrow { display: flex; align-items: center; justify-content: center; color: var(--faint); }
+.jr-arrow svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+[dir="rtl"] .jr-arrow svg { transform: scaleX(-1); }
+
+/* A phone or a tablet cannot run the app: the page says so and offers the
+   web, and the first screen of the main page keeps its one button. */
+@media (hover: none) and (pointer: coarse) {
+  .dl-desktop { display: none !important; }
+  .dl-phone { display: block; }
+  .hero-cta .btn-ghost { display: none; }
+}
+
+@media (max-width: 1000px) {
+  .mac-points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dl-others { grid-template-columns: minmax(0, 1fr); }
+  .journey { grid-template-columns: minmax(0, 1fr); }
+  .jr-arrow { transform: rotate(90deg); height: 28px; }
+}
+@media (max-width: 760px) {
+  .bar-menu { display: none; }
+}
+@media (max-width: 640px) {
+  .hero-cta { width: 100%; }
+  .hero-cta .btn { width: 100%; }
+  .app-shot { margin-top: 32px; padding-top: 0; }
+  .app-shot .demo { --dm-h: 480px; }
+  .mac-points { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .dl-hero { padding-top: 40px; }
+  .dl-icon { width: 92px; height: 92px; }
+  .dl-hero h1 { font-size: 42px; }
+  .dl-btn { width: 100%; }
+}
+
+/* -------------------------------------------------------- other scripts */
+
+/* Chinese, Japanese and Korean: Manrope has none of their letters, and a web
+   font for them weighs megabytes, so the rest comes from the system's fonts,
+   chosen by the page's language (Han characters differ between Japanese and
+   Chinese). */
+:lang(ja) { --sans: "Manrope", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, "Noto Sans JP", "Noto Sans CJK JP", sans-serif; }
+:lang(ko) { --sans: "Manrope", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Noto Sans CJK KR", sans-serif; }
+:lang(zh) { --sans: "Manrope", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Noto Sans CJK SC", sans-serif; }
+/* Tight letter spacing suits Latin headlines, not these scripts. */
+:lang(ja) :is(h1, h2, h3), :lang(ko) :is(h1, h2, h3), :lang(zh) :is(h1, h2, h3) { letter-spacing: 0; }
+/* Korean breaks lines between words, like English; Japanese headlines
+   between phrases, where the browser can. */
+:lang(ko) { word-break: keep-all; }
+:lang(ja) :is(h1, h2, h3) { word-break: auto-phrase; }
+
 /* ----------------------------------------------------------------- depth */
 
 /* Cards on the main page: a hairline of light on the top edge and a long
@@ -2023,7 +2417,7 @@ figure { margin: 0; }
   .brand img { width: 28px; height: 28px; }
   .brand-name { font-size: 18px; }
   .top-actions > .lang, .top-actions > .btn-primary { display: none; }
-  .menu-langs { display: flex; }
+  .lang-row { display: block; }
 
   .hero-text { min-height: 0; padding: 24px 0 28px; }
   .chip { height: 44px; padding: 0 15px; gap: 9px; font-size: 12.5px; }
@@ -2091,12 +2485,12 @@ figure { margin: 0; }
   .final h2 { font-size: 32px; line-height: 1.1; }
   .final p { font-size: 16px; }
   .final-cta .btn { width: 100%; }
-  .foot { margin-top: 64px; }
-  .foot-in { flex-direction: column; gap: 16px; padding: 32px 0 40px; }
-  .foot-brand { display: contents; }
-  .foot-links { order: 2; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
-  .foot-links a { display: flex; align-items: center; min-height: 44px; }
-  .foot-note { order: 3; margin-top: 8px; }
+  .foot { margin-top: 72px; }
+  .foot-in { padding-top: 40px; }
+  .foot-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; }
+  .foot-col:last-child { grid-column: 1 / -1; }
+  .foot-col a { min-height: 32px; }
+  .foot-bottom { margin-top: 36px; }
 
   .blog-head { padding-top: 32px; }
   .blog-head h1 { font-size: 38px; margin-top: 14px; }

@@ -1,5 +1,5 @@
-/* tTerm site: the menus in the header (the one on narrow screens and the
-   language), the demo of tTerm Web on the main page and in posts, its
+/* tTerm site: the menus (the one on narrow screens, the language and
+   Resources), the demo of tTerm Web on the main page and in posts, its
    window standing up as the main page scrolls, and a soft light under the
    pointer on cards. No dependencies, nothing loaded from anywhere else: the
    Privacy Policy promises the pages load nothing from third parties. */
@@ -8,9 +8,10 @@
 
   /* ------------------------------------------------------------ menus */
 
-  // Both menus are <details>, so they open with no script at all. Here they
+  // The menus are <details>, so they open with no script at all. Here they
   // only close: after a tap on one of their links, on Escape, on a tap
-  // elsewhere, and when the other one opens.
+  // elsewhere, and when another one opens, unless it opens inside this one
+  // (the language in the phone menu).
   var menus = [];
 
   function initMenu(menu) {
@@ -18,10 +19,10 @@
     menus.push(menu);
     menu.addEventListener('toggle', function () {
       if (!menu.open) return;
-      menus.forEach(function (other) { if (other !== menu) other.open = false; });
+      menus.forEach(function (other) { if (other !== menu && !other.contains(menu)) other.open = false; });
     });
     menu.addEventListener('click', function (event) {
-      if (event.target.closest && event.target.closest('.menu-panel a, .lang-menu a')) menu.open = false;
+      if (event.target.closest && event.target.closest('.menu-panel a, .lang-menu a, .res-menu a')) menu.open = false;
     });
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape' && menu.open) {
@@ -29,8 +30,14 @@
         summary.focus();
       }
     });
-    document.addEventListener('click', function (event) {
+    // pointerdown rather than click: Safari on iOS sends no click for a tap
+    // on a place that is not a link or a button.
+    document.addEventListener('pointerdown', function (event) {
       if (menu.open && !menu.contains(event.target)) menu.open = false;
+    });
+    // Leaving a menu with the keyboard closes it too.
+    menu.addEventListener('focusout', function (event) {
+      if (menu.open && event.relatedTarget && !menu.contains(event.relatedTarget)) menu.open = false;
     });
   }
 
@@ -470,7 +477,7 @@
     });
   }
 
-  Array.prototype.forEach.call(document.querySelectorAll('details.menu, details.lang'), initMenu);
+  Array.prototype.forEach.call(document.querySelectorAll('details.menu, details.lang, details.res'), initMenu);
   Array.prototype.forEach.call(document.querySelectorAll('[data-demo]'), initDemo);
   Array.prototype.forEach.call(document.querySelectorAll('[data-stage]'), initStage);
   if (window.matchMedia && window.matchMedia('(hover: hover)').matches &&

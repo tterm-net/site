@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>笔记、彩色项目和终端名称 · tTerm 博客</title>
+<meta name="description" content="运维手册、检查清单和访问说明，现在就放在相关机器的旁边。你可以创建自己的项目并为每个项目设定颜色，给终端命名，还能把机器和笔记从一个项目移到另一个项目。以下是 tTerm Web 上线头几天新增的功能。">
+<link rel="canonical" href="https://tterm.net/zh/blog/notes-and-projects/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/notes-and-projects/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/notes-and-projects/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/notes-and-projects/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/notes-and-projects/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/notes-and-projects/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/notes-and-projects/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/notes-and-projects/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/notes-and-projects/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/notes-and-projects/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/notes-and-projects/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/notes-and-projects/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/notes-and-projects/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/notes-and-projects/">
+<meta property="og:title" content="笔记、彩色项目和终端名称">
+<meta property="og:description" content="运维手册、检查清单和访问说明，现在就放在相关机器的旁边。你可以创建自己的项目并为每个项目设定颜色，给终端命名，还能把机器和笔记从一个项目移到另一个项目。以下是 tTerm Web 上线头几天新增的功能。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/zh/blog/notes-and-projects/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "笔记、彩色项目和终端名称",
+  "description": "运维手册、检查清单和访问说明，现在就放在相关机器的旁边。你可以创建自己的项目并为每个项目设定颜色，给终端命名，还能把机器和笔记从一个项目移到另一个项目。以下是 tTerm Web 上线头几天新增的功能。",
+  "datePublished": "2026-10-20",
+  "inLanguage": "zh-CN",
+  "url": "https://tterm.net/zh/blog/notes-and-projects/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.5.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/zh/" aria-label="tTerm 首页">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">公测</span>
+    </a>
+    <nav class="nav" aria-label="栏目">
+      <a href="/zh/#features">功能</a>
+      <a href="/zh/#security">安全</a>
+      <a href="/zh/#pricing">价格</a>
+      <details class="res">
+        <summary>资源<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="/zh/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>博客</b><small>tTerm 的最新动态</small></span></a>
+          <a href="/zh/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>常见问题</b><small>解答常见疑问</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Telegram 频道</b><small>每次发布都有一条简短说明</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>GitHub 上的源代码</b><small>tTerm 的全部代码，AGPL v3</small></span></a>
+        </div>
+      </details>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ZH</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/notes-and-projects/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/notes-and-projects/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/notes-and-projects/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/notes-and-projects/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/notes-and-projects/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/notes-and-projects/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/notes-and-projects/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/notes-and-projects/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/notes-and-projects/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/notes-and-projects/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/notes-and-projects/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/notes-and-projects/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">登录</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">免费开始使用</a>
+      <details class="menu">
+        <summary aria-label="菜单"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="菜单">
+          <a href="/zh/#features">功能</a>
+          <a href="/zh/#security">安全</a>
+          <a href="/zh/#pricing">价格</a>
+          <p class="menu-label">资源</p>
+          <a href="/zh/blog/" aria-current="page">博客</a>
+          <a href="/zh/#faq">常见问题</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram 频道</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">GitHub 上的源代码</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>简体中文</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/notes-and-projects/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/notes-and-projects/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/notes-and-projects/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/blog/notes-and-projects/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/notes-and-projects/" hreflang="it" lang="it">Italiano</a>
+              <a href="/pl/blog/notes-and-projects/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/notes-and-projects/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/notes-and-projects/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/notes-and-projects/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/notes-and-projects/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/notes-and-projects/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/notes-and-projects/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">免费开始使用</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="/zh/blog/">博客</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-20">2026年10月20日</time><span class="sep" aria-hidden="true">·</span><span>阅读约 3 分钟</span></p>
+    <!-- /updates:meta -->
+      <h1>笔记、彩色项目和终端名称</h1>
+      <p class="post-lead">运维手册、检查清单和访问说明，现在就放在相关机器的旁边。你可以创建自己的项目并为每个项目设定颜色，给终端命名，还能把机器和笔记从一个项目移到另一个项目。以下是 tTerm Web 上线头几天新增的功能。</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="demo-frame">
+        <div class="demo" data-demo role="img" aria-label="tTerm Web 工作中：左侧是带各自颜色的项目，里面有机器、终端和放在文件夹中的笔记，顶部是标签页。Client X 中的 web-01 正在部署，旁边的笔记里正在逐项勾选这次发布的检查清单，随后按 Cmd+K 在 Acme 的 api-prod 上打开一个终端。"></div>
+      </div>
+      <figcaption>笔记放在机器旁边的文件夹里，每个项目都有自己的颜色。</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>笔记就在机器旁边</h2>
+      <p>笔记放在项目的文件夹里，就像终端运行在项目的机器上一样：部署手册、发布检查清单、访问密钥的存放位置。笔记会在终端旁边的标签页中打开，照着手册操作时，它始终在你眼前。</p>
+
+      <h2>边输入边生效的 Markdown</h2>
+      <p>行首的 <code>#</code> 生成标题，<code>- [ ]</code> 生成检查项，三个反引号生成代码块，<code>/</code> 则打开包含所有这些格式的菜单。代码块带有 Copy 按钮。检查清单会显示每一项由谁在什么时候勾选，整篇笔记可以复制为 Markdown。</p>
+
+      <h2>两台设备同时编辑</h2>
+      <p>笔记在你输入时自动保存。在两台设备上同时编辑时，两边的修改都会保留，只有两边都改过的地方 tTerm 才会询问你。如果连接中断，你输入的内容会暂存在浏览器里，下次打开这篇笔记时恢复。</p>
+
+      <h2>自己的项目</h2>
+      <p>除了 Personal，现在你还可以创建自己的项目：每个客户、每个环境或每项工作一个。每个项目都有自己的机器、终端和笔记。任何项目都可以重命名，Personal 也可以，还可以修改项目代号，也就是标签页上的前缀，例如 CX/web-01。没有机器的项目可以删除，其中的笔记会一并删除。</p>
+      <p>机器可以移到另一个项目，其中的终端会继续运行，机器本身不会有任何变化。笔记也可以移到另一个项目，放进它的任意文件夹。</p>
+
+      <h2>彩色项目</h2>
+      <p>每个项目都有八种颜色中的一种。这个颜色会填充侧边栏和标签页中的项目代号，所以一眼就能看出标签页属于哪个项目。在账号页面上，你可以选择颜色只用于代号，还是用于侧边栏中的整个项目区块。</p>
+
+      <h2>终端名称</h2>
+      <p>终端不必再叫 terminal 2：可以叫 deploy、logs 或 migrations。在标签页、侧边栏或项目页面上双击终端，输入名称，按 Enter。终端出现在哪里，名称就显示在哪里。</p>
+
+      <h2>新的侧边栏和项目页面</h2>
+      <p>在侧边栏中，每个项目下是它的机器及其终端，以及按文件夹整理的笔记。点击机器或文件夹只会将其折叠，旁边的加号用于打开终端或新建笔记，点击项目名称则会打开项目页面：所有机器及其打开的终端，以及所有笔记。</p>
+
+      <h2>接下来</h2>
+      <p>下一个重点是团队协作：项目成员、角色、共享的命令日志，以及旁观同事的终端，被旁观的人始终能看到谁在看。届时，笔记也会由项目中的所有人共享。</p>
+      <p><em>与此同时，我们正在开发电脑版 tTerm：同样的界面，放在独立的窗口里，用于你电脑上的 shell。</em></p>
+
+      <div class="post-cta">
+        <h2>试用 tTerm Web</h2>
+        <p>用邮箱登录：你会收到一个验证码，之后在你自己的设备上只需输入一个短码。第一台服务器一分钟就能连上。</p>
+        <a class="btn btn-primary" href="https://app.tterm.net">免费开始使用</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="博客中的更多文章">
+    <div class="split-row">
+      <h2>博客中的更多文章</h2>
+      <a class="btn btn-ghost btn-md" href="/zh/blog/">全部文章</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/zh/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">10月25日</time> · tTerm Web</span>
+        <span class="post-mini-title">付费方案即将推出，为何仍开源</span>
+        <span class="post-mini-text">tTerm 的全部代码现在采用 AGPL v3，而不再是 MIT，付费方案也即将推出。</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/zh/blog/tterm-web/">
+        <span class="post-mini-meta"><time datetime="2026-10-18">10月18日</time> · tTerm Web</span>
+        <span class="post-mini-title">tTerm 现在能在浏览器里用了</span>
+        <span class="post-mini-text">所有服务器和电脑都在一个标签页中，每条命令自成一个块，设备上无需任何密钥。</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/zh/blog/independent-windows/">
+        <span class="post-mini-meta"><time datetime="2026-10-07">10月7日</time> · 机器人</span>
+        <span class="post-mini-title">电脑上的窗口现在彼此独立</span>
+        <span class="post-mini-text">在服务器上，每个窗口一直都是独立的终端。</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/zh/blog/">全部文章</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/zh/" aria-label="tTerm 首页">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">公测</span>
+        </a>
+        <p class="foot-tag">面向服务器和电脑的云终端。</p>
+      </div>
+      <nav class="foot-cols" aria-label="链接">
+        <div class="foot-col">
+          <p class="foot-h">产品</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Telegram 机器人</a>
+          <a href="/zh/#pricing">价格</a>
+          <a href="/zh/#security">安全</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">资源</p>
+          <a href="/zh/blog/">博客</a>
+          <a href="/zh/#faq">常见问题</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram 频道</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">GitHub 上的源代码</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">法律信息</p>
+          <a href="/terms/">服务条款</a>
+          <a href="/privacy/">隐私政策</a>
+          <a href="/zh/blog/open-source/">AGPL-3.0 许可证</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <details class="lang lang-up">
+        <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ZH</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/notes-and-projects/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/notes-and-projects/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/notes-and-projects/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/notes-and-projects/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/notes-and-projects/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/notes-and-projects/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/notes-and-projects/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/notes-and-projects/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/notes-and-projects/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/notes-and-projects/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/notes-and-projects/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/notes-and-projects/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

@@ -13,23 +13,28 @@ changed on every push. Search engines discount a site that says that.
 """
 from __future__ import annotations
 
-import pathlib
-import re
+import sys
 
-ROOT = pathlib.Path(__file__).parent
-SITE = "https://tterm.net"
+sys.dont_write_bytecode = True
+
+import sitelib as S  # noqa: E402
+
+ROOT = S.ROOT
+SITE = S.SITE
 
 #: Pages worth indexing, besides the posts: how much of the site each one is,
-#: whether it has a version in the other language, and its own last change
-#: when that is not the newest entry (None: take the entry's date).
+#: its own last change when that is not the newest entry (None: take the
+#: entry's date), and the switch it waits for. Each is listed in every
+#: language it has a file in: the Terms and the Policy are English only.
 #: The donation pages are deliberately absent: they carry a `noindex` tag,
 #: since a page of wallet addresses is not what anyone should arrive at from
-#: a search. The Terms and the Policy are English only.
+#: a search.
 PAGES = [
-    ("/", 1.0, True, None),
-    ("/blog/", 0.8, True, None),
-    ("/terms/", 0.3, False, "2026-10-16"),
-    ("/privacy/", 0.3, False, "2026-10-16"),
+    ("/", 1.0, None, None),
+    ("/download/", 0.9, None, "mac"),
+    ("/blog/", 0.8, None, None),
+    ("/terms/", 0.3, "2026-10-16", None),
+    ("/privacy/", 0.3, "2026-10-16", None),
 ]
 
 ROBOTS = f"""# tterm.net
@@ -46,23 +51,23 @@ Sitemap: {SITE}/sitemap.xml
 
 
 def entries() -> list[tuple[str, str | None]]:
-    """Every entry's date, and the path of its page if it has one."""
-    text = (ROOT / "updates.md").read_text(encoding="utf-8")
-    return re.findall(r"^## (\d{4}-\d{2}-\d{2}) \w+(?: (/blog/[a-z0-9-]+/))?\s*$",
-                      text, re.M) or [("2026-08-30", "")]
+    """Every entry's date, and the path of its page if it has one, read by
+    the blog's own parser: a pinned post is a post too."""
+    import build_updates
+    found = build_updates.parse((ROOT / "updates.md").read_text(encoding="utf-8"))
+    return [(e.date, e.path) for e in found] or [("2026-08-30", None)]
 
 
-def url(path: str, priority: float, bilingual: bool, lastmod: str) -> list[str]:
-    out = ["  <url>", f"    <loc>{SITE}{path}</loc>"]
-    # Each page points at the other language. Without this Google treats
-    # them as two competing pages instead of one page in two languages.
-    if bilingual:
-        en = path[3:] if path.startswith("/ru/") else path
-        for lang, other in (("en", en), ("ru", "/ru" + en)):
-            out.append(f'    <xhtml:link rel="alternate" hreflang="{lang}"'
-                       f' href="{SITE}{other}"/>')
+def url(lang, path: str, langs, priority: float, lastmod: str) -> list[str]:
+    out = ["  <url>", f"    <loc>{SITE}{S.page_url(lang, path)}</loc>"]
+    # Each page points at its other languages. Without this Google treats
+    # them as competing pages instead of one page in several languages.
+    if len(langs) > 1:
+        for other in langs:
+            out.append(f'    <xhtml:link rel="alternate" hreflang="{other.code}"'
+                       f' href="{SITE}{S.page_url(other, path)}"/>')
         out.append(f'    <xhtml:link rel="alternate" hreflang="x-default"'
-                   f' href="{SITE}{en}"/>')
+                   f' href="{SITE}{S.page_url(S.ENGLISH, path)}"/>')
     out.append(f"    <lastmod>{lastmod}</lastmod>")
     out.append(f"    <priority>{priority}</priority>")
     out.append("  </url>")
@@ -76,16 +81,16 @@ def sitemap() -> tuple[str, int, str]:
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"'
            ' xmlns:xhtml="http://www.w3.org/1999/xhtml">']
     count = 0
-    for path, priority, bilingual, own in PAGES:
-        variants = [path, "/ru" + path] if bilingual else [path]
-        for variant in variants:
-            out += url(variant, priority, bilingual, own or newest)
+    pages = [(path, priority, own) for path, priority, own, flag in PAGES
+             if flag is None or S.FLAGS[flag]]
+    pages += [(path, 0.7, date) for date, path in found if path]
+    for path, priority, own in pages:
+        langs = S.languages_of(path)
+        if not langs:
+            S.fail(f"{path} is in the sitemap but has no page.")
+        for lang in langs:
+            out += url(lang, path, langs, priority, own or newest)
             count += 1
-    for date, path in found:
-        if path:
-            for variant in (path, "/ru" + path):
-                out += url(variant, 0.7, True, date)
-                count += 1
     out.append("</urlset>")
     return "\n".join(out) + "\n", count, newest
 

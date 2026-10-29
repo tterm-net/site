@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tTerm, 이제 브라우저에서 · tTerm 블로그</title>
+<meta name="description" content="모든 서버와 컴퓨터를 탭 하나에서, 명령은 하나하나 별도의 블록으로, 기기에는 키 없이. tTerm Web이 지금 할 수 있는 일, 머신 연결 방법, 앞으로의 계획을 소개해요.">
+<link rel="canonical" href="https://tterm.net/ko/blog/tterm-web/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/tterm-web/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/tterm-web/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/tterm-web/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/tterm-web/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/tterm-web/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/tterm-web/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/tterm-web/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/tterm-web/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/tterm-web/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/tterm-web/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/tterm-web/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/tterm-web/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/tterm-web/">
+<meta property="og:title" content="tTerm, 이제 브라우저에서">
+<meta property="og:description" content="모든 서버와 컴퓨터를 탭 하나에서, 명령은 하나하나 별도의 블록으로, 기기에는 키 없이. tTerm Web이 지금 할 수 있는 일, 머신 연결 방법, 앞으로의 계획을 소개해요.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/ko/blog/tterm-web/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "tTerm, 이제 브라우저에서",
+  "description": "모든 서버와 컴퓨터를 탭 하나에서, 명령은 하나하나 별도의 블록으로, 기기에는 키 없이. tTerm Web이 지금 할 수 있는 일, 머신 연결 방법, 앞으로의 계획을 소개해요.",
+  "datePublished": "2026-10-18",
+  "inLanguage": "ko",
+  "url": "https://tterm.net/ko/blog/tterm-web/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.5.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/ko/" aria-label="tTerm, 홈으로">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">베타</span>
+    </a>
+    <nav class="nav" aria-label="섹션">
+      <a href="/ko/#features">기능</a>
+      <a href="/ko/#security">보안</a>
+      <a href="/ko/#pricing">요금제</a>
+      <details class="res">
+        <summary>리소스<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="/ko/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>블로그</b><small>tTerm의 새 소식</small></span></a>
+          <a href="/ko/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>자주 묻는 질문</b><small>궁금한 점에 대한 답변</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Telegram 채널</b><small>릴리스마다 짧은 소식</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>GitHub 소스 코드</b><small>tTerm의 모든 코드, AGPL v3</small></span></a>
+        </div>
+      </details>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="언어: 한국어"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>KO</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/tterm-web/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/tterm-web/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/tterm-web/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/tterm-web/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/tterm-web/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/tterm-web/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/tterm-web/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/tterm-web/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/tterm-web/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/tterm-web/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/tterm-web/" hreflang="ko" lang="ko" aria-current="true">한국어<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/zh/blog/tterm-web/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">로그인</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">무료로 시작하기</a>
+      <details class="menu">
+        <summary aria-label="메뉴"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="메뉴">
+          <a href="/ko/#features">기능</a>
+          <a href="/ko/#security">보안</a>
+          <a href="/ko/#pricing">요금제</a>
+          <p class="menu-label">리소스</p>
+          <a href="/ko/blog/" aria-current="page">블로그</a>
+          <a href="/ko/#faq">자주 묻는 질문</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram 채널</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">GitHub 소스 코드</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="언어: 한국어"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>한국어</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/tterm-web/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/tterm-web/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/tterm-web/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/blog/tterm-web/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/tterm-web/" hreflang="it" lang="it">Italiano</a>
+              <a href="/pl/blog/tterm-web/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/tterm-web/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/tterm-web/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/tterm-web/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/tterm-web/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/tterm-web/" hreflang="ko" lang="ko" aria-current="true">한국어<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+              <a href="/zh/blog/tterm-web/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">무료로 시작하기</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="/ko/blog/">블로그</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-18">2026년 10월 18일</time><span class="sep" aria-hidden="true">·</span><span>읽는 데 4분</span></p>
+    <!-- /updates:meta -->
+      <h1>tTerm, 이제 브라우저에서</h1>
+      <p class="post-lead">지금까지 tTerm은 Telegram 안에 있었어요. 채팅에서 바로 서버로 명령을 보내는 방식이었죠. 오늘은 브라우저에서 쓰는 진짜 터미널, tTerm Web을 공개해요. 모든 서버와 컴퓨터를 탭 하나에서 다루고, 명령은 하나하나 별도의 블록으로 나오며, 기기에 키를 둘 필요가 없어요.</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="demo-frame">
+        <div class="demo" data-demo role="img" aria-label="작동 중인 tTerm Web: 왼쪽에는 프로젝트, 머신과 그 터미널이 있고 위쪽에는 탭이 있어요. web-01에서 git pull, 빌드, 서비스 재시작이 실행되고, 이어서 Cmd+K로 api-prod의 터미널이 열려요."></div>
+      </div>
+      <figcaption>tTerm Web의 모습: 왼쪽에는 프로젝트별 머신, 위쪽에는 탭, 명령은 하나하나 별도의 블록으로.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>봇이 있는데도 브라우저가 필요한 이유</h2>
+      <p>휴대폰만 있을 때는 봇이 정말 편해요. 서비스를 재시작하거나, 디스크를 확인하거나, 설치 프로그램의 질문에 답할 때요. 하지만 긴 작업에는 큰 화면이 필요해요. 여러 탭을 나란히 띄우고, vim과 htop을 전체 화면으로 쓰고, 어제 실행한 명령을 쉽게 찾을 수 있는 기록이 있어야 하죠.</p>
+      <p>tTerm Web은 그래서 만들었어요. 노트북, 태블릿, 휴대폰의 어떤 브라우저에서든 열리고, 작업하는 기기에는 아무것도 설치할 필요가 없어요.</p>
+
+      <h2>명령마다 별도의 블록</h2>
+      <p>일반 터미널에서는 모든 것이 하나의 흐름으로 이어져서, 한 명령이 어디서 끝나고 다음 명령이 어디서 시작됐는지 눈으로 찾아야 해요. tTerm에서는 명령마다 별도의 블록으로 나와요. 명령, 출력, 종료 코드, 실행 시간, 디렉터리, git 브랜치가 한 블록에 담겨요.</p>
+      <p>블록은 출력까지 통째로 복사하거나, 접거나, 다시 실행할 수 있어요. 명령이 실행되는 동안에는 출력이 실시간으로 흘러나오고, 끝나면 블록은 선택하고 복사하기 쉬운 일반 텍스트로 정리돼요.</p>
+
+      <h2>에디터 같은 입력 줄</h2>
+      <p>맨 아래에는 별도의 입력 줄이 있어요. Shift+Enter로 줄을 바꾸고, 기록에 있는 명령이 회색으로 제안되며, Tab으로 자동 완성돼요. 기록은 저희 쪽에 저장되기 때문에 모든 기기에서 같아요.</p>
+      <p>입력 줄 위에는 지금 위치, 즉 디렉터리와 브랜치가 보여요. 이걸 클릭해서 목록에서 다른 걸 고르면 <code>cd</code>나 <code>git switch</code>가 일반 블록으로 실행돼요. 그리고 되돌릴 수 없는 위험한 명령 앞에서는 tTerm이 한 번 더 물어봐요.</p>
+
+      <h2>vim, htop, sudo</h2>
+      <p>전체 화면 프로그램은 터미널 영역 전체에 열리고 평소처럼 작동해요. sudo도 마찬가지예요. 블록이 필요 없다면 클래식 모드도 있어요. 익숙한 방식 그대로, 하나로 이어지는 터미널이에요.</p>
+
+      <h2>탭과 함께 닫히지 않는 터미널</h2>
+      <p>터미널은 브라우저가 아니라 저희 서버에 있어요. 서버에서 빌드하는 도중에 노트북을 덮어도 빌드는 계속되고 출력도 남아요. 다른 기기에서 tTerm을 열면 터미널이 그대로 있어요.</p>
+      <p>여러 프로젝트의 탭이 나란히 열리고, P/web-01, A/api-prod처럼 프로젝트 코드가 붙어요. Cmd+K를 누르면 팔레트가 열려요. 어떤 터미널로든 이동하거나, 아무 머신에서나 새 터미널을 열거나, 동작을 실행할 수 있어요.</p>
+
+      <h2>머신 연결 방법</h2>
+      <p>Linux 서버는 명령 한 줄로 연결돼요. 머신을 추가할 때 tTerm Web이 이 명령을 보여 주고, 서버에서 실행하면 돼요:</p>
+      <pre><b>$</b> curl -sSL https://connect.tterm.net/s/… | sudo sh</pre>
+      <p>설치 스크립트는 서버에 tterm이라는 사용자를 만들고, 이 사용자의 <code>authorized_keys</code>에 한 줄을 추가하고, <code>/etc/sudoers.d</code> 안의 별도 파일로 sudo 권한을 줘요. <code>sshd_config</code>는 건드리지 않고, sshd를 재시작하지 않으며, 포트도 열지 않아요. 몇 초 뒤 서버가 목록에 나타나요.</p>
+      <p>macOS나 Linux 컴퓨터는 작은 에이전트로 연결돼요. 에이전트는 사용자 계정으로 실행되고 저희 서버로 스스로 연결하기 때문에, 인바운드 포트가 필요 없고 컴퓨터가 NAT 뒤에 있어도 돼요. 에이전트는 명령 한 줄로 제거할 수 있어요.</p>
+
+      <h2>보안</h2>
+      <p>저희는 사용자의 머신에 연결하기 때문에, 접근 권한을 쉽게 주고 똑같이 쉽게 회수할 수 있도록 만들었어요.</p>
+      <ul class="prose-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><span><strong>키를 맡길 필요가 없어요.</strong> tTerm은 연결할 때마다 본인 이름이 담긴 새 SSH 인증서에 서명해요. 이 인증서는 그 서버 하나에서만 유효하고, 2분 뒤에는 더 이상 쓸 수 없어요.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span><strong>서명은 따로.</strong> 서명에 쓰는 키는 네트워크가 없는 별도 프로세스에 있어요. 메인 프로그램은 키를 읽을 수 없고 서명만 요청할 수 있으며, 모든 서명은 기록돼요.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg><span><strong>중개자 없음.</strong> tTerm 서버는 EU에 있어요. 페이지와 터미널은 이 서버로 바로 연결돼요. Cloudflare는 DNS만 맡고 있어서 명령을 전혀 보지 못해요.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M5 7l1 13h12l1-13M9 7V4h6v3"/></svg><span><strong>회수도 쉽게.</strong> tTerm에서 서버를 삭제하면 tTerm이 그 서버에서 자기 접근 권한을 직접 제거해요. 서버가 응답하지 않으면 서버에서 실행할 명령을 tTerm이 보여 줘요. 설치 스크립트가 설정한 나머지를 제거하는 방법은 스크립트 맨 위에 적혀 있어요.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><strong>오픈 소스.</strong> tTerm Web과 에이전트는 AGPL-3.0 라이선스로 공개된 오픈 소스예요. 설치 스크립트는 짧으니 실행하기 전에 한번 읽어 보세요.</span></li>
+      </ul>
+
+      <h2>비용</h2>
+      <p>tTerm Web이 베타인 동안에는 누구나 무료예요.</p>
+      <div class="stats">
+        <div><b>50</b><span>1인당 머신 수</span></div>
+        <div><b>24</b><span>열린 터미널 수</span></div>
+        <div><b>30</b><span>출력 포함 기록 보관 일수</span></div>
+      </div>
+      <p>유료 요금제는 나중에 나오고, 충분히 미리 알려 드릴게요.</p>
+
+      <h2>봇은 어떻게 되나요?</h2>
+      <p><a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>은 그대로 남아서 계속 작동해요. 휴대폰만 있을 때 채팅에서 바로 서버에 명령을 보낼 수 있어요. 지금은 봇과 웹 앱이 따로 운영되고, 머신 목록도 각자 따로 있어요. 나중에 둘을 하나로 합칠 거예요.</p>
+
+      <h2>앞으로의 계획</h2>
+      <p>다음으로 크게 준비하는 건 팀 작업이에요: 프로젝트 역할, 공유 명령 로그, 동료의 터미널 지켜보기. 지켜보는 동안 상대는 누가 보고 있는지 항상 알 수 있어요. Windows 컴퓨터는 아직 지원하지 않아요. 나중에 지원할 예정이에요.</p>
+
+      <div class="post-cta">
+        <h2>tTerm Web 써 보기</h2>
+        <p>이메일로 로그인하세요. 처음에는 코드를 받고, 그다음부터 내 기기에서는 짧은 코드면 충분해요. 첫 서버는 1분이면 연결돼요.</p>
+        <a class="btn btn-primary" href="https://app.tterm.net">무료로 시작하기</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="블로그의 다른 글">
+    <div class="split-row">
+      <h2>블로그의 다른 글</h2>
+      <a class="btn btn-ghost btn-md" href="/ko/blog/">모든 글</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/ko/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">10월 25일</time> · tTerm Web</span>
+        <span class="post-mini-title">유료 요금제가 나오는데도 tTerm의 코드를 공개하는 이유</span>
+        <span class="post-mini-text">이제 tTerm의 모든 코드는 MIT 대신 AGPL v3로 공개되고, 곧 유료 요금제도 나와요.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/ko/blog/notes-and-projects/">
+        <span class="post-mini-meta"><time datetime="2026-10-20">10월 20일</time> · tTerm Web</span>
+        <span class="post-mini-title">노트, 프로젝트 색상, 터미널 이름</span>
+        <span class="post-mini-text">런북, 체크리스트, 접속 정보 노트가 이제 관련된 머신 바로 옆에 있어요.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/ko/blog/independent-windows/">
+        <span class="post-mini-meta"><time datetime="2026-10-07">10월 7일</time> · 봇</span>
+        <span class="post-mini-title">독립된 창, 이제 컴퓨터에서도</span>
+        <span class="post-mini-text">서버에서는 원래부터 창 하나하나가 별도의 터미널이었어요.</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/ko/blog/">모든 글</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/ko/" aria-label="tTerm, 홈으로">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">베타</span>
+        </a>
+        <p class="foot-tag">서버와 컴퓨터를 위한 클라우드 터미널.</p>
+      </div>
+      <nav class="foot-cols" aria-label="링크">
+        <div class="foot-col">
+          <p class="foot-h">제품</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Telegram 봇</a>
+          <a href="/ko/#pricing">요금제</a>
+          <a href="/ko/#security">보안</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">리소스</p>
+          <a href="/ko/blog/">블로그</a>
+          <a href="/ko/#faq">자주 묻는 질문</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram 채널</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">GitHub 소스 코드</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">법적 고지</p>
+          <a href="/terms/">서비스 이용약관</a>
+          <a href="/privacy/">개인정보 처리방침</a>
+          <a href="/ko/blog/open-source/">AGPL-3.0 라이선스</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <details class="lang lang-up">
+        <summary aria-label="언어: 한국어"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>KO</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/tterm-web/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/tterm-web/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/tterm-web/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/tterm-web/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/tterm-web/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/tterm-web/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/tterm-web/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/tterm-web/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/tterm-web/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/tterm-web/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/tterm-web/" hreflang="ko" lang="ko" aria-current="true">한국어<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/zh/blog/tterm-web/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

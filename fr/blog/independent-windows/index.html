@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sur un ordinateur, les fenêtres sont désormais indépendantes · Blog tTerm</title>
+<meta name="description" content="Sur un serveur, chaque fenêtre a toujours été un terminal à part entière. Sur un ordinateur équipé de l’agent, toutes les fenêtres partageaient un seul shell : un cd dans l’une déplaçait aussi les autres, et tant qu’un programme tournait dans une fenêtre, les autres devaient attendre. Désormais, chaque fenêtre a son propre shell, comme sur un serveur. Vous pouvez laisser tourner un serveur de développement dans une fenêtre et travailler dans une autre.">
+<link rel="canonical" href="https://tterm.net/fr/blog/independent-windows/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/independent-windows/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/independent-windows/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/independent-windows/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/independent-windows/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/independent-windows/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/independent-windows/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/independent-windows/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/independent-windows/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/independent-windows/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/independent-windows/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/independent-windows/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/independent-windows/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/independent-windows/">
+<meta property="og:title" content="Sur un ordinateur, les fenêtres sont désormais indépendantes">
+<meta property="og:description" content="Sur un serveur, chaque fenêtre a toujours été un terminal à part entière. Sur un ordinateur équipé de l’agent, toutes les fenêtres partageaient un seul shell : un cd dans l’une déplaçait aussi les autres, et tant qu’un programme tournait dans une fenêtre, les autres devaient attendre. Désormais, chaque fenêtre a son propre shell, comme sur un serveur. Vous pouvez laisser tourner un serveur de développement dans une fenêtre et travailler dans une autre.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/fr/blog/independent-windows/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Sur un ordinateur, les fenêtres sont désormais indépendantes",
+  "description": "Sur un serveur, chaque fenêtre a toujours été un terminal à part entière. Sur un ordinateur équipé de l’agent, toutes les fenêtres partageaient un seul shell : un cd dans l’une déplaçait aussi les autres, et tant qu’un programme tournait dans une fenêtre, les autres devaient attendre. Désormais, chaque fenêtre a son propre shell, comme sur un serveur. Vous pouvez laisser tourner un serveur de développement dans une fenêtre et travailler dans une autre.",
+  "datePublished": "2026-10-07",
+  "inLanguage": "fr",
+  "url": "https://tterm.net/fr/blog/independent-windows/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.5.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/fr/" aria-label="tTerm, accueil">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">bêta</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="/fr/#features">Fonctions</a>
+      <a href="/fr/#security">Sécurité</a>
+      <a href="/fr/#pricing">Tarifs</a>
+      <details class="res">
+        <summary>Ressources<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="/fr/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>Blog</b><small>Les nouveautés de tTerm</small></span></a>
+          <a href="/fr/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>FAQ</b><small>Réponses aux questions fréquentes</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Canal Telegram</b><small>Chaque version en quelques mots</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>Code source sur GitHub</b><small>Tout le code de tTerm, sous AGPL v3</small></span></a>
+        </div>
+      </details>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="Langue : français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>FR</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/independent-windows/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/independent-windows/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/independent-windows/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/independent-windows/" hreflang="fr" lang="fr" aria-current="true">Français<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/it/blog/independent-windows/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/independent-windows/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/independent-windows/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/independent-windows/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/independent-windows/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/independent-windows/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/independent-windows/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/independent-windows/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Se connecter</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Commencer gratuitement</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="/fr/#features">Fonctions</a>
+          <a href="/fr/#security">Sécurité</a>
+          <a href="/fr/#pricing">Tarifs</a>
+          <p class="menu-label">Ressources</p>
+          <a href="/fr/blog/" aria-current="page">Blog</a>
+          <a href="/fr/#faq">FAQ</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canal Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Code source sur GitHub</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="Langue : français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>Français</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/independent-windows/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/independent-windows/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/independent-windows/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/blog/independent-windows/" hreflang="fr" lang="fr" aria-current="true">Français<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+              <a href="/it/blog/independent-windows/" hreflang="it" lang="it">Italiano</a>
+              <a href="/pl/blog/independent-windows/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/independent-windows/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/independent-windows/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/independent-windows/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/independent-windows/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/independent-windows/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/independent-windows/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">Commencer gratuitement</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post post-plain">
+    <header class="post-head">
+      <a class="crumb" href="/fr/blog/">Blog</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-bot">Bot</span><time datetime="2026-10-07">7 octobre 2026</time><span class="sep" aria-hidden="true">·</span><span>1 min de lecture</span></p>
+    <!-- /updates:meta -->
+      <h1>Sur un ordinateur, les fenêtres sont désormais indépendantes</h1>
+      <p class="post-lead">Sur un serveur, chaque fenêtre a toujours été un terminal à part entière. Sur un ordinateur équipé de l’agent, toutes les fenêtres partageaient un seul shell : un <code>cd</code> dans l’une déplaçait aussi les autres, et tant qu’un programme tournait dans une fenêtre, les autres devaient attendre. Désormais, chaque fenêtre a son propre shell, comme sur un serveur. Vous pouvez laisser tourner un serveur de développement dans une fenêtre et travailler dans une autre.</p>
+    </header>
+
+    <div class="prose">
+      <p>Pour en profiter, mettez à jour l’agent : <code>/addhost</code> → Computer, puis lancez la commande obtenue sur le même ordinateur. La machine reste telle quelle dans votre liste. Si votre agent est ancien, le bot vous le signalera quand vous ouvrirez une deuxième fenêtre.</p>
+      <h2>Autres changements</h2>
+      <ul class="prose-bullets">
+      <li>Les boutons des fenêtres se trouvent en bas de la liste et s’appliquent à la ligne sélectionnée, ils ne se déplacent donc plus quand vous changez de fenêtre</li>
+      <li>Si vous passez à une fenêtre où une commande s’exécute, le bot vous le dit tout de suite au lieu d’attendre qu’elle se termine</li>
+      <li>Un ordinateur n’apparaît plus offline après une reconnexion rapide de l’agent</li>
+      </ul>
+      <p class="post-follow"><a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>Abonnez-vous à notre blog sur Telegram</a></p>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="À lire aussi sur le blog">
+    <div class="split-row">
+      <h2>À lire aussi sur le blog</h2>
+      <a class="btn btn-ghost btn-md" href="/fr/blog/">Tous les articles</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/fr/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">25 oct.</time> · tTerm Web</span>
+        <span class="post-mini-title">Pourquoi le code de tTerm est ouvert, alors que des offres payantes arrivent</span>
+        <span class="post-mini-text">Tout le code de tTerm est désormais sous AGPL v3 au lieu de MIT, et des offres payantes arrivent bientôt.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/fr/blog/notes-and-projects/">
+        <span class="post-mini-meta"><time datetime="2026-10-20">20 oct.</time> · tTerm Web</span>
+        <span class="post-mini-title">Notes, projets en couleur et noms de terminaux</span>
+        <span class="post-mini-text">Runbooks, check-lists et notes sur les accès sont désormais rangés à côté des machines qu’ils concernent.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/fr/blog/tterm-web/">
+        <span class="post-mini-meta"><time datetime="2026-10-18">18 oct.</time> · tTerm Web</span>
+        <span class="post-mini-title">tTerm fonctionne désormais dans le navigateur</span>
+        <span class="post-mini-text">Tous vos serveurs et ordinateurs dans un seul onglet, chaque commande dans son propre bloc, et aucune clé sur votre appareil.</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/fr/blog/">Tous les articles</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/fr/" aria-label="tTerm, accueil">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">bêta</span>
+        </a>
+        <p class="foot-tag">Le terminal dans le cloud pour serveurs et ordinateurs.</p>
+      </div>
+      <nav class="foot-cols" aria-label="Liens">
+        <div class="foot-col">
+          <p class="foot-h">Produit</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot Telegram</a>
+          <a href="/fr/#pricing">Tarifs</a>
+          <a href="/fr/#security">Sécurité</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Ressources</p>
+          <a href="/fr/blog/">Blog</a>
+          <a href="/fr/#faq">FAQ</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canal Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Code source sur GitHub</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Juridique</p>
+          <a href="/terms/">Conditions d’utilisation</a>
+          <a href="/privacy/">Politique de confidentialité</a>
+          <a href="/fr/blog/open-source/">Licence AGPL-3.0</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <details class="lang lang-up">
+        <summary aria-label="Langue : français"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>FR</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/independent-windows/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/independent-windows/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/independent-windows/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/independent-windows/" hreflang="fr" lang="fr" aria-current="true">Français<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/it/blog/independent-windows/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/independent-windows/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/independent-windows/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/independent-windows/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/independent-windows/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/independent-windows/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/independent-windows/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/independent-windows/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

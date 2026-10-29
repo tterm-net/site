@@ -1,0 +1,518 @@
+# Strings of the site in English: one a line, `key = text`.
+# Every language has the same keys; the build stops when one is missing.
+# `{{$base}}` in a link is the language's folder: "" in English, "/ru" in Russian.
+
+# ------------------------------------------------------------ shell: the header and footer of every page
+shell.skip = 본문으로 건너뛰기
+shell.home_label = tTerm, 홈으로
+shell.beta = 베타
+shell.nav_label = 섹션
+shell.features = 기능
+shell.security = 보안
+shell.pricing = 요금제
+shell.resources = 리소스
+shell.blog = 블로그
+shell.blog_note = tTerm의 새 소식
+shell.faq = 자주 묻는 질문
+shell.faq_note = 궁금한 점에 대한 답변
+shell.channel = Telegram 채널
+shell.channel_note = 릴리스마다 짧은 소식
+shell.source = GitHub 소스 코드
+shell.source_note = tTerm의 모든 코드, AGPL v3
+shell.local = 로컬 터미널
+shell.lang_label = 언어: 한국어
+shell.signin = 로그인
+shell.start = 무료로 시작하기
+shell.menu = 메뉴
+shell.tagline = 서버와 컴퓨터를 위한 클라우드 터미널.
+shell.links = 링크
+shell.product = 제품
+shell.mac = Mac용 tTerm
+shell.new = 신규
+shell.bot = Telegram 봇
+shell.legal = 법적 고지
+shell.terms = 서비스 이용약관
+shell.privacy = 개인정보 처리방침
+shell.license = AGPL-3.0 라이선스
+
+# ------------------------------------------------------------ blog: words and dates (build_updates.py)
+# blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
+blog.tag.web = tTerm Web
+blog.tag.bot = 봇
+blog.tag.site = 사이트
+blog.read = 글 읽기
+blog.pinned = 고정됨
+blog.earlier = 이전 글
+blog.more = 다른 글
+blog.minutes = other: 읽는 데 {n}분
+blog.pace = 160
+date.months = 1월 | 2월 | 3월 | 4월 | 5월 | 6월 | 7월 | 8월 | 9월 | 10월 | 11월 | 12월
+date.months_heading = 1월 | 2월 | 3월 | 4월 | 5월 | 6월 | 7월 | 8월 | 9월 | 10월 | 11월 | 12월
+date.months_short = 1월 | 2월 | 3월 | 4월 | 5월 | 6월 | 7월 | 8월 | 9월 | 10월 | 11월 | 12월
+date.long = {y}년 {month} {d}일
+date.long_noyear = {month} {d}일
+date.short = {month_short} {d}일
+date.heading = {y}년 {month_heading}
+# date.day_one is {d} on the first of a month: 1er in French, 1º in Italian and Portuguese.
+date.day_one = 1
+# ------------------------------------------------------------ index
+# meta
+index.title = tTerm: 서버와 컴퓨터를 위한 클라우드 터미널
+index.description = 클라우드에 있는 터미널: 빌드 도중에 노트북을 덮어도 어느 기기에서든 이어서 작업할 수 있어요. 모든 명령은 블록으로 표시돼요. 기기에 키를 둘 필요도, 포트를 열 필요도 없어요.
+index.og_title = 서버와 컴퓨터를 위한 클라우드 터미널
+# main
+# hero
+index.hero.1 = 새 소식: 브라우저에서 쓰는 tTerm<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">읽기</span>
+index.hero.2 = 서버와 컴퓨터를 위한 <br><span class="accent">클라우드 터미널</span>
+index.hero.3 = 터미널은 노트북이 아니라 클라우드에 있어요. 빌드 도중에 노트북을 덮고 휴대폰으로 tTerm을 열어도 모든 게 그대로예요. 기기에 키를 둘 필요도, 포트를 열 필요도 없어요.
+index.hero.4 = 무료로 시작하기
+index.hero.5 = 오픈 소스
+index.hero.6 = 작동 중인 tTerm Web: 왼쪽에는 색으로 구분된 프로젝트와 그 안의 머신, 터미널, 폴더별 노트가 있고 위쪽에는 탭이 있어요. web-01에서 git pull, 빌드, 서비스 재시작이 실행되는 동안 옆의 노트에서는 릴리스 체크리스트 항목이 하나씩 체크되고, 이어서 Cmd+K로 api-prod의 터미널이 열려요.
+# strip
+index.strip.1 = Linux 서버
+index.strip.2 = 일반 SSH로 연결, 서버에서 명령 한 줄
+index.strip.3 = macOS와 Linux 컴퓨터
+index.strip.4 = NAT 뒤에서도, 포트를 열지 않고
+index.strip.5 = 모든 브라우저
+index.strip.6 = 노트북, 태블릿, 휴대폰에서
+# how
+index.how.1 = 작동 방식
+index.how.2 = 첫 명령까지 세 단계
+index.how.3 = 머신 추가하기
+index.how.4 = 서버는 명령 한 줄이면 목록에 추가돼요. 컴퓨터에는 안쪽에서 연결을 여는 작은 에이전트가 필요해요.
+index.how.5 = 터미널 열기
+index.how.6 = 어떤 브라우저에서든 열려요. 여러 프로젝트의 탭을 나란히 두고, 어떤 머신이든 Cmd+K 한 번이면 갈 수 있어요.
+index.how.7 = 평소처럼 작업하기
+index.how.8 = 평소 쓰던 셸과 프로그램, sudo까지 그대로예요. 탭을 닫아도 터미널은 계속 실행돼요.
+# features
+index.features.1 = 기능
+index.features.2 = 명령을 이해하는 터미널
+index.features.3 = tTerm은 각 명령이 어디서 시작하고 어디서 끝나는지, 어떻게 끝났는지, 내가 지금 어디에 있는지 알아요. 그래서 출력을 읽기만 하는 게 아니라 바로 다룰 수 있어요.
+index.features.4 = 모든 명령은 블록으로
+index.features.5 = 종료 코드, 실행 시간, 디렉터리, 브랜치까지 보여 줘요. 블록을 통째로 복사하거나, 접거나, 다시 실행할 수 있어요.
+index.features.6 = <span class="v-key">&#x2192;</span>기록에서 제안<span class="v-key">Tab</span>자동 완성
+index.features.7 = 에디터 같은 입력 줄
+index.features.8 = 여러 줄 입력, 모든 기기에서 이어지는 기록, 제안과 Tab 자동 완성. 위험한 명령 앞에서는 tTerm이 한 번 더 물어봐요.
+index.features.9 = 디렉터리와 브랜치를 클릭 한 번으로
+index.features.10 = 입력 줄 위의 디렉터리나 브랜치를 클릭하고 다른 걸 고르세요. cd와 git switch가 일반 블록으로 실행돼요.
+index.features.11 = vim과 htop을 전체 화면으로
+index.features.12 = 전체 화면 프로그램도 여느 터미널처럼 작동해요. 예전 방식이 더 좋다면 클래식 모드도 있어요.
+index.features.13 = 대기 중
+index.features.14 = 탭을 닫아도 터미널은 그대로
+index.features.15 = 빌드 도중에 노트북을 덮었나요? 빌드는 계속되고 출력도 남아 있어요. 어느 기기에서든 돌아와서 이어 가면 돼요.
+index.features.16 = Cmd+K 한 번으로 모든 것을
+index.features.17 = 터미널로 이동하거나, 아무 머신에서나 새 터미널을 열거나, 동작을 실행하세요. 탭을 일일이 뒤지는 대신 단축키 하나면 돼요.
+index.features.18 = 머신 옆에 두는 노트
+index.features.19 = 런북, 체크리스트, 접속 정보 노트가 프로젝트 안에 있고, 터미널 옆 탭에서 열려요.
+index.features.20 = 색으로 구분되는 프로젝트
+index.features.21 = 고객, 환경, 작업마다 프로젝트를 만들고 그 안에 머신과 노트를 따로 두세요. 색을 보면 탭이 어느 프로젝트 것인지 알 수 있어요.
+index.features.22 = <span class="v-key">Enter</span>저장<span class="v-key">Esc</span>취소
+index.features.23 = 터미널에 이름 붙이기
+index.features.24 = terminal 2 대신 deploy, logs, migrations 같은 이름을 붙이세요. 터미널을 더블클릭하고 이름을 입력한 다음 Enter를 누르면 돼요.
+# security
+index.security.1 = 보안
+index.security.2 = 키는 보관하지 않아요. <br>포트도 열지 않아요.
+index.security.3 = 머신 접근 권한은 쉽게 줄 수 있고, 똑같이 쉽게 회수할 수 있어요. 작동 방식은 다음과 같아요.
+index.security.4 = 2분짜리 인증서
+index.security.5 = 연결할 때마다 본인 이름이 담긴 SSH 인증서를 따로 발급하고, 이 인증서는 그 서버 하나에서만 유효해요. 키를 맡길 필요는 전혀 없어요.
+index.security.6 = 서명은 따로
+index.security.7 = CA 키는 네트워크가 없는 별도 프로세스에 있어요. 코어는 키를 읽을 수 없고 서명만 요청할 수 있으며, 모든 서명은 기록돼요.
+index.security.8 = sshd_config는 그대로
+index.security.9 = 신뢰 설정은 한 사용자의 authorized_keys에 한 줄을 추가하는 게 전부예요. 아무것도 재시작하지 않아요.
+index.security.10 = 안쪽에서 여는 연결
+index.security.11 = 컴퓨터의 에이전트가 스스로 밖으로 연결하기 때문에 인바운드 포트가 필요 없어요. 제거도 명령 한 줄이면 돼요.
+index.security.12 = 중개자 없음
+index.security.13 = 페이지와 터미널은 EU에 있는 저희 서버로 바로 연결돼요. Cloudflare는 DNS만 맡고 있어서 명령을 전혀 보지 못해요.
+index.security.14 = tTerm Web과 에이전트는 AGPL로 공개된 오픈 소스예요. 설치 스크립트는 짧으니 실행하기 전에 읽어 보세요.
+# teams
+index.teams.1 = 팀 기능
+index.teams.2 = 출시 예정
+index.teams.3 = 누가 무엇을 실행했는지 한눈에
+index.teams.4 = 동료를 프로젝트에 초대하고 각자에게 역할을 주세요. 더 이상 서버 키를 나눠 줄 필요가 없어요.
+index.teams.5 = <b>프로젝트 역할:</b> 소유자, 관리자, 멤버, 뷰어.
+index.teams.6 = <b>공유 로그:</b> 누가, 어디서, 언제, 무엇을 실행했고 결과가 어땠는지.
+index.teams.7 = <b>지켜보기:</b> 동료의 터미널을 들여다볼 수 있고, 동료는 누가 보고 있는지 항상 알 수 있어요.
+index.teams.8 = Acme 프로젝트 로그<span class="watching"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Anna 님이 보는 중</span>
+index.teams.9 = AN
+index.teams.10 = DG
+index.teams.11 = IK
+# pricing
+index.pricing.1 = 요금제
+index.pricing.2 = 만드는 동안은 무료
+index.pricing.3 = 지금 tTerm의 모든 기능을 무료로 쓸 수 있어요. 유료 요금제는 나중에 나오고, 충분히 미리 알려 드릴게요.
+index.pricing.4 = 현재
+index.pricing.5 = 무료
+index.pricing.6 = tTerm이 베타인 동안에는 누구나 무료예요. 카드 등록이 필요 없고, 체험판도 아니에요.
+index.pricing.7 = 머신 최대 50대
+index.pricing.8 = 열린 터미널 최대 24개
+index.pricing.9 = 서버와 컴퓨터
+index.pricing.10 = 직접 만드는 프로젝트와 노트
+index.pricing.11 = 출력을 포함한 명령 기록 30일 보관
+index.pricing.12 = 탭을 닫아도 유지되는 터미널
+index.pricing.13 = 다크 테마와 라이트 테마
+# faq
+index.faq.1 = 자주 묻는 질문
+index.faq.2 = 내 컴퓨터에 뭔가 설치해야 하나요?
+index.faq.3 = 아니요, 브라우저면 충분해요. 설치는 연결할 머신에만 해요. 서버에서는 명령 한 줄을 실행하고, 컴퓨터에는 작은 에이전트를 설치해요.
+index.faq.4 = 무엇을 저장하나요?
+index.faq.5 = 명령 기록을 보여 드리려고 명령과 출력을 30일 동안 저장하고, 로그인 내역도 남겨요. 키와 비밀번호는 저장하지 않아요. 자세한 내용은 <a href="/privacy/">개인정보 처리방침</a>에 있어요.
+index.faq.6 = 일반 SSH 클라이언트보다 나은 점은 뭔가요?
+index.faq.7 = 어떤 브라우저에서든 쓸 수 있고, 기기에 키를 둘 필요가 없어요. 노트북을 닫아도 터미널이 끊기지 않아요. 그리고 모든 명령이 블록으로 나와서 복사하고 다시 실행하기 쉬워요.
+index.faq.8 = tTerm의 접근 권한은 어떻게 회수하나요?
+index.faq.9 = tTerm에서 서버를 삭제하면 tTerm이 그 서버에서 자기 접근 권한을 직접 제거해요. 서버가 응답하지 않으면 서버에서 실행할 명령을 tTerm이 보여 줘요. 설치 스크립트가 설정한 나머지를 제거하는 방법은 스크립트 맨 위에 적혀 있어요. 에이전트는 명령 한 줄로 컴퓨터에서 제거할 수 있어요.
+index.faq.10 = Telegram 봇은 어떻게 되나요?
+index.faq.11 = 그대로 남아서 계속 작동해요. 채팅에서 바로 쓰는 터미널, <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>이에요. 지금은 웹 앱과 봇이 따로 운영돼요.
+index.faq.12 = 지원팀에는 어떻게 연락하나요?
+index.faq.13 = <a href="mailto:support@tterm.net">support@tterm.net</a>으로 메일을 보내 주세요. 취약점을 발견했다면 <a href="mailto:security@tterm.net">security@tterm.net</a>으로 알려 주세요.
+# blog
+index.blog.1 = 블로그
+index.blog.2 = tTerm의 새 소식
+index.blog.3 = 모든 글
+# final
+index.final.1 = 첫 터미널까지 1분
+index.final.2 = 이메일로 로그인하고, 명령 한 줄로 서버를 추가한 다음, 어떤 브라우저에서든 작업하세요.
+index.final.3 = 소스 보기
+
+# ------------------------------------------------------------ blog
+# meta
+blog.title = tTerm 블로그: 새 소식
+blog.description = tTerm의 웹 앱, Telegram 봇, 사이트에서 새로 출시한 것과 바뀐 것을 전해요.
+blog.og_title = 블로그: 새 소식
+# main
+# blog-head
+blog.blog-head.1 = 블로그
+blog.blog-head.2 = tTerm의 새 소식
+blog.blog-head.3 = 새로 출시한 것과 바뀐 것을 전해요. 릴리스마다 짧은 소식은 <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram 채널</a>에도 올라가요.
+# main
+blog.main.2 = 주요 글
+blog.main.3 = 모든 글
+# near
+blog.near.1 = Telegram 채널
+blog.near.2 = 새 글은 Telegram에도 올라와요
+blog.near.3 = tTerm 채널에서 릴리스마다 짧은 소식을 전해요.
+blog.near.4 = 채널 열기
+# ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
+mac.download = Mac용 다운로드
+mac.title = 클라우드가 들어 있는 <br>로컬 터미널
+mac.lead = 클라우드 버전에 더해 새로 선보이는 앱이에요. Mac용 tTerm은 컴퓨터의 셸을 전용 창에서 블록으로 열고, 계정 없이도 작동해요. 로그인하면 클라우드의 서버가 같은 창에 나타나고, Mac에 있는 서버와 키를 클라우드로 옮길 수 있어요.
+mac.note = 무료 · macOS 11 이상 <br>Windows와 Linux는 곧 지원
+mac.soon = 출시 예정
+mac.window_label = Mac용 tTerm 창: 왼쪽에는 프로젝트가 있어요. Personal 안에는 this Mac 표시가 붙은 이 MacBook-Pro와 그 터미널이, 그 아래에는 클라우드의 web-01 서버가 있어요. 위쪽에는 이 Mac의 탭과 클라우드의 탭이 나란히 있고, 피드에는 Mac에서 실행한 명령이 블록으로 보여요: git pull, npm test, docker compose. Mac의 메뉴 막대에서는 tTerm 아이콘의 메뉴가 열려 있어요: Open tTerm, MacBook-Pro: online in tTerm Web, Quit tTerm.
+mac.p1.title = 내 Mac에서도 블록으로
+mac.p1.text = 이 Mac의 bash나 zsh에서 실행하는 명령마다 출력, 종료 코드, 시간이 담긴 블록이 돼요. 기록은 Mac에 30일 동안 남아요.
+mac.p2.title = 같은 창 안의 클라우드
+mac.p2.text = 로그인하면 서버와 그 노트, 그리고 ⌘K로 전체를 검색하는 기능이 Mac의 터미널 옆에 열려요.
+mac.p3.title = 클라우드로 옮기기
+mac.p3.text = 앱이 이 Mac에 있는 서버와 키를 클릭 몇 번으로 클라우드로 옮겨 주고, 그러면 어떤 브라우저에서든 열 수 있어요.
+mac.p4.title = 어디서든 내 Mac으로
+mac.p4.text = 앱이 이 Mac을 tTerm Web에 열어 줘서, 브라우저와 휴대폰에서도 이 Mac의 터미널을 쓸 수 있어요. 앱은 메뉴 막대에 있어요.
+mac.strip.title = 브라우저와 Mac
+mac.strip.text = 어떤 브라우저에서든, 또는 Mac의 전용 창에서
+mac.how.1 = 서버는 명령 한 줄이면 목록에 추가돼요. 컴퓨터는 작은 에이전트로, Mac은 Mac용 tTerm으로 연결하고, 둘 다 안쪽에서 연결을 열어요.
+mac.how.2 = 어떤 브라우저에서든, 또는 Mac용 tTerm에서 열려요. 여러 프로젝트의 탭을 나란히 두고, 어떤 머신이든 Cmd+K 한 번이면 갈 수 있어요.
+mac.security = 컴퓨터의 에이전트와 Mac용 tTerm은 스스로 밖으로 연결하기 때문에 인바운드 포트가 필요 없어요. 에이전트는 명령 한 줄로 제거할 수 있어요.
+mac.faq.install = 아니요, 브라우저면 충분해요. 설치는 연결할 머신에만 해요. 서버에서는 명령 한 줄을 실행하고, 컴퓨터에는 작은 에이전트를 설치해요. Mac에는 에이전트 대신 Mac용 tTerm을 설치할 수 있고, 이 앱은 Mac 자체의 터미널 역할도 해요.
+mac.faq.app.q = 컴퓨터용 앱이 있나요?
+mac.faq.app.a = 네, <a href="{{$base}}/download/">Mac용 tTerm</a>이 있어요. Mac 자체의 터미널을 블록으로, 계정 없이 쓸 수 있고, 로그인하면 같은 창에서 클라우드의 서버도 쓸 수 있어요. Windows와 Linux 버전도 곧 나와요.
+# download page
+download.title = Mac용 tTerm: 로컬 터미널
+download.description = 클라우드가 들어 있는 로컬 터미널: Mac의 셸은 블록으로, 그 옆에는 서버와 노트를 비롯해 tTerm에 있는 모든 것이 있어요. 무료, macOS 11 이상.
+download.lead = 클라우드 버전에 더해 새로 선보이는 Mac용 로컬 터미널이에요. 여느 터미널처럼 컴퓨터에서 작업하다가, 준비가 되면 앱에서 바로 서버와 키를 클라우드로 옮기세요.
+download.meta = 무료 · macOS 11 이상 · Apple 실리콘 및 Intel
+download.phone = <b>Mac용 tTerm은 Mac에 설치하는 앱이에요.</b> 이 페이지를 Mac에서 열어 주세요. 휴대폰에서는 브라우저에서 바로 tTerm Web으로 작업할 수 있어요.
+download.open_web = tTerm Web 열기
+download.whats_new = 새 소식
+download.all_versions = GitHub의 모든 버전
+download.source = 소스 코드
+download.cloud.eyebrow = 클라우드와 함께 쓰는 방법
+download.cloud.title = Mac에서 시작해서 <br>클라우드로
+download.cloud.lead = 앱은 클라우드의 tTerm을 대신하는 게 아니라 보완해요. 계정은 하나이고, 서버와 노트도 같아요. 내 Mac에서 시작하고, 어디서든 접속해야 할 때가 되면 모든 걸 클라우드로 옮기세요.
+download.cloud.mac = Mac의 로컬 터미널이에요. 이 컴퓨터의 셸을 블록으로 쓰고, 기록과 노트는 Mac에 저장돼요. 계정 없이도 작동해요.
+download.cloud.move_title = 클라우드로 옮기기
+download.cloud.move = 준비가 되면 앱이 Mac의 <code>~/.ssh</code>에서 서버와 키를 찾아 클릭 몇 번으로 클라우드로 옮겨 줘요.
+download.cloud.web = 클라우드 터미널이에요. 서버, 터미널, 노트가 클라우드에 있어서 어떤 브라우저에서든, 휴대폰에서도 열 수 있고 팀과 함께 쓸 수 있어요.
+download.features.eyebrow = 주요 기능
+download.features.title = Mac과 클라우드를 한 창에서
+download.install.eyebrow = 설치 방법
+download.install.title = 세 단계로 Mac을 tTerm에
+download.install.1.title = 파일 열기
+download.install.1.text = 다운로드한 tTerm.dmg를 열고 tTerm을 응용 프로그램 폴더로 드래그하세요.
+download.install.2.title = tTerm 실행
+download.install.2.text = 계정도 설정도 없이 이 Mac의 터미널이 바로 작동해요.
+download.install.3.title = 로그인하고 옮기기
+download.install.3.text = Sign in을 누르면 브라우저가 열려요. 로그인을 확인하면 서버와 노트가 창에 나타나요. 앱이 이 Mac에 있는 서버와 키를 클라우드로 옮기자고 제안해요.
+download.others.eyebrow = 다른 운영체제
+download.others.title = Mac 외에도
+download.others.windows = Windows 앱을 준비하고 있어요.
+download.others.linux = 그동안 Linux 컴퓨터는 작은 에이전트로 tTerm Web에 연결할 수 있어요.
+download.others.browser = tTerm Web은 휴대폰, 태블릿, 어떤 컴퓨터에서든 작동해요. <a href="https://app.tterm.net">열기</a>
+download.faq.1.q = tTerm Web과 무엇이 다른가요?
+download.faq.1.a = tTerm Web은 브라우저에서 쓰는 클라우드 터미널이에요. 서버와 컴퓨터의 터미널이 클라우드에 있어서 어디서든 열 수 있어요. Mac용 tTerm은 Mac 자체에서 실행되는 로컬 터미널이고, 그 창 안에 클라우드 전체가 들어 있어요. 계정은 하나이고, 서버와 노트도 같아요.
+download.faq.2.q = 무료인가요?
+download.faq.2.a = 네. tTerm이 베타인 동안에는 앱을 포함해 누구나 무료로 쓸 수 있어요.
+download.faq.3.q = 계정이 필요한가요?
+download.faq.3.a = 아니요. 로그인하지 않아도 tTerm은 이 Mac에서 작동하고, 셸, 기록, 노트는 Mac에 남아요. 계정은 서버, 모든 기기에서 보는 노트, 브라우저로 여는 이 Mac처럼 클라우드를 쓸 때 필요해요.
+download.faq.4.q = 명령은 어디에 저장되나요?
+download.faq.4.a = 이 Mac에서 실행한 명령과 출력은 본인만 읽을 수 있는 앱 폴더에 30일 동안 저장돼요. 서버에서 실행한 명령은 tTerm Web과 마찬가지로 클라우드에 저장돼요.
+download.faq.5.q = 앱은 서명되어 있나요?
+download.faq.5.a = 네, Apple Developer ID로 서명했고 Apple의 공증(notarization)도 받았어요. 그래서 macOS에서 경고 없이 열려요.
+download.faq.6.q = 어떻게 삭제하나요?
+download.faq.6.a = 메뉴 막대에서 tTerm을 종료한 다음, 응용 프로그램 폴더에서 휴지통으로 드래그하세요. 로그인한 적이 있다면 Settings → Devices에서 이 Mac을 목록에서 지울 수 있어요.
+download.faq.7.q = 코드는 공개되어 있나요?
+download.faq.7.a = 네, tTerm의 다른 코드와 마찬가지로 AGPL v3로 공개되어 있어요: <a href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">github.com/tterm-net/tterm-app</a>.
+download.final.title = Mac에서 첫 명령까지 1분
+download.final.text = tTerm을 다운로드하고, 응용 프로그램 폴더로 드래그한 다음 실행하세요. 계정은 필요 없어요.
+
+# ------------------------------------------------------------ 404
+notfound.title = 페이지를 찾을 수 없음 · tTerm
+notfound.description = 찾으시는 페이지가 없어요.
+notfound.h1 = 여기에는 아무것도 없어요
+notfound.text = 찾으시는 페이지가 없어요. 페이지가 옮겨졌거나, 링크가 사이트보다 오래됐을 수 있어요.
+notfound.home = 홈으로
+
+# ------------------------------------------------------------ post: /blog/answer-while-it-runs/
+# meta
+post.answer-while-it-runs.title = 실행 중인 명령에 답하기 · tTerm 블로그
+post.answer-while-it-runs.description = 예전에는 프로그램이 Continue? (Y/n) 같은 질문을 해도 답할 방법이 없었어요. 명령이 끝날 때까지 메시지가 전송되지 않았거든요. 이제는 명령이 실행되는 동안 입력한 내용이 터미널에서처럼 그 명령의 입력으로 들어가요. 봇은 이런 메시지에 👌 반응을 남겨요.
+post.answer-while-it-runs.og_title = 실행 중인 명령에 답하기
+# main
+post.answer-while-it-runs.main.2 = 블로그
+post.answer-while-it-runs.main.3 = 예전에는 프로그램이 <code>Continue? (Y/n)</code> 같은 질문을 해도 답할 방법이 없었어요. 명령이 끝날 때까지 메시지가 전송되지 않았거든요. 이제는 명령이 실행되는 동안 입력한 내용이 터미널에서처럼 그 명령의 입력으로 들어가요. 봇은 이런 메시지에 👌 반응을 남겨요.
+# prose
+post.answer-while-it-runs.prose.1 = 그 밖의 변경 사항
+post.answer-while-it-runs.prose.2 = wrangler나 npm이 묻는 방식처럼 질문 아래에서 스피너가 돌고 있어도 <code>(Y/n)</code> 질문을 인식해요. <code>y</code>와 <code>n</code> 버튼이 나타나요
+post.answer-while-it-runs.prose.3 = Stop 버튼이 이제 명령 출력 바로 아래에 있고, Ctrl+C로 명령을 중단해요
+post.answer-while-it-runs.prose.4 = 에이전트를 쓰는 컴퓨터가 30분 동안 명령이 없어도 더 이상 목록에서 빠지지 않아요
+post.answer-while-it-runs.prose.5 = Telegram에서 블로그 구독하기
+# more-section
+post.answer-while-it-runs.more-section.1 = 블로그의 다른 글
+post.answer-while-it-runs.more-section.2 = 모든 글
+
+# ------------------------------------------------------------ post: /blog/independent-windows/
+# meta
+post.independent-windows.title = 독립된 창, 이제 컴퓨터에서도 · tTerm 블로그
+post.independent-windows.description = 서버에서는 원래부터 창 하나하나가 별도의 터미널이었어요. 에이전트를 쓰는 컴퓨터에서는 모든 창이 셸 하나를 함께 썼어요. 한 창에서 cd를 하면 다른 창도 같이 이동했고, 한 창에서 프로그램이 실행되는 동안 나머지 창은 기다려야 했어요. 이제는 서버와 똑같이 창마다 자기 셸이 있어요. 한 창에서 개발 서버를 띄워 두고 다른 창에서 작업할 수 있어요.
+post.independent-windows.og_title = 독립된 창, 이제 컴퓨터에서도
+# main
+post.independent-windows.main.2 = 블로그
+post.independent-windows.main.3 = 서버에서는 원래부터 창 하나하나가 별도의 터미널이었어요. 에이전트를 쓰는 컴퓨터에서는 모든 창이 셸 하나를 함께 썼어요. 한 창에서 <code>cd</code>를 하면 다른 창도 같이 이동했고, 한 창에서 프로그램이 실행되는 동안 나머지 창은 기다려야 했어요. 이제는 서버와 똑같이 창마다 자기 셸이 있어요. 한 창에서 개발 서버를 띄워 두고 다른 창에서 작업할 수 있어요.
+# prose
+post.independent-windows.prose.1 = 이 기능을 쓰려면 에이전트를 업데이트하세요: <code>/addhost</code> → Computer를 고른 다음, 봇이 안내하는 명령을 같은 컴퓨터에서 실행하면 돼요. 머신은 목록에 그대로 남아요. 에이전트가 오래된 버전이면 두 번째 창을 열 때 봇이 알려 줘요.
+post.independent-windows.prose.2 = 그 밖의 변경 사항
+post.independent-windows.prose.3 = 창 버튼이 목록 맨 아래에 있고 선택한 줄에 적용되기 때문에, 창을 전환할 때 더 이상 버튼이 이리저리 움직이지 않아요
+post.independent-windows.prose.4 = 명령이 실행 중인 창으로 전환하면, 명령이 끝날 때까지 기다리지 않고 봇이 바로 알려 줘요
+post.independent-windows.prose.5 = 에이전트가 금방 다시 연결되면 컴퓨터가 더 이상 offline으로 표시되지 않아요
+post.independent-windows.prose.6 = Telegram에서 블로그 구독하기
+# more-section
+post.independent-windows.more-section.1 = 블로그의 다른 글
+post.independent-windows.more-section.2 = 모든 글
+
+# ------------------------------------------------------------ post: /blog/notes-and-projects/
+# meta
+post.notes-and-projects.title = 노트, 프로젝트 색상, 터미널 이름 · tTerm 블로그
+post.notes-and-projects.description = 런북, 체크리스트, 접속 정보 노트가 이제 관련된 머신 바로 옆에 있어요. 프로젝트를 직접 만들어 색을 정하고, 터미널에 이름을 붙이고, 머신과 노트를 다른 프로젝트로 옮길 수 있어요. 출시 후 첫 며칠 동안 tTerm Web에 새로 생긴 것들이에요.
+post.notes-and-projects.og_title = 노트, 프로젝트 색상, 터미널 이름
+# main
+post.notes-and-projects.main.2 = 블로그
+# demo-frame
+post.notes-and-projects.demo-frame.1 = 작동 중인 tTerm Web: 왼쪽에는 색으로 구분된 프로젝트와 그 안의 머신, 터미널, 폴더별 노트가 있고 위쪽에는 탭이 있어요. Client X의 web-01에서 배포가 진행되는 동안 옆의 노트에서는 릴리스 체크리스트 항목이 하나씩 체크되고, 이어서 Cmd+K로 Acme의 api-prod 터미널이 열려요.
+# main
+post.notes-and-projects.main.3 = 머신 옆 폴더에 정리된 노트, 프로젝트마다 다른 색.
+# prose
+post.notes-and-projects.prose.1 = 머신 옆에 두는 노트
+post.notes-and-projects.prose.2 = 터미널이 프로젝트의 머신에 있듯이, 노트는 프로젝트의 폴더에 있어요. 배포 런북, 릴리스 체크리스트, 접속 키를 어디에 두는지 적은 노트 같은 것들이에요. 노트는 터미널 옆 탭으로 열리기 때문에, 런북을 따라 작업하는 동안 계속 볼 수 있어요.
+post.notes-and-projects.prose.3 = 입력하는 대로 적용되는 Markdown
+post.notes-and-projects.prose.4 = 줄 맨 앞에 <code>#</code>을 쓰면 제목, <code>- [ ]</code>를 쓰면 체크리스트 항목, 백틱 세 개를 쓰면 코드 블록이 되고, <code>/</code>를 입력하면 이 모든 걸 고를 수 있는 메뉴가 열려요. 코드에는 Copy 버튼이 붙어요. 체크리스트에서는 누가 언제 항목을 체크했는지 보이고, 노트 전체를 Markdown으로 복사할 수 있어요.
+post.notes-and-projects.prose.5 = 두 기기에서 동시에 작성
+post.notes-and-projects.prose.6 = 노트는 입력하는 동안 저장돼요. 두 기기에서 동시에 편집해도 양쪽의 변경 사항이 모두 남고, 양쪽에서 같은 곳을 바꾼 경우에만 tTerm이 어떻게 할지 물어봐요. 연결이 끊겨도 입력한 내용은 브라우저에 남아 있다가, 노트를 다시 열면 돌아와요.
+post.notes-and-projects.prose.7 = 직접 만드는 프로젝트
+post.notes-and-projects.prose.8 = 이제 Personal 외에도 고객별, 환경별, 작업별로 프로젝트를 직접 만들 수 있어요. 프로젝트마다 머신, 터미널, 노트가 따로 있어요. Personal을 포함해 어떤 프로젝트든 이름을 바꿀 수 있고, CX/web-01처럼 탭에 붙는 프로젝트 코드도 바꿀 수 있어요. 머신이 없는 프로젝트는 삭제할 수 있고, 이때 노트도 함께 삭제돼요.
+post.notes-and-projects.prose.9 = 머신은 터미널이 실행 중인 채로 다른 프로젝트로 옮길 수 있고, 머신 자체에는 아무 변화도 없어요. 노트도 다른 프로젝트의 원하는 폴더로 옮길 수 있어요.
+post.notes-and-projects.prose.10 = 프로젝트 색상
+post.notes-and-projects.prose.11 = 프로젝트마다 여덟 가지 색 중 하나가 있어요. 이 색이 사이드바와 탭의 프로젝트 코드를 채우기 때문에, 탭이 어느 프로젝트 것인지 한눈에 알 수 있어요. 계정 페이지에서 색을 코드에만 칠할지, 사이드바의 프로젝트 블록 전체에 칠할지 고를 수 있어요.
+post.notes-and-projects.prose.12 = 터미널 이름
+post.notes-and-projects.prose.13 = 이제 터미널 이름이 꼭 terminal 2일 필요는 없어요. deploy, logs, migrations처럼 이름을 붙이세요. 탭이나 사이드바, 프로젝트 페이지에서 터미널을 더블클릭하고 이름을 입력한 다음 Enter를 누르면 돼요. 이름은 터미널이 보이는 모든 곳에 표시돼요.
+post.notes-and-projects.prose.14 = 새 사이드바와 프로젝트 페이지
+post.notes-and-projects.prose.15 = 사이드바에서는 프로젝트마다 머신과 그 터미널, 폴더별 노트가 보여요. 머신이나 폴더를 클릭하면 접히기만 하고, 옆의 플러스를 누르면 터미널이 열리거나 새 노트가 시작돼요. 프로젝트 이름을 누르면 프로젝트 페이지가 열리고, 거기에는 모든 머신과 열린 터미널, 모든 노트가 있어요.
+post.notes-and-projects.prose.16 = 앞으로의 계획
+post.notes-and-projects.prose.17 = 다음으로 크게 준비하는 건 팀 작업이에요: 프로젝트 구성원, 역할, 공유 명령 로그, 동료의 터미널 지켜보기. 지켜보는 동안 상대는 누가 보고 있는지 항상 알 수 있어요. 그때가 되면 노트도 프로젝트의 모든 사람이 함께 쓰게 돼요.
+post.notes-and-projects.prose.18 = 이와 함께 컴퓨터용 tTerm도 만들고 있어요. 같은 인터페이스를 전용 창에서, 내 컴퓨터의 셸로 쓰는 앱이에요.
+post.notes-and-projects.prose.19 = tTerm Web 써 보기
+post.notes-and-projects.prose.20 = 이메일로 로그인하세요. 처음에는 코드를 받고, 그다음부터 내 기기에서는 짧은 코드면 충분해요. 첫 서버는 1분이면 연결돼요.
+post.notes-and-projects.prose.21 = 무료로 시작하기
+# more-section
+post.notes-and-projects.more-section.1 = 블로그의 다른 글
+post.notes-and-projects.more-section.2 = 모든 글
+
+# ------------------------------------------------------------ post: /blog/open-source/
+# meta
+post.open-source.title = 유료 요금제가 나오는데도 tTerm의 코드를 공개하는 이유 · tTerm 블로그
+post.open-source.description = 이제 tTerm의 모든 코드는 MIT 대신 AGPL v3로 공개되고, 곧 유료 요금제도 나와요. 이 둘이 왜 서로 부딪히지 않는지, 그리고 왜 서버까지 공개했는지 설명할게요.
+post.open-source.og_title = 유료 요금제가 나오는데도 tTerm의 코드를 공개하는 이유
+# main
+post.open-source.main.2 = 블로그
+# demo-frame
+post.open-source.demo-frame.1 = MacBook의 터미널을 연 tTerm Web, tterm-web 저장소의 사본 안이에요. git remote를 보면 이 사본이 github.com/tterm-net/tterm-web에서 왔고, git log를 보면 라이선스가 0.0.1 버전부터 있었으며, 라이선스 파일에는 GNU Affero General Public License 버전 3이라고 적혀 있어요.
+# main
+post.open-source.main.3 = tTerm Web 안에서 직접 확인한 tTerm Web의 라이선스: 첫 버전부터 AGPL v3.
+# prose
+post.open-source.prose.1 = 바뀐 점
+post.open-source.prose.2 = 10월 11일부터 tTerm의 모든 코드는 AGPL v3로 나와요: 페이지와 서버를 포함한 tTerm Web 전체, 컴퓨터용 에이전트, Telegram 봇, 그리고 이 사이트까지요. 지금 만들고 있는 컴퓨터용 tTerm은 첫 버전부터 이 라이선스를 따르고 있어요. 그전에는 봇, 에이전트, 사이트가 MIT로 나왔어요. 이미 MIT로 나온 버전은 그대로 MIT로 남아요. 라이선스는 나중에 소급해서 철회할 수 없으니까요. 새로 나오는 모든 것에는 AGPL이 적용돼요.
+post.open-source.prose.3 = 서버까지 공개한 이유
+post.open-source.prose.4 = tTerm은 사용자의 머신에 연결해요. 서버에서는 sudo 권한을 가진 tterm 사용자로 로그인하는데, 이는 root 권한을 얻는다는 뜻이에요. 이런 권한을 가진 서비스라면 말만 믿고 쓰면 안 돼요. 그래서 이와 관련된 모든 것을 공개했어요: 코어, 인증서에 서명하는 별도 프로그램, 설치 스크립트, 에이전트.
+post.open-source.prose.5 = 메인 페이지에 적힌 약속은 모두 코드로 확인할 수 있어요. 인증서는 2분 동안만 유효하고 서버 하나에서만 쓸 수 있어요. CA 키는 네트워크가 없는 별도 프로세스에 보관돼요. 설치 스크립트는 <code>authorized_keys</code>에 한 줄을 추가할 뿐, <code>sshd_config</code>는 건드리지 않아요. app.tterm.net의 서버는 공개 저장소에서 바로 업데이트되기 때문에, GitHub에 있는 코드가 곧 실제로 실행되는 코드예요.
+post.open-source.prose.6 = 앱만 공개하고 서버는 비공개로 두는 경우가 많아요. 다른 사람의 머신에서 root 권한을 쥐는 터미널이 그렇게 하는 건 옳지 않다고 생각해요.
+post.open-source.prose.7 = MIT가 아니라 AGPL인 이유
+post.open-source.prose.8 = MIT는 거의 모든 것을 허용해요. 코드를 가져다 개선해서 비공개 서비스로 운영하는 것까지요. 그러면 그런 서비스에 서버를 연결한 사람들은 누구에게, 어떤 방식으로 root 권한을 넘겼는지 알 수 없어요.
+post.open-source.prose.9 = AGPL은 그걸 허용하지 않아요. tTerm을 수정한 사본을 다른 사람을 위한 서비스로 운영하는 사람은 그 코드를 자기 사용자에게 공개해야 해요. 그래서 저희 코드로 만든 서비스는 모두 저희만큼 투명해요.
+post.open-source.prose.10 = 사용자에게는 아무 의무도 생기지 않아요. 머신을 연결하고, 작업하고, 자기 서버에 tTerm을 설치해도 돼요. 라이선스는 tTerm을 다른 사람에게 배포하거나, 수정한 버전을 그들을 위한 서비스로 운영할 때만 적용돼요.
+post.open-source.prose.11 = 그래도 돈을 내는 이유
+post.open-source.prose.12 = 돈은 코드에 접근하는 대가가 아니라 서비스에 대한 대가예요. tTerm을 매일 운영하려면 EU의 서버와 데이터베이스 사본, 이메일, 지원, 그리고 업데이트를 지켜보는 사람이 필요해요. 유료 요금제에서 나오는 돈은 거기에 쓰이고, 요금제는 미리 알려 드릴게요. tTerm이 베타인 동안에는 누구나 무료예요.
+post.open-source.prose.13 = tTerm을 직접 운영할 수도 있어요. AGPL이 허용하니까요. 하지만 대부분의 사람에게 필요한 건 터미널이지, 직접 호스팅하고 업데이트하고 백업해야 하는 서비스가 하나 더 느는 게 아니에요.
+post.open-source.prose.14 = 다른 오픈 소스 프로젝트도 이런 방식으로 운영돼요. 2020년 Plausible은 기업들이 아무것도 돌려주지 않고 Plausible의 코드로 경쟁 서비스를 만드는 일을 막으려고 MIT에서 AGPL로 바꿨어요. 2021년에는 Grafana가 Apache 2.0에서 AGPL로 옮겼어요. 두 곳 모두 자신들의 오픈 소스 코드로 만든 클라우드 버전을 판매해요.
+post.open-source.prose.15 = 코드가 있는 곳
+post.open-source.prose.16 = tTerm의 모든 코드는 GitHub의 한 조직에 있어요: <a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a>. 저장소와 각각의 용도는 다음과 같아요:
+post.open-source.prose.17 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-web" target="_blank" rel="noopener">tterm-web</a></strong><br>tTerm Web의 페이지와 서버: 터미널을 계속 실행해 주는 코어, 인증서에 서명하는 별도 프로그램, 서버와 컴퓨터용 설치 스크립트.
+post.open-source.prose.18 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">tterm-app</a></strong><br>컴퓨터용 tTerm: 같은 페이지를 전용 창에 띄우고, 그 컴퓨터의 셸을 함께 써요. 엔진은 Rust로 작성했고, macOS부터 시작해요.
+post.open-source.prose.19 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-agent" target="_blank" rel="noopener">tterm-agent</a></strong><br>컴퓨터용 에이전트: Mac이나 Linux 머신을 tTerm Web과 봇에 연결해요. 스스로 밖으로 연결하고 포트를 열지 않아요.
+post.open-source.prose.20 = <strong><a class="repo" href="https://github.com/tterm-net/tterm-telegram" target="_blank" rel="noopener">tterm-telegram</a></strong><br>tTerm의 출발점이 된 Telegram 봇.
+post.open-source.prose.21 = <strong><a class="repo" href="https://github.com/tterm-net/site" target="_blank" rel="noopener">site</a></strong><br>이 사이트.
+post.open-source.prose.22 = <strong><a class="repo" href="https://github.com/tterm-net/.github" target="_blank" rel="noopener">.github</a></strong><br>GitHub의 조직 페이지.
+post.open-source.prose.23 = 설치 스크립트는 짧아요. 실행하기 전에 읽어 보세요.
+post.open-source.prose.24 = tTerm Web 써 보기
+post.open-source.prose.25 = 이메일로 로그인하세요. 처음에는 코드를 받고, 그다음부터 내 기기에서는 짧은 코드면 충분해요. 첫 서버는 1분이면 연결돼요.
+post.open-source.prose.26 = 무료로 시작하기
+# more-section
+post.open-source.more-section.1 = 블로그의 다른 글
+post.open-source.more-section.2 = 모든 글
+
+# ------------------------------------------------------------ post: /blog/several-terminals/
+# meta
+post.several-terminals.title = 머신 하나에 터미널 여러 개 · tTerm 블로그
+post.several-terminals.description = 이제 같은 서버에서 터미널을 여러 개 열어 둘 수 있어요. 하나로는 로그를 지켜보고, 다른 하나로는 작업하는 식이에요. /use에서는 각각 별도의 줄로 보이고, 저마다 자기 셸이 있어요. 한 터미널에서 cd를 해도 다른 터미널은 원래 위치에 그대로 있어요.
+post.several-terminals.og_title = 머신 하나에 터미널 여러 개
+# main
+post.several-terminals.main.2 = 블로그
+post.several-terminals.main.3 = 이제 같은 서버에서 터미널을 여러 개 열어 둘 수 있어요. 하나로는 로그를 지켜보고, 다른 하나로는 작업하는 식이에요. <code>/use</code>에서는 각각 별도의 줄로 보이고, 저마다 자기 셸이 있어요. 한 터미널에서 <code>cd</code>를 해도 다른 터미널은 원래 위치에 그대로 있어요.
+# prose
+post.several-terminals.prose.1 = 그 밖의 변경 사항
+post.several-terminals.prose.2 = 출력은 명령이 끝날 때 한꺼번에 오지 않고 도착하는 대로 표시되며, 오래 걸리는 명령을 중간에 끊을 수 있는 Stop 버튼이 있어요
+post.several-terminals.prose.3 = 답을 기다리는 명령은 이제 알아챌 때까지 조용히 멈춰 있지 않고, 답을 기다린다고 알리면서 답할 수 있는 버튼을 보여 줘요
+post.several-terminals.prose.4 = git 브랜치가 프롬프트 위, 눈이 가는 자리에 표시돼요
+post.several-terminals.prose.5 = 긴 출력도 파일로 바뀌지 않고 채팅에 그대로 남아요
+post.several-terminals.prose.6 = Telegram에서 블로그 구독하기
+# more-section
+post.several-terminals.more-section.1 = 블로그의 다른 글
+post.several-terminals.more-section.2 = 모든 글
+
+# ------------------------------------------------------------ post: /blog/tterm-is-live/
+# meta
+post.tterm-is-live.title = tTerm 출시 · tTerm 블로그
+post.tterm-is-live.description = 서버를 위한 터미널을 바로 이곳 Telegram에서 쓸 수 있어요. 명령을 입력하면 내 머신에서 실행되고, 종료 코드, 작업 디렉터리, git 브랜치가 담긴 메시지로 결과가 돌아와요. 셸은 마지막으로 작업하던 위치를 기억해요.
+post.tterm-is-live.og_title = tTerm 출시
+# main
+post.tterm-is-live.main.2 = 블로그
+# prose
+post.tterm-is-live.prose.1 = 지금 할 수 있는 것
+post.tterm-is-live.prose.2 = SSH로 연결하는 Linux 서버: 명령 한 줄로 연결, <code>sshd_config</code> 수정 없음
+post.tterm-is-live.prose.3 = 포트를 열지 않는 작은 에이전트로 연결하는 macOS와 Linux 컴퓨터
+post.tterm-is-live.prose.4 = 어떤 Telegram 사용자에게든 접근 권한 공유: 정해진 기간 동안, 또는 회수할 때까지
+post.tterm-is-live.prose.5 = 공유받은 사람이 실행한 모든 명령은 그 사람의 이름과 함께 내 로그에 남아요
+post.tterm-is-live.prose.6 = 무료, 오픈 소스, 가입 필요 없음.
+post.tterm-is-live.prose.7 = 베타 버전이에요. 잘 작동하지만 앞으로도 계속 바뀔 거고, 바뀌는 내용은 이 채널에서 알려 드려요.
+post.tterm-is-live.prose.8 = Telegram에서 블로그 구독하기
+# more-section
+post.tterm-is-live.more-section.1 = 블로그의 다른 글
+post.tterm-is-live.more-section.2 = 모든 글
+
+# ------------------------------------------------------------ post: /blog/tterm-web/
+# meta
+post.tterm-web.title = tTerm, 이제 브라우저에서 · tTerm 블로그
+post.tterm-web.description = 모든 서버와 컴퓨터를 탭 하나에서, 명령은 하나하나 별도의 블록으로, 기기에는 키 없이. tTerm Web이 지금 할 수 있는 일, 머신 연결 방법, 앞으로의 계획을 소개해요.
+post.tterm-web.og_title = tTerm, 이제 브라우저에서
+# main
+post.tterm-web.main.2 = 블로그
+post.tterm-web.main.3 = 지금까지 tTerm은 Telegram 안에 있었어요. 채팅에서 바로 서버로 명령을 보내는 방식이었죠. 오늘은 브라우저에서 쓰는 진짜 터미널, tTerm Web을 공개해요. 모든 서버와 컴퓨터를 탭 하나에서 다루고, 명령은 하나하나 별도의 블록으로 나오며, 기기에 키를 둘 필요가 없어요.
+# demo-frame
+post.tterm-web.demo-frame.1 = 작동 중인 tTerm Web: 왼쪽에는 프로젝트, 머신과 그 터미널이 있고 위쪽에는 탭이 있어요. web-01에서 git pull, 빌드, 서비스 재시작이 실행되고, 이어서 Cmd+K로 api-prod의 터미널이 열려요.
+# main
+post.tterm-web.main.4 = tTerm Web의 모습: 왼쪽에는 프로젝트별 머신, 위쪽에는 탭, 명령은 하나하나 별도의 블록으로.
+# prose
+post.tterm-web.prose.1 = 봇이 있는데도 브라우저가 필요한 이유
+post.tterm-web.prose.2 = 휴대폰만 있을 때는 봇이 정말 편해요. 서비스를 재시작하거나, 디스크를 확인하거나, 설치 프로그램의 질문에 답할 때요. 하지만 긴 작업에는 큰 화면이 필요해요. 여러 탭을 나란히 띄우고, vim과 htop을 전체 화면으로 쓰고, 어제 실행한 명령을 쉽게 찾을 수 있는 기록이 있어야 하죠.
+post.tterm-web.prose.3 = tTerm Web은 그래서 만들었어요. 노트북, 태블릿, 휴대폰의 어떤 브라우저에서든 열리고, 작업하는 기기에는 아무것도 설치할 필요가 없어요.
+post.tterm-web.prose.4 = 명령마다 별도의 블록
+post.tterm-web.prose.5 = 일반 터미널에서는 모든 것이 하나의 흐름으로 이어져서, 한 명령이 어디서 끝나고 다음 명령이 어디서 시작됐는지 눈으로 찾아야 해요. tTerm에서는 명령마다 별도의 블록으로 나와요. 명령, 출력, 종료 코드, 실행 시간, 디렉터리, git 브랜치가 한 블록에 담겨요.
+post.tterm-web.prose.6 = 블록은 출력까지 통째로 복사하거나, 접거나, 다시 실행할 수 있어요. 명령이 실행되는 동안에는 출력이 실시간으로 흘러나오고, 끝나면 블록은 선택하고 복사하기 쉬운 일반 텍스트로 정리돼요.
+post.tterm-web.prose.7 = 에디터 같은 입력 줄
+post.tterm-web.prose.8 = 맨 아래에는 별도의 입력 줄이 있어요. Shift+Enter로 줄을 바꾸고, 기록에 있는 명령이 회색으로 제안되며, Tab으로 자동 완성돼요. 기록은 저희 쪽에 저장되기 때문에 모든 기기에서 같아요.
+post.tterm-web.prose.9 = 입력 줄 위에는 지금 위치, 즉 디렉터리와 브랜치가 보여요. 이걸 클릭해서 목록에서 다른 걸 고르면 <code>cd</code>나 <code>git switch</code>가 일반 블록으로 실행돼요. 그리고 되돌릴 수 없는 위험한 명령 앞에서는 tTerm이 한 번 더 물어봐요.
+post.tterm-web.prose.10 = vim, htop, sudo
+post.tterm-web.prose.11 = 전체 화면 프로그램은 터미널 영역 전체에 열리고 평소처럼 작동해요. sudo도 마찬가지예요. 블록이 필요 없다면 클래식 모드도 있어요. 익숙한 방식 그대로, 하나로 이어지는 터미널이에요.
+post.tterm-web.prose.12 = 탭과 함께 닫히지 않는 터미널
+post.tterm-web.prose.13 = 터미널은 브라우저가 아니라 저희 서버에 있어요. 서버에서 빌드하는 도중에 노트북을 덮어도 빌드는 계속되고 출력도 남아요. 다른 기기에서 tTerm을 열면 터미널이 그대로 있어요.
+post.tterm-web.prose.14 = 여러 프로젝트의 탭이 나란히 열리고, P/web-01, A/api-prod처럼 프로젝트 코드가 붙어요. Cmd+K를 누르면 팔레트가 열려요. 어떤 터미널로든 이동하거나, 아무 머신에서나 새 터미널을 열거나, 동작을 실행할 수 있어요.
+post.tterm-web.prose.15 = 머신 연결 방법
+post.tterm-web.prose.16 = Linux 서버는 명령 한 줄로 연결돼요. 머신을 추가할 때 tTerm Web이 이 명령을 보여 주고, 서버에서 실행하면 돼요:
+post.tterm-web.prose.17 = 설치 스크립트는 서버에 tterm이라는 사용자를 만들고, 이 사용자의 <code>authorized_keys</code>에 한 줄을 추가하고, <code>/etc/sudoers.d</code> 안의 별도 파일로 sudo 권한을 줘요. <code>sshd_config</code>는 건드리지 않고, sshd를 재시작하지 않으며, 포트도 열지 않아요. 몇 초 뒤 서버가 목록에 나타나요.
+post.tterm-web.prose.18 = macOS나 Linux 컴퓨터는 작은 에이전트로 연결돼요. 에이전트는 사용자 계정으로 실행되고 저희 서버로 스스로 연결하기 때문에, 인바운드 포트가 필요 없고 컴퓨터가 NAT 뒤에 있어도 돼요. 에이전트는 명령 한 줄로 제거할 수 있어요.
+post.tterm-web.prose.19 = 보안
+post.tterm-web.prose.20 = 저희는 사용자의 머신에 연결하기 때문에, 접근 권한을 쉽게 주고 똑같이 쉽게 회수할 수 있도록 만들었어요.
+post.tterm-web.prose.21 = <strong>키를 맡길 필요가 없어요.</strong> tTerm은 연결할 때마다 본인 이름이 담긴 새 SSH 인증서에 서명해요. 이 인증서는 그 서버 하나에서만 유효하고, 2분 뒤에는 더 이상 쓸 수 없어요.
+post.tterm-web.prose.22 = <strong>서명은 따로.</strong> 서명에 쓰는 키는 네트워크가 없는 별도 프로세스에 있어요. 메인 프로그램은 키를 읽을 수 없고 서명만 요청할 수 있으며, 모든 서명은 기록돼요.
+post.tterm-web.prose.23 = <strong>중개자 없음.</strong> tTerm 서버는 EU에 있어요. 페이지와 터미널은 이 서버로 바로 연결돼요. Cloudflare는 DNS만 맡고 있어서 명령을 전혀 보지 못해요.
+post.tterm-web.prose.24 = <strong>회수도 쉽게.</strong> tTerm에서 서버를 삭제하면 tTerm이 그 서버에서 자기 접근 권한을 직접 제거해요. 서버가 응답하지 않으면 서버에서 실행할 명령을 tTerm이 보여 줘요. 설치 스크립트가 설정한 나머지를 제거하는 방법은 스크립트 맨 위에 적혀 있어요.
+post.tterm-web.prose.25 = <strong>오픈 소스.</strong> tTerm Web과 에이전트는 AGPL-3.0 라이선스로 공개된 오픈 소스예요. 설치 스크립트는 짧으니 실행하기 전에 한번 읽어 보세요.
+post.tterm-web.prose.26 = 비용
+post.tterm-web.prose.27 = tTerm Web이 베타인 동안에는 누구나 무료예요.
+post.tterm-web.prose.28 = 1인당 머신 수
+post.tterm-web.prose.29 = 열린 터미널 수
+post.tterm-web.prose.30 = 출력 포함 기록 보관 일수
+post.tterm-web.prose.31 = 유료 요금제는 나중에 나오고, 충분히 미리 알려 드릴게요.
+post.tterm-web.prose.32 = 봇은 어떻게 되나요?
+post.tterm-web.prose.33 = <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>은 그대로 남아서 계속 작동해요. 휴대폰만 있을 때 채팅에서 바로 서버에 명령을 보낼 수 있어요. 지금은 봇과 웹 앱이 따로 운영되고, 머신 목록도 각자 따로 있어요. 나중에 둘을 하나로 합칠 거예요.
+post.tterm-web.prose.34 = 앞으로의 계획
+post.tterm-web.prose.35 = 다음으로 크게 준비하는 건 팀 작업이에요: 프로젝트 역할, 공유 명령 로그, 동료의 터미널 지켜보기. 지켜보는 동안 상대는 누가 보고 있는지 항상 알 수 있어요. Windows 컴퓨터는 아직 지원하지 않아요. 나중에 지원할 예정이에요.
+post.tterm-web.prose.36 = tTerm Web 써 보기
+post.tterm-web.prose.37 = 이메일로 로그인하세요. 처음에는 코드를 받고, 그다음부터 내 기기에서는 짧은 코드면 충분해요. 첫 서버는 1분이면 연결돼요.
+post.tterm-web.prose.38 = 무료로 시작하기
+# more-section
+post.tterm-web.more-section.1 = 블로그의 다른 글
+post.tterm-web.more-section.2 = 모든 글
+
+# ------------------------------------------------------------ post: /blog/verified-on-github/
+# meta
+post.verified-on-github.title = GitHub 인증 조직이 된 tTerm · tTerm 블로그
+post.verified-on-github.description = github.com/tterm-net에 Verified 배지가 붙었어요. GitHub가 이 조직과 tterm.net을 같은 사람들이 운영한다는 걸 확인했어요.
+post.verified-on-github.og_title = GitHub 인증 조직이 된 tTerm
+# main
+post.verified-on-github.main.2 = 블로그
+post.verified-on-github.main.3 = <a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a>에 Verified 배지가 붙었어요. GitHub가 이 조직과 <a href="{{$base}}/">tterm.net</a>을 같은 사람들이 운영한다는 걸 확인했어요.
+# prose
+post.verified-on-github.prose.1 = tTerm에서는 이게 다른 곳보다 더 중요해요. 코드가 공개되어 있으니 누구나 포크해서 설치 명령을 바꾸고, 저희와 비슷해 보이는 이름으로 배포할 수 있어요. 하지만 도메인은 포크할 수 없어요. 배지가 이 둘을 묶어 주기 때문에, 확실히 저희라고 증명할 수 있는 곳이 하나 생겨요:
+post.verified-on-github.prose.2 = <a href="https://github.com/tterm-net" target="_blank" rel="noopener">github.com/tterm-net</a>: 저장소 세 개 모두 인증됨
+post.verified-on-github.prose.3 = <a href="{{$base}}/">tterm.net</a>: 사이트
+post.verified-on-github.prose.4 = <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>: 봇 자체
+post.verified-on-github.prose.5 = Telegram에서 블로그 구독하기
+# more-section
+post.verified-on-github.more-section.1 = 블로그의 다른 글
+post.verified-on-github.more-section.2 = 모든 글
+
+# ------------------------------------------------------------ post: /blog/your-shell/
+# meta
+post.your-shell.title = 이제 에이전트가 bash든 zsh든 내 셸을 실행해요 · tTerm 블로그
+post.your-shell.description = 예전에는 에이전트가 무조건 bash를 실행했어요. 2019년부터 기본 셸이 zsh인 macOS에서는 남의 환경이나 마찬가지였어요. 설치해 둔 것의 절반을 찾지 못했으니까요.
+post.your-shell.og_title = 이제 에이전트가 bash든 zsh든 내 셸을 실행해요
+# main
+post.your-shell.main.2 = 블로그
+# prose
+post.your-shell.prose.1 = 이제는 평소에 쓰는 셸이 내 경로와 설정 그대로 실행돼요. 터미널 앱을 열었을 때와 똑같아요.
+post.your-shell.prose.2 = 그 밖의 변경 사항
+post.your-shell.prose.3 = 되돌릴 수 없는 명령은 먼저 물어봐요: <code>rm -rf</code>, <code>mkfs</code>, <code>DROP DATABASE</code>, <code>sshd</code> 중지
+post.your-shell.prose.4 = 서버의 호스트 키를 연결할 때 기록해 두고 이후 매번 확인하기 때문에, 그 주소에서 다른 무언가가 응답하더라도 끼어들 수 없어요
+post.your-shell.prose.5 = 긴 출력은 마지막 여섯 줄 대신 요약과 함께 와요: <code>apt</code>라면 이제 <code>Processing triggers</code>만 보이는 게 아니라 패키지가 몇 개 업그레이드됐는지 보여요
+post.your-shell.prose.6 = 프롬프트의 긴 경로는 줄여서 보여 줘요: <code>/opt/…/tterm/core</code>
+post.your-shell.prose.7 = Telegram에서 블로그 구독하기
+# more-section
+post.your-shell.more-section.1 = 블로그의 다른 글
+post.your-shell.more-section.2 = 모든 글

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tTerm: il terminale cloud per server e computer</title>
+<meta name="description" content="Un terminale che vive nel cloud: chiudi il portatile durante una build e riprendi da qualsiasi dispositivo. Ogni comando arriva come un blocco. Nessuna chiave sul dispositivo, nessuna porta da aprire.">
+<link rel="canonical" href="https://tterm.net/it/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/">
+<meta property="og:title" content="Il terminale cloud per server e computer">
+<meta property="og:description" content="Un terminale che vive nel cloud: chiudi il portatile durante una build e riprendi da qualsiasi dispositivo. Ogni comando arriva come un blocco. Nessuna chiave sul dispositivo, nessuna porta da aprire.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tterm.net/it/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "tTerm",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "A modern web browser",
+  "url": "https://tterm.net/it/",
+  "description": "Un terminale che vive nel cloud: chiudi il portatile durante una build e riprendi da qualsiasi dispositivo. Ogni comando arriva come un blocco. Nessuna chiave sul dispositivo, nessuna porta da aprire.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+  "isAccessibleForFree": true
+}
+</script>
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.5.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/it/" aria-label="tTerm, pagina iniziale">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">beta</span>
+    </a>
+    <nav class="nav" aria-label="Sezioni">
+      <a href="/it/#features">Funzionalità</a>
+      <a href="/it/#security">Sicurezza</a>
+      <a href="/it/#pricing">Prezzi</a>
+      <details class="res">
+        <summary>Risorse<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="/it/blog/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>Blog</b><small>Le novità di tTerm</small></span></a>
+          <a href="/it/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>Domande frequenti</b><small>Le risposte ai dubbi più comuni</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Canale Telegram</b><small>Una breve nota su ogni nuova versione</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>Codice sorgente su GitHub</b><small>Tutto il codice di tTerm, AGPL v3</small></span></a>
+        </div>
+      </details>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>IT</span></summary>
+        <div class="lang-menu">
+          <a href="/" hreflang="en" lang="en">English</a>
+          <a href="/de/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/pl/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Accedi</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Inizia gratis</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="/it/#features">Funzionalità</a>
+          <a href="/it/#security">Sicurezza</a>
+          <a href="/it/#pricing">Prezzi</a>
+          <p class="menu-label">Risorse</p>
+          <a href="/it/blog/">Blog</a>
+          <a href="/it/#faq">Domande frequenti</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canale Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Codice sorgente su GitHub</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>Italiano</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/" hreflang="en" lang="en">English</a>
+              <a href="/de/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+              <a href="/pl/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">Inizia gratis</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="sky" aria-hidden="true"><i class="s-beam"></i><i class="s-teal"></i><i class="s-sky"></i><i class="s-violet"></i><i class="s-amber"></i></div>
+    <div class="hero-text">
+      <a class="chip" href="/it/blog/tterm-web/"><span class="chip-dot" aria-hidden="true"></span>Novità: tTerm nel browser<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Leggi</span></a>
+      <h1><span class="accent">Il terminale cloud</span> <br>per server e computer</h1>
+      <p class="hero-lead">I tuoi terminali vivono nel cloud, non sul portatile: chiudilo durante una build, apri tTerm sul telefono e ritrovi tutto dove l'avevi lasciato. Nessuna chiave sul dispositivo, nessuna porta da aprire.</p>
+      <a class="btn btn-primary" href="https://app.tterm.net">Inizia gratis</a>
+      <a class="hero-note" href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>Open source</a>
+    </div>
+    <div class="stage" data-stage>
+      <div class="demo-frame">
+        <div class="demo" data-demo role="img" aria-label="tTerm Web in azione: a sinistra i progetti nei loro colori, con macchine, terminali e note in cartelle, in alto le schede. Su web-01 girano git pull, una build e il riavvio di un servizio, mentre nella nota accanto si spuntano le voci della checklist di release. Poi Cmd+K apre un terminale su api-prod."></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="strip">
+      <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg><p><b>Server Linux</b><span>Via SSH standard, con un solo comando sul server</span></p></div>
+      <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg><p><b>Computer con macOS e Linux</b><span>Anche dietro NAT, senza porte aperte</span></p></div>
+      <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><p><b>Qualsiasi browser</b><span>Su portatile, tablet o telefono</span></p></div>
+    </div>
+  </div>
+
+  <section class="section" id="how">
+    <p class="eyebrow">Come funziona</p>
+    <h2 class="section-title">Tre passi per il primo comando</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3>Aggiungi una macchina</h3>
+        <p>Un comando sul server, ed eccolo nel tuo elenco. A un computer basta un piccolo agente che si collega dall'interno.</p>
+        <div class="step-code"><i>$</i> curl -sSL https://connect.tterm.net/s/… | sudo sh</div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3>Apri un terminale</h3>
+        <p>In qualsiasi browser. Schede di progetti diversi una accanto all'altra, e ogni macchina a un Cmd+K di distanza.</p>
+        <div class="step-tabs" aria-hidden="true"><span class="on"><b class="dot"></b><span><em>P/</em>web-01</span></span><span><b class="dot"></b><span><em>A/</em>api-prod</span></span><span><b class="dot"></b><span><em>P/</em>MacBook</span></span></div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3>Lavora come sempre</h3>
+        <p>La tua shell, i tuoi programmi, sudo. Chiudi la scheda e il terminale continua a girare.</p>
+        <div class="step-chips" aria-hidden="true"><span>bash</span><span>zsh</span><span>vim</span><span>htop</span><span>git</span><span>docker</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <p class="eyebrow">Funzionalità</p>
+    <h2 class="section-title">Un terminale che capisce i comandi</h2>
+    <p class="section-lead">tTerm sa dove inizia e dove finisce ogni comando, con che esito è terminato e dove ti trovi. Così con l'output puoi lavorare, non solo leggerlo.</p>
+    <div class="features">
+      <div class="feature">
+        <div class="vignette v-mono" aria-hidden="true">
+          <div class="v-meta"><b class="dot"></b>~/app<span class="v-branch">main</span><span class="v-right">1.4 s</span></div>
+          <div class="v-cmd"><b>&#x276F;</b> git pull</div>
+          <div>Fast-forward</div>
+          <div class="v-pre"> src/server.ts | 12 <span class="v-plus">+++++++</span><span class="v-minus">-----</span></div>
+          <div>1 file changed</div>
+        </div>
+        <div class="feature-text">
+          <h3>Ogni comando è un blocco</h3>
+          <p>Codice di uscita, tempo, directory e branch. Copia un blocco intero, comprimilo o eseguilo di nuovo.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-input"><b>&#x276F;</b> docker compose logs<s> -f api</s><i></i></div>
+          <div class="v-hints"><span class="v-key">&#x2192;</span>suggerimento dalla cronologia<span class="v-key">Tab</span>completamento</div>
+        </div>
+        <div class="feature-text">
+          <h3>Una riga di input come in un editor</h3>
+          <p>Input su più righe, cronologia su tutti i tuoi dispositivi, suggerimenti e Tab. Prima di un comando pericoloso tTerm ti chiede conferma.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette" aria-hidden="true">
+          <div class="v-chips"><span>~/app</span><span class="on">main &#x25BE;</span></div>
+          <div class="v-menu"><div class="on">main<span>&#x2713;</span></div><div>release/2.4</div><div>fix/login</div></div>
+        </div>
+        <div class="feature-text">
+          <h3>Directory e branch in un clic</h3>
+          <p>Fai clic sulla directory o sul branch sopra la riga di input e scegli dall'elenco. cd e git switch vengono eseguiti come normali blocchi.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette" aria-hidden="true">
+          <div class="v-bars">
+            <div class="v-bar">1<span><i style="width: 58%"></i></span>58%</div>
+            <div class="v-bar">2<span><i style="width: 31%"></i></span>31%</div>
+            <div class="v-bar">3<span><i class="amber" style="width: 84%"></i></span>84%</div>
+            <div class="v-bar">M<span><i class="blue" style="width: 46%"></i></span>3.6G</div>
+            <div class="v-head">PID USER  CPU% COMMAND</div>
+            <div class="v-row">812 app   84.0 node server.js</div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>vim e htop a schermo intero</h3>
+          <p>I programmi a schermo intero funzionano come in qualsiasi terminale. E se preferisci lavorare alla vecchia maniera, c'è una modalità classica.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-rows" aria-hidden="true">
+          <div class="on"><b class="dm-run"></b><span><em>P/</em>web-01</span><small>npm run build</small></div>
+          <div><b class="dot"></b><span><em>A/</em>api-prod</span><small>in attesa</small></div>
+        </div>
+        <div class="feature-text">
+          <h3>I terminali sopravvivono alla scheda</h3>
+          <p>Hai chiuso il portatile nel mezzo di una build? La build continua e l'output viene conservato. Riprendi da qualsiasi dispositivo.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-pal">
+            <div class="v-pal-q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>api<i></i><kbd>&#x2318;K</kbd></div>
+            <div class="v-pal-list"><div class="on"><em>A/</em>api-prod</div><div><em>A/</em>staging</div></div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>Tutto a un Cmd+K di distanza</h3>
+          <p>Vai a un terminale, aprine uno nuovo su qualsiasi macchina o esegui un'azione. Una sola scorciatoia invece di cercare tra le schede.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette" aria-hidden="true">
+          <div class="v-note">
+            <div class="v-crumb"><b>CX</b>Client X · Runbooks</div>
+            <div class="v-title">Release checklist</div>
+            <div class="v-todo done"><i></i><span>Freeze merges to main</span><small>You · 10:02</small></div>
+            <div class="v-todo done"><i></i><span>Pull and build on web-01</span><small>You · 10:04</small></div>
+            <div class="v-todo"><i></i><span>Restart the service</span></div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>Note accanto alle macchine</h3>
+          <p>Runbook, checklist e note sugli accessi stanno nel progetto e si aprono in una scheda accanto al terminale.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-projects">
+            <div class="v-proj v-pc-sky"><b>CX</b><span>Client X</span><small>3 machines</small></div>
+            <div class="v-proj v-pc-teal"><b>A</b><span>Acme</span><small>2 machines</small></div>
+            <div class="v-proj v-pc-violet"><b>P</b><span>Personal</span><small>MacBook</small></div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>Progetti a colori</h3>
+          <p>Un progetto per un cliente, un ambiente o un'attività, con le sue macchine e le sue note. Dal colore capisci da quale progetto viene una scheda.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-rename">
+            <div class="v-tabbar">
+              <span class="on"><b class="dot"></b><span><em>CX/</em>web-01 · <span class="v-field">logs<i></i></span></span></span>
+              <span><b class="dot"></b><span><em>CX/</em>web-01 · deploy</span></span>
+            </div>
+            <div class="v-hints"><span class="v-key">Enter</span>salva<span class="v-key">Esc</span>annulla</div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>Nomi per i terminali</h3>
+          <p>deploy, logs, migrations al posto di terminal 2. Fai doppio clic su un terminale, scrivi un nome e premi Enter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="security">
+    <div class="split-head">
+      <div>
+        <p class="eyebrow">Sicurezza</p>
+        <h2 class="section-title">Non conserviamo chiavi. <br>Non apriamo porte.</h2>
+      </div>
+      <p class="section-lead">L'accesso alle tue macchine è facile da concedere e altrettanto facile da revocare. Ecco come funziona.</p>
+    </div>
+    <div class="facts">
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>
+        <h3>Un certificato da due minuti</h3>
+        <p>Ogni connessione riceve un proprio certificato SSH con il tuo nome, valido solo per quel server. Le tue chiavi non ci servono mai.</p>
+      </div>
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <h3>Firma isolata</h3>
+        <p>Le chiavi della CA vivono in un processo separato, senza rete. Il core non può leggerle, può solo chiedere una firma, e ogni firma viene registrata.</p>
+      </div>
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M16 16l2 2 4-4"/></svg>
+        <h3>sshd_config intatto</h3>
+        <p>La fiducia si riduce a una riga nel file authorized_keys di un solo utente. Non si riavvia nulla.</p>
+      </div>
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+        <h3>Connessioni dall'interno</h3>
+        <p>L'agente sul computer si collega da solo verso l'esterno, quindi non servono porte in ingresso. Si disinstalla con un solo comando.</p>
+      </div>
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+        <h3>Nessun intermediario</h3>
+        <p>La pagina e i terminali comunicano direttamente con il nostro server nell'UE. Cloudflare ci fa solo da DNS e non vede mai i tuoi comandi.</p>
+      </div>
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>
+        <h3>Open source</h3>
+        <p>tTerm Web e l'agente sono open source con licenza AGPL. Lo script di installazione è breve: leggilo prima di eseguirlo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="teams">
+    <div class="teams">
+      <div class="teams-text">
+        <div class="eyebrow-row"><p class="eyebrow">Per i team</p><span class="soon">IN ARRIVO</span></div>
+        <h2 class="section-title">Vedi chi ha eseguito cosa</h2>
+        <p class="section-lead">Invita i colleghi in un progetto e assegna a ciascuno un ruolo. Niente più chiavi dei server da distribuire.</p>
+        <ul class="teams-list">
+        <li><span><b>Ruoli nel progetto:</b> proprietario, amministratore, membro e osservatore.</span></li>
+        <li><span><b>Un registro condiviso:</b> chi ha eseguito cosa, dove e quando, e con quale esito.</span></li>
+        <li><span><b>Osservazione:</b> puoi guardare il terminale di un collega, e chi è osservato vede sempre chi sta guardando.</span></li>
+        </ul>
+      </div>
+      <div class="journal" aria-hidden="true">
+        <div class="journal-head">Registro del progetto Acme<span class="watching"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Anna sta guardando</span></div>
+        <div class="journal-row"><span class="who">AN</span><span class="where"><em>A/</em>api-prod</span><code>docker compose up -d</code><span class="when"><b class="dot"></b>10:42</span></div>
+        <div class="journal-row"><span class="who amber">DG</span><span class="where"><em>A/</em>api-prod</span><code>git pull</code><span class="when"><b class="dot"></b>10:41</span></div>
+        <div class="journal-row"><span class="who blue">IK</span><span class="where"><em>A/</em>staging</span><code>npm test</code><span class="when"><b class="dot red"></b>10:38</span></div>
+        <div class="journal-row"><span class="who">AN</span><span class="where"><em>A/</em>db-01</span><code>pg_dump acme &gt; /backup/acme.sql</code><span class="when"><b class="dot"></b>10:30</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section center" id="pricing">
+    <p class="eyebrow">Prezzi</p>
+    <h2 class="section-title">Gratis mentre lo costruiamo</h2>
+    <p class="section-lead">Tutto quello che tTerm fa oggi, senza costi. I piani a pagamento arriveranno più avanti, e te lo diremo con largo anticipo.</p>
+    <div class="plan">
+      <div class="plan-main">
+        <p class="plan-name">Free<span class="now">ORA</span></p>
+        <p class="plan-price">Gratis</p>
+        <p class="plan-note">Per tutti, finché tTerm è in beta. Niente carta di credito, niente periodo di prova.</p>
+        <a class="btn btn-primary" href="https://app.tterm.net">Inizia gratis</a>
+      </div>
+      <ul class="plan-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Fino a 50 macchine</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Fino a 24 terminali aperti</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Server e computer</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>I tuoi progetti e le tue note</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>30 giorni di cronologia dei comandi con output</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>I terminali sopravvivono alla scheda</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Tema scuro e chiaro</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <h2 class="section-title">Domande</h2>
+    <div class="faq-list">
+      <details open>
+        <summary>Devo installare qualcosa sul mio computer?</summary>
+        <p>No, basta un browser. Installi qualcosa solo sulle macchine a cui ti colleghi: un comando su un server, un piccolo agente su un computer.</p>
+      </details>
+      <details>
+        <summary>Cosa conservate?</summary>
+        <p>I comandi e il loro output per 30 giorni, per mostrarti la cronologia, e un registro degli accessi. Non conserviamo né chiavi né password. I dettagli sono nell'<a href="/privacy/">Informativa sulla privacy</a>.</p>
+      </details>
+      <details>
+        <summary>In cosa è meglio di un normale client SSH?</summary>
+        <p>Funziona da qualsiasi browser e non richiede chiavi sul tuo dispositivo. Il terminale non si interrompe quando chiudi il portatile. E ogni comando arriva come un blocco facile da copiare ed eseguire di nuovo.</p>
+      </details>
+      <details>
+        <summary>Come revoco l'accesso di tTerm alle mie macchine?</summary>
+        <p>Rimuovi il server in tTerm, e tTerm toglie da solo il proprio accesso dal server. Se il server non risponde, tTerm ti mostra il comando da eseguire lì. Come rimuovere tutto il resto che l'installer ha configurato lo trovi scritto in cima allo script stesso. L'agente si disinstalla da un computer con un solo comando.</p>
+      </details>
+      <details>
+        <summary>E il bot Telegram?</summary>
+        <p>Resta e continua a funzionare: un terminale direttamente in chat, <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>. Per ora l'app web e il bot sono separati.</p>
+      </details>
+      <details>
+        <summary>Come contatto l'assistenza?</summary>
+        <p>Scrivi a <a href="mailto:support@tterm.net">support@tterm.net</a>. Se hai trovato una vulnerabilità, scrivi a <a href="mailto:security@tterm.net">security@tterm.net</a>.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section" id="blog">
+    <div class="split-row">
+      <div>
+        <p class="eyebrow">Blog</p>
+        <h2 class="section-title">Le novità di tTerm</h2>
+      </div>
+      <a class="btn btn-ghost btn-md" href="/it/blog/">Tutti gli articoli</a>
+    </div>
+    <!-- updates:main -->
+    <div class="blog-grid">
+  <a class="post-feature" href="/it/blog/tterm-web/">
+      <div class="cover" aria-hidden="true">
+        <div class="cover-window">
+          <div class="cover-bar"><i></i><i></i><i></i><span>app.tterm.net</span></div>
+          <div class="cover-tabs"><span class="on"><b class="dot"></b><span><em>P/</em>web-01</span></span><span><b class="dot"></b><span><em>A/</em>api-prod</span></span></div>
+          <div class="cover-feed">
+            <p class="cover-meta"><b class="dot"></b>~/app<span>main</span><span class="cover-time">1.4 s</span></p>
+            <p class="cover-cmd"><em>&#x276F;</em> git pull</p>
+            <p>Updating 3f2c1a9..8d4e7b2</p>
+            <p>Fast-forward</p>
+            <p> src/server.ts | 12 <ins>+++++++</ins><del>-----</del></p>
+            <p class="cover-meta cover-gap"><b class="dot busy"></b>~/app<span>main</span><span class="cover-time">running</span></p>
+            <p class="cover-cmd"><em>&#x276F;</em> npm run build</p>
+            <p>vite v7.1.4 building for production...</p>
+            <p class="cover-ok">&#x2713; 412 modules transformed.</p>
+          </div>
+        </div>
+      </div>
+      <div class="post-feature-body">
+        <p class="post-meta"><span class="pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6l-1 6 4 4H6l4-4-1-6z"/><path d="M12 14v6"/></svg>In evidenza</span><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-18">18 ottobre 2026</time><span class="sep" aria-hidden="true">·</span><span>4 minuti di lettura</span></p>
+        <h3 class="post-feature-title">tTerm ora funziona nel browser</h3>
+        <p class="post-feature-lead">Tutti i tuoi server e computer in una scheda, ogni comando in un blocco a sé e nessuna chiave sul tuo dispositivo. Cosa sa fare oggi tTerm Web, come collegare una macchina e cosa viene dopo.</p>
+      </div>
+    </a>
+  <div class="post-stack">
+      <a class="post-mini" href="/it/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">25 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">Perché il codice di tTerm è aperto, anche se arrivano i piani a pagamento</span>
+        <span class="post-mini-text">Tutto il codice di tTerm ora è sotto licenza AGPL v3 invece che MIT, e presto arriveranno i piani a pagamento.</span>
+      </a>
+      <a class="post-mini" href="/it/blog/notes-and-projects/">
+        <span class="post-mini-meta"><time datetime="2026-10-20">20 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">Note, progetti a colori e nomi dei terminali</span>
+        <span class="post-mini-text">Runbook, checklist e note sugli accessi ora stanno accanto alle macchine a cui si riferiscono.</span>
+      </a>
+      <a class="post-mini" href="/it/blog/independent-windows/">
+        <span class="post-mini-meta"><time datetime="2026-10-07">7 ott</time> · Bot</span>
+        <span class="post-mini-title">Le finestre su un computer ora sono indipendenti</span>
+        <span class="post-mini-text">Su un server ogni finestra è sempre stata un terminale a sé.</span>
+      </a>
+  </div>
+</div>
+    <!-- /updates:main -->
+    <a class="btn btn-ghost more-all" href="/it/blog/">Tutti gli articoli</a>
+  </section>
+
+  <section class="section">
+    <div class="final">
+      <h2>Il tuo primo terminale in un minuto</h2>
+      <p>Accedi con la tua email, aggiungi un server con un solo comando e lavora da qualsiasi browser.</p>
+      <div class="final-cta">
+        <a class="btn btn-primary" href="https://app.tterm.net">Inizia gratis</a>
+        <a class="btn btn-ghost" href="https://github.com/tterm-net" target="_blank" rel="noopener">Guarda il codice</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/it/" aria-label="tTerm, pagina iniziale">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">beta</span>
+        </a>
+        <p class="foot-tag">Il terminale cloud per server e computer.</p>
+      </div>
+      <nav class="foot-cols" aria-label="Link">
+        <div class="foot-col">
+          <p class="foot-h">Prodotto</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot Telegram</a>
+          <a href="/it/#pricing">Prezzi</a>
+          <a href="/it/#security">Sicurezza</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Risorse</p>
+          <a href="/it/blog/">Blog</a>
+          <a href="/it/#faq">Domande frequenti</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canale Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Codice sorgente su GitHub</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Note legali</p>
+          <a href="/terms/">Termini di servizio</a>
+          <a href="/privacy/">Informativa sulla privacy</a>
+          <a href="/it/blog/open-source/">Licenza AGPL-3.0</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <details class="lang lang-up">
+        <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>IT</span></summary>
+        <div class="lang-menu">
+          <a href="/" hreflang="en" lang="en">English</a>
+          <a href="/de/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/pl/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

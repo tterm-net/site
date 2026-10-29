@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tTerm：面向服务器和电脑的云终端</title>
+<meta name="description" content="运行在云端的终端：构建跑到一半也可以合上笔记本，之后在任意设备上继续。每条命令都以块的形式呈现。设备上无需密钥，也无需开放端口。">
+<link rel="canonical" href="https://tterm.net/zh/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/">
+<meta property="og:title" content="面向服务器和电脑的云终端">
+<meta property="og:description" content="运行在云端的终端：构建跑到一半也可以合上笔记本，之后在任意设备上继续。每条命令都以块的形式呈现。设备上无需密钥，也无需开放端口。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tterm.net/zh/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "tTerm",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "A modern web browser",
+  "url": "https://tterm.net/zh/",
+  "description": "运行在云端的终端：构建跑到一半也可以合上笔记本，之后在任意设备上继续。每条命令都以块的形式呈现。设备上无需密钥，也无需开放端口。",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+  "isAccessibleForFree": true
+}
+</script>
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.5.0">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/zh/" aria-label="tTerm 首页">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">公测</span>
+    </a>
+    <nav class="nav" aria-label="栏目">
+      <a href="/zh/#features">功能</a>
+      <a href="/zh/#security">安全</a>
+      <a href="/zh/#pricing">价格</a>
+      <details class="res">
+        <summary>资源<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="/zh/blog/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>博客</b><small>tTerm 的最新动态</small></span></a>
+          <a href="/zh/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>常见问题</b><small>解答常见疑问</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Telegram 频道</b><small>每次发布都有一条简短说明</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>GitHub 上的源代码</b><small>tTerm 的全部代码，AGPL v3</small></span></a>
+        </div>
+      </details>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ZH</span></summary>
+        <div class="lang-menu">
+          <a href="/" hreflang="en" lang="en">English</a>
+          <a href="/de/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">登录</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">免费开始使用</a>
+      <details class="menu">
+        <summary aria-label="菜单"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="菜单">
+          <a href="/zh/#features">功能</a>
+          <a href="/zh/#security">安全</a>
+          <a href="/zh/#pricing">价格</a>
+          <p class="menu-label">资源</p>
+          <a href="/zh/blog/">博客</a>
+          <a href="/zh/#faq">常见问题</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram 频道</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">GitHub 上的源代码</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>简体中文</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/" hreflang="en" lang="en">English</a>
+              <a href="/de/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/" hreflang="it" lang="it">Italiano</a>
+              <a href="/pl/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">免费开始使用</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="sky" aria-hidden="true"><i class="s-beam"></i><i class="s-teal"></i><i class="s-sky"></i><i class="s-violet"></i><i class="s-amber"></i></div>
+    <div class="hero-text">
+      <a class="chip" href="/zh/blog/tterm-web/"><span class="chip-dot" aria-hidden="true"></span>新功能：浏览器中的 tTerm<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">阅读</span></a>
+      <h1>面向服务器和电脑的<br><span class="accent">云终端</span></h1>
+      <p class="hero-lead">终端运行在云端，而不是你的笔记本上：构建跑到一半合上盖子，在手机上打开 tTerm，一切都还在原处。设备上无需密钥，也无需开放端口。</p>
+      <a class="btn btn-primary" href="https://app.tterm.net">免费开始使用</a>
+      <a class="hero-note" href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>开源</a>
+    </div>
+    <div class="stage" data-stage>
+      <div class="demo-frame">
+        <div class="demo" data-demo role="img" aria-label="tTerm Web 工作中：左侧是带各自颜色的项目，里面有机器、终端和放在文件夹中的笔记，顶部是标签页。web-01 上依次运行 git pull、构建和服务重启，旁边的笔记里正在逐项勾选发布检查清单，随后按 Cmd+K 在 api-prod 上打开一个终端。"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="strip">
+      <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg><p><b>Linux 服务器</b><span>通过普通 SSH，在服务器上运行一条命令即可</span></p></div>
+      <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg><p><b>macOS 和 Linux 电脑</b><span>即使位于 NAT 之后，也无需开放端口</span></p></div>
+      <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><p><b>任意浏览器</b><span>笔记本、平板或手机都行</span></p></div>
+    </div>
+  </div>
+
+  <section class="section" id="how">
+    <p class="eyebrow">工作原理</p>
+    <h2 class="section-title">三步运行第一条命令</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3>添加机器</h3>
+        <p>在服务器上运行一条命令，它就会出现在你的列表中。电脑需要一个小型代理，由它从内部发起连接。</p>
+        <div class="step-code"><i>$</i> curl -sSL https://connect.tterm.net/s/… | sudo sh</div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3>打开终端</h3>
+        <p>在任意浏览器中。不同项目的标签页并排打开，按 Cmd+K 即可切换到任意机器。</p>
+        <div class="step-tabs" aria-hidden="true"><span class="on"><b class="dot"></b><span><em>P/</em>web-01</span></span><span><b class="dot"></b><span><em>A/</em>api-prod</span></span><span><b class="dot"></b><span><em>P/</em>MacBook</span></span></div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3>照你的习惯工作</h3>
+        <p>你的 shell、你的程序、sudo。关掉标签页，终端照样运行。</p>
+        <div class="step-chips" aria-hidden="true"><span>bash</span><span>zsh</span><span>vim</span><span>htop</span><span>git</span><span>docker</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <p class="eyebrow">功能</p>
+    <h2 class="section-title">懂命令的终端</h2>
+    <p class="section-lead">tTerm 知道每条命令从哪里开始、到哪里结束，结果如何，以及你当前在哪里。所以输出不只是用来看的，还能直接拿来用。</p>
+    <div class="features">
+      <div class="feature">
+        <div class="vignette v-mono" aria-hidden="true">
+          <div class="v-meta"><b class="dot"></b>~/app<span class="v-branch">main</span><span class="v-right">1.4 s</span></div>
+          <div class="v-cmd"><b>&#x276F;</b> git pull</div>
+          <div>Fast-forward</div>
+          <div class="v-pre"> src/server.ts | 12 <span class="v-plus">+++++++</span><span class="v-minus">-----</span></div>
+          <div>1 file changed</div>
+        </div>
+        <div class="feature-text">
+          <h3>每条命令都是一个块</h3>
+          <p>退出码、耗时、目录和分支。块可以整体复制、折叠或重新运行。</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-input"><b>&#x276F;</b> docker compose logs<s> -f api</s><i></i></div>
+          <div class="v-hints"><span class="v-key">&#x2192;</span>历史建议<span class="v-key">Tab</span>补全</div>
+        </div>
+        <div class="feature-text">
+          <h3>像编辑器一样的输入行</h3>
+          <p>支持多行输入、跨设备的历史记录、建议和 Tab 补全。遇到危险命令，tTerm 会再确认一次。</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette" aria-hidden="true">
+          <div class="v-chips"><span>~/app</span><span class="on">main &#x25BE;</span></div>
+          <div class="v-menu"><div class="on">main<span>&#x2713;</span></div><div>release/2.4</div><div>fix/login</div></div>
+        </div>
+        <div class="feature-text">
+          <h3>一键切换目录和分支</h3>
+          <p>点击输入行上方的目录或分支，选择另一个。cd 和 git switch 会作为普通的块运行。</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette" aria-hidden="true">
+          <div class="v-bars">
+            <div class="v-bar">1<span><i style="width: 58%"></i></span>58%</div>
+            <div class="v-bar">2<span><i style="width: 31%"></i></span>31%</div>
+            <div class="v-bar">3<span><i class="amber" style="width: 84%"></i></span>84%</div>
+            <div class="v-bar">M<span><i class="blue" style="width: 46%"></i></span>3.6G</div>
+            <div class="v-head">PID USER  CPU% COMMAND</div>
+            <div class="v-row">812 app   84.0 node server.js</div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>全屏运行 vim 和 htop</h3>
+          <p>全屏程序和在任何终端里一样正常工作。如果你更喜欢老方式，还有经典模式。</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-rows" aria-hidden="true">
+          <div class="on"><b class="dm-run"></b><span><em>P/</em>web-01</span><small>npm run build</small></div>
+          <div><b class="dot"></b><span><em>A/</em>api-prod</span><small>等待命令</small></div>
+        </div>
+        <div class="feature-text">
+          <h3>关掉标签页，终端还在</h3>
+          <p>构建跑到一半合上了笔记本？构建会继续进行，输出也会保留。从任意设备回来都能接着看。</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-pal">
+            <div class="v-pal-q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>api<i></i><kbd>&#x2318;K</kbd></div>
+            <div class="v-pal-list"><div class="on"><em>A/</em>api-prod</div><div><em>A/</em>staging</div></div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>一切只需 Cmd+K</h3>
+          <p>切换到某个终端，在任意机器上新开一个，或执行某个操作。一个快捷键，省去在标签页之间来回翻找。</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette" aria-hidden="true">
+          <div class="v-note">
+            <div class="v-crumb"><b>CX</b>Client X · Runbooks</div>
+            <div class="v-title">Release checklist</div>
+            <div class="v-todo done"><i></i><span>Freeze merges to main</span><small>You · 10:02</small></div>
+            <div class="v-todo done"><i></i><span>Pull and build on web-01</span><small>You · 10:04</small></div>
+            <div class="v-todo"><i></i><span>Restart the service</span></div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>笔记就在机器旁边</h3>
+          <p>运维手册、检查清单和访问说明都放在项目里，在终端旁边的标签页中打开。</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-projects">
+            <div class="v-proj v-pc-sky"><b>CX</b><span>Client X</span><small>3 machines</small></div>
+            <div class="v-proj v-pc-teal"><b>A</b><span>Acme</span><small>2 machines</small></div>
+            <div class="v-proj v-pc-violet"><b>P</b><span>Personal</span><small>MacBook</small></div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>用颜色区分项目</h3>
+          <p>按客户、环境或任务建立项目，每个项目都有自己的机器和笔记。看颜色就知道标签页属于哪个项目。</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="vignette v-center" aria-hidden="true">
+          <div class="v-rename">
+            <div class="v-tabbar">
+              <span class="on"><b class="dot"></b><span><em>CX/</em>web-01 · <span class="v-field">logs<i></i></span></span></span>
+              <span><b class="dot"></b><span><em>CX/</em>web-01 · deploy</span></span>
+            </div>
+            <div class="v-hints"><span class="v-key">Enter</span>保存<span class="v-key">Esc</span>取消</div>
+          </div>
+        </div>
+        <div class="feature-text">
+          <h3>给终端起名字</h3>
+          <p>用 deploy、logs、migrations 代替 terminal 2。双击终端，输入名字，按 Enter。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="security">
+    <div class="split-head">
+      <div>
+        <p class="eyebrow">安全</p>
+        <h2 class="section-title">我们不保存密钥，<br>也不开放端口。</h2>
+      </div>
+      <p class="section-lead">机器的访问权限很容易授予，也同样容易收回。具体做法如下。</p>
+    </div>
+    <div class="facts">
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>
+        <h3>两分钟有效的证书</h3>
+        <p>每次连接都会获得一张单独的 SSH 证书，里面写着你的名字，只对这一台服务器有效。我们从不需要你的密钥。</p>
+      </div>
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <h3>签名独立进行</h3>
+        <p>CA 密钥存放在一个不联网的独立进程中。核心程序无法读取它们，只能请求签名，每次签名都会记录在案。</p>
+      </div>
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M16 16l2 2 4-4"/></svg>
+        <h3>不改动 sshd_config</h3>
+        <p>信任关系只是某个用户 authorized_keys 中的一行。不需要重启任何东西。</p>
+      </div>
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+        <h3>由内向外连接</h3>
+        <p>电脑上的代理会主动向外连接，因此不需要任何入站端口。卸载只需一条命令。</p>
+      </div>
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+        <h3>没有中间人</h3>
+        <p>页面和终端直接连到我们位于欧盟的服务器。Cloudflare 只为我们提供 DNS，看不到你的命令。</p>
+      </div>
+      <div class="fact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>
+        <h3>开源</h3>
+        <p>tTerm Web 和代理以 AGPL 许可证开源。安装脚本很短：运行之前先读一读。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="teams">
+    <div class="teams">
+      <div class="teams-text">
+        <div class="eyebrow-row"><p class="eyebrow">面向团队</p><span class="soon">即将推出</span></div>
+        <h2 class="section-title">谁执行了什么，一目了然</h2>
+        <p class="section-lead">邀请同事加入项目，并为每个人分配角色。再也不用到处分发服务器密钥。</p>
+        <ul class="teams-list">
+        <li><span><b>项目角色：</b>所有者、管理员、成员和查看者。</span></li>
+        <li><span><b>共享日志：</b>谁在哪里、什么时候执行了什么，结果如何。</span></li>
+        <li><span><b>旁观：</b>可以查看同事的终端，对方始终能看到谁在旁观。</span></li>
+        </ul>
+      </div>
+      <div class="journal" aria-hidden="true">
+        <div class="journal-head">Acme 项目日志<span class="watching"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Anna 正在旁观</span></div>
+        <div class="journal-row"><span class="who">AN</span><span class="where"><em>A/</em>api-prod</span><code>docker compose up -d</code><span class="when"><b class="dot"></b>10:42</span></div>
+        <div class="journal-row"><span class="who amber">DG</span><span class="where"><em>A/</em>api-prod</span><code>git pull</code><span class="when"><b class="dot"></b>10:41</span></div>
+        <div class="journal-row"><span class="who blue">IK</span><span class="where"><em>A/</em>staging</span><code>npm test</code><span class="when"><b class="dot red"></b>10:38</span></div>
+        <div class="journal-row"><span class="who">AN</span><span class="where"><em>A/</em>db-01</span><code>pg_dump acme &gt; /backup/acme.sql</code><span class="when"><b class="dot"></b>10:30</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section center" id="pricing">
+    <p class="eyebrow">价格</p>
+    <h2 class="section-title">开发期间免费</h2>
+    <p class="section-lead">tTerm 现有的全部功能，免费使用。付费方案以后才会推出，我们会提前很久通知你。</p>
+    <div class="plan">
+      <div class="plan-main">
+        <p class="plan-name">Free<span class="now">当前</span></p>
+        <p class="plan-price">免费</p>
+        <p class="plan-note">tTerm 公测期间对所有人免费。无需绑定银行卡，也没有试用期。</p>
+        <a class="btn btn-primary" href="https://app.tterm.net">免费开始使用</a>
+      </div>
+      <ul class="plan-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>最多 50 台机器</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>最多同时打开 24 个终端</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>服务器和电脑</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>自建项目和笔记</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>30 天命令历史，含输出</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>关掉标签页，终端还在</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>深色和浅色主题</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <h2 class="section-title">常见问题</h2>
+    <div class="faq-list">
+      <details open>
+        <summary>我需要在自己的电脑上安装什么吗？</summary>
+        <p>不需要，有浏览器就够了。只有要连接的机器才需要装东西：服务器上运行一条命令，电脑上装一个小型代理。</p>
+      </details>
+      <details>
+        <summary>你们会保存哪些数据？</summary>
+        <p>命令及其输出保存 30 天，用于显示你的历史记录，另外还有登录日志。我们不保存密钥，也不保存密码。详情见<a href="/privacy/">隐私政策</a>。</p>
+      </details>
+      <details>
+        <summary>它比普通的 SSH 客户端好在哪里？</summary>
+        <p>它在任何浏览器中都能用，设备上不需要密钥。合上笔记本，终端也不会断开。而且每条命令都是一个块，复制和重新运行都很方便。</p>
+      </details>
+      <details>
+        <summary>怎样收回 tTerm 的访问权限？</summary>
+        <p>在 tTerm 中删除服务器，它会自行撤销在这台服务器上的访问权限。如果服务器没有响应，tTerm 会显示在服务器上完成这一步的命令。安装程序设置的其他内容如何清除，写在脚本本身的开头。代理只需一条命令就能从电脑上卸载。</p>
+      </details>
+      <details>
+        <summary>Telegram 机器人还在吗？</summary>
+        <p>它会保留并继续运行：聊天里的终端，<a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>。目前网页版和机器人是分开的。</p>
+      </details>
+      <details>
+        <summary>怎样联系技术支持？</summary>
+        <p>写信到 <a href="mailto:support@tterm.net">support@tterm.net</a>。如果你发现了漏洞，请写信到 <a href="mailto:security@tterm.net">security@tterm.net</a>。</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section" id="blog">
+    <div class="split-row">
+      <div>
+        <p class="eyebrow">博客</p>
+        <h2 class="section-title">tTerm 的最新动态</h2>
+      </div>
+      <a class="btn btn-ghost btn-md" href="/zh/blog/">全部文章</a>
+    </div>
+    <!-- updates:main -->
+    <div class="blog-grid">
+  <a class="post-feature" href="/zh/blog/tterm-web/">
+      <div class="cover" aria-hidden="true">
+        <div class="cover-window">
+          <div class="cover-bar"><i></i><i></i><i></i><span>app.tterm.net</span></div>
+          <div class="cover-tabs"><span class="on"><b class="dot"></b><span><em>P/</em>web-01</span></span><span><b class="dot"></b><span><em>A/</em>api-prod</span></span></div>
+          <div class="cover-feed">
+            <p class="cover-meta"><b class="dot"></b>~/app<span>main</span><span class="cover-time">1.4 s</span></p>
+            <p class="cover-cmd"><em>&#x276F;</em> git pull</p>
+            <p>Updating 3f2c1a9..8d4e7b2</p>
+            <p>Fast-forward</p>
+            <p> src/server.ts | 12 <ins>+++++++</ins><del>-----</del></p>
+            <p class="cover-meta cover-gap"><b class="dot busy"></b>~/app<span>main</span><span class="cover-time">running</span></p>
+            <p class="cover-cmd"><em>&#x276F;</em> npm run build</p>
+            <p>vite v7.1.4 building for production...</p>
+            <p class="cover-ok">&#x2713; 412 modules transformed.</p>
+          </div>
+        </div>
+      </div>
+      <div class="post-feature-body">
+        <p class="post-meta"><span class="pin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6l-1 6 4 4H6l4-4-1-6z"/><path d="M12 14v6"/></svg>置顶</span><span class="tag tag-web">tTerm Web</span><time datetime="2026-10-18">2026年10月18日</time><span class="sep" aria-hidden="true">·</span><span>阅读约 4 分钟</span></p>
+        <h3 class="post-feature-title">tTerm 现在能在浏览器里用了</h3>
+        <p class="post-feature-lead">所有服务器和电脑都在一个标签页中，每条命令自成一个块，设备上无需任何密钥。tTerm Web 现在能做什么、如何连接机器，以及接下来的计划。</p>
+      </div>
+    </a>
+  <div class="post-stack">
+      <a class="post-mini" href="/zh/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">10月25日</time> · tTerm Web</span>
+        <span class="post-mini-title">付费方案即将推出，为何仍开源</span>
+        <span class="post-mini-text">tTerm 的全部代码现在采用 AGPL v3，而不再是 MIT，付费方案也即将推出。</span>
+      </a>
+      <a class="post-mini" href="/zh/blog/notes-and-projects/">
+        <span class="post-mini-meta"><time datetime="2026-10-20">10月20日</time> · tTerm Web</span>
+        <span class="post-mini-title">笔记、彩色项目和终端名称</span>
+        <span class="post-mini-text">运维手册、检查清单和访问说明，现在就放在相关机器的旁边。</span>
+      </a>
+      <a class="post-mini" href="/zh/blog/independent-windows/">
+        <span class="post-mini-meta"><time datetime="2026-10-07">10月7日</time> · 机器人</span>
+        <span class="post-mini-title">电脑上的窗口现在彼此独立</span>
+        <span class="post-mini-text">在服务器上，每个窗口一直都是独立的终端。</span>
+      </a>
+  </div>
+</div>
+    <!-- /updates:main -->
+    <a class="btn btn-ghost more-all" href="/zh/blog/">全部文章</a>
+  </section>
+
+  <section class="section">
+    <div class="final">
+      <h2>一分钟打开第一个终端</h2>
+      <p>用邮箱登录，一条命令添加服务器，然后在任意浏览器中工作。</p>
+      <div class="final-cta">
+        <a class="btn btn-primary" href="https://app.tterm.net">免费开始使用</a>
+        <a class="btn btn-ghost" href="https://github.com/tterm-net" target="_blank" rel="noopener">查看源代码</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/zh/" aria-label="tTerm 首页">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">公测</span>
+        </a>
+        <p class="foot-tag">面向服务器和电脑的云终端。</p>
+      </div>
+      <nav class="foot-cols" aria-label="链接">
+        <div class="foot-col">
+          <p class="foot-h">产品</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Telegram 机器人</a>
+          <a href="/zh/#pricing">价格</a>
+          <a href="/zh/#security">安全</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">资源</p>
+          <a href="/zh/blog/">博客</a>
+          <a href="/zh/#faq">常见问题</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram 频道</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">GitHub 上的源代码</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">法律信息</p>
+          <a href="/terms/">服务条款</a>
+          <a href="/privacy/">隐私政策</a>
+          <a href="/zh/blog/open-source/">AGPL-3.0 许可证</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <details class="lang lang-up">
+        <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ZH</span></summary>
+        <div class="lang-menu">
+          <a href="/" hreflang="en" lang="en">English</a>
+          <a href="/de/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

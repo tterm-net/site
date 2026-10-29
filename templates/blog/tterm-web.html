@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="{{$lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{post.tterm-web.title}}</title>
+<meta name="description" content="{{post.tterm-web.description}}">
+{{$links}}
+<meta property="og:title" content="{{post.tterm-web.og_title}}">
+<meta property="og:description" content="{{post.tterm-web.description}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{$canonical}}">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{{$locales}}
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld --><!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="{{$version}}">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">{{shell.skip}}</a>
+<div class="page">
+
+{{>header}}
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="{{$base}}/blog/">{{post.tterm-web.main.2}}</a>
+      <!-- updates:meta --><!-- /updates:meta -->
+      <h1>{{post.tterm-web.og_title}}</h1>
+      <p class="post-lead">{{post.tterm-web.main.3}}</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="demo-frame">
+        <div class="demo" data-demo role="img" aria-label="{{post.tterm-web.demo-frame.1}}"></div>
+      </div>
+      <figcaption>{{post.tterm-web.main.4}}</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>{{post.tterm-web.prose.1}}</h2>
+      <p>{{post.tterm-web.prose.2}}</p>
+      <p>{{post.tterm-web.prose.3}}</p>
+
+      <h2>{{post.tterm-web.prose.4}}</h2>
+      <p>{{post.tterm-web.prose.5}}</p>
+      <p>{{post.tterm-web.prose.6}}</p>
+
+      <h2>{{post.tterm-web.prose.7}}</h2>
+      <p>{{post.tterm-web.prose.8}}</p>
+      <p>{{post.tterm-web.prose.9}}</p>
+
+      <h2>{{post.tterm-web.prose.10}}</h2>
+      <p>{{post.tterm-web.prose.11}}</p>
+
+      <h2>{{post.tterm-web.prose.12}}</h2>
+      <p>{{post.tterm-web.prose.13}}</p>
+      <p>{{post.tterm-web.prose.14}}</p>
+
+      <h2>{{post.tterm-web.prose.15}}</h2>
+      <p>{{post.tterm-web.prose.16}}</p>
+      <pre><b>$</b> curl -sSL https://connect.tterm.net/s/… | sudo sh</pre>
+      <p>{{post.tterm-web.prose.17}}</p>
+      <p>{{post.tterm-web.prose.18}}</p>
+
+      <h2>{{post.tterm-web.prose.19}}</h2>
+      <p>{{post.tterm-web.prose.20}}</p>
+      <ul class="prose-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><span>{{post.tterm-web.prose.21}}</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>{{post.tterm-web.prose.22}}</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg><span>{{post.tterm-web.prose.23}}</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M5 7l1 13h12l1-13M9 7V4h6v3"/></svg><span>{{post.tterm-web.prose.24}}</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span>{{post.tterm-web.prose.25}}</span></li>
+      </ul>
+
+      <h2>{{post.tterm-web.prose.26}}</h2>
+      <p>{{post.tterm-web.prose.27}}</p>
+      <div class="stats">
+        <div><b>50</b><span>{{post.tterm-web.prose.28}}</span></div>
+        <div><b>24</b><span>{{post.tterm-web.prose.29}}</span></div>
+        <div><b>30</b><span>{{post.tterm-web.prose.30}}</span></div>
+      </div>
+      <p>{{post.tterm-web.prose.31}}</p>
+
+      <h2>{{post.tterm-web.prose.32}}</h2>
+      <p>{{post.tterm-web.prose.33}}</p>
+
+      <h2>{{post.tterm-web.prose.34}}</h2>
+      <p>{{post.tterm-web.prose.35}}</p>
+
+      <div class="post-cta">
+        <h2>{{post.tterm-web.prose.36}}</h2>
+        <p>{{post.tterm-web.prose.37}}</p>
+        <a class="btn btn-primary" href="https://app.tterm.net">{{post.tterm-web.prose.38}}</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="{{post.tterm-web.more-section.1}}">
+    <div class="split-row">
+      <h2>{{post.tterm-web.more-section.1}}</h2>
+      <a class="btn btn-ghost btn-md" href="{{$base}}/blog/">{{post.tterm-web.more-section.2}}</a>
+    </div>
+    <!-- updates:more --><!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="{{$base}}/blog/">{{post.tterm-web.more-section.2}}</a>
+  </section>
+
+</main>
+
+{{>footer}}
+
+</div>
+</body>
+</html>
