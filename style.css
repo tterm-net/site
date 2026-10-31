@@ -2281,6 +2281,21 @@ figure { margin: 0; }
   .dl-btn { width: 100%; }
 }
 
+/* The first launch, once: macOS asks about an app signed with tTerm's own
+   certificate, not an Apple Developer ID. Under the install steps. */
+.first-open { margin-top: 20px; padding: 28px 30px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); scroll-margin-top: 24px; }
+.first-open h3 { font: 700 20px/1.3 var(--sans); }
+.first-open dl { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 14px 28px; margin: 18px 0 0; }
+.first-open dt { font: 700 15px/1.6 var(--sans); color: var(--amber); }
+.first-open dd { margin: 0; color: var(--text); }
+.first-open p { margin: 18px 0 0; color: var(--dim); }
+.mac-point h3 .soon { margin-inline-start: 6px; vertical-align: 2px; }
+@media (max-width: 640px) {
+  .first-open { padding: 24px 22px; }
+  .first-open dl { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .first-open dd + dt { margin-top: 12px; }
+}
+
 /* -------------------------------------------------------- other scripts */
 
 /* Chinese, Japanese and Korean: Manrope has none of their letters, and a web

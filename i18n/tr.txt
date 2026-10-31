@@ -193,8 +193,9 @@ blog.near.3 = tTerm kanalında her sürümle ilgili kısa notlar.
 blog.near.4 = Kanalı aç
 # ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
 mac.download = Mac için indir
+mac.chip = Yeni: Mac için tTerm<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">İndir</span>
 mac.title = Bulutu içinde taşıyan <br>yerel bir terminal
-mac.lead = Bulut sürümünün yanına eklediğimiz en yeni ürün. Mac için tTerm, bilgisayarının kabuklarını kendi penceresinde, bloklar halinde açar ve hesap olmadan da çalışır. Giriş yaptığında buluttaki sunucuların aynı pencerede belirir, Mac'indeki sunucuları ve anahtarları da buluta taşıyabilirsin.
+mac.lead = Bulut sürümünün yanına eklediğimiz en yeni ürün. Mac için tTerm, bilgisayarının kabuklarını kendi penceresinde, bloklar halinde açar ve hesap olmadan da çalışır. Giriş yaptığında buluttaki sunucuların aynı pencerede belirir, yakında Mac'indeki sunucuları ve anahtarları da buluta taşıyabileceksin.
 mac.note = Ücretsiz · macOS 11 veya üstü <br>Windows ve Linux yakında
 mac.soon = YAKINDA
 mac.window_label = Mac için tTerm penceresi: solda projeler; Personal içinde this Mac etiketli bu MacBook-Pro ve terminalleri, altında da buluttan gelen web-01 sunucusu. Üstte bu Mac'in ve bulutun sekmeleri yan yana; akışta Mac'teki komutlar bloklar halinde: git pull, npm test, docker compose. Mac'in menü çubuğunda tTerm simgesi açık: Open tTerm, MacBook-Pro: online in tTerm Web, Quit tTerm.
@@ -217,7 +218,7 @@ mac.faq.app.a = Evet, <a href="{{$base}}/download/">Mac için tTerm</a>. Mac'in 
 # download page
 download.title = Mac için tTerm: yerel terminal
 download.description = Bulutu içinde taşıyan yerel bir terminal: Mac'inin kabukları bloklar halinde, yanlarında da sunucuların, notların ve tTerm'deki diğer her şeyin. Ücretsiz, macOS 11 veya üstü.
-download.lead = Bulut sürümünün yanına eklediğimiz en yeni ürün: Mac'inde yerel bir terminal. Bilgisayarınla her terminalde olduğu gibi çalış, hazır olduğunda da sunucularını ve anahtarlarını doğrudan uygulamadan buluta taşı.
+download.lead = Bulut sürümünün yanına eklediğimiz en yeni ürün: Mac'inde yerel bir terminal. Bilgisayarınla her terminalde olduğu gibi çalış, yakında sunucularını ve anahtarlarını da doğrudan uygulamadan buluta taşıyabileceksin.
 download.meta = Ücretsiz · macOS 11 veya üstü · Apple silicon ve Intel
 download.phone = <b>Mac için tTerm, Mac'e kurulur.</b> Bu sayfayı bir Mac'te aç, telefonunda ise doğrudan tarayıcıda tTerm Web ile çalış.
 download.open_web = tTerm Web'i aç
@@ -238,9 +239,15 @@ download.install.title = Üç adımda Mac'in tTerm'de
 download.install.1.title = Dosyayı aç
 download.install.1.text = İndirdiğin tTerm.dmg dosyasını aç ve tTerm'i Uygulamalar klasörüne sürükle.
 download.install.2.title = tTerm'i başlat
-download.install.2.text = Bu Mac'in terminalleri hesap ve ayar gerektirmeden hemen çalışır.
-download.install.3.title = Giriş yap ve taşın
-download.install.3.text = Sign in düğmesi tarayıcını açar: girişi onayladığında sunucuların ve notların pencerede belirir. Uygulama, bu Mac'teki sunucuları ve anahtarları buluta taşımayı önerir.
+download.install.2.text = İlk açılışta macOS senden onay ister, <a href="#first-open">adımlar burada</a>. Sonrasında bu Mac'in terminalleri hesap ve ayar gerektirmeden hemen çalışır.
+download.install.3.title = İstediğinde giriş yap
+download.install.3.text = Sign in düğmesi tarayıcını açar: girişi onayladığında sunucuların ve notların pencerede belirir.
+download.first.title = İlk açılış, yalnızca bir kez
+download.first.new.os = macOS 15 veya üstü
+download.first.new.text = tTerm'i aç ve “Bitti” düğmesine tıkla. Sonra “Sistem Ayarları” → “Gizlilik ve Güvenlik” bölümüne git: en altta, tTerm ile ilgili satırın yanındaki “Yine de Aç” düğmesine tıkla (bu düğme, açmayı denedikten sonra yaklaşık bir saat görünür) ve Mac'inin parolasıyla onayla.
+download.first.old.os = macOS 11–14
+download.first.old.text = Finder'da Uygulamalar klasörünü aç, Kontrol tuşuna basarak tTerm'e tıkla, “Aç”ı seç ve ardından bir kez daha “Aç” düğmesine tıkla.
+download.first.after = Sonrasında tTerm her zamanki gibi açılır, yeni sürümleri kendisi kurar ve macOS bunlar için onay istemez.
 download.others.eyebrow = Diğer sistemler
 download.others.title = Yalnızca Mac değil
 download.others.windows = Windows uygulaması hazırlanıyor.
@@ -255,7 +262,9 @@ download.faq.3.a = Hayır. Giriş yapmadan da tTerm bu Mac'le çalışır: kabuk
 download.faq.4.q = Komutlarım nerede saklanıyor?
 download.faq.4.a = Bu Mac'teki komutlar çıktılarıyla birlikte 30 gün boyunca Mac'te, uygulamanın yalnızca senin okuyabildiğin klasöründe kalır. Sunuculardaki komutlar ise tTerm Web'de olduğu gibi bulutta saklanır.
 download.faq.5.q = Uygulama imzalı mı?
-download.faq.5.a = Evet, Apple Developer ID ile imzalı ve Apple tarafından denetlendi (noter onayı). Bu yüzden macOS uygulamayı uyarı göstermeden açar.
+download.faq.5.a = Evet, tTerm'in kendi sertifikasıyla imzalı ve her güncelleme de bu sertifikayla imzalanıyor. Henüz Apple Developer ID imzası yok, bu yüzden macOS ilk açılışta senden onay ister, <a href="#first-open">adımlar burada</a>. Sonrasında güncellemeler dahil bir daha sormaz.
+download.faq.update.q = Nasıl güncellenir?
+download.faq.update.a = Kendiliğinden. tTerm altı saatte bir yeni sürüm olup olmadığına bakar, varsa indirir ve hiçbir şeyi bölmeyeceği bir anda kurar: sen uygulamadan çıkarken ya da terminallerinde hiçbir şey çalışmıyorken. Settings → Updates bölümünde önce sana sormasını sağlayabilirsin.
 download.faq.6.q = Nasıl kaldırırım?
 download.faq.6.a = Menü çubuğunda Quit tTerm'i seç ve uygulamayı Uygulamalar klasöründen Çöp Sepeti'ne sürükle. Giriş yaptıysan bu Mac'i Settings → Devices bölümünde unutabilirsin.
 download.faq.7.q = Kodu açık mı?

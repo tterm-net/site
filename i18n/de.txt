@@ -193,8 +193,9 @@ blog.near.3 = Eine kurze Notiz zu jedem Release im tTerm-Kanal.
 blog.near.4 = Kanal öffnen
 # ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
 mac.download = Für Mac herunterladen
+mac.chip = Neu: tTerm für Mac<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Herunterladen</span>
 mac.title = Ein lokales Terminal <br>mit der Cloud an Bord
-mac.lead = Neu bei uns, als Ergänzung zur Cloud-Version. tTerm für Mac öffnet die Shells deines Computers in einem eigenen Fenster, in Blöcken, und funktioniert sogar ohne Konto. Nach der Anmeldung erscheinen deine Server aus der Cloud im selben Fenster, und die Server und Schlüssel auf deinem Mac können in die Cloud umziehen.
+mac.lead = Neu bei uns, als Ergänzung zur Cloud-Version. tTerm für Mac öffnet die Shells deines Computers in einem eigenen Fenster, in Blöcken, und funktioniert sogar ohne Konto. Nach der Anmeldung erscheinen deine Server aus der Cloud im selben Fenster, und bald können die Server und Schlüssel auf deinem Mac in die Cloud umziehen.
 mac.note = Kostenlos · macOS 11 oder neuer <br>Windows und Linux folgen bald
 mac.soon = BALD
 mac.window_label = Das Fenster von tTerm für Mac: links die Projekte, in Personal dieses MacBook-Pro, markiert mit this Mac, mit seinen Terminals, darunter der Server web-01 aus der Cloud. Oben Tabs dieses Macs und der Cloud nebeneinander; im Feed Befehle auf dem Mac als Blöcke: git pull, npm test, docker compose. In der Menüleiste des Macs ist das tTerm-Symbol geöffnet: Open tTerm, MacBook-Pro: online in tTerm Web, Quit tTerm.
@@ -217,7 +218,7 @@ mac.faq.app.a = Ja, <a href="{{$base}}/download/">tTerm für Mac</a>. Darin hast
 # download page
 download.title = tTerm für Mac: das lokale Terminal
 download.description = Ein lokales Terminal mit der Cloud an Bord: die Shells deines Macs in Blöcken und daneben deine Server, Notizen und alles andere, was du in tTerm hast. Kostenlos, macOS 11 oder neuer.
-download.lead = Neu bei uns: ein lokales Terminal auf deinem Mac, als Ergänzung zur Cloud-Version. Arbeite mit deinem Computer wie in jedem anderen Terminal, und wenn du so weit bist, bring deine Server und Schlüssel direkt aus der App in die Cloud.
+download.lead = Neu bei uns: ein lokales Terminal auf deinem Mac, als Ergänzung zur Cloud-Version. Arbeite mit deinem Computer wie in jedem anderen Terminal, und bald kannst du deine Server und Schlüssel direkt aus der App in die Cloud bringen.
 download.meta = Kostenlos · macOS 11 oder neuer · Apple Silicon und Intel
 download.phone = <b>tTerm für Mac wird auf einem Mac installiert.</b> Öffne diese Seite dort, und auf dem Handy arbeitest du in tTerm Web, direkt im Browser.
 download.open_web = tTerm Web öffnen
@@ -238,9 +239,15 @@ download.install.title = In drei Schritten zu deinem Mac in tTerm
 download.install.1.title = Datei öffnen
 download.install.1.text = Öffne die heruntergeladene tTerm.dmg und zieh tTerm in den Ordner „Programme“.
 download.install.2.title = tTerm starten
-download.install.2.text = Die Terminals dieses Macs funktionieren sofort, ohne Konto und ohne Einrichtung.
-download.install.3.title = Anmelden und umziehen
-download.install.3.text = Sign in öffnet deinen Browser: Bestätige die Anmeldung, und deine Server und Notizen erscheinen im Fenster. Die App bietet an, die Server und Schlüssel auf diesem Mac in die Cloud zu bringen.
+download.install.2.text = Beim ersten Mal bittet dich macOS, den Start zu bestätigen, <a href="#first-open">so geht das</a>. Danach funktionieren die Terminals dieses Macs sofort, ohne Konto und ohne Einrichtung.
+download.install.3.title = Anmelden, wann du willst
+download.install.3.text = Sign in öffnet deinen Browser: Bestätige die Anmeldung, und deine Server und Notizen erscheinen im Fenster.
+download.first.title = Der erste Start, nur einmal
+download.first.new.os = macOS 15 oder neuer
+download.first.new.text = Öffne tTerm und klick auf „Fertig“. Geh dann zu „Systemeinstellungen“ → „Datenschutz &amp; Sicherheit“: Klick unten neben der Zeile zu tTerm auf „Dennoch öffnen“ (der Button bleibt nach deinem Versuch etwa eine Stunde lang sichtbar) und bestätige mit dem Passwort deines Macs.
+download.first.old.os = macOS 11–14
+download.first.old.text = Öffne im Finder den Ordner „Programme“, klick bei gedrückter Taste „ctrl“ auf tTerm, wähl „Öffnen“ und klick dann noch einmal auf „Öffnen“.
+download.first.after = Danach startet tTerm wie gewohnt und installiert neue Versionen von selbst, ohne dass macOS nachfragt.
 download.others.eyebrow = Andere Systeme
 download.others.title = Nicht nur Mac
 download.others.windows = Die App für Windows ist in Arbeit.
@@ -255,7 +262,9 @@ download.faq.3.a = Nein. Ohne Anmeldung arbeitet tTerm mit diesem Mac: Shells, V
 download.faq.4.q = Wo werden meine Befehle gespeichert?
 download.faq.4.a = Die Befehle dieses Macs bleiben samt Ausgabe 30 Tage auf ihm, im Ordner der App, den nur du lesen kannst. Befehle auf Servern werden in der Cloud gespeichert, wie in tTerm Web.
 download.faq.5.q = Ist die App signiert?
-download.faq.5.a = Ja, mit einer Apple Developer ID, und Apple hat sie geprüft (Notarisierung). Deshalb öffnet macOS sie ohne Warnungen.
+download.faq.5.a = Ja, mit dem eigenen Zertifikat von tTerm, und auch jedes Update ist damit signiert. Eine Signatur mit Apple Developer ID gibt es noch nicht, deshalb bittet dich macOS beim ersten Mal, den Start zu bestätigen, <a href="#first-open">so geht das</a>. Danach fragt macOS nicht mehr nach, auch nicht bei Updates.
+download.faq.update.q = Wie aktualisiert sich die App?
+download.faq.update.a = Von selbst. Alle sechs Stunden sucht tTerm nach einer neuen Version, lädt sie herunter und installiert sie, wenn es gerade nicht stört: beim Beenden oder wenn in seinen Terminals nichts läuft. Unter Settings → Updates kannst du festlegen, dass tTerm vorher fragt.
 download.faq.6.q = Wie entferne ich sie?
 download.faq.6.a = Beende tTerm über die Menüleiste und zieh die App aus dem Ordner „Programme“ in den Papierkorb. Wenn du angemeldet warst, kannst du diesen Mac unter Settings → Devices vergessen.
 download.faq.7.q = Ist der Code offen?

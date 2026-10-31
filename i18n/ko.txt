@@ -193,8 +193,9 @@ blog.near.3 = tTerm 채널에서 릴리스마다 짧은 소식을 전해요.
 blog.near.4 = 채널 열기
 # ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
 mac.download = Mac용 다운로드
+mac.chip = 새 소식: Mac용 tTerm<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">다운로드</span>
 mac.title = 클라우드가 들어 있는 <br>로컬 터미널
-mac.lead = 클라우드 버전에 더해 새로 선보이는 앱이에요. Mac용 tTerm은 컴퓨터의 셸을 전용 창에서 블록으로 열고, 계정 없이도 작동해요. 로그인하면 클라우드의 서버가 같은 창에 나타나고, Mac에 있는 서버와 키를 클라우드로 옮길 수 있어요.
+mac.lead = 클라우드 버전에 더해 새로 선보이는 앱이에요. Mac용 tTerm은 컴퓨터의 셸을 전용 창에서 블록으로 열고, 계정 없이도 작동해요. 로그인하면 클라우드의 서버가 같은 창에 나타나고, 곧 Mac에 있는 서버와 키도 클라우드로 옮길 수 있게 돼요.
 mac.note = 무료 · macOS 11 이상 <br>Windows와 Linux는 곧 지원
 mac.soon = 출시 예정
 mac.window_label = Mac용 tTerm 창: 왼쪽에는 프로젝트가 있어요. Personal 안에는 this Mac 표시가 붙은 이 MacBook-Pro와 그 터미널이, 그 아래에는 클라우드의 web-01 서버가 있어요. 위쪽에는 이 Mac의 탭과 클라우드의 탭이 나란히 있고, 피드에는 Mac에서 실행한 명령이 블록으로 보여요: git pull, npm test, docker compose. Mac의 메뉴 막대에서는 tTerm 아이콘의 메뉴가 열려 있어요: Open tTerm, MacBook-Pro: online in tTerm Web, Quit tTerm.
@@ -217,7 +218,7 @@ mac.faq.app.a = 네, <a href="{{$base}}/download/">Mac용 tTerm</a>이 있어요
 # download page
 download.title = Mac용 tTerm: 로컬 터미널
 download.description = 클라우드가 들어 있는 로컬 터미널: Mac의 셸은 블록으로, 그 옆에는 서버와 노트를 비롯해 tTerm에 있는 모든 것이 있어요. 무료, macOS 11 이상.
-download.lead = 클라우드 버전에 더해 새로 선보이는 Mac용 로컬 터미널이에요. 여느 터미널처럼 컴퓨터에서 작업하다가, 준비가 되면 앱에서 바로 서버와 키를 클라우드로 옮기세요.
+download.lead = 클라우드 버전에 더해 새로 선보이는 Mac용 로컬 터미널이에요. 여느 터미널처럼 컴퓨터에서 작업하세요. 곧 앱에서 바로 서버와 키를 클라우드로 옮길 수 있게 돼요.
 download.meta = 무료 · macOS 11 이상 · Apple 실리콘 및 Intel
 download.phone = <b>Mac용 tTerm은 Mac에 설치하는 앱이에요.</b> 이 페이지를 Mac에서 열어 주세요. 휴대폰에서는 브라우저에서 바로 tTerm Web으로 작업할 수 있어요.
 download.open_web = tTerm Web 열기
@@ -238,9 +239,15 @@ download.install.title = 세 단계로 Mac을 tTerm에
 download.install.1.title = 파일 열기
 download.install.1.text = 다운로드한 tTerm.dmg를 열고 tTerm을 응용 프로그램 폴더로 드래그하세요.
 download.install.2.title = tTerm 실행
-download.install.2.text = 계정도 설정도 없이 이 Mac의 터미널이 바로 작동해요.
-download.install.3.title = 로그인하고 옮기기
-download.install.3.text = Sign in을 누르면 브라우저가 열려요. 로그인을 확인하면 서버와 노트가 창에 나타나요. 앱이 이 Mac에 있는 서버와 키를 클라우드로 옮기자고 제안해요.
+download.install.2.text = 처음 실행할 때는 macOS가 실행을 확인해 달라고 하는데, <a href="#first-open">방법은 여기에 있어요</a>. 그다음부터는 계정도 설정도 없이 이 Mac의 터미널이 바로 작동해요.
+download.install.3.title = 원할 때 로그인하기
+download.install.3.text = Sign in을 누르면 브라우저가 열려요. 로그인을 확인하면 서버와 노트가 창에 나타나요.
+download.first.title = 처음 실행할 때, 한 번만
+download.first.new.os = macOS 15 이상
+download.first.new.text = tTerm을 열고 ‘완료’를 클릭하세요. 그다음 ‘시스템 설정’ → ‘개인정보 보호 및 보안’으로 이동해서, 아래쪽 tTerm 관련 줄 옆에 있는 ‘그래도 열기’를 클릭하고(이 버튼은 열기를 시도한 뒤 1시간 정도 보여요), Mac 암호를 입력해 확인하세요.
+download.first.old.os = macOS 11–14
+download.first.old.text = Finder에서 응용 프로그램 폴더를 열고, tTerm을 Control-클릭한 다음 ‘열기’를 선택하고, 한 번 더 ‘열기’를 클릭하세요.
+download.first.after = 그다음부터는 tTerm이 평소처럼 열리고 새 버전도 알아서 설치하며, macOS도 새 버전에 대해 묻지 않아요.
 download.others.eyebrow = 다른 운영체제
 download.others.title = Mac 외에도
 download.others.windows = Windows 앱을 준비하고 있어요.
@@ -255,7 +262,9 @@ download.faq.3.a = 아니요. 로그인하지 않아도 tTerm은 이 Mac에서 �
 download.faq.4.q = 명령은 어디에 저장되나요?
 download.faq.4.a = 이 Mac에서 실행한 명령과 출력은 본인만 읽을 수 있는 앱 폴더에 30일 동안 저장돼요. 서버에서 실행한 명령은 tTerm Web과 마찬가지로 클라우드에 저장돼요.
 download.faq.5.q = 앱은 서명되어 있나요?
-download.faq.5.a = 네, Apple Developer ID로 서명했고 Apple의 공증(notarization)도 받았어요. 그래서 macOS에서 경고 없이 열려요.
+download.faq.5.a = 네, tTerm 자체 인증서로 서명했고 모든 업데이트도 이 인증서로 서명해요. 아직 Apple Developer ID 서명은 없어서 처음 실행할 때는 macOS가 실행을 확인해 달라고 하는데, <a href="#first-open">방법은 여기에 있어요</a>. 그다음부터는 업데이트할 때도 다시 묻지 않아요.
+download.faq.update.q = 어떻게 업데이트되나요?
+download.faq.update.a = 알아서 업데이트돼요. tTerm은 6시간마다 새 버전이 있는지 확인하고, 있으면 다운로드해서 방해가 되지 않을 때 설치해요. 앱을 종료할 때나 tTerm의 터미널에서 아무것도 실행 중이지 않을 때요. Settings → Updates에서 설치 전에 먼저 묻도록 설정할 수 있어요.
 download.faq.6.q = 어떻게 삭제하나요?
 download.faq.6.a = 메뉴 막대에서 tTerm을 종료한 다음, 응용 프로그램 폴더에서 휴지통으로 드래그하세요. 로그인한 적이 있다면 Settings → Devices에서 이 Mac을 목록에서 지울 수 있어요.
 download.faq.7.q = 코드는 공개되어 있나요?

@@ -51,7 +51,7 @@
   <section class="hero">
     <div class="sky" aria-hidden="true"><i class="s-beam"></i><i class="s-teal"></i><i class="s-sky"></i><i class="s-violet"></i><i class="s-amber"></i></div>
     <div class="hero-text">
-      <a class="chip" href="{{$base}}/blog/tterm-web/"><span class="chip-dot" aria-hidden="true"></span>{{index.hero.1}}</a>
+      {{#if mac}}<a class="chip" href="{{$base}}/download/"><span class="chip-dot" aria-hidden="true"></span>{{mac.chip}}</a>{{/if}}{{#unless mac}}<a class="chip" href="{{$base}}/blog/tterm-web/"><span class="chip-dot" aria-hidden="true"></span>{{index.hero.1}}</a>{{/unless}}
       <h1>{{index.hero.2}}</h1>
       <p class="hero-lead">{{index.hero.3}}</p>
 {{#unless mac}}      <a class="btn btn-primary" href="https://app.tterm.net">{{index.hero.4}}</a>

@@ -60,7 +60,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.5.0">
+<meta name="version" content="2.6.0">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -88,6 +88,7 @@
           <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>Source on GitHub</b><small>All of tTerm's code, AGPL v3</small></span></a>
         </div>
       </details>
+      <a class="nav-mac" href="/download/">Local terminal<span class="nav-new" aria-hidden="true"></span></a>
     </nav>
     <div class="top-actions">
       <details class="lang">
@@ -115,6 +116,7 @@
           <a href="/#features">Features</a>
           <a href="/#security">Security</a>
           <a href="/#pricing">Pricing</a>
+          <a href="/download/">Local terminal</a>
           <p class="menu-label">Resources</p>
           <a href="/blog/">Blog</a>
           <a href="/#faq">FAQ</a>
@@ -150,10 +152,10 @@
   <section class="hero">
     <div class="sky" aria-hidden="true"><i class="s-beam"></i><i class="s-teal"></i><i class="s-sky"></i><i class="s-violet"></i><i class="s-amber"></i></div>
     <div class="hero-text">
-      <a class="chip" href="/blog/tterm-web/"><span class="chip-dot" aria-hidden="true"></span>New: tTerm in your browser<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Read</span></a>
+      <a class="chip" href="/download/"><span class="chip-dot" aria-hidden="true"></span>New: tTerm for Mac<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Download</span></a>
       <h1><span class="accent">The cloud terminal</span> <br>for servers and computers</h1>
       <p class="hero-lead">Your terminals live in the cloud, not on your laptop: close the lid mid-build, open tTerm on your phone, and everything is where you left it. No keys on your device, no ports to open.</p>
-      <a class="btn btn-primary" href="https://app.tterm.net">Start for free</a>
+      <div class="hero-cta"><a class="btn btn-primary" href="https://app.tterm.net">Start for free</a><a class="btn btn-ghost" href="/download/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Mac</a></div>
       <a class="hero-note" href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>Open source</a>
     </div>
     <div class="stage" data-stage>
@@ -167,7 +169,7 @@
     <div class="strip">
       <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg><p><b>Linux servers</b><span>Over plain SSH, one command on the server</span></p></div>
       <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg><p><b>macOS and Linux computers</b><span>Even behind NAT, with no open ports</span></p></div>
-      <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><p><b>Any browser</b><span>On a laptop, a tablet or a phone</span></p></div>
+      <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><p><b>Browser and Mac</b><span>In any browser, or in a window of its own on a Mac</span></p></div>
     </div>
   </div>
 
@@ -178,13 +180,13 @@
       <div class="step">
         <span class="step-num">01</span>
         <h3>Add a machine</h3>
-        <p>One command on a server and it is in your list. A computer needs a small agent that connects from the inside.</p>
+        <p>One command on a server and it is in your list. A computer needs a small agent, a Mac connects with tTerm for Mac, both from the inside.</p>
         <div class="step-code"><i>$</i> curl -sSL https://connect.tterm.net/s/… | sudo sh</div>
       </div>
       <div class="step">
         <span class="step-num">02</span>
         <h3>Open a terminal</h3>
-        <p>In any browser. Tabs from different projects side by side, and any machine one Cmd+K away.</p>
+        <p>In any browser or in tTerm for Mac. Tabs from different projects side by side, and any machine one Cmd+K away.</p>
         <div class="step-tabs" aria-hidden="true"><span class="on"><b class="dot"></b><span><em>P/</em>web-01</span></span><span><b class="dot"></b><span><em>A/</em>api-prod</span></span><span><b class="dot"></b><span><em>P/</em>MacBook</span></span></div>
       </div>
       <div class="step">
@@ -318,6 +320,56 @@
     </div>
   </section>
 
+  <section class="section" id="mac">
+    <div class="mac-head">
+      <div>
+        <p class="eyebrow">tTerm for Mac</p>
+        <h2 class="section-title">A local terminal <br>with the cloud inside</h2>
+      </div>
+      <div class="mac-side">
+        <p class="section-lead">Our newest addition, alongside the cloud version. tTerm for Mac opens your computer's shells in a window of its own, in blocks, and works even without an account. Sign in, and your servers from the cloud appear in the same window, and soon the servers and keys on your Mac will be able to move to the cloud.</p>
+        <div class="mac-cta"><a class="btn btn-primary btn-md" href="/download/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Mac</a><span class="mac-note">Free · macOS 11 or later <br>Windows and Linux soon</span></div>
+      </div>
+    </div>
+<div class="app-shot">
+  <div class="demo-frame">
+    <div class="demo" role="img" aria-label="The tTerm for Mac window: projects on the left, this MacBook-Pro in Personal, marked this Mac, with its terminals, and below it the web-01 server from the cloud. On top, tabs of this Mac and of the cloud side by side; in the feed, commands on the Mac in blocks: git pull, npm test, docker compose. In the Mac's menu bar the tTerm icon is open: Open tTerm, MacBook-Pro: online in tTerm Web, Quit tTerm.">
+      <div class="dm" aria-hidden="true">
+        <div class="app-bar"><i class="r"></i><i class="y"></i><i class="g"></i><span>tTerm</span></div>
+        <div class="dm-body">
+          <aside class="dm-side">
+            <div class="dm-side-head"><img src="/assets/logo.svg" alt="" width="18" height="18">tTerm</div>
+            <div class="dm-tree-wrap"><div class="dm-label">Projects</div><div class="dm-tree">
+              <div class="dm-project pc-violet"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">P</span><span class="dm-project-name">Personal</span><span class="dm-role">Owner</span></div><div class="dm-sub"><span>Machines</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div><div class="dm-group-in"><div class="dm-row"><span class="here-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg></span><span class="dm-row-name">MacBook-Pro</span><span class="here-pill">this Mac</span><b class="state"></b></div><div class="dm-leaf on"><span class="dm-av">DG</span><span class="dm-leaf-name">terminal 1</span></div><div class="dm-leaf"><span class="dm-av">DG</span><span class="dm-leaf-name">dev server</span><b class="dot busy"></b></div></div></div>
+              <div class="dm-project pc-sky"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">CX</span><span class="dm-project-name">Client X</span><span class="dm-role">Owner</span></div><div class="dm-sub"><span>Machines</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div><div class="dm-group-in"><div class="dm-row"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/></svg><span class="dm-row-name">web-01</span></div><div class="dm-leaf"><span class="dm-av">DG</span><span class="dm-leaf-name">deploy</span></div></div></div>
+              <div class="dm-project pc-teal folded"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">A</span><span class="dm-project-name">Acme</span><span class="dm-role">Owner</span></div></div>
+            </div><div class="dm-newproj"><span class="dm-dash"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>New project</div></div>
+            <div class="dm-account"><span class="dm-avatar">DG</span><span class="dm-who"><b>Denis</b><small>Free plan</small></span></div>
+          </aside>
+          <div class="dm-main">
+            <div class="dm-bar"><div class="dm-tabs"><span class="dm-tab pc-violet on"><b class="dot"></b><span><em>P/</em>MacBook-Pro · terminal 1</span></span><span class="dm-tab pc-violet"><b class="dot busy"></b><span><em>P/</em>MacBook-Pro · dev server</span></span><span class="dm-tab pc-sky"><b class="dot"></b><span><em>CX/</em>web-01 · deploy</span></span></div><span class="dm-plus"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="dm-jump"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Search<kbd>&#x2318;K</kbd></span></div>
+            <div class="dm-term-view">
+              <div class="dm-feed"><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">0.0 s</span></div><div class="dm-cmd"><em>&#x276F;</em> ls</div><div class="dm-out">README.md  docker-compose.yml  package.json  src</div></div><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">0.9 s</span></div><div class="dm-cmd"><em>&#x276F;</em> git pull</div><div class="dm-out">Already up to date.</div></div><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">3.1 s</span></div><div class="dm-cmd"><em>&#x276F;</em> npm test</div><div class="dm-out"> &#x2713; src/cart.test.ts (24 tests)</div><div class="dm-out"> &#x2713; src/api.test.ts (31 tests)</div><div class="dm-out ok"> Tests  128 passed (128)</div></div><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">1.4 s</span></div><div class="dm-cmd"><em>&#x276F;</em> docker compose up -d</div><div class="dm-out"> &#x2714; Container shop-db-1   Started</div><div class="dm-out ok"> &#x2714; Container shop-web-1  Started</div></div></div>
+              <div class="dm-input"><div class="dm-chips"><span>~/Work/shop</span><span class="dm-branch-chip">main</span></div><div class="dm-line"><em>&#x276F;</em><span class="dm-typed"></span><span class="dm-caret"></span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bar-menu" aria-hidden="true">
+    <div class="bar-strip"><span class="bar-icon"><svg viewBox="65 55 380 380" aria-hidden="true"><path d="M118 168 L206 256 L118 344"/><path d="M330 140 L330 316 C330 344 344 356 372 350"/><path d="M272 212 L392 212"/></svg></span><span>16:20</span></div>
+    <div class="bar-drop"><p class="on">Open tTerm</p><hr><p class="muted">MacBook-Pro: online in tTerm Web</p><hr><p>Quit tTerm</p></div>
+  </div>
+</div>
+    <div class="mac-points">
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg><h3>Blocks on your own Mac too</h3><p>This Mac's bash or zsh, every command a block with its output, exit code and time. The history stays on the Mac for 30 days.</p></div>
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/></svg><h3>The cloud in the same window</h3><p>Once you sign in, your servers, their notes and search across everything with ⌘K open next to the Mac's terminals.</p></div>
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/><path d="M12 15V9M9.5 11.5L12 9l2.5 2.5"/></svg><h3>Moving to the cloud <span class="soon">SOON</span></h3><p>The app moves the servers and keys on this Mac to the cloud in a couple of clicks, and they open from any browser.</p></div>
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><h3>Your Mac from anywhere</h3><p>The app opens this Mac to tTerm Web: its terminal is there from a browser and from your phone. It lives in the menu bar.</p></div>
+    </div>
+  </section>
+
   <section class="section" id="security">
     <div class="split-head">
       <div>
@@ -345,7 +397,7 @@
       <div class="fact">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
         <h3>Connections from the inside</h3>
-        <p>The agent on a computer dials out by itself, so no inbound ports are needed. It uninstalls with one command.</p>
+        <p>The agent on a computer and tTerm for Mac dial out by themselves, so no inbound ports are needed. The agent uninstalls with one command.</p>
       </div>
       <div class="fact">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
@@ -401,6 +453,7 @@
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>30 days of command history with output</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Terminals outlive the tab</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Dark and light theme</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>tTerm for Mac</li>
       </ul>
     </div>
   </section>
@@ -410,7 +463,11 @@
     <div class="faq-list">
       <details open>
         <summary>Do I need to install anything on my computer?</summary>
-        <p>No, a browser is enough. You install something only on the machines you connect to: one command on a server, a small agent on a computer.</p>
+        <p>No, a browser is enough. You install something only on the machines you connect to: one command on a server, a small agent on a computer. On a Mac you can install tTerm for Mac instead of the agent, and it is the Mac's own terminal too.</p>
+      </details>
+      <details>
+        <summary>Is there an app for my computer?</summary>
+        <p>Yes, <a href="/download/">tTerm for Mac</a>. It has the Mac's own terminals, in blocks and with no account, and once you sign in, your servers from the cloud in the same window. Windows and Linux soon.</p>
       </details>
       <details>
         <summary>What do you store?</summary>
@@ -497,7 +554,7 @@
       <p>Sign in with your email, add a server with one command and work from any browser.</p>
       <div class="final-cta">
         <a class="btn btn-primary" href="https://app.tterm.net">Start for free</a>
-        <a class="btn btn-ghost" href="https://github.com/tterm-net" target="_blank" rel="noopener">View the source</a>
+        <a class="btn btn-ghost" href="/download/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Mac</a>
       </div>
     </div>
   </section>
@@ -519,6 +576,7 @@
         <div class="foot-col">
           <p class="foot-h">Product</p>
           <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="/download/">tTerm for Mac<span class="foot-new">New</span></a>
           <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Telegram bot</a>
           <a href="/#pricing">Pricing</a>
           <a href="/#security">Security</a>
@@ -539,7 +597,7 @@
       </nav>
     </div>
     <div class="foot-bottom">
-      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <p class="foot-note">2026 · tTerm · v2.6.0</p>
       <details class="lang lang-up">
         <summary aria-label="Language: English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>EN</span></summary>
         <div class="lang-menu">

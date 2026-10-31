@@ -60,7 +60,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.5.0">
+<meta name="version" content="2.6.0">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -88,6 +88,7 @@
           <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>GitHub'da kaynak kod</b><small>tTerm'in tüm kodu, AGPL v3</small></span></a>
         </div>
       </details>
+      <a class="nav-mac" href="/tr/download/">Yerel terminal<span class="nav-new" aria-hidden="true"></span></a>
     </nav>
     <div class="top-actions">
       <details class="lang">
@@ -115,6 +116,7 @@
           <a href="/tr/#features">Özellikler</a>
           <a href="/tr/#security">Güvenlik</a>
           <a href="/tr/#pricing">Fiyatlandırma</a>
+          <a href="/tr/download/">Yerel terminal</a>
           <p class="menu-label">Kaynaklar</p>
           <a href="/tr/blog/">Blog</a>
           <a href="/tr/#faq">SSS</a>
@@ -150,10 +152,10 @@
   <section class="hero">
     <div class="sky" aria-hidden="true"><i class="s-beam"></i><i class="s-teal"></i><i class="s-sky"></i><i class="s-violet"></i><i class="s-amber"></i></div>
     <div class="hero-text">
-      <a class="chip" href="/tr/blog/tterm-web/"><span class="chip-dot" aria-hidden="true"></span>Yeni: tTerm tarayıcında<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Oku</span></a>
+      <a class="chip" href="/tr/download/"><span class="chip-dot" aria-hidden="true"></span>Yeni: Mac için tTerm<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">İndir</span></a>
       <h1>Sunucular ve bilgisayarlar için <br><span class="accent">bulut terminali</span></h1>
       <p class="hero-lead">Terminallerin dizüstünde değil, bulutta çalışır: derleme sürerken kapağı kapat, tTerm'i telefonunda aç, her şey bıraktığın gibi duruyor. Cihazında anahtar yok, açılacak port yok.</p>
-      <a class="btn btn-primary" href="https://app.tterm.net">Ücretsiz başla</a>
+      <div class="hero-cta"><a class="btn btn-primary" href="https://app.tterm.net">Ücretsiz başla</a><a class="btn btn-ghost" href="/tr/download/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>Mac için indir</a></div>
       <a class="hero-note" href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>Açık kaynak</a>
     </div>
     <div class="stage" data-stage>
@@ -167,7 +169,7 @@
     <div class="strip">
       <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg><p><b>Linux sunucular</b><span>Standart SSH üzerinden, sunucuda tek komutla</span></p></div>
       <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg><p><b>macOS ve Linux bilgisayarlar</b><span>NAT arkasında bile, açık port olmadan</span></p></div>
-      <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><p><b>Her tarayıcı</b><span>Dizüstü bilgisayarda, tablette ya da telefonda</span></p></div>
+      <div class="strip-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><p><b>Tarayıcı ve Mac</b><span>Her tarayıcıda ya da Mac'te kendi penceresinde</span></p></div>
     </div>
   </div>
 
@@ -178,13 +180,13 @@
       <div class="step">
         <span class="step-num">01</span>
         <h3>Makine ekle</h3>
-        <p>Sunucuda tek bir komut yeter, sunucu hemen listende görünür. Bilgisayar için içeriden bağlanan küçük bir ajan gerekir.</p>
+        <p>Sunucuda tek bir komut yeter, sunucu hemen listende görünür. Bilgisayara küçük bir ajan gerekir, Mac'i ise Mac için tTerm bağlar. İkisi de içeriden bağlanır.</p>
         <div class="step-code"><i>$</i> curl -sSL https://connect.tterm.net/s/… | sudo sh</div>
       </div>
       <div class="step">
         <span class="step-num">02</span>
         <h3>Terminal aç</h3>
-        <p>Herhangi bir tarayıcıda. Farklı projelerin sekmeleri yan yana, her makine bir Cmd+K uzağında.</p>
+        <p>Herhangi bir tarayıcıda ya da Mac için tTerm'de. Farklı projelerin sekmeleri yan yana, her makine bir Cmd+K uzağında.</p>
         <div class="step-tabs" aria-hidden="true"><span class="on"><b class="dot"></b><span><em>P/</em>web-01</span></span><span><b class="dot"></b><span><em>A/</em>api-prod</span></span><span><b class="dot"></b><span><em>P/</em>MacBook</span></span></div>
       </div>
       <div class="step">
@@ -318,6 +320,56 @@
     </div>
   </section>
 
+  <section class="section" id="mac">
+    <div class="mac-head">
+      <div>
+        <p class="eyebrow">Mac için tTerm</p>
+        <h2 class="section-title">Bulutu içinde taşıyan <br>yerel bir terminal</h2>
+      </div>
+      <div class="mac-side">
+        <p class="section-lead">Bulut sürümünün yanına eklediğimiz en yeni ürün. Mac için tTerm, bilgisayarının kabuklarını kendi penceresinde, bloklar halinde açar ve hesap olmadan da çalışır. Giriş yaptığında buluttaki sunucuların aynı pencerede belirir, yakında Mac'indeki sunucuları ve anahtarları da buluta taşıyabileceksin.</p>
+        <div class="mac-cta"><a class="btn btn-primary btn-md" href="/tr/download/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>Mac için indir</a><span class="mac-note">Ücretsiz · macOS 11 veya üstü <br>Windows ve Linux yakında</span></div>
+      </div>
+    </div>
+<div class="app-shot">
+  <div class="demo-frame">
+    <div class="demo" role="img" aria-label="Mac için tTerm penceresi: solda projeler; Personal içinde this Mac etiketli bu MacBook-Pro ve terminalleri, altında da buluttan gelen web-01 sunucusu. Üstte bu Mac'in ve bulutun sekmeleri yan yana; akışta Mac'teki komutlar bloklar halinde: git pull, npm test, docker compose. Mac'in menü çubuğunda tTerm simgesi açık: Open tTerm, MacBook-Pro: online in tTerm Web, Quit tTerm.">
+      <div class="dm" aria-hidden="true">
+        <div class="app-bar"><i class="r"></i><i class="y"></i><i class="g"></i><span>tTerm</span></div>
+        <div class="dm-body">
+          <aside class="dm-side">
+            <div class="dm-side-head"><img src="/assets/logo.svg" alt="" width="18" height="18">tTerm</div>
+            <div class="dm-tree-wrap"><div class="dm-label">Projects</div><div class="dm-tree">
+              <div class="dm-project pc-violet"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">P</span><span class="dm-project-name">Personal</span><span class="dm-role">Owner</span></div><div class="dm-sub"><span>Machines</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div><div class="dm-group-in"><div class="dm-row"><span class="here-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg></span><span class="dm-row-name">MacBook-Pro</span><span class="here-pill">this Mac</span><b class="state"></b></div><div class="dm-leaf on"><span class="dm-av">DG</span><span class="dm-leaf-name">terminal 1</span></div><div class="dm-leaf"><span class="dm-av">DG</span><span class="dm-leaf-name">dev server</span><b class="dot busy"></b></div></div></div>
+              <div class="dm-project pc-sky"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">CX</span><span class="dm-project-name">Client X</span><span class="dm-role">Owner</span></div><div class="dm-sub"><span>Machines</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div><div class="dm-group-in"><div class="dm-row"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/></svg><span class="dm-row-name">web-01</span></div><div class="dm-leaf"><span class="dm-av">DG</span><span class="dm-leaf-name">deploy</span></div></div></div>
+              <div class="dm-project pc-teal folded"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">A</span><span class="dm-project-name">Acme</span><span class="dm-role">Owner</span></div></div>
+            </div><div class="dm-newproj"><span class="dm-dash"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>New project</div></div>
+            <div class="dm-account"><span class="dm-avatar">DG</span><span class="dm-who"><b>Denis</b><small>Free plan</small></span></div>
+          </aside>
+          <div class="dm-main">
+            <div class="dm-bar"><div class="dm-tabs"><span class="dm-tab pc-violet on"><b class="dot"></b><span><em>P/</em>MacBook-Pro · terminal 1</span></span><span class="dm-tab pc-violet"><b class="dot busy"></b><span><em>P/</em>MacBook-Pro · dev server</span></span><span class="dm-tab pc-sky"><b class="dot"></b><span><em>CX/</em>web-01 · deploy</span></span></div><span class="dm-plus"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="dm-jump"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Search<kbd>&#x2318;K</kbd></span></div>
+            <div class="dm-term-view">
+              <div class="dm-feed"><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">0.0 s</span></div><div class="dm-cmd"><em>&#x276F;</em> ls</div><div class="dm-out">README.md  docker-compose.yml  package.json  src</div></div><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">0.9 s</span></div><div class="dm-cmd"><em>&#x276F;</em> git pull</div><div class="dm-out">Already up to date.</div></div><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">3.1 s</span></div><div class="dm-cmd"><em>&#x276F;</em> npm test</div><div class="dm-out"> &#x2713; src/cart.test.ts (24 tests)</div><div class="dm-out"> &#x2713; src/api.test.ts (31 tests)</div><div class="dm-out ok"> Tests  128 passed (128)</div></div><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">1.4 s</span></div><div class="dm-cmd"><em>&#x276F;</em> docker compose up -d</div><div class="dm-out"> &#x2714; Container shop-db-1   Started</div><div class="dm-out ok"> &#x2714; Container shop-web-1  Started</div></div></div>
+              <div class="dm-input"><div class="dm-chips"><span>~/Work/shop</span><span class="dm-branch-chip">main</span></div><div class="dm-line"><em>&#x276F;</em><span class="dm-typed"></span><span class="dm-caret"></span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bar-menu" aria-hidden="true">
+    <div class="bar-strip"><span class="bar-icon"><svg viewBox="65 55 380 380" aria-hidden="true"><path d="M118 168 L206 256 L118 344"/><path d="M330 140 L330 316 C330 344 344 356 372 350"/><path d="M272 212 L392 212"/></svg></span><span>16:20</span></div>
+    <div class="bar-drop"><p class="on">Open tTerm</p><hr><p class="muted">MacBook-Pro: online in tTerm Web</p><hr><p>Quit tTerm</p></div>
+  </div>
+</div>
+    <div class="mac-points">
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg><h3>Kendi Mac'inde de bloklar</h3><p>Bu Mac'teki bash ya da zsh: her komut çıktısı, çıkış kodu ve süresiyle bir blok. Geçmiş 30 gün boyunca Mac'te kalır.</p></div>
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/></svg><h3>Aynı pencerede bulut</h3><p>Giriş yaptığında sunucuların, onlarla ilgili notlar ve ⌘K ile her şeyde arama, Mac'in terminallerinin hemen yanında açılır.</p></div>
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/><path d="M12 15V9M9.5 11.5L12 9l2.5 2.5"/></svg><h3>Buluta taşınma <span class="soon">YAKINDA</span></h3><p>Uygulama bu Mac'teki sunucuları ve anahtarları birkaç tıkla buluta taşır, sonra hepsi her tarayıcıdan açılır.</p></div>
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><h3>Mac'ine her yerden ulaş</h3><p>Uygulama bu Mac'i tTerm Web'e açar: terminaline tarayıcıdan da telefonundan da ulaşabilirsin. Menü çubuğunda yer alır.</p></div>
+    </div>
+  </section>
+
   <section class="section" id="security">
     <div class="split-head">
       <div>
@@ -345,7 +397,7 @@
       <div class="fact">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
         <h3>İçeriden bağlantı</h3>
-        <p>Bilgisayardaki ajan dışarıya kendisi bağlanır, bu yüzden gelen bağlantılar için port açmana gerek kalmaz. Tek komutla kaldırılır.</p>
+        <p>Bilgisayardaki ajan ve Mac için tTerm dışarıya kendileri bağlanır, bu yüzden gelen bağlantılar için port açmana gerek kalmaz. Ajan tek komutla kaldırılır.</p>
       </div>
       <div class="fact">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
@@ -401,6 +453,7 @@
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Çıktılarıyla birlikte 30 günlük komut geçmişi</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Sekme kapansa da terminaller çalışır</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Koyu ve açık tema</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Mac için tTerm</li>
       </ul>
     </div>
   </section>
@@ -410,7 +463,11 @@
     <div class="faq-list">
       <details open>
         <summary>Bilgisayarıma bir şey kurmam gerekiyor mu?</summary>
-        <p>Hayır, bir tarayıcı yeterli. Yalnızca bağlandığın makinelere bir şey kurarsın: sunucuda tek bir komut, bilgisayarda küçük bir ajan.</p>
+        <p>Hayır, bir tarayıcı yeterli. Yalnızca bağlandığın makinelere bir şey kurarsın: sunucuda tek bir komut, bilgisayarda küçük bir ajan. Mac'te ajan yerine Mac için tTerm'i kurabilirsin, bu uygulama aynı zamanda Mac'in kendi terminali olur.</p>
+      </details>
+      <details>
+        <summary>Bilgisayarım için bir uygulama var mı?</summary>
+        <p>Evet, <a href="/tr/download/">Mac için tTerm</a>. Mac'in kendi terminallerini bloklar halinde ve hesap olmadan sunar, giriş yaptığında da buluttaki sunucularını aynı pencerede gösterir. Windows ve Linux yakında.</p>
       </details>
       <details>
         <summary>Neleri saklıyorsunuz?</summary>
@@ -497,7 +554,7 @@
       <p>E-postanla giriş yap, tek komutla bir sunucu ekle ve istediğin tarayıcıdan çalış.</p>
       <div class="final-cta">
         <a class="btn btn-primary" href="https://app.tterm.net">Ücretsiz başla</a>
-        <a class="btn btn-ghost" href="https://github.com/tterm-net" target="_blank" rel="noopener">Kaynak koda göz at</a>
+        <a class="btn btn-ghost" href="/tr/download/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>Mac için indir</a>
       </div>
     </div>
   </section>
@@ -519,6 +576,7 @@
         <div class="foot-col">
           <p class="foot-h">Ürün</p>
           <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="/tr/download/">Mac için tTerm<span class="foot-new">Yeni</span></a>
           <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Telegram botu</a>
           <a href="/tr/#pricing">Fiyatlandırma</a>
           <a href="/tr/#security">Güvenlik</a>
@@ -539,7 +597,7 @@
       </nav>
     </div>
     <div class="foot-bottom">
-      <p class="foot-note">2026 · tTerm · v2.5.0</p>
+      <p class="foot-note">2026 · tTerm · v2.6.0</p>
       <details class="lang lang-up">
         <summary aria-label="Dil: Türkçe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>TR</span></summary>
         <div class="lang-menu">

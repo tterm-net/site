@@ -193,8 +193,9 @@ blog.near.3 = tTerm のチャンネルでは、リリースごとに短いお知
 blog.near.4 = チャンネルを開く
 # ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
 mac.download = Mac 版をダウンロード
+mac.chip = 新登場：Mac 版 tTerm<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">ダウンロード</span>
 mac.title = クラウドを内蔵した<br>ローカルターミナル
-mac.lead = クラウド版と並ぶ、tTerm の新しい製品です。Mac 版 tTerm は、お使いの Mac のシェルを専用のウィンドウで開いてブロックで表示し、アカウントがなくても使えます。サインインすると、同じウィンドウにクラウドのサーバーが表示され、Mac にあるサーバーと鍵をクラウドへ移すこともできます。
+mac.lead = クラウド版と並ぶ、tTerm の新しい製品です。Mac 版 tTerm は、お使いの Mac のシェルを専用のウィンドウで開いてブロックで表示し、アカウントがなくても使えます。サインインすると、同じウィンドウにクラウドのサーバーが表示されます。まもなく、Mac にあるサーバーと鍵もクラウドへ移せるようになります。
 mac.note = 無料 · macOS 11 以降<br>Windows と Linux にも近日対応
 mac.soon = 近日公開
 mac.window_label = Mac 版 tTerm のウィンドウ：左側にプロジェクトがあり、Personal の中に this Mac の印が付いたこの MacBook-Pro とそのターミナル、その下にクラウドの web-01 サーバーがあります。上部にはこの Mac のタブとクラウドのタブが並び、フィードには Mac で実行したコマンドがブロックで表示されています：git pull、npm test、docker compose。Mac のメニューバーでは tTerm のアイコンのメニューが開いていて、Open tTerm、MacBook-Pro: online in tTerm Web、Quit tTerm の項目が並んでいます。
@@ -217,7 +218,7 @@ mac.faq.app.a = はい、<a href="{{$base}}/download/">Mac 版 tTerm</a> があ�
 # download page
 download.title = Mac 版 tTerm：ローカルターミナル
 download.description = クラウドを内蔵したローカルターミナル：Mac のシェルをブロックで表示し、その隣にサーバーやノートなど、tTerm にあるすべてを並べます。無料、macOS 11 以降に対応。
-download.lead = クラウド版と並ぶ tTerm の新しい製品、Mac で動くローカルターミナルです。普段のターミナルと同じように Mac で作業し、準備ができたら、アプリから直接サーバーと鍵をクラウドへ移せます。
+download.lead = クラウド版と並ぶ tTerm の新しい製品、Mac で動くローカルターミナルです。普段のターミナルと同じように Mac で作業でき、まもなくアプリから直接サーバーと鍵をクラウドへ移せるようにもなります。
 download.meta = 無料 · macOS 11 以降 · Apple シリコンと Intel
 download.phone = <b>Mac 版 tTerm は Mac にインストールするアプリです。</b>このページを Mac で開いてください。スマートフォンからは、ブラウザーでそのまま tTerm Web を使えます。
 download.open_web = tTerm Web を開く
@@ -238,9 +239,15 @@ download.install.title = 3 ステップで Mac を tTerm に
 download.install.1.title = ファイルを開く
 download.install.1.text = ダウンロードした tTerm.dmg を開き、tTerm を「アプリケーション」フォルダーにドラッグします。
 download.install.2.title = tTerm を起動
-download.install.2.text = この Mac のターミナルがすぐに使えます。アカウントも設定も必要ありません。
-download.install.3.title = サインインして移行
-download.install.3.text = Sign in を押すとブラウザーが開きます。そこで確認すると、ウィンドウにサーバーとノートが表示されます。この Mac にあるサーバーと鍵をクラウドへ移すことも、アプリが提案します。
+download.install.2.text = 初回は macOS から起動の確認を求められます。<a href="#first-open">手順はこちら</a>。その後は、この Mac のターミナルがすぐに使えます。アカウントも設定も必要ありません。
+download.install.3.title = 好きなときにサインイン
+download.install.3.text = Sign in を押すとブラウザーが開きます。そこで確認すると、ウィンドウにサーバーとノートが表示されます。
+download.first.title = 初回の起動（1 回だけ）
+download.first.new.os = macOS 15 以降
+download.first.new.text = tTerm を開いて「完了」をクリックします。次に「システム設定」→「プライバシーとセキュリティ」を開き、下のほうにある tTerm についての行の横で「このまま開く」をクリックし（このボタンは、開こうとしてから約 1 時間表示されます）、Mac のパスワードを入力して確定します。
+download.first.old.os = macOS 11–14
+download.first.old.text = Finder で「アプリケーション」フォルダーを開き、Control キーを押しながら tTerm をクリックして「開く」を選び、もう一度「開く」をクリックします。
+download.first.after = その後は tTerm が通常どおり開き、新しいバージョンも自動でインストールされます。macOS から確認を求められることもありません。
 download.others.eyebrow = ほかの OS
 download.others.title = Mac だけではありません
 download.others.windows = Windows 版アプリは開発中です。
@@ -255,7 +262,9 @@ download.faq.3.a = いいえ。サインインしなくても、tTerm はこの 
 download.faq.4.q = コマンドはどこに保存されますか？
 download.faq.4.a = この Mac で実行したコマンドと出力は、あなただけが読めるアプリのフォルダーに 30 日間保存されます。サーバー上のコマンドは、tTerm Web と同じくクラウドに保存されます。
 download.faq.5.q = アプリは署名されていますか？
-download.faq.5.a = はい。Apple Developer ID で署名され、Apple による確認（公証）も済んでいます。そのため macOS は警告なしでアプリを開きます。
+download.faq.5.a = はい。tTerm 独自の証明書で署名しており、アップデートもすべて同じ証明書で署名しています。Apple Developer ID による署名はまだないため、初回は macOS から起動の確認を求められます。<a href="#first-open">手順はこちら</a>。その後は、アップデートのときも含めて確認を求められることはありません。
+download.faq.update.q = どのようにアップデートされますか？
+download.faq.update.a = 自動で行われます。tTerm は 6 時間ごとに新しいバージョンがないか確認してダウンロードし、作業の妨げにならないとき、つまり終了するときや、tTerm のターミナルで何も実行されていないときにインストールします。Settings → Updates で、インストールの前に確認するよう設定することもできます。
 download.faq.6.q = 削除するにはどうすればよいですか？
 download.faq.6.a = メニューバーから tTerm を終了し、「アプリケーション」フォルダーからゴミ箱へドラッグします。サインインしていた場合は、Settings → Devices でこの Mac の登録を解除できます。
 download.faq.7.q = コードは公開されていますか？

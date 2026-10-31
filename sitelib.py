@@ -70,16 +70,17 @@ ENGLISH = LANGUAGES[0]
 #: on any page and its pages are not built (an earlier build's are removed).
 FLAGS = {
     # tTerm for Mac: the item in the header, the section and the buttons on
-    # the main page, the download page. On with the first release of the app
-    # that is signed with Developer ID and notarized, together with
-    # MAC_DOWNLOAD below.
-    "mac": False,
+    # the main page, the download page. On since 2.6.0, with app 0.5.0. The
+    # app is signed with tTerm's own certificate, not an Apple Developer ID,
+    # so the download page says how to open it the first time
+    # (download.first.*); with a Developer ID and notarization that goes.
+    "mac": True,
 }
 
 #: Where the download button takes you: the .dmg of the latest release of the
 #: app. A stable name in every release keeps this address the same, so the
 #: site does not change with each version of the app.
-MAC_DOWNLOAD = ""
+MAC_DOWNLOAD = "https://github.com/tterm-net/tterm-app/releases/latest/download/tTerm.dmg"
 
 
 def fail(message: str) -> None:

@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.5.0.** The number lives in `VERSION`; the build puts it in a
+**Version 2.6.0.** The number lives in `VERSION`; the build puts it in a
 `<meta>` tag and the footer of every page, so you can tell what is deployed
 by viewing source.
 
@@ -127,9 +127,14 @@ address of the .dmg. Off, nothing about the app is on the site and
 page a second button on the first screen, a section about the app after the
 features, lines in the steps, security, pricing and questions, and a button
 in its last block; `/download/` is built in every language, and the
-footer lists tTerm for Mac. Switch it on with the first release signed with
-Developer ID and notarized, the link going to that release's dmg. With the
-switch on and no link, the build stops. While it is off, every build still
+footer lists tTerm for Mac. On since 2.6.0, with app 0.5.0: the link goes to
+`releases/latest/download/tTerm.dmg` of `tterm-app`, the newest release, its
+dmg named the same in every release. The app is signed with tTerm's own
+certificate, not an Apple Developer ID, so macOS asks once before the first
+launch, and the download page says how (`download.first.*`, linked from the
+steps and the questions); with a Developer ID and notarization that block
+and those words go. Moving to the cloud is marked as coming until the app
+has it. With the switch on and no link, the build stops. While it is off, every build still
 makes the switched-off parts and throws them away: a typo there stops the
 build today, not on the day of the release.
 

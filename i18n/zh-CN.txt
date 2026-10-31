@@ -193,8 +193,9 @@ blog.near.3 = 每次发布的简短说明都在 tTerm 频道里。
 blog.near.4 = 打开频道
 # ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
 mac.download = 下载 Mac 版
+mac.chip = 新推出：tTerm Mac 版<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">下载</span>
 mac.title = 内置云端的<br>本地终端
-mac.lead = 这是我们最新推出的产品，是对云端版本的补充。tTerm Mac 版在独立的窗口中打开你电脑上的 shell，以块的形式呈现，没有账号也能使用。登录后，云端的服务器会出现在同一个窗口里，Mac 上的服务器和密钥也可以迁移到云端。
+mac.lead = 这是我们最新推出的产品，是对云端版本的补充。tTerm Mac 版在独立的窗口中打开你电脑上的 shell，以块的形式呈现，没有账号也能使用。登录后，云端的服务器会出现在同一个窗口里，很快还能把 Mac 上的服务器和密钥迁移到云端。
 mac.note = 免费 · macOS 11 或更高版本<br>Windows 和 Linux 版即将推出
 mac.soon = 即将推出
 mac.window_label = tTerm Mac 版的窗口：左侧是项目，Personal 中有这台 MacBook-Pro，标有 this Mac，下面是它的终端，再往下是来自云端的 web-01 服务器。顶部是这台 Mac 和云端的标签页，并排显示；信息流中是 Mac 上以块呈现的命令：git pull、npm test、docker compose。Mac 菜单栏中的 tTerm 图标已展开：Open tTerm、MacBook-Pro: online in tTerm Web、Quit tTerm。
@@ -217,7 +218,7 @@ mac.faq.app.a = 有，<a href="{{$base}}/download/">tTerm Mac 版</a>。里面�
 # download page
 download.title = tTerm Mac 版：本地终端
 download.description = 内置云端的本地终端：Mac 上的 shell 以块呈现，旁边是你的服务器、笔记，以及你在 tTerm 中的其他一切。免费，支持 macOS 11 或更高版本。
-download.lead = 我们最新推出的产品：Mac 上的本地终端，是对云端版本的补充。像在任何终端里一样使用你的电脑，准备好之后，直接在应用里把服务器和密钥迁移到云端。
+download.lead = 我们最新推出的产品：Mac 上的本地终端，是对云端版本的补充。像在任何终端里一样使用你的电脑，很快还可以直接在应用里把服务器和密钥迁移到云端。
 download.meta = 免费 · macOS 11 或更高版本 · Apple 芯片和 Intel
 download.phone = <b>tTerm Mac 版需要安装在 Mac 上。</b>请在 Mac 上打开此页面；在手机上，可以直接在浏览器里使用 tTerm Web。
 download.open_web = 打开 tTerm Web
@@ -238,9 +239,15 @@ download.install.title = 三步把 Mac 接入 tTerm
 download.install.1.title = 打开文件
 download.install.1.text = 打开下载的 tTerm.dmg，把 tTerm 拖到“应用程序”文件夹。
 download.install.2.title = 启动 tTerm
-download.install.2.text = 这台 Mac 的终端立即可用，无需账号，也无需设置。
-download.install.3.title = 登录并迁移
-download.install.3.text = Sign in 会打开浏览器：确认之后，你的服务器和笔记就会出现在窗口中。应用会询问是否把这台 Mac 上的服务器和密钥迁移到云端。
+download.install.2.text = 首次启动时，macOS 会要求你确认，<a href="#first-open">查看方法</a>。之后，这台 Mac 的终端立即可用，无需账号，也无需设置。
+download.install.3.title = 随时登录
+download.install.3.text = Sign in 会打开浏览器：确认之后，你的服务器和笔记就会出现在窗口中。
+download.first.title = 首次启动，仅需一次
+download.first.new.os = macOS 15 或更高版本
+download.first.new.text = 打开 tTerm，点按“完成”。然后前往“系统设置”→“隐私与安全性”：在底部有关 tTerm 的那一行旁边，点按“仍要打开”（尝试打开后，这个按钮会显示大约一小时），再输入 Mac 的密码进行确认。
+download.first.old.os = macOS 11–14
+download.first.old.text = 在“访达”中打开“应用程序”文件夹，按住 Control 键点按 tTerm，选取“打开”，然后再点按一次“打开”。
+download.first.after = 此后，tTerm 会照常打开，新版本也由它自行安装，macOS 不会再为此询问。
 download.others.eyebrow = 其他系统
 download.others.title = 不只是 Mac
 download.others.windows = Windows 版正在开发中。
@@ -255,7 +262,9 @@ download.faq.3.a = 不需要。不登录时，tTerm 只用于这台 Mac：shell�
 download.faq.4.q = 我的命令保存在哪里？
 download.faq.4.a = 这台 Mac 上的命令及其输出在本机保存 30 天，放在只有你能读取的应用文件夹中。服务器上的命令保存在云端，和 tTerm Web 一样。
 download.faq.5.q = 应用经过签名吗？
-download.faq.5.a = 是的，使用 Apple Developer ID 签名，并已通过 Apple 的检查（公证）。所以 macOS 打开它时不会弹出警告。
+download.faq.5.a = 是的，使用 tTerm 自己的证书签名，每次更新也都用这个证书签名。目前还没有 Apple Developer ID 签名，所以首次启动时，macOS 会要求你确认，<a href="#first-open">查看方法</a>。之后就不会再询问，更新时也一样。
+download.faq.update.q = 应用如何更新？
+download.faq.update.a = 自动更新。tTerm 每六小时检查一次有没有新版本，下载后在不打扰你的时候安装：在你退出 tTerm 时，或它的终端里没有任何程序在运行时。在 Settings → Updates 中，可以设置为安装前先询问你。
 download.faq.6.q = 怎样卸载？
 download.faq.6.a = 在菜单栏中退出 tTerm，然后把它从“应用程序”拖到“废纸篓”。如果登录过，可以在 Settings → Devices 中移除这台 Mac。
 download.faq.7.q = 代码开源吗？

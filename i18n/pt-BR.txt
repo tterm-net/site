@@ -193,8 +193,9 @@ blog.near.3 = Notas curtas sobre cada nova versão, no canal do tTerm.
 blog.near.4 = Abrir o canal
 # ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
 mac.download = Baixar para Mac
+mac.chip = Novo: o tTerm para Mac<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Baixar</span>
 mac.title = Um terminal local <br>com a nuvem dentro
-mac.lead = Nossa novidade mais recente, que complementa a versão na nuvem. O tTerm para Mac abre os shells do seu computador numa janela própria, em blocos, e funciona até sem conta. Ao entrar na sua conta, os seus servidores da nuvem aparecem na mesma janela, e os servidores e as chaves do seu Mac podem migrar para a nuvem.
+mac.lead = Nossa novidade mais recente, que complementa a versão na nuvem. O tTerm para Mac abre os shells do seu computador numa janela própria, em blocos, e funciona até sem conta. Ao entrar na sua conta, os seus servidores da nuvem aparecem na mesma janela, e em breve os servidores e as chaves do seu Mac vão poder migrar para a nuvem.
 mac.note = Grátis · macOS 11 ou posterior <br>Windows e Linux em breve
 mac.soon = EM BREVE
 mac.window_label = A janela do tTerm para Mac: à esquerda, os projetos, e em Personal este MacBook-Pro, marcado como this Mac, com os seus terminais, e abaixo dele o servidor web-01 da nuvem. No topo, abas deste Mac e da nuvem lado a lado; no feed, comandos no Mac em blocos: git pull, npm test, docker compose. Na barra de menus do Mac, o ícone do tTerm está aberto: Open tTerm, MacBook-Pro: online in tTerm Web, Quit tTerm.
@@ -217,7 +218,7 @@ mac.faq.app.a = Sim, o <a href="{{$base}}/download/">tTerm para Mac</a>. Ele tra
 # download page
 download.title = tTerm para Mac: o terminal local
 download.description = Um terminal local com a nuvem dentro: os shells do seu Mac em blocos e, ao lado deles, os seus servidores, as notas e tudo mais que você tem no tTerm. Grátis, macOS 11 ou posterior.
-download.lead = Nossa novidade mais recente: um terminal local no seu Mac, que complementa a versão na nuvem. Trabalhe com o seu computador como em qualquer terminal e, quando estiver pronto, migre os seus servidores e chaves para a nuvem direto do app.
+download.lead = Nossa novidade mais recente: um terminal local no seu Mac, que complementa a versão na nuvem. Trabalhe com o seu computador como em qualquer terminal, e em breve você vai poder migrar os seus servidores e chaves para a nuvem direto do app.
 download.meta = Grátis · macOS 11 ou posterior · Apple silicon e Intel
 download.phone = <b>O tTerm para Mac é instalado no Mac.</b> Abra esta página em um Mac e, pelo celular, trabalhe no tTerm Web, direto no navegador.
 download.open_web = Abrir o tTerm Web
@@ -238,9 +239,15 @@ download.install.title = Três passos para ter seu Mac no tTerm
 download.install.1.title = Abra o arquivo
 download.install.1.text = Abra o tTerm.dmg baixado e arraste o tTerm para a pasta Aplicativos.
 download.install.2.title = Inicie o tTerm
-download.install.2.text = Os terminais deste Mac funcionam na hora, sem conta e sem configuração.
-download.install.3.title = Entre e migre
-download.install.3.text = Sign in abre o navegador: confirme, e os seus servidores e notas aparecem na janela. O app sugere migrar para a nuvem os servidores e as chaves deste Mac.
+download.install.2.text = Na primeira vez, o macOS pede que você confirme a abertura, <a href="#first-open">veja como</a>. Depois disso, os terminais deste Mac funcionam na hora, sem conta e sem configuração.
+download.install.3.title = Entre quando quiser
+download.install.3.text = Sign in abre o navegador: confirme, e os seus servidores e notas aparecem na janela.
+download.first.title = A primeira abertura, só uma vez
+download.first.new.os = macOS 15 ou posterior
+download.first.new.text = Abra o tTerm e clique em “OK”. Depois, vá até “Ajustes do Sistema” → “Privacidade e Segurança”: lá embaixo, ao lado da linha sobre o tTerm, clique em “Abrir Mesmo Assim” (o botão aparece por cerca de uma hora depois da sua tentativa) e confirme com a senha do seu Mac.
+download.first.old.os = macOS 11–14
+download.first.old.text = No Finder, abra a pasta Aplicativos, faça Controle + clique no tTerm, escolha “Abrir” e clique em “Abrir” mais uma vez.
+download.first.after = Depois disso, o tTerm abre normalmente e instala as novas versões sozinho, sem que o macOS pergunte nada sobre elas.
 download.others.eyebrow = Outros sistemas
 download.others.title = Não só para Mac
 download.others.windows = O app para Windows está em desenvolvimento.
@@ -255,7 +262,9 @@ download.faq.3.a = Não. Sem entrar numa conta, o tTerm trabalha com este Mac: s
 download.faq.4.q = Onde ficam os meus comandos?
 download.faq.4.a = Os comandos deste Mac, com as saídas, ficam nele por 30 dias, na pasta do app, que só você pode ler. Os comandos nos servidores ficam guardados na nuvem, como no tTerm Web.
 download.faq.5.q = O app é assinado?
-download.faq.5.a = Sim, com um Apple Developer ID, e a Apple o verificou (notarização). Por isso, o macOS o abre sem avisos.
+download.faq.5.a = Sim, com o certificado próprio do tTerm, e cada atualização também é assinada com ele. Ainda não há assinatura Apple Developer ID, então, na primeira vez, o macOS pede que você confirme a abertura, <a href="#first-open">veja como</a>. Depois disso, ele não pergunta mais, nem nas atualizações.
+download.faq.update.q = Como o app se atualiza?
+download.faq.update.a = Sozinho. A cada seis horas, o tTerm verifica se há uma nova versão, baixa e instala quando isso não atrapalha nada: quando você encerra o app ou quando nada está rodando nos terminais dele. Em Settings → Updates, você pode fazer com que ele pergunte antes.
 download.faq.6.q = Como removo o app?
 download.faq.6.a = Encerre o tTerm pela barra de menus e arraste-o da pasta Aplicativos para o Lixo. Se você entrou numa conta, pode esquecer este Mac em Settings → Devices.
 download.faq.7.q = O código é aberto?
