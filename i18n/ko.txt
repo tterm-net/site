@@ -38,6 +38,7 @@ shell.license = AGPL-3.0 라이선스
 # ------------------------------------------------------------ blog: words and dates (build_updates.py)
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
+blog.tag.mac = Mac용 tTerm
 blog.tag.bot = 봇
 blog.tag.site = 사이트
 blog.read = 글 읽기
@@ -193,7 +194,7 @@ blog.near.3 = tTerm 채널에서 릴리스마다 짧은 소식을 전해요.
 blog.near.4 = 채널 열기
 # ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
 mac.download = Mac용 다운로드
-mac.chip = 새 소식: Mac용 tTerm<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">다운로드</span>
+mac.chip = 새 소식: Mac용 로컬 터미널<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">읽기</span>
 mac.title = 클라우드가 들어 있는 <br>로컬 터미널
 mac.lead = 클라우드 버전에 더해 새로 선보이는 앱이에요. Mac용 tTerm은 컴퓨터의 셸을 전용 창에서 블록으로 열고, 계정 없이도 작동해요. 로그인하면 클라우드의 서버가 같은 창에 나타나고, 곧 Mac에 있는 서버와 키도 클라우드로 옮길 수 있게 돼요.
 mac.note = 무료 · macOS 11 이상 <br>Windows와 Linux는 곧 지원
@@ -413,6 +414,32 @@ post.several-terminals.prose.6 = Telegram에서 블로그 구독하기
 # more-section
 post.several-terminals.more-section.1 = 블로그의 다른 글
 post.several-terminals.more-section.2 = 모든 글
+
+# ------------------------------------------------------------ post: /blog/tterm-for-mac/
+post.tterm-for-mac.title = Mac용 tTerm: 클라우드가 들어 있는 로컬 터미널 · tTerm 블로그
+post.tterm-for-mac.og_title = Mac용 tTerm: 클라우드가 들어 있는 로컬 터미널
+post.tterm-for-mac.description = tTerm에 Mac용 앱이 생겼어요. 컴퓨터의 셸을 블록으로 열고 계정 없이도 작동하며, 로그인하면 클라우드의 서버가 같은 창에 나타나요. 무료, macOS 11 이상.
+post.tterm-for-mac.figcaption = Personal에 있는 이 Mac, 그리고 그 옆에 있는 클라우드의 서버.
+post.tterm-for-mac.why.title = 앱까지 만든 이유
+post.tterm-for-mac.why.text = tTerm Web은 클라우드 터미널이에요. 서버의 터미널이 클라우드에 있어서 어떤 브라우저에서든 열 수 있어요. 하지만 빌드, git, docker처럼 작업은 내 컴퓨터에서 시작될 때가 많아요. 그래서 별도의 터미널이 필요했고, tTerm은 그 옆 브라우저 탭에 열어 두어야 했어요. 이제는 내 Mac과 클라우드가 한 창에 있어요.
+post.tterm-for-mac.can.title = 주요 기능
+post.tterm-for-mac.item.1.title = 내 Mac에서도 블록으로.
+post.tterm-for-mac.item.1.text = 이 Mac의 bash나 zsh에서 실행하는 명령마다 출력, 종료 코드, 시간이 담긴 블록이 돼요. 입력 줄에서는 기록과 Tab 자동 완성을 쓸 수 있고, 위험한 명령 앞에서는 tTerm이 한 번 더 물어봐요. 기록은 Mac에 30일 동안 남아요.
+post.tterm-for-mac.item.2.title = 계정이 필요 없어요.
+post.tterm-for-mac.item.2.text = 이 Mac의 터미널, 기록, 노트는 Mac 자체에 저장돼요. 계정은 클라우드를 쓸 때만 필요해요.
+post.tterm-for-mac.item.3.title = 같은 창 안의 클라우드.
+post.tterm-for-mac.item.3.text = 브라우저로 로그인하면 서버와 그 노트, 그리고 ⌘K로 전체를 검색하는 기능이 Mac의 터미널 옆에 열려요.
+post.tterm-for-mac.item.4.title = 어디서든 내 Mac으로.
+post.tterm-for-mac.item.4.text = 앱이 이 Mac을 tTerm Web에 열어 줘서, 브라우저와 휴대폰에서도 이 Mac의 터미널을 쓸 수 있어요. tTerm은 메뉴 막대에 있고, Mac을 켜면 함께 실행돼요.
+post.tterm-for-mac.item.5.title = 알아서 업데이트돼요.
+post.tterm-for-mac.item.5.text = tTerm은 6시간마다 새 버전이 있는지 확인하고, 방해가 되지 않을 때 설치해요. 직접 결정하고 싶다면 Settings → Updates에서 먼저 묻도록 설정할 수 있어요.
+post.tterm-for-mac.install.title = 설치 방법
+post.tterm-for-mac.install.text = <a href="{{$base}}/download/">다운로드 페이지</a>에서 tTerm을 다운로드하고, tTerm.dmg를 열어 tTerm을 응용 프로그램 폴더로 드래그하세요. 앱은 Apple Developer ID가 아니라 tTerm 자체 인증서로 서명되어 있어서, 처음 실행할 때는 macOS가 실행을 확인해 달라고 해요. 방법은 다운로드 페이지에 나와 있어요. 그다음부터는 tTerm이 평소처럼 열리고, 업데이트할 때도 macOS가 묻지 않아요.
+post.tterm-for-mac.next.title = 앞으로의 계획
+post.tterm-for-mac.next.text = 곧 앱이 이 Mac의 <code>~/.ssh</code>에서 서버와 키를 찾아 클릭 몇 번으로 클라우드로 옮겨 줄 거예요. 그다음은 Windows와 Linux 차례예요. 앱의 코드는 tTerm의 다른 코드와 마찬가지로 공개되어 있어요: <a href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">github.com/tterm-net/tterm-app</a>, AGPL v3.
+post.tterm-for-mac.cta.title = 내 Mac에서 tTerm 써 보기
+post.tterm-for-mac.more-section.1 = 블로그의 다른 글
+post.tterm-for-mac.more-section.2 = 모든 글
 
 # ------------------------------------------------------------ post: /blog/tterm-is-live/
 # meta

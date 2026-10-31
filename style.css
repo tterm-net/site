@@ -1652,7 +1652,7 @@ h1, h2, h3, h4 { margin: 0; }
   font: 600 11.5px/1 var(--sans);
   color: var(--lead);
 }
-.tag-web { border-color: transparent; background: var(--amber-14); color: var(--amber); font-weight: 700; }
+.tag-web, .tag-mac { border-color: transparent; background: var(--amber-14); color: var(--amber); font-weight: 700; }
 /* The post kept on top while newer ones follow it. */
 .pin { display: inline-flex; align-items: center; gap: 5px; font: 600 12.5px/1 var(--sans); color: var(--lead); }
 .pin svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; }
@@ -1702,6 +1702,7 @@ h1, h2, h3, h4 { margin: 0; }
 }
 .cover-bar { display: flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; background: #121419; border-bottom: 1px solid var(--line-2); }
 .cover-bar i { width: 9px; height: 9px; border-radius: 50%; background: #2c3038; }
+.cover-app .cover-bar span { background: none; color: var(--faint); font-weight: 600; }
 .cover-bar span { margin: 0 auto; transform: translateX(-21px); padding: 3px 12px; border-radius: 6px; background: var(--raised-2); color: var(--dim); font: 500 11px/1.4 var(--sans); }
 .cover-tabs { display: flex; height: 34px; padding: 0 8px; border-bottom: 1px solid var(--line-2); font: 600 12px/1 var(--sans); white-space: nowrap; }
 .cover-tabs > span { display: flex; align-items: center; gap: 7px; padding: 0 12px; color: var(--dim); }

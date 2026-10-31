@@ -1,14 +1,16 @@
 # Updates for tterm.net: the blog.
 #
 # One entry per release worth telling about, not per version. The site
-# builds the blog in both languages from here, so the two cannot drift apart.
+# builds the blog in every language from here, so they cannot drift apart.
 #
 # An entry:
 #
-#   ## 2026-10-07 bot              date, then what it is about: web, bot or site
+#   ## 2026-10-07 bot              date, then what it is about: web, mac, bot
+#                                  or site
 #   ## 2026-10-18 web /blog/x/     a path after that: the entry has a page of
-#                                  its own, /blog/x/ and /ru/blog/x/, and the
-#                                  text below is its lead
+#                                  its own, /blog/x/ in every language
+#                                  (templates/blog/x.html), and the text below
+#                                  is its lead
 #   ## 2026-10-18 web /blog/x/ pinned
 #                                  that page leads the blog even when newer
 #                                  entries come after it: one at most
@@ -16,9 +18,69 @@
 #   Text in English.
 #   @ru Заголовок по-русски
 #   Текст по-русски.
+#   ...                            and so on, every language of the site
 #
 # Newest first. Dates in ISO form, one entry per date; the pages format them
 # per language. The text is shown as plain text: no markup, no code style.
+
+## 2026-10-31 mac /blog/tterm-for-mac/ pinned
+
+@en tTerm for Mac: a local terminal with the cloud inside
+tTerm now has an app for the Mac. It opens your computer's shells in blocks
+and works without an account, and once you sign in, your servers from the
+cloud appear in the same window. Free, macOS 11 or later.
+
+@ru tTerm для Mac: локальный терминал с облаком внутри
+У tTerm появилось приложение для Mac. Оно открывает шеллы твоего компьютера
+блоками и работает без аккаунта, а после входа в том же окне появляются твои
+серверы из облака. Бесплатно, macOS 11 и новее.
+
+@de tTerm für Mac: ein lokales Terminal mit der Cloud an Bord
+tTerm gibt es jetzt als App für den Mac. Die App öffnet die Shells deines
+Computers in Blöcken und funktioniert ohne Konto. Nach der Anmeldung
+erscheinen deine Server aus der Cloud im selben Fenster. Kostenlos, macOS 11
+oder neuer.
+
+@es tTerm para Mac: una terminal local con la nube dentro
+tTerm ya tiene una aplicación para Mac. Abre los shells de tu computadora en
+bloques, funciona sin cuenta y, cuando inicias sesión, muestra en la misma
+ventana tus servidores de la nube. Gratis, macOS 11 o posterior.
+
+@fr tTerm pour Mac : un terminal local avec le cloud intégré
+tTerm a désormais une application pour Mac. Elle ouvre les shells de votre
+ordinateur sous forme de blocs et fonctionne sans compte. Une fois connecté,
+vous retrouvez vos serveurs du cloud dans la même fenêtre. Gratuit, macOS 11
+ou version ultérieure.
+
+@it tTerm per Mac: un terminale locale con dentro il cloud
+tTerm ora ha un'app per Mac. Apre le shell del tuo computer a blocchi,
+funziona senza account e, dopo l'accesso, mostra nella stessa finestra i
+tuoi server dal cloud. Gratis, macOS 11 o successivo.
+
+@pl tTerm dla Maca: lokalny terminal z chmurą w środku
+tTerm ma teraz aplikację na Maca. Otwiera powłoki twojego komputera w
+blokach i działa bez konta, a po zalogowaniu w tym samym oknie pojawiają się
+twoje serwery z chmury. Za darmo, macOS 11 lub nowszy.
+
+@pt-BR tTerm para Mac: um terminal local com a nuvem dentro
+O tTerm agora tem um app para Mac. Ele abre os shells do seu computador em
+blocos, funciona sem conta e, depois que você entra, mostra os seus
+servidores da nuvem na mesma janela. Grátis, macOS 11 ou posterior.
+
+@tr Mac için tTerm: bulutu içinde taşıyan yerel bir terminal
+tTerm'in artık bir Mac uygulaması var. Bilgisayarının kabuklarını bloklar
+halinde açar ve hesap olmadan çalışır, giriş yaptığında da buluttaki
+sunucuların aynı pencerede belirir. Ücretsiz, macOS 11 veya üstü.
+
+@ja Mac 版 tTerm：クラウドを内蔵したローカルターミナル
+tTerm に Mac 版アプリが加わりました。お使いの Mac のシェルをブロックで開き、アカウントがなくても使えます。サインインすると、同じウィンドウにクラウドのサーバーも表示されます。無料、macOS 11 以降に対応。
+
+@ko Mac용 tTerm: 클라우드가 들어 있는 로컬 터미널
+tTerm에 Mac용 앱이 생겼어요. 컴퓨터의 셸을 블록으로 열고 계정 없이도 작동하며, 로그인하면 클라우드의 서버가 같은 창에
+나타나요. 무료, macOS 11 이상.
+
+@zh-CN tTerm Mac 版：内置云端的本地终端
+tTerm 推出了 Mac 应用。它以块的形式打开你电脑上的 shell，没有账号也能使用；登录后，你在云端的服务器也会出现在同一个窗口里。免费，支持 macOS 11 或更高版本。
 
 ## 2026-10-25 web /blog/open-source/
 
@@ -152,7 +214,7 @@ tTerm Web に加わった機能を紹介します。
 运维手册、检查清单和访问说明，现在就放在相关机器的旁边。你可以创建自己的项目并为每个项目设定颜色，给终端命名，还能把机器和笔记从一个项目移到另一个项目。以下是
 tTerm Web 上线头几天新增的功能。
 
-## 2026-10-18 web /blog/tterm-web/ pinned
+## 2026-10-18 web /blog/tterm-web/
 
 @en tTerm now works in the browser
 All your servers and computers in one tab, every command in a block of its

@@ -38,6 +38,7 @@ shell.license = AGPL-3.0 license
 # ------------------------------------------------------------ blog: words and dates (build_updates.py)
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
+blog.tag.mac = tTerm for Mac
 blog.tag.bot = Bot
 blog.tag.site = Site
 blog.read = Read the post
@@ -193,7 +194,7 @@ blog.near.3 = Short notes on every release in the tTerm channel.
 blog.near.4 = Open the channel
 # ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
 mac.download = Download for Mac
-mac.chip = New: tTerm for Mac<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Download</span>
+mac.chip = New: Local terminal for Mac<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Read</span>
 mac.title = A local terminal <br>with the cloud inside
 mac.lead = Our newest addition, alongside the cloud version. tTerm for Mac opens your computer's shells in a window of its own, in blocks, and works even without an account. Sign in, and your servers from the cloud appear in the same window, and soon the servers and keys on your Mac will be able to move to the cloud.
 mac.note = Free · macOS 11 or later <br>Windows and Linux soon
@@ -413,6 +414,32 @@ post.several-terminals.prose.6 = Subscribe to our blog on Telegram
 # more-section
 post.several-terminals.more-section.1 = More from the blog
 post.several-terminals.more-section.2 = All posts
+
+# ------------------------------------------------------------ post: /blog/tterm-for-mac/
+post.tterm-for-mac.title = tTerm for Mac: a local terminal with the cloud inside · tTerm blog
+post.tterm-for-mac.og_title = tTerm for Mac: a local terminal with the cloud inside
+post.tterm-for-mac.description = tTerm now has an app for the Mac. It opens your computer's shells in blocks and works without an account, and once you sign in, your servers from the cloud appear in the same window. Free, macOS 11 or later.
+post.tterm-for-mac.figcaption = This Mac in Personal, and your servers from the cloud next to it.
+post.tterm-for-mac.why.title = Why an app as well
+post.tterm-for-mac.why.text = tTerm Web is the cloud terminal: your servers' terminals live in the cloud and open from any browser. But work often starts on your own computer: builds, git, docker. For that you needed a separate terminal, with tTerm in a browser tab beside it. Now your Mac and the cloud are in one window.
+post.tterm-for-mac.can.title = What it does
+post.tterm-for-mac.item.1.title = Blocks on your own Mac.
+post.tterm-for-mac.item.1.text = This Mac's bash or zsh, every command a block with its output, exit code and time. An input line with history and Tab, and tTerm asks before a dangerous command. The history stays on the Mac for 30 days.
+post.tterm-for-mac.item.2.title = No account needed.
+post.tterm-for-mac.item.2.text = This Mac's terminals, history and notes are kept on the Mac itself. You need an account only for the cloud.
+post.tterm-for-mac.item.3.title = The cloud in the same window.
+post.tterm-for-mac.item.3.text = Sign in through your browser, and your servers, their notes and search across everything with ⌘K open next to the Mac's terminals.
+post.tterm-for-mac.item.4.title = Your Mac from anywhere.
+post.tterm-for-mac.item.4.text = The app opens this Mac to tTerm Web: its terminal is there from a browser and from your phone. tTerm lives in the menu bar and starts with your Mac.
+post.tterm-for-mac.item.5.title = It updates itself.
+post.tterm-for-mac.item.5.text = Every six hours tTerm checks for a new version and installs it when nothing is in the way. If you would rather decide, choose in Settings → Updates to be asked first.
+post.tterm-for-mac.install.title = How to install
+post.tterm-for-mac.install.text = Download tTerm on the <a href="{{$base}}/download/">download page</a>, open tTerm.dmg and drag tTerm to Applications. The app is signed with our own certificate, not an Apple Developer ID, so the first time macOS asks you to confirm, and the download page shows how. After that tTerm opens as usual, and macOS does not ask about updates.
+post.tterm-for-mac.next.title = What's next
+post.tterm-for-mac.next.text = Soon the app will find the servers and keys in <code>~/.ssh</code> on this Mac and move them to the cloud in a couple of clicks. Then Windows and Linux. The app's code is open, like all of tTerm: <a href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">github.com/tterm-net/tterm-app</a>, AGPL v3.
+post.tterm-for-mac.cta.title = Try tTerm on your Mac
+post.tterm-for-mac.more-section.1 = More from the blog
+post.tterm-for-mac.more-section.2 = All posts
 
 # ------------------------------------------------------------ post: /blog/tterm-is-live/
 # meta

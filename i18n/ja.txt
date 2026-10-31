@@ -38,6 +38,7 @@ shell.license = AGPL-3.0 ライセンス
 # ------------------------------------------------------------ blog: words and dates (build_updates.py)
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
+blog.tag.mac = Mac 版 tTerm
 blog.tag.bot = ボット
 blog.tag.site = サイト
 blog.read = 記事を読む
@@ -193,7 +194,7 @@ blog.near.3 = tTerm のチャンネルでは、リリースごとに短いお知
 blog.near.4 = チャンネルを開く
 # ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
 mac.download = Mac 版をダウンロード
-mac.chip = 新登場：Mac 版 tTerm<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">ダウンロード</span>
+mac.chip = 新着：Mac 版ローカルターミナル<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">読む</span>
 mac.title = クラウドを内蔵した<br>ローカルターミナル
 mac.lead = クラウド版と並ぶ、tTerm の新しい製品です。Mac 版 tTerm は、お使いの Mac のシェルを専用のウィンドウで開いてブロックで表示し、アカウントがなくても使えます。サインインすると、同じウィンドウにクラウドのサーバーが表示されます。まもなく、Mac にあるサーバーと鍵もクラウドへ移せるようになります。
 mac.note = 無料 · macOS 11 以降<br>Windows と Linux にも近日対応
@@ -413,6 +414,32 @@ post.several-terminals.prose.6 = Telegram でブログを購読
 # more-section
 post.several-terminals.more-section.1 = ブログのほかの記事
 post.several-terminals.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/tterm-for-mac/
+post.tterm-for-mac.title = Mac 版 tTerm：クラウドを内蔵したローカルターミナル · tTerm ブログ
+post.tterm-for-mac.og_title = Mac 版 tTerm：クラウドを内蔵したローカルターミナル
+post.tterm-for-mac.description = tTerm に Mac 版アプリが加わりました。お使いの Mac のシェルをブロックで開き、アカウントがなくても使えます。サインインすると、同じウィンドウにクラウドのサーバーも表示されます。無料、macOS 11 以降に対応。
+post.tterm-for-mac.figcaption = Personal の中のこの Mac と、その隣に並ぶクラウドのサーバー。
+post.tterm-for-mac.why.title = なぜアプリも作ったのか
+post.tterm-for-mac.why.text = tTerm Web はクラウドターミナルです。サーバーのターミナルはクラウドにあり、どのブラウザーからでも開けます。でも、ビルドや git、docker など、作業は自分のコンピューターで始まることがよくあります。そのためには別のターミナルが必要で、tTerm はその隣のブラウザーのタブで開いていました。これからは、Mac とクラウドを 1 つのウィンドウで使えます。
+post.tterm-for-mac.can.title = できること
+post.tterm-for-mac.item.1.title = 自分の Mac でもブロック。
+post.tterm-for-mac.item.1.text = この Mac の bash や zsh で、コマンドがそれぞれ出力、終了コード、時間とともにブロックになります。入力行では履歴と Tab 補完が使え、危険なコマンドの前には tTerm がもう一度確認します。履歴は 30 日間、Mac に保存されます。
+post.tterm-for-mac.item.2.title = アカウントは不要。
+post.tterm-for-mac.item.2.text = この Mac のターミナル、履歴、ノートは、Mac 自体に保存されます。アカウントが必要なのは、クラウドを使うときだけです。
+post.tterm-for-mac.item.3.title = 同じウィンドウにクラウドも。
+post.tterm-for-mac.item.3.text = ブラウザーからサインインすると、Mac のターミナルの隣に、サーバーとそのノート、⌘K による全体検索が開きます。
+post.tterm-for-mac.item.4.title = どこからでも自分の Mac に。
+post.tterm-for-mac.item.4.text = アプリがこの Mac を tTerm Web につなぎ、ブラウザーやスマートフォンからこの Mac のターミナルを使えるようにします。tTerm はメニューバーに常駐し、Mac と一緒に起動します。
+post.tterm-for-mac.item.5.title = 自動でアップデート。
+post.tterm-for-mac.item.5.text = tTerm は 6 時間ごとに新しいバージョンがないか確認し、作業の妨げにならないときにインストールします。自分で決めたい場合は、Settings → Updates で、先に確認するよう設定できます。
+post.tterm-for-mac.install.title = インストール方法
+post.tterm-for-mac.install.text = <a href="{{$base}}/download/">ダウンロードページ</a>から tTerm をダウンロードし、tTerm.dmg を開いて、tTerm を「アプリケーション」フォルダーにドラッグします。アプリは Apple Developer ID ではなく、tTerm 独自の証明書で署名しているため、初回は macOS から起動の確認を求められます。手順はダウンロードページで説明しています。その後は tTerm が通常どおり開き、アップデートについて macOS から確認を求められることもありません。
+post.tterm-for-mac.next.title = 今後の予定
+post.tterm-for-mac.next.text = まもなく、この Mac の <code>~/.ssh</code> にあるサーバーと鍵をアプリが見つけて、数クリックでクラウドへ移せるようになります。その後は Windows と Linux にも対応する予定です。アプリのコードも、tTerm 全体と同じく AGPL v3 で公開しています：<a href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">github.com/tterm-net/tterm-app</a>。
+post.tterm-for-mac.cta.title = お使いの Mac で tTerm を試す
+post.tterm-for-mac.more-section.1 = ブログのほかの記事
+post.tterm-for-mac.more-section.2 = すべての記事
 
 # ------------------------------------------------------------ post: /blog/tterm-is-live/
 # meta

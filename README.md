@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.6.0.** The number lives in `VERSION`; the build puts it in a
+**Version 2.6.1.** The number lives in `VERSION`; the build puts it in a
 `<meta>` tag and the footer of every page, so you can tell what is deployed
 by viewing source.
 
@@ -256,7 +256,7 @@ blog". Those parts sit between `<!-- updates:NAME -->` comments, and editing
 them by hand is pointless: the next run overwrites them. The reading time
 counts the post's own text, not those parts.
 
-An entry starts with its date and what it is about (`web`, `bot` or `site`),
+An entry starts with its date and what it is about (`web`, `mac`, `bot` or `site`),
 then a title and text in every language (the words around them, "Read the
 post", the months, "4 min read", are strings in `i18n/`, under `blog.` and
 `date.`):

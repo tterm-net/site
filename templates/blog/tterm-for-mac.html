@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="{{$lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{post.tterm-for-mac.title}}</title>
+<meta name="description" content="{{post.tterm-for-mac.description}}">
+{{$links}}
+<meta property="og:title" content="{{post.tterm-for-mac.og_title}}">
+<meta property="og:description" content="{{post.tterm-for-mac.description}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{$canonical}}">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{{$locales}}
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld --><!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="{{$version}}">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">{{shell.skip}}</a>
+<div class="page">
+
+{{>header}}
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="{{$base}}/blog/">{{shell.blog}}</a>
+      <!-- updates:meta --><!-- /updates:meta -->
+      <h1>{{post.tterm-for-mac.og_title}}</h1>
+      <p class="post-lead">{{post.tterm-for-mac.description}}</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+{{>app_window}}
+      <figcaption>{{post.tterm-for-mac.figcaption}}</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>{{post.tterm-for-mac.why.title}}</h2>
+      <p>{{post.tterm-for-mac.why.text}}</p>
+
+      <h2>{{post.tterm-for-mac.can.title}}</h2>
+      <ul class="prose-bullets">
+      <li><b>{{post.tterm-for-mac.item.1.title}}</b> {{post.tterm-for-mac.item.1.text}}</li>
+      <li><b>{{post.tterm-for-mac.item.2.title}}</b> {{post.tterm-for-mac.item.2.text}}</li>
+      <li><b>{{post.tterm-for-mac.item.3.title}}</b> {{post.tterm-for-mac.item.3.text}}</li>
+      <li><b>{{post.tterm-for-mac.item.4.title}}</b> {{post.tterm-for-mac.item.4.text}}</li>
+      <li><b>{{post.tterm-for-mac.item.5.title}}</b> {{post.tterm-for-mac.item.5.text}}</li>
+      </ul>
+
+      <h2>{{post.tterm-for-mac.install.title}}</h2>
+      <p>{{post.tterm-for-mac.install.text}}</p>
+
+      <h2>{{post.tterm-for-mac.next.title}}</h2>
+      <p>{{post.tterm-for-mac.next.text}}</p>
+
+      <div class="post-cta">
+        <h2>{{post.tterm-for-mac.cta.title}}</h2>
+        <p>{{download.meta}}</p>
+        <a class="btn btn-primary" href="{{$base}}/download/">{{mac.download}}</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="{{post.tterm-for-mac.more-section.1}}">
+    <div class="split-row">
+      <h2>{{post.tterm-for-mac.more-section.1}}</h2>
+      <a class="btn btn-ghost btn-md" href="{{$base}}/blog/">{{post.tterm-for-mac.more-section.2}}</a>
+    </div>
+    <!-- updates:more --><!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="{{$base}}/blog/">{{post.tterm-for-mac.more-section.2}}</a>
+  </section>
+
+</main>
+
+{{>footer}}
+
+</div>
+</body>
+</html>

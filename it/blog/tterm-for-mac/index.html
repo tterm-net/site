@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tTerm per Mac: un terminale locale con dentro il cloud · Blog di tTerm</title>
+<meta name="description" content="tTerm ora ha un'app per Mac. Apre le shell del tuo computer a blocchi, funziona senza account e, dopo l'accesso, mostra nella stessa finestra i tuoi server dal cloud. Gratis, macOS 11 o successivo.">
+<link rel="canonical" href="https://tterm.net/it/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/tterm-for-mac/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/tterm-for-mac/">
+<meta property="og:title" content="tTerm per Mac: un terminale locale con dentro il cloud">
+<meta property="og:description" content="tTerm ora ha un'app per Mac. Apre le shell del tuo computer a blocchi, funziona senza account e, dopo l'accesso, mostra nella stessa finestra i tuoi server dal cloud. Gratis, macOS 11 o successivo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/it/blog/tterm-for-mac/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "tTerm per Mac: un terminale locale con dentro il cloud",
+  "description": "tTerm ora ha un'app per Mac. Apre le shell del tuo computer a blocchi, funziona senza account e, dopo l'accesso, mostra nella stessa finestra i tuoi server dal cloud. Gratis, macOS 11 o successivo.",
+  "datePublished": "2026-10-31",
+  "inLanguage": "it",
+  "url": "https://tterm.net/it/blog/tterm-for-mac/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.6.1">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Vai al contenuto</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/it/" aria-label="tTerm, pagina iniziale">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">beta</span>
+    </a>
+    <nav class="nav" aria-label="Sezioni">
+      <a href="/it/#features">Funzionalità</a>
+      <a href="/it/#security">Sicurezza</a>
+      <a href="/it/#pricing">Prezzi</a>
+      <details class="res">
+        <summary>Risorse<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="/it/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>Blog</b><small>Le novità di tTerm</small></span></a>
+          <a href="/it/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>Domande frequenti</b><small>Le risposte ai dubbi più comuni</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Canale Telegram</b><small>Una breve nota su ogni nuova versione</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>Codice sorgente su GitHub</b><small>Tutto il codice di tTerm, AGPL v3</small></span></a>
+        </div>
+      </details>
+      <a class="nav-mac" href="/it/download/">Terminale locale<span class="nav-new" aria-hidden="true"></span></a>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>IT</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/tterm-for-mac/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/tterm-for-mac/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/tterm-for-mac/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/tterm-for-mac/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/tterm-for-mac/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/pl/blog/tterm-for-mac/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/tterm-for-mac/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/tterm-for-mac/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/tterm-for-mac/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/tterm-for-mac/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/tterm-for-mac/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/tterm-for-mac/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Accedi</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Inizia gratis</a>
+      <details class="menu">
+        <summary aria-label="Menu"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menu">
+          <a href="/it/#features">Funzionalità</a>
+          <a href="/it/#security">Sicurezza</a>
+          <a href="/it/#pricing">Prezzi</a>
+          <a href="/it/download/">Terminale locale</a>
+          <p class="menu-label">Risorse</p>
+          <a href="/it/blog/" aria-current="page">Blog</a>
+          <a href="/it/#faq">Domande frequenti</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canale Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Codice sorgente su GitHub</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>Italiano</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/tterm-for-mac/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/tterm-for-mac/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/tterm-for-mac/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/blog/tterm-for-mac/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/tterm-for-mac/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+              <a href="/pl/blog/tterm-for-mac/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/tterm-for-mac/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/tterm-for-mac/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/tterm-for-mac/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/tterm-for-mac/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/tterm-for-mac/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/tterm-for-mac/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">Inizia gratis</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="/it/blog/">Blog</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-mac">tTerm per Mac</span><time datetime="2026-10-31">31 ottobre 2026</time><span class="sep" aria-hidden="true">·</span><span>3 minuti di lettura</span></p>
+    <!-- /updates:meta -->
+      <h1>tTerm per Mac: un terminale locale con dentro il cloud</h1>
+      <p class="post-lead">tTerm ora ha un'app per Mac. Apre le shell del tuo computer a blocchi, funziona senza account e, dopo l'accesso, mostra nella stessa finestra i tuoi server dal cloud. Gratis, macOS 11 o successivo.</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+<div class="app-shot">
+  <div class="demo-frame">
+    <div class="demo" role="img" aria-label="La finestra di tTerm per Mac: a sinistra i progetti, in Personal questo MacBook-Pro, contrassegnato come this Mac, con i suoi terminali, e sotto il server web-01 dal cloud. In alto, le schede di questo Mac e del cloud una accanto all'altra; nel feed, i comandi sul Mac a blocchi: git pull, npm test, docker compose. Nella barra dei menu del Mac è aperto il menu di tTerm: Open tTerm, MacBook-Pro: online in tTerm Web, Quit tTerm.">
+      <div class="dm" aria-hidden="true">
+        <div class="app-bar"><i class="r"></i><i class="y"></i><i class="g"></i><span>tTerm</span></div>
+        <div class="dm-body">
+          <aside class="dm-side">
+            <div class="dm-side-head"><img src="/assets/logo.svg" alt="" width="18" height="18">tTerm</div>
+            <div class="dm-tree-wrap"><div class="dm-label">Projects</div><div class="dm-tree">
+              <div class="dm-project pc-violet"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">P</span><span class="dm-project-name">Personal</span><span class="dm-role">Owner</span></div><div class="dm-sub"><span>Machines</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div><div class="dm-group-in"><div class="dm-row"><span class="here-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 19h20"/></svg></span><span class="dm-row-name">MacBook-Pro</span><span class="here-pill">this Mac</span><b class="state"></b></div><div class="dm-leaf on"><span class="dm-av">DG</span><span class="dm-leaf-name">terminal 1</span></div><div class="dm-leaf"><span class="dm-av">DG</span><span class="dm-leaf-name">dev server</span><b class="dot busy"></b></div></div></div>
+              <div class="dm-project pc-sky"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">CX</span><span class="dm-project-name">Client X</span><span class="dm-role">Owner</span></div><div class="dm-sub"><span>Machines</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div><div class="dm-group-in"><div class="dm-row"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/></svg><span class="dm-row-name">web-01</span></div><div class="dm-leaf"><span class="dm-av">DG</span><span class="dm-leaf-name">deploy</span></div></div></div>
+              <div class="dm-project pc-teal folded"><div class="dm-project-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg><span class="dm-badge">A</span><span class="dm-project-name">Acme</span><span class="dm-role">Owner</span></div></div>
+            </div><div class="dm-newproj"><span class="dm-dash"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>New project</div></div>
+            <div class="dm-account"><span class="dm-avatar">DG</span><span class="dm-who"><b>Denis</b><small>Free plan</small></span></div>
+          </aside>
+          <div class="dm-main">
+            <div class="dm-bar"><div class="dm-tabs"><span class="dm-tab pc-violet on"><b class="dot"></b><span><em>P/</em>MacBook-Pro · terminal 1</span></span><span class="dm-tab pc-violet"><b class="dot busy"></b><span><em>P/</em>MacBook-Pro · dev server</span></span><span class="dm-tab pc-sky"><b class="dot"></b><span><em>CX/</em>web-01 · deploy</span></span></div><span class="dm-plus"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="dm-jump"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Search<kbd>&#x2318;K</kbd></span></div>
+            <div class="dm-term-view">
+              <div class="dm-feed"><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">0.0 s</span></div><div class="dm-cmd"><em>&#x276F;</em> ls</div><div class="dm-out">README.md  docker-compose.yml  package.json  src</div></div><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">0.9 s</span></div><div class="dm-cmd"><em>&#x276F;</em> git pull</div><div class="dm-out">Already up to date.</div></div><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">3.1 s</span></div><div class="dm-cmd"><em>&#x276F;</em> npm test</div><div class="dm-out"> &#x2713; src/cart.test.ts (24 tests)</div><div class="dm-out"> &#x2713; src/api.test.ts (31 tests)</div><div class="dm-out ok"> Tests  128 passed (128)</div></div><div class="dm-block"><div class="dm-meta"><b class="dot"></b><span>~/Work/shop</span><span class="dm-branch">main</span><span class="dm-time">1.4 s</span></div><div class="dm-cmd"><em>&#x276F;</em> docker compose up -d</div><div class="dm-out"> &#x2714; Container shop-db-1   Started</div><div class="dm-out ok"> &#x2714; Container shop-web-1  Started</div></div></div>
+              <div class="dm-input"><div class="dm-chips"><span>~/Work/shop</span><span class="dm-branch-chip">main</span></div><div class="dm-line"><em>&#x276F;</em><span class="dm-typed"></span><span class="dm-caret"></span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bar-menu" aria-hidden="true">
+    <div class="bar-strip"><span class="bar-icon"><svg viewBox="65 55 380 380" aria-hidden="true"><path d="M118 168 L206 256 L118 344"/><path d="M330 140 L330 316 C330 344 344 356 372 350"/><path d="M272 212 L392 212"/></svg></span><span>16:20</span></div>
+    <div class="bar-drop"><p class="on">Open tTerm</p><hr><p class="muted">MacBook-Pro: online in tTerm Web</p><hr><p>Quit tTerm</p></div>
+  </div>
+</div>
+      <figcaption>Questo Mac in Personal e, accanto, i tuoi server dal cloud.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>Perché anche un'app</h2>
+      <p>tTerm Web è il terminale cloud: i terminali dei tuoi server vivono nel cloud e si aprono da qualsiasi browser. Ma il lavoro spesso inizia sul tuo computer: build, git, docker. Per questo ti serviva un terminale a parte, con tTerm accanto in una scheda del browser. Ora il tuo Mac e il cloud sono in un'unica finestra.</p>
+
+      <h2>Cosa fa</h2>
+      <ul class="prose-bullets">
+      <li><b>I blocchi sul tuo Mac.</b> La shell di questo Mac, bash o zsh: ogni comando è un blocco con output, codice di uscita e tempo. Una riga di input con cronologia e Tab, e prima di un comando pericoloso tTerm ti chiede conferma. La cronologia resta sul Mac per 30 giorni.</li>
+      <li><b>Non serve un account.</b> Terminali, cronologia e note di questo Mac restano sul Mac stesso. L'account serve solo per il cloud.</li>
+      <li><b>Il cloud nella stessa finestra.</b> Accedi dal browser e accanto ai terminali del Mac si aprono i tuoi server, le loro note e la ricerca su tutto con ⌘K.</li>
+      <li><b>Il tuo Mac ovunque tu sia.</b> L'app apre questo Mac a tTerm Web: il suo terminale è raggiungibile dal browser e dal telefono. tTerm sta nella barra dei menu e si avvia insieme al Mac.</li>
+      <li><b>Si aggiorna da sola.</b> Ogni sei ore tTerm controlla se c'è una nuova versione e la installa quando non disturba. Se preferisci decidere tu, in Settings → Updates puoi fare in modo che prima ti chieda conferma.</li>
+      </ul>
+
+      <h2>Come installarlo</h2>
+      <p>Scarica tTerm dalla <a href="/it/download/">pagina di download</a>, apri tTerm.dmg e trascina tTerm nella cartella Applicazioni. L'app è firmata con il nostro certificato, non con un Apple Developer ID, quindi la prima volta macOS ti chiede di confermare l'apertura, e la pagina di download mostra come fare. Da quel momento tTerm si apre come sempre e macOS non chiede nulla sugli aggiornamenti.</p>
+
+      <h2>Cosa viene dopo</h2>
+      <p>Presto l'app troverà i server e le chiavi in <code>~/.ssh</code> su questo Mac e li sposterà nel cloud in un paio di clic. Poi arriveranno Windows e Linux. Il codice dell'app è aperto, come tutto tTerm: <a href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">github.com/tterm-net/tterm-app</a>, AGPL v3.</p>
+
+      <div class="post-cta">
+        <h2>Prova tTerm sul tuo Mac</h2>
+        <p>Gratis · macOS 11 o successivo · Apple silicon e Intel</p>
+        <a class="btn btn-primary" href="/it/download/">Scarica per Mac</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="Altro dal blog">
+    <div class="split-row">
+      <h2>Altro dal blog</h2>
+      <a class="btn btn-ghost btn-md" href="/it/blog/">Tutti gli articoli</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/it/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">25 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">Perché il codice di tTerm è aperto, anche se arrivano i piani a pagamento</span>
+        <span class="post-mini-text">Tutto il codice di tTerm ora è sotto licenza AGPL v3 invece che MIT, e presto arriveranno i piani a pagamento.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/it/blog/notes-and-projects/">
+        <span class="post-mini-meta"><time datetime="2026-10-20">20 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">Note, progetti a colori e nomi dei terminali</span>
+        <span class="post-mini-text">Runbook, checklist e note sugli accessi ora stanno accanto alle macchine a cui si riferiscono.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/it/blog/tterm-web/">
+        <span class="post-mini-meta"><time datetime="2026-10-18">18 ott</time> · tTerm Web</span>
+        <span class="post-mini-title">tTerm ora funziona nel browser</span>
+        <span class="post-mini-text">Tutti i tuoi server e computer in una scheda, ogni comando in un blocco a sé e nessuna chiave sul tuo dispositivo.</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/it/blog/">Tutti gli articoli</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/it/" aria-label="tTerm, pagina iniziale">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">beta</span>
+        </a>
+        <p class="foot-tag">Il terminale cloud per server e computer.</p>
+      </div>
+      <nav class="foot-cols" aria-label="Link">
+        <div class="foot-col">
+          <p class="foot-h">Prodotto</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="/it/download/">tTerm per Mac<span class="foot-new">Novità</span></a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot Telegram</a>
+          <a href="/it/#pricing">Prezzi</a>
+          <a href="/it/#security">Sicurezza</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Risorse</p>
+          <a href="/it/blog/">Blog</a>
+          <a href="/it/#faq">Domande frequenti</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canale Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Codice sorgente su GitHub</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Note legali</p>
+          <a href="/terms/">Termini di servizio</a>
+          <a href="/privacy/">Informativa sulla privacy</a>
+          <a href="/it/blog/open-source/">Licenza AGPL-3.0</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.6.1</p>
+      <details class="lang lang-up">
+        <summary aria-label="Lingua: italiano"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>IT</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/tterm-for-mac/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/tterm-for-mac/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/tterm-for-mac/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/tterm-for-mac/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/tterm-for-mac/" hreflang="it" lang="it" aria-current="true">Italiano<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/pl/blog/tterm-for-mac/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/tterm-for-mac/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/tterm-for-mac/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/tterm-for-mac/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/tterm-for-mac/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/tterm-for-mac/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/tterm-for-mac/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

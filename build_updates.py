@@ -46,7 +46,7 @@ SOURCE = ROOT / "updates.md"
 LANGS = tuple(lang.code for lang in S.LANGUAGES)
 
 #: What an entry is about; each reads on the page as blog.tag.<name>.
-TAGS = ("web", "bot", "site")
+TAGS = ("web", "mac", "bot", "site")
 
 
 def word(lang: str, key: str) -> str:
@@ -77,6 +77,16 @@ COVER = """<div class="cover" aria-hidden="true">
           </div>
         </div>
       </div>"""
+
+#: The same picture for a post about tTerm for Mac: the app's own window.
+COVER_APP = (COVER.replace('<div class="cover"', '<div class="cover cover-app"', 1)
+             .replace("<span>app.tterm.net</span>", "<span>tTerm</span>", 1)
+             .replace("<em>P/</em>web-01", "<em>P/</em>MacBook-Pro", 1)
+             .replace("<em>A/</em>api-prod", "<em>CX/</em>web-01", 1))
+
+
+def cover_of(entry: Entry) -> str:
+    return COVER_APP if entry.tag == "mac" else COVER
 
 
 @dataclass
@@ -340,7 +350,7 @@ def render_main(entries: list[Entry], lang: str) -> str:
     if top:
         out.append(
             f'  <a class="post-feature" href="{url(top, lang)}">\n'
-            f'      {COVER}\n'
+            f'      {cover_of(top)}\n'
             f'      <div class="post-feature-body">\n'
             f'        {meta_html(top, lang, pin=True)}\n'
             f'        <h3 class="post-feature-title">{esc(top.title[lang])}</h3>\n'
@@ -362,7 +372,7 @@ def render_featured(entries: list[Entry], lang: str) -> str:
     return (
         f'<a class="post-hero" href="{url(top, lang)}">\n'
         f'      <div class="post-hero-cover">\n'
-        f'      {COVER}\n'
+        f'      {cover_of(top)}\n'
         f'      </div>\n'
         f'      <div class="post-hero-body">\n'
         f'        {meta_html(top, lang, pin=True)}\n'

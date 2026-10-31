@@ -38,6 +38,7 @@ shell.license = Licencja AGPL-3.0
 # ------------------------------------------------------------ blog: words and dates (build_updates.py)
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
+blog.tag.mac = tTerm dla Maca
 blog.tag.bot = Bot
 blog.tag.site = Strona
 blog.read = Przeczytaj wpis
@@ -193,7 +194,7 @@ blog.near.3 = Krótkie informacje o każdym wydaniu na kanale tTerma.
 blog.near.4 = Otwórz kanał
 # ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
 mac.download = Pobierz na Maca
-mac.chip = Nowość: tTerm dla Maca<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Pobierz</span>
+mac.chip = Nowość: Terminal lokalny dla Maca<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Czytaj</span>
 mac.title = Lokalny terminal <br>z chmurą w środku
 mac.lead = Nasza najnowsza aplikacja, uzupełnienie wersji w chmurze. tTerm dla Maca otwiera powłoki twojego komputera we własnym oknie, z poleceniami w blokach, i działa nawet bez konta. Po zalogowaniu w tym samym oknie pojawią się twoje serwery z chmury, a wkrótce serwery i klucze z twojego Maca będzie można przenieść do chmury.
 mac.note = Za darmo · macOS 11 lub nowszy <br>Windows i Linux wkrótce
@@ -413,6 +414,32 @@ post.several-terminals.prose.6 = Subskrybuj nasz blog na Telegramie
 # more-section
 post.several-terminals.more-section.1 = Więcej na blogu
 post.several-terminals.more-section.2 = Wszystkie wpisy
+
+# ------------------------------------------------------------ post: /blog/tterm-for-mac/
+post.tterm-for-mac.title = tTerm dla Maca: lokalny terminal z chmurą w środku · Blog tTerm
+post.tterm-for-mac.og_title = tTerm dla Maca: lokalny terminal z chmurą w środku
+post.tterm-for-mac.description = tTerm ma teraz aplikację na Maca. Otwiera powłoki twojego komputera w blokach i działa bez konta, a po zalogowaniu w tym samym oknie pojawiają się twoje serwery z chmury. Za darmo, macOS 11 lub nowszy.
+post.tterm-for-mac.figcaption = Ten Mac w Personal, a obok twoje serwery z chmury.
+post.tterm-for-mac.why.title = Po co jeszcze aplikacja
+post.tterm-for-mac.why.text = tTerm Web to terminal w chmurze: terminale twoich serwerów działają w chmurze i otwierają się w dowolnej przeglądarce. Ale praca często zaczyna się na własnym komputerze: budowanie, git, docker. Do tego potrzebny był osobny terminal, a tTerm działał obok, w karcie przeglądarki. Teraz twój Mac i chmura są w jednym oknie.
+post.tterm-for-mac.can.title = Co potrafi
+post.tterm-for-mac.item.1.title = Bloki na twoim Macu.
+post.tterm-for-mac.item.1.text = Powłoka bash lub zsh tego Maca, każde polecenie jako blok z wynikiem, kodem wyjścia i czasem. Pole wprowadzania z historią i uzupełnianiem klawiszem Tab, a przed niebezpiecznym poleceniem tTerm prosi o potwierdzenie. Historia zostaje na Macu przez 30 dni.
+post.tterm-for-mac.item.2.title = Konto nie jest potrzebne.
+post.tterm-for-mac.item.2.text = Terminale, historia i notatki tego Maca są przechowywane na samym Macu. Konto jest potrzebne tylko do chmury.
+post.tterm-for-mac.item.3.title = Chmura w tym samym oknie.
+post.tterm-for-mac.item.3.text = Zaloguj się przez przeglądarkę, a obok terminali Maca otworzą się twoje serwery, ich notatki i wyszukiwanie we wszystkim pod ⌘K.
+post.tterm-for-mac.item.4.title = Twój Mac z dowolnego miejsca.
+post.tterm-for-mac.item.4.text = Aplikacja udostępnia tego Maca w tTerm Web: jego terminal otworzysz w przeglądarce i na telefonie. tTerm ma ikonę na pasku menu i uruchamia się przy starcie Maca.
+post.tterm-for-mac.item.5.title = Aktualizuje się sama.
+post.tterm-for-mac.item.5.text = Co sześć godzin tTerm sprawdza, czy jest nowa wersja, i instaluje ją, kiedy niczemu to nie przeszkadza. Jeśli wolisz decydować samodzielnie, w Settings → Updates możesz ustawić, żeby tTerm najpierw pytał.
+post.tterm-for-mac.install.title = Jak zainstalować
+post.tterm-for-mac.install.text = Pobierz tTerm ze <a href="{{$base}}/download/">strony pobierania</a>, otwórz tTerm.dmg i przeciągnij tTerm do folderu „Aplikacje”. Aplikacja jest podpisana naszym własnym certyfikatem, a nie certyfikatem Apple Developer ID, dlatego za pierwszym razem macOS poprosi o potwierdzenie uruchomienia. Jak to zrobić, pokazujemy na stronie pobierania. Potem tTerm otwiera się jak zwykle, a macOS nie pyta o aktualizacje.
+post.tterm-for-mac.next.title = Co dalej
+post.tterm-for-mac.next.text = Wkrótce aplikacja sama znajdzie serwery i klucze z <code>~/.ssh</code> na tym Macu i przeniesie je do chmury w kilka kliknięć. Następne będą Windows i Linux. Kod aplikacji jest otwarty, jak cały tTerm: <a href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">github.com/tterm-net/tterm-app</a>, AGPL v3.
+post.tterm-for-mac.cta.title = Wypróbuj tTerm na swoim Macu
+post.tterm-for-mac.more-section.1 = Więcej na blogu
+post.tterm-for-mac.more-section.2 = Wszystkie wpisy
 
 # ------------------------------------------------------------ post: /blog/tterm-is-live/
 # meta

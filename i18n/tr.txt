@@ -38,6 +38,7 @@ shell.license = AGPL-3.0 lisansı
 # ------------------------------------------------------------ blog: words and dates (build_updates.py)
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
+blog.tag.mac = Mac için tTerm
 blog.tag.bot = Bot
 blog.tag.site = Site
 blog.read = Yazıyı oku
@@ -193,7 +194,7 @@ blog.near.3 = tTerm kanalında her sürümle ilgili kısa notlar.
 blog.near.4 = Kanalı aç
 # ------------------------------------------------------------ tTerm for Mac: the main page and the download page (switch: mac)
 mac.download = Mac için indir
-mac.chip = Yeni: Mac için tTerm<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">İndir</span>
+mac.chip = Yeni: Mac için Yerel terminal<span class="chip-bar" aria-hidden="true"></span><span class="chip-go">Oku</span>
 mac.title = Bulutu içinde taşıyan <br>yerel bir terminal
 mac.lead = Bulut sürümünün yanına eklediğimiz en yeni ürün. Mac için tTerm, bilgisayarının kabuklarını kendi penceresinde, bloklar halinde açar ve hesap olmadan da çalışır. Giriş yaptığında buluttaki sunucuların aynı pencerede belirir, yakında Mac'indeki sunucuları ve anahtarları da buluta taşıyabileceksin.
 mac.note = Ücretsiz · macOS 11 veya üstü <br>Windows ve Linux yakında
@@ -413,6 +414,32 @@ post.several-terminals.prose.6 = Telegram'da blogumuza abone ol
 # more-section
 post.several-terminals.more-section.1 = Blogdan diğer yazılar
 post.several-terminals.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/tterm-for-mac/
+post.tterm-for-mac.title = Mac için tTerm: bulutu içinde taşıyan yerel bir terminal · tTerm blogu
+post.tterm-for-mac.og_title = Mac için tTerm: bulutu içinde taşıyan yerel bir terminal
+post.tterm-for-mac.description = tTerm'in artık bir Mac uygulaması var. Bilgisayarının kabuklarını bloklar halinde açar ve hesap olmadan çalışır, giriş yaptığında da buluttaki sunucuların aynı pencerede belirir. Ücretsiz, macOS 11 veya üstü.
+post.tterm-for-mac.figcaption = Personal içinde bu Mac, yanında da buluttan gelen sunucuların.
+post.tterm-for-mac.why.title = Neden bir de uygulama
+post.tterm-for-mac.why.text = tTerm Web bir bulut terminali: sunucularının terminalleri bulutta çalışır ve her tarayıcıdan açılır. Ama iş çoğu zaman kendi bilgisayarında başlar: derlemeler, git, docker. Bunun için ayrı bir terminal gerekiyordu, tTerm de yanında bir tarayıcı sekmesinde açık duruyordu. Artık Mac'in ve bulut tek pencerede.
+post.tterm-for-mac.can.title = Neler yapar
+post.tterm-for-mac.item.1.title = Kendi Mac'inde bloklar.
+post.tterm-for-mac.item.1.text = Bu Mac'teki bash ya da zsh: her komut çıktısı, çıkış kodu ve süresiyle bir blok. Giriş satırında geçmiş ve Tab var, tehlikeli bir komuttan önce de tTerm bir kez daha sorar. Geçmiş 30 gün boyunca Mac'te kalır.
+post.tterm-for-mac.item.2.title = Hesap gerekmez.
+post.tterm-for-mac.item.2.text = Bu Mac'in terminalleri, geçmişi ve notları Mac'in kendisinde saklanır. Hesap yalnızca bulut için gerekir.
+post.tterm-for-mac.item.3.title = Aynı pencerede bulut.
+post.tterm-for-mac.item.3.text = Tarayıcı üzerinden giriş yaptığında sunucuların, onlarla ilgili notlar ve ⌘K ile her şeyde arama, Mac'in terminallerinin hemen yanında açılır.
+post.tterm-for-mac.item.4.title = Mac'ine her yerden ulaş.
+post.tterm-for-mac.item.4.text = Uygulama bu Mac'i tTerm Web'e açar: terminaline tarayıcıdan da telefonundan da ulaşabilirsin. tTerm menü çubuğunda yer alır ve Mac'inle birlikte açılır.
+post.tterm-for-mac.item.5.title = Kendiliğinden güncellenir.
+post.tterm-for-mac.item.5.text = tTerm altı saatte bir yeni sürüm olup olmadığına bakar ve varsa, hiçbir şeyi bölmeyeceği bir anda kurar. Kararı kendin vermek istersen, Settings → Updates bölümünde önce sana sormasını seçebilirsin.
+post.tterm-for-mac.install.title = Nasıl kurulur
+post.tterm-for-mac.install.text = tTerm'i <a href="{{$base}}/download/">indirme sayfasından</a> indir, tTerm.dmg dosyasını aç ve tTerm'i Uygulamalar klasörüne sürükle. Uygulama Apple Developer ID ile değil, kendi sertifikamızla imzalı, bu yüzden macOS ilk açılışta senden onay ister. Bunun nasıl yapılacağını indirme sayfasında gösteriyoruz. Sonrasında tTerm her zamanki gibi açılır ve macOS güncellemeler için onay istemez.
+post.tterm-for-mac.next.title = Sırada ne var
+post.tterm-for-mac.next.text = Yakında uygulama, bu Mac'teki <code>~/.ssh</code> içinden sunucuları ve anahtarları kendisi bulacak ve birkaç tıkla buluta taşıyacak. Ardından sıra Windows ve Linux'a gelecek. Uygulamanın kodu da tTerm'in tamamı gibi açık: <a href="https://github.com/tterm-net/tterm-app" target="_blank" rel="noopener">github.com/tterm-net/tterm-app</a>, AGPL v3.
+post.tterm-for-mac.cta.title = tTerm'i Mac'inde dene
+post.tterm-for-mac.more-section.1 = Blogdan diğer yazılar
+post.tterm-for-mac.more-section.2 = Tüm yazılar
 
 # ------------------------------------------------------------ post: /blog/tterm-is-live/
 # meta
