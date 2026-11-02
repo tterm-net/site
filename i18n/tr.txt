@@ -11,6 +11,8 @@ shell.features = Özellikler
 shell.security = Güvenlik
 shell.pricing = Fiyatlandırma
 shell.resources = Kaynaklar
+shell.docs = Belgeler
+shell.docs_note = Nasıl başlanır ve her şey nasıl çalışır
 shell.blog = Blog
 shell.blog_note = tTerm'deki yenilikler
 shell.faq = SSS
@@ -79,6 +81,7 @@ index.strip.6 = Dizüstü bilgisayarda, tablette ya da telefonda
 # how
 index.how.1 = Nasıl çalışır
 index.how.2 = Üç adımda ilk komutun
+index.how.more = Belgelerde hızlı başlangıç
 index.how.3 = Makine ekle
 index.how.4 = Sunucuda tek bir komut yeter, sunucu hemen listende görünür. Bilgisayar için içeriden bağlanan küçük bir ajan gerekir.
 index.how.5 = Terminal aç
@@ -113,6 +116,7 @@ index.features.24 = terminal 2 yerine deploy, logs, migrations. Terminale çift 
 # security
 index.security.1 = Güvenlik
 index.security.2 = Anahtar saklamayız. <br>Port açmayız.
+index.security.more = Ayrıntılı: erişim nasıl çalışır
 index.security.3 = Makinelerine erişim vermek kolay, geri almak da bir o kadar kolay. Bunu şöyle sağlıyoruz.
 index.security.4 = İki dakikalık sertifika
 index.security.5 = Her bağlantıya, üzerinde adının yazılı olduğu ve yalnızca o sunucuda geçerli ayrı bir SSH sertifikası verilir. Anahtarlarına hiçbir zaman ihtiyacımız olmaz.
@@ -153,6 +157,7 @@ index.pricing.12 = Sekme kapansa da terminaller çalışır
 index.pricing.13 = Koyu ve açık tema
 # faq
 index.faq.1 = Sorular
+index.faq.more = Cevabı bulamadın mı? Belgelere göz at
 index.faq.2 = Bilgisayarıma bir şey kurmam gerekiyor mu?
 index.faq.3 = Hayır, bir tarayıcı yeterli. Yalnızca bağlandığın makinelere bir şey kurarsın: sunucuda tek bir komut, bilgisayarda küçük bir ajan.
 index.faq.4 = Neleri saklıyorsunuz?
@@ -243,6 +248,7 @@ download.install.2.title = tTerm'i başlat
 download.install.2.text = İlk açılışta macOS senden onay ister, <a href="#first-open">adımlar burada</a>. Sonrasında bu Mac'in terminalleri hesap ve ayar gerektirmeden hemen çalışır.
 download.install.3.title = İstediğinde giriş yap
 download.install.3.text = Sign in düğmesi tarayıcını açar: girişi onayladığında sunucuların ve notların pencerede belirir.
+download.install.more = Belgelerde adım adım kılavuz
 download.first.title = İlk açılış, yalnızca bir kez
 download.first.new.os = macOS 15 veya üstü
 download.first.new.text = tTerm'i aç ve “Bitti” düğmesine tıkla. Sonra “Sistem Ayarları” → “Gizlilik ve Güvenlik” bölümüne git: en altta, tTerm ile ilgili satırın yanındaki “Yine de Aç” düğmesine tıkla (bu düğme, açmayı denedikten sonra yaklaşık bir saat görünür) ve Mac'inin parolasıyla onayla.

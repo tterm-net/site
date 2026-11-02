@@ -2297,6 +2297,14 @@ figure { margin: 0; }
   .first-open dd + dt { margin-top: 12px; }
 }
 
+/* A link under a section into the documentation: amber, an arrow after it. */
+.more-link { margin: 28px 0 0; }
+.more-link a { display: inline-flex; align-items: center; gap: 8px; color: var(--amber); font: 600 15px/1.4 var(--sans); text-decoration: none; }
+.more-link a:hover { color: var(--amber-hi); text-decoration: underline; text-underline-offset: 3px; }
+.more-link svg { flex: none; width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.more-link a:hover svg { transform: translateX(2px); }
+.faq .more-link { text-align: center; }
+
 /* -------------------------------------------------------- other scripts */
 
 /* Chinese, Japanese and Korean: Manrope has none of their letters, and a web

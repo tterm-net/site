@@ -12,6 +12,7 @@
       <details class="res">
         <summary>{{shell.resources}}<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
         <div class="res-menu">
+          <a href="https://docs.tterm.net{{$base}}/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3z"/><path d="M21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/></svg><span><b>{{shell.docs}}</b><small>{{shell.docs_note}}</small></span></a>
           <a href="{{$base}}/blog/"{{$cur_blog}}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>{{shell.blog}}</b><small>{{shell.blog_note}}</small></span></a>
           <a href="{{$base}}/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>{{shell.faq}}</b><small>{{shell.faq_note}}</small></span></a>
           <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>{{shell.channel}}</b><small>{{shell.channel_note}}</small></span></a>
@@ -37,6 +38,7 @@
           <a href="{{$base}}/#pricing">{{shell.pricing}}</a>
 {{#if mac}}          <a href="{{$base}}/download/"{{$cur_download}}>{{shell.local}}</a>
 {{/if}}          <p class="menu-label">{{shell.resources}}</p>
+          <a href="https://docs.tterm.net{{$base}}/">{{shell.docs}}</a>
           <a href="{{$base}}/blog/"{{$cur_blog}}>{{shell.blog}}</a>
           <a href="{{$base}}/#faq">{{shell.faq}}</a>
           <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">{{shell.channel}}</a>

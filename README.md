@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.6.1.** The number lives in `VERSION`; the build puts it in a
+**Version 2.7.0.** The number lives in `VERSION`; the build puts it in a
 `<meta>` tag and the footer of every page, so you can tell what is deployed
 by viewing source.
 
@@ -62,6 +62,15 @@ only while tTerm for Mac is switched on (see below).
 `/404.html` and the `404.html` of each language's folder answer for any
 address that is not there: Cloudflare serves the nearest one.
 
+The documentation is a site of its own, `https://docs.tterm.net`
+(`tterm-net/docs`), in the same languages and folders: a page links to it
+in its own language (`https://docs.tterm.net/ru/`). The site links to it
+first under Resources, in the header, the phone menu and the footer, and
+from How it works, Security and the questions on the main page and the
+install steps on the download page. The docs take the words of their
+header and footer from this site: after a change to `shell.*`, they need
+a new version too (`scripts/shell_from_site.py` there).
+
 `/terms/` and `/privacy/` hold the Terms of Service and the Privacy Policy, in
 English only: one binding text, linked from the sign-up box of tTerm Web and
 from every footer. They are written by hand, laid out like Todoist's: a list
@@ -82,8 +91,8 @@ reject outright and show as a broken image.
 Every page has the same header and footer, `templates/_header.html` and
 `templates/_footer.html`, written out into each page by the build: a page
 must work without any script. The header: Features, Security and Pricing on
-the main page, Resources (the blog, the questions, the Telegram channel, the
-code) and, while it is switched on, the local terminal. The buttons are only
+the main page, Resources (docs, blog, questions, Telegram channel, code)
+and, while it is switched on, the local terminal. The buttons are only
 Sign in and Start for free. The footer: the name and one line on what tTerm
 is, three columns of links (Product, Resources, Legal), the year, the version
 and the language. On a narrow screen the header's links fold into a

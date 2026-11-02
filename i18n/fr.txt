@@ -11,6 +11,8 @@ shell.features = Fonctions
 shell.security = Sécurité
 shell.pricing = Tarifs
 shell.resources = Ressources
+shell.docs = Documentation
+shell.docs_note = Premiers pas et fonctionnement
 shell.blog = Blog
 shell.blog_note = Les nouveautés de tTerm
 shell.faq = FAQ
@@ -79,6 +81,7 @@ index.strip.6 = Sur un ordinateur portable, une tablette ou un téléphone
 # how
 index.how.1 = Comment ça marche
 index.how.2 = Votre première commande en trois étapes
+index.how.more = Démarrage rapide dans la documentation
 index.how.3 = Ajoutez une machine
 index.how.4 = Une commande sur un serveur, et le voilà dans votre liste. Un ordinateur, lui, a besoin d’un petit agent qui se connecte de l’intérieur.
 index.how.5 = Ouvrez un terminal
@@ -113,6 +116,7 @@ index.features.24 = deploy, logs, migrations au lieu de terminal 2. Double-cliqu
 # security
 index.security.1 = Sécurité
 index.security.2 = Nous ne gardons aucune clé. <br>Nous n’ouvrons aucun port.
+index.security.more = En détail : comment fonctionne l’accès
 index.security.3 = L’accès à vos machines est facile à donner, et tout aussi facile à retirer. Voici comment cela fonctionne.
 index.security.4 = Un certificat valable deux minutes
 index.security.5 = Chaque connexion reçoit son propre certificat SSH, à votre nom, valable pour ce seul serveur. Nous n’avons jamais besoin de vos clés.
@@ -153,6 +157,7 @@ index.pricing.12 = Les terminaux survivent à l’onglet
 index.pricing.13 = Thèmes sombre et clair
 # faq
 index.faq.1 = Questions
+index.faq.more = Pas trouvé de réponse ? Consultez la documentation
 index.faq.2 = Dois-je installer quelque chose sur mon ordinateur ?
 index.faq.3 = Non, un navigateur suffit. Vous n’installez quelque chose que sur les machines auxquelles vous vous connectez : une commande sur un serveur, un petit agent sur un ordinateur.
 index.faq.4 = Que conservez-vous ?
@@ -243,6 +248,7 @@ download.install.2.title = Lancez tTerm
 download.install.2.text = La première fois, macOS vous demande de confirmer l’ouverture, <a href="#first-open">voici comment faire</a>. Ensuite, les terminaux de ce Mac fonctionnent tout de suite, sans compte ni configuration.
 download.install.3.title = Connectez-vous quand vous voulez
 download.install.3.text = Le bouton Sign in ouvre votre navigateur : confirmez la connexion, et vos serveurs et vos notes apparaissent dans la fenêtre.
+download.install.more = Guide pas à pas dans la documentation
 download.first.title = Le premier lancement, une seule fois
 download.first.new.os = macOS 15 ou version ultérieure
 download.first.new.text = Ouvrez tTerm et cliquez sur « OK ». Allez ensuite dans « Réglages Système » → « Confidentialité et sécurité » : en bas, à côté de la ligne concernant tTerm, cliquez sur « Ouvrir quand même » (le bouton reste affiché environ une heure après votre tentative) et confirmez avec le mot de passe de votre Mac.

@@ -11,6 +11,8 @@ shell.features = 功能
 shell.security = 安全
 shell.pricing = 价格
 shell.resources = 资源
+shell.docs = 文档
+shell.docs_note = 快速上手与工作原理
 shell.blog = 博客
 shell.blog_note = tTerm 的最新动态
 shell.faq = 常见问题
@@ -79,6 +81,7 @@ index.strip.6 = 笔记本、平板或手机都行
 # how
 index.how.1 = 工作原理
 index.how.2 = 三步运行第一条命令
+index.how.more = 文档中的快速上手
 index.how.3 = 添加机器
 index.how.4 = 在服务器上运行一条命令，它就会出现在你的列表中。电脑需要一个小型代理，由它从内部发起连接。
 index.how.5 = 打开终端
@@ -113,6 +116,7 @@ index.features.24 = 用 deploy、logs、migrations 代替 terminal 2。双击终
 # security
 index.security.1 = 安全
 index.security.2 = 我们不保存密钥，<br>也不开放端口。
+index.security.more = 详细了解：访问如何运作
 index.security.3 = 机器的访问权限很容易授予，也同样容易收回。具体做法如下。
 index.security.4 = 两分钟有效的证书
 index.security.5 = 每次连接都会获得一张单独的 SSH 证书，里面写着你的名字，只对这一台服务器有效。我们从不需要你的密钥。
@@ -153,6 +157,7 @@ index.pricing.12 = 关掉标签页，终端还在
 index.pricing.13 = 深色和浅色主题
 # faq
 index.faq.1 = 常见问题
+index.faq.more = 没找到答案？看看文档
 index.faq.2 = 我需要在自己的电脑上安装什么吗？
 index.faq.3 = 不需要，有浏览器就够了。只有要连接的机器才需要装东西：服务器上运行一条命令，电脑上装一个小型代理。
 index.faq.4 = 你们会保存哪些数据？
@@ -243,6 +248,7 @@ download.install.2.title = 启动 tTerm
 download.install.2.text = 首次启动时，macOS 会要求你确认，<a href="#first-open">查看方法</a>。之后，这台 Mac 的终端立即可用，无需账号，也无需设置。
 download.install.3.title = 随时登录
 download.install.3.text = Sign in 会打开浏览器：确认之后，你的服务器和笔记就会出现在窗口中。
+download.install.more = 文档中的分步指南
 download.first.title = 首次启动，仅需一次
 download.first.new.os = macOS 15 或更高版本
 download.first.new.text = 打开 tTerm，点按“完成”。然后前往“系统设置”→“隐私与安全性”：在底部有关 tTerm 的那一行旁边，点按“仍要打开”（尝试打开后，这个按钮会显示大约一小时），再输入 Mac 的密码进行确认。

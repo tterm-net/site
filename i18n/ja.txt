@@ -11,6 +11,8 @@ shell.features = 機能
 shell.security = セキュリティ
 shell.pricing = 料金
 shell.resources = リソース
+shell.docs = ドキュメント
+shell.docs_note = はじめ方と仕組み
 shell.blog = ブログ
 shell.blog_note = tTerm の最新情報
 shell.faq = FAQ
@@ -79,6 +81,7 @@ index.strip.6 = ノートパソコン、タブレット、スマートフォン�
 # how
 index.how.1 = 使い方
 index.how.2 = 最初のコマンドまで 3 ステップ
+index.how.more = ドキュメントのクイックスタート
 index.how.3 = マシンを追加
 index.how.4 = サーバーなら、コマンドを 1 つ実行するだけで一覧に加わります。コンピューターには、内側から接続する小さなエージェントを入れます。
 index.how.5 = ターミナルを開く
@@ -113,6 +116,7 @@ index.features.24 = terminal 2 ではなく、deploy、logs、migrations と名�
 # security
 index.security.1 = セキュリティ
 index.security.2 = 鍵は預かりません。<br>ポートも開けません。
+index.security.more = 詳しく：アクセスの仕組み
 index.security.3 = マシンへのアクセス権は簡単に付与でき、同じくらい簡単に取り消せます。そのしくみを紹介します。
 index.security.4 = 有効期間 2 分の証明書
 index.security.5 = 接続のたびに、あなたの名前が入った専用の SSH 証明書を発行します。使えるのはそのサーバー 1 台だけです。お使いの鍵は一切必要ありません。
@@ -153,6 +157,7 @@ index.pricing.12 = タブを閉じても続くターミナル
 index.pricing.13 = ダークテーマとライトテーマ
 # faq
 index.faq.1 = よくある質問
+index.faq.more = 答えが見つからないときはドキュメントへ
 index.faq.2 = 自分のコンピューターに何かをインストールする必要はありますか？
 index.faq.3 = いいえ、ブラウザーがあれば十分です。インストールが必要なのは接続先のマシンだけで、サーバーにはコマンドを 1 つ実行し、コンピューターには小さなエージェントを入れます。
 index.faq.4 = どんなデータを保存していますか？
@@ -243,6 +248,7 @@ download.install.2.title = tTerm を起動
 download.install.2.text = 初回は macOS から起動の確認を求められます。<a href="#first-open">手順はこちら</a>。その後は、この Mac のターミナルがすぐに使えます。アカウントも設定も必要ありません。
 download.install.3.title = 好きなときにサインイン
 download.install.3.text = Sign in を押すとブラウザーが開きます。そこで確認すると、ウィンドウにサーバーとノートが表示されます。
+download.install.more = ドキュメントの詳しい手順
 download.first.title = 初回の起動（1 回だけ）
 download.first.new.os = macOS 15 以降
 download.first.new.text = tTerm を開いて「完了」をクリックします。次に「システム設定」→「プライバシーとセキュリティ」を開き、下のほうにある tTerm についての行の横で「このまま開く」をクリックし（このボタンは、開こうとしてから約 1 時間表示されます）、Mac のパスワードを入力して確定します。
