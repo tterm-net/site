@@ -170,7 +170,7 @@ index.faq.9 = 在 tTerm 中删除服务器，它会自行撤销在这台服务�
 index.faq.10 = Telegram 机器人还在吗？
 index.faq.11 = 它会保留并继续运行：聊天里的终端，<a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>。目前网页版和机器人是分开的。
 index.faq.12 = 怎样联系技术支持？
-index.faq.13 = 写信到 <a href="mailto:support@tterm.net">support@tterm.net</a>。如果你发现了漏洞，请写信到 <a href="mailto:security@tterm.net">security@tterm.net</a>。
+index.faq.13 = 直接在 tTerm 中：账号菜单里“获取帮助”下的“联系支持团队”。或者写信到 <a href="mailto:support@tterm.net">support@tterm.net</a>。如果你发现了漏洞，请写信到 <a href="mailto:security@tterm.net">security@tterm.net</a>。
 # blog
 index.blog.1 = 博客
 index.blog.2 = tTerm 的最新动态
@@ -421,6 +421,30 @@ post.several-terminals.prose.6 = 在 Telegram 上订阅我们的博客
 # more-section
 post.several-terminals.more-section.1 = 博客中的更多文章
 post.several-terminals.more-section.2 = 全部文章
+
+# ------------------------------------------------------------ post: /blog/support/
+post.support.title = 技术支持：直接在 tTerm 中给我们写信 · tTerm 博客
+post.support.og_title = 技术支持：直接在 tTerm 中给我们写信
+post.support.description = 账号菜单中新增了“获取帮助”：可以查看文档，也可以直接在 tTerm 中给支持团队发消息。回复会发到你的邮箱。随消息发送的技术信息在发送前就能看到，你也可以选择不附上。
+post.support.alt = tTerm Web 中的“联系支持团队”窗口：一条说 web-01 的日志打不开的消息，以及会随它一起发送的那行技术信息
+post.support.figcaption = “联系支持团队”窗口：消息，以及会随它一起发送的那行技术信息。
+post.support.why.title = 为什么要做这个功能
+post.support.why.text = 关于 tTerm 的问题，往往是在工作进行到一半时冒出来的：机器连不上，日志打不开，有的功能和你预想的不一样。以前没法直接在 tTerm 里给我们写信。你得先找到该往哪儿写，还得回想自己用的是哪个版本、哪个浏览器。现在，你可以直接在 tTerm 中写消息，版本和浏览器 tTerm 会自己附上。
+post.support.where.title = 在哪里找到
+post.support.where.text = 侧边栏底部的账号菜单现在包括“设置”“账号”“语言”“获取帮助”和“关于我们”。“获取帮助”下有两项。“文档”会用 tTerm 当前的界面语言打开 docs.tterm.net。“联系支持团队”会打开一个窗口，你可以在里面给我们写消息。
+post.support.how.title = 怎样给我们写信
+post.support.how.text = 在“发生了什么”里用你自己的话说明情况，然后点击“发送”或按 ⌘Enter（在 Windows 和 Linux 上按 Ctrl+Enter）。窗口会事先告诉你我们会回复到哪里：你账号的邮箱。你的消息副本也会立即发到那里，这样你自己也有一份。
+post.support.details.title = 随消息发送的内容
+post.support.details.text = 为了不必再回头问你，消息会附带一行技术信息。其中包括 tTerm Web 的版本、你的浏览器及其所在的系统、你的方案，以及你有几台机器，例如“tTerm Web 0.1.25 · Chrome 141, macOS · Free 方案 · 3 台机器”。在“附上技术信息”下方，这行信息的显示和发出去的完全一样。你的命令、命令的输出和你的笔记永远不会被发送。如果连这一行也不想附上，取消勾选即可，这样只会发送你的消息。
+post.support.after.title = 发送之后
+post.support.after.text = 消息发出后，窗口会显示“消息已发送”，并提醒你回复会发到哪里。如果没能发出，窗口也会告诉你，并给出一个地址，让你自己写信过去。
+post.support.about.title = 关于我们
+post.support.about.text = 旁边现在还有“关于我们”。这里有 tterm.net 网站、我们发布动态的 Telegram 频道，以及文档中的“更新内容”，那里按版本列出了 tTerm Web 的每一处变化。
+post.support.next.text = tTerm Mac 版会在下一次更新中加入新菜单和“联系支持团队”。详情见文档中的<a href="https://docs.tterm.net{{$base}}/account/help/">“获取帮助”</a>页面。
+post.support.cta.title = 有问题？直接在 tTerm 里问我们
+post.support.cta.button = 打开 tTerm Web
+post.support.more-section.1 = 博客中的更多文章
+post.support.more-section.2 = 全部文章
 
 # ------------------------------------------------------------ post: /blog/logs/
 post.logs.title = 日志：现在我们会自动为每台机器创建日志 · tTerm 博客

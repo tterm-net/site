@@ -23,6 +23,70 @@
 # Newest first. Dates in ISO form, one entry per date; the pages format them
 # per language. The text is shown as plain text: no markup, no code style.
 
+## 2026-11-04 web /blog/support/
+
+@en Support: write to us right from tTerm
+The account menu now has Get help: the docs, and a message to support right
+from tTerm. The answer comes to your email. The technical details that go
+with your message are shown before you send it, and you can leave them out.
+
+@ru Поддержка: напишите нам прямо из tTerm
+В меню аккаунта появился пункт «Получить помощь»: документация и письмо в
+поддержку прямо из tTerm. Ответ придёт на твою почту. Технические данные,
+которые уходят вместе с сообщением, видны до отправки, и их можно не
+прикладывать.
+
+@de Support: Schreib uns direkt aus tTerm
+Im Kontomenü gibt es jetzt „Hilfe erhalten“: die Dokumentation und eine
+Nachricht an den Support direkt aus tTerm. Die Antwort kommt an deine
+E-Mail-Adresse. Die technischen Daten, die deiner Nachricht angehängt
+werden, siehst du vor dem Senden, und du kannst sie auch weglassen.
+
+@es Soporte: escríbenos directamente desde tTerm
+El menú de la cuenta ahora incluye «Obtener ayuda»: la documentación y un
+mensaje a soporte desde el propio tTerm. La respuesta llega a tu correo.
+Antes de enviar el mensaje, ves los datos técnicos que lo acompañan, y
+puedes dejarlos fuera.
+
+@fr Support : écrivez-nous directement depuis tTerm
+Le menu du compte propose désormais « Obtenir de l’aide » : la
+documentation, et un message au support directement depuis tTerm. La réponse
+vous parvient par e-mail. Les informations techniques qui accompagnent votre
+message s’affichent avant l’envoi, et vous pouvez vous en passer.
+
+@it Supporto: scrivici direttamente da tTerm
+Nel menu dell'account ora c'è “Ottieni aiuto”: la documentazione e un
+messaggio al supporto direttamente da tTerm. La risposta arriva alla tua
+email. I dati tecnici che partono con il messaggio li vedi prima dell'invio,
+e puoi anche non allegarli.
+
+@pl Pomoc techniczna: napisz do nas prosto z tTerma
+W menu konta pojawiła się pozycja „Uzyskaj pomoc”: dokumentacja i wiadomość
+do pomocy technicznej prosto z tTerma. Odpowiedź przyjdzie na twój e-mail.
+Dane techniczne, które idą razem z wiadomością, widzisz przed wysłaniem i
+możesz ich nie dołączać.
+
+@pt-BR Suporte: escreva para a gente direto do tTerm
+O menu da conta agora tem “Obter ajuda”: a documentação e uma mensagem para
+o suporte direto do tTerm. A resposta chega no seu e-mail. Os dados técnicos
+que vão junto com a mensagem aparecem antes do envio, e você pode deixá-los
+de fora.
+
+@tr Destek: bize doğrudan tTerm'den yaz
+Hesap menüsünde artık “Yardım al” var: belgeler ve doğrudan tTerm'den destek
+ekibine bir mesaj. Yanıt e-postana gelir. Mesajınla birlikte gidecek teknik
+bilgileri göndermeden önce görürsün ve istersen eklemeyebilirsin.
+
+@ja サポート：tTerm から直接お問い合わせください
+アカウントメニューに「ヘルプ」が加わり、ドキュメントを開いたり、tTerm から直接サポートにメッセージを送ったりできるようになりました。返信はメールで届きます。メッセージに添えられる技術情報は送信前に確認でき、添付しないこともできます。
+
+@ko 지원팀: tTerm에서 바로 문의하세요
+계정 메뉴에 ‘도움 받기’가 생겨서 문서를 보거나 tTerm에서 바로 지원팀에 메시지를 보낼 수 있어요. 답장은 내 이메일로 와요.
+메시지와 함께 가는 기술 정보는 보내기 전에 확인할 수 있고, 빼고 보낼 수도 있어요.
+
+@zh-CN 技术支持：直接在 tTerm 中给我们写信
+账号菜单中新增了“获取帮助”：可以查看文档，也可以直接在 tTerm 中给支持团队发消息。回复会发到你的邮箱。随消息发送的技术信息在发送前就能看到，你也可以选择不附上。
+
 ## 2026-11-03 web /blog/logs/
 
 @en Logs: we now create a log for every machine automatically

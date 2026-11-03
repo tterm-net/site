@@ -170,7 +170,7 @@ index.faq.9 = Usuń serwer w tTermie, a tTerm sam usunie swój dostęp z serwera
 index.faq.10 = A co z botem na Telegramie?
 index.faq.11 = Zostaje i dalej działa: terminal prosto na czacie, <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>. Na razie aplikacja webowa i bot działają osobno.
 index.faq.12 = Jak skontaktować się z pomocą techniczną?
-index.faq.13 = Napisz na <a href="mailto:support@tterm.net">support@tterm.net</a>. Jeśli znajdziesz podatność, napisz na <a href="mailto:security@tterm.net">security@tterm.net</a>.
+index.faq.13 = Prosto z tTerma: „Napisz do pomocy technicznej” w menu konta, pod pozycją „Uzyskaj pomoc”. Albo napisz na <a href="mailto:support@tterm.net">support@tterm.net</a>. Jeśli znajdziesz podatność, napisz na <a href="mailto:security@tterm.net">security@tterm.net</a>.
 # blog
 index.blog.1 = Blog
 index.blog.2 = Co nowego w tTermie
@@ -421,6 +421,30 @@ post.several-terminals.prose.6 = Subskrybuj nasz blog na Telegramie
 # more-section
 post.several-terminals.more-section.1 = Więcej na blogu
 post.several-terminals.more-section.2 = Wszystkie wpisy
+
+# ------------------------------------------------------------ post: /blog/support/
+post.support.title = Pomoc techniczna: napisz do nas prosto z tTerma · Blog tTerm
+post.support.og_title = Pomoc techniczna: napisz do nas prosto z tTerma
+post.support.description = W menu konta pojawiła się pozycja „Uzyskaj pomoc”: dokumentacja i wiadomość do pomocy technicznej prosto z tTerma. Odpowiedź przyjdzie na twój e-mail. Dane techniczne, które idą razem z wiadomością, widzisz przed wysłaniem i możesz ich nie dołączać.
+post.support.alt = Okno „Napisz do pomocy technicznej” w tTerm Web: wiadomość, że log web-01 się nie otwiera, i wiersz danych technicznych, który zostanie z nią wysłany
+post.support.figcaption = Okno „Napisz do pomocy technicznej”: wiadomość i wiersz danych technicznych, który zostanie z nią wysłany.
+post.support.why.title = Po co
+post.support.why.text = Pytanie o tTerm zwykle pojawia się w środku pracy: maszyna się nie łączy, log się nie otwiera, coś działa inaczej, niż się spodziewasz. Do tej pory nie dało się do nas napisać z samego tTerma. Trzeba było szukać, gdzie pisać, i przypominać sobie, jaką masz wersję i jaką przeglądarkę. Teraz piszesz wiadomość prosto w tTermie, a wersję i przeglądarkę tTerm dołączy sam.
+post.support.where.title = Gdzie to znaleźć
+post.support.where.text = Menu konta na dole panelu bocznego wygląda teraz tak: „Ustawienia”, „Konto”, „Język”, „Uzyskaj pomoc” i „O nas”. W „Uzyskaj pomoc” są dwie pozycje. „Dokumentacja” otwiera docs.tterm.net w języku, w którym mówi do ciebie tTerm. „Napisz do pomocy technicznej” otwiera okno, w którym możesz do nas napisać.
+post.support.how.title = Jak do nas napisać
+post.support.how.text = W polu „Co się stało” opisz własnymi słowami, co się wydarzyło, i naciśnij „Wyślij” albo ⌘Enter (Ctrl+Enter na Windows i Linuksie). Okno z góry mówi, gdzie odpowiemy: na adres e-mail twojego konta. Tam też od razu trafia kopia twojej wiadomości, żeby została także u ciebie.
+post.support.details.title = Co idzie razem z wiadomością
+post.support.details.text = Żebyśmy nie musieli dopytywać, razem z wiadomością wysyłany jest jeden wiersz danych technicznych. Jest w nim wersja tTerm Web, twoja przeglądarka i jej system, twój plan i liczba maszyn, na przykład „tTerm Web 0.1.25 · Chrome 141, macOS · Plan Free · 3 maszyny”. Pod opcją „Dołącz dane techniczne” widać ten wiersz dokładnie w takiej postaci, w jakiej zostanie wysłany. Twoje polecenia, ich wyniki i notatki nigdy nie są wysyłane. Jeśli nie chcesz dołączać nawet tego, odznacz tę opcję, a pójdzie tylko wiadomość.
+post.support.after.title = Po wysłaniu
+post.support.after.text = Gdy wiadomość wyjdzie, okno pokaże „Wiadomość wysłana” i przypomni, gdzie przyjdzie odpowiedź. A jeśli nie udało się jej wysłać, okno o tym powie i poda adres, na który możesz napisać bezpośrednio.
+post.support.about.title = O nas
+post.support.about.text = Obok jest teraz także „O nas”. Są tam strona tterm.net, nasz kanał na Telegramie, gdzie piszemy o nowościach, oraz „Co nowego” w dokumentacji, gdzie dla każdej wersji opisano, co zmieniło się w tTerm Web.
+post.support.next.text = W tTerm dla Maca nowe menu i „Napisz do pomocy technicznej” pojawią się z następną aktualizacją. Szczegóły znajdziesz w dokumentacji, na stronie <a href="https://docs.tterm.net{{$base}}/account/help/">„Uzyskaj pomoc”</a>.
+post.support.cta.title = Masz pytanie? Zadaj je prosto z tTerma
+post.support.cta.button = Otwórz tTerm Web
+post.support.more-section.1 = Więcej na blogu
+post.support.more-section.2 = Wszystkie wpisy
 
 # ------------------------------------------------------------ post: /blog/logs/
 post.logs.title = Logi: teraz automatycznie tworzymy log dla każdej maszyny · Blog tTerm

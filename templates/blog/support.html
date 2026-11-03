@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="{{$lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{post.support.title}}</title>
+<meta name="description" content="{{post.support.description}}">
+{{$links}}
+<meta property="og:title" content="{{post.support.og_title}}">
+<meta property="og:description" content="{{post.support.description}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{$canonical}}">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{{$locales}}
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld --><!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="{{$version}}">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">{{shell.skip}}</a>
+<div class="page">
+
+{{>header}}
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="{{$base}}/blog/">{{shell.blog}}</a>
+      <!-- updates:meta --><!-- /updates:meta -->
+      <h1>{{post.support.og_title}}</h1>
+      <p class="post-lead">{{post.support.description}}</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="post-shot">
+        <div class="cover-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.tterm.net</span></div>
+        <img src="/assets/blog/support-{{$lang}}.webp" width="1920" height="1269" alt="{{post.support.alt}}">
+      </div>
+      <figcaption>{{post.support.figcaption}}</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>{{post.support.why.title}}</h2>
+      <p>{{post.support.why.text}}</p>
+
+      <h2>{{post.support.where.title}}</h2>
+      <p>{{post.support.where.text}}</p>
+
+      <h2>{{post.support.how.title}}</h2>
+      <p>{{post.support.how.text}}</p>
+
+      <h2>{{post.support.details.title}}</h2>
+      <p>{{post.support.details.text}}</p>
+
+      <h2>{{post.support.after.title}}</h2>
+      <p>{{post.support.after.text}}</p>
+
+      <h2>{{post.support.about.title}}</h2>
+      <p>{{post.support.about.text}}</p>
+
+      <p>{{post.support.next.text}}</p>
+
+      <div class="post-cta">
+        <h2>{{post.support.cta.title}}</h2>
+        <a class="btn btn-primary" href="https://app.tterm.net">{{post.support.cta.button}}</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="{{post.support.more-section.1}}">
+    <div class="split-row">
+      <h2>{{post.support.more-section.1}}</h2>
+      <a class="btn btn-ghost btn-md" href="{{$base}}/blog/">{{post.support.more-section.2}}</a>
+    </div>
+    <!-- updates:more --><!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="{{$base}}/blog/">{{post.support.more-section.2}}</a>
+  </section>
+
+</main>
+
+{{>footer}}
+
+</div>
+</body>
+</html>

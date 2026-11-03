@@ -170,7 +170,7 @@ index.faq.9 = tTerm에서 서버를 삭제하면 tTerm이 그 서버에서 자�
 index.faq.10 = Telegram 봇은 어떻게 되나요?
 index.faq.11 = 그대로 남아서 계속 작동해요. 채팅에서 바로 쓰는 터미널, <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>이에요. 지금은 웹 앱과 봇이 따로 운영돼요.
 index.faq.12 = 지원팀에는 어떻게 연락하나요?
-index.faq.13 = <a href="mailto:support@tterm.net">support@tterm.net</a>으로 메일을 보내 주세요. 취약점을 발견했다면 <a href="mailto:security@tterm.net">security@tterm.net</a>으로 알려 주세요.
+index.faq.13 = tTerm에서 바로 문의할 수 있어요. 계정 메뉴의 ‘도움 받기’에 있는 ‘지원팀에 문의하기’를 이용하세요. 또는 <a href="mailto:support@tterm.net">support@tterm.net</a>으로 메일을 보내 주세요. 취약점을 발견했다면 <a href="mailto:security@tterm.net">security@tterm.net</a>으로 알려 주세요.
 # blog
 index.blog.1 = 블로그
 index.blog.2 = tTerm의 새 소식
@@ -421,6 +421,30 @@ post.several-terminals.prose.6 = Telegram에서 블로그 구독하기
 # more-section
 post.several-terminals.more-section.1 = 블로그의 다른 글
 post.several-terminals.more-section.2 = 모든 글
+
+# ------------------------------------------------------------ post: /blog/support/
+post.support.title = 지원팀: tTerm에서 바로 문의하세요 · tTerm 블로그
+post.support.og_title = 지원팀: tTerm에서 바로 문의하세요
+post.support.description = 계정 메뉴에 ‘도움 받기’가 생겨서 문서를 보거나 tTerm에서 바로 지원팀에 메시지를 보낼 수 있어요. 답장은 내 이메일로 와요. 메시지와 함께 가는 기술 정보는 보내기 전에 확인할 수 있고, 빼고 보낼 수도 있어요.
+post.support.alt = tTerm Web의 ‘지원팀에 문의하기’ 창: web-01 로그가 열리지 않는다는 메시지, 그리고 함께 보낼 기술 정보 한 줄이 보이는 화면
+post.support.figcaption = ‘지원팀에 문의하기’ 창: 메시지, 그리고 함께 보낼 기술 정보 한 줄.
+post.support.why.title = 이 기능을 만든 이유
+post.support.why.text = tTerm에 대한 질문은 보통 작업하는 도중에 생겨요. 머신이 연결되지 않거나, 로그가 열리지 않거나, 뭔가가 예상대로 동작하지 않을 때요. 지금까지는 tTerm 안에서 저희에게 연락할 방법이 없었어요. 어디로 연락해야 하는지 찾아야 했고, 어떤 버전과 어떤 브라우저를 쓰고 있는지도 기억해 내야 했어요. 이제는 tTerm에서 바로 메시지를 쓰면 되고, 버전과 브라우저 정보는 tTerm이 알아서 붙여 줘요.
+post.support.where.title = 어디에 있나요
+post.support.where.text = 사이드바 아래쪽의 계정 메뉴는 이제 ‘설정’, ‘계정’, ‘언어’, ‘도움 받기’, ‘tTerm 소개’로 구성돼요. ‘도움 받기’에는 항목이 두 개 있어요. ‘문서’는 tTerm이 쓰는 언어로 docs.tterm.net을 열어요. ‘지원팀에 문의하기’는 저희에게 메시지를 쓰는 창을 열어요.
+post.support.how.title = 문의하는 방법
+post.support.how.text = ‘문제 내용’에 무슨 일이 있었는지 자유롭게 적고, ‘보내기’나 ⌘Enter(Windows와 Linux에서는 Ctrl+Enter)를 누르세요. 저희가 어디로 답장할지는 창에서 미리 알려 줘요. 내 계정의 이메일 주소예요. 보낸 메시지의 사본도 바로 그 주소로 오니, 나에게도 같은 메시지가 남아요.
+post.support.details.title = 메시지와 함께 보내는 정보
+post.support.details.text = 저희가 다시 물어보지 않아도 되도록, 메시지와 함께 기술 정보 한 줄이 가요. 여기에는 tTerm Web 버전, 브라우저와 그 운영 체제, 요금제, 머신 수가 들어 있어요. 예를 들면 ‘tTerm Web 0.1.25 · Chrome 141, macOS · Free 요금제 · 머신 3대’ 같은 줄이에요. ‘기술 정보 첨부’ 아래에 이 줄이 보내지는 그대로 보여요. 명령과 그 출력, 노트는 절대 보내지 않아요. 이 줄도 보내고 싶지 않다면 체크를 해제하세요. 그러면 메시지만 가요.
+post.support.after.title = 보낸 다음에는
+post.support.after.text = 메시지가 전송되면 창에 ‘메시지를 보냈어요’가 표시되고, 답장이 어디로 올지 다시 알려 줘요. 보내지 못했을 때도 창에서 그렇다고 알려 주고, 직접 메일을 보낼 주소를 보여 줘요.
+post.support.about.title = tTerm 소개
+post.support.about.text = 그 옆에는 이제 ‘tTerm 소개’도 있어요. 여기서 tterm.net 사이트, 공지를 올리는 저희 Telegram 채널, 그리고 문서의 ‘새 소식’으로 갈 수 있어요. ‘새 소식’에는 tTerm Web의 버전마다 무엇이 바뀌었는지 나와 있어요.
+post.support.next.text = Mac용 tTerm에는 다음 업데이트에서 새 메뉴와 ‘지원팀에 문의하기’가 추가돼요. 자세한 내용은 문서의 <a href="https://docs.tterm.net{{$base}}/account/help/">‘도움 받기’</a> 페이지에 있어요.
+post.support.cta.title = 궁금한 게 있나요? tTerm에서 바로 물어보세요
+post.support.cta.button = tTerm Web 열기
+post.support.more-section.1 = 블로그의 다른 글
+post.support.more-section.2 = 모든 글
 
 # ------------------------------------------------------------ post: /blog/logs/
 post.logs.title = 로그: 이제 머신마다 로그를 자동으로 만들어요 · tTerm 블로그

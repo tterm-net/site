@@ -170,7 +170,7 @@ index.faq.9 = Elimina el servidor en tTerm y tTerm quitará por sí mismo su acc
 index.faq.10 = ¿Y el bot de Telegram?
 index.faq.11 = Se queda y sigue funcionando: una terminal directamente en el chat, <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>. Por ahora, la aplicación web y el bot funcionan por separado.
 index.faq.12 = ¿Cómo me pongo en contacto con soporte?
-index.faq.13 = Escribe a <a href="mailto:support@tterm.net">support@tterm.net</a>. Si descubres una vulnerabilidad, escribe a <a href="mailto:security@tterm.net">security@tterm.net</a>.
+index.faq.13 = Directamente desde tTerm: «Escribir a soporte», en el menú de la cuenta, dentro de «Obtener ayuda». O escribe a <a href="mailto:support@tterm.net">support@tterm.net</a>. Si descubres una vulnerabilidad, escribe a <a href="mailto:security@tterm.net">security@tterm.net</a>.
 # blog
 index.blog.1 = Blog
 index.blog.2 = Novedades de tTerm
@@ -421,6 +421,30 @@ post.several-terminals.prose.6 = Suscríbete a nuestro blog en Telegram
 # more-section
 post.several-terminals.more-section.1 = Más del blog
 post.several-terminals.more-section.2 = Todos los artículos
+
+# ------------------------------------------------------------ post: /blog/support/
+post.support.title = Soporte: escríbenos directamente desde tTerm · Blog de tTerm
+post.support.og_title = Soporte: escríbenos directamente desde tTerm
+post.support.description = El menú de la cuenta ahora incluye «Obtener ayuda»: la documentación y un mensaje a soporte desde el propio tTerm. La respuesta llega a tu correo. Antes de enviar el mensaje, ves los datos técnicos que lo acompañan, y puedes dejarlos fuera.
+post.support.alt = La ventana «Escribir a soporte» en tTerm Web: un mensaje que dice que la bitácora de web-01 no se abre y la línea de datos técnicos que se enviará con él
+post.support.figcaption = La ventana «Escribir a soporte»: el mensaje y la línea de datos técnicos que se enviará con él.
+post.support.why.title = Por qué
+post.support.why.text = Una pregunta sobre tTerm suele surgir en medio del trabajo: una máquina no se conecta, una bitácora no se abre, algo no se comporta como esperas. Hasta ahora no podías escribirnos desde el propio tTerm. Tenías que buscar adónde escribir y recordar qué versión y qué navegador usabas. Ahora escribes el mensaje directamente en tTerm, que añade por su cuenta la versión y el navegador.
+post.support.where.title = Dónde está
+post.support.where.text = El menú de la cuenta, al pie de la barra lateral, ahora tiene «Configuración», «Cuenta», «Idioma», «Obtener ayuda» y «Sobre nosotros». «Obtener ayuda» tiene dos opciones. «Documentación» abre docs.tterm.net en el idioma en que te habla tTerm. «Escribir a soporte» abre una ventana para escribirnos.
+post.support.how.title = Cómo escribirnos
+post.support.how.text = En el campo «Lo que pasó», cuenta con tus propias palabras qué ocurrió y presiona «Enviar» o ⌘Enter (Ctrl+Enter en Windows y Linux). La ventana te indica de antemano dónde te responderemos: en el correo de tu cuenta. Ahí te llega al instante una copia de tu mensaje, para que tú también lo tengas.
+post.support.details.title = Qué se envía con el mensaje
+post.support.details.text = Para no tener que volver a preguntarte, con tu mensaje se envía una línea de datos técnicos. Incluye la versión de tTerm Web, tu navegador y su sistema, tu plan y cuántas máquinas tienes, por ejemplo «tTerm Web 0.1.25 · Chrome 141, macOS · Plan Free · 3 máquinas». Debajo de «Adjuntar datos técnicos», la línea se muestra tal como se enviará. Tus comandos, su salida y tus notas nunca se envían. Si no quieres adjuntar ni siquiera eso, desmarca la casilla y solo se enviará tu mensaje.
+post.support.after.title = Después de enviarlo
+post.support.after.text = Cuando el mensaje se envía, la ventana muestra «Mensaje enviado» y te recuerda adónde llegará la respuesta. Y si no se pudo enviar, la ventana te lo dice y te da una dirección a la que puedes escribir directamente.
+post.support.about.title = Sobre nosotros
+post.support.about.text = Al lado ahora también está «Sobre nosotros». Ahí encontrarás el sitio web tterm.net, nuestro canal de Telegram, donde publicamos las noticias, y «Novedades» en la documentación, donde se detalla, versión por versión, qué cambió en tTerm Web.
+post.support.next.text = En tTerm para Mac, el nuevo menú y «Escribir a soporte» llegarán con la próxima actualización. Los detalles están en la documentación, en la página <a href="https://docs.tterm.net{{$base}}/account/help/">«Obtener ayuda»</a>.
+post.support.cta.title = ¿Tienes una pregunta? Hazla directamente desde tTerm
+post.support.cta.button = Abrir tTerm Web
+post.support.more-section.1 = Más del blog
+post.support.more-section.2 = Todos los artículos
 
 # ------------------------------------------------------------ post: /blog/logs/
 post.logs.title = Bitácoras: ahora creamos automáticamente una bitácora para cada máquina · Blog de tTerm

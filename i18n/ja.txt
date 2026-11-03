@@ -170,7 +170,7 @@ index.faq.9 = tTerm でサーバーを削除すると、tTerm は自身のアク
 index.faq.10 = Telegram ボットはどうなりますか？
 index.faq.11 = 今後も残り、引き続き使えます。チャットの中でそのまま使えるターミナル、<a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a> です。今のところ、Web アプリとボットは別々に動いています。
 index.faq.12 = サポートにはどう連絡すればよいですか？
-index.faq.13 = <a href="mailto:support@tterm.net">support@tterm.net</a> までメールでご連絡ください。脆弱性を見つけた場合は、<a href="mailto:security@tterm.net">security@tterm.net</a> 宛てにお送りください。
+index.faq.13 = tTerm から直接問い合わせるときは、アカウントメニューの「ヘルプ」にある「サポートに問い合わせる」を使ってください。または、<a href="mailto:support@tterm.net">support@tterm.net</a> までメールでご連絡ください。脆弱性を見つけた場合は、<a href="mailto:security@tterm.net">security@tterm.net</a> 宛てにお送りください。
 # blog
 index.blog.1 = ブログ
 index.blog.2 = tTerm の最新情報
@@ -421,6 +421,30 @@ post.several-terminals.prose.6 = Telegram でブログを購読
 # more-section
 post.several-terminals.more-section.1 = ブログのほかの記事
 post.several-terminals.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/support/
+post.support.title = サポート：tTerm から直接お問い合わせください · tTerm ブログ
+post.support.og_title = サポート：tTerm から直接お問い合わせください
+post.support.description = アカウントメニューに「ヘルプ」が加わり、ドキュメントを開いたり、tTerm から直接サポートにメッセージを送ったりできるようになりました。返信はメールで届きます。メッセージに添えられる技術情報は送信前に確認でき、添付しないこともできます。
+post.support.alt = tTerm Web の「サポートに問い合わせる」ウィンドウ：web-01 のログが開かないというメッセージと、一緒に送られる技術情報の行
+post.support.figcaption = 「サポートに問い合わせる」ウィンドウ：メッセージと、一緒に送られる技術情報の行。
+post.support.why.title = なぜ作ったのか
+post.support.why.text = tTerm についての質問は、たいてい作業の途中で出てきます。マシンがつながらない、ログが開かない、何かが思ったとおりに動かない、といったときです。これまでは、tTerm の中から問い合わせることはできませんでした。どこに連絡すればよいかを探し、使っているバージョンやブラウザーを思い出す必要がありました。今は tTerm の中でそのままメッセージを書けて、バージョンとブラウザーは tTerm が自動で添えてくれます。
+post.support.where.title = どこにあるか
+post.support.where.text = サイドバーの下にあるアカウントメニューは、「設定」、「アカウント」、「言語」、「ヘルプ」、「tTerm について」の 5 つになりました。「ヘルプ」には項目が 2 つあります。「ドキュメント」を押すと、docs.tterm.net が tTerm と同じ言語で開きます。「サポートに問い合わせる」を押すと、tTerm へのメッセージを書くウィンドウが開きます。
+post.support.how.title = 問い合わせの方法
+post.support.how.text = 「何が起きたか」の欄に、起きたことを自分の言葉で書いて、「送信」または ⌘Enter（Windows と Linux では Ctrl+Enter）を押します。返信先がアカウントのメールアドレスであることは、ウィンドウに最初から表示されています。メッセージの控えもすぐにそこへ届くので、送った内容は手元にも残ります。
+post.support.details.title = メッセージと一緒に送られるもの
+post.support.details.text = こちらから聞き直さなくて済むように、メッセージには技術情報が 1 行添えられます。内容は tTerm Web のバージョン、ブラウザーとそれが動くシステム、プラン、マシンの台数で、たとえば「tTerm Web 0.1.25 · Chrome 141, macOS · Free プラン · マシン 3 台」のようになります。「技術情報を添付する」の下には、この行が送られるとおりの形で表示されます。コマンドやその出力、ノートが送られることはありません。この行も添付したくない場合は、チェックを外してください。メッセージだけが送られます。
+post.support.after.title = 送信したあと
+post.support.after.text = メッセージが送られると、ウィンドウに「送信しました」と表示され、返信がどこに届くかをあらためて知らせてくれます。送れなかったときもウィンドウにそう表示され、自分でメールを送るための宛先が示されます。
+post.support.about.title = tTerm について
+post.support.about.text = その隣には「tTerm について」も加わりました。ここからは、tterm.net サイト、お知らせを発信している tTerm の Telegram チャンネル、そしてドキュメントの「最新情報」を開けます。「最新情報」には、tTerm Web のバージョンごとの変更点が載っています。
+post.support.next.text = Mac 版 tTerm には、次のアップデートで新しいメニューと「サポートに問い合わせる」が加わります。詳しくは、ドキュメントの<a href="https://docs.tterm.net{{$base}}/account/help/">「ヘルプ」</a>ページをご覧ください。
+post.support.cta.title = 質問があれば、tTerm から直接どうぞ
+post.support.cta.button = tTerm Web を開く
+post.support.more-section.1 = ブログのほかの記事
+post.support.more-section.2 = すべての記事
 
 # ------------------------------------------------------------ post: /blog/logs/
 post.logs.title = ログ：マシンごとにログを自動で作成するようになりました · tTerm ブログ

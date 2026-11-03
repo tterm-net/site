@@ -170,7 +170,7 @@ index.faq.9 = Sunucuyu tTerm'den sildiğinde tTerm, sunucudaki kendi erişimini 
 index.faq.10 = Telegram botu ne olacak?
 index.faq.11 = Kalıyor ve çalışmaya devam ediyor: doğrudan sohbetin içinde bir terminal, <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">@tTermNetBot</a>. Şimdilik web uygulaması ve bot ayrı ayrı çalışıyor.
 index.faq.12 = Destek ekibine nasıl ulaşırım?
-index.faq.13 = <a href="mailto:support@tterm.net">support@tterm.net</a> adresine yaz. Bir güvenlik açığı bulduysan <a href="mailto:security@tterm.net">security@tterm.net</a> adresine yaz.
+index.faq.13 = Doğrudan tTerm'den yazabilirsin: hesap menüsünde “Yardım al” altındaki “Destek ekibine yaz” ile. Ya da <a href="mailto:support@tterm.net">support@tterm.net</a> adresine yaz. Bir güvenlik açığı bulduysan <a href="mailto:security@tterm.net">security@tterm.net</a> adresine yaz.
 # blog
 index.blog.1 = Blog
 index.blog.2 = tTerm'deki yenilikler
@@ -421,6 +421,30 @@ post.several-terminals.prose.6 = Telegram'da blogumuza abone ol
 # more-section
 post.several-terminals.more-section.1 = Blogdan diğer yazılar
 post.several-terminals.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/support/
+post.support.title = Destek: bize doğrudan tTerm'den yaz · tTerm blogu
+post.support.og_title = Destek: bize doğrudan tTerm'den yaz
+post.support.description = Hesap menüsünde artık “Yardım al” var: belgeler ve doğrudan tTerm'den destek ekibine bir mesaj. Yanıt e-postana gelir. Mesajınla birlikte gidecek teknik bilgileri göndermeden önce görürsün ve istersen eklemeyebilirsin.
+post.support.alt = tTerm Web'de “Destek ekibine yaz” penceresi: web-01 makinesinin logunun açılmadığını yazan bir mesaj ve onunla birlikte gidecek teknik bilgi satırı
+post.support.figcaption = “Destek ekibine yaz” penceresi: mesaj ve onunla birlikte gidecek teknik bilgi satırı.
+post.support.why.title = Neden
+post.support.why.text = tTerm'le ilgili bir soru genellikle işin ortasında çıkar: bir makine bağlanmaz, bir log açılmaz, bir şey beklediğin gibi davranmaz. Şimdiye kadar bize tTerm'in içinden yazamıyordun. Nereye yazacağını araman, hangi sürümü ve hangi tarayıcıyı kullandığını hatırlaman gerekiyordu. Artık mesajı doğrudan tTerm'de yazıyorsun, sürümü ve tarayıcıyı da tTerm kendisi ekliyor.
+post.support.where.title = Nerede bulunur
+post.support.where.text = Kenar çubuğunun altındaki hesap menüsünde artık “Ayarlar”, “Hesap”, “Dil”, “Yardım al” ve “Hakkımızda” var. “Yardım al” altında iki öğe bulunur. “Belgeler”, docs.tterm.net'i tTerm seninle hangi dilde konuşuyorsa o dilde açar. “Destek ekibine yaz” ise bize yazman için bir pencere açar.
+post.support.how.title = Nasıl yazılır
+post.support.how.text = Olanları “Ne oldu” alanına kendi sözlerinle yaz ve “Gönder” düğmesine ya da ⌘Enter tuşlarına bas (Windows ve Linux'ta Ctrl+Enter). Pencere, nereye yanıt vereceğimizi en baştan söyler: hesabının e-posta adresine. Mesajının bir kopyası da hemen oraya gelir, böylece yazdığın sende de kalır.
+post.support.details.title = Mesajla birlikte ne gider
+post.support.details.text = Sana yeniden sormak zorunda kalmayalım diye mesajınla birlikte tek satırlık teknik bilgi gider. Bu satırda tTerm Web'in sürümü, tarayıcın ve sistemi, planın ve kaç makinen olduğu yer alır, örneğin “tTerm Web 0.1.25 · Chrome 141, macOS · Free planı · 3 makine”. “Teknik bilgileri ekle” kutucuğunun altında bu satır, tam olarak gideceği haliyle görünür. Komutların, çıktıları ve notların asla gitmez. Bunu bile eklemek istemiyorsan kutucuğun işaretini kaldır; o zaman yalnızca mesajın gider.
+post.support.after.title = Gönderdikten sonra
+post.support.after.text = Mesaj gidince pencere “Mesaj gönderildi” der ve yanıtın nereye geleceğini hatırlatır. Gönderilemezse de pencere bunu söyler ve kendin yazabileceğin bir adres verir.
+post.support.about.title = Hakkımızda
+post.support.about.text = Yanında artık “Hakkımızda” da var. Orada tterm.net sitesi, haberleri paylaştığımız Telegram kanalı ve belgelerde tTerm Web'in her sürümünde nelerin değiştiğini anlatan “Yenilikler” bulunur.
+post.support.next.text = Mac için tTerm'de yeni menü ve “Destek ekibine yaz” bir sonraki güncellemeyle gelecek. Ayrıntılar belgelerde, <a href="https://docs.tterm.net{{$base}}/account/help/">“Yardım al”</a> sayfasında.
+post.support.cta.title = Aklına bir soru mu takıldı? Doğrudan tTerm'den sor
+post.support.cta.button = tTerm Web'i aç
+post.support.more-section.1 = Blogdan diğer yazılar
+post.support.more-section.2 = Tüm yazılar
 
 # ------------------------------------------------------------ post: /blog/logs/
 post.logs.title = Loglar: artık her makine için otomatik olarak bir log oluşturuyoruz · tTerm blogu
