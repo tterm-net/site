@@ -46,7 +46,7 @@ SOURCE = ROOT / "updates.md"
 LANGS = tuple(lang.code for lang in S.LANGUAGES)
 
 #: What an entry is about; each reads on the page as blog.tag.<name>.
-TAGS = ("web", "mac", "bot", "site")
+TAGS = ("web", "mac", "docs", "bot", "site")
 
 
 def word(lang: str, key: str) -> str:
@@ -260,11 +260,12 @@ def first_sentence(text: str) -> str:
     that is not lower case (a capital, or a letter of a script without
     case, as Korean) or as tTerm does, perhaps after an opening quote or ¿;
     or up to a full stop of Chinese or Japanese, which needs no space after
-    it. A question inside a sentence, as in "asked Continue? (Y/n), there
-    was", does not end it."""
+    it. A sentence may start with a number too ("19 pages ..."). A question
+    inside a sentence, as in "asked Continue? (Y/n), there was", does not
+    end it."""
     for match in re.finditer(r"(\w{2,}|\))[.!?](?=\s+[«„“‘¿¡]*(\w)(\w?))|[。！？](?=.)", text):
         nxt, then = match.group(2), match.group(3)
-        if nxt is None or (nxt.isalpha() and (not nxt.islower() or then.isupper())):
+        if nxt is None or nxt.isdigit() or (nxt.isalpha() and (not nxt.islower() or then.isupper())):
             return text[: match.end()]
     return text
 

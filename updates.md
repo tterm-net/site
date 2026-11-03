@@ -5,8 +5,8 @@
 #
 # An entry:
 #
-#   ## 2026-10-07 bot              date, then what it is about: web, mac, bot
-#                                  or site
+#   ## 2026-10-07 bot              date, then what it is about: web, mac,
+#                                  docs, bot or site
 #   ## 2026-10-18 web /blog/x/     a path after that: the entry has a page of
 #                                  its own, /blog/x/ in every language
 #                                  (templates/blog/x.html), and the text below
@@ -22,6 +22,63 @@
 #
 # Newest first. Dates in ISO form, one entry per date; the pages format them
 # per language. The text is shown as plain text: no markup, no code style.
+
+## 2026-11-02 docs /blog/docs/
+
+@en tTerm now has documentation
+At docs.tterm.net you'll find how tTerm works, from your first command to
+how access is set up. 19 pages in all 12 languages, with screenshots in the
+light and the dark theme.
+
+@ru У tTerm появилась документация
+На docs.tterm.net описано, как работает tTerm: от первой команды до того,
+как устроен доступ. 19 страниц на всех 12 языках, со снимками экрана в
+светлой и тёмной теме.
+
+@de tTerm hat jetzt eine Dokumentation
+Auf docs.tterm.net erfährst du, wie tTerm funktioniert: von deinem ersten
+Befehl bis dazu, wie der Zugriff aufgebaut ist. Insgesamt 19 Seiten in allen
+12 Sprachen, mit Screenshots im hellen und im dunklen Design.
+
+@es tTerm ya tiene documentación
+En docs.tterm.net te explicamos cómo funciona tTerm, desde tu primer comando
+hasta cómo está organizado el acceso. En total, 19 páginas en los 12
+idiomas, con capturas de pantalla en el tema claro y en el oscuro.
+
+@fr tTerm a désormais sa documentation
+Sur docs.tterm.net, découvrez comment fonctionne tTerm, de votre première
+commande à l’organisation des accès. Au total, 19 pages dans chacune des 12
+langues, avec des captures d’écran en thème clair et en thème sombre.
+
+@it tTerm ora ha la sua documentazione
+Su docs.tterm.net scopri come funziona tTerm, dal tuo primo comando a come è
+organizzato l'accesso. Sono 19 pagine in tutte le 12 lingue, con screenshot
+nel tema chiaro e in quello scuro.
+
+@pl tTerm ma teraz dokumentację
+Na docs.tterm.net dowiesz się, jak działa tTerm: od pierwszego polecenia po
+organizację dostępu. W sumie 19 stron we wszystkich 12 językach, ze zrzutami
+ekranu w jasnym i ciemnym motywie.
+
+@pt-BR O tTerm agora tem documentação
+Em docs.tterm.net você descobre como o tTerm funciona, do seu primeiro
+comando até a organização do acesso. São 19 páginas em todos os 12 idiomas,
+com capturas de tela no tema claro e no escuro.
+
+@tr tTerm'in artık belgeleri var
+docs.tterm.net, ilk komutundan erişimin nasıl sağlandığına kadar tTerm'in
+nasıl çalıştığını anlatıyor. Toplam 19 sayfa, 12 dilin hepsinde, açık ve
+koyu temada ekran görüntüleriyle.
+
+@ja tTerm にドキュメントができました
+docs.tterm.net では、最初のコマンドからアクセスの仕組みまで、tTerm がどう動くのかを説明しています。19 ページを 12 言語すべてで用意し、ライトテーマとダークテーマのスクリーンショットも載せています。
+
+@ko tTerm에 문서가 생겼어요
+docs.tterm.net에서 첫 명령부터 접근 방식까지, tTerm이 어떻게 작동하는지 알아볼 수 있어요. 총 19개 페이지를 12개
+언어 모두로 제공하고, 라이트 테마와 다크 테마 스크린샷도 담았어요.
+
+@zh-CN tTerm 现在有文档了
+docs.tterm.net 介绍了 tTerm 的工作方式：从你的第一条命令，到访问如何运作。全部 19 个页面都有 12 种语言版本，并配有浅色和深色主题的截图。
 
 ## 2026-10-31 mac /blog/tterm-for-mac/ pinned
 

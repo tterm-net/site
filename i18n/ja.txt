@@ -41,6 +41,7 @@ shell.license = AGPL-3.0 ライセンス
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
 blog.tag.mac = Mac 版 tTerm
+blog.tag.docs = ドキュメント
 blog.tag.bot = ボット
 blog.tag.site = サイト
 blog.read = 記事を読む
@@ -420,6 +421,38 @@ post.several-terminals.prose.6 = Telegram でブログを購読
 # more-section
 post.several-terminals.more-section.1 = ブログのほかの記事
 post.several-terminals.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/docs/
+post.docs.title = tTerm にドキュメントができました · tTerm ブログ
+post.docs.og_title = tTerm にドキュメントができました
+post.docs.description = docs.tterm.net では、最初のコマンドからアクセスの仕組みまで、tTerm がどう動くのかを説明しています。19 ページを 12 言語すべてで用意し、ライトテーマとダークテーマのスクリーンショットも載せています。
+post.docs.alt = ダークテーマで表示した、ドキュメントの「ブロックと入力行」ページ
+post.docs.figcaption = 左側にセクション、本文にはページと同じ言語の tTerm Web のスクリーンショット。
+post.docs.why.title = なぜ作ったのか
+post.docs.why.text = tTerm でできることが増えるほど、「これ、どうやるの？」と思う場面も増えます。答えはブログの記事、画面上のヒント、GitHub の README に散らばっていました。それが今は 1 か所にまとまっています。機能ごとに専用のページがあり、何をするのか、どこにあるのか、クリックするとどうなるのかがわかります。
+post.docs.inside.title = ドキュメントの中身
+post.docs.item.1.title = はじめに。
+post.docs.item.1.text = tTerm とは何か、そして 5 分で最初のコマンドまで。
+post.docs.item.2.title = マシン。
+post.docs.item.2.text = コマンド 1 つで接続する Linux サーバー、小さなエージェントで接続するコンピューター、そしてマシンの削除方法。
+post.docs.item.3.title = 機能。
+post.docs.item.3.text = ブロックと入力行、⌘K での検索、ノート、マシンのログ、プロジェクトとその色。
+post.docs.item.4.title = ローカルターミナル。
+post.docs.item.4.text = Mac 版 tTerm：インストール方法、初めて開くときの手順、サーバーを Mac からクラウドへ移す方法。
+post.docs.item.5.title = セキュリティ。
+post.docs.item.5.text = 有効期間 2 分の証明書、別プロセスでの署名、そしてあなたのデバイスでしか開けない鍵の保管庫。
+post.docs.item.6.title = アカウント。
+post.docs.item.6.text = プランと上限、デバイス、サインイン。
+post.docs.lang.title = お使いの言語で
+post.docs.lang.text = ドキュメントは、サイトや tTerm 本体と同じ 12 言語に対応しています。10月31日からは、tTerm Web と Mac 版アプリの画面も 12 言語すべてで使えます。本文中のボタンやメニューは、画面に表示されるとおりの名前で書かれています。スクリーンショットは言語ごとに、ライトテーマとダークテーマの両方で撮影しました。検索の対象は、お使いの言語のページです。
+post.docs.new.title = 最新情報
+post.docs.new.text = 新しいバージョンは頻繁に、ときには 1 日に何度もリリースされます。<a href="https://docs.tterm.net{{$base}}/whats-new/web/">「最新情報」</a>セクションでは、それらを 1 か所にまとめています。tTerm Web と Mac 版 tTerm の各バージョンで何が変わったのかを、わかりやすい言葉で、関連するページへのリンクとともに紹介しています。このセクションは英語とロシア語で提供しています。ドキュメントは製品とともに変わり、新しいバージョンが出るたびに、対応するページも更新されます。
+post.docs.where.title = どこにあるか
+post.docs.where.text = サイトでは、「リソース」メニューとフッターからドキュメントを開けます。tTerm Web では、アカウントメニューの「ヘルプ」にあります。答えが見つからなかったときは、そこからサポートに問い合わせることもできます。
+post.docs.cta.title = ドキュメントを見てみる
+post.docs.cta.button = ドキュメントを開く
+post.docs.more-section.1 = ブログのほかの記事
+post.docs.more-section.2 = すべての記事
 
 # ------------------------------------------------------------ post: /blog/tterm-for-mac/
 post.tterm-for-mac.title = Mac 版 tTerm：クラウドを内蔵したローカルターミナル · tTerm ブログ

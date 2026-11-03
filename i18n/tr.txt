@@ -41,6 +41,7 @@ shell.license = AGPL-3.0 lisansı
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
 blog.tag.mac = Mac için tTerm
+blog.tag.docs = Belgeler
 blog.tag.bot = Bot
 blog.tag.site = Site
 blog.read = Yazıyı oku
@@ -420,6 +421,38 @@ post.several-terminals.prose.6 = Telegram'da blogumuza abone ol
 # more-section
 post.several-terminals.more-section.1 = Blogdan diğer yazılar
 post.several-terminals.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/docs/
+post.docs.title = tTerm'in artık belgeleri var · tTerm blogu
+post.docs.og_title = tTerm'in artık belgeleri var
+post.docs.description = docs.tterm.net, ilk komutundan erişimin nasıl sağlandığına kadar tTerm'in nasıl çalıştığını anlatıyor. Toplam 19 sayfa, 12 dilin hepsinde, açık ve koyu temada ekran görüntüleriyle.
+post.docs.alt = Belgelerdeki “Bloklar ve komut satırı” sayfası, koyu temada
+post.docs.figcaption = Solda bölümler, metinde ise sayfanın dilinde bir tTerm Web ekran görüntüsü.
+post.docs.why.title = Neden
+post.docs.why.text = tTerm'in yapabildikleri arttıkça “bunu nasıl yaparım?” sorusu da daha sık akla geliyor. Cevaplar blog yazıları, ekrandaki ipuçları ve GitHub'daki README dosyaları arasında dağınıktı. Artık hepsi tek bir yerde. Her özelliğin kendi sayfası var: ne yaptığı, nerede bulacağın ve tıkladığında ne olacağı.
+post.docs.inside.title = İçinde neler var
+post.docs.item.1.title = Başlarken.
+post.docs.item.1.text = tTerm'in ne olduğu ve beş dakikada ilk komutun.
+post.docs.item.2.title = Makineler.
+post.docs.item.2.text = Tek komutla bir Linux sunucusu, küçük bir ajanla bir bilgisayar ve bir makinenin nasıl kaldırılacağı.
+post.docs.item.3.title = Özellikler.
+post.docs.item.3.text = Bloklar ve komut satırı, ⌘K ile arama, notlar, makinenin logu, projeler ve renkleri.
+post.docs.item.4.title = Yerel terminal.
+post.docs.item.4.text = Mac için tTerm: nasıl kurulacağı, ilk kez nasıl açılacağı ve sunucuların Mac'inden buluta nasıl taşınacağı.
+post.docs.item.5.title = Güvenlik.
+post.docs.item.5.text = İki dakikalık sertifikalar, ayrı bir süreçte imzalama ve anahtarların için yalnızca cihazlarının açabildiği bir kasa.
+post.docs.item.6.title = Hesap.
+post.docs.item.6.text = Planın ve sınırları, cihazlar ve giriş.
+post.docs.lang.title = Kendi dilinde
+post.docs.lang.text = Belgeler, site ve tTerm'in kendisiyle aynı 12 dili konuşuyor: 31 Ekim'den bu yana tTerm Web'in ve Mac uygulamasının arayüzü on iki dilin hepsinde kullanılabiliyor. Metindeki düğmeler ve menüler, ekranında hangi adla görünüyorsa o adla geçiyor. Ekran görüntüleri her dilde, açık ve koyu temada çekildi. Arama, senin dilindeki sayfalarda yapılır.
+post.docs.new.title = Yenilikler
+post.docs.new.text = Yeni sürümler sık çıkıyor, bazen günde birkaç tane. <a href="https://docs.tterm.net{{$base}}/whats-new/web/">“Yenilikler”</a> bölümü hepsini tek bir yerde topluyor. tTerm Web'in ve Mac için tTerm'in her sürümünde neyin değiştiğini sade bir dille ve ilgili sayfalara bağlantılarla anlatıyor. Bu bölüm İngilizce ve Rusça tutuluyor. Belgeler ürünle birlikte değişiyor: her yeni sürüm, sayfalarda yapılan düzeltmelerle birlikte geliyor.
+post.docs.where.title = Nerede bulunur
+post.docs.where.text = Sitede belgelere “Kaynaklar” menüsünden ve sayfanın en altından ulaşabilirsin. tTerm Web'de ise belgeler hesap menüsünde, “Yardım al” altında. Cevabı bulamadıysan destek ekibine de oradan yazabilirsin.
+post.docs.cta.title = Belgelere göz at
+post.docs.cta.button = Belgeleri aç
+post.docs.more-section.1 = Blogdan diğer yazılar
+post.docs.more-section.2 = Tüm yazılar
 
 # ------------------------------------------------------------ post: /blog/tterm-for-mac/
 post.tterm-for-mac.title = Mac için tTerm: bulutu içinde taşıyan yerel bir terminal · tTerm blogu

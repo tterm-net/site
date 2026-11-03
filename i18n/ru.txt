@@ -41,6 +41,7 @@ shell.license = Лицензия AGPL-3.0
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
 blog.tag.mac = tTerm для Mac
+blog.tag.docs = Документация
 blog.tag.bot = Бот
 blog.tag.site = Сайт
 blog.read = Читать запись
@@ -420,6 +421,38 @@ post.several-terminals.prose.6 = Подпишись на наш блог в Tele
 # more-section
 post.several-terminals.more-section.1 = Ещё в блоге
 post.several-terminals.more-section.2 = Все записи
+
+# ------------------------------------------------------------ post: /blog/docs/
+post.docs.title = У tTerm появилась документация · Блог tTerm
+post.docs.og_title = У tTerm появилась документация
+post.docs.description = На docs.tterm.net описано, как работает tTerm: от первой команды до того, как устроен доступ. 19 страниц на всех 12 языках, со снимками экрана в светлой и тёмной теме.
+post.docs.alt = Страница документации «Блоки и строка ввода» в тёмной теме
+post.docs.figcaption = Слева разделы, в тексте снимок tTerm Web на языке страницы.
+post.docs.why.title = Зачем
+post.docs.why.text = Чем больше умеет tTerm, тем чаще вопрос «а как это сделать?». Ответы были разбросаны по записям блога, подсказкам на экране и README на GitHub. Теперь они собраны в одном месте. У каждой возможности своя страница: что она делает, где её найти и что будет, если нажать.
+post.docs.inside.title = Что внутри
+post.docs.item.1.title = Начало работы.
+post.docs.item.1.text = Что такое tTerm и первая команда за пять минут.
+post.docs.item.2.title = Машины.
+post.docs.item.2.text = Сервер на Linux одной командой, компьютер через небольшого агента и как убрать машину.
+post.docs.item.3.title = Возможности.
+post.docs.item.3.text = Блоки и строка ввода, поиск по ⌘K, заметки, лог машины, проекты и их цвета.
+post.docs.item.4.title = Локальный терминал.
+post.docs.item.4.text = tTerm для Mac: как поставить, как открыть в первый раз и как перенести серверы с Mac в облако.
+post.docs.item.5.title = Безопасность.
+post.docs.item.5.text = Сертификаты на две минуты, отдельный процесс подписи и хранилище ключей, которое открывают только твои устройства.
+post.docs.item.6.title = Аккаунт.
+post.docs.item.6.text = Тариф и пределы, устройства и вход.
+post.docs.lang.title = На твоём языке
+post.docs.lang.text = Документация говорит на тех же 12 языках, что сайт и сам tTerm: с 31 октября интерфейс tTerm Web и приложения для Mac переведён на все двенадцать. Кнопки и меню в тексте называются так же, как на твоём экране. Снимки экрана сделаны на каждом языке, в светлой и тёмной теме. Поиск ищет по страницам на твоём языке.
+post.docs.new.title = Что нового
+post.docs.new.text = Новые версии выходят часто, иногда по нескольку за день. Раздел <a href="https://docs.tterm.net{{$base}}/whats-new/web/">«Что нового»</a> собирает их в одном месте. Там написано, что изменила каждая версия tTerm Web и tTerm для Mac, простыми словами и со ссылками на нужные страницы. Этот раздел ведётся на английском и русском. Документация меняется вместе с продуктом: каждая новая версия приходит с правкой своих страниц.
+post.docs.where.title = Где найти
+post.docs.where.text = На сайте документация есть в «Ресурсах» и в подвале. В tTerm Web она в меню аккаунта, в пункте «Получить помощь». Там же можно написать в поддержку, если ответа не нашлось.
+post.docs.cta.title = Загляни в документацию
+post.docs.cta.button = Открыть документацию
+post.docs.more-section.1 = Ещё в блоге
+post.docs.more-section.2 = Все записи
 
 # ------------------------------------------------------------ post: /blog/tterm-for-mac/
 post.tterm-for-mac.title = tTerm для Mac: локальный терминал с облаком внутри · Блог tTerm

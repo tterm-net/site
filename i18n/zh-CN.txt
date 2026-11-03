@@ -41,6 +41,7 @@ shell.license = AGPL-3.0 许可证
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
 blog.tag.mac = tTerm Mac 版
+blog.tag.docs = 文档
 blog.tag.bot = 机器人
 blog.tag.site = 网站
 blog.read = 阅读全文
@@ -420,6 +421,38 @@ post.several-terminals.prose.6 = 在 Telegram 上订阅我们的博客
 # more-section
 post.several-terminals.more-section.1 = 博客中的更多文章
 post.several-terminals.more-section.2 = 全部文章
+
+# ------------------------------------------------------------ post: /blog/docs/
+post.docs.title = tTerm 现在有文档了 · tTerm 博客
+post.docs.og_title = tTerm 现在有文档了
+post.docs.description = docs.tterm.net 介绍了 tTerm 的工作方式：从你的第一条命令，到访问如何运作。全部 19 个页面都有 12 种语言版本，并配有浅色和深色主题的截图。
+post.docs.alt = 深色主题下的文档页面“块与输入行”
+post.docs.figcaption = 左侧是各个栏目，正文中是与页面语言相同的 tTerm Web 截图。
+post.docs.why.title = 为什么要写文档
+post.docs.why.text = tTerm 能做的事越多，“这个要怎么做？”这样的问题就越常出现。答案原本散落在博客文章、屏幕上的提示和 GitHub 上的 README 里。现在它们都集中在一个地方。每项功能都有自己的页面：它能做什么、在哪里找到它，以及点一下会发生什么。
+post.docs.inside.title = 里面有什么
+post.docs.item.1.title = 从这里开始。
+post.docs.item.1.text = tTerm 是什么，以及五分钟内运行第一条命令。
+post.docs.item.2.title = 机器。
+post.docs.item.2.text = Linux 服务器用一条命令接入，电脑通过小型代理接入，以及如何移除一台机器。
+post.docs.item.3.title = 功能。
+post.docs.item.3.text = 块与输入行、用 ⌘K 搜索、笔记、机器的日志、项目及其颜色。
+post.docs.item.4.title = 本地终端。
+post.docs.item.4.text = tTerm Mac 版：如何安装、第一次如何打开，以及如何把 Mac 上的服务器迁移到云端。
+post.docs.item.5.title = 安全。
+post.docs.item.5.text = 两分钟有效的证书、在独立进程中进行的签名，以及只有你的设备能打开的密钥保险库。
+post.docs.item.6.title = 账号。
+post.docs.item.6.text = 你的方案及其限额、设备和登录。
+post.docs.lang.title = 用你的语言
+post.docs.lang.text = 文档和网站、tTerm 本身一样，使用同样的 12 种语言：从 10月31日起，tTerm Web 和 Mac 应用的界面已经覆盖全部 12 种语言。正文中的按钮和菜单，名称都与你屏幕上显示的一致。每种语言都单独拍摄了截图，浅色和深色主题各一套。搜索会在你所用语言的页面中查找。
+post.docs.new.title = 更新内容
+post.docs.new.text = 新版本发布得很频繁，有时一天就有好几个。<a href="https://docs.tterm.net{{$base}}/whats-new/web/">“更新内容”</a>栏目把它们集中在一个地方，用简单的话说明 tTerm Web 和 tTerm Mac 版的每个版本改了什么，并附上相关页面的链接。这个栏目用英文和俄文维护。文档随产品一同变化：每个新版本发布时，对应的页面也会随之修改。
+post.docs.where.title = 在哪里找到
+post.docs.where.text = 在网站上，文档位于“资源”菜单和页脚中。在 tTerm Web 中，它在账号菜单的“获取帮助”里。如果没找到答案，也可以在那里联系支持团队。
+post.docs.cta.title = 看看文档
+post.docs.cta.button = 打开文档
+post.docs.more-section.1 = 博客中的更多文章
+post.docs.more-section.2 = 全部文章
 
 # ------------------------------------------------------------ post: /blog/tterm-for-mac/
 post.tterm-for-mac.title = tTerm Mac 版：内置云端的本地终端 · tTerm 博客

@@ -41,6 +41,7 @@ shell.license = AGPL-3.0 라이선스
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
 blog.tag.mac = Mac용 tTerm
+blog.tag.docs = 문서
 blog.tag.bot = 봇
 blog.tag.site = 사이트
 blog.read = 글 읽기
@@ -420,6 +421,38 @@ post.several-terminals.prose.6 = Telegram에서 블로그 구독하기
 # more-section
 post.several-terminals.more-section.1 = 블로그의 다른 글
 post.several-terminals.more-section.2 = 모든 글
+
+# ------------------------------------------------------------ post: /blog/docs/
+post.docs.title = tTerm에 문서가 생겼어요 · tTerm 블로그
+post.docs.og_title = tTerm에 문서가 생겼어요
+post.docs.description = docs.tterm.net에서 첫 명령부터 접근 방식까지, tTerm이 어떻게 작동하는지 알아볼 수 있어요. 총 19개 페이지를 12개 언어 모두로 제공하고, 라이트 테마와 다크 테마 스크린샷도 담았어요.
+post.docs.alt = 다크 테마로 표시한 문서 페이지 ‘블록과 입력 줄’
+post.docs.figcaption = 왼쪽에는 섹션, 본문에는 페이지와 같은 언어로 된 tTerm Web 스크린샷.
+post.docs.why.title = 문서를 만든 이유
+post.docs.why.text = tTerm이 할 수 있는 일이 많아질수록 ‘이건 어떻게 하지?’ 싶은 순간도 많아져요. 답은 블로그 글, 화면의 힌트, GitHub의 README에 흩어져 있었어요. 이제는 한곳에 모여 있어요. 기능마다 전용 페이지가 있어서 무엇을 하는지, 어디에 있는지, 누르면 어떻게 되는지 알 수 있어요.
+post.docs.inside.title = 무엇이 들어 있나요
+post.docs.item.1.title = 시작하기.
+post.docs.item.1.text = tTerm이 무엇인지, 그리고 5분 만에 첫 명령까지.
+post.docs.item.2.title = 머신.
+post.docs.item.2.text = 명령 한 줄로 연결하는 Linux 서버, 작은 에이전트로 연결하는 컴퓨터, 그리고 머신을 제거하는 방법.
+post.docs.item.3.title = 기능.
+post.docs.item.3.text = 블록과 입력 줄, ⌘K 검색, 노트, 머신 로그, 프로젝트와 프로젝트 색상.
+post.docs.item.4.title = 로컬 터미널.
+post.docs.item.4.text = Mac용 tTerm: 설치하는 방법, 처음 여는 방법, 내 Mac의 서버를 클라우드로 옮기는 방법.
+post.docs.item.5.title = 보안.
+post.docs.item.5.text = 2분짜리 인증서, 별도 프로세스에서 하는 서명, 그리고 내 기기에서만 열리는 키 보관함.
+post.docs.item.6.title = 계정.
+post.docs.item.6.text = 요금제와 한도, 기기와 로그인.
+post.docs.lang.title = 내 언어로
+post.docs.lang.text = 문서는 사이트나 tTerm 자체와 똑같이 12개 언어로 되어 있어요. 10월 31일부터는 tTerm Web과 Mac 앱의 인터페이스도 12개 언어를 모두 지원해요. 본문에 나오는 버튼과 메뉴는 내 화면에 보이는 이름 그대로 적혀 있어요. 스크린샷은 언어마다 라이트 테마와 다크 테마로 찍었어요. 검색은 내 언어로 된 페이지에서 찾아 줘요.
+post.docs.new.title = 새 소식
+post.docs.new.text = 새 버전은 자주 나오고, 하루에 여러 번 나올 때도 있어요. <a href="https://docs.tterm.net{{$base}}/whats-new/web/">‘새 소식’</a> 섹션은 이를 한곳에 모아 둬요. tTerm Web과 Mac용 tTerm의 버전마다 무엇이 바뀌었는지 쉬운 말로, 관련 페이지 링크와 함께 알려 줘요. 이 섹션은 영어와 러시아어로 작성돼요. 문서는 제품과 함께 바뀌어요. 새 버전이 나올 때마다 해당 페이지도 함께 수정돼요.
+post.docs.where.title = 어디에 있나요
+post.docs.where.text = 사이트에서는 ‘리소스’ 메뉴와 페이지 하단에서 문서를 찾을 수 있어요. tTerm Web에서는 계정 메뉴의 ‘도움 받기’에 있어요. 답을 찾지 못했다면 같은 곳에서 지원팀에 문의할 수도 있어요.
+post.docs.cta.title = 문서 둘러보기
+post.docs.cta.button = 문서 열기
+post.docs.more-section.1 = 블로그의 다른 글
+post.docs.more-section.2 = 모든 글
 
 # ------------------------------------------------------------ post: /blog/tterm-for-mac/
 post.tterm-for-mac.title = Mac용 tTerm: 클라우드가 들어 있는 로컬 터미널 · tTerm 블로그

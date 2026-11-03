@@ -1473,6 +1473,709 @@ h1, h2, h3, h4 { margin: 0; }
 .v-field i { display: inline-block; width: 1.5px; height: 14px; margin-left: 1px; background: var(--amber); animation: tt-blink 1s step-end infinite; }
 .v-rename .v-hints { margin-top: 0; }
 
+/* ------------------------------------------------ features: the pictures move
+   Each picture of a feature is a short scene of tTerm doing that very thing:
+   it plays while the card is under the pointer, and once as a card comes
+   into view on a screen without one (site.js sets .fm-play). At rest, and
+   for those who asked for less motion, each is the still picture it was. */
+.fm { position: relative; }
+.fm-cur { position: absolute; left: 0; top: 0; z-index: 3; width: 16px; height: 22px; opacity: 0; pointer-events: none; }
+.fm-cur svg { display: block; width: 16px; height: 22px; fill: #f4f5f8; stroke: #0b0c0f; stroke-width: 1.3; stroke-linejoin: round; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .55)); }
+.fm-cur i { position: absolute; left: -10px; top: -10px; width: 20px; height: 20px; border: 2px solid var(--amber); border-radius: 50%; opacity: 0; }
+@keyframes fm-type { from { width: 0; } to { width: calc(var(--n) * 1ch); } }
+.fm-ty { display: inline-block; overflow: hidden; overflow: clip; white-space: pre; }
+
+/* 1. A block: typed, running, done; its buttons, and Copy. */
+.fm-1 .v-meta { position: relative; }
+.fm-1 .fm-busy { position: absolute; left: -1px; top: 50%; width: 9px; height: 9px; margin-top: -4.5px; opacity: 0; }
+.fm-acts { position: absolute; top: 44px; right: 18px; display: flex; gap: 4px; opacity: 0; }
+.fm-acts > span:not(.fm-cur) { display: grid; place-items: center; width: 26px; height: 24px; border: 1px solid var(--line-3); border-radius: 7px; background: #121419; color: var(--dim); }
+.fm-acts > span:not(.fm-cur) svg { grid-area: 1 / 1; width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.fm-copy svg + svg { opacity: 0; color: var(--amber); }
+
+/* 2. The input line: a suggestion from history, taken with the arrow. */
+.fm-2 .v-input s { display: inline-block; overflow: hidden; overflow: clip; white-space: pre; }
+
+/* 3. Directory and branch: the branch menu, another branch, git switch as a block. */
+.fm-3 .fm-chip { border: 1px solid transparent; }
+.fm-3 .v-chips span.on { border-color: rgba(233, 163, 63, .5); }
+.fm-b1, .fm-b2 { display: inline-block; overflow: hidden; overflow: clip; white-space: pre; font-style: normal; }
+.fm-b2 { max-width: 0; }
+.fm-3 .fm-box { position: relative; }
+.fm-sw { position: absolute; left: 0; right: 0; top: 40px; padding: 10px 12px; border-radius: 10px; background: #121419; font: 500 11.5px/1.6 var(--mono); color: var(--dim); opacity: 0; }
+.fm-sw p { margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fm-sw-cmd { display: flex; align-items: center; gap: 8px; color: var(--ink); font-weight: 600; }
+.fm-sw-cmd b:not(.dot) { color: var(--amber); font-weight: 600; }
+.fm-sw-cmd .dot { width: 7px; height: 7px; }
+
+/* 4. htop: the bars and numbers live, a refresh every half second. */
+@property --c1 { syntax: "<integer>"; inherits: true; initial-value: 58; }
+@property --c2 { syntax: "<integer>"; inherits: true; initial-value: 31; }
+@property --c3 { syntax: "<integer>"; inherits: true; initial-value: 84; }
+@property --mem { syntax: "<integer>"; inherits: true; initial-value: 46; }
+.fm-4 .v-bar:nth-child(1) i { width: calc(var(--c1, 58) * 1%); }
+.fm-4 .v-bar:nth-child(2) i { width: calc(var(--c2, 31) * 1%); }
+.fm-4 .v-bar:nth-child(3) i { width: calc(var(--c3, 84) * 1%); }
+.fm-4 .v-bar:nth-child(4) i { width: calc(var(--mem, 46) * 1%); }
+.fm-4 .fm-n { font-style: normal; }
+.fm-4 .v-bar:nth-child(1) .fm-n::after { counter-reset: n var(--c1, 58); content: counter(n) "%"; }
+.fm-4 .v-bar:nth-child(2) .fm-n::after { counter-reset: n var(--c2, 31); content: counter(n) "%"; }
+.fm-4 .v-bar:nth-child(3) .fm-n::after { counter-reset: n var(--c3, 84); content: counter(n) "%"; }
+.fm-4 .v-row .fm-n::after { counter-reset: n var(--c3, 84); content: counter(n) ".0"; }
+
+/* 5. The tab closes, the build goes on, the tab comes back to a finished build. */
+.fm-5 .fm-tabs { position: absolute; top: 12px; left: 22px; right: 22px; margin: 0; display: flex; height: 30px; padding: 0 5px; align-items: stretch; border: 1px solid var(--line-3); border-radius: 9px; background: #121419; opacity: 0; }
+.fm-tab { display: flex; align-items: center; gap: 7px; padding: 0 8px; box-shadow: inset 0 -2px 0 var(--amber); color: var(--ink); font: 600 12px var(--sans); white-space: nowrap; }
+.fm-tab em { font-style: normal; color: #c4b5fd; }
+.fm-tab .dot { width: 6px; height: 6px; }
+.fm-tab .dot.busy { width: 9px; height: 9px; }
+.fm-tab-ok { opacity: 0; }
+.fm-x { display: grid; place-items: center; width: 18px; height: 18px; margin-left: 4px; border-radius: 5px; color: var(--faint); }
+.fm-x svg { width: 11px; height: 11px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
+.fm-5 .fm-st { display: inline-grid; justify-items: end; }
+.fm-5 .fm-st > * { grid-area: 1 / 1; }
+.fm-5 .fm-dots { justify-items: center; align-items: center; width: 8px; }
+.fm-5 .fm-tab .fm-dots { width: 9px; }
+.fm-5 .on .fm-dots .dot { opacity: 0; }
+.fm-5 small.fm-st > span + span { opacity: 0; }
+
+/* 6. Cmd+K: the palette, a, p, i, the list narrows, Enter. */
+.fm-6 .fm-l { display: inline-block; overflow: hidden; overflow: clip; }
+.fm-6 .fm-gone { max-height: 0; padding-top: 0; padding-bottom: 0; opacity: 0; overflow: hidden; }
+
+/* 7. A checklist ticked off, each item with who and when. */
+.fm-7 .v-note { position: relative; }
+.fm-7 .v-todo:nth-child(5) small { opacity: 0; }
+.fm-7 .v-todo i { background: var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4L18 8' fill='none' stroke='%230b0c0f' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 0 0 no-repeat; background-color: transparent; }
+.fm-7 .v-todo.done i { background-size: 13px 13px; background-color: var(--green); }
+.fm-7 .v-todo span { text-decoration: line-through; text-decoration-color: transparent; }
+.fm-7 .v-todo.done span { text-decoration-color: #5c626c; }
+
+/* 8. Projects in their colors, and tabs in the color of their project. */
+.fm-8 .v-projects { transform-origin: 50% 0; }
+.fm-8 .fm-tabs { position: absolute; left: 22px; right: 22px; bottom: 12px; margin: 0; display: flex; gap: 2px; height: 30px; padding: 0 5px; border: 1px solid var(--line-3); border-radius: 9px; background: #121419; font: 600 11.5px var(--sans); color: var(--dim); opacity: 0; overflow: hidden; }
+.fm-8 .fm-tabs > span { display: flex; align-items: center; gap: 6px; padding: 0 8px; white-space: nowrap; opacity: 0; }
+.fm-8 .fm-tabs > span:first-child { box-shadow: inset 0 -2px 0 var(--pc-solid); color: var(--ink); }
+.fm-8 .fm-tabs em { font-style: normal; color: var(--pc-ink); }
+.fm-8 .fm-tabs .dot { width: 6px; height: 6px; }
+
+/* 9. A double click on the tab, a name typed over terminal 2, Enter. */
+.fm-9 .v-rename { position: relative; }
+.fm-name > * { display: inline-block; overflow: hidden; overflow: clip; white-space: pre; }
+.fm-n0, .fm-n1, .fm-9 .fm-sel { max-width: 0; }
+.fm-9 .v-field { display: inline-flex; overflow: hidden; overflow: clip; }
+.fm-9 .v-field > * { min-width: 0; }
+.fm-9 .fm-sel { display: inline-block; overflow: hidden; overflow: clip; white-space: pre; border-radius: 3px; background: rgba(233, 163, 63, .32); color: var(--ink); }
+.fm-9 .fm-l { display: inline-block; overflow: hidden; overflow: clip; }
+
+:is(.feature:hover, .feature.fm-play) .fm-1 .fm-ty { animation: fm-type .62s steps(8, end) .15s both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .v-meta { animation: fm1-meta 4.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .fm-busy { animation: fm1-busy 4.6s linear both, tt-spin .9s linear infinite; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .v-meta > .dot:first-child { animation: fm1-dot 4.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .v-right { animation: fm1-time 4.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .fm-o:nth-child(3) { animation: fm1-o1 4.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .fm-o:nth-child(4) { animation: fm1-o2 4.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .fm-o:nth-child(5) { animation: fm1-o3 4.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .fm-acts { animation: fm1-acts 4.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .fm-copy svg:first-child { animation: fm1-copy 4.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .fm-copy svg + svg { animation: fm1-check 4.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .fm-copy { animation: fm1-copybg 4.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .fm-cur { animation: fm-cur-1 4.6s ease-in-out both; }
+:is(.feature:hover, .feature.fm-play) .fm-1 .fm-cur i { animation: fm-ring-1 4.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-2 .fm-ty { animation: fm-type 1.1s steps(19, end) .2s both; }
+:is(.feature:hover, .feature.fm-play) .fm-2 .v-input s { animation: fm2-ghost 3.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-2 .v-input i { animation: tt-blink 1s step-end infinite; }
+:is(.feature:hover, .feature.fm-play) .fm-2 .v-key:first-child { animation: fm2-key 3.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-3 .fm-chip { animation: fm3-chip 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-3 .v-menu { animation: fm3-menu 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-3 .v-menu .on { animation: fm3-main 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-3 .fm-rel { animation: fm3-rel 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-3 .fm-b1 { animation: fm3-b1 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-3 .fm-b2 { animation: fm3-b2 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-3 .fm-sw { animation: fm3-sw 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-3 .fm-cur { animation: fm-cur-3 4.8s ease-in-out both; }
+:is(.feature:hover, .feature.fm-play) .fm-3 .fm-cur i { animation: fm-ring-3 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-4 .v-bars { animation: fm4-live 2.4s step-end infinite; }
+:is(.feature:hover, .feature.fm-play) .fm-5 .fm-tabs { animation: fm5-tabs 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-5 .fm-x { animation: fm5-x 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-5 .fm-tab-busy { animation: fm5-tbusy 4.8s linear both, tt-spin .9s linear infinite; }
+:is(.feature:hover, .feature.fm-play) .fm-5 .fm-tab-ok { animation: fm5-tok 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-5 .on .fm-dots .dm-run { animation: fm5-run 4.8s linear both, tt-pulse 1s ease-in-out infinite; }
+:is(.feature:hover, .feature.fm-play) .fm-5 .on .fm-dots .dot { animation: fm5-ok 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-5 small.fm-st > span:first-child { animation: fm5-c1 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-5 small.fm-st > span + span { animation: fm5-c2 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-5 .on { animation: fm5-row 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-5 .fm-cur { animation: fm-cur-5 4.8s ease-in-out both; }
+:is(.feature:hover, .feature.fm-play) .fm-5 .fm-cur i { animation: fm-ring-5 4.8s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-6 kbd { animation: fm6-kbd 3.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-6 .v-pal { animation: fm6-pal 3.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-6 .fm-l:nth-of-type(1) { animation: fm6-l1 3.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-6 .fm-l:nth-of-type(2) { animation: fm6-l2 3.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-6 .fm-l:nth-of-type(3) { animation: fm6-l3 3.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-6 .v-pal-q i { animation: tt-blink 1s step-end infinite; }
+:is(.feature:hover, .feature.fm-play) .fm-6 .fm-gone { animation: fm6-gone 3.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-6 .v-pal-list .on { animation: fm6-on 3.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-7 .v-todo:nth-child(3) i { animation: fm7-i1 4.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-7 .v-todo:nth-child(3) span { animation: fm7-s1 4.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-7 .v-todo:nth-child(3) small { animation: fm7-t1 4.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-7 .v-todo:nth-child(4) i { animation: fm7-i2 4.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-7 .v-todo:nth-child(4) span { animation: fm7-s2 4.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-7 .v-todo:nth-child(4) small { animation: fm7-t2 4.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-7 .v-todo:nth-child(5) i { animation: fm7-i3 4.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-7 .v-todo:nth-child(5) span { animation: fm7-s3 4.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-7 .v-todo:nth-child(5) small { animation: fm7-t3 4.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-7 .fm-cur { animation: fm-cur-7 4.4s ease-in-out both; }
+:is(.feature:hover, .feature.fm-play) .fm-7 .fm-cur i { animation: fm-ring-7 4.4s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-8 .v-projects { animation: fm8-stack 3.6s ease-out both; }
+:is(.feature:hover, .feature.fm-play) .fm-8 .fm-tabs { animation: fm8-tabs 3.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-8 .fm-tabs > span:nth-child(1) { animation: fm8-t1 3.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-8 .v-proj:nth-child(1) { animation: fm8-p1 3.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-8 .fm-tabs > span:nth-child(2) { animation: fm8-t2 3.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-8 .v-proj:nth-child(2) { animation: fm8-p2 3.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-8 .fm-tabs > span:nth-child(3) { animation: fm8-t3 3.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-8 .v-proj:nth-child(3) { animation: fm8-p3 3.6s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-9 .fm-n0 { animation: fm9-n0 4.2s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-9 .v-field { animation: fm9-field 4.2s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-9 .fm-sel { animation: fm9-sel 4.2s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-9 .fm-l:nth-of-type(2) { animation: fm9-l1 4.2s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-9 .fm-l:nth-of-type(3) { animation: fm9-l2 4.2s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-9 .fm-l:nth-of-type(4) { animation: fm9-l3 4.2s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-9 .fm-l:nth-of-type(5) { animation: fm9-l4 4.2s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-9 .v-key:first-child { animation: fm9-key 4.2s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-9 .fm-n1 { animation: fm9-n1 4.2s linear both; }
+:is(.feature:hover, .feature.fm-play) .fm-9 .fm-cur { animation: fm-cur-9 4.2s ease-in-out both; }
+:is(.feature:hover, .feature.fm-play) .fm-9 .fm-cur i { animation: fm-ring-9 4.2s linear both; }
+
+@keyframes fm1-meta {
+  0% { opacity: 0 }
+  18.48% { opacity: 0 }
+  21.52% { opacity: 1 }
+  100% { opacity: 1 }
+}
+@keyframes fm1-busy {
+  0% { opacity: 0 }
+  18.48% { opacity: 0 }
+  21.52% { opacity: 1 }
+  47.83% { opacity: 1 }
+  50.87% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@keyframes fm1-dot {
+  0% { opacity: 0; transform: scale(.6) }
+  48.91% { opacity: 0; transform: scale(.6) }
+  52.17% { opacity: 1; transform: scale(1.25) }
+  56.52% { opacity: 1; transform: scale(1) }
+  100% { opacity: 1; transform: scale(1) }
+}
+@keyframes fm1-time {
+  0% { opacity: 0 }
+  50% { opacity: 0 }
+  53.04% { opacity: 1 }
+  100% { opacity: 1 }
+}
+@keyframes fm1-o1 {
+  0% { opacity: 0; transform: translateY(4px) }
+  23.91% { opacity: 0; transform: translateY(4px) }
+  27.83% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm1-o2 {
+  0% { opacity: 0; transform: translateY(4px) }
+  32.61% { opacity: 0; transform: translateY(4px) }
+  36.52% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm1-o3 {
+  0% { opacity: 0; transform: translateY(4px) }
+  41.3% { opacity: 0; transform: translateY(4px) }
+  45.22% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm1-acts {
+  0% { opacity: 0; transform: translateX(6px) }
+  58.7% { opacity: 0; transform: translateX(6px) }
+  63.04% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm1-copy {
+  0% { opacity: 1 }
+  77.17% { opacity: 1 }
+  80.22% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@keyframes fm1-check {
+  0% { opacity: 0; transform: scale(.6) }
+  77.17% { opacity: 0; transform: scale(.6) }
+  80.65% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm1-copybg {
+  0% { background: transparent }
+  76.09% { background: transparent }
+  78.26% { background: var(--amber-14) }
+  100% { background: var(--amber-14) }
+}
+@keyframes fm-cur-1 {
+  0% { opacity: 0; transform: translate(83px, 107px) }
+  56.52% { opacity: 0; transform: translate(83px, 107px) }
+  59.78% { opacity: 1; transform: translate(73px, 92px) }
+  72.83% { opacity: 1; transform: translate(13px, 12px) }
+  89.13% { opacity: 1; transform: translate(13px, 12px) }
+  97.83% { opacity: 0; transform: translate(25px, 42px) }
+  100% { opacity: 0; transform: translate(25px, 42px) }
+}
+@keyframes fm-ring-1 {
+  0% { opacity: 0; transform: scale(.4) }
+  75% { opacity: 0; transform: scale(.4) }
+  75.43% { opacity: .9; transform: scale(.5) }
+  81.96% { opacity: 0; transform: scale(1.3) }
+  100% { opacity: 0; transform: scale(.4) }
+}
+@keyframes fm2-ghost {
+  0% { max-width: 0; color: #5c626c }
+  39.44% { max-width: 0; color: #5c626c }
+  40.28% { max-width: 7ch; color: #5c626c }
+  61.11% { max-width: 7ch; color: #5c626c }
+  64.44% { max-width: 7ch; color: var(--ink) }
+  100% { max-width: 7ch; color: var(--ink) }
+}
+@keyframes fm2-key {
+  0% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+  56.94% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+  58.61% { border-color: var(--amber); background: var(--amber-14); color: var(--amber); transform: scale(.9) }
+  64.17% { border-color: var(--amber); background: var(--amber-14); color: var(--amber); transform: none }
+  70.83% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+  100% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+}
+@keyframes fm3-chip {
+  0% { border-color: transparent; background: var(--line-2); color: #c9cdd4 }
+  19.79% { border-color: transparent; background: var(--line-2); color: #c9cdd4 }
+  21.46% { border-color: rgba(233, 163, 63, .5); background: var(--amber-10); color: var(--amber) }
+  100% { border-color: rgba(233, 163, 63, .5); background: var(--amber-10); color: var(--amber) }
+}
+@keyframes fm3-menu {
+  0% { opacity: 0; transform: translateY(-5px) }
+  20.83% { opacity: 0; transform: translateY(-5px) }
+  23.96% { opacity: 1; transform: none }
+  42.71% { opacity: 1; transform: none }
+  45.83% { opacity: 0; transform: translateY(-5px) }
+  100% { opacity: 0; transform: translateY(-5px) }
+}
+@keyframes fm3-main {
+  0% { background: var(--line-2); color: var(--ink) }
+  32.29% { background: var(--line-2); color: var(--ink) }
+  34.38% { background: transparent; color: var(--dim) }
+  100% { background: transparent; color: var(--dim) }
+}
+@keyframes fm3-rel {
+  0% { background: transparent; color: var(--dim) }
+  32.29% { background: transparent; color: var(--dim) }
+  34.38% { background: var(--line-2); color: var(--ink) }
+  100% { background: var(--line-2); color: var(--ink) }
+}
+@keyframes fm3-b1 {
+  0% { max-width: 4ch }
+  42.71% { max-width: 4ch }
+  42.92% { max-width: 0 }
+  100% { max-width: 0 }
+}
+@keyframes fm3-b2 {
+  0% { max-width: 0 }
+  42.71% { max-width: 0 }
+  42.92% { max-width: 11ch }
+  100% { max-width: 11ch }
+}
+@keyframes fm3-sw {
+  0% { opacity: 0; transform: translateY(5px) }
+  48.96% { opacity: 0; transform: translateY(5px) }
+  53.13% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm-cur-3 {
+  0% { opacity: 0; transform: translate(217px, 135px) }
+  3.12% { opacity: 1; transform: translate(217px, 135px) }
+  16.67% { opacity: 1; transform: translate(97px, 15px) }
+  21.88% { opacity: 1; transform: translate(97px, 15px) }
+  33.33% { opacity: 1; transform: translate(105px, 90px) }
+  40.62% { opacity: 1; transform: translate(105px, 90px) }
+  54.17% { opacity: 1; transform: translate(255px, 150px) }
+  60.42% { opacity: 0; transform: translate(255px, 150px) }
+  100% { opacity: 0; transform: translate(255px, 150px) }
+}
+@keyframes fm-ring-3 {
+  0% { opacity: 0; transform: scale(.4) }
+  18.75% { opacity: 0; transform: scale(.4) }
+  19.17% { opacity: .9; transform: scale(.5) }
+  25.42% { opacity: 0; transform: scale(1.3) }
+  38.54% { opacity: 0; transform: scale(.4) }
+  38.96% { opacity: .9; transform: scale(.5) }
+  45.21% { opacity: 0; transform: scale(1.3) }
+  100% { opacity: 0; transform: scale(.4) }
+}
+@keyframes fm4-live {
+  0% { --c1: 58; --c2: 31; --c3: 84; --mem: 46 }
+  20% { --c1: 71; --c2: 24; --c3: 91; --mem: 47 }
+  40% { --c1: 49; --c2: 38; --c3: 77; --mem: 47 }
+  60% { --c1: 64; --c2: 27; --c3: 96; --mem: 48 }
+  80% { --c1: 55; --c2: 35; --c3: 88; --mem: 47 }
+  100% { --c1: 58; --c2: 31; --c3: 84; --mem: 46 }
+}
+@keyframes fm5-tabs {
+  0% { opacity: 0; transform: translateY(-4px) }
+  1.04% { opacity: 0; transform: translateY(-4px) }
+  5.21% { opacity: 1; transform: none }
+  21.88% { opacity: 1; transform: none }
+  26.04% { opacity: 0; transform: scale(.96) }
+  71.88% { opacity: 0; transform: translateY(-4px) }
+  77.08% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm5-x {
+  0% { background: transparent; color: var(--faint) }
+  17.71% { background: transparent; color: var(--faint) }
+  18.96% { background: var(--line-3); color: var(--ink) }
+  21.88% { background: var(--line-3); color: var(--ink) }
+  23.13% { background: transparent; color: var(--faint) }
+  100% { background: transparent; color: var(--faint) }
+}
+@keyframes fm5-tbusy {
+  0% { opacity: 1 }
+  70.83% { opacity: 1 }
+  71.04% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@keyframes fm5-tok {
+  0% { opacity: 0 }
+  70.83% { opacity: 0 }
+  71.04% { opacity: 1 }
+  100% { opacity: 1 }
+}
+@keyframes fm5-run {
+  0% { opacity: 1 }
+  58.33% { opacity: 1 }
+  58.54% { opacity: 0 !important }
+  100% { opacity: 0 !important }
+}
+@keyframes fm5-ok {
+  0% { opacity: 0; transform: scale(.6) }
+  58.33% { opacity: 0; transform: scale(.6) }
+  61.46% { opacity: 1; transform: scale(1.3) }
+  65.62% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm5-c1 {
+  0% { opacity: 1 }
+  57.92% { opacity: 1 }
+  59.17% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@keyframes fm5-c2 {
+  0% { opacity: 0 }
+  59.58% { opacity: 0 }
+  61.67% { opacity: 1 }
+  100% { opacity: 1 }
+}
+@keyframes fm5-row {
+  0% { box-shadow: inset 0 0 0 1px transparent }
+  28.13% { box-shadow: inset 0 0 0 1px transparent }
+  34.38% { box-shadow: inset 0 0 0 1px rgba(233, 163, 63, .35) }
+  57.29% { box-shadow: inset 0 0 0 1px rgba(233, 163, 63, .35) }
+  63.54% { box-shadow: inset 0 0 0 1px transparent }
+  100% { box-shadow: inset 0 0 0 1px transparent }
+}
+@keyframes fm-cur-5 {
+  0% { opacity: 0; transform: translate(80px, 105px) }
+  4.17% { opacity: 1; transform: translate(80px, 105px) }
+  15.62% { opacity: 1; transform: translate(140px, 15px) }
+  21.88% { opacity: 1; transform: translate(140px, 15px) }
+  31.25% { opacity: 1; transform: translate(170px, 85px) }
+  37.5% { opacity: 0; transform: translate(170px, 85px) }
+  100% { opacity: 0; transform: translate(170px, 85px) }
+}
+@keyframes fm-ring-5 {
+  0% { opacity: 0; transform: scale(.4) }
+  18.75% { opacity: 0; transform: scale(.4) }
+  19.17% { opacity: .9; transform: scale(.5) }
+  25.42% { opacity: 0; transform: scale(1.3) }
+  100% { opacity: 0; transform: scale(.4) }
+}
+@keyframes fm6-kbd {
+  0% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+  2.94% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+  4.71% { border-color: var(--amber); background: var(--amber-14); color: var(--amber); transform: scale(.9) }
+  10.59% { border-color: var(--amber); background: var(--amber-14); color: var(--amber); transform: none }
+  17.65% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+  100% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+}
+@keyframes fm6-pal {
+  0% { opacity: .5; transform: scale(.96) }
+  5.88% { opacity: .5; transform: scale(.96) }
+  11.76% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm6-l1 {
+  0% { max-width: 0 }
+  22.06% { max-width: 0 }
+  22.35% { max-width: 1em }
+  100% { max-width: 1em }
+}
+@keyframes fm6-l2 {
+  0% { max-width: 0 }
+  27.94% { max-width: 0 }
+  28.24% { max-width: 1em }
+  100% { max-width: 1em }
+}
+@keyframes fm6-l3 {
+  0% { max-width: 0 }
+  33.82% { max-width: 0 }
+  34.12% { max-width: 1em }
+  100% { max-width: 1em }
+}
+@keyframes fm6-gone {
+  0% { max-height: 40px; padding-top: 8px; padding-bottom: 8px; opacity: 1; background: rgba(233, 163, 63, .12); color: var(--ink) }
+  27.94% { max-height: 40px; padding-top: 8px; padding-bottom: 8px; opacity: 1; background: rgba(233, 163, 63, .12); color: var(--ink) }
+  36.76% { max-height: 0; padding-top: 0; padding-bottom: 0; opacity: 0; background: transparent; color: var(--dim) }
+  100% { max-height: 0; padding-top: 0; padding-bottom: 0; opacity: 0; background: transparent; color: var(--dim) }
+}
+@keyframes fm6-on {
+  0% { background: transparent; color: var(--dim) }
+  33.82% { background: transparent; color: var(--dim) }
+  36.76% { background: rgba(233, 163, 63, .12); color: var(--ink) }
+  61.76% { background: rgba(233, 163, 63, .12); color: var(--ink) }
+  64.12% { background: rgba(233, 163, 63, .28); color: var(--ink) }
+  73.53% { background: rgba(233, 163, 63, .12); color: var(--ink) }
+  100% { background: rgba(233, 163, 63, .12); color: var(--ink) }
+}
+@keyframes fm7-i1 {
+  0% { border: 1.5px solid #3a3f48; background-color: transparent; background-size: 0 0 }
+  21.59% { border: 1.5px solid #3a3f48; background-color: transparent; background-size: 0 0 }
+  22.5% { border: 0 solid #3a3f48; background-color: var(--green); background-size: 16px 16px }
+  26.14% { border: 0 solid #3a3f48; background-color: var(--green); background-size: 13px 13px }
+  100% { border: 0 solid #3a3f48; background-color: var(--green); background-size: 13px 13px }
+}
+@keyframes fm7-s1 {
+  0% { color: var(--text); text-decoration-color: transparent }
+  21.59% { color: var(--text); text-decoration-color: transparent }
+  27.27% { color: var(--faint); text-decoration-color: #5c626c }
+  100% { color: var(--faint); text-decoration-color: #5c626c }
+}
+@keyframes fm7-t1 {
+  0% { opacity: 0; transform: translateX(4px) }
+  23.86% { opacity: 0; transform: translateX(4px) }
+  28.41% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm7-i2 {
+  0% { border: 1.5px solid #3a3f48; background-color: transparent; background-size: 0 0 }
+  42.05% { border: 1.5px solid #3a3f48; background-color: transparent; background-size: 0 0 }
+  42.95% { border: 0 solid #3a3f48; background-color: var(--green); background-size: 16px 16px }
+  46.59% { border: 0 solid #3a3f48; background-color: var(--green); background-size: 13px 13px }
+  100% { border: 0 solid #3a3f48; background-color: var(--green); background-size: 13px 13px }
+}
+@keyframes fm7-s2 {
+  0% { color: var(--text); text-decoration-color: transparent }
+  42.05% { color: var(--text); text-decoration-color: transparent }
+  47.73% { color: var(--faint); text-decoration-color: #5c626c }
+  100% { color: var(--faint); text-decoration-color: #5c626c }
+}
+@keyframes fm7-t2 {
+  0% { opacity: 0; transform: translateX(4px) }
+  44.32% { opacity: 0; transform: translateX(4px) }
+  48.86% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm7-i3 {
+  0% { border: 1.5px solid #3a3f48; background-color: transparent; background-size: 0 0 }
+  64.77% { border: 1.5px solid #3a3f48; background-color: transparent; background-size: 0 0 }
+  65.68% { border: 0 solid #3a3f48; background-color: var(--green); background-size: 16px 16px }
+  69.32% { border: 0 solid #3a3f48; background-color: var(--green); background-size: 13px 13px }
+  100% { border: 0 solid #3a3f48; background-color: var(--green); background-size: 13px 13px }
+}
+@keyframes fm7-s3 {
+  0% { color: var(--text); text-decoration-color: transparent }
+  64.77% { color: var(--text); text-decoration-color: transparent }
+  70.45% { color: var(--faint); text-decoration-color: #5c626c }
+  100% { color: var(--faint); text-decoration-color: #5c626c }
+}
+@keyframes fm7-t3 {
+  0% { opacity: 0; transform: translateX(4px) }
+  67.05% { opacity: 0; transform: translateX(4px) }
+  71.59% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm-cur-7 {
+  0% { opacity: 0; transform: translate(98px, 125px) }
+  5.68% { opacity: 1; transform: translate(98px, 125px) }
+  17.05% { opacity: 1; transform: translate(8px, 65px) }
+  23.86% { opacity: 1; transform: translate(8px, 65px) }
+  37.5% { opacity: 1; transform: translate(8px, 91px) }
+  44.32% { opacity: 1; transform: translate(8px, 91px) }
+  60.23% { opacity: 1; transform: translate(8px, 117px) }
+  67.05% { opacity: 1; transform: translate(8px, 117px) }
+  79.55% { opacity: 1; transform: translate(88px, 143px) }
+  86.36% { opacity: 0; transform: translate(88px, 143px) }
+  100% { opacity: 0; transform: translate(88px, 143px) }
+}
+@keyframes fm-ring-7 {
+  0% { opacity: 0; transform: scale(.4) }
+  20.45% { opacity: 0; transform: scale(.4) }
+  20.91% { opacity: .9; transform: scale(.5) }
+  27.73% { opacity: 0; transform: scale(1.3) }
+  40.91% { opacity: 0; transform: scale(.4) }
+  41.36% { opacity: .9; transform: scale(.5) }
+  48.18% { opacity: 0; transform: scale(1.3) }
+  63.64% { opacity: 0; transform: scale(.4) }
+  64.09% { opacity: .9; transform: scale(.5) }
+  70.91% { opacity: 0; transform: scale(1.3) }
+  100% { opacity: 0; transform: scale(.4) }
+}
+@keyframes fm8-stack {
+  0% { transform: none }
+  4.17% { transform: none }
+  13.89% { transform: translateY(-17px) scale(.9) }
+  100% { transform: translateY(-17px) scale(.9) }
+}
+@keyframes fm8-tabs {
+  0% { opacity: 0; transform: translateY(8px) }
+  12.5% { opacity: 0; transform: translateY(8px) }
+  19.44% { opacity: 1; transform: none }
+  100% { opacity: 1; transform: none }
+}
+@keyframes fm8-t1 {
+  0% { opacity: 0 }
+  23.61% { opacity: 0 }
+  29.17% { opacity: 1 }
+  100% { opacity: 1 }
+}
+@keyframes fm8-p1 {
+  0% { box-shadow: 0 0 0 1px transparent }
+  23.61% { box-shadow: 0 0 0 1px transparent }
+  26.39% { box-shadow: 0 0 0 1px rgba(var(--pc), .85) }
+  40.28% { box-shadow: 0 0 0 1px rgba(var(--pc), .85) }
+  48.61% { box-shadow: 0 0 0 1px transparent }
+  100% { box-shadow: 0 0 0 1px transparent }
+}
+@keyframes fm8-t2 {
+  0% { opacity: 0 }
+  37.5% { opacity: 0 }
+  43.06% { opacity: 1 }
+  100% { opacity: 1 }
+}
+@keyframes fm8-p2 {
+  0% { box-shadow: 0 0 0 1px transparent }
+  37.5% { box-shadow: 0 0 0 1px transparent }
+  40.28% { box-shadow: 0 0 0 1px rgba(var(--pc), .85) }
+  54.17% { box-shadow: 0 0 0 1px rgba(var(--pc), .85) }
+  62.5% { box-shadow: 0 0 0 1px transparent }
+  100% { box-shadow: 0 0 0 1px transparent }
+}
+@keyframes fm8-t3 {
+  0% { opacity: 0 }
+  51.39% { opacity: 0 }
+  56.94% { opacity: 1 }
+  100% { opacity: 1 }
+}
+@keyframes fm8-p3 {
+  0% { box-shadow: 0 0 0 1px transparent }
+  51.39% { box-shadow: 0 0 0 1px transparent }
+  54.17% { box-shadow: 0 0 0 1px rgba(var(--pc), .85) }
+  68.06% { box-shadow: 0 0 0 1px rgba(var(--pc), .85) }
+  76.39% { box-shadow: 0 0 0 1px transparent }
+  100% { box-shadow: 0 0 0 1px transparent }
+}
+@keyframes fm9-n0 {
+  0% { max-width: 12ch }
+  23.81% { max-width: 12ch }
+  24.05% { max-width: 0 }
+  100% { max-width: 0 }
+}
+@keyframes fm9-field {
+  0% { max-width: 0; padding-left: 0; padding-right: 0; border-width: 0 }
+  23.81% { max-width: 0; padding-left: 0; padding-right: 0; border-width: 0 }
+  24.05% { max-width: 140px; padding-left: 7px; padding-right: 7px; border-width: 1px }
+  58.33% { max-width: 140px; padding-left: 7px; padding-right: 7px; border-width: 1px }
+  58.57% { max-width: 0; padding-left: 0; padding-right: 0; border-width: 0 }
+  100% { max-width: 0; padding-left: 0; padding-right: 0; border-width: 0 }
+}
+@keyframes fm9-sel {
+  0% { max-width: 0 }
+  23.81% { max-width: 0 }
+  24.05% { max-width: 12ch }
+  30.95% { max-width: 12ch }
+  31.19% { max-width: 0 }
+  100% { max-width: 0 }
+}
+@keyframes fm9-l1 {
+  0% { max-width: 0 }
+  32.14% { max-width: 0 }
+  32.38% { max-width: 1em }
+  100% { max-width: 1em }
+}
+@keyframes fm9-l2 {
+  0% { max-width: 0 }
+  35.71% { max-width: 0 }
+  35.95% { max-width: 1em }
+  100% { max-width: 1em }
+}
+@keyframes fm9-l3 {
+  0% { max-width: 0 }
+  39.29% { max-width: 0 }
+  39.52% { max-width: 1em }
+  100% { max-width: 1em }
+}
+@keyframes fm9-l4 {
+  0% { max-width: 0 }
+  42.86% { max-width: 0 }
+  43.1% { max-width: 1em }
+  100% { max-width: 1em }
+}
+@keyframes fm9-key {
+  0% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+  53.57% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+  55% { border-color: var(--amber); background: var(--amber-14); color: var(--amber); transform: scale(.9) }
+  59.76% { border-color: var(--amber); background: var(--amber-14); color: var(--amber); transform: none }
+  65.48% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+  100% { border-color: var(--line-3); background: transparent; color: var(--faint); transform: none }
+}
+@keyframes fm9-n1 {
+  0% { max-width: 0 }
+  58.33% { max-width: 0 }
+  58.57% { max-width: 6ch }
+  100% { max-width: 6ch }
+}
+@keyframes fm-cur-9 {
+  0% { opacity: 0; transform: translate(142px, 100px) }
+  3.57% { opacity: 1; transform: translate(142px, 100px) }
+  16.67% { opacity: 1; transform: translate(82px, 20px) }
+  25% { opacity: 1; transform: translate(82px, 20px) }
+  35.71% { opacity: 1; transform: translate(122px, 90px) }
+  42.86% { opacity: 0; transform: translate(122px, 90px) }
+  100% { opacity: 0; transform: translate(122px, 90px) }
+}
+@keyframes fm-ring-9 {
+  0% { opacity: 0; transform: scale(.4) }
+  18.57% { opacity: 0; transform: scale(.4) }
+  19.05% { opacity: .9; transform: scale(.5) }
+  26.19% { opacity: 0; transform: scale(1.3) }
+  22.14% { opacity: 0; transform: scale(.4) }
+  22.62% { opacity: .9; transform: scale(.5) }
+  29.76% { opacity: 0; transform: scale(1.3) }
+  100% { opacity: 0; transform: scale(.4) }
+}
+
+/* One column on a phone: each picture takes the height it needs, and none
+   may change it while it plays. 5 shows its tab above the terminals at rest
+   too; the palette of 6 starts with the two lines it ends with. */
+@media (max-width: 640px) {
+  .vignette.fm-5 { min-height: 168px; justify-content: flex-end; }
+  .fm-5 .fm-tabs { opacity: 1; }
+  .fm-6 .fm-gone { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fm * { animation: none !important; }
+}
+
 /* Security: six facts in one panel. */
 .split-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; }
 .split-head .section-lead { max-width: 400px; margin: 0; font-size: 17px; }
@@ -1887,6 +2590,9 @@ h1, h2, h3, h4 { margin: 0; }
    it is. A line's leading spaces are in .dm-indent: on a narrow screen they
    go, so the line fits whole. */
 .post-figure .demo-still { --dm-h: 520px; }
+/* A post's picture that is a screenshot, in a window as the covers are. */
+.post-shot { position: relative; overflow: hidden; border: 1px solid var(--line-3); border-radius: 14px; background: var(--card-2); box-shadow: 0 30px 80px rgba(0, 0, 0, .55); }
+.post-shot img { display: block; width: 100%; height: auto; }
 .post-figure figcaption { position: relative; margin-top: 18px; text-align: center; font: 500 14px/1.5 var(--sans); color: var(--faint); }
 .post-figure { margin-left: auto; margin-right: auto; }
 figure { margin: 0; }

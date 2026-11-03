@@ -41,6 +41,7 @@ shell.license = AGPL-3.0-Lizenz
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
 blog.tag.mac = tTerm für Mac
+blog.tag.docs = Dokumentation
 blog.tag.bot = Bot
 blog.tag.site = Website
 blog.read = Beitrag lesen
@@ -420,6 +421,38 @@ post.several-terminals.prose.6 = Abonniere unseren Blog auf Telegram
 # more-section
 post.several-terminals.more-section.1 = Mehr aus dem Blog
 post.several-terminals.more-section.2 = Alle Beiträge
+
+# ------------------------------------------------------------ post: /blog/docs/
+post.docs.title = tTerm hat jetzt eine Dokumentation · tTerm-Blog
+post.docs.og_title = tTerm hat jetzt eine Dokumentation
+post.docs.description = Auf docs.tterm.net erfährst du, wie tTerm funktioniert: von deinem ersten Befehl bis dazu, wie der Zugriff aufgebaut ist. Insgesamt 19 Seiten in allen 12 Sprachen, mit Screenshots im hellen und im dunklen Design.
+post.docs.alt = Die Dokumentationsseite „Blöcke und die Befehlszeile“ im dunklen Design
+post.docs.figcaption = Links die Bereiche, im Text ein Screenshot von tTerm Web in der Sprache der Seite.
+post.docs.why.title = Warum
+post.docs.why.text = Je mehr tTerm kann, desto öfter fragst du dich: „Wie geht das?“ Die Antworten waren über Blogbeiträge, Hinweise auf dem Bildschirm und READMEs auf GitHub verstreut. Jetzt sind sie an einem Ort gesammelt. Jede Funktion hat ihre eigene Seite: was sie tut, wo du sie findest und was passiert, wenn du darauf klickst.
+post.docs.inside.title = Was drinsteht
+post.docs.item.1.title = Hier anfangen.
+post.docs.item.1.text = Was tTerm ist, und dein erster Befehl in fünf Minuten.
+post.docs.item.2.title = Maschinen.
+post.docs.item.2.text = Ein Linux-Server mit einem Befehl, ein Computer über einen kleinen Agenten und wie du eine Maschine entfernst.
+post.docs.item.3.title = Funktionen.
+post.docs.item.3.text = Blöcke und die Befehlszeile, Suche mit ⌘K, Notizen, das Log einer Maschine, Projekte und ihre Farben.
+post.docs.item.4.title = Lokales Terminal.
+post.docs.item.4.text = tTerm für Mac: wie du es installierst, zum ersten Mal öffnest und Server von deinem Mac in die Cloud umziehst.
+post.docs.item.5.title = Sicherheit.
+post.docs.item.5.text = Zertifikate für zwei Minuten, Signieren in einem eigenen Prozess und ein Tresor für deine Schlüssel, den nur deine Geräte öffnen.
+post.docs.item.6.title = Konto.
+post.docs.item.6.text = Tarif und Limits, Geräte und Anmeldung.
+post.docs.lang.title = In deiner Sprache
+post.docs.lang.text = Die Dokumentation spricht dieselben 12 Sprachen wie die Website und tTerm selbst: Seit dem 31. Oktober gibt es die Oberfläche von tTerm Web und der Mac-App in allen zwölf. Buttons und Menüs heißen im Text genauso wie auf deinem Bildschirm. Die Screenshots sind in jeder Sprache aufgenommen, im hellen und im dunklen Design. Die Suche läuft über die Seiten in deiner Sprache.
+post.docs.new.title = Neuigkeiten
+post.docs.new.text = Neue Versionen erscheinen oft, manchmal mehrere am Tag. Der Bereich <a href="https://docs.tterm.net{{$base}}/whats-new/web/">„Neuigkeiten“</a> sammelt sie an einem Ort. Dort steht in einfachen Worten, was jede Version von tTerm Web und tTerm für Mac geändert hat, mit Links zu den passenden Seiten. Dieser Bereich wird auf Englisch und Russisch geführt. Die Dokumentation ändert sich mit dem Produkt: Mit jeder neuen Version werden auch ihre Seiten überarbeitet.
+post.docs.where.title = Wo du sie findest
+post.docs.where.text = Auf der Website findest du die Dokumentation unter „Ressourcen“ und in der Fußzeile. In tTerm Web ist sie im Kontomenü unter „Hilfe erhalten“. Dort kannst du auch an den Support schreiben, wenn du keine Antwort gefunden hast.
+post.docs.cta.title = Schau in die Dokumentation
+post.docs.cta.button = Dokumentation öffnen
+post.docs.more-section.1 = Mehr aus dem Blog
+post.docs.more-section.2 = Alle Beiträge
 
 # ------------------------------------------------------------ post: /blog/tterm-for-mac/
 post.tterm-for-mac.title = tTerm für Mac: ein lokales Terminal mit der Cloud an Bord · tTerm-Blog

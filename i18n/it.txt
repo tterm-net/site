@@ -41,6 +41,7 @@ shell.license = Licenza AGPL-3.0
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
 blog.tag.mac = tTerm per Mac
+blog.tag.docs = Documentazione
 blog.tag.bot = Bot
 blog.tag.site = Sito
 blog.read = Leggi l'articolo
@@ -420,6 +421,38 @@ post.several-terminals.prose.6 = Iscriviti al nostro blog su Telegram
 # more-section
 post.several-terminals.more-section.1 = Altro dal blog
 post.several-terminals.more-section.2 = Tutti gli articoli
+
+# ------------------------------------------------------------ post: /blog/docs/
+post.docs.title = tTerm ora ha la sua documentazione · Blog di tTerm
+post.docs.og_title = tTerm ora ha la sua documentazione
+post.docs.description = Su docs.tterm.net scopri come funziona tTerm, dal tuo primo comando a come è organizzato l'accesso. Sono 19 pagine in tutte le 12 lingue, con screenshot nel tema chiaro e in quello scuro.
+post.docs.alt = La pagina della documentazione “Blocchi e riga di comando”, nel tema scuro
+post.docs.figcaption = A sinistra le sezioni, nel testo uno screenshot di tTerm Web nella lingua della pagina.
+post.docs.why.title = Perché
+post.docs.why.text = Più cose sa fare tTerm, più spesso ti chiedi: “Come si fa?” Le risposte erano sparse tra articoli del blog, suggerimenti a schermo e README su GitHub. Ora sono tutte in un unico posto. Ogni funzionalità ha la sua pagina: cosa fa, dove trovarla e cosa succede quando fai clic.
+post.docs.inside.title = Cosa c'è dentro
+post.docs.item.1.title = Inizia da qui.
+post.docs.item.1.text = Cos'è tTerm e il tuo primo comando in cinque minuti.
+post.docs.item.2.title = Macchine.
+post.docs.item.2.text = Un server Linux con un solo comando, un computer tramite un piccolo agente e come rimuovere una macchina.
+post.docs.item.3.title = Funzionalità.
+post.docs.item.3.text = I blocchi e la riga di comando, la ricerca con ⌘K, le note, il log di una macchina, i progetti e i loro colori.
+post.docs.item.4.title = Terminale locale.
+post.docs.item.4.text = tTerm per Mac: come installarlo, come aprirlo la prima volta e come spostare i server dal tuo Mac nel cloud.
+post.docs.item.5.title = Sicurezza.
+post.docs.item.5.text = Certificati da due minuti, la firma in un processo separato e una cassaforte per le tue chiavi che solo i tuoi dispositivi possono aprire.
+post.docs.item.6.title = Account.
+post.docs.item.6.text = Il tuo piano e i suoi limiti, i dispositivi e l'accesso.
+post.docs.lang.title = Nella tua lingua
+post.docs.lang.text = La documentazione parla le stesse 12 lingue del sito e di tTerm stesso: dal 31 ottobre l'interfaccia di tTerm Web e dell'app per Mac è disponibile in tutte e dodici. Nel testo, pulsanti e menu si chiamano come sul tuo schermo. Gli screenshot sono stati fatti in ogni lingua, nel tema chiaro e in quello scuro. La ricerca copre le pagine nella tua lingua.
+post.docs.new.title = Novità
+post.docs.new.text = Le nuove versioni escono spesso, a volte più d'una al giorno. La sezione <a href="https://docs.tterm.net{{$base}}/whats-new/web/">“Novità”</a> le raccoglie in un unico posto. Spiega con parole semplici cosa ha cambiato ogni versione di tTerm Web e di tTerm per Mac, con i link alle pagine interessate. Questa sezione è curata in inglese e in russo. La documentazione cambia con il prodotto: ogni nuova versione porta con sé l'aggiornamento delle sue pagine.
+post.docs.where.title = Dove trovarla
+post.docs.where.text = Sul sito, la documentazione è nel menu “Risorse” e nel piè di pagina. In tTerm Web è nel menu dell'account, alla voce “Ottieni aiuto”. Da lì puoi anche scrivere al supporto, se non hai trovato la risposta.
+post.docs.cta.title = Dai un'occhiata alla documentazione
+post.docs.cta.button = Apri la documentazione
+post.docs.more-section.1 = Altro dal blog
+post.docs.more-section.2 = Tutti gli articoli
 
 # ------------------------------------------------------------ post: /blog/tterm-for-mac/
 post.tterm-for-mac.title = tTerm per Mac: un terminale locale con dentro il cloud · Blog di tTerm

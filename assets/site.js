@@ -484,4 +484,14 @@
       !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     Array.prototype.forEach.call(document.querySelectorAll('.feature, .step'), initGlow);
   }
+
+  // The pictures of the features move while a card is under the pointer
+  // (style.css). On a screen without one, a card's picture plays as the card
+  // comes into view, and again the next time.
+  if (window.matchMedia && !window.matchMedia('(hover: hover)').matches && 'IntersectionObserver' in window) {
+    var seen = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { entry.target.classList.toggle('fm-play', entry.isIntersecting); });
+    }, { threshold: 0.6 });
+    Array.prototype.forEach.call(document.querySelectorAll('.feature'), function (card) { seen.observe(card); });
+  }
 })();

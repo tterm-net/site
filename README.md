@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.7.0.** The number lives in `VERSION`; the build puts it in a
+**Version 2.8.0.** The number lives in `VERSION`; the build puts it in a
 `<meta>` tag and the footer of every page, so you can tell what is deployed
 by viewing source.
 
@@ -182,6 +182,16 @@ colors glow quieter behind features, security, teams and pricing. Cards carry
 a hairline of light and a long soft shadow, and with a mouse a warm light
 follows the pointer across features and steps.
 
+The pictures of the features move. Each is a short scene of tTerm doing
+what its card says, drawn in markup and CSS like the rest (`.fm-1` to
+`.fm-9` in `templates/index.html`, their timelines in `style.css`): it plays
+while the card is under the pointer, from the start each time, and stays
+on its last frame; on a screen without a pointer `site.js` plays it as the
+card comes into view (`.fm-play`). At rest, and with less motion asked for,
+each is the still picture. The pointer drawn in some of them goes where its
+targets are at the card's size: after a change to a picture, look at its
+scene again.
+
 ## Search engines
 
 `build_seo.py` writes `robots.txt` and `sitemap.xml`, and `build_site.py`
@@ -265,7 +275,7 @@ blog". Those parts sit between `<!-- updates:NAME -->` comments, and editing
 them by hand is pointless: the next run overwrites them. The reading time
 counts the post's own text, not those parts.
 
-An entry starts with its date and what it is about (`web`, `mac`, `bot` or `site`),
+An entry starts with its date and what it is about (`web`, `mac`, `docs`, `bot` or `site`),
 then a title and text in every language (the words around them, "Read the
 post", the months, "4 min read", are strings in `i18n/`, under `blog.` and
 `date.`):

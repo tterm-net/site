@@ -41,6 +41,7 @@ shell.license = Licencia AGPL-3.0
 # blog.minutes has a form for each plural of the language; dates take {d}, {y}, {month}, {month_short}, {month_heading}.
 blog.tag.web = tTerm Web
 blog.tag.mac = tTerm para Mac
+blog.tag.docs = Documentación
 blog.tag.bot = Bot
 blog.tag.site = Sitio
 blog.read = Leer el artículo
@@ -420,6 +421,38 @@ post.several-terminals.prose.6 = Suscríbete a nuestro blog en Telegram
 # more-section
 post.several-terminals.more-section.1 = Más del blog
 post.several-terminals.more-section.2 = Todos los artículos
+
+# ------------------------------------------------------------ post: /blog/docs/
+post.docs.title = tTerm ya tiene documentación · Blog de tTerm
+post.docs.og_title = tTerm ya tiene documentación
+post.docs.description = En docs.tterm.net te explicamos cómo funciona tTerm, desde tu primer comando hasta cómo está organizado el acceso. En total, 19 páginas en los 12 idiomas, con capturas de pantalla en el tema claro y en el oscuro.
+post.docs.alt = La página «Bloques y línea de comandos» de la documentación, con el tema oscuro
+post.docs.figcaption = A la izquierda, las secciones; en el texto, una captura de pantalla de tTerm Web en el idioma de la página.
+post.docs.why.title = Por qué
+post.docs.why.text = Cuantas más cosas sabe hacer tTerm, más a menudo te preguntas «¿y esto cómo se hace?». Las respuestas estaban repartidas entre artículos del blog, sugerencias en pantalla y archivos README en GitHub. Ahora están en un solo lugar. Cada función tiene su propia página: qué hace, dónde encontrarla y qué pasa cuando haces clic.
+post.docs.inside.title = Qué hay dentro
+post.docs.item.1.title = Primeros pasos.
+post.docs.item.1.text = Qué es tTerm y tu primer comando en cinco minutos.
+post.docs.item.2.title = Máquinas.
+post.docs.item.2.text = Un servidor Linux con un solo comando, una computadora a través de un pequeño agente y cómo quitar una máquina.
+post.docs.item.3.title = Funciones.
+post.docs.item.3.text = Los bloques y la línea de comandos, la búsqueda con ⌘K, las notas, la bitácora de una máquina, los proyectos y sus colores.
+post.docs.item.4.title = Terminal local.
+post.docs.item.4.text = tTerm para Mac: cómo instalarlo, cómo abrirlo la primera vez y cómo llevar los servidores de tu Mac a la nube.
+post.docs.item.5.title = Seguridad.
+post.docs.item.5.text = Certificados de dos minutos, la firma en un proceso aparte y una bóveda para tus claves que solo abren tus dispositivos.
+post.docs.item.6.title = Cuenta.
+post.docs.item.6.text = Tu plan y sus límites, los dispositivos y el inicio de sesión.
+post.docs.lang.title = En tu idioma
+post.docs.lang.text = La documentación habla los mismos 12 idiomas que el sitio y el propio tTerm: desde el 31 de octubre, la interfaz de tTerm Web y de la aplicación para Mac está disponible en los doce. En el texto, los botones y los menús se llaman igual que en tu pantalla. Las capturas de pantalla se hicieron en cada idioma, con el tema claro y con el oscuro. La búsqueda recorre las páginas en tu idioma.
+post.docs.new.title = Novedades
+post.docs.new.text = Las versiones nuevas salen a menudo, a veces varias en un mismo día. La sección <a href="https://docs.tterm.net{{$base}}/whats-new/web/">«Novedades»</a> las reúne en un solo lugar. Ahí se cuenta, con palabras sencillas, qué cambió en cada versión de tTerm Web y de tTerm para Mac, con enlaces a las páginas correspondientes. Esta sección se mantiene en inglés y en ruso. La documentación cambia junto con el producto: cada versión nueva llega con sus páginas actualizadas.
+post.docs.where.title = Dónde encontrarla
+post.docs.where.text = En el sitio, la documentación está en «Recursos» y en el pie de página. En tTerm Web, está en el menú de la cuenta, en «Obtener ayuda». Desde ahí también puedes escribir a soporte si no encontraste la respuesta.
+post.docs.cta.title = Echa un vistazo a la documentación
+post.docs.cta.button = Abrir la documentación
+post.docs.more-section.1 = Más del blog
+post.docs.more-section.2 = Todos los artículos
 
 # ------------------------------------------------------------ post: /blog/tterm-for-mac/
 post.tterm-for-mac.title = tTerm para Mac: una terminal local con la nube dentro · Blog de tTerm
