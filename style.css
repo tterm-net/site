@@ -338,6 +338,9 @@ h1, h2, h3, h4 { margin: 0; }
   transition: transform .15s ease;
 }
 .res[open] .res-chev { transform: rotate(180deg); }
+/* The gap between Resources and its list, for the pointer on its way down:
+   the menu opens under the pointer and must not close on the way. */
+.nav .res-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -10px; height: 10px; }
 .res-menu {
   position: absolute;
   top: calc(100% + 8px);

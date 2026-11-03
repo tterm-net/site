@@ -153,7 +153,7 @@ index.pricing.7 = Bis zu 50 Maschinen
 index.pricing.8 = Bis zu 24 offene Terminals
 index.pricing.9 = Server und Computer
 index.pricing.10 = Eigene Projekte und Notizen
-index.pricing.11 = 30 Tage Befehlsverlauf mit Ausgabe
+index.pricing.11 = Log jeder Maschine für ein Jahr, Ausgabe für 30 Tage
 index.pricing.12 = Terminals laufen ohne Tab weiter
 index.pricing.13 = Dunkles und helles Design
 # faq
@@ -162,7 +162,7 @@ index.faq.more = Keine Antwort gefunden? Schau in die Dokumentation
 index.faq.2 = Muss ich etwas auf meinem Computer installieren?
 index.faq.3 = Nein, ein Browser reicht. Etwas installieren musst du nur auf den Maschinen, mit denen du dich verbindest: auf einem Server genügt ein Befehl, auf einem Computer ein kleiner Agent.
 index.faq.4 = Was speichert ihr?
-index.faq.5 = Befehle und ihre Ausgabe für 30 Tage, um dir deinen Verlauf zu zeigen, und ein Protokoll der Anmeldungen. Schlüssel und Passwörter speichern wir nicht. Die Details stehen in der <a href="/privacy/">Datenschutzerklärung</a>.
+index.faq.5 = Befehle für ein Jahr im Log der jeweiligen Maschine, ihre Ausgabe für 30 Tage und ein Protokoll der Anmeldungen. Schlüssel und Passwörter speichern wir nicht. Die Details stehen in der <a href="/privacy/">Datenschutzerklärung</a>.
 index.faq.6 = Was ist daran besser als an einem normalen SSH-Client?
 index.faq.7 = Es funktioniert in jedem Browser und braucht keine Schlüssel auf deinem Gerät. Das Terminal bricht nicht ab, wenn du den Laptop zuklappst. Und jeder Befehl kommt als Block, der sich leicht kopieren und erneut ausführen lässt.
 index.faq.8 = Wie entziehe ich tTerm den Zugriff?
@@ -421,6 +421,34 @@ post.several-terminals.prose.6 = Abonniere unseren Blog auf Telegram
 # more-section
 post.several-terminals.more-section.1 = Mehr aus dem Blog
 post.several-terminals.more-section.2 = Alle Beiträge
+
+# ------------------------------------------------------------ post: /blog/logs/
+post.logs.title = Logs: Wir legen jetzt für jede Maschine automatisch ein Log an · tTerm-Blog
+post.logs.og_title = Logs: Wir legen jetzt für jede Maschine automatisch ein Log an
+post.logs.description = Das Log einer Maschine hält jeden Befehl fest: wer ihn ausgeführt hat, wann und wie er ausging. Die Einträge werden ein Jahr lang aufbewahrt. Du kannst zu einem Befehl eine Notiz hinterlassen und ein Passwort schwärzen, das versehentlich hineingeraten ist.
+post.logs.alt = Das Log der Maschine web-01 in tTerm Web: ein fehlgeschlagener Befehl ist geöffnet, darunter seine Ausgabe und eine Notiz
+post.logs.figcaption = Das Log von web-01: ein fehlgeschlagener Befehl, seine Ausgabe und die Notiz darunter.
+post.logs.why.title = Warum
+post.logs.why.text = Das Terminal zeigt, was du gerade tust. Auf einem Server zählt aber oft etwas anderes: wer gestern Abend den Dienst neu gestartet hat, was lief, kurz bevor alles abstürzte, welcher Befehl letzten Monat dasselbe Problem gelöst hat. Bisher musstest du dir das aus history und den Logdateien des Servers zusammensuchen. Jetzt zeichnet tTerm jeden Befehl selbst auf, und niemand kann diese Aufzeichnung ändern.
+post.logs.where.title = Wo du es findest
+post.logs.where.text = Das Log findest du bei den Notizen des Projekts im Ordner „Logs“ mit dem Vermerk „von tTerm“, und jede Maschine hat ihr eigenes. Neben jeder Maschine siehst du, wie viele Befehle heute auf ihr liefen. Das Log zeigt jeweils einen Tag, und neue Zeilen erscheinen darin von selbst, sobald ein Befehl beendet ist.
+post.logs.line.title = Was eine Zeile zeigt
+post.logs.line.text = Jeder Befehl steht in einer Zeile: die Uhrzeit, wer ihn ausgeführt hat, der Befehl selbst, wie lange er lief, das Verzeichnis, der Git-Branch und das Terminal. Ein fehlgeschlagener Befehl bekommt ein Kreuz und seinen Exit-Code. Ein Klick öffnet die ganze Zeile mit dem Befehl, seiner Ausgabe und seinen Notizen. Zwischen den Befehlen hält das Log fest, wann Terminals geöffnet und geschlossen wurden. Wenn ein Terminal von selbst geendet hat, nennt das Log auch den Grund.
+post.logs.notes.title = Notizen zu Befehlen
+post.logs.notes.text = Unter jedem Befehl kannst du eine Notiz hinterlassen: warum du ihn ausgeführt hast, was dabei herauskam, wohin die Konfiguration umgezogen ist. Schreib sie im Log oder direkt am Block im Terminal, sichtbar ist sie an beiden Stellen. Notizen bearbeitet oder löscht man nicht, man antwortet auf sie. Deshalb bleibt das Log eine ehrliche Chronik.
+post.logs.find.title = Ein ganzes Jahr durchsuchen
+post.logs.find.text = Mit „In diesem Log suchen“ durchsuchst du das ganze Jahr, Befehle wie Notizen. Mit Filtern siehst du nur fehlgeschlagene Befehle, nur Befehle mit Notizen oder nur die einer Person oder eines Terminals. Und die Suche mit ⌘K findet jetzt auch Zeilen in den Logs all deiner Maschinen.
+post.logs.redact.title = Wenn ein Passwort in einen Befehl geraten ist
+post.logs.redact.text = Das kommt vor: ein export mit einem Token oder ein Passwort direkt in der Zeile. Der Eigentümer des Projekts entfernt es mit „Schwärzen …“. Die Wörter verschwinden aus dem Log, aus den Blöcken des Terminals, aus der Suche und aus dem Verlauf der Eingabezeile. An ihrer Stelle steht, wer sie wann und warum geschwärzt hat. In den nächtlichen Kopien der Datenbank bleiben sie noch höchstens zwei Wochen erhalten.
+post.logs.keep.title = Wie lange es aufbewahrt wird
+post.logs.keep.text = Logzeilen werden ein Jahr lang aufbewahrt, die Ausgabe der Befehle 30 Tage lang. Das Log gehört zur Maschine: Verschiebst du sie in ein anderes Projekt, zieht das ganze Log mit.
+post.logs.ended.title = Wenn ein Terminal von selbst endet
+post.logs.ended.text = Ein Terminal lebt in tTerm Web, nicht in einem Browser-Tab, aber manchmal endet es ohne dein Zutun, zum Beispiel wenn eine neue Version von tTerm Web erscheint. Jetzt zeigt der Tab, warum das passiert ist, und alles, was gelaufen ist, bleibt im Log. Mit dem Button „Neues Terminal öffnen“ startest du ein neues im selben Verzeichnis.
+post.logs.next.text = In tTerm für Mac kommt das Log mit dem nächsten Update. Die Details stehen in der Dokumentation, auf der Seite <a href="https://docs.tterm.net{{$base}}/features/log/">„Das Log einer Maschine“</a>.
+post.logs.cta.title = Schau ins Log deiner Maschine
+post.logs.cta.button = tTerm Web öffnen
+post.logs.more-section.1 = Mehr aus dem Blog
+post.logs.more-section.2 = Alle Beiträge
 
 # ------------------------------------------------------------ post: /blog/docs/
 post.docs.title = tTerm hat jetzt eine Dokumentation · tTerm-Blog

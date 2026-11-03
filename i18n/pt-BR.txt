@@ -153,7 +153,7 @@ index.pricing.7 = Até 50 máquinas
 index.pricing.8 = Até 24 terminais abertos
 index.pricing.9 = Servidores e computadores
 index.pricing.10 = Projetos próprios e notas
-index.pricing.11 = 30 dias de histórico de comandos e saídas
+index.pricing.11 = Um ano de log por máquina, 30 dias de saídas
 index.pricing.12 = Terminais que sobrevivem à aba
 index.pricing.13 = Tema escuro e claro
 # faq
@@ -162,7 +162,7 @@ index.faq.more = Não encontrou a resposta? Veja a documentação
 index.faq.2 = Preciso instalar algo no meu computador?
 index.faq.3 = Não, basta um navegador. Você só instala algo nas máquinas às quais se conecta: um comando no servidor, um pequeno agente no computador.
 index.faq.4 = O que vocês armazenam?
-index.faq.5 = Os comandos e as saídas deles por 30 dias, para mostrar o seu histórico, e um registro de logins. Não guardamos chaves nem senhas. Os detalhes estão na <a href="/privacy/">Política de Privacidade</a>.
+index.faq.5 = Os comandos por um ano no log de cada máquina, as saídas deles por 30 dias e um registro de logins. Não guardamos chaves nem senhas. Os detalhes estão na <a href="/privacy/">Política de Privacidade</a>.
 index.faq.6 = Em que o tTerm é melhor que um cliente SSH comum?
 index.faq.7 = Funciona em qualquer navegador e não precisa de chaves no seu dispositivo. O terminal não cai quando você fecha o notebook. E cada comando vem como um bloco fácil de copiar e executar de novo.
 index.faq.8 = Como revogar o acesso do tTerm?
@@ -421,6 +421,34 @@ post.several-terminals.prose.6 = Siga o nosso blog no Telegram
 # more-section
 post.several-terminals.more-section.1 = Mais do blog
 post.several-terminals.more-section.2 = Todos os posts
+
+# ------------------------------------------------------------ post: /blog/logs/
+post.logs.title = Logs: agora criamos automaticamente um log para cada máquina · Blog do tTerm
+post.logs.og_title = Logs: agora criamos automaticamente um log para cada máquina
+post.logs.description = O log de uma máquina registra cada comando: quem o executou, quando e como terminou. Os registros ficam guardados por um ano. Você pode deixar uma nota num comando e apagar uma senha que foi parar nele por engano.
+post.logs.alt = O log da máquina web-01 no tTerm Web: um comando com falha aberto, com a saída dele e uma nota embaixo
+post.logs.figcaption = O log de web-01: um comando com falha, a saída dele e a nota embaixo.
+post.logs.why.title = Por quê
+post.logs.why.text = O terminal mostra o que você está fazendo agora. Mas, num servidor, muitas vezes o que importa é outra coisa: quem reiniciou o serviço ontem à noite, o que rodou logo antes de tudo cair, qual comando resolveu o mesmo problema no mês passado. Antes, era preciso montar isso a partir do history e dos logs do próprio servidor. Agora o tTerm registra sozinho cada comando, e ninguém pode alterar esse registro.
+post.logs.where.title = Onde fica
+post.logs.where.text = O log fica entre as notas do projeto, na pasta “Logs” com a marca “pelo tTerm”, um para cada máquina. Ao lado de cada máquina, você vê quantos comandos rodaram nela hoje. O log mostra um dia por vez, e as linhas novas aparecem sozinhas assim que um comando termina.
+post.logs.line.title = O que uma linha mostra
+post.logs.line.text = Cada comando ocupa uma linha: o horário, quem o executou, o próprio comando, quanto tempo levou, a pasta, a branch do git e o terminal. Um comando com falha tem um X e o código de retorno. Um clique abre a linha inteira: o comando, a saída dele e as notas. Entre os comandos, o log marca quando terminais foram abertos e fechados, e, se um terminal se encerrou sozinho, diz por quê.
+post.logs.notes.title = Notas nos comandos
+post.logs.notes.text = Você pode deixar uma nota embaixo de qualquer comando: por que você o executou, no que deu, para onde a configuração foi parar. Escreva no log ou direto no bloco do terminal, e a nota aparece nos dois lugares. Notas não são editadas nem apagadas: elas recebem respostas. É por isso que o log continua sendo um registro honesto.
+post.logs.find.title = Busca no ano inteiro
+post.logs.find.text = “Buscar neste log” cobre o ano inteiro, tanto os comandos quanto as notas. Os filtros deixam só os comandos com falha, os que têm notas ou os de uma pessoa ou de um terminal. E a busca com ⌘K agora também encontra linhas nos logs de todas as suas máquinas.
+post.logs.redact.title = Se uma senha foi parar num comando
+post.logs.redact.text = Acontece: um export com um token, ou uma senha direto na linha. O proprietário do projeto a remove com “Apagar…”. As palavras somem do log, do feed do terminal, da busca e do histórico da linha de entrada. No lugar delas fica quem as apagou, quando e por quê. Nas cópias noturnas do banco de dados, elas duram no máximo mais duas semanas.
+post.logs.keep.title = Por quanto tempo fica guardado
+post.logs.keep.text = As linhas do log ficam guardadas por um ano, e a saída dos comandos, por 30 dias. O log pertence à máquina: se você a mover para outro projeto, o log inteiro vai junto.
+post.logs.ended.title = Quando um terminal se encerra sozinho
+post.logs.ended.text = Um terminal vive no tTerm Web, não numa aba do navegador, mas às vezes ele se encerra sem você, por exemplo quando sai uma nova versão do tTerm Web. Agora a aba diz por que isso aconteceu, e tudo o que rodou fica no log. O botão “Abrir um novo terminal” abre outro na mesma pasta.
+post.logs.next.text = No tTerm para Mac, o log chega com a próxima atualização. Os detalhes estão na documentação, na página <a href="https://docs.tterm.net{{$base}}/features/log/">“Log da máquina”</a>.
+post.logs.cta.title = Dê uma olhada no log da sua máquina
+post.logs.cta.button = Abrir o tTerm Web
+post.logs.more-section.1 = Mais do blog
+post.logs.more-section.2 = Todos os posts
 
 # ------------------------------------------------------------ post: /blog/docs/
 post.docs.title = O tTerm agora tem documentação · Blog do tTerm

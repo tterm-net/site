@@ -153,7 +153,7 @@ index.pricing.7 = Jusqu’à 50 machines
 index.pricing.8 = Jusqu’à 24 terminaux ouverts
 index.pricing.9 = Serveurs et ordinateurs
 index.pricing.10 = Vos propres projets et des notes
-index.pricing.11 = 30 jours d’historique des commandes, avec leur sortie
+index.pricing.11 = Un an de journal par machine, 30 jours de sortie
 index.pricing.12 = Les terminaux survivent à l’onglet
 index.pricing.13 = Thèmes sombre et clair
 # faq
@@ -162,7 +162,7 @@ index.faq.more = Pas trouvé de réponse ? Consultez la documentation
 index.faq.2 = Dois-je installer quelque chose sur mon ordinateur ?
 index.faq.3 = Non, un navigateur suffit. Vous n’installez quelque chose que sur les machines auxquelles vous vous connectez : une commande sur un serveur, un petit agent sur un ordinateur.
 index.faq.4 = Que conservez-vous ?
-index.faq.5 = Les commandes et leur sortie pendant 30 jours, pour afficher votre historique, ainsi qu’un journal des connexions. Nous ne conservons ni clés ni mots de passe. Tous les détails figurent dans la <a href="/privacy/">Politique de confidentialité</a>.
+index.faq.5 = Les commandes pendant un an, dans le journal de chaque machine, et leur sortie pendant 30 jours, ainsi qu’un journal des connexions. Nous ne conservons ni clés ni mots de passe. Tous les détails figurent dans la <a href="/privacy/">Politique de confidentialité</a>.
 index.faq.6 = En quoi est-ce mieux qu’un client SSH classique ?
 index.faq.7 = tTerm fonctionne depuis n’importe quel navigateur et ne demande aucune clé sur votre appareil. Le terminal ne se coupe pas quand vous fermez votre ordinateur portable. Et chaque commande s’affiche dans un bloc facile à copier et à relancer.
 index.faq.8 = Comment retirer à tTerm l’accès à mes machines ?
@@ -421,6 +421,34 @@ post.several-terminals.prose.6 = Abonnez-vous à notre blog sur Telegram
 # more-section
 post.several-terminals.more-section.1 = À lire aussi sur le blog
 post.several-terminals.more-section.2 = Tous les articles
+
+# ------------------------------------------------------------ post: /blog/logs/
+post.logs.title = Journaux : nous créons désormais automatiquement un journal pour chaque machine · Blog tTerm
+post.logs.og_title = Journaux : nous créons désormais automatiquement un journal pour chaque machine
+post.logs.description = Le journal d’une machine enregistre chaque commande : qui l’a lancée, quand et comment elle s’est terminée. Les entrées sont conservées un an. Vous pouvez laisser une note sur une commande et effacer un mot de passe qui s’y est glissé par erreur.
+post.logs.alt = Le journal de la machine web-01 dans tTerm Web : une commande en échec ouverte, avec sa sortie et une note en dessous
+post.logs.figcaption = Le journal de web-01 : une commande en échec, sa sortie et la note en dessous.
+post.logs.why.title = Pourquoi
+post.logs.why.text = Le terminal montre ce que vous faites maintenant. Mais sur un serveur, ce qui compte souvent, c’est autre chose : qui a redémarré le service hier soir, ce qui a tourné juste avant que tout ne tombe, quelle commande a réglé le même problème le mois dernier. Jusqu’ici, il fallait reconstituer tout cela à partir de history et des journaux système du serveur. Désormais, tTerm enregistre lui-même chaque commande, et personne ne peut modifier cet enregistrement.
+post.logs.where.title = Où le trouver
+post.logs.where.text = Le journal se trouve parmi les notes du projet, dans le dossier « Journaux » marqué « par tTerm », un par machine. À côté de chaque machine, vous voyez combien de commandes y ont été lancées aujourd’hui. Le journal affiche une journée à la fois, et les nouvelles lignes y apparaissent d’elles-mêmes dès qu’une commande se termine.
+post.logs.line.title = Ce que montre une ligne
+post.logs.line.text = Chaque commande tient sur une ligne : l’heure, qui l’a lancée, la commande elle-même, sa durée, le répertoire, la branche git et le terminal. Une commande en échec porte une croix et son code de retour. Un clic ouvre la ligne en entier : la commande, sa sortie et ses notes. Entre les commandes, le journal indique quand des terminaux ont été ouverts et fermés. Quand un terminal a pris fin de lui-même, le journal en donne aussi la raison.
+post.logs.notes.title = Des notes sur les commandes
+post.logs.notes.text = Vous pouvez laisser une note sous n’importe quelle commande : pourquoi vous l’avez lancée, ce que cela a donné, où la configuration a été déplacée. Écrivez-la dans le journal ou directement sur le bloc, dans le terminal, et elle s’affichera aux deux endroits. Les notes ne se modifient pas et ne se suppriment pas : on y répond. C’est pourquoi le journal reste une chronique honnête.
+post.logs.find.title = Chercher sur toute une année
+post.logs.find.text = « Chercher dans ce journal » couvre toute l’année, commandes comme notes. Les filtres ne gardent que les commandes en échec, celles qui ont des notes, ou celles d’une personne ou d’un terminal. Et la recherche avec ⌘K trouve désormais aussi les lignes des journaux de toutes vos machines.
+post.logs.redact.title = Si un mot de passe s’est glissé dans une commande
+post.logs.redact.text = Cela arrive : un export avec un jeton, ou un mot de passe tapé directement dans la ligne. Le propriétaire du projet l’efface avec « Biffer… ». Les mots disparaissent du journal, des blocs du terminal, de la recherche et de l’historique de la ligne de saisie. À leur place reste la mention de qui les a biffés, quand et pourquoi. Dans les copies nocturnes de la base de données, ils subsistent encore deux semaines au plus.
+post.logs.keep.title = Durée de conservation
+post.logs.keep.text = Les lignes du journal sont conservées un an, et la sortie des commandes 30 jours. Le journal appartient à la machine : déplacez-la dans un autre projet, et tout son journal la suit.
+post.logs.ended.title = Quand un terminal prend fin de lui-même
+post.logs.ended.text = Un terminal vit dans tTerm Web, pas dans un onglet du navigateur, mais il arrive qu’il prenne fin sans vous, par exemple quand une nouvelle version de tTerm Web sort. Désormais, l’onglet indique pourquoi, et tout ce qui a été exécuté reste dans le journal. Le bouton « Ouvrir un nouveau terminal » en ouvre un autre dans le même répertoire.
+post.logs.next.text = Dans tTerm pour Mac, le journal arrivera avec la prochaine mise à jour. Tous les détails figurent dans la documentation, sur la page <a href="https://docs.tterm.net{{$base}}/features/log/">« Le journal d’une machine »</a>.
+post.logs.cta.title = Consultez le journal de votre machine
+post.logs.cta.button = Ouvrir tTerm Web
+post.logs.more-section.1 = À lire aussi sur le blog
+post.logs.more-section.2 = Tous les articles
 
 # ------------------------------------------------------------ post: /blog/docs/
 post.docs.title = tTerm a désormais sa documentation · Blog tTerm

@@ -60,7 +60,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.8.0">
+<meta name="version" content="2.8.1">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -463,7 +463,7 @@
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>最多同时打开 24 个终端</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>服务器和电脑</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>自建项目和笔记</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>30 天命令历史，含输出</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>机器日志保留一年，输出保留 30 天</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>关掉标签页，终端还在</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>深色和浅色主题</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>tTerm Mac 版</li>
@@ -484,7 +484,7 @@
       </details>
       <details>
         <summary>你们会保存哪些数据？</summary>
-        <p>命令及其输出保存 30 天，用于显示你的历史记录，另外还有登录日志。我们不保存密钥，也不保存密码。详情见<a href="/privacy/">隐私政策</a>。</p>
+        <p>命令在每台机器的日志中保存一年，其输出保存 30 天，另外还有登录日志。我们不保存密钥，也不保存密码。详情见<a href="/privacy/">隐私政策</a>。</p>
       </details>
       <details>
         <summary>它比普通的 SSH 客户端好在哪里？</summary>
@@ -541,6 +541,11 @@
       </div>
     </a>
   <div class="post-stack">
+      <a class="post-mini" href="/zh/blog/logs/">
+        <span class="post-mini-meta"><time datetime="2026-11-03">11月3日</time> · tTerm Web</span>
+        <span class="post-mini-title">日志：现在我们会自动为每台机器创建日志</span>
+        <span class="post-mini-text">机器的日志会记录每一条命令：谁运行的、什么时候运行的、结果如何。</span>
+      </a>
       <a class="post-mini" href="/zh/blog/docs/">
         <span class="post-mini-meta"><time datetime="2026-11-02">11月2日</time> · 文档</span>
         <span class="post-mini-title">tTerm 现在有文档了</span>
@@ -550,11 +555,6 @@
         <span class="post-mini-meta"><time datetime="2026-10-25">10月25日</time> · tTerm Web</span>
         <span class="post-mini-title">付费方案即将推出，为何仍开源</span>
         <span class="post-mini-text">tTerm 的全部代码现在采用 AGPL v3，而不再是 MIT，付费方案也即将推出。</span>
-      </a>
-      <a class="post-mini" href="/zh/blog/notes-and-projects/">
-        <span class="post-mini-meta"><time datetime="2026-10-20">10月20日</time> · tTerm Web</span>
-        <span class="post-mini-title">笔记、彩色项目和终端名称</span>
-        <span class="post-mini-text">运维手册、检查清单和访问说明，现在就放在相关机器的旁边。</span>
       </a>
   </div>
 </div>
@@ -612,7 +612,7 @@
       </nav>
     </div>
     <div class="foot-bottom">
-      <p class="foot-note">2026 · tTerm · v2.8.0</p>
+      <p class="foot-note">2026 · tTerm · v2.8.1</p>
       <details class="lang lang-up">
         <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ZH</span></summary>
         <div class="lang-menu">

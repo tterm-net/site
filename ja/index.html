@@ -60,7 +60,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.8.0">
+<meta name="version" content="2.8.1">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -463,7 +463,7 @@
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>同時に開けるターミナルは 24 個まで</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>サーバーとコンピューター</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>自分で作れるプロジェクトとノート</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>出力付きのコマンド履歴を 30 日間保存</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>マシンごとのログを 1 年間、出力を 30 日間保存</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>タブを閉じても続くターミナル</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>ダークテーマとライトテーマ</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Mac 版 tTerm</li>
@@ -484,7 +484,7 @@
       </details>
       <details>
         <summary>どんなデータを保存していますか？</summary>
-        <p>履歴の表示に使うコマンドとその出力（30 日間）、それにサインインの記録です。鍵やパスワードは保存しません。詳しくは<a href="/privacy/">プライバシーポリシー</a>をご覧ください。</p>
+        <p>コマンド（各マシンのログに 1 年間）とその出力（30 日間）、それにサインインの記録です。鍵やパスワードは保存しません。詳しくは<a href="/privacy/">プライバシーポリシー</a>をご覧ください。</p>
       </details>
       <details>
         <summary>一般的な SSH クライアントと比べて、何が良いのですか？</summary>
@@ -541,6 +541,11 @@
       </div>
     </a>
   <div class="post-stack">
+      <a class="post-mini" href="/ja/blog/logs/">
+        <span class="post-mini-meta"><time datetime="2026-11-03">11月3日</time> · tTerm Web</span>
+        <span class="post-mini-title">ログ：マシンごとにログを自動で作成するようになりました</span>
+        <span class="post-mini-text">マシンのログには、すべてのコマンドについて、誰がいつ実行し、どう終わったかが記録されます。</span>
+      </a>
       <a class="post-mini" href="/ja/blog/docs/">
         <span class="post-mini-meta"><time datetime="2026-11-02">11月2日</time> · ドキュメント</span>
         <span class="post-mini-title">tTerm にドキュメントができました</span>
@@ -550,11 +555,6 @@
         <span class="post-mini-meta"><time datetime="2026-10-25">10月25日</time> · tTerm Web</span>
         <span class="post-mini-title">有料プランを予定していても tTerm のコードを公開する理由</span>
         <span class="post-mini-text">tTerm のコードはすべて、MIT に代わって AGPL v3 で公開されるようになりました。</span>
-      </a>
-      <a class="post-mini" href="/ja/blog/notes-and-projects/">
-        <span class="post-mini-meta"><time datetime="2026-10-20">10月20日</time> · tTerm Web</span>
-        <span class="post-mini-title">ノート、色分けされたプロジェクト、ターミナルの名前</span>
-        <span class="post-mini-text">手順書、チェックリスト、アクセス情報などのノートを、対象のマシンのすぐそばに置けるようになりました。</span>
       </a>
   </div>
 </div>
@@ -612,7 +612,7 @@
       </nav>
     </div>
     <div class="foot-bottom">
-      <p class="foot-note">2026 · tTerm · v2.8.0</p>
+      <p class="foot-note">2026 · tTerm · v2.8.1</p>
       <details class="lang lang-up">
         <summary aria-label="言語：日本語"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>JA</span></summary>
         <div class="lang-menu">

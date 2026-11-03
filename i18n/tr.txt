@@ -153,7 +153,7 @@ index.pricing.7 = 50 makineye kadar
 index.pricing.8 = 24 açık terminale kadar
 index.pricing.9 = Sunucular ve bilgisayarlar
 index.pricing.10 = Kendi projelerin ve notların
-index.pricing.11 = Çıktılarıyla birlikte 30 günlük komut geçmişi
+index.pricing.11 = Her makinenin bir yıllık logu, 30 günlük çıktı
 index.pricing.12 = Sekme kapansa da terminaller çalışır
 index.pricing.13 = Koyu ve açık tema
 # faq
@@ -162,7 +162,7 @@ index.faq.more = Cevabı bulamadın mı? Belgelere göz at
 index.faq.2 = Bilgisayarıma bir şey kurmam gerekiyor mu?
 index.faq.3 = Hayır, bir tarayıcı yeterli. Yalnızca bağlandığın makinelere bir şey kurarsın: sunucuda tek bir komut, bilgisayarda küçük bir ajan.
 index.faq.4 = Neleri saklıyorsunuz?
-index.faq.5 = Geçmişini gösterebilmek için komutları ve çıktılarını 30 gün boyunca saklıyoruz, ayrıca giriş kayıtlarını tutuyoruz. Anahtar ya da parola saklamıyoruz. Ayrıntılar <a href="/privacy/">Gizlilik Politikası</a> sayfasında.
+index.faq.5 = Komutları her makinenin logunda bir yıl boyunca, çıktılarını ise 30 gün boyunca saklıyoruz, ayrıca giriş kayıtlarını tutuyoruz. Anahtar ya da parola saklamıyoruz. Ayrıntılar <a href="/privacy/">Gizlilik Politikası</a> sayfasında.
 index.faq.6 = Sıradan bir SSH istemcisinden ne açıdan daha iyi?
 index.faq.7 = Her tarayıcıdan çalışır ve cihazında anahtar gerektirmez. Dizüstünü kapattığında terminal kopmaz. Ayrıca her komut, kolayca kopyalanıp yeniden çalıştırılabilen bir blok olarak gelir.
 index.faq.8 = tTerm'in erişimini nasıl geri alırım?
@@ -421,6 +421,34 @@ post.several-terminals.prose.6 = Telegram'da blogumuza abone ol
 # more-section
 post.several-terminals.more-section.1 = Blogdan diğer yazılar
 post.several-terminals.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/logs/
+post.logs.title = Loglar: artık her makine için otomatik olarak bir log oluşturuyoruz · tTerm blogu
+post.logs.og_title = Loglar: artık her makine için otomatik olarak bir log oluşturuyoruz
+post.logs.description = Bir makinenin logu her komutu kaydeder: kim çalıştırdı, ne zaman ve nasıl sonuçlandı. Kayıtlar bir yıl boyunca saklanır. Bir komuta not bırakabilir, yanlışlıkla komuta karışan bir parolayı da silebilirsin.
+post.logs.alt = tTerm Web'de web-01 makinesinin logu: başarısız bir komut açık, altında çıktısı ve bir not
+post.logs.figcaption = web-01 makinesinin logu: başarısız bir komut, çıktısı ve altındaki not.
+post.logs.why.title = Neden
+post.logs.why.text = Terminal, şu anda ne yaptığını gösterir. Ama sunucuda çoğu zaman önemli olan başka bir şeydir: dün akşam servisi kim yeniden başlattı, her şey çökmeden hemen önce ne çalıştı, geçen ay aynı sorun hangi komutla düzeltildi. Eskiden bunu history komutundan ve sunucunun kendi loglarından toparlaman gerekiyordu. Artık tTerm her komutu kendisi kaydediyor ve bu kaydı kimse değiştiremiyor.
+post.logs.where.title = Nerede bulunur
+post.logs.where.text = Log, projenin notları arasında, yanında “tTerm yazar” ibaresi olan “Loglar” klasöründe durur; her makinenin kendi logu vardır. Bir makinenin yanında, bugün o makinede kaç komut çalıştırıldığını görürsün. Log günleri tek tek gösterir ve bir komut biter bitmez yeni satırlar kendiliğinden belirir.
+post.logs.line.title = Bir satırda neler var
+post.logs.line.text = Her komut tek bir satır kaplar: saat, kimin çalıştırdığı, komutun kendisi, ne kadar sürdüğü, dizin, git dalı ve terminal. Başarısız bir komutta bir çarpı işareti ve çıkış kodu bulunur. Bir tıklama satırı bütünüyle açar: komut, çıktısı ve notları. Log, komutların arasına terminallerin ne zaman açılıp kapatıldığını da işler. Bir terminal kendiliğinden sonlandıysa nedenini de yazar.
+post.logs.notes.title = Komutlara notlar
+post.logs.notes.text = Her komutun altına not bırakabilirsin: neden çalıştırdığını, sonucun ne olduğunu, yapılandırmanın nereye taşındığını. Notu logda ya da doğrudan terminaldeki bloğun yanında yazabilirsin; not iki yerde de görünür. Notlar düzenlenmez ve silinmez, onlara yanıt verilir. Bu yüzden log, olanların dürüst bir kaydı olarak kalır.
+post.logs.find.title = Bütün bir yılda ara
+post.logs.find.text = “Bu logda ara” tüm yılı, hem komutları hem notları tarar. Filtreler yalnızca başarısız komutları, notlu komutları ya da tek bir kişinin veya tek bir terminalin komutlarını gösterir. Ayrıca ⌘K ile arama artık tüm makinelerinin loglarındaki satırları da buluyor.
+post.logs.redact.title = Bir komuta parola karıştıysa
+post.logs.redact.text = Olur böyle şeyler: token içeren bir export ya da doğrudan satıra yazılmış bir parola. Proje sahibi bunu “Metni sil…” ile siler. Kelimeler logdan, terminalin akışından, aramadan ve giriş satırının geçmişinden kaybolur. Yerlerinde kimin, ne zaman ve neden sildiği kalır. Gece alınan veritabanı kopyalarında ise en fazla iki hafta daha kalırlar.
+post.logs.keep.title = Ne kadar süre saklanır
+post.logs.keep.text = Log satırları bir yıl, komut çıktıları 30 gün saklanır. Log makineye aittir: makineyi başka bir projeye taşırsan logun tamamı da onunla birlikte taşınır.
+post.logs.ended.title = Bir terminal kendiliğinden sonlandığında
+post.logs.ended.text = Terminal bir tarayıcı sekmesinde değil, tTerm Web'de yaşar; ama bazen sen bir şey yapmadan sonlanabilir, örneğin tTerm Web'in yeni bir sürümü çıktığında. Artık sekme bunun neden olduğunu söylüyor ve çalışan her şey logda kalıyor. “Yeni terminal aç” düğmesi aynı dizinde yeni bir terminal açar.
+post.logs.next.text = Mac için tTerm'de log bir sonraki güncellemeyle gelecek. Ayrıntılar belgelerde, <a href="https://docs.tterm.net{{$base}}/features/log/">“Makinenin logu”</a> sayfasında.
+post.logs.cta.title = Makinenin loguna göz at
+post.logs.cta.button = tTerm Web'i aç
+post.logs.more-section.1 = Blogdan diğer yazılar
+post.logs.more-section.2 = Tüm yazılar
 
 # ------------------------------------------------------------ post: /blog/docs/
 post.docs.title = tTerm'in artık belgeleri var · tTerm blogu

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日志：现在我们会自动为每台机器创建日志 · tTerm 博客</title>
+<meta name="description" content="机器的日志会记录每一条命令：谁运行的、什么时候运行的、结果如何。记录保留一年。你可以给命令留下笔记，也可以抹除不小心混进命令里的密码。">
+<link rel="canonical" href="https://tterm.net/zh/blog/logs/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/logs/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/logs/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/logs/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/logs/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/logs/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/logs/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/logs/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/logs/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/logs/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/logs/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/logs/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/logs/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/logs/">
+<meta property="og:title" content="日志：现在我们会自动为每台机器创建日志">
+<meta property="og:description" content="机器的日志会记录每一条命令：谁运行的、什么时候运行的、结果如何。记录保留一年。你可以给命令留下笔记，也可以抹除不小心混进命令里的密码。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/zh/blog/logs/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "日志：现在我们会自动为每台机器创建日志",
+  "description": "机器的日志会记录每一条命令：谁运行的、什么时候运行的、结果如何。记录保留一年。你可以给命令留下笔记，也可以抹除不小心混进命令里的密码。",
+  "datePublished": "2026-11-03",
+  "inLanguage": "zh-CN",
+  "url": "https://tterm.net/zh/blog/logs/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.8.1">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/zh/" aria-label="tTerm 首页">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">公测</span>
+    </a>
+    <nav class="nav" aria-label="栏目">
+      <a href="/zh/#features">功能</a>
+      <a href="/zh/#security">安全</a>
+      <a href="/zh/#pricing">价格</a>
+      <details class="res">
+        <summary>资源<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="https://docs.tterm.net/zh/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3z"/><path d="M21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/></svg><span><b>文档</b><small>快速上手与工作原理</small></span></a>
+          <a href="/zh/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>博客</b><small>tTerm 的最新动态</small></span></a>
+          <a href="/zh/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>常见问题</b><small>解答常见疑问</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Telegram 频道</b><small>每次发布都有一条简短说明</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>GitHub 上的源代码</b><small>tTerm 的全部代码，AGPL v3</small></span></a>
+        </div>
+      </details>
+      <a class="nav-mac" href="/zh/download/">本地终端<span class="nav-new" aria-hidden="true"></span></a>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ZH</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/logs/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/logs/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/logs/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/logs/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/logs/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/logs/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/logs/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/logs/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/logs/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/logs/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/logs/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/logs/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">登录</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">免费开始使用</a>
+      <details class="menu">
+        <summary aria-label="菜单"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="菜单">
+          <a href="/zh/#features">功能</a>
+          <a href="/zh/#security">安全</a>
+          <a href="/zh/#pricing">价格</a>
+          <a href="/zh/download/">本地终端</a>
+          <p class="menu-label">资源</p>
+          <a href="https://docs.tterm.net/zh/">文档</a>
+          <a href="/zh/blog/" aria-current="page">博客</a>
+          <a href="/zh/#faq">常见问题</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram 频道</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">GitHub 上的源代码</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>简体中文</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/logs/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/logs/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/logs/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/blog/logs/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/logs/" hreflang="it" lang="it">Italiano</a>
+              <a href="/pl/blog/logs/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/logs/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/logs/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/logs/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/logs/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/logs/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/logs/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">免费开始使用</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="/zh/blog/">博客</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-web">tTerm Web</span><time datetime="2026-11-03">2026年11月3日</time><span class="sep" aria-hidden="true">·</span><span>阅读约 3 分钟</span></p>
+    <!-- /updates:meta -->
+      <h1>日志：现在我们会自动为每台机器创建日志</h1>
+      <p class="post-lead">机器的日志会记录每一条命令：谁运行的、什么时候运行的、结果如何。记录保留一年。你可以给命令留下笔记，也可以抹除不小心混进命令里的密码。</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="post-shot">
+        <div class="cover-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.tterm.net</span></div>
+        <img src="/assets/blog/logs-zh-CN.webp" width="1920" height="1600" alt="tTerm Web 中机器 web-01 的日志：一条失败的命令已展开，下面是它的输出和一条笔记">
+      </div>
+      <figcaption>web-01 的日志：一条失败的命令、它的输出，以及下面的笔记。</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>为什么需要日志</h2>
+      <p>终端显示的是你此刻在做什么。但在服务器上，更重要的往往是别的事：昨晚是谁重启了服务，一切崩掉之前刚刚运行了什么，上个月是用哪条命令修好同样问题的。以前，这些只能从 history 和服务器自己的日志里一点点拼凑出来。现在 tTerm 会自己记录每一条命令，而且这份记录谁都改不了。</p>
+
+      <h2>在哪里找到</h2>
+      <p>日志位于项目的笔记中，在标有“由 tTerm 记录”的“日志”文件夹里，每台机器各有一份。机器旁边会显示今天在它上面运行了多少条命令。日志每次显示一天，命令一结束，新的行就会自动出现。</p>
+
+      <h2>每一行显示什么</h2>
+      <p>每条命令占一行：时间、运行它的人、命令本身、耗时、目录、git 分支和终端。失败的命令会带一个叉号和退出码。点击一行即可完整展开：命令、它的输出和笔记。在命令之间，日志会标出终端何时打开、何时关闭；如果终端是自行结束的，日志还会写明原因。</p>
+
+      <h2>给命令写笔记</h2>
+      <p>你可以在任何一条命令下面留笔记：为什么运行它、结果怎样、配置挪到了哪里。笔记可以写在日志里，也可以直接写在终端中的命令块旁边，两处都能看到。笔记不能修改或删除，只能回复。正因如此，日志始终是一份如实的记录。</p>
+
+      <h2>搜索一整年</h2>
+      <p>“在此日志中查找”会搜索整整一年的命令和笔记。筛选器可以只留下失败的命令、有笔记的命令，或者某个人、某个终端的命令。另外，⌘K 搜索现在也能找到你所有机器日志中的行。</p>
+
+      <h2>如果密码混进了命令</h2>
+      <p>这种事难免会发生：带着令牌的 export，或者直接写进命令里的密码。项目所有者可以用“抹除…”把它抹掉。这些文字会从日志、终端中的命令块、搜索和输入行的历史记录中消失。原处会留下是谁、在什么时候、为什么抹除的。在每晚的数据库副本中，它们最多还会保留两周。</p>
+
+      <h2>保留多久</h2>
+      <p>日志行保留一年，命令的输出保留 30 天。日志属于机器：如果把机器移到另一个项目，整份日志也会跟着移过去。</p>
+
+      <h2>当终端自行结束时</h2>
+      <p>终端运行在 tTerm Web 中，而不是浏览器的标签页里，但有时它会在你没有操作的情况下结束，比如 tTerm Web 发布新版本的时候。现在，标签页会告诉你原因，所有运行过的内容也都会留在日志里。点击“打开新终端”按钮，就会在同一目录中打开一个新终端。</p>
+
+      <p>tTerm Mac 版会在下一次更新中加入日志。详情见文档中的<a href="https://docs.tterm.net/zh/features/log/">“机器的日志”</a>页面。</p>
+
+      <div class="post-cta">
+        <h2>看看你机器上的日志</h2>
+        <a class="btn btn-primary" href="https://app.tterm.net">打开 tTerm Web</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="博客中的更多文章">
+    <div class="split-row">
+      <h2>博客中的更多文章</h2>
+      <a class="btn btn-ghost btn-md" href="/zh/blog/">全部文章</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/zh/blog/docs/">
+        <span class="post-mini-meta"><time datetime="2026-11-02">11月2日</time> · 文档</span>
+        <span class="post-mini-title">tTerm 现在有文档了</span>
+        <span class="post-mini-text">docs.tterm.net 介绍了 tTerm 的工作方式：从你的第一条命令，到访问如何运作。</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/zh/blog/tterm-for-mac/">
+        <span class="post-mini-meta"><time datetime="2026-10-31">10月31日</time> · tTerm Mac 版</span>
+        <span class="post-mini-title">tTerm Mac 版：内置云端的本地终端</span>
+        <span class="post-mini-text">tTerm 推出了 Mac 应用。</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/zh/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">10月25日</time> · tTerm Web</span>
+        <span class="post-mini-title">付费方案即将推出，为何仍开源</span>
+        <span class="post-mini-text">tTerm 的全部代码现在采用 AGPL v3，而不再是 MIT，付费方案也即将推出。</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/zh/blog/">全部文章</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/zh/" aria-label="tTerm 首页">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">公测</span>
+        </a>
+        <p class="foot-tag">面向服务器和电脑的云终端。</p>
+      </div>
+      <nav class="foot-cols" aria-label="链接">
+        <div class="foot-col">
+          <p class="foot-h">产品</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="/zh/download/">tTerm Mac 版<span class="foot-new">新</span></a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Telegram 机器人</a>
+          <a href="/zh/#pricing">价格</a>
+          <a href="/zh/#security">安全</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">资源</p>
+          <a href="https://docs.tterm.net/zh/">文档</a>
+          <a href="/zh/blog/">博客</a>
+          <a href="/zh/#faq">常见问题</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Telegram 频道</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">GitHub 上的源代码</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">法律信息</p>
+          <a href="/terms/">服务条款</a>
+          <a href="/privacy/">隐私政策</a>
+          <a href="/zh/blog/open-source/">AGPL-3.0 许可证</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.8.1</p>
+      <details class="lang lang-up">
+        <summary aria-label="语言：简体中文"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ZH</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/logs/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/logs/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/logs/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/logs/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/logs/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/logs/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/logs/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/logs/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/logs/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/logs/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/logs/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/logs/" hreflang="zh-CN" lang="zh-CN" aria-current="true">简体中文<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

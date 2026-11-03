@@ -153,7 +153,7 @@ index.pricing.7 = Fino a 50 macchine
 index.pricing.8 = Fino a 24 terminali aperti
 index.pricing.9 = Server e computer
 index.pricing.10 = I tuoi progetti e le tue note
-index.pricing.11 = 30 giorni di cronologia dei comandi con output
+index.pricing.11 = Un anno di log per ogni macchina, 30 giorni di output
 index.pricing.12 = I terminali sopravvivono alla scheda
 index.pricing.13 = Tema scuro e chiaro
 # faq
@@ -162,7 +162,7 @@ index.faq.more = Non hai trovato la risposta? Guarda la documentazione
 index.faq.2 = Devo installare qualcosa sul mio computer?
 index.faq.3 = No, basta un browser. Installi qualcosa solo sulle macchine a cui ti colleghi: un comando su un server, un piccolo agente su un computer.
 index.faq.4 = Cosa conservate?
-index.faq.5 = I comandi e il loro output per 30 giorni, per mostrarti la cronologia, e un registro degli accessi. Non conserviamo né chiavi né password. I dettagli sono nell'<a href="/privacy/">Informativa sulla privacy</a>.
+index.faq.5 = I comandi per un anno nel log di ogni macchina, il loro output per 30 giorni e un registro degli accessi. Non conserviamo né chiavi né password. I dettagli sono nell'<a href="/privacy/">Informativa sulla privacy</a>.
 index.faq.6 = In cosa è meglio di un normale client SSH?
 index.faq.7 = Funziona da qualsiasi browser e non richiede chiavi sul tuo dispositivo. Il terminale non si interrompe quando chiudi il portatile. E ogni comando arriva come un blocco facile da copiare ed eseguire di nuovo.
 index.faq.8 = Come revoco l'accesso di tTerm alle mie macchine?
@@ -421,6 +421,34 @@ post.several-terminals.prose.6 = Iscriviti al nostro blog su Telegram
 # more-section
 post.several-terminals.more-section.1 = Altro dal blog
 post.several-terminals.more-section.2 = Tutti gli articoli
+
+# ------------------------------------------------------------ post: /blog/logs/
+post.logs.title = Log: ora creiamo automaticamente un log per ogni macchina · Blog di tTerm
+post.logs.og_title = Log: ora creiamo automaticamente un log per ogni macchina
+post.logs.description = Il log di una macchina registra ogni comando: chi l'ha eseguito, quando e com'è finito. Le voci vengono conservate per un anno. Puoi lasciare una nota su un comando e oscurare una password che ci è finita dentro per errore.
+post.logs.alt = Il log della macchina web-01 in tTerm Web: un comando non riuscito aperto, con il suo output e una nota sotto
+post.logs.figcaption = Il log di web-01: un comando non riuscito, il suo output e la nota sotto.
+post.logs.why.title = Perché
+post.logs.why.text = Il terminale mostra cosa stai facendo adesso. Su un server, però, spesso conta altro: chi ha riavviato il servizio ieri sera, cosa è stato eseguito poco prima che tutto andasse giù, con quale comando si è risolto lo stesso problema il mese scorso. Prima dovevi ricostruirlo da history e dai log del server stesso. Ora tTerm registra da solo ogni comando, e nessuno può modificare questa registrazione.
+post.logs.where.title = Dove si trova
+post.logs.where.text = Il log si trova tra le note del progetto, nella cartella “Log” con l'etichetta “da tTerm”, uno per ogni macchina. Accanto a ogni macchina c'è il numero di comandi eseguiti oggi. Il log mostra un giorno alla volta, e le nuove righe compaiono da sole appena un comando finisce.
+post.logs.line.title = Cosa mostra una riga
+post.logs.line.text = Ogni comando occupa una riga: l'ora, chi l'ha eseguito, il comando stesso, quanto è durato, la cartella, il branch git e il terminale. Un comando non riuscito ha una croce e il suo codice di uscita. Un clic apre la riga per intero: il comando, il suo output e le sue note. Tra un comando e l'altro il log segna quando i terminali sono stati aperti e chiusi, e se un terminale si è chiuso da solo, ne indica il motivo.
+post.logs.notes.title = Note sui comandi
+post.logs.notes.text = Sotto qualsiasi comando puoi lasciare una nota: perché l'hai eseguito, com'è andata, dove è finita la configurazione. Scrivila nel log o direttamente accanto al blocco nel terminale: la vedrai in entrambi i posti. Le note non si modificano né si eliminano: a una nota si risponde. Per questo il log resta una cronaca onesta.
+post.logs.find.title = Cerca in un anno intero
+post.logs.find.text = “Cerca in questo log” copre tutto l'anno, sia i comandi sia le note. I filtri lasciano solo i comandi non riusciti, quelli con note, oppure quelli di una persona o di un terminale. E la ricerca con ⌘K ora trova anche le righe nei log di tutte le tue macchine.
+post.logs.redact.title = Se una password è finita in un comando
+post.logs.redact.text = Capita: un export con un token, o una password scritta direttamente nella riga. Il proprietario del progetto la cancella con “Oscura…”. Le parole spariscono dal log, dai blocchi del terminale, dalla ricerca e dalla cronologia della riga di comando. Al loro posto resta chi le ha oscurate, quando e perché. Nelle copie notturne del database restano al massimo altre due settimane.
+post.logs.keep.title = Quanto tempo viene conservato
+post.logs.keep.text = Le righe del log vengono conservate per un anno, l'output dei comandi per 30 giorni. Il log appartiene alla macchina: se la sposti in un altro progetto, tutto il log la segue.
+post.logs.ended.title = Quando un terminale si chiude da solo
+post.logs.ended.text = Un terminale vive in tTerm Web, non in una scheda del browser, ma a volte si chiude senza di te, per esempio quando esce una nuova versione di tTerm Web. Ora la scheda dice perché è successo, e tutto ciò che è stato eseguito resta nel log. Il pulsante “Apri un nuovo terminale” ne apre un altro nella stessa cartella.
+post.logs.next.text = In tTerm per Mac il log arriverà con il prossimo aggiornamento. I dettagli sono nella documentazione, alla pagina <a href="https://docs.tterm.net{{$base}}/features/log/">“Il log di una macchina”</a>.
+post.logs.cta.title = Dai un'occhiata al log della tua macchina
+post.logs.cta.button = Apri tTerm Web
+post.logs.more-section.1 = Altro dal blog
+post.logs.more-section.2 = Tutti gli articoli
 
 # ------------------------------------------------------------ post: /blog/docs/
 post.docs.title = tTerm ora ha la sua documentazione · Blog di tTerm

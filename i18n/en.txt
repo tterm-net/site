@@ -153,7 +153,7 @@ index.pricing.7 = Up to 50 machines
 index.pricing.8 = Up to 24 open terminals
 index.pricing.9 = Servers and computers
 index.pricing.10 = Projects of your own and notes
-index.pricing.11 = 30 days of command history with output
+index.pricing.11 = A year of each machine's log, 30 days of output
 index.pricing.12 = Terminals outlive the tab
 index.pricing.13 = Dark and light theme
 # faq
@@ -162,7 +162,7 @@ index.faq.more = No answer here? Look in the docs
 index.faq.2 = Do I need to install anything on my computer?
 index.faq.3 = No, a browser is enough. You install something only on the machines you connect to: one command on a server, a small agent on a computer.
 index.faq.4 = What do you store?
-index.faq.5 = Commands and their output for 30 days, to show your history, and a log of sign-ins. We keep no keys and no passwords. The details are in the <a href="/privacy/">Privacy Policy</a>.
+index.faq.5 = Commands for a year, in each machine's log, and their output for 30 days, plus a log of sign-ins. We keep no keys and no passwords. The details are in the <a href="/privacy/">Privacy Policy</a>.
 index.faq.6 = How is this better than a regular SSH client?
 index.faq.7 = It works from any browser and needs no keys on your device. The terminal does not drop when you close your laptop. And every command comes as a block that is easy to copy and run again.
 index.faq.8 = How do I take access away from tTerm?
@@ -421,6 +421,34 @@ post.several-terminals.prose.6 = Subscribe to our blog on Telegram
 # more-section
 post.several-terminals.more-section.1 = More from the blog
 post.several-terminals.more-section.2 = All posts
+
+# ------------------------------------------------------------ post: /blog/logs/
+post.logs.title = Logs: we now create a log for every machine automatically · tTerm blog
+post.logs.og_title = Logs: we now create a log for every machine automatically
+post.logs.description = A machine's log records every command: who ran it, when and how it ended. The records are kept for a year. You can leave a note on a command, and erase a password that got into one by mistake.
+post.logs.alt = The log of the machine web-01 in tTerm Web: a failed command open, with its output and a note under it
+post.logs.figcaption = The log of web-01: a failed command, its output and the note under it.
+post.logs.why.title = Why
+post.logs.why.text = The terminal shows what you are doing now. On a server, though, what often matters is something else: who restarted the service last night, what ran just before everything fell over, which command fixed the same thing last month. You used to piece this together from history and the server's own logs. Now tTerm records every command itself, and nobody can change that record.
+post.logs.where.title = Where it is
+post.logs.where.text = The log is among the project's notes, in the Logs folder marked “by tTerm”, one for each machine. Next to a machine you can see how many commands ran on it today. The log shows one day at a time, and new lines appear in it on their own as soon as a command ends.
+post.logs.line.title = What a line shows
+post.logs.line.text = Each command takes one line: the time, who ran it, the command itself, how long it took, the folder, the git branch and the terminal. A failed command has a cross and its exit code. A click opens the line in full: the command, its output and its notes. Between commands the log marks when terminals were opened and closed, and when a terminal ended on its own, it says why.
+post.logs.notes.title = Notes on commands
+post.logs.notes.text = You can leave a note under any command: why you ran it, what came of it, where the config moved. Write it in the log or right at the block in the terminal, and it shows in both places. Notes are not edited or deleted, they are replied to. That is why the log stays an honest history.
+post.logs.find.title = Search a whole year
+post.logs.find.text = Find in this log searches the whole year, both commands and notes. Filters leave only failed commands, commands with notes, or those of one person or one terminal. And ⌘K search now finds lines in the logs of all your machines too.
+post.logs.redact.title = If a password got into a command
+post.logs.redact.text = It happens: an export with a token, or a password right in the line. The project's owner erases it with Redact…. The words disappear from the log, the terminal's feed, search and the history of the input line. In their place stays who erased them, when and why. In the nightly copies of the database they last no more than two weeks longer.
+post.logs.keep.title = How long it is kept
+post.logs.keep.text = Log lines are kept for a year, and command output for 30 days. The log belongs to the machine: move it to another project, and the whole log moves with it.
+post.logs.ended.title = When a terminal ends on its own
+post.logs.ended.text = A terminal lives in tTerm Web, not in a browser tab, but sometimes it ends without you, for example when a new version of tTerm Web comes out. Now the tab says why it happened, and everything that ran stays in the log. The Open a new terminal button opens one in the same folder.
+post.logs.next.text = In tTerm for Mac the log comes with the next update. The details are in the docs, on the page <a href="https://docs.tterm.net{{$base}}/features/log/">A machine's log</a>.
+post.logs.cta.title = Take a look at your machine's log
+post.logs.cta.button = Open tTerm Web
+post.logs.more-section.1 = More from the blog
+post.logs.more-section.2 = All posts
 
 # ------------------------------------------------------------ post: /blog/docs/
 post.docs.title = tTerm now has documentation · tTerm blog

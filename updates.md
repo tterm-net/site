@@ -23,6 +23,65 @@
 # Newest first. Dates in ISO form, one entry per date; the pages format them
 # per language. The text is shown as plain text: no markup, no code style.
 
+## 2026-11-03 web /blog/logs/
+
+@en Logs: we now create a log for every machine automatically
+A machine's log records every command: who ran it, when and how it ended.
+The records are kept for a year. You can leave a note on a command, and
+erase a password that got into one by mistake.
+
+@ru Логи: теперь мы автоматически создаём логи для каждой машины
+В логе машины записана каждая команда: кто её запустил, когда и чем она
+закончилась. Записи хранятся год. К команде можно оставить заметку, а
+пароль, случайно попавший в команду, стереть.
+
+@de Logs: Wir legen jetzt für jede Maschine automatisch ein Log an
+Das Log einer Maschine hält jeden Befehl fest: wer ihn ausgeführt hat, wann
+und wie er ausging. Die Einträge werden ein Jahr lang aufbewahrt. Du kannst
+zu einem Befehl eine Notiz hinterlassen und ein Passwort schwärzen, das
+versehentlich hineingeraten ist.
+
+@es Bitácoras: ahora creamos automáticamente una bitácora para cada máquina
+La bitácora de una máquina registra cada comando: quién lo ejecutó, cuándo y
+cómo terminó. Las entradas se guardan durante un año. Puedes dejar una nota
+en un comando y borrar una contraseña que se coló en él por error.
+
+@fr Journaux : nous créons désormais automatiquement un journal pour chaque machine
+Le journal d’une machine enregistre chaque commande : qui l’a lancée, quand
+et comment elle s’est terminée. Les entrées sont conservées un an. Vous
+pouvez laisser une note sur une commande et effacer un mot de passe qui s’y
+est glissé par erreur.
+
+@it Log: ora creiamo automaticamente un log per ogni macchina
+Il log di una macchina registra ogni comando: chi l'ha eseguito, quando e
+com'è finito. Le voci vengono conservate per un anno. Puoi lasciare una nota
+su un comando e oscurare una password che ci è finita dentro per errore.
+
+@pl Logi: teraz automatycznie tworzymy log dla każdej maszyny
+Log maszyny zapisuje każde polecenie: kto je uruchomił, kiedy i jak się
+zakończyło. Wpisy są przechowywane przez rok. Do polecenia możesz dodać
+notatkę, a hasło, które trafiło do niego przez pomyłkę, wymazać.
+
+@pt-BR Logs: agora criamos automaticamente um log para cada máquina
+O log de uma máquina registra cada comando: quem o executou, quando e como
+terminou. Os registros ficam guardados por um ano. Você pode deixar uma nota
+num comando e apagar uma senha que foi parar nele por engano.
+
+@tr Loglar: artık her makine için otomatik olarak bir log oluşturuyoruz
+Bir makinenin logu her komutu kaydeder: kim çalıştırdı, ne zaman ve nasıl
+sonuçlandı. Kayıtlar bir yıl boyunca saklanır. Bir komuta not bırakabilir,
+yanlışlıkla komuta karışan bir parolayı da silebilirsin.
+
+@ja ログ：マシンごとにログを自動で作成するようになりました
+マシンのログには、すべてのコマンドについて、誰がいつ実行し、どう終わったかが記録されます。保存期間は 1 年間です。コマンドにノートを残したり、うっかり入り込んだパスワードを墨消ししたりできます。
+
+@ko 로그: 이제 머신마다 로그를 자동으로 만들어요
+머신 로그에는 모든 명령이 누가, 언제 실행했고 어떻게 끝났는지와 함께 기록돼요. 보관 기간은 1년이에요. 명령에 노트를 남길 수 있고,
+실수로 들어간 비밀번호는 지울 수 있어요.
+
+@zh-CN 日志：现在我们会自动为每台机器创建日志
+机器的日志会记录每一条命令：谁运行的、什么时候运行的、结果如何。记录保留一年。你可以给命令留下笔记，也可以抹除不小心混进命令里的密码。
+
 ## 2026-11-02 docs /blog/docs/
 
 @en tTerm now has documentation

@@ -41,6 +41,41 @@
     });
   }
 
+  // Resources in the header opens under the pointer of a mouse, as menus
+  // like it do on most sites, and closes a moment after the pointer has
+  // left it and its list (an invisible strip in style.css bridges the gap
+  // between them). Opened so, a click on it keeps it open instead of
+  // closing it. The keyboard and a touch screen work as before.
+  function initHover(menu) {
+    var summary = menu.querySelector('summary');
+    var timer = null;
+    var byHover = false;
+    function soon(fn, ms) {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(fn, ms);
+    }
+    menu.addEventListener('pointerenter', function (event) {
+      if (event.pointerType !== 'mouse') return;
+      soon(function () {
+        if (!menu.open) {
+          byHover = true;
+          menu.open = true;
+        }
+      }, 70);
+    });
+    menu.addEventListener('pointerleave', function (event) {
+      if (event.pointerType !== 'mouse') return;
+      soon(function () { menu.open = false; }, 250);
+    });
+    summary.addEventListener('click', function (event) {
+      if (byHover && menu.open) event.preventDefault();
+      byHover = false;
+    });
+    menu.addEventListener('toggle', function () {
+      if (!menu.open) byHover = false;
+    });
+  }
+
   /* ------------------------------------------------------------- demo */
 
   // tTerm Web at work, as in 0.1.2: a deploy on web-01 in Client X, with its
@@ -478,6 +513,9 @@
   }
 
   Array.prototype.forEach.call(document.querySelectorAll('details.menu, details.lang, details.res'), initMenu);
+  if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    Array.prototype.forEach.call(document.querySelectorAll('.nav details.res'), initHover);
+  }
   Array.prototype.forEach.call(document.querySelectorAll('[data-demo]'), initDemo);
   Array.prototype.forEach.call(document.querySelectorAll('[data-stage]'), initStage);
   if (window.matchMedia && window.matchMedia('(hover: hover)').matches &&

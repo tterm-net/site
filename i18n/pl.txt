@@ -153,7 +153,7 @@ index.pricing.7 = Do 50 maszyn
 index.pricing.8 = Do 24 otwartych terminali
 index.pricing.9 = Serwery i komputery
 index.pricing.10 = Własne projekty i notatki
-index.pricing.11 = 30 dni historii poleceń z wynikami
+index.pricing.11 = Log każdej maszyny przez rok, wyniki przez 30 dni
 index.pricing.12 = Terminale działają po zamknięciu karty
 index.pricing.13 = Ciemny i jasny motyw
 # faq
@@ -162,7 +162,7 @@ index.faq.more = Nie ma tu odpowiedzi? Zajrzyj do dokumentacji
 index.faq.2 = Czy muszę coś instalować na swoim komputerze?
 index.faq.3 = Nie, wystarczy przeglądarka. Instalacja jest potrzebna tylko na maszynach, z którymi się łączysz: na serwerze to jedno polecenie, na komputerze niewielki agent.
 index.faq.4 = Co przechowujecie?
-index.faq.5 = Polecenia i ich wyniki przez 30 dni, żeby pokazywać ci historię, oraz dziennik logowań. Nie przechowujemy kluczy ani haseł. Szczegóły znajdziesz w <a href="/privacy/">Polityce prywatności</a>.
+index.faq.5 = Polecenia przez rok w logu każdej maszyny, ich wyniki przez 30 dni oraz dziennik logowań. Nie przechowujemy kluczy ani haseł. Szczegóły znajdziesz w <a href="/privacy/">Polityce prywatności</a>.
 index.faq.6 = Czym to jest lepsze od zwykłego klienta SSH?
 index.faq.7 = Działa w każdej przeglądarce i nie potrzebuje kluczy na twoim urządzeniu. Terminal nie rozłącza się, kiedy zamykasz laptopa. A każde polecenie to blok, który łatwo skopiować i uruchomić ponownie.
 index.faq.8 = Jak odebrać tTermowi dostęp?
@@ -421,6 +421,34 @@ post.several-terminals.prose.6 = Subskrybuj nasz blog na Telegramie
 # more-section
 post.several-terminals.more-section.1 = Więcej na blogu
 post.several-terminals.more-section.2 = Wszystkie wpisy
+
+# ------------------------------------------------------------ post: /blog/logs/
+post.logs.title = Logi: teraz automatycznie tworzymy log dla każdej maszyny · Blog tTerm
+post.logs.og_title = Logi: teraz automatycznie tworzymy log dla każdej maszyny
+post.logs.description = Log maszyny zapisuje każde polecenie: kto je uruchomił, kiedy i jak się zakończyło. Wpisy są przechowywane przez rok. Do polecenia możesz dodać notatkę, a hasło, które trafiło do niego przez pomyłkę, wymazać.
+post.logs.alt = Log maszyny web-01 w tTerm Web: otwarte nieudane polecenie, a pod nim jego wynik i notatka
+post.logs.figcaption = Log web-01: nieudane polecenie, jego wynik i notatka pod nim.
+post.logs.why.title = Po co
+post.logs.why.text = Terminal pokazuje, co robisz teraz. Ale na serwerze często liczy się co innego: kto wczoraj wieczorem zrestartował usługę, co uruchomiono tuż przed tym, jak wszystko padło, jakim poleceniem w zeszłym miesiącu naprawiono to samo. Wcześniej trzeba było składać to z history i dzienników na samym serwerze. Teraz tTerm sam zapisuje każde polecenie i nikt nie może zmienić tego zapisu.
+post.logs.where.title = Gdzie go znaleźć
+post.logs.where.text = Log leży wśród notatek projektu, w folderze „Logi” z dopiskiem „prowadzi tTerm”, osobny dla każdej maszyny. Obok maszyny widać, ile poleceń wykonano na niej dzisiaj. Log pokazuje po jednym dniu, a nowe wiersze pojawiają się w nim same, gdy tylko polecenie się zakończy.
+post.logs.line.title = Co jest w wierszu
+post.logs.line.text = Każde polecenie zajmuje jeden wiersz: godzina, kto je uruchomił, samo polecenie, jak długo trwało, katalog, gałąź git i terminal. Przy nieudanym poleceniu jest krzyżyk i kod wyjścia. Kliknięcie otwiera cały wiersz: polecenie, jego wynik i notatki. Między poleceniami log zaznacza, kiedy otwierano i zamykano terminale. Jeśli terminal zakończył się sam, log podaje też powód.
+post.logs.notes.title = Notatki do poleceń
+post.logs.notes.text = Pod każdym poleceniem możesz zostawić notatkę: po co je uruchomiono, co z tego wyszło, dokąd przeniesiono konfigurację. Napisz ją w logu albo bezpośrednio przy bloku w terminalu, a będzie widoczna w obu miejscach. Notatek się nie edytuje ani nie usuwa, odpowiada się na nie. Dlatego log pozostaje uczciwą kroniką.
+post.logs.find.title = Szukaj w całym roku
+post.logs.find.text = „Szukaj w tym logu” przeszukuje cały rok, zarówno polecenia, jak i notatki. Filtry zostawiają tylko nieudane polecenia, polecenia z notatkami albo polecenia jednej osoby lub jednego terminala. A wyszukiwanie pod ⌘K znajduje teraz także wiersze w logach wszystkich twoich maszyn.
+post.logs.redact.title = Jeśli do polecenia trafiło hasło
+post.logs.redact.text = Zdarza się: export z tokenem albo hasło wpisane wprost w wierszu. Właściciel projektu wymazuje je przez „Wymaż…”. Słowa znikają z logu, z bloków w terminalu, z wyszukiwania i z historii wiersza poleceń. W ich miejscu zostaje informacja, kto je wymazał, kiedy i dlaczego. W nocnych kopiach bazy danych przetrwają jeszcze najwyżej dwa tygodnie.
+post.logs.keep.title = Jak długo jest przechowywany
+post.logs.keep.text = Wiersze logu są przechowywane przez rok, a wyniki poleceń przez 30 dni. Log należy do maszyny: jeśli przeniesiesz ją do innego projektu, cały log przeniesie się razem z nią.
+post.logs.ended.title = Kiedy terminal kończy się sam
+post.logs.ended.text = Terminal żyje w tTerm Web, a nie w karcie przeglądarki, ale czasem kończy się bez twojego udziału, na przykład gdy wychodzi nowa wersja tTerm Web. Teraz karta mówi, dlaczego tak się stało, a wszystko, co uruchomiono, zostaje w logu. Przycisk „Otwórz nowy terminal” otworzy kolejny w tym samym katalogu.
+post.logs.next.text = W tTerm dla Maca log pojawi się z następną aktualizacją. Szczegóły znajdziesz w dokumentacji, na stronie <a href="https://docs.tterm.net{{$base}}/features/log/">„Log maszyny”</a>.
+post.logs.cta.title = Zajrzyj do logu swojej maszyny
+post.logs.cta.button = Otwórz tTerm Web
+post.logs.more-section.1 = Więcej na blogu
+post.logs.more-section.2 = Wszystkie wpisy
 
 # ------------------------------------------------------------ post: /blog/docs/
 post.docs.title = tTerm ma teraz dokumentację · Blog tTerm

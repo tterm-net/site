@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitácoras: ahora creamos automáticamente una bitácora para cada máquina · Blog de tTerm</title>
+<meta name="description" content="La bitácora de una máquina registra cada comando: quién lo ejecutó, cuándo y cómo terminó. Las entradas se guardan durante un año. Puedes dejar una nota en un comando y borrar una contraseña que se coló en él por error.">
+<link rel="canonical" href="https://tterm.net/es/blog/logs/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/logs/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/logs/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/logs/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/logs/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/logs/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/logs/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/logs/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/logs/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/logs/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/logs/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/logs/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/logs/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/logs/">
+<meta property="og:title" content="Bitácoras: ahora creamos automáticamente una bitácora para cada máquina">
+<meta property="og:description" content="La bitácora de una máquina registra cada comando: quién lo ejecutó, cuándo y cómo terminó. Las entradas se guardan durante un año. Puedes dejar una nota en un comando y borrar una contraseña que se coló en él por error.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/es/blog/logs/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Bitácoras: ahora creamos automáticamente una bitácora para cada máquina",
+  "description": "La bitácora de una máquina registra cada comando: quién lo ejecutó, cuándo y cómo terminó. Las entradas se guardan durante un año. Puedes dejar una nota en un comando y borrar una contraseña que se coló en él por error.",
+  "datePublished": "2026-11-03",
+  "inLanguage": "es",
+  "url": "https://tterm.net/es/blog/logs/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.8.1">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/es/" aria-label="tTerm, página de inicio">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">beta</span>
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="/es/#features">Funciones</a>
+      <a href="/es/#security">Seguridad</a>
+      <a href="/es/#pricing">Precios</a>
+      <details class="res">
+        <summary>Recursos<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="https://docs.tterm.net/es/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3z"/><path d="M21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/></svg><span><b>Documentación</b><small>Cómo empezar y cómo funciona todo</small></span></a>
+          <a href="/es/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>Blog</b><small>Novedades de tTerm</small></span></a>
+          <a href="/es/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>Preguntas frecuentes</b><small>Respuestas a las dudas habituales</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Canal de Telegram</b><small>Una nota breve sobre cada versión</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>Código en GitHub</b><small>Todo el código de tTerm, AGPL v3</small></span></a>
+        </div>
+      </details>
+      <a class="nav-mac" href="/es/download/">Terminal local<span class="nav-new" aria-hidden="true"></span></a>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="Idioma: español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ES</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/logs/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/logs/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/logs/" hreflang="es" lang="es" aria-current="true">Español<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/fr/blog/logs/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/logs/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/logs/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/logs/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/logs/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/logs/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/logs/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/logs/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/logs/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Iniciar sesión</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Empezar gratis</a>
+      <details class="menu">
+        <summary aria-label="Menú"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menú">
+          <a href="/es/#features">Funciones</a>
+          <a href="/es/#security">Seguridad</a>
+          <a href="/es/#pricing">Precios</a>
+          <a href="/es/download/">Terminal local</a>
+          <p class="menu-label">Recursos</p>
+          <a href="https://docs.tterm.net/es/">Documentación</a>
+          <a href="/es/blog/" aria-current="page">Blog</a>
+          <a href="/es/#faq">Preguntas frecuentes</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canal de Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Código en GitHub</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="Idioma: español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>Español</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/logs/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/logs/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/logs/" hreflang="es" lang="es" aria-current="true">Español<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+              <a href="/fr/blog/logs/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/logs/" hreflang="it" lang="it">Italiano</a>
+              <a href="/pl/blog/logs/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/logs/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/logs/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/logs/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/logs/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/logs/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/logs/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">Empezar gratis</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="/es/blog/">Blog</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-web">tTerm Web</span><time datetime="2026-11-03">3 de noviembre de 2026</time><span class="sep" aria-hidden="true">·</span><span>3 min de lectura</span></p>
+    <!-- /updates:meta -->
+      <h1>Bitácoras: ahora creamos automáticamente una bitácora para cada máquina</h1>
+      <p class="post-lead">La bitácora de una máquina registra cada comando: quién lo ejecutó, cuándo y cómo terminó. Las entradas se guardan durante un año. Puedes dejar una nota en un comando y borrar una contraseña que se coló en él por error.</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="post-shot">
+        <div class="cover-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.tterm.net</span></div>
+        <img src="/assets/blog/logs-es.webp" width="1920" height="1600" alt="La bitácora de la máquina web-01 en tTerm Web: un comando fallido abierto, con su salida y una nota debajo">
+      </div>
+      <figcaption>La bitácora de web-01: un comando fallido, su salida y la nota que tiene debajo.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>Por qué</h2>
+      <p>La terminal muestra lo que estás haciendo ahora. Pero en un servidor muchas veces importa otra cosa: quién reinició el servicio anoche, qué se ejecutó justo antes de que todo se cayera, con qué comando se arregló lo mismo el mes pasado. Antes tenías que reconstruirlo a partir de history y de los logs del propio servidor. Ahora tTerm anota cada comando por su cuenta, y nadie puede cambiar ese registro.</p>
+
+      <h2>Dónde está</h2>
+      <p>La bitácora está entre las notas del proyecto, en la carpeta «Bitácoras» con la marca «por tTerm», y cada máquina tiene la suya. Junto a cada máquina ves cuántos comandos se ejecutaron hoy en ella. La bitácora muestra los días de uno en uno, y las líneas nuevas aparecen solas en cuanto termina un comando.</p>
+
+      <h2>Qué muestra cada línea</h2>
+      <p>Cada comando ocupa una línea: la hora, quién lo ejecutó, el propio comando, cuánto tardó, el directorio, la rama de git y la terminal. Un comando fallido lleva una cruz y su código de salida. Un clic abre la línea completa: el comando, su salida y sus notas. Entre comandos, la bitácora marca cuándo se abrieron y se cerraron las terminales, y si una terminal finalizó por sí sola, indica por qué.</p>
+
+      <h2>Notas en los comandos</h2>
+      <p>Puedes dejar una nota debajo de cualquier comando: por qué lo ejecutaste, qué resultado dio, adónde se mudó la configuración. Escríbela en la bitácora o directamente junto al bloque en la terminal, y se verá en ambos sitios. Las notas no se editan ni se borran: se responden. Por eso la bitácora sigue siendo una crónica honesta.</p>
+
+      <h2>Buscar en todo un año</h2>
+      <p>«Buscar en esta bitácora» abarca todo el año, tanto los comandos como las notas. Los filtros dejan solo los comandos fallidos, los que tienen notas o los de una persona o una terminal. Y la búsqueda con ⌘K ahora también encuentra líneas en las bitácoras de todas tus máquinas.</p>
+
+      <h2>Si una contraseña se coló en un comando</h2>
+      <p>A veces pasa: un export con un token, o una contraseña escrita directamente en la línea. El propietario del proyecto lo borra con «Censurar…». Las palabras desaparecen de la bitácora, de los bloques de la terminal, de la búsqueda y del historial de la línea de comandos. En su lugar queda constancia de quién las censuró, cuándo y por qué. En las copias nocturnas de la base de datos duran, como mucho, dos semanas más.</p>
+
+      <h2>Cuánto tiempo se guarda</h2>
+      <p>Las líneas de la bitácora se guardan durante un año, y la salida de los comandos, durante 30 días. La bitácora pertenece a la máquina: si la mueves a otro proyecto, toda la bitácora se va con ella.</p>
+
+      <h2>Cuando una terminal finaliza por sí sola</h2>
+      <p>Una terminal vive en tTerm Web, no en una pestaña del navegador, pero a veces finaliza sin que hagas nada, por ejemplo cuando sale una versión nueva de tTerm Web. Ahora la pestaña dice por qué ocurrió, y todo lo que se ejecutó queda en la bitácora. El botón «Abrir una terminal nueva» abre otra en el mismo directorio.</p>
+
+      <p>En tTerm para Mac, la bitácora llegará con la próxima actualización. Los detalles están en la documentación, en la página <a href="https://docs.tterm.net/es/features/log/">«La bitácora de una máquina»</a>.</p>
+
+      <div class="post-cta">
+        <h2>Echa un vistazo a la bitácora de tu máquina</h2>
+        <a class="btn btn-primary" href="https://app.tterm.net">Abrir tTerm Web</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="Más del blog">
+    <div class="split-row">
+      <h2>Más del blog</h2>
+      <a class="btn btn-ghost btn-md" href="/es/blog/">Todos los artículos</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/es/blog/docs/">
+        <span class="post-mini-meta"><time datetime="2026-11-02">2 nov</time> · Documentación</span>
+        <span class="post-mini-title">tTerm ya tiene documentación</span>
+        <span class="post-mini-text">En docs.tterm.net te explicamos cómo funciona tTerm, desde tu primer comando hasta cómo está organizado el acceso.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/es/blog/tterm-for-mac/">
+        <span class="post-mini-meta"><time datetime="2026-10-31">31 oct</time> · tTerm para Mac</span>
+        <span class="post-mini-title">tTerm para Mac: una terminal local con la nube dentro</span>
+        <span class="post-mini-text">tTerm ya tiene una aplicación para Mac.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/es/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">25 oct</time> · tTerm Web</span>
+        <span class="post-mini-title">Por qué el código de tTerm es abierto, aunque habrá planes de pago</span>
+        <span class="post-mini-text">Todo el código de tTerm está ahora bajo AGPL v3 en lugar de MIT, y pronto llegarán los planes de pago.</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/es/blog/">Todos los artículos</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/es/" aria-label="tTerm, página de inicio">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">beta</span>
+        </a>
+        <p class="foot-tag">La terminal en la nube para servidores y computadoras.</p>
+      </div>
+      <nav class="foot-cols" aria-label="Enlaces">
+        <div class="foot-col">
+          <p class="foot-h">Producto</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="/es/download/">tTerm para Mac<span class="foot-new">Nuevo</span></a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot de Telegram</a>
+          <a href="/es/#pricing">Precios</a>
+          <a href="/es/#security">Seguridad</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Recursos</p>
+          <a href="https://docs.tterm.net/es/">Documentación</a>
+          <a href="/es/blog/">Blog</a>
+          <a href="/es/#faq">Preguntas frecuentes</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canal de Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Código en GitHub</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Legal</p>
+          <a href="/terms/">Condiciones del servicio</a>
+          <a href="/privacy/">Política de privacidad</a>
+          <a href="/es/blog/open-source/">Licencia AGPL-3.0</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.8.1</p>
+      <details class="lang lang-up">
+        <summary aria-label="Idioma: español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ES</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/logs/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/logs/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/logs/" hreflang="es" lang="es" aria-current="true">Español<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/fr/blog/logs/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/logs/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/logs/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/logs/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/logs/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/logs/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/logs/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/logs/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/logs/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

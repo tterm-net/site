@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.8.0.** The number lives in `VERSION`; the build puts it in a
+**Version 2.8.1.** The number lives in `VERSION`; the build puts it in a
 `<meta>` tag and the footer of every page, so you can tell what is deployed
 by viewing source.
 
@@ -99,7 +99,8 @@ and the language. On a narrow screen the header's links fold into a
 `<details>` menu; Resources and the language button are `<details>` too. All
 open without a script, `site.js` only closes them after a tap, on Escape or
 when another opens, and leaves the menu open while the language opens inside
-it.
+it. With a mouse, Resources opens as the pointer comes onto it and closes a
+moment after it leaves.
 
 The header shows its links above 1240px, and at 1241px, with the local
 terminal, its line has about 25px to spare in French and Russian, the

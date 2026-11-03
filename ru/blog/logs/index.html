@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Логи: теперь мы автоматически создаём логи для каждой машины · Блог tTerm</title>
+<meta name="description" content="В логе машины записана каждая команда: кто её запустил, когда и чем она закончилась. Записи хранятся год. К команде можно оставить заметку, а пароль, случайно попавший в команду, стереть.">
+<link rel="canonical" href="https://tterm.net/ru/blog/logs/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/logs/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/logs/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/logs/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/logs/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/logs/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/logs/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/logs/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/logs/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/logs/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/logs/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/logs/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/logs/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/logs/">
+<meta property="og:title" content="Логи: теперь мы автоматически создаём логи для каждой машины">
+<meta property="og:description" content="В логе машины записана каждая команда: кто её запустил, когда и чем она закончилась. Записи хранятся год. К команде можно оставить заметку, а пароль, случайно попавший в команду, стереть.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/ru/blog/logs/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Логи: теперь мы автоматически создаём логи для каждой машины",
+  "description": "В логе машины записана каждая команда: кто её запустил, когда и чем она закончилась. Записи хранятся год. К команде можно оставить заметку, а пароль, случайно попавший в команду, стереть.",
+  "datePublished": "2026-11-03",
+  "inLanguage": "ru",
+  "url": "https://tterm.net/ru/blog/logs/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.8.1">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/ru/" aria-label="tTerm, на главную">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">бета</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="/ru/#features">Возможности</a>
+      <a href="/ru/#security">Безопасность</a>
+      <a href="/ru/#pricing">Тарифы</a>
+      <details class="res">
+        <summary>Ресурсы<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="https://docs.tterm.net/ru/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3z"/><path d="M21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/></svg><span><b>Документация</b><small>Как начать и как всё устроено</small></span></a>
+          <a href="/ru/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>Блог</b><small>Что нового в tTerm</small></span></a>
+          <a href="/ru/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>Вопросы</b><small>Ответы на частые вопросы</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Канал в Telegram</b><small>Коротко о каждом выпуске</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>Исходники на GitHub</b><small>Весь код tTerm, AGPL v3</small></span></a>
+        </div>
+      </details>
+      <a class="nav-mac" href="/ru/download/">Локальный терминал<span class="nav-new" aria-hidden="true"></span></a>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="Язык: русский"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>RU</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/logs/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/logs/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/logs/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/logs/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/logs/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/logs/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/logs/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/logs/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/logs/" hreflang="ru" lang="ru" aria-current="true">Русский<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/ja/blog/logs/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/logs/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/logs/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Войти</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Начать бесплатно</a>
+      <details class="menu">
+        <summary aria-label="Меню"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Меню">
+          <a href="/ru/#features">Возможности</a>
+          <a href="/ru/#security">Безопасность</a>
+          <a href="/ru/#pricing">Тарифы</a>
+          <a href="/ru/download/">Локальный терминал</a>
+          <p class="menu-label">Ресурсы</p>
+          <a href="https://docs.tterm.net/ru/">Документация</a>
+          <a href="/ru/blog/" aria-current="page">Блог</a>
+          <a href="/ru/#faq">Вопросы</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Канал в Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Исходники на GitHub</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="Язык: русский"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>Русский</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/logs/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/logs/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/logs/" hreflang="es" lang="es">Español</a>
+              <a href="/fr/blog/logs/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/logs/" hreflang="it" lang="it">Italiano</a>
+              <a href="/pl/blog/logs/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/logs/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/logs/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/logs/" hreflang="ru" lang="ru" aria-current="true">Русский<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+              <a href="/ja/blog/logs/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/logs/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/logs/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">Начать бесплатно</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="/ru/blog/">Блог</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-web">tTerm Web</span><time datetime="2026-11-03">3 ноября 2026</time><span class="sep" aria-hidden="true">·</span><span>3 минуты чтения</span></p>
+    <!-- /updates:meta -->
+      <h1>Логи: теперь мы автоматически создаём логи для каждой машины</h1>
+      <p class="post-lead">В логе машины записана каждая команда: кто её запустил, когда и чем она закончилась. Записи хранятся год. К команде можно оставить заметку, а пароль, случайно попавший в команду, стереть.</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="post-shot">
+        <div class="cover-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.tterm.net</span></div>
+        <img src="/assets/blog/logs-ru.webp" width="1920" height="1600" alt="Лог машины web-01 в tTerm Web: открыта команда с ошибкой, под ней вывод и заметка">
+      </div>
+      <figcaption>Лог web-01: команда с ошибкой, её вывод и заметка под ней.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>Зачем</h2>
+      <p>Терминал показывает, что ты делаешь сейчас. А на сервере часто важно другое: кто перезапустил сервис вчера вечером, что выполнялось перед тем, как всё упало, какой командой в прошлом месяце чинили то же самое. Раньше это приходилось собирать по history и журналам на самом сервере. Теперь tTerm записывает каждую команду сам, и изменить эту запись никто не может.</p>
+
+      <h2>Где он</h2>
+      <p>Лог лежит среди заметок проекта, в папке «Логи» с пометкой «ведёт tTerm», у каждой машины свой. Рядом с машиной видно, сколько команд на ней выполнили сегодня. Лог показывает по одному дню, а новые строки появляются в нём сами, как только команда завершилась.</p>
+
+      <h2>Что в строке</h2>
+      <p>Каждая команда занимает одну строку: время, кто её запустил, сама команда, сколько она шла, папка, ветка git и терминал. У команды с ошибкой стоят крестик и код возврата. Щелчок открывает строку целиком: команду, её вывод и заметки. Между командами лог отмечает, когда открывали и закрывали терминалы. Если терминал завершился сам, лог пишет и почему.</p>
+
+      <h2>Заметки к командам</h2>
+      <p>Под любой командой можно оставить заметку: зачем её запустили, что из этого вышло, куда переехал конфиг. Заметку можно написать в логе или прямо у блока в терминале, видна она в обоих местах. Заметки не правят и не удаляют, на них отвечают. Поэтому лог остаётся честной историей.</p>
+
+      <h2>Найти за год</h2>
+      <p>Поиск в логе ищет по всему году, по командам и по заметкам. Фильтры оставляют только команды с ошибкой, с заметками, одного человека или одного терминала. А поиск по ⌘K теперь находит и строки логов всех твоих машин.</p>
+
+      <h2>Если в команду попал пароль</h2>
+      <p>Бывает: export с токеном или пароль прямо в строке. Владелец проекта стирает его через «Стереть…». Слова пропадают из лога, из ленты терминала, из поиска и из истории строки ввода. На их месте остаётся, кто стёр, когда и почему. В ночных копиях базы они продержатся ещё не больше двух недель.</p>
+
+      <h2>Сколько хранится</h2>
+      <p>Строки лога хранятся год, вывод команд хранится 30 дней. Лог принадлежит машине: если перенести её в другой проект, весь лог переедет вместе с ней.</p>
+
+      <h2>Когда терминал завершается сам</h2>
+      <p>Терминал живёт в tTerm Web, а не во вкладке браузера, но иногда завершается и без тебя, например когда выходит новая версия tTerm Web. Теперь вкладка говорит, почему это случилось, а всё выполненное остаётся в логе. Кнопка «Открыть новый терминал» откроет его в той же папке.</p>
+
+      <p>В tTerm для Mac лог появится со следующим обновлением. Подробно о логе написано в документации, на странице <a href="https://docs.tterm.net/ru/features/log/">«Лог машины»</a>.</p>
+
+      <div class="post-cta">
+        <h2>Загляни в лог своей машины</h2>
+        <a class="btn btn-primary" href="https://app.tterm.net">Открыть tTerm Web</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="Ещё в блоге">
+    <div class="split-row">
+      <h2>Ещё в блоге</h2>
+      <a class="btn btn-ghost btn-md" href="/ru/blog/">Все записи</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/ru/blog/docs/">
+        <span class="post-mini-meta"><time datetime="2026-11-02">2 ноя</time> · Документация</span>
+        <span class="post-mini-title">У tTerm появилась документация</span>
+        <span class="post-mini-text">На docs.tterm.net описано, как работает tTerm: от первой команды до того, как устроен доступ.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/ru/blog/tterm-for-mac/">
+        <span class="post-mini-meta"><time datetime="2026-10-31">31 окт</time> · tTerm для Mac</span>
+        <span class="post-mini-title">tTerm для Mac: локальный терминал с облаком внутри</span>
+        <span class="post-mini-text">У tTerm появилось приложение для Mac.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/ru/blog/open-source/">
+        <span class="post-mini-meta"><time datetime="2026-10-25">25 окт</time> · tTerm Web</span>
+        <span class="post-mini-title">Почему код tTerm открыт, хотя будут платные тарифы</span>
+        <span class="post-mini-text">Весь код tTerm теперь под лицензией AGPL v3 вместо MIT, а скоро появятся платные тарифы.</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/ru/blog/">Все записи</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/ru/" aria-label="tTerm, на главную">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">бета</span>
+        </a>
+        <p class="foot-tag">Облачный терминал для серверов и компьютеров.</p>
+      </div>
+      <nav class="foot-cols" aria-label="Ссылки">
+        <div class="foot-col">
+          <p class="foot-h">Продукт</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="/ru/download/">tTerm для Mac<span class="foot-new">Новое</span></a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Бот в Telegram</a>
+          <a href="/ru/#pricing">Тарифы</a>
+          <a href="/ru/#security">Безопасность</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Ресурсы</p>
+          <a href="https://docs.tterm.net/ru/">Документация</a>
+          <a href="/ru/blog/">Блог</a>
+          <a href="/ru/#faq">Вопросы</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Канал в Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Исходники на GitHub</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Документы</p>
+          <a href="/terms/">Условия использования</a>
+          <a href="/privacy/">Политика конфиденциальности</a>
+          <a href="/ru/blog/open-source/">Лицензия AGPL-3.0</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.8.1</p>
+      <details class="lang lang-up">
+        <summary aria-label="Язык: русский"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>RU</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/logs/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/logs/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/logs/" hreflang="es" lang="es">Español</a>
+          <a href="/fr/blog/logs/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/logs/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/logs/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/logs/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/logs/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/logs/" hreflang="ru" lang="ru" aria-current="true">Русский<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/ja/blog/logs/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/logs/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/logs/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

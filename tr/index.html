@@ -60,7 +60,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.8.0">
+<meta name="version" content="2.8.1">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -463,7 +463,7 @@
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>24 açık terminale kadar</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Sunucular ve bilgisayarlar</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Kendi projelerin ve notların</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Çıktılarıyla birlikte 30 günlük komut geçmişi</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Her makinenin bir yıllık logu, 30 günlük çıktı</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Sekme kapansa da terminaller çalışır</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Koyu ve açık tema</li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Mac için tTerm</li>
@@ -484,7 +484,7 @@
       </details>
       <details>
         <summary>Neleri saklıyorsunuz?</summary>
-        <p>Geçmişini gösterebilmek için komutları ve çıktılarını 30 gün boyunca saklıyoruz, ayrıca giriş kayıtlarını tutuyoruz. Anahtar ya da parola saklamıyoruz. Ayrıntılar <a href="/privacy/">Gizlilik Politikası</a> sayfasında.</p>
+        <p>Komutları her makinenin logunda bir yıl boyunca, çıktılarını ise 30 gün boyunca saklıyoruz, ayrıca giriş kayıtlarını tutuyoruz. Anahtar ya da parola saklamıyoruz. Ayrıntılar <a href="/privacy/">Gizlilik Politikası</a> sayfasında.</p>
       </details>
       <details>
         <summary>Sıradan bir SSH istemcisinden ne açıdan daha iyi?</summary>
@@ -541,6 +541,11 @@
       </div>
     </a>
   <div class="post-stack">
+      <a class="post-mini" href="/tr/blog/logs/">
+        <span class="post-mini-meta"><time datetime="2026-11-03">3 Kas</time> · tTerm Web</span>
+        <span class="post-mini-title">Loglar: artık her makine için otomatik olarak bir log oluşturuyoruz</span>
+        <span class="post-mini-text">Bir makinenin logu her komutu kaydeder: kim çalıştırdı, ne zaman ve nasıl sonuçlandı.</span>
+      </a>
       <a class="post-mini" href="/tr/blog/docs/">
         <span class="post-mini-meta"><time datetime="2026-11-02">2 Kas</time> · Belgeler</span>
         <span class="post-mini-title">tTerm&#x27;in artık belgeleri var</span>
@@ -550,11 +555,6 @@
         <span class="post-mini-meta"><time datetime="2026-10-25">25 Eki</time> · tTerm Web</span>
         <span class="post-mini-title">Ücretli planlar yolda olsa da tTerm&#x27;in kodu neden açık</span>
         <span class="post-mini-text">tTerm&#x27;in tüm kodu artık MIT yerine AGPL v3 lisansıyla yayımlanıyor ve yakında ücretli planlar geliyor.</span>
-      </a>
-      <a class="post-mini" href="/tr/blog/notes-and-projects/">
-        <span class="post-mini-meta"><time datetime="2026-10-20">20 Eki</time> · tTerm Web</span>
-        <span class="post-mini-title">Notlar, renkli projeler ve terminal adları</span>
-        <span class="post-mini-text">Runbook&#x27;lar, kontrol listeleri ve erişim notları artık ait oldukları makinelerin yanında duruyor.</span>
       </a>
   </div>
 </div>
@@ -612,7 +612,7 @@
       </nav>
     </div>
     <div class="foot-bottom">
-      <p class="foot-note">2026 · tTerm · v2.8.0</p>
+      <p class="foot-note">2026 · tTerm · v2.8.1</p>
       <details class="lang lang-up">
         <summary aria-label="Dil: Türkçe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>TR</span></summary>
         <div class="lang-menu">

@@ -153,7 +153,7 @@ index.pricing.7 = 最多 50 台机器
 index.pricing.8 = 最多同时打开 24 个终端
 index.pricing.9 = 服务器和电脑
 index.pricing.10 = 自建项目和笔记
-index.pricing.11 = 30 天命令历史，含输出
+index.pricing.11 = 机器日志保留一年，输出保留 30 天
 index.pricing.12 = 关掉标签页，终端还在
 index.pricing.13 = 深色和浅色主题
 # faq
@@ -162,7 +162,7 @@ index.faq.more = 没找到答案？看看文档
 index.faq.2 = 我需要在自己的电脑上安装什么吗？
 index.faq.3 = 不需要，有浏览器就够了。只有要连接的机器才需要装东西：服务器上运行一条命令，电脑上装一个小型代理。
 index.faq.4 = 你们会保存哪些数据？
-index.faq.5 = 命令及其输出保存 30 天，用于显示你的历史记录，另外还有登录日志。我们不保存密钥，也不保存密码。详情见<a href="/privacy/">隐私政策</a>。
+index.faq.5 = 命令在每台机器的日志中保存一年，其输出保存 30 天，另外还有登录日志。我们不保存密钥，也不保存密码。详情见<a href="/privacy/">隐私政策</a>。
 index.faq.6 = 它比普通的 SSH 客户端好在哪里？
 index.faq.7 = 它在任何浏览器中都能用，设备上不需要密钥。合上笔记本，终端也不会断开。而且每条命令都是一个块，复制和重新运行都很方便。
 index.faq.8 = 怎样收回 tTerm 的访问权限？
@@ -421,6 +421,34 @@ post.several-terminals.prose.6 = 在 Telegram 上订阅我们的博客
 # more-section
 post.several-terminals.more-section.1 = 博客中的更多文章
 post.several-terminals.more-section.2 = 全部文章
+
+# ------------------------------------------------------------ post: /blog/logs/
+post.logs.title = 日志：现在我们会自动为每台机器创建日志 · tTerm 博客
+post.logs.og_title = 日志：现在我们会自动为每台机器创建日志
+post.logs.description = 机器的日志会记录每一条命令：谁运行的、什么时候运行的、结果如何。记录保留一年。你可以给命令留下笔记，也可以抹除不小心混进命令里的密码。
+post.logs.alt = tTerm Web 中机器 web-01 的日志：一条失败的命令已展开，下面是它的输出和一条笔记
+post.logs.figcaption = web-01 的日志：一条失败的命令、它的输出，以及下面的笔记。
+post.logs.why.title = 为什么需要日志
+post.logs.why.text = 终端显示的是你此刻在做什么。但在服务器上，更重要的往往是别的事：昨晚是谁重启了服务，一切崩掉之前刚刚运行了什么，上个月是用哪条命令修好同样问题的。以前，这些只能从 history 和服务器自己的日志里一点点拼凑出来。现在 tTerm 会自己记录每一条命令，而且这份记录谁都改不了。
+post.logs.where.title = 在哪里找到
+post.logs.where.text = 日志位于项目的笔记中，在标有“由 tTerm 记录”的“日志”文件夹里，每台机器各有一份。机器旁边会显示今天在它上面运行了多少条命令。日志每次显示一天，命令一结束，新的行就会自动出现。
+post.logs.line.title = 每一行显示什么
+post.logs.line.text = 每条命令占一行：时间、运行它的人、命令本身、耗时、目录、git 分支和终端。失败的命令会带一个叉号和退出码。点击一行即可完整展开：命令、它的输出和笔记。在命令之间，日志会标出终端何时打开、何时关闭；如果终端是自行结束的，日志还会写明原因。
+post.logs.notes.title = 给命令写笔记
+post.logs.notes.text = 你可以在任何一条命令下面留笔记：为什么运行它、结果怎样、配置挪到了哪里。笔记可以写在日志里，也可以直接写在终端中的命令块旁边，两处都能看到。笔记不能修改或删除，只能回复。正因如此，日志始终是一份如实的记录。
+post.logs.find.title = 搜索一整年
+post.logs.find.text = “在此日志中查找”会搜索整整一年的命令和笔记。筛选器可以只留下失败的命令、有笔记的命令，或者某个人、某个终端的命令。另外，⌘K 搜索现在也能找到你所有机器日志中的行。
+post.logs.redact.title = 如果密码混进了命令
+post.logs.redact.text = 这种事难免会发生：带着令牌的 export，或者直接写进命令里的密码。项目所有者可以用“抹除…”把它抹掉。这些文字会从日志、终端中的命令块、搜索和输入行的历史记录中消失。原处会留下是谁、在什么时候、为什么抹除的。在每晚的数据库副本中，它们最多还会保留两周。
+post.logs.keep.title = 保留多久
+post.logs.keep.text = 日志行保留一年，命令的输出保留 30 天。日志属于机器：如果把机器移到另一个项目，整份日志也会跟着移过去。
+post.logs.ended.title = 当终端自行结束时
+post.logs.ended.text = 终端运行在 tTerm Web 中，而不是浏览器的标签页里，但有时它会在你没有操作的情况下结束，比如 tTerm Web 发布新版本的时候。现在，标签页会告诉你原因，所有运行过的内容也都会留在日志里。点击“打开新终端”按钮，就会在同一目录中打开一个新终端。
+post.logs.next.text = tTerm Mac 版会在下一次更新中加入日志。详情见文档中的<a href="https://docs.tterm.net{{$base}}/features/log/">“机器的日志”</a>页面。
+post.logs.cta.title = 看看你机器上的日志
+post.logs.cta.button = 打开 tTerm Web
+post.logs.more-section.1 = 博客中的更多文章
+post.logs.more-section.2 = 全部文章
 
 # ------------------------------------------------------------ post: /blog/docs/
 post.docs.title = tTerm 现在有文档了 · tTerm 博客

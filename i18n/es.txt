@@ -153,7 +153,7 @@ index.pricing.7 = Hasta 50 máquinas
 index.pricing.8 = Hasta 24 terminales abiertas
 index.pricing.9 = Servidores y computadoras
 index.pricing.10 = Proyectos propios y notas
-index.pricing.11 = 30 días de historial de comandos con su salida
+index.pricing.11 = Un año de bitácora por máquina, 30 días de salida
 index.pricing.12 = Las terminales sobreviven a la pestaña
 index.pricing.13 = Tema oscuro y claro
 # faq
@@ -162,7 +162,7 @@ index.faq.more = ¿No encontraste la respuesta? Mira la documentación
 index.faq.2 = ¿Tengo que instalar algo en mi computadora?
 index.faq.3 = No, basta con un navegador. Solo instalas algo en las máquinas a las que te conectas: un comando en un servidor, un pequeño agente en una computadora.
 index.faq.4 = ¿Qué datos se guardan?
-index.faq.5 = Los comandos y su salida durante 30 días, para mostrarte el historial, y un registro de inicios de sesión. No guardamos claves ni contraseñas. Los detalles están en la <a href="/privacy/">Política de privacidad</a>.
+index.faq.5 = Los comandos durante un año en la bitácora de cada máquina, su salida durante 30 días y un registro de inicios de sesión. No guardamos claves ni contraseñas. Los detalles están en la <a href="/privacy/">Política de privacidad</a>.
 index.faq.6 = ¿En qué es mejor que un cliente SSH normal?
 index.faq.7 = Funciona desde cualquier navegador y no necesita claves en tu dispositivo. La terminal no se corta cuando cierras el portátil. Y cada comando se muestra como un bloque fácil de copiar y de volver a ejecutar.
 index.faq.8 = ¿Cómo le retiro el acceso a tTerm?
@@ -421,6 +421,34 @@ post.several-terminals.prose.6 = Suscríbete a nuestro blog en Telegram
 # more-section
 post.several-terminals.more-section.1 = Más del blog
 post.several-terminals.more-section.2 = Todos los artículos
+
+# ------------------------------------------------------------ post: /blog/logs/
+post.logs.title = Bitácoras: ahora creamos automáticamente una bitácora para cada máquina · Blog de tTerm
+post.logs.og_title = Bitácoras: ahora creamos automáticamente una bitácora para cada máquina
+post.logs.description = La bitácora de una máquina registra cada comando: quién lo ejecutó, cuándo y cómo terminó. Las entradas se guardan durante un año. Puedes dejar una nota en un comando y borrar una contraseña que se coló en él por error.
+post.logs.alt = La bitácora de la máquina web-01 en tTerm Web: un comando fallido abierto, con su salida y una nota debajo
+post.logs.figcaption = La bitácora de web-01: un comando fallido, su salida y la nota que tiene debajo.
+post.logs.why.title = Por qué
+post.logs.why.text = La terminal muestra lo que estás haciendo ahora. Pero en un servidor muchas veces importa otra cosa: quién reinició el servicio anoche, qué se ejecutó justo antes de que todo se cayera, con qué comando se arregló lo mismo el mes pasado. Antes tenías que reconstruirlo a partir de history y de los logs del propio servidor. Ahora tTerm anota cada comando por su cuenta, y nadie puede cambiar ese registro.
+post.logs.where.title = Dónde está
+post.logs.where.text = La bitácora está entre las notas del proyecto, en la carpeta «Bitácoras» con la marca «por tTerm», y cada máquina tiene la suya. Junto a cada máquina ves cuántos comandos se ejecutaron hoy en ella. La bitácora muestra los días de uno en uno, y las líneas nuevas aparecen solas en cuanto termina un comando.
+post.logs.line.title = Qué muestra cada línea
+post.logs.line.text = Cada comando ocupa una línea: la hora, quién lo ejecutó, el propio comando, cuánto tardó, el directorio, la rama de git y la terminal. Un comando fallido lleva una cruz y su código de salida. Un clic abre la línea completa: el comando, su salida y sus notas. Entre comandos, la bitácora marca cuándo se abrieron y se cerraron las terminales, y si una terminal finalizó por sí sola, indica por qué.
+post.logs.notes.title = Notas en los comandos
+post.logs.notes.text = Puedes dejar una nota debajo de cualquier comando: por qué lo ejecutaste, qué resultado dio, adónde se mudó la configuración. Escríbela en la bitácora o directamente junto al bloque en la terminal, y se verá en ambos sitios. Las notas no se editan ni se borran: se responden. Por eso la bitácora sigue siendo una crónica honesta.
+post.logs.find.title = Buscar en todo un año
+post.logs.find.text = «Buscar en esta bitácora» abarca todo el año, tanto los comandos como las notas. Los filtros dejan solo los comandos fallidos, los que tienen notas o los de una persona o una terminal. Y la búsqueda con ⌘K ahora también encuentra líneas en las bitácoras de todas tus máquinas.
+post.logs.redact.title = Si una contraseña se coló en un comando
+post.logs.redact.text = A veces pasa: un export con un token, o una contraseña escrita directamente en la línea. El propietario del proyecto lo borra con «Censurar…». Las palabras desaparecen de la bitácora, de los bloques de la terminal, de la búsqueda y del historial de la línea de comandos. En su lugar queda constancia de quién las censuró, cuándo y por qué. En las copias nocturnas de la base de datos duran, como mucho, dos semanas más.
+post.logs.keep.title = Cuánto tiempo se guarda
+post.logs.keep.text = Las líneas de la bitácora se guardan durante un año, y la salida de los comandos, durante 30 días. La bitácora pertenece a la máquina: si la mueves a otro proyecto, toda la bitácora se va con ella.
+post.logs.ended.title = Cuando una terminal finaliza por sí sola
+post.logs.ended.text = Una terminal vive en tTerm Web, no en una pestaña del navegador, pero a veces finaliza sin que hagas nada, por ejemplo cuando sale una versión nueva de tTerm Web. Ahora la pestaña dice por qué ocurrió, y todo lo que se ejecutó queda en la bitácora. El botón «Abrir una terminal nueva» abre otra en el mismo directorio.
+post.logs.next.text = En tTerm para Mac, la bitácora llegará con la próxima actualización. Los detalles están en la documentación, en la página <a href="https://docs.tterm.net{{$base}}/features/log/">«La bitácora de una máquina»</a>.
+post.logs.cta.title = Echa un vistazo a la bitácora de tu máquina
+post.logs.cta.button = Abrir tTerm Web
+post.logs.more-section.1 = Más del blog
+post.logs.more-section.2 = Todos los artículos
 
 # ------------------------------------------------------------ post: /blog/docs/
 post.docs.title = tTerm ya tiene documentación · Blog de tTerm
