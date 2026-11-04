@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.8.2.** The number lives in `VERSION`; the build puts it in a
+**Version 2.8.3.** The number lives in `VERSION`; the build puts it in a
 `<meta>` tag and the footer of every page, so you can tell what is deployed
 by viewing source.
 
