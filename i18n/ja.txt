@@ -116,7 +116,7 @@ index.features.23 = ターミナルに名前を
 index.features.24 = terminal 2 ではなく、deploy、logs、migrations と名付けられます。ターミナルをダブルクリックし、名前を入力して Enter を押します。
 # security
 index.security.1 = セキュリティ
-index.security.2 = 鍵は預かりません。<br>ポートも開けません。
+index.security.2 = 鍵はあなたにしか開けません。<br>ポートも開けません。
 index.security.more = 詳しく：アクセスの仕組み
 index.security.3 = マシンへのアクセス権は簡単に付与でき、同じくらい簡単に取り消せます。そのしくみを紹介します。
 index.security.4 = 有効期間 2 分の証明書
@@ -162,7 +162,7 @@ index.faq.more = 答えが見つからないときはドキュメントへ
 index.faq.2 = 自分のコンピューターに何かをインストールする必要はありますか？
 index.faq.3 = いいえ、ブラウザーがあれば十分です。インストールが必要なのは接続先のマシンだけで、サーバーにはコマンドを 1 つ実行し、コンピューターには小さなエージェントを入れます。
 index.faq.4 = どんなデータを保存していますか？
-index.faq.5 = コマンド（各マシンのログに 1 年間）とその出力（30 日間）、それにサインインの記録です。鍵やパスワードは保存しません。詳しくは<a href="/privacy/">プライバシーポリシー</a>をご覧ください。
+index.faq.5 = コマンド（各マシンのログに 1 年間）とその出力（30 日間）、それにサインインの記録です。鍵は、あなたが自分で保管庫に入れた場合にだけ、暗号化した状態でのみ保存します。開けるのはあなただけです。パスワードは保存しません。詳しくは<a href="/privacy/">プライバシーポリシー</a>をご覧ください。
 index.faq.6 = 一般的な SSH クライアントと比べて、何が良いのですか？
 index.faq.7 = どのブラウザーからでも使え、デバイスに鍵を置く必要がありません。ノートパソコンを閉じてもターミナルは切れません。さらに、コマンドはすべてブロックとして表示されるので、コピーも再実行も簡単です。
 index.faq.8 = tTerm のアクセス権を取り消すにはどうすればよいですか？
@@ -225,7 +225,7 @@ mac.faq.app.a = はい、<a href="{{$base}}/download/">Mac 版 tTerm</a> があ�
 # download page
 download.title = Mac 版 tTerm：ローカルターミナル
 download.description = クラウドを内蔵したローカルターミナル：Mac のシェルをブロックで表示し、その隣にサーバーやノートなど、tTerm にあるすべてを並べます。無料、macOS 11 以降に対応。
-download.lead = クラウド版と並ぶ tTerm の新しい製品、Mac で動くローカルターミナルです。普段のターミナルと同じように Mac で作業でき、まもなくアプリから直接サーバーと鍵をクラウドへ移せるようにもなります。
+download.lead = クラウド版と並ぶ tTerm の新しい製品、Mac で動くローカルターミナルです。普段のターミナルと同じように Mac で作業でき、アプリから直接サーバーと鍵をクラウドへ移すこともできます。
 download.meta = 無料 · macOS 11 以降 · Apple シリコンと Intel
 download.phone = <b>Mac 版 tTerm は Mac にインストールするアプリです。</b>このページを Mac で開いてください。スマートフォンからは、ブラウザーでそのまま tTerm Web を使えます。
 download.open_web = tTerm Web を開く
@@ -421,6 +421,38 @@ post.several-terminals.prose.6 = Telegram でブログを購読
 # more-section
 post.several-terminals.more-section.1 = ブログのほかの記事
 post.several-terminals.more-section.2 = すべての記事
+
+# ------------------------------------------------------------ post: /blog/move-to-cloud/
+post.move-to-cloud.title = クラウドへ移行：Mac のサーバーと鍵を、どのブラウザーからでも開けるようになりました · tTerm ブログ
+post.move-to-cloud.og_title = クラウドへ移行：Mac のサーバーと鍵を、どのブラウザーからでも開けるようになりました
+post.move-to-cloud.description = Mac 版 tTerm で、Mac から ssh で接続しているサーバーを、SSH 鍵と一緒にクラウドへ移せるようになりました。鍵は Mac の中で暗号化されて保管庫に入り、開けるのはあなただけです。どのブラウザーでも、保管庫のパスワードで開けます。
+post.move-to-cloud.alt = Mac 版 tTerm の「クラウドへ移行」ウィンドウ：この Mac が認識しているサーバーと、それぞれのログイン方法、~/.ssh の鍵
+post.move-to-cloud.figcaption = 「クラウドへ移行」ウィンドウ：この Mac が認識しているサーバーと、それぞれのログイン方法。
+post.move-to-cloud.why.title = なぜクラウドへ移すのか
+post.move-to-cloud.why.text = Mac からサーバーへは ssh で接続します。鍵は <code>~/.ssh</code> に、アドレスとユーザーは <code>~/.ssh/config</code> にあります。でも Mac から離れると、ブラウザーからも、スマートフォンからも、ほかの人のコンピューターからも、そのサーバーには届きません。「クラウドへ移行」でサーバーを tTerm に移せば、どこからでも開けるようになります。
+post.move-to-cloud.where.title = どこにあるか
+post.move-to-cloud.where.text = Mac 版 tTerm で、サイドバーの下にあるアカウントをクリックし、「クラウドへ移行」を選びます。ウィンドウには「この Mac のサーバー」が表示されます。これらは、<code>~/.ssh/config</code>、<code>known_hosts</code>、そして tTerm のターミナルで実行した <code>ssh</code> コマンドから tTerm が集めたものです。「移行」を押すまで、何もどこにも送られません。
+post.move-to-cloud.ways.title = 3 つのログイン方法
+post.move-to-cloud.ways.lead = サーバーごとに、それぞれのログイン方法があります：
+post.move-to-cloud.way.key.title = 「自分の鍵」：
+post.move-to-cloud.way.key.text = 鍵は保管庫に入り、サーバーはそのままです。
+post.move-to-cloud.way.cert.title = 「tTerm のアクセス権」：
+post.move-to-cloud.way.cert.text = tTerm がサーバーに専用の行を追加し、鍵は Mac に残ります。
+post.move-to-cloud.way.mac.title = 「この Mac 経由」：
+post.move-to-cloud.way.mac.text = 何も移しません。Mac が起動しているあいだ、tTerm が Mac に接続を依頼します。VPN の内側にあるサーバー向けの方法です。
+post.move-to-cloud.ways.after = 適切な方法は tTerm が自動で選びますが、自分で変えることもできます。
+post.move-to-cloud.vault.title = 鍵の保管庫
+post.move-to-cloud.vault.text = 鍵は、Mac を離れる前に、Mac の中で暗号化されます。tTerm が持つのは、暗号文と、鍵の公開鍵部分、そのフィンガープリントだけです。私たちには、保管庫を開くことも、鍵を読むこともできません。サーバーを開くときは、あなたのデバイスがログインに署名し、鍵が暗号化されないままデバイスの外へ出ることはありません。
+post.move-to-cloud.password.title = 保管庫のパスワード
+post.move-to-cloud.password.text = パスワードは、保管庫を作成するときに自分で決めます。このパスワードがあれば、ほかの人のコンピューターでも、Mac がなくても、どのブラウザーでも鍵を開けます。パスワード自体はどこにも送られません。tTerm はパスワードを知らず、復元することもできないので、パスワードマネージャーに保存しておいてください。自分のコンピューターでは「Touch ID で保存」を押せば、そこでは二度とパスワードを聞かれません。ほかの人のコンピューターでは「今回のみ」を選んでください。
+post.move-to-cloud.here.title = 鍵を開いた場所でのみ
+post.move-to-cloud.here.text = あなたの鍵で開くサーバー、Mac 経由のサーバー、そして Mac 自体は、あなた自身が鍵を開いたデバイスでしか開きません。これらを開くには、メールのコードでアカウントにサインインするだけでは足りません。誰かにメールに入られたときに備えた、2 つ目のロックです。鍵が開いていない場所では、こうしたマシンに「+」の代わりにロックのアイコンが表示されます。それを押してパスワードを入力すると、ターミナルが開きます。
+post.move-to-cloud.strip.title = ssh のあとのバー
+post.move-to-cloud.strip.text = Mac 版 tTerm のターミナルで <code>ssh</code> がエラーなく終了すると、そのブロックの下に「鍵を保存」と「tTerm を許可」のあるバーが表示されることがあります。これを使えば、移行のウィンドウを開かずに、サーバーを 1 台だけ移せます。
+post.move-to-cloud.next.text = これらはすべて Mac 版 tTerm 0.8.1 で使えます。詳しくは、ドキュメントの<a href="https://docs.tterm.net{{$base}}/local/move-to-cloud/">「クラウドへ移行」</a>と<a href="https://docs.tterm.net{{$base}}/security/keys/">「SSH 鍵の保管庫」</a>のページをご覧ください。
+post.move-to-cloud.cta.title = Mac のサーバーをクラウドへ移してみる
+post.move-to-cloud.more-section.1 = ブログのほかの記事
+post.move-to-cloud.more-section.2 = すべての記事
 
 # ------------------------------------------------------------ post: /blog/support/
 post.support.title = サポート：tTerm から直接お問い合わせください · tTerm ブログ

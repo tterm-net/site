@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mover a la nube: los servidores y las claves de tu Mac se abren desde cualquier navegador · Blog de tTerm</title>
+<meta name="description" content="tTerm para Mac ahora lleva a la nube los servidores a los que accedes por ssh desde tu Mac, junto con tus claves SSH. Las claves van a una bóveda: se cifran en tu Mac y solo tú puedes abrirlas, con la contraseña de la bóveda, en cualquier navegador.">
+<link rel="canonical" href="https://tterm.net/es/blog/move-to-cloud/">
+<link rel="alternate" hreflang="en" href="https://tterm.net/blog/move-to-cloud/">
+<link rel="alternate" hreflang="de" href="https://tterm.net/de/blog/move-to-cloud/">
+<link rel="alternate" hreflang="es" href="https://tterm.net/es/blog/move-to-cloud/">
+<link rel="alternate" hreflang="fr" href="https://tterm.net/fr/blog/move-to-cloud/">
+<link rel="alternate" hreflang="it" href="https://tterm.net/it/blog/move-to-cloud/">
+<link rel="alternate" hreflang="pl" href="https://tterm.net/pl/blog/move-to-cloud/">
+<link rel="alternate" hreflang="pt-BR" href="https://tterm.net/pt/blog/move-to-cloud/">
+<link rel="alternate" hreflang="tr" href="https://tterm.net/tr/blog/move-to-cloud/">
+<link rel="alternate" hreflang="ru" href="https://tterm.net/ru/blog/move-to-cloud/">
+<link rel="alternate" hreflang="ja" href="https://tterm.net/ja/blog/move-to-cloud/">
+<link rel="alternate" hreflang="ko" href="https://tterm.net/ko/blog/move-to-cloud/">
+<link rel="alternate" hreflang="zh-CN" href="https://tterm.net/zh/blog/move-to-cloud/">
+<link rel="alternate" hreflang="x-default" href="https://tterm.net/blog/move-to-cloud/">
+<meta property="og:title" content="Mover a la nube: los servidores y las claves de tu Mac se abren desde cualquier navegador">
+<meta property="og:description" content="tTerm para Mac ahora lleva a la nube los servidores a los que accedes por ssh desde tu Mac, junto con tus claves SSH. Las claves van a una bóveda: se cifran en tu Mac y solo tú puedes abrirlas, con la contraseña de la bóveda, en cualquier navegador.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tterm.net/es/blog/move-to-cloud/">
+<meta property="og:image" content="https://tterm.net/assets/og-cloud.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:site_name" content="tTerm">
+<meta name="twitter:card" content="summary_large_image">
+<!-- updates:ld -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mover a la nube: los servidores y las claves de tu Mac se abren desde cualquier navegador",
+  "description": "tTerm para Mac ahora lleva a la nube los servidores a los que accedes por ssh desde tu Mac, junto con tus claves SSH. Las claves van a una bóveda: se cifran en tu Mac y solo tú puedes abrirlas, con la contraseña de la bóveda, en cualquier navegador.",
+  "datePublished": "2026-11-04",
+  "inLanguage": "es",
+  "url": "https://tterm.net/es/blog/move-to-cloud/",
+  "image": "https://tterm.net/assets/og-cloud.png",
+  "author": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "url": "https://tterm.net"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "tTerm",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tterm.net/assets/logo.svg"
+    }
+  }
+}
+</script>
+    <!-- /updates:ld -->
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<meta name="version" content="2.8.4">
+<link rel="stylesheet" href="/style.css">
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="page">
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="/es/" aria-label="tTerm, página de inicio">
+      <img src="/assets/logo.svg" alt="" width="30" height="30">
+      <span class="brand-name">tTerm</span>
+      <span class="beta">beta</span>
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="/es/#features">Funciones</a>
+      <a href="/es/#security">Seguridad</a>
+      <a href="/es/#pricing">Precios</a>
+      <details class="res">
+        <summary>Recursos<svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="res-menu">
+          <a href="https://docs.tterm.net/es/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3z"/><path d="M21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/></svg><span><b>Documentación</b><small>Cómo empezar y cómo funciona todo</small></span></a>
+          <a href="/es/blog/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span><b>Blog</b><small>Novedades de tTerm</small></span></a>
+          <a href="/es/#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.6"/><path d="M12 17h.01"/></svg><span><b>Preguntas frecuentes</b><small>Respuestas a las dudas habituales</small></span></a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg><span><b>Canal de Telegram</b><small>Una nota breve sobre cada versión</small></span></a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg><span><b>Código en GitHub</b><small>Todo el código de tTerm, AGPL v3</small></span></a>
+        </div>
+      </details>
+      <a class="nav-mac" href="/es/download/">Terminal local<span class="nav-new" aria-hidden="true"></span></a>
+    </nav>
+    <div class="top-actions">
+      <details class="lang">
+        <summary aria-label="Idioma: español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ES</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/move-to-cloud/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/move-to-cloud/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/move-to-cloud/" hreflang="es" lang="es" aria-current="true">Español<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/fr/blog/move-to-cloud/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/move-to-cloud/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/move-to-cloud/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/move-to-cloud/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/move-to-cloud/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/move-to-cloud/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/move-to-cloud/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/move-to-cloud/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/move-to-cloud/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+      <a class="btn btn-ghost btn-sm" href="https://app.tterm.net">Iniciar sesión</a>
+      <a class="btn btn-primary btn-sm" href="https://app.tterm.net">Empezar gratis</a>
+      <details class="menu">
+        <summary aria-label="Menú"><svg class="menu-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Menú">
+          <a href="/es/#features">Funciones</a>
+          <a href="/es/#security">Seguridad</a>
+          <a href="/es/#pricing">Precios</a>
+          <a href="/es/download/">Terminal local</a>
+          <p class="menu-label">Recursos</p>
+          <a href="https://docs.tterm.net/es/">Documentación</a>
+          <a href="/es/blog/" aria-current="page">Blog</a>
+          <a href="/es/#faq">Preguntas frecuentes</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canal de Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Código en GitHub</a>
+          <hr>
+          <details class="lang lang-row">
+            <summary aria-label="Idioma: español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>Español</span><svg class="res-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+            <div class="lang-menu">
+              <a href="/blog/move-to-cloud/" hreflang="en" lang="en">English</a>
+              <a href="/de/blog/move-to-cloud/" hreflang="de" lang="de">Deutsch</a>
+              <a href="/es/blog/move-to-cloud/" hreflang="es" lang="es" aria-current="true">Español<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+              <a href="/fr/blog/move-to-cloud/" hreflang="fr" lang="fr">Français</a>
+              <a href="/it/blog/move-to-cloud/" hreflang="it" lang="it">Italiano</a>
+              <a href="/pl/blog/move-to-cloud/" hreflang="pl" lang="pl">Polski</a>
+              <a href="/pt/blog/move-to-cloud/" hreflang="pt-BR" lang="pt-BR">Português</a>
+              <a href="/tr/blog/move-to-cloud/" hreflang="tr" lang="tr">Türkçe</a>
+              <a href="/ru/blog/move-to-cloud/" hreflang="ru" lang="ru">Русский</a>
+              <a href="/ja/blog/move-to-cloud/" hreflang="ja" lang="ja">日本語</a>
+              <a href="/ko/blog/move-to-cloud/" hreflang="ko" lang="ko">한국어</a>
+              <a href="/zh/blog/move-to-cloud/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+            </div>
+          </details>
+          <a class="btn btn-primary" href="https://app.tterm.net">Empezar gratis</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <article class="post">
+    <header class="post-head">
+      <a class="crumb" href="/es/blog/">Blog</a>
+      <!-- updates:meta -->
+    <p class="post-meta"><span class="tag tag-mac">tTerm para Mac</span><time datetime="2026-11-04">4 de noviembre de 2026</time><span class="sep" aria-hidden="true">·</span><span>3 min de lectura</span></p>
+    <!-- /updates:meta -->
+      <h1>Mover a la nube: los servidores y las claves de tu Mac se abren desde cualquier navegador</h1>
+      <p class="post-lead">tTerm para Mac ahora lleva a la nube los servidores a los que accedes por ssh desde tu Mac, junto con tus claves SSH. Las claves van a una bóveda: se cifran en tu Mac y solo tú puedes abrirlas, con la contraseña de la bóveda, en cualquier navegador.</p>
+    </header>
+
+    <figure class="post-figure">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="post-shot">
+        <div class="cover-bar" aria-hidden="true"><i></i><i></i><i></i><span>tTerm</span></div>
+        <img src="/assets/blog/move-to-cloud-es.webp" width="1920" height="1500" alt="La ventana «Mover a la nube» en tTerm para Mac: los servidores que conoce esta Mac, cada uno con su forma de entrar, y las claves en ~/.ssh">
+      </div>
+      <figcaption>«Mover a la nube»: los servidores que conoce esta Mac, cada uno con su forma de entrar.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <h2>Por qué</h2>
+      <p>Desde tu Mac accedes a tus servidores por ssh: las claves están en <code>~/.ssh</code>, y las direcciones y los usuarios, en <code>~/.ssh/config</code>. Pero en cuanto te alejas de la Mac, ya no llegas a esos servidores: ni desde un navegador, ni desde el teléfono, ni desde la computadora de otra persona. Mover a la nube los lleva a tTerm, y se abren desde cualquier lugar.</p>
+
+      <h2>Dónde está</h2>
+      <p>En tTerm para Mac, haz clic en tu cuenta, al pie de la barra lateral, y elige «Mover a la nube». La ventana muestra «Servidores en esta Mac». tTerm los toma de <code>~/.ssh/config</code>, de <code>known_hosts</code> y de los comandos <code>ssh</code> que ejecutaste en sus terminales. Mientras no presiones «Mover», nada sale de tu Mac.</p>
+
+      <h2>Tres formas de entrar</h2>
+      <p>Cada servidor tiene su propia forma de entrar:</p>
+      <ul class="prose-bullets">
+      <li><b>«Mi clave»:</b> la clave va a la bóveda y el servidor sigue como está.</li>
+      <li><b>«Pase de tTerm»:</b> tTerm añade su propia línea en el servidor y tu clave se queda en la Mac.</li>
+      <li><b>«A través de esta Mac»:</b> no se mueve nada. tTerm le pide a la Mac que se conecte mientras esté encendida. Es para servidores detrás de una VPN.</li>
+      </ul>
+      <p>tTerm elige por su cuenta la forma adecuada, y tú puedes cambiarla.</p>
+
+      <h2>La bóveda de claves</h2>
+      <p>Una clave se cifra en tu Mac antes de salir de ella. tTerm guarda solo el texto cifrado, la parte pública de la clave y su huella: nosotros no podemos abrir la bóveda ni leer una clave. Cuando abres un servidor, tu dispositivo firma el inicio de sesión, y la clave nunca sale de él sin cifrar.</p>
+
+      <h2>La contraseña de la bóveda</h2>
+      <p>La eliges tú al crear la bóveda. Con ella, tus claves se abren en cualquier navegador, incluso en la computadora de otra persona y sin la Mac. La contraseña en sí no va a ningún lado: tTerm no la conoce y no puede recuperarla, así que guárdala en tu administrador de contraseñas. En tu propia computadora, presiona «Guardar con Touch ID», y ahí ya no se te pedirá la contraseña; en la de otra persona, elige «Solo esta vez».</p>
+
+      <h2>Solo donde abriste tus claves</h2>
+      <p>Los servidores con tu clave, los servidores a través de tu Mac y la propia Mac se abren solo en un dispositivo donde las claves las abriste tú. Iniciar sesión en tu cuenta con el código de tu correo no basta para ellos: es un segundo candado, por si alguien entra en tu correo. Donde tus claves no están abiertas, una máquina así tiene un candado en lugar de «+». Haz clic en él, escribe la contraseña y se abrirá la terminal.</p>
+
+      <h2>La franja tras ssh</h2>
+      <p>Cuando <code>ssh</code> termina sin errores en una terminal de tTerm para Mac, debajo de su bloque puede aparecer una franja con «Guardar mi clave» y «Dar acceso a tTerm». Así puedes mover un solo servidor sin abrir la ventana «Mover a la nube».</p>
+
+      <p>Todo esto está en tTerm para Mac 0.8.1. Los detalles están en la documentación, en las páginas <a href="https://docs.tterm.net/es/local/move-to-cloud/">«Mover a la nube»</a> y <a href="https://docs.tterm.net/es/security/keys/">«Tu bóveda de claves SSH»</a>.</p>
+
+      <div class="post-cta">
+        <h2>Lleva a la nube los servidores de tu Mac</h2>
+        <p>Gratis · macOS 11 o posterior · Apple silicon e Intel</p>
+        <a class="btn btn-primary" href="/es/download/">Descargar para Mac</a>
+      </div>
+    </div>
+  </article>
+
+  <section class="section more-section" aria-label="Más del blog">
+    <div class="split-row">
+      <h2>Más del blog</h2>
+      <a class="btn btn-ghost btn-md" href="/es/blog/">Todos los artículos</a>
+    </div>
+    <!-- updates:more -->
+    <div class="more-grid">
+      <a class="post-mini post-mini-card" href="/es/blog/support/">
+        <span class="post-mini-meta"><time datetime="2026-11-04">4 nov</time> · tTerm Web</span>
+        <span class="post-mini-title">Soporte: escríbenos directamente desde tTerm</span>
+        <span class="post-mini-text">El menú de la cuenta ahora incluye «Obtener ayuda»: la documentación y un mensaje a soporte desde el propio tTerm.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/es/blog/logs/">
+        <span class="post-mini-meta"><time datetime="2026-11-03">3 nov</time> · tTerm Web</span>
+        <span class="post-mini-title">Bitácoras: ahora creamos automáticamente una bitácora para cada máquina</span>
+        <span class="post-mini-text">La bitácora de una máquina registra cada comando: quién lo ejecutó, cuándo y cómo terminó.</span>
+      </a>
+      <a class="post-mini post-mini-card" href="/es/blog/docs/">
+        <span class="post-mini-meta"><time datetime="2026-11-02">2 nov</time> · Documentación</span>
+        <span class="post-mini-title">tTerm ya tiene documentación</span>
+        <span class="post-mini-text">En docs.tterm.net te explicamos cómo funciona tTerm, desde tu primer comando hasta cómo está organizado el acceso.</span>
+      </a>
+    </div>
+    <!-- /updates:more -->
+    <a class="btn btn-ghost more-all" href="/es/blog/">Todos los artículos</a>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/es/" aria-label="tTerm, página de inicio">
+          <img src="/assets/logo.svg" alt="" width="28" height="28">
+          <span class="brand-name">tTerm</span>
+          <span class="beta">beta</span>
+        </a>
+        <p class="foot-tag">La terminal en la nube para servidores y computadoras.</p>
+      </div>
+      <nav class="foot-cols" aria-label="Enlaces">
+        <div class="foot-col">
+          <p class="foot-h">Producto</p>
+          <a href="https://app.tterm.net">tTerm Web</a>
+          <a href="/es/download/">tTerm para Mac<span class="foot-new">Nuevo</span></a>
+          <a href="https://t.me/tTermNetBot" target="_blank" rel="noopener">Bot de Telegram</a>
+          <a href="/es/#pricing">Precios</a>
+          <a href="/es/#security">Seguridad</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Recursos</p>
+          <a href="https://docs.tterm.net/es/">Documentación</a>
+          <a href="/es/blog/">Blog</a>
+          <a href="/es/#faq">Preguntas frecuentes</a>
+          <a href="https://t.me/tTermBlog" target="_blank" rel="noopener">Canal de Telegram</a>
+          <a href="https://github.com/tterm-net" target="_blank" rel="noopener">Código en GitHub</a>
+        </div>
+        <div class="foot-col">
+          <p class="foot-h">Legal</p>
+          <a href="/terms/">Condiciones del servicio</a>
+          <a href="/privacy/">Política de privacidad</a>
+          <a href="/es/blog/open-source/">Licencia AGPL-3.0</a>
+        </div>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-note">2026 · tTerm · v2.8.4</p>
+      <details class="lang lang-up">
+        <summary aria-label="Idioma: español"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>ES</span></summary>
+        <div class="lang-menu">
+          <a href="/blog/move-to-cloud/" hreflang="en" lang="en">English</a>
+          <a href="/de/blog/move-to-cloud/" hreflang="de" lang="de">Deutsch</a>
+          <a href="/es/blog/move-to-cloud/" hreflang="es" lang="es" aria-current="true">Español<svg class="lang-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg></a>
+          <a href="/fr/blog/move-to-cloud/" hreflang="fr" lang="fr">Français</a>
+          <a href="/it/blog/move-to-cloud/" hreflang="it" lang="it">Italiano</a>
+          <a href="/pl/blog/move-to-cloud/" hreflang="pl" lang="pl">Polski</a>
+          <a href="/pt/blog/move-to-cloud/" hreflang="pt-BR" lang="pt-BR">Português</a>
+          <a href="/tr/blog/move-to-cloud/" hreflang="tr" lang="tr">Türkçe</a>
+          <a href="/ru/blog/move-to-cloud/" hreflang="ru" lang="ru">Русский</a>
+          <a href="/ja/blog/move-to-cloud/" hreflang="ja" lang="ja">日本語</a>
+          <a href="/ko/blog/move-to-cloud/" hreflang="ko" lang="ko">한국어</a>
+          <a href="/zh/blog/move-to-cloud/" hreflang="zh-CN" lang="zh-CN">简体中文</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

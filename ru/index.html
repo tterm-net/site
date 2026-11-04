@@ -60,7 +60,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.8.3">
+<meta name="version" content="2.8.4">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -377,7 +377,7 @@
     <div class="mac-points">
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg><h3>Блоки и на своём Mac</h3><p>bash или zsh этого Mac, каждая команда блоком с выводом, кодом и временем. История лежит на Mac 30 дней.</p></div>
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/></svg><h3>Облако в том же окне</h3><p>После входа рядом с терминалами Mac открываются серверы, их заметки и поиск по всему через ⌘K.</p></div>
-      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/><path d="M12 15V9M9.5 11.5L12 9l2.5 2.5"/></svg><h3>Переезд в облако <span class="soon">СКОРО</span></h3><p>Серверы и ключи с этого Mac приложение перенесёт в облако за пару кликов, и они откроются из любого браузера.</p></div>
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/><path d="M12 15V9M9.5 11.5L12 9l2.5 2.5"/></svg><h3>Переезд в облако</h3><p>Серверы и ключи с этого Mac приложение перенесёт в облако за пару кликов, и они откроются из любого браузера.</p></div>
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><h3>Mac из любого места</h3><p>Приложение открывает этот Mac для tTerm Web: его терминал доступен из браузера и с телефона. Живёт в строке меню.</p></div>
     </div>
   </section>
@@ -386,7 +386,7 @@
     <div class="split-head">
       <div>
         <p class="eyebrow">Безопасность</p>
-        <h2 class="section-title">Ключи не храним. <br>Порты не открываем.</h2>
+        <h2 class="section-title">Твои ключи открываешь только ты. <br>Порты не открываем.</h2>
       </div>
       <p class="section-lead">Доступ к машинам легко дать и так же легко забрать. Вот как он устроен.</p>
     </div>
@@ -484,7 +484,7 @@
       </details>
       <details>
         <summary>Что вы храните?</summary>
-        <p>Команды год, в логе машины, а их вывод 30 дней. И журнал входов. Ключей и паролей не храним. Подробно в <a href="/privacy/">Политике конфиденциальности</a>.</p>
+        <p>Команды год, в логе машины, а их вывод 30 дней. И журнал входов. Твои ключи храним, только если ты сам положишь их в хранилище, и только зашифрованными: открыть их можешь только ты. Паролей не храним. Подробно в <a href="/privacy/">Политике конфиденциальности</a>.</p>
       </details>
       <details>
         <summary>Чем это лучше обычного SSH-клиента?</summary>
@@ -541,6 +541,11 @@
       </div>
     </a>
   <div class="post-stack">
+      <a class="post-mini" href="/ru/blog/move-to-cloud/">
+        <span class="post-mini-meta"><time datetime="2026-11-04">4 ноя</time> · tTerm для Mac</span>
+        <span class="post-mini-title">Перенос в облако: серверы и ключи с Mac открываются из любого браузера</span>
+        <span class="post-mini-text">tTerm для Mac теперь переносит в облако серверы, на которые ты ходишь с Mac по ssh, вместе с твоими SSH-ключами.</span>
+      </a>
       <a class="post-mini" href="/ru/blog/support/">
         <span class="post-mini-meta"><time datetime="2026-11-04">4 ноя</time> · tTerm Web</span>
         <span class="post-mini-title">Поддержка: напишите нам прямо из tTerm</span>
@@ -550,11 +555,6 @@
         <span class="post-mini-meta"><time datetime="2026-11-03">3 ноя</time> · tTerm Web</span>
         <span class="post-mini-title">Логи: теперь мы автоматически создаём логи для каждой машины</span>
         <span class="post-mini-text">В логе машины записана каждая команда: кто её запустил, когда и чем она закончилась.</span>
-      </a>
-      <a class="post-mini" href="/ru/blog/docs/">
-        <span class="post-mini-meta"><time datetime="2026-11-02">2 ноя</time> · Документация</span>
-        <span class="post-mini-title">У tTerm появилась документация</span>
-        <span class="post-mini-text">На docs.tterm.net описано, как работает tTerm: от первой команды до того, как устроен доступ.</span>
       </a>
   </div>
 </div>
@@ -612,7 +612,7 @@
       </nav>
     </div>
     <div class="foot-bottom">
-      <p class="foot-note">2026 · tTerm · v2.8.3</p>
+      <p class="foot-note">2026 · tTerm · v2.8.4</p>
       <details class="lang lang-up">
         <summary aria-label="Язык: русский"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>RU</span></summary>
         <div class="lang-menu">

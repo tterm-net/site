@@ -116,7 +116,7 @@ index.features.23 = Nomes para os terminais
 index.features.24 = deploy, logs, migrations em vez de terminal 2. Clique duas vezes num terminal, digite um nome e pressione Enter.
 # security
 index.security.1 = Segurança
-index.security.2 = Não guardamos chaves. <br>Não abrimos portas.
+index.security.2 = Só você abre as suas chaves. <br>Não abrimos portas.
 index.security.more = Em detalhes: como funciona o acesso
 index.security.3 = O acesso às suas máquinas é fácil de conceder e igualmente fácil de revogar. Veja como funciona.
 index.security.4 = Um certificado de dois minutos
@@ -162,7 +162,7 @@ index.faq.more = Não encontrou a resposta? Veja a documentação
 index.faq.2 = Preciso instalar algo no meu computador?
 index.faq.3 = Não, basta um navegador. Você só instala algo nas máquinas às quais se conecta: um comando no servidor, um pequeno agente no computador.
 index.faq.4 = O que vocês armazenam?
-index.faq.5 = Os comandos por um ano no log de cada máquina, as saídas deles por 30 dias e um registro de logins. Não guardamos chaves nem senhas. Os detalhes estão na <a href="/privacy/">Política de Privacidade</a>.
+index.faq.5 = Os comandos por um ano no log de cada máquina, as saídas deles por 30 dias e um registro de logins. As suas chaves, apenas se você mesmo as colocar no cofre, e somente criptografadas: só você consegue abri-las. Não guardamos senhas. Os detalhes estão na <a href="/privacy/">Política de Privacidade</a>.
 index.faq.6 = Em que o tTerm é melhor que um cliente SSH comum?
 index.faq.7 = Funciona em qualquer navegador e não precisa de chaves no seu dispositivo. O terminal não cai quando você fecha o notebook. E cada comando vem como um bloco fácil de copiar e executar de novo.
 index.faq.8 = Como revogar o acesso do tTerm?
@@ -225,7 +225,7 @@ mac.faq.app.a = Sim, o <a href="{{$base}}/download/">tTerm para Mac</a>. Ele tra
 # download page
 download.title = tTerm para Mac: o terminal local
 download.description = Um terminal local com a nuvem dentro: os shells do seu Mac em blocos e, ao lado deles, os seus servidores, as notas e tudo mais que você tem no tTerm. Grátis, macOS 11 ou posterior.
-download.lead = Nossa novidade mais recente: um terminal local no seu Mac, que complementa a versão na nuvem. Trabalhe com o seu computador como em qualquer terminal, e em breve você vai poder migrar os seus servidores e chaves para a nuvem direto do app.
+download.lead = Nossa novidade mais recente: um terminal local no seu Mac, que complementa a versão na nuvem. Trabalhe com o seu computador como em qualquer terminal, e migre os seus servidores e chaves para a nuvem direto do app.
 download.meta = Grátis · macOS 11 ou posterior · Apple silicon e Intel
 download.phone = <b>O tTerm para Mac é instalado no Mac.</b> Abra esta página em um Mac e, pelo celular, trabalhe no tTerm Web, direto no navegador.
 download.open_web = Abrir o tTerm Web
@@ -421,6 +421,38 @@ post.several-terminals.prose.6 = Siga o nosso blog no Telegram
 # more-section
 post.several-terminals.more-section.1 = Mais do blog
 post.several-terminals.more-section.2 = Todos os posts
+
+# ------------------------------------------------------------ post: /blog/move-to-cloud/
+post.move-to-cloud.title = Migrar para a nuvem: servidores e chaves do seu Mac abrem em qualquer navegador · Blog do tTerm
+post.move-to-cloud.og_title = Migrar para a nuvem: servidores e chaves do seu Mac abrem em qualquer navegador
+post.move-to-cloud.description = O tTerm para Mac agora migra para a nuvem os servidores que você acessa do seu Mac por ssh, junto com as suas chaves SSH. As chaves vão para um cofre: elas são criptografadas no seu Mac, e só você consegue abri-las, com a senha do cofre, em qualquer navegador.
+post.move-to-cloud.alt = A janela “Migrar para a nuvem” no tTerm para Mac: os servidores que este Mac conhece, cada um com o seu jeito de entrar, e as chaves em ~/.ssh
+post.move-to-cloud.figcaption = “Migrar para a nuvem”: os servidores que este Mac conhece, cada um com o seu jeito de entrar.
+post.move-to-cloud.why.title = Por quê
+post.move-to-cloud.why.text = Do seu Mac, você acessa os seus servidores por ssh: as chaves ficam em <code>~/.ssh</code>, e os endereços e usuários, em <code>~/.ssh/config</code>. Mas basta se afastar do Mac, e esses servidores ficam fora de alcance: pelo navegador, pelo celular ou pelo computador de outra pessoa. Migrar para a nuvem leva esses servidores para o tTerm, e eles passam a abrir de qualquer lugar.
+post.move-to-cloud.where.title = Onde fica
+post.move-to-cloud.where.text = No tTerm para Mac, clique na sua conta, na parte de baixo da barra lateral, e escolha “Migrar para a nuvem”. A janela mostra “Servidores neste Mac”. O tTerm os encontra no <code>~/.ssh/config</code>, no <code>known_hosts</code> e nos comandos <code>ssh</code> que você rodou nos terminais dele. Até você clicar em “Migrar”, nada sai do seu Mac.
+post.move-to-cloud.ways.title = Três jeitos de entrar
+post.move-to-cloud.ways.lead = Cada servidor tem o seu próprio jeito de entrar:
+post.move-to-cloud.way.key.title = “Minha chave”:
+post.move-to-cloud.way.key.text = a chave vai para o cofre, e o servidor continua como está.
+post.move-to-cloud.way.cert.title = “Passe do tTerm”:
+post.move-to-cloud.way.cert.text = o tTerm adiciona uma linha própria no servidor, e a sua chave fica no Mac.
+post.move-to-cloud.way.mac.title = “Por este Mac”:
+post.move-to-cloud.way.mac.text = nada é migrado. O tTerm pede ao Mac que se conecte enquanto ele estiver ligado. Serve para servidores atrás de uma VPN.
+post.move-to-cloud.ways.after = O tTerm escolhe sozinho o jeito certo, e você pode mudá-lo.
+post.move-to-cloud.vault.title = O cofre de chaves
+post.move-to-cloud.vault.text = Uma chave é criptografada no seu Mac antes de sair dele. O tTerm guarda só o texto cifrado, a metade pública da chave e a impressão digital dela: nós não conseguimos abrir o cofre nem ler uma chave. Quando você abre um servidor, o seu dispositivo assina o login, e a chave nunca sai dele sem criptografia.
+post.move-to-cloud.password.title = A senha do cofre
+post.move-to-cloud.password.text = Você escolhe a senha ao criar o cofre. Com ela, as suas chaves abrem em qualquer navegador, até no computador de outra pessoa e sem o Mac. A senha em si não vai para lugar nenhum: o tTerm não a conhece e não tem como recuperá-la, então guarde-a no seu gerenciador de senhas. No seu próprio computador, clique em “Guardar com Touch ID”, e a senha não será mais pedida ali; no de outra pessoa, escolha “Só desta vez”.
+post.move-to-cloud.here.title = Só onde você abriu as suas chaves
+post.move-to-cloud.here.text = Servidores com a sua chave, servidores pelo seu Mac e o próprio Mac só abrem num dispositivo em que você mesmo abriu as suas chaves. Entrar na conta com o código do seu e-mail não basta para eles: é uma segunda trava, caso alguém entre no seu e-mail. Onde as suas chaves não estão abertas, uma máquina dessas mostra um cadeado no lugar do “+”. Clique nele, digite a senha, e o terminal abre.
+post.move-to-cloud.strip.title = A faixa depois do ssh
+post.move-to-cloud.strip.text = Quando o <code>ssh</code> termina sem erro num terminal do tTerm para Mac, uma faixa com “Salvar minha chave” e “Deixar o tTerm entrar” pode aparecer embaixo do bloco dele. Assim, dá para migrar um único servidor sem abrir a janela “Migrar para a nuvem”.
+post.move-to-cloud.next.text = Tudo isso está no tTerm para Mac 0.8.1. Os detalhes estão na documentação, nas páginas <a href="https://docs.tterm.net{{$base}}/local/move-to-cloud/">“Migrar para a nuvem”</a> e <a href="https://docs.tterm.net{{$base}}/security/keys/">“Seu cofre de chaves SSH”</a>.
+post.move-to-cloud.cta.title = Migre para a nuvem os servidores do seu Mac
+post.move-to-cloud.more-section.1 = Mais do blog
+post.move-to-cloud.more-section.2 = Todos os posts
 
 # ------------------------------------------------------------ post: /blog/support/
 post.support.title = Suporte: escreva para a gente direto do tTerm · Blog do tTerm

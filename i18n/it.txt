@@ -116,7 +116,7 @@ index.features.23 = Nomi per i terminali
 index.features.24 = deploy, logs, migrations al posto di terminal 2. Fai doppio clic su un terminale, scrivi un nome e premi Enter.
 # security
 index.security.1 = Sicurezza
-index.security.2 = Non conserviamo chiavi. <br>Non apriamo porte.
+index.security.2 = Le tue chiavi le apri solo tu. <br>Non apriamo porte.
 index.security.more = Nel dettaglio: come funziona l’accesso
 index.security.3 = L'accesso alle tue macchine è facile da concedere e altrettanto facile da revocare. Ecco come funziona.
 index.security.4 = Un certificato da due minuti
@@ -162,7 +162,7 @@ index.faq.more = Non hai trovato la risposta? Guarda la documentazione
 index.faq.2 = Devo installare qualcosa sul mio computer?
 index.faq.3 = No, basta un browser. Installi qualcosa solo sulle macchine a cui ti colleghi: un comando su un server, un piccolo agente su un computer.
 index.faq.4 = Cosa conservate?
-index.faq.5 = I comandi per un anno nel log di ogni macchina, il loro output per 30 giorni e un registro degli accessi. Non conserviamo né chiavi né password. I dettagli sono nell'<a href="/privacy/">Informativa sulla privacy</a>.
+index.faq.5 = I comandi per un anno nel log di ogni macchina, il loro output per 30 giorni e un registro degli accessi. Le tue chiavi, solo se le metti tu nella cassaforte, e unicamente cifrate: puoi aprirle soltanto tu. Non conserviamo password. I dettagli sono nell'<a href="/privacy/">Informativa sulla privacy</a>.
 index.faq.6 = In cosa è meglio di un normale client SSH?
 index.faq.7 = Funziona da qualsiasi browser e non richiede chiavi sul tuo dispositivo. Il terminale non si interrompe quando chiudi il portatile. E ogni comando arriva come un blocco facile da copiare ed eseguire di nuovo.
 index.faq.8 = Come revoco l'accesso di tTerm alle mie macchine?
@@ -225,7 +225,7 @@ mac.faq.app.a = Sì, <a href="{{$base}}/download/">tTerm per Mac</a>. Ha i termi
 # download page
 download.title = tTerm per Mac: il terminale locale
 download.description = Un terminale locale con dentro il cloud: le shell del tuo Mac a blocchi e, accanto, i tuoi server, le note e tutto il resto che hai in tTerm. Gratis, macOS 11 o successivo.
-download.lead = La nostra ultima novità: un terminale locale sul tuo Mac, che si aggiunge alla versione cloud. Lavora con il tuo computer come in qualsiasi terminale, e presto potrai spostare i tuoi server e le tue chiavi nel cloud direttamente dall'app.
+download.lead = La nostra ultima novità: un terminale locale sul tuo Mac, che si aggiunge alla versione cloud. Lavora con il tuo computer come in qualsiasi terminale, e sposta i tuoi server e le tue chiavi nel cloud direttamente dall'app.
 download.meta = Gratis · macOS 11 o successivo · Apple silicon e Intel
 download.phone = <b>tTerm per Mac si installa su un Mac.</b> Apri questa pagina da un Mac e, dal telefono, lavora in tTerm Web direttamente nel browser.
 download.open_web = Apri tTerm Web
@@ -421,6 +421,38 @@ post.several-terminals.prose.6 = Iscriviti al nostro blog su Telegram
 # more-section
 post.several-terminals.more-section.1 = Altro dal blog
 post.several-terminals.more-section.2 = Tutti gli articoli
+
+# ------------------------------------------------------------ post: /blog/move-to-cloud/
+post.move-to-cloud.title = Sposta nel cloud: i server e le chiavi del tuo Mac si aprono da qualsiasi browser · Blog di tTerm
+post.move-to-cloud.og_title = Sposta nel cloud: i server e le chiavi del tuo Mac si aprono da qualsiasi browser
+post.move-to-cloud.description = tTerm per Mac ora sposta nel cloud i server che raggiungi dal tuo Mac con ssh, insieme alle tue chiavi SSH. Le chiavi finiscono in una cassaforte: vengono cifrate sul tuo Mac e solo tu puoi aprirle, con la password della cassaforte, in qualsiasi browser.
+post.move-to-cloud.alt = La finestra “Sposta nel cloud” in tTerm per Mac: i server che questo Mac conosce, ognuno con il suo modo di entrare, e le chiavi in ~/.ssh
+post.move-to-cloud.figcaption = “Sposta nel cloud”: i server che questo Mac conosce, ognuno con il suo modo di entrare.
+post.move-to-cloud.why.title = Perché
+post.move-to-cloud.why.text = Dal tuo Mac raggiungi i tuoi server con ssh: le chiavi sono in <code>~/.ssh</code>, gli indirizzi e gli utenti in <code>~/.ssh/config</code>. Ma appena ti allontani dal Mac, quei server diventano irraggiungibili: dal browser, dal telefono, dal computer di qualcun altro. Sposta nel cloud li porta in tTerm, e da lì si aprono ovunque.
+post.move-to-cloud.where.title = Dove si trova
+post.move-to-cloud.where.text = In tTerm per Mac, fai clic sul tuo account in fondo alla barra laterale e scegli “Sposta nel cloud”. La finestra mostra “Server su questo Mac”. tTerm li prende da <code>~/.ssh/config</code>, da <code>known_hosts</code> e dai comandi <code>ssh</code> che hai eseguito nei suoi terminali. Finché non premi “Sposta”, nulla esce dal tuo Mac.
+post.move-to-cloud.ways.title = Tre modi per entrare
+post.move-to-cloud.ways.lead = Ogni server ha il suo modo di entrare:
+post.move-to-cloud.way.key.title = “La mia chiave”:
+post.move-to-cloud.way.key.text = la chiave va nella cassaforte e il server resta com'è.
+post.move-to-cloud.way.cert.title = “Pass di tTerm”:
+post.move-to-cloud.way.cert.text = tTerm aggiunge una propria riga sul server, e la tua chiave resta sul Mac.
+post.move-to-cloud.way.mac.title = “Tramite questo Mac”:
+post.move-to-cloud.way.mac.text = non si sposta nulla. tTerm chiede al Mac di collegarsi finché è acceso. Serve per i server dietro una VPN.
+post.move-to-cloud.ways.after = tTerm sceglie da solo il modo giusto, e tu puoi cambiarlo.
+post.move-to-cloud.vault.title = La cassaforte delle chiavi
+post.move-to-cloud.vault.text = Una chiave viene cifrata sul tuo Mac prima di lasciarlo. tTerm conserva solo il testo cifrato, la parte pubblica della chiave e la sua impronta: noi non possiamo aprire la cassaforte né leggere una chiave. Quando apri un server, è il tuo dispositivo a firmare l'accesso, e la chiave non ne esce mai in chiaro.
+post.move-to-cloud.password.title = La password della cassaforte
+post.move-to-cloud.password.text = La scegli tu quando crei la cassaforte. Con questa password le tue chiavi si aprono in qualsiasi browser, anche sul computer di qualcun altro e senza Mac. La password non viene inviata da nessuna parte: tTerm non la conosce e non può recuperarla, quindi salvala nel tuo gestore di password. Sul tuo computer premi “Salva con Touch ID”, e lì la password non ti verrà più chiesta; su quello di qualcun altro scegli “Solo questa volta”.
+post.move-to-cloud.here.title = Solo dove hai aperto le tue chiavi
+post.move-to-cloud.here.text = I server con la tua chiave, i server tramite il tuo Mac e il Mac stesso si aprono solo su un dispositivo dove le chiavi le hai aperte tu. L'accesso all'account con il codice ricevuto via email per loro non basta: è una seconda serratura, nel caso in cui qualcuno entri nella tua email. Dove le chiavi non sono aperte, una macchina del genere ha un lucchetto al posto di “+”. Fai clic sul lucchetto, inserisci la password e il terminale si apre.
+post.move-to-cloud.strip.title = La barra dopo ssh
+post.move-to-cloud.strip.text = Quando <code>ssh</code> termina senza errori in un terminale di tTerm per Mac, sotto il suo blocco può comparire una barra con “Salva la mia chiave” e “Fai entrare tTerm”. Così puoi spostare un singolo server senza aprire la finestra “Sposta nel cloud”.
+post.move-to-cloud.next.text = Tutto questo c'è in tTerm per Mac 0.8.1. I dettagli sono nella documentazione, alle pagine <a href="https://docs.tterm.net{{$base}}/local/move-to-cloud/">“Sposta nel cloud”</a> e <a href="https://docs.tterm.net{{$base}}/security/keys/">“La cassaforte delle tue chiavi SSH”</a>.
+post.move-to-cloud.cta.title = Sposta nel cloud i server del tuo Mac
+post.move-to-cloud.more-section.1 = Altro dal blog
+post.move-to-cloud.more-section.2 = Tutti gli articoli
 
 # ------------------------------------------------------------ post: /blog/support/
 post.support.title = Supporto: scrivici direttamente da tTerm · Blog di tTerm

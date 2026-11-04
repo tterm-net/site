@@ -1,6 +1,6 @@
 # tterm.net
 
-**Version 2.8.3.** The number lives in `VERSION`; the build puts it in a
+**Version 2.8.4.** The number lives in `VERSION`; the build puts it in a
 `<meta>` tag and the footer of every page, so you can tell what is deployed
 by viewing source.
 
@@ -299,7 +299,10 @@ the post itself is a template, `templates/blog/<name>.html`, with its strings
 `post.<name>.*` in every language: its `title` ends in " · tTerm blog" in the
 language's words, and its `og_title` and `description` are the entry's
 title and text (the build stops when they differ). The newest such post leads the blog. The date
-lives in `updates.md` only: change it there and run the script.
+lives in `updates.md` only: change it there and run the script. The date is
+also the entry's address on the blog page (`/blog/#2026-10-18`): two entries
+may share a date only when the newer has a page of its own, and its address
+then adds its name (`/blog/#2026-11-04-move-to-cloud`).
 
 To keep a post on top while newer entries come out, write `pinned` after its
 path (`## 2026-10-18 web /blog/tterm-web/ pinned`). It then leads the blog

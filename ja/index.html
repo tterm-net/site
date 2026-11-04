@@ -60,7 +60,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.8.3">
+<meta name="version" content="2.8.4">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -377,7 +377,7 @@
     <div class="mac-points">
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg><h3>自分の Mac でもブロック</h3><p>この Mac の bash や zsh で、コマンドがそれぞれ出力、終了コード、時間とともにブロックになります。履歴は 30 日間、Mac に保存されます。</p></div>
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/></svg><h3>同じウィンドウにクラウドも</h3><p>サインインすると、Mac のターミナルの隣に、サーバーとそのノート、⌘K による全体検索が開きます。</p></div>
-      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/><path d="M12 15V9M9.5 11.5L12 9l2.5 2.5"/></svg><h3>クラウドへの移行 <span class="soon">近日公開</span></h3><p>この Mac にあるサーバーと鍵を、アプリが数クリックでクラウドへ移します。移したあとは、どのブラウザーからでも開けます。</p></div>
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/><path d="M12 15V9M9.5 11.5L12 9l2.5 2.5"/></svg><h3>クラウドへの移行</h3><p>この Mac にあるサーバーと鍵を、アプリが数クリックでクラウドへ移します。移したあとは、どのブラウザーからでも開けます。</p></div>
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><h3>どこからでも自分の Mac に</h3><p>アプリがこの Mac を tTerm Web につなぎ、ブラウザーやスマートフォンからこの Mac のターミナルを使えるようにします。アプリはメニューバーに常駐します。</p></div>
     </div>
   </section>
@@ -386,7 +386,7 @@
     <div class="split-head">
       <div>
         <p class="eyebrow">セキュリティ</p>
-        <h2 class="section-title">鍵は預かりません。<br>ポートも開けません。</h2>
+        <h2 class="section-title">鍵はあなたにしか開けません。<br>ポートも開けません。</h2>
       </div>
       <p class="section-lead">マシンへのアクセス権は簡単に付与でき、同じくらい簡単に取り消せます。そのしくみを紹介します。</p>
     </div>
@@ -484,7 +484,7 @@
       </details>
       <details>
         <summary>どんなデータを保存していますか？</summary>
-        <p>コマンド（各マシンのログに 1 年間）とその出力（30 日間）、それにサインインの記録です。鍵やパスワードは保存しません。詳しくは<a href="/privacy/">プライバシーポリシー</a>をご覧ください。</p>
+        <p>コマンド（各マシンのログに 1 年間）とその出力（30 日間）、それにサインインの記録です。鍵は、あなたが自分で保管庫に入れた場合にだけ、暗号化した状態でのみ保存します。開けるのはあなただけです。パスワードは保存しません。詳しくは<a href="/privacy/">プライバシーポリシー</a>をご覧ください。</p>
       </details>
       <details>
         <summary>一般的な SSH クライアントと比べて、何が良いのですか？</summary>
@@ -541,6 +541,11 @@
       </div>
     </a>
   <div class="post-stack">
+      <a class="post-mini" href="/ja/blog/move-to-cloud/">
+        <span class="post-mini-meta"><time datetime="2026-11-04">11月4日</time> · Mac 版 tTerm</span>
+        <span class="post-mini-title">クラウドへ移行：Mac のサーバーと鍵を、どのブラウザーからでも開けるようになりました</span>
+        <span class="post-mini-text">Mac 版 tTerm で、Mac から ssh で接続しているサーバーを、SSH 鍵と一緒にクラウドへ移せるようになりました。</span>
+      </a>
       <a class="post-mini" href="/ja/blog/support/">
         <span class="post-mini-meta"><time datetime="2026-11-04">11月4日</time> · tTerm Web</span>
         <span class="post-mini-title">サポート：tTerm から直接お問い合わせください</span>
@@ -550,11 +555,6 @@
         <span class="post-mini-meta"><time datetime="2026-11-03">11月3日</time> · tTerm Web</span>
         <span class="post-mini-title">ログ：マシンごとにログを自動で作成するようになりました</span>
         <span class="post-mini-text">マシンのログには、すべてのコマンドについて、誰がいつ実行し、どう終わったかが記録されます。</span>
-      </a>
-      <a class="post-mini" href="/ja/blog/docs/">
-        <span class="post-mini-meta"><time datetime="2026-11-02">11月2日</time> · ドキュメント</span>
-        <span class="post-mini-title">tTerm にドキュメントができました</span>
-        <span class="post-mini-text">docs.tterm.net では、最初のコマンドからアクセスの仕組みまで、tTerm がどう動くのかを説明しています。</span>
       </a>
   </div>
 </div>
@@ -612,7 +612,7 @@
       </nav>
     </div>
     <div class="foot-bottom">
-      <p class="foot-note">2026 · tTerm · v2.8.3</p>
+      <p class="foot-note">2026 · tTerm · v2.8.4</p>
       <details class="lang lang-up">
         <summary aria-label="言語：日本語"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>JA</span></summary>
         <div class="lang-menu">

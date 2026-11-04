@@ -116,7 +116,7 @@ index.features.23 = Names for terminals
 index.features.24 = deploy, logs, migrations instead of terminal 2. Double-click a terminal, type a name and press Enter.
 # security
 index.security.1 = Security
-index.security.2 = We keep no keys. <br>We open no ports.
+index.security.2 = Only you open your keys. <br>We open no ports.
 index.security.more = In detail: how access works
 index.security.3 = Access to your machines is easy to give and just as easy to take back. This is how it works.
 index.security.4 = A two-minute certificate
@@ -162,7 +162,7 @@ index.faq.more = No answer here? Look in the docs
 index.faq.2 = Do I need to install anything on my computer?
 index.faq.3 = No, a browser is enough. You install something only on the machines you connect to: one command on a server, a small agent on a computer.
 index.faq.4 = What do you store?
-index.faq.5 = Commands for a year, in each machine's log, and their output for 30 days, plus a log of sign-ins. We keep no keys and no passwords. The details are in the <a href="/privacy/">Privacy Policy</a>.
+index.faq.5 = Commands for a year, in each machine's log, and their output for 30 days, plus a log of sign-ins. Your keys only if you put them in the vault yourself, and only encrypted: only you can open them. We keep no passwords. The details are in the <a href="/privacy/">Privacy Policy</a>.
 index.faq.6 = How is this better than a regular SSH client?
 index.faq.7 = It works from any browser and needs no keys on your device. The terminal does not drop when you close your laptop. And every command comes as a block that is easy to copy and run again.
 index.faq.8 = How do I take access away from tTerm?
@@ -225,7 +225,7 @@ mac.faq.app.a = Yes, <a href="{{$base}}/download/">tTerm for Mac</a>. It has the
 # download page
 download.title = tTerm for Mac: the local terminal
 download.description = A local terminal with the cloud inside: your Mac's shells in blocks, and next to them your servers, notes and everything else you have in tTerm. Free, macOS 11 or later.
-download.lead = Our newest addition: a local terminal on your Mac, alongside the cloud version. Work with your computer as in any terminal, and soon you will be able to move your servers and keys to the cloud right from the app.
+download.lead = Our newest addition: a local terminal on your Mac, alongside the cloud version. Work with your computer as in any terminal, and move your servers and keys to the cloud right from the app.
 download.meta = Free · macOS 11 or later · Apple silicon and Intel
 download.phone = <b>tTerm for Mac installs on a Mac.</b> Open this page on one, and from your phone work in tTerm Web, right in the browser.
 download.open_web = Open tTerm Web
@@ -421,6 +421,38 @@ post.several-terminals.prose.6 = Subscribe to our blog on Telegram
 # more-section
 post.several-terminals.more-section.1 = More from the blog
 post.several-terminals.more-section.2 = All posts
+
+# ------------------------------------------------------------ post: /blog/move-to-cloud/
+post.move-to-cloud.title = Move to cloud: servers and keys from your Mac open from any browser · tTerm blog
+post.move-to-cloud.og_title = Move to cloud: servers and keys from your Mac open from any browser
+post.move-to-cloud.description = tTerm for Mac now moves the servers you reach from your Mac over ssh to the cloud, together with your SSH keys. The keys go into a vault: they are encrypted on your Mac, and only you can open them, with the vault password in any browser.
+post.move-to-cloud.alt = Move to cloud in tTerm for Mac: the servers this Mac knows, each with its way in, and the keys in ~/.ssh
+post.move-to-cloud.figcaption = Move to cloud: the servers this Mac knows, each with its way in.
+post.move-to-cloud.why.title = Why
+post.move-to-cloud.why.text = From your Mac you reach your servers over ssh: the keys are in <code>~/.ssh</code>, the addresses and users in <code>~/.ssh/config</code>. But step away from the Mac, and those servers are out of reach: from a browser, from a phone, from someone else's computer. Move to cloud takes them into tTerm, and they open from anywhere.
+post.move-to-cloud.where.title = Where it is
+post.move-to-cloud.where.text = In tTerm for Mac, click your account at the bottom of the sidebar and choose Move to cloud. The window shows Servers on this Mac. tTerm takes them from <code>~/.ssh/config</code>, <code>known_hosts</code> and the <code>ssh</code> commands you ran in its terminals. Until you press Move, nothing goes anywhere.
+post.move-to-cloud.ways.title = Three ways in
+post.move-to-cloud.ways.lead = Each server has its own way in:
+post.move-to-cloud.way.key.title = My key:
+post.move-to-cloud.way.key.text = the key goes into the vault, and the server stays as it is.
+post.move-to-cloud.way.cert.title = tTerm's pass:
+post.move-to-cloud.way.cert.text = tTerm adds its line to the server, and your key stays on the Mac.
+post.move-to-cloud.way.mac.title = Through this Mac:
+post.move-to-cloud.way.mac.text = nothing is moved. tTerm asks the Mac to connect while it is on. This is for servers behind a VPN.
+post.move-to-cloud.ways.after = tTerm picks the right way itself, and you can change it.
+post.move-to-cloud.vault.title = The key vault
+post.move-to-cloud.vault.text = A key is encrypted on your Mac before it leaves it. tTerm keeps only the ciphertext, the key's public half and its fingerprint: we cannot open the vault or read a key. When you open a server, your device signs the login, and the key never leaves it in the clear.
+post.move-to-cloud.password.title = The vault password
+post.move-to-cloud.password.text = You make it up yourself when you make the vault. With it, your keys open in any browser, even on someone else's computer and with no Mac. The password itself goes nowhere: tTerm does not know it and cannot recover it, so keep it in your password manager. On your own computer press Keep with Touch ID, and the password is not asked there again; on someone else's, choose Only this time.
+post.move-to-cloud.here.title = Only where you opened your keys
+post.move-to-cloud.here.text = Servers with your key, servers through your Mac and the Mac itself open only on a device where you opened your keys yourself. Signing in to your account with the code from your email is not enough for them: it is a second lock, in case someone gets into your email. Where your keys are not open, such a machine has a lock in place of “+”. Click it, type the password, and the terminal opens.
+post.move-to-cloud.strip.title = The strip after ssh
+post.move-to-cloud.strip.text = When <code>ssh</code> ends without an error in a terminal of tTerm for Mac, a strip with Save my key and Let tTerm in may appear under its block. That way you can move a single server without opening the move window.
+post.move-to-cloud.next.text = All of this is in tTerm for Mac 0.8.1. The details are in the docs, on the pages <a href="https://docs.tterm.net{{$base}}/local/move-to-cloud/">Move to cloud</a> and <a href="https://docs.tterm.net{{$base}}/security/keys/">Your vault of SSH keys</a>.
+post.move-to-cloud.cta.title = Move your servers from your Mac
+post.move-to-cloud.more-section.1 = More from the blog
+post.move-to-cloud.more-section.2 = All posts
 
 # ------------------------------------------------------------ post: /blog/support/
 post.support.title = Support: write to us right from tTerm · tTerm blog

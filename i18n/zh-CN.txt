@@ -116,7 +116,7 @@ index.features.23 = 给终端起名字
 index.features.24 = 用 deploy、logs、migrations 代替 terminal 2。双击终端，输入名字，按 Enter。
 # security
 index.security.1 = 安全
-index.security.2 = 我们不保存密钥，<br>也不开放端口。
+index.security.2 = 你的密钥我们打不开，<br>也不开放端口。
 index.security.more = 详细了解：访问如何运作
 index.security.3 = 机器的访问权限很容易授予，也同样容易收回。具体做法如下。
 index.security.4 = 两分钟有效的证书
@@ -162,7 +162,7 @@ index.faq.more = 没找到答案？看看文档
 index.faq.2 = 我需要在自己的电脑上安装什么吗？
 index.faq.3 = 不需要，有浏览器就够了。只有要连接的机器才需要装东西：服务器上运行一条命令，电脑上装一个小型代理。
 index.faq.4 = 你们会保存哪些数据？
-index.faq.5 = 命令在每台机器的日志中保存一年，其输出保存 30 天，另外还有登录日志。我们不保存密钥，也不保存密码。详情见<a href="/privacy/">隐私政策</a>。
+index.faq.5 = 命令在每台机器的日志中保存一年，其输出保存 30 天，另外还有登录日志。只有当你亲自把密钥放进保险库时，我们才会保存它们，而且只保存加密后的版本：只有你能打开。我们不保存密码。详情见<a href="/privacy/">隐私政策</a>。
 index.faq.6 = 它比普通的 SSH 客户端好在哪里？
 index.faq.7 = 它在任何浏览器中都能用，设备上不需要密钥。合上笔记本，终端也不会断开。而且每条命令都是一个块，复制和重新运行都很方便。
 index.faq.8 = 怎样收回 tTerm 的访问权限？
@@ -225,7 +225,7 @@ mac.faq.app.a = 有，<a href="{{$base}}/download/">tTerm Mac 版</a>。里面�
 # download page
 download.title = tTerm Mac 版：本地终端
 download.description = 内置云端的本地终端：Mac 上的 shell 以块呈现，旁边是你的服务器、笔记，以及你在 tTerm 中的其他一切。免费，支持 macOS 11 或更高版本。
-download.lead = 我们最新推出的产品：Mac 上的本地终端，是对云端版本的补充。像在任何终端里一样使用你的电脑，很快还可以直接在应用里把服务器和密钥迁移到云端。
+download.lead = 我们最新推出的产品：Mac 上的本地终端，是对云端版本的补充。像在任何终端里一样使用你的电脑，还可以直接在应用里把服务器和密钥迁移到云端。
 download.meta = 免费 · macOS 11 或更高版本 · Apple 芯片和 Intel
 download.phone = <b>tTerm Mac 版需要安装在 Mac 上。</b>请在 Mac 上打开此页面；在手机上，可以直接在浏览器里使用 tTerm Web。
 download.open_web = 打开 tTerm Web
@@ -421,6 +421,38 @@ post.several-terminals.prose.6 = 在 Telegram 上订阅我们的博客
 # more-section
 post.several-terminals.more-section.1 = 博客中的更多文章
 post.several-terminals.more-section.2 = 全部文章
+
+# ------------------------------------------------------------ post: /blog/move-to-cloud/
+post.move-to-cloud.title = 迁移到云端：Mac 上的服务器和密钥，在任意浏览器中都能打开 · tTerm 博客
+post.move-to-cloud.og_title = 迁移到云端：Mac 上的服务器和密钥，在任意浏览器中都能打开
+post.move-to-cloud.description = tTerm Mac 版现在可以把你在 Mac 上通过 ssh 连接的服务器，连同你的 SSH 密钥，一起迁移到云端。密钥会存入保险库：它们在你的 Mac 上加密，只有你能打开，在任意浏览器中用保险库密码即可。
+post.move-to-cloud.alt = tTerm Mac 版中的“迁移到云端”窗口：这台 Mac 知道的服务器，每台都有自己的连接方式，以及 ~/.ssh 中的密钥
+post.move-to-cloud.figcaption = “迁移到云端”窗口：这台 Mac 知道的服务器，每台都有自己的连接方式。
+post.move-to-cloud.why.title = 为什么要迁移到云端
+post.move-to-cloud.why.text = 在 Mac 上，你通过 ssh 连接服务器：密钥在 <code>~/.ssh</code> 里，地址和用户在 <code>~/.ssh/config</code> 里。可是一离开 Mac，这些服务器就够不着了：浏览器里不行，手机上不行，别人的电脑上也不行。“迁移到云端”会把它们带进 tTerm，从此在哪里都能打开。
+post.move-to-cloud.where.title = 在哪里找到
+post.move-to-cloud.where.text = 在 tTerm Mac 版中，点击侧边栏底部的账号，选择“迁移到云端”。窗口会显示“这台 Mac 上的服务器”。tTerm 从 <code>~/.ssh/config</code>、<code>known_hosts</code> 以及你在它的终端里运行过的 <code>ssh</code> 命令中找出它们。在你点击“迁移”之前，什么都不会离开你的 Mac。
+post.move-to-cloud.ways.title = 三种连接方式
+post.move-to-cloud.ways.lead = 每台服务器都有自己的连接方式：
+post.move-to-cloud.way.key.title = “我的密钥”：
+post.move-to-cloud.way.key.text = 密钥存入保险库，服务器保持不变。
+post.move-to-cloud.way.cert.title = “tTerm 通行证”：
+post.move-to-cloud.way.cert.text = tTerm 在服务器上添加一条自己的授权，你的密钥留在 Mac 上。
+post.move-to-cloud.way.mac.title = “通过这台 Mac”：
+post.move-to-cloud.way.mac.text = 什么都不迁移。Mac 开机期间，tTerm 会请它去连接。适用于位于 VPN 之后的服务器。
+post.move-to-cloud.ways.after = tTerm 会自己选好合适的方式，你也可以更改。
+post.move-to-cloud.vault.title = 密钥保险库
+post.move-to-cloud.vault.text = 密钥在离开你的 Mac 之前，就已在 Mac 上加密。tTerm 只保存密文、密钥的公钥和它的指纹：我们打不开保险库，也读不了任何密钥。你打开服务器时，由你的设备为登录签名，密钥从不以明文形式离开它。
+post.move-to-cloud.password.title = 保险库密码
+post.move-to-cloud.password.text = 这个密码由你在创建保险库时自己设定。有了它，你的密钥在任意浏览器中都能打开，即使是在别人的电脑上，身边也没有 Mac。密码本身不会发往任何地方：tTerm 不知道它，也无法找回，所以请把它保存在你的密码管理器中。在你自己的电脑上，点击“用触控 ID 保存”，之后在那里就不会再要求输入密码；在别人的电脑上，请选择“仅此一次”。
+post.move-to-cloud.here.title = 只在你打开过密钥的地方
+post.move-to-cloud.here.text = 用你的密钥连接的服务器、通过你的 Mac 连接的服务器以及 Mac 本身，只会在你亲自打开过密钥的设备上打开。用邮件里的验证码登录账号，对它们来说还不够：这是第二道锁，以防有人进入你的邮箱。在密钥没有打开的地方，这类机器上会显示一把锁，而不是“+”。点击它，输入密码，终端就会打开。
+post.move-to-cloud.strip.title = ssh 之后的提示条
+post.move-to-cloud.strip.text = 在 tTerm Mac 版的终端中，<code>ssh</code> 无错误结束后，它的块下方可能会出现一个提示条，上面有“保存我的密钥”和“允许 tTerm 登录”。这样不用打开迁移窗口，也能单独迁移一台服务器。
+post.move-to-cloud.next.text = 以上功能都在 tTerm Mac 版 0.8.1 中。详情见文档中的<a href="https://docs.tterm.net{{$base}}/local/move-to-cloud/">“迁移到云端”</a>和<a href="https://docs.tterm.net{{$base}}/security/keys/">“你的 SSH 密钥保险库”</a>页面。
+post.move-to-cloud.cta.title = 把你 Mac 上的服务器迁移到云端
+post.move-to-cloud.more-section.1 = 博客中的更多文章
+post.move-to-cloud.more-section.2 = 全部文章
 
 # ------------------------------------------------------------ post: /blog/support/
 post.support.title = 技术支持：直接在 tTerm 中给我们写信 · tTerm 博客

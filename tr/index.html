@@ -60,7 +60,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.8.3">
+<meta name="version" content="2.8.4">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -377,7 +377,7 @@
     <div class="mac-points">
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg><h3>Kendi Mac'inde de bloklar</h3><p>Bu Mac'teki bash ya da zsh: her komut çıktısı, çıkış kodu ve süresiyle bir blok. Geçmiş 30 gün boyunca Mac'te kalır.</p></div>
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/></svg><h3>Aynı pencerede bulut</h3><p>Giriş yaptığında sunucuların, onlarla ilgili notlar ve ⌘K ile her şeyde arama, Mac'in terminallerinin hemen yanında açılır.</p></div>
-      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/><path d="M12 15V9M9.5 11.5L12 9l2.5 2.5"/></svg><h3>Buluta taşınma <span class="soon">YAKINDA</span></h3><p>Uygulama bu Mac'teki sunucuları ve anahtarları birkaç tıkla buluta taşır, sonra hepsi her tarayıcıdan açılır.</p></div>
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/><path d="M12 15V9M9.5 11.5L12 9l2.5 2.5"/></svg><h3>Buluta taşınma</h3><p>Uygulama bu Mac'teki sunucuları ve anahtarları birkaç tıkla buluta taşır, sonra hepsi her tarayıcıdan açılır.</p></div>
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><h3>Mac'ine her yerden ulaş</h3><p>Uygulama bu Mac'i tTerm Web'e açar: terminaline tarayıcıdan da telefonundan da ulaşabilirsin. Menü çubuğunda yer alır.</p></div>
     </div>
   </section>
@@ -386,7 +386,7 @@
     <div class="split-head">
       <div>
         <p class="eyebrow">Güvenlik</p>
-        <h2 class="section-title">Anahtar saklamayız. <br>Port açmayız.</h2>
+        <h2 class="section-title">Anahtarlarını yalnızca sen açarsın. <br>Port açmayız.</h2>
       </div>
       <p class="section-lead">Makinelerine erişim vermek kolay, geri almak da bir o kadar kolay. Bunu şöyle sağlıyoruz.</p>
     </div>
@@ -484,7 +484,7 @@
       </details>
       <details>
         <summary>Neleri saklıyorsunuz?</summary>
-        <p>Komutları her makinenin logunda bir yıl boyunca, çıktılarını ise 30 gün boyunca saklıyoruz, ayrıca giriş kayıtlarını tutuyoruz. Anahtar ya da parola saklamıyoruz. Ayrıntılar <a href="/privacy/">Gizlilik Politikası</a> sayfasında.</p>
+        <p>Komutları her makinenin logunda bir yıl boyunca, çıktılarını ise 30 gün boyunca saklıyoruz, ayrıca giriş kayıtlarını tutuyoruz. Anahtarlarını ancak onları kasaya kendin koyarsan ve yalnızca şifreli olarak saklıyoruz: onları senden başka kimse açamaz. Parola saklamıyoruz. Ayrıntılar <a href="/privacy/">Gizlilik Politikası</a> sayfasında.</p>
       </details>
       <details>
         <summary>Sıradan bir SSH istemcisinden ne açıdan daha iyi?</summary>
@@ -541,6 +541,11 @@
       </div>
     </a>
   <div class="post-stack">
+      <a class="post-mini" href="/tr/blog/move-to-cloud/">
+        <span class="post-mini-meta"><time datetime="2026-11-04">4 Kas</time> · Mac için tTerm</span>
+        <span class="post-mini-title">Buluta taşıma: Mac&#x27;indeki sunucular ve anahtarlar her tarayıcıdan açılıyor</span>
+        <span class="post-mini-text">Mac için tTerm artık Mac&#x27;inden ssh ile bağlandığın sunucuları SSH anahtarlarınla birlikte buluta taşıyor.</span>
+      </a>
       <a class="post-mini" href="/tr/blog/support/">
         <span class="post-mini-meta"><time datetime="2026-11-04">4 Kas</time> · tTerm Web</span>
         <span class="post-mini-title">Destek: bize doğrudan tTerm&#x27;den yaz</span>
@@ -550,11 +555,6 @@
         <span class="post-mini-meta"><time datetime="2026-11-03">3 Kas</time> · tTerm Web</span>
         <span class="post-mini-title">Loglar: artık her makine için otomatik olarak bir log oluşturuyoruz</span>
         <span class="post-mini-text">Bir makinenin logu her komutu kaydeder: kim çalıştırdı, ne zaman ve nasıl sonuçlandı.</span>
-      </a>
-      <a class="post-mini" href="/tr/blog/docs/">
-        <span class="post-mini-meta"><time datetime="2026-11-02">2 Kas</time> · Belgeler</span>
-        <span class="post-mini-title">tTerm&#x27;in artık belgeleri var</span>
-        <span class="post-mini-text">docs.tterm.net, ilk komutundan erişimin nasıl sağlandığına kadar tTerm&#x27;in nasıl çalıştığını anlatıyor.</span>
       </a>
   </div>
 </div>
@@ -612,7 +612,7 @@
       </nav>
     </div>
     <div class="foot-bottom">
-      <p class="foot-note">2026 · tTerm · v2.8.3</p>
+      <p class="foot-note">2026 · tTerm · v2.8.4</p>
       <details class="lang lang-up">
         <summary aria-label="Dil: Türkçe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>TR</span></summary>
         <div class="lang-menu">

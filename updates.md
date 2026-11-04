@@ -23,6 +23,72 @@
 # Newest first. Dates in ISO form, one entry per date; the pages format them
 # per language. The text is shown as plain text: no markup, no code style.
 
+## 2026-11-04 mac /blog/move-to-cloud/
+
+@en Move to cloud: servers and keys from your Mac open from any browser
+tTerm for Mac now moves the servers you reach from your Mac over ssh to the
+cloud, together with your SSH keys. The keys go into a vault: they are
+encrypted on your Mac, and only you can open them, with the vault password
+in any browser.
+
+@ru Перенос в облако: серверы и ключи с Mac открываются из любого браузера
+tTerm для Mac теперь переносит в облако серверы, на которые ты ходишь с Mac
+по ssh, вместе с твоими SSH-ключами. Ключи попадают в хранилище: они
+шифруются ещё на Mac, а открыть их можешь только ты, паролем хранилища в
+любом браузере.
+
+@de Umzug in die Cloud: Server und Schlüssel von deinem Mac öffnen sich in jedem Browser
+tTerm für Mac bringt die Server, die du von deinem Mac aus per ssh
+erreichst, jetzt samt deinen SSH-Schlüsseln in die Cloud. Die Schlüssel
+kommen in einen Tresor: Sie werden auf deinem Mac verschlüsselt, und öffnen
+kannst nur du sie, mit dem Tresorpasswort in jedem Browser.
+
+@es Mover a la nube: los servidores y las claves de tu Mac se abren desde cualquier navegador
+tTerm para Mac ahora lleva a la nube los servidores a los que accedes por
+ssh desde tu Mac, junto con tus claves SSH. Las claves van a una bóveda: se
+cifran en tu Mac y solo tú puedes abrirlas, con la contraseña de la bóveda,
+en cualquier navegador.
+
+@fr Passer au cloud : les serveurs et les clés de votre Mac s’ouvrent depuis n’importe quel navigateur
+tTerm pour Mac transfère désormais vers le cloud les serveurs que vous
+joignez en ssh depuis votre Mac, ainsi que vos clés SSH. Les clés vont dans
+un coffre : elles sont chiffrées sur votre Mac, et vous seul pouvez les
+ouvrir, avec le mot de passe du coffre, dans n’importe quel navigateur.
+
+@it Sposta nel cloud: i server e le chiavi del tuo Mac si aprono da qualsiasi browser
+tTerm per Mac ora sposta nel cloud i server che raggiungi dal tuo Mac con
+ssh, insieme alle tue chiavi SSH. Le chiavi finiscono in una cassaforte:
+vengono cifrate sul tuo Mac e solo tu puoi aprirle, con la password della
+cassaforte, in qualsiasi browser.
+
+@pl Przenoszenie do chmury: serwery i klucze z twojego Maca otwierają się w każdej przeglądarce
+tTerm dla Maca przenosi teraz do chmury serwery, z którymi łączysz się ze
+swojego Maca przez ssh, a razem z nimi twoje klucze SSH. Klucze trafiają do
+sejfu: są szyfrowane na twoim Macu, a otworzyć je możesz tylko ty, hasłem do
+sejfu w dowolnej przeglądarce.
+
+@pt-BR Migrar para a nuvem: servidores e chaves do seu Mac abrem em qualquer navegador
+O tTerm para Mac agora migra para a nuvem os servidores que você acessa do
+seu Mac por ssh, junto com as suas chaves SSH. As chaves vão para um cofre:
+elas são criptografadas no seu Mac, e só você consegue abri-las, com a senha
+do cofre, em qualquer navegador.
+
+@tr Buluta taşıma: Mac'indeki sunucular ve anahtarlar her tarayıcıdan açılıyor
+Mac için tTerm artık Mac'inden ssh ile bağlandığın sunucuları SSH
+anahtarlarınla birlikte buluta taşıyor. Anahtarlar bir kasaya gider:
+Mac'inde şifrelenir ve onları yalnızca sen, herhangi bir tarayıcıda kasa
+parolanla açabilirsin.
+
+@ja クラウドへ移行：Mac のサーバーと鍵を、どのブラウザーからでも開けるようになりました
+Mac 版 tTerm で、Mac から ssh で接続しているサーバーを、SSH 鍵と一緒にクラウドへ移せるようになりました。鍵は Mac の中で暗号化されて保管庫に入り、開けるのはあなただけです。どのブラウザーでも、保管庫のパスワードで開けます。
+
+@ko 클라우드로 옮기기: 내 Mac의 서버와 키를 어떤 브라우저에서든 열 수 있어요
+이제 Mac용 tTerm이 내 Mac에서 ssh로 접속하던 서버를 SSH 키와 함께 클라우드로 옮겨 줘요. 키는 Mac에서 암호화되어
+보관함에 들어가고, 어떤 브라우저에서든 보관함 비밀번호로 나만 열 수 있어요.
+
+@zh-CN 迁移到云端：Mac 上的服务器和密钥，在任意浏览器中都能打开
+tTerm Mac 版现在可以把你在 Mac 上通过 ssh 连接的服务器，连同你的 SSH 密钥，一起迁移到云端。密钥会存入保险库：它们在你的 Mac 上加密，只有你能打开，在任意浏览器中用保险库密码即可。
+
 ## 2026-11-04 web /blog/support/
 
 @en Support: write to us right from tTerm

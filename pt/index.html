@@ -60,7 +60,7 @@
 }
 </script>
 <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-<meta name="version" content="2.8.3">
+<meta name="version" content="2.8.4">
 <link rel="stylesheet" href="/style.css">
 <script src="/assets/site.js" defer></script>
 </head>
@@ -377,7 +377,7 @@
     <div class="mac-points">
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg><h3>Blocos também no seu Mac</h3><p>O bash ou o zsh deste Mac, cada comando um bloco com a saída, o código de retorno e o tempo. O histórico fica no Mac por 30 dias.</p></div>
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/></svg><h3>A nuvem na mesma janela</h3><p>Depois que você entra na conta, os seus servidores, as notas deles e a busca em tudo com ⌘K abrem ao lado dos terminais do Mac.</p></div>
-      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/><path d="M12 15V9M9.5 11.5L12 9l2.5 2.5"/></svg><h3>Migração para a nuvem <span class="soon">EM BREVE</span></h3><p>O app migra os servidores e as chaves deste Mac para a nuvem em poucos cliques, e eles passam a abrir em qualquer navegador.</p></div>
+      <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 8.5a4.5 4.5 0 0 1-1 9.5z"/><path d="M12 15V9M9.5 11.5L12 9l2.5 2.5"/></svg><h3>Migração para a nuvem</h3><p>O app migra os servidores e as chaves deste Mac para a nuvem em poucos cliques, e eles passam a abrir em qualquer navegador.</p></div>
       <div class="mac-point"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z"/></svg><h3>Seu Mac de qualquer lugar</h3><p>O app abre este Mac para o tTerm Web: o terminal dele fica acessível pelo navegador e pelo celular. O app fica na barra de menus.</p></div>
     </div>
   </section>
@@ -386,7 +386,7 @@
     <div class="split-head">
       <div>
         <p class="eyebrow">Segurança</p>
-        <h2 class="section-title">Não guardamos chaves. <br>Não abrimos portas.</h2>
+        <h2 class="section-title">Só você abre as suas chaves. <br>Não abrimos portas.</h2>
       </div>
       <p class="section-lead">O acesso às suas máquinas é fácil de conceder e igualmente fácil de revogar. Veja como funciona.</p>
     </div>
@@ -484,7 +484,7 @@
       </details>
       <details>
         <summary>O que vocês armazenam?</summary>
-        <p>Os comandos por um ano no log de cada máquina, as saídas deles por 30 dias e um registro de logins. Não guardamos chaves nem senhas. Os detalhes estão na <a href="/privacy/">Política de Privacidade</a>.</p>
+        <p>Os comandos por um ano no log de cada máquina, as saídas deles por 30 dias e um registro de logins. As suas chaves, apenas se você mesmo as colocar no cofre, e somente criptografadas: só você consegue abri-las. Não guardamos senhas. Os detalhes estão na <a href="/privacy/">Política de Privacidade</a>.</p>
       </details>
       <details>
         <summary>Em que o tTerm é melhor que um cliente SSH comum?</summary>
@@ -541,6 +541,11 @@
       </div>
     </a>
   <div class="post-stack">
+      <a class="post-mini" href="/pt/blog/move-to-cloud/">
+        <span class="post-mini-meta"><time datetime="2026-11-04">4 de nov.</time> · tTerm para Mac</span>
+        <span class="post-mini-title">Migrar para a nuvem: servidores e chaves do seu Mac abrem em qualquer navegador</span>
+        <span class="post-mini-text">O tTerm para Mac agora migra para a nuvem os servidores que você acessa do seu Mac por ssh, junto com as suas chaves SSH.</span>
+      </a>
       <a class="post-mini" href="/pt/blog/support/">
         <span class="post-mini-meta"><time datetime="2026-11-04">4 de nov.</time> · tTerm Web</span>
         <span class="post-mini-title">Suporte: escreva para a gente direto do tTerm</span>
@@ -550,11 +555,6 @@
         <span class="post-mini-meta"><time datetime="2026-11-03">3 de nov.</time> · tTerm Web</span>
         <span class="post-mini-title">Logs: agora criamos automaticamente um log para cada máquina</span>
         <span class="post-mini-text">O log de uma máquina registra cada comando: quem o executou, quando e como terminou.</span>
-      </a>
-      <a class="post-mini" href="/pt/blog/docs/">
-        <span class="post-mini-meta"><time datetime="2026-11-02">2 de nov.</time> · Documentação</span>
-        <span class="post-mini-title">O tTerm agora tem documentação</span>
-        <span class="post-mini-text">Em docs.tterm.net você descobre como o tTerm funciona, do seu primeiro comando até a organização do acesso.</span>
       </a>
   </div>
 </div>
@@ -612,7 +612,7 @@
       </nav>
     </div>
     <div class="foot-bottom">
-      <p class="foot-note">2026 · tTerm · v2.8.3</p>
+      <p class="foot-note">2026 · tTerm · v2.8.4</p>
       <details class="lang lang-up">
         <summary aria-label="Idioma: português (Brasil)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg><span>PT</span></summary>
         <div class="lang-menu">

@@ -116,7 +116,7 @@ index.features.23 = Terminallere ad ver
 index.features.24 = terminal 2 yerine deploy, logs, migrations. Terminale çift tıkla, adını yaz ve Enter'a bas.
 # security
 index.security.1 = Güvenlik
-index.security.2 = Anahtar saklamayız. <br>Port açmayız.
+index.security.2 = Anahtarlarını yalnızca sen açarsın. <br>Port açmayız.
 index.security.more = Ayrıntılı: erişim nasıl çalışır
 index.security.3 = Makinelerine erişim vermek kolay, geri almak da bir o kadar kolay. Bunu şöyle sağlıyoruz.
 index.security.4 = İki dakikalık sertifika
@@ -162,7 +162,7 @@ index.faq.more = Cevabı bulamadın mı? Belgelere göz at
 index.faq.2 = Bilgisayarıma bir şey kurmam gerekiyor mu?
 index.faq.3 = Hayır, bir tarayıcı yeterli. Yalnızca bağlandığın makinelere bir şey kurarsın: sunucuda tek bir komut, bilgisayarda küçük bir ajan.
 index.faq.4 = Neleri saklıyorsunuz?
-index.faq.5 = Komutları her makinenin logunda bir yıl boyunca, çıktılarını ise 30 gün boyunca saklıyoruz, ayrıca giriş kayıtlarını tutuyoruz. Anahtar ya da parola saklamıyoruz. Ayrıntılar <a href="/privacy/">Gizlilik Politikası</a> sayfasında.
+index.faq.5 = Komutları her makinenin logunda bir yıl boyunca, çıktılarını ise 30 gün boyunca saklıyoruz, ayrıca giriş kayıtlarını tutuyoruz. Anahtarlarını ancak onları kasaya kendin koyarsan ve yalnızca şifreli olarak saklıyoruz: onları senden başka kimse açamaz. Parola saklamıyoruz. Ayrıntılar <a href="/privacy/">Gizlilik Politikası</a> sayfasında.
 index.faq.6 = Sıradan bir SSH istemcisinden ne açıdan daha iyi?
 index.faq.7 = Her tarayıcıdan çalışır ve cihazında anahtar gerektirmez. Dizüstünü kapattığında terminal kopmaz. Ayrıca her komut, kolayca kopyalanıp yeniden çalıştırılabilen bir blok olarak gelir.
 index.faq.8 = tTerm'in erişimini nasıl geri alırım?
@@ -225,7 +225,7 @@ mac.faq.app.a = Evet, <a href="{{$base}}/download/">Mac için tTerm</a>. Mac'in 
 # download page
 download.title = Mac için tTerm: yerel terminal
 download.description = Bulutu içinde taşıyan yerel bir terminal: Mac'inin kabukları bloklar halinde, yanlarında da sunucuların, notların ve tTerm'deki diğer her şeyin. Ücretsiz, macOS 11 veya üstü.
-download.lead = Bulut sürümünün yanına eklediğimiz en yeni ürün: Mac'inde yerel bir terminal. Bilgisayarınla her terminalde olduğu gibi çalış, yakında sunucularını ve anahtarlarını da doğrudan uygulamadan buluta taşıyabileceksin.
+download.lead = Bulut sürümünün yanına eklediğimiz en yeni ürün: Mac'inde yerel bir terminal. Bilgisayarınla her terminalde olduğu gibi çalış, sunucularını ve anahtarlarını da doğrudan uygulamadan buluta taşı.
 download.meta = Ücretsiz · macOS 11 veya üstü · Apple silicon ve Intel
 download.phone = <b>Mac için tTerm, Mac'e kurulur.</b> Bu sayfayı bir Mac'te aç, telefonunda ise doğrudan tarayıcıda tTerm Web ile çalış.
 download.open_web = tTerm Web'i aç
@@ -421,6 +421,38 @@ post.several-terminals.prose.6 = Telegram'da blogumuza abone ol
 # more-section
 post.several-terminals.more-section.1 = Blogdan diğer yazılar
 post.several-terminals.more-section.2 = Tüm yazılar
+
+# ------------------------------------------------------------ post: /blog/move-to-cloud/
+post.move-to-cloud.title = Buluta taşıma: Mac'indeki sunucular ve anahtarlar her tarayıcıdan açılıyor · tTerm blogu
+post.move-to-cloud.og_title = Buluta taşıma: Mac'indeki sunucular ve anahtarlar her tarayıcıdan açılıyor
+post.move-to-cloud.description = Mac için tTerm artık Mac'inden ssh ile bağlandığın sunucuları SSH anahtarlarınla birlikte buluta taşıyor. Anahtarlar bir kasaya gider: Mac'inde şifrelenir ve onları yalnızca sen, herhangi bir tarayıcıda kasa parolanla açabilirsin.
+post.move-to-cloud.alt = Mac için tTerm'de “Buluta taşı” penceresi: bu Mac'in bildiği sunucular, her birinin kendi giriş yolu ve ~/.ssh içindeki anahtarlar
+post.move-to-cloud.figcaption = “Buluta taşı” penceresi: bu Mac'in bildiği sunucular, her biri kendi giriş yoluyla.
+post.move-to-cloud.why.title = Neden
+post.move-to-cloud.why.text = Sunucularına Mac'inden ssh ile bağlanırsın: anahtarlar <code>~/.ssh</code> içinde, adresler ve kullanıcılar <code>~/.ssh/config</code> içinde durur. Ama Mac'in başından kalktığın anda bu sunuculara tarayıcıdan, telefondan ya da başkasının bilgisayarından ulaşamazsın. Buluta taşıma onları tTerm'e alır ve artık her yerden açılırlar.
+post.move-to-cloud.where.title = Nerede bulunur
+post.move-to-cloud.where.text = Mac için tTerm'de kenar çubuğunun altındaki hesabına tıkla ve “Buluta taşı” öğesini seç. Pencerede “Bu Mac'teki sunucular” görünür. tTerm bunları <code>~/.ssh/config</code>, <code>known_hosts</code> ve kendi terminallerinde çalıştırdığın <code>ssh</code> komutlarından alır. “Taşı” düğmesine basana kadar hiçbir şey hiçbir yere gitmez.
+post.move-to-cloud.ways.title = Üç giriş yolu
+post.move-to-cloud.ways.lead = Her sunucunun kendi giriş yolu var:
+post.move-to-cloud.way.key.title = “Anahtarım”:
+post.move-to-cloud.way.key.text = anahtar kasaya gider, sunucu olduğu gibi kalır.
+post.move-to-cloud.way.cert.title = “tTerm'in giriş izni”:
+post.move-to-cloud.way.cert.text = tTerm sunucuya kendi satırını ekler, anahtarın Mac'te kalır.
+post.move-to-cloud.way.mac.title = “Bu Mac üzerinden”:
+post.move-to-cloud.way.mac.text = hiçbir şey taşınmaz. tTerm, Mac açık olduğu sürece ondan bağlanmasını ister. Bu yol, VPN arkasındaki sunucular içindir.
+post.move-to-cloud.ways.after = Uygun yolu tTerm kendisi seçer, sen de değiştirebilirsin.
+post.move-to-cloud.vault.title = Anahtar kasası
+post.move-to-cloud.vault.text = Bir anahtar, Mac'inden çıkmadan önce orada şifrelenir. tTerm'de yalnızca şifreli metin, anahtarın genel kısmı ve parmak izi kalır: kasayı açamayız, bir anahtarı okuyamayız. Bir sunucuyu açtığında girişi senin cihazın imzalar ve anahtar o cihazdan asla şifresiz çıkmaz.
+post.move-to-cloud.password.title = Kasa parolası
+post.move-to-cloud.password.text = Bu parolayı, kasayı oluştururken kendin belirlersin. Onunla anahtarların her tarayıcıda açılır, başkasının bilgisayarında ve Mac olmadan bile. Parolanın kendisi hiçbir yere gitmez: tTerm onu bilmez ve kurtaramaz, bu yüzden onu parola yöneticinde sakla. Kendi bilgisayarında “Touch ID ile sakla” düğmesine bas, orada parola bir daha sorulmaz; başkasının bilgisayarında “Yalnızca bu sefer” seçeneğini seç.
+post.move-to-cloud.here.title = Yalnızca anahtarlarını açtığın yerde
+post.move-to-cloud.here.text = Anahtarınla açılan sunucular, Mac'in üzerinden açılan sunucular ve Mac'in kendisi yalnızca anahtarlarını kendin açtığın bir cihazda açılır. Hesabına e-postandaki kodla giriş yapmak bunlar için yetmez: bu, biri e-postana girerse diye ikinci bir kilittir. Anahtarlarının açık olmadığı yerde böyle bir makinede “+” yerine bir kilit görünür. Kilide tıkla, parolanı yaz, terminal açılır.
+post.move-to-cloud.strip.title = ssh komutundan sonraki şerit
+post.move-to-cloud.strip.text = Mac için tTerm'in bir terminalinde <code>ssh</code> hatasız biterse, bloğunun altında “Anahtarımı kaydet” ve “tTerm'i içeri al” düğmelerinin olduğu bir şerit belirebilir. Böylece “Buluta taşı” penceresini açmadan tek bir sunucuyu taşıyabilirsin.
+post.move-to-cloud.next.text = Bunların hepsi Mac için tTerm 0.8.1'de var. Ayrıntılar belgelerde, <a href="https://docs.tterm.net{{$base}}/local/move-to-cloud/">“Buluta taşı”</a> ve <a href="https://docs.tterm.net{{$base}}/security/keys/">“SSH anahtarlarının kasası”</a> sayfalarında.
+post.move-to-cloud.cta.title = Sunucularını Mac'inden buluta taşı
+post.move-to-cloud.more-section.1 = Blogdan diğer yazılar
+post.move-to-cloud.more-section.2 = Tüm yazılar
 
 # ------------------------------------------------------------ post: /blog/support/
 post.support.title = Destek: bize doğrudan tTerm'den yaz · tTerm blogu

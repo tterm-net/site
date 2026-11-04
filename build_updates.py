@@ -95,6 +95,7 @@ class Entry:
     tag: str                    # a key of TAGS
     path: str | None            # "/blog/x/" when the entry has a page
     pinned: bool = False        # leads the blog whatever came after it
+    anchor: str = ""            # its address on the blog page: the date, or date-name
     title: dict[str, str] = field(default_factory=dict)
     text: dict[str, str] = field(default_factory=dict)
     minutes: dict[str, int] = field(default_factory=dict)
@@ -179,12 +180,23 @@ def parse(source: str) -> list[Entry]:
             buffer.append(line)
     flush()
 
+    # Each entry's address on the blog page is its date. Two entries may
+    # share a date when the newer has a page of its own: the older keeps the
+    # date, the newer adds its name (2026-11-04-move-to-cloud), so no address
+    # an entry already had changes. An entry without a page is reached by
+    # that address alone, so its date has to be its own.
     seen: set[str] = set()
-    for entry in entries:
-        if entry.date in seen:
-            fail(f"{entry.date}: two entries on one date. The date is the "
-                 f"entry's address on the blog page, so it has to be unique.")
+    for entry in reversed(entries):
+        if entry.date not in seen:
+            entry.anchor = entry.date
+        elif entry.path:
+            entry.anchor = f"{entry.date}-{entry.path.strip('/').split('/')[-1]}"
+        else:
+            fail(f"{entry.date}: two entries on one date, and the newer has no "
+                 f"page. An entry without a page is reached by its date on the "
+                 f"blog page, so its date has to be its own.")
         seen.add(entry.date)
+    for entry in entries:
         for lang in LANGS:
             if not entry.title.get(lang) or not entry.text.get(lang):
                 fail(f"{entry.date}: no title or text for {lang}. Every entry "
@@ -212,7 +224,7 @@ def url(entry: Entry, lang: str) -> str:
     language = S.language(lang)
     if entry.path:
         return S.page_url(language, entry.path)
-    return S.page_url(language, f"/blog/#{entry.date}")
+    return S.page_url(language, f"/blog/#{entry.anchor}")
 
 
 def ymd(iso: str) -> tuple[int, int, int]:
@@ -403,7 +415,7 @@ def render_list(entries: list[Entry], lang: str) -> str:
             title = esc(entry.title[lang])
             if entry.path:
                 title = f'<a href="{url(entry, lang)}">{title}</a>'
-            out.append(f'          <article class="entry" id="{entry.date}">')
+            out.append(f'          <article class="entry" id="{entry.anchor}">')
             out.append(f'            <p class="entry-meta"><time datetime="{entry.date}">'
                        f'{long_date(entry.date, lang, year=False)}</time>{tag_html(entry, lang)}</p>')
             out.append(f'            <h4 class="entry-title">{title}</h4>')
